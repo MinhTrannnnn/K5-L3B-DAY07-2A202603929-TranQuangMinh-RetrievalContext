@@ -1,0 +1,1328 @@
+{
+  "status": "abstain",
+  "answer": "I can’t determine an exact future release date for scikit-learn version 10 from the retrieved sources.",
+  "citations": [],
+  "question": "What is the exact future release date of scikit-learn version 10?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "scikit-learn version 10 release date future",
+      "results": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 11.30352939296335,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 11.30352939296335,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.12008250000144471
+    },
+    {
+      "event": "search",
+      "query": "site:scikit-learn.org scikit-learn 10 release date",
+      "results": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 19.17789607483312,
+          "rank": 1
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 13.048509329639604,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 12.9574559892171,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 12.614781358329797,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 11.921325041506922,
+          "rank": 5
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          },
+          "score": 11.828435112126945,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 19.17789607483312,
+          "rank": 1
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 13.048509329639604,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 12.9574559892171,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 12.614781358329797,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 11.921325041506922,
+          "rank": 5
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          },
+          "score": 11.828435112126945,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0023143999969761353
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn roadmap release date future version",
+      "results": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 9.683635101761325,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 9.683635101761325,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0016353999999410007
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn release calendar date",
+      "results": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 1
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 5
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          },
+          "score": 5.914217556063472,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 1
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 5
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          },
+          "score": 5.914217556063472,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.001499300000432413
+    }
+  ],
+  "context": [
+    {
+      "id": "8cbd5c032892c48a7691158b",
+      "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 3367,
+        "start": 1977,
+        "topic": "model_selection",
+        "anchor": "randomized-parameter-optimization",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 352
+      },
+      "score": 9.683635101761325,
+      "rank": 1
+    },
+    {
+      "id": "7c2b2cda8d7888782bcc46a3",
+      "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 3696,
+        "start": 3266,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 96
+      },
+      "score": 9.58894803741656,
+      "rank": 1
+    },
+    {
+      "id": "2e9b0d772f10d0672417d2fd",
+      "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:005",
+      "metadata": {
+        "end": 2099,
+        "start": 1442,
+        "topic": "model_selection",
+        "anchor": "using-multiple-metric-evaluation",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18651,
+        "unit_start": 14616,
+        "token_count": 175
+      },
+      "score": 6.524254664819802,
+      "rank": 2
+    },
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 6.478727994608549,
+      "rank": 3
+    },
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 6.307390679164898,
+      "rank": 4
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 5.960662520753461,
+      "rank": 5
+    },
+    {
+      "id": "5591bb33bc5cc0d6e234b031",
+      "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 668,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "imputation-of-missing-values",
+        "heading": "8.4. Imputation of missing values",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 150
+      },
+      "score": 5.914217556063472,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:06:14.740208+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 462,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 91,
+        "output_tokens_details": {
+          "reasoning_tokens": 63
+        },
+        "total_tokens": 553
+      }
+    },
+    {
+      "at": "2026-11-16T15:06:18.465807+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2866,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 67,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 2933
+      }
+    },
+    {
+      "at": "2026-11-16T15:06:22.262351+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5019,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2688,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 114,
+        "output_tokens_details": {
+          "reasoning_tokens": 87
+        },
+        "total_tokens": 5133
+      }
+    },
+    {
+      "at": "2026-11-16T15:06:25.944960+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7446,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 4864,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 274,
+        "output_tokens_details": {
+          "reasoning_tokens": 249
+        },
+        "total_tokens": 7720
+      }
+    },
+    {
+      "at": "2026-11-16T15:06:30.342673+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 9806,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 7296,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 339,
+        "output_tokens_details": {
+          "reasoning_tokens": 293
+        },
+        "total_tokens": 10145
+      }
+    }
+  ],
+  "seconds": 18.50395539999954,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review"
+}

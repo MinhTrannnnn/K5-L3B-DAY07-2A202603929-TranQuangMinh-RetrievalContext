@@ -1,0 +1,95 @@
+[
+  {
+    "passed": 16,
+    "total": 17,
+    "rate": 0.9411764705882353,
+    "groups": {
+      "basic": {
+        "passed": 16,
+        "total": 17
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "dense",
+    "split": "dev",
+    "hit1": {
+      "n": 8,
+      "N": 15
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 14,
+      "N": 15
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 262.96938569999475
+  },
+  {
+    "passed": 16,
+    "total": 17,
+    "rate": 0.9411764705882353,
+    "groups": {
+      "basic": {
+        "passed": 16,
+        "total": 17
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "bm25",
+    "split": "dev",
+    "hit1": {
+      "n": 9,
+      "N": 15
+    },
+    "hit3": {
+      "n": 14,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 172.04171010000573
+  },
+  {
+    "passed": 17,
+    "total": 17,
+    "rate": 1.0,
+    "groups": {
+      "basic": {
+        "passed": 17,
+        "total": 17
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "hybrid",
+    "split": "dev",
+    "hit1": {
+      "n": 7,
+      "N": 15
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 168.43324610000127
+  }
+]

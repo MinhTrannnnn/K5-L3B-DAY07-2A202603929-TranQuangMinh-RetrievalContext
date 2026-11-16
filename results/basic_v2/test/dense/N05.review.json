@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source impute:003 / §8.4.5 says keep_empty_features lets the imputer keep empty features, and that in most cases the constant value is zero; the answer matches this.",
+  "query_id": "N05",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "c791bc16c10b30970c607b5dc563329e39832886a482c41de64735539709b2bf",
+  "alternative_cited_pages": [
+    "impute:003"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

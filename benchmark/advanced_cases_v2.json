@@ -1,0 +1,1259 @@
+[
+  {
+    "id": "D01",
+    "split": "dev",
+    "group": "table",
+    "question": "Inspect Table O.2. Is investment a higher or lower priority for each of the three income groups?",
+    "answerable": true,
+    "expected_answer": "Investment is a higher priority for low-, lower-middle- and upper-middle-income countries.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "39",
+          "printed_page": "7",
+          "region_label": "Table O.2",
+          "evidence_description": "Investment column has Higher priority in all three rows.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D02",
+    "split": "dev",
+    "group": "table",
+    "question": "In Table O.3, what is the enterprise policy for low-income countries?",
+    "answerable": true,
+    "expected_answer": "Improve the investment climate to increase domestic and foreign investment.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "59",
+          "printed_page": "27",
+          "region_label": "Table O.3",
+          "evidence_description": "Enterprise row, low-income column.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D03",
+    "split": "dev",
+    "group": "table",
+    "question": "Inspect the original rotated Table S.1. What GNI per capita in current US dollars (2023) is listed for India?",
+    "answerable": true,
+    "expected_answer": "US$2,540, Atlas method, current US dollars in 2023.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "81",
+          "printed_page": "49",
+          "region_label": "Table S.1",
+          "evidence_description": "India row and GNI per capita column, value 2,540.",
+          "bbox": [
+            0.0,
+            0.0,
+            756.0,
+            576.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D04",
+    "split": "dev",
+    "group": "image",
+    "question": "Read the legend of Map 6.1. Which income group is colored orange?",
+    "answerable": true,
+    "expected_answer": "Upper-middle-income countries.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "173",
+          "printed_page": "141",
+          "region_label": "Map 6.1",
+          "evidence_description": "Income group legend, orange swatch.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D05",
+    "split": "dev",
+    "group": "image",
+    "question": "Inspect Map 6.3. Where in China are low-carbon technology jobs concentrated compared with fossil-fuel jobs?",
+    "answerable": true,
+    "expected_answer": "Low-carbon jobs cluster in southeast-coast manufacturing hubs, while fossil-fuel jobs are near inland coal mines.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "186",
+          "printed_page": "154",
+          "region_label": "Map 6.3",
+          "evidence_description": "Two maps comparing the spatial distribution of low-carbon and fossil-fuel jobs.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D06",
+    "split": "dev",
+    "group": "chart",
+    "question": "Inspect Figure O.1. Around 2022, does Korea or the aggregate middle-income-countries series have the higher GNI per capita relative to the United States?",
+    "answerable": true,
+    "expected_answer": "Korea has the higher relative GNI per capita than the aggregate middle-income-countries series.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "35",
+          "printed_page": "3",
+          "region_label": "Figure O.1",
+          "evidence_description": "Korea line is much higher than the aggregate middle-income-countries line at the right endpoint. The note defines the group measure as an average, not a median.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D07",
+    "split": "dev",
+    "group": "chart",
+    "question": "Read Figure O.2. What values are shown on the two bars for GDP per worker and physical/human capital relative to the United States?",
+    "answerable": true,
+    "expected_answer": "GDP per worker is 21 percent; physical and human capital is 71 percent.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "37",
+          "printed_page": "5",
+          "region_label": "Figure O.2",
+          "evidence_description": "Bars labeled 21 and 71, percent.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D08",
+    "split": "dev",
+    "group": "chart",
+    "question": "In Figure O.5, which of Korea, Poland and Chile has the highest GNI per capita at the right endpoint?",
+    "answerable": true,
+    "expected_answer": "The Republic of Korea.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "40",
+          "printed_page": "8",
+          "region_label": "Figure O.5",
+          "evidence_description": "Korea is the top line at the right endpoint, above Poland and Chile.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D09",
+    "split": "dev",
+    "group": "chart",
+    "question": "Read Figure 5.8. Which two regions are highlighted as having low female labor force participation?",
+    "answerable": true,
+    "expected_answer": "Middle East and North Africa, and South Asia.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "156",
+          "printed_page": "124",
+          "region_label": "Figure 5.8",
+          "evidence_description": "Regional line plot and legend for female labor force participation, ages 15–64.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D10",
+    "split": "dev",
+    "group": "text",
+    "question": "According to the overview, how many middle-income countries are discussed, and what per-capita income range defines them?",
+    "answerable": true,
+    "expected_answer": "108 countries, with per-capita income between US$1,136 and US$13,845.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "33",
+          "printed_page": "1",
+          "region_label": "In brief",
+          "evidence_description": "First paragraph gives 108 and the income range.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D11",
+    "split": "dev",
+    "group": "text",
+    "question": "What year does the report give for India’s ambition to become a developed economy?",
+    "answerable": true,
+    "expected_answer": "2047, the centennial of independence.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "34",
+          "printed_page": "2",
+          "region_label": "To get rich is glorious",
+          "evidence_description": "Paragraph on national ambitions states India 2047.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D12",
+    "split": "dev",
+    "group": "text",
+    "question": "What does China’s 14th Five-Year Plan envision for 2035, as described in the overview?",
+    "answerable": true,
+    "expected_answer": "Reaching the median GDP per capita of developed nations.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "34",
+          "printed_page": "2",
+          "region_label": "To get rich is glorious",
+          "evidence_description": "Paragraph on China’s 2035 ambition.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D13",
+    "split": "dev",
+    "group": "text",
+    "question": "Approximately how many people live in the middle-income countries discussed by the report?",
+    "answerable": true,
+    "expected_answer": "6 billion people.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "33",
+          "printed_page": "1",
+          "region_label": "In brief",
+          "evidence_description": "The text refers to 6 billion people in today’s middle-income countries.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D14",
+    "split": "dev",
+    "group": "text",
+    "question": "Name the domestic demographic and debt pressures narrowing the prospects of middle-income economies in the overview.",
+    "answerable": true,
+    "expected_answer": "Rising debt and aging populations.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "33",
+          "printed_page": "1",
+          "region_label": "In brief",
+          "evidence_description": "During the last decade paragraph lists rising debt and aging populations at home.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D15",
+    "split": "dev",
+    "group": "text",
+    "question": "Why can crises make it easier to dismantle outdated arrangements, according to the overview?",
+    "answerable": true,
+    "expected_answer": "In democracies they can help forge the consensus needed for tough policy reforms.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "34",
+          "printed_page": "2",
+          "region_label": "Overview continuation",
+          "evidence_description": "First paragraph explains crises and consensus for reforms.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D16",
+    "split": "dev",
+    "group": "missing",
+    "question": "What exact GDP per capita does the report predict for India on 1 January 2099?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "No dated point forecast for India on that exact day.",
+    "absence_search_terms": [
+      "2099",
+      "1 January 2099"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D17",
+    "split": "dev",
+    "group": "missing",
+    "question": "What is the report’s prescribed universal interest rate that guarantees innovation in every country?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "No universal guaranteed interest rate is prescribed.",
+    "absence_search_terms": [
+      "universal interest rate",
+      "guarantees innovation"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "D18",
+    "split": "dev",
+    "group": "missing",
+    "question": "What password does the World Bank require to access the confidential underlying firm-level data?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "The public report contains no data-access password.",
+    "absence_search_terms": [
+      "password",
+      "confidential"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T01",
+    "split": "test",
+    "group": "table",
+    "question": "Read Table O.1. What percentage of the global population is in lower-middle-income countries in 2022?",
+    "answerable": true,
+    "expected_answer": "40.3 percent.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "36",
+          "printed_page": "4",
+          "region_label": "Table O.1",
+          "evidence_description": "Lower-middle-income row, share of global population column: 40.3.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T02",
+    "split": "test",
+    "group": "table",
+    "question": "In Table O.1, what share of global carbon dioxide emissions is attributed to upper-middle-income countries in 2022?",
+    "answerable": true,
+    "expected_answer": "48.6 percent.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "36",
+          "printed_page": "4",
+          "region_label": "Table O.1",
+          "evidence_description": "Upper-middle-income row, CO2 emissions column: 48.6.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T03",
+    "split": "test",
+    "group": "table",
+    "question": "According to Table O.1, what percentage of global GDP is produced by high-income countries in 2022?",
+    "answerable": true,
+    "expected_answer": "60.8 percent.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "36",
+          "printed_page": "4",
+          "region_label": "Table O.1",
+          "evidence_description": "High-income row, share of global GDP: 60.8.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T04",
+    "split": "test",
+    "group": "table",
+    "question": "In Table O.1, what share of people in extreme poverty globally is in low-income countries?",
+    "answerable": true,
+    "expected_answer": "36.5 percent.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "36",
+          "printed_page": "4",
+          "region_label": "Table O.1",
+          "evidence_description": "Low-income row, extreme poverty share: 36.5.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T05",
+    "split": "test",
+    "group": "table",
+    "question": "Inspect Table 4.1. What productivity benefit and drawback can market power have?",
+    "answerable": true,
+    "expected_answer": "Mergers and acquisitions can improve efficiency; conglomerates can cross-subsidize unproductive firms and crowd out more productive competitors.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "135",
+          "printed_page": "103",
+          "region_label": "Table 4.1",
+          "evidence_description": "Productivity row, pros and cons columns.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T06",
+    "split": "test",
+    "group": "table",
+    "question": "Read the consumer welfare row of Table 4.1. What are the stated pro and con?",
+    "answerable": true,
+    "expected_answer": "More efficient structures can lower costs and prices; fewer market players make cartels easier to form.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "135",
+          "printed_page": "103",
+          "region_label": "Table 4.1",
+          "evidence_description": "Consumer welfare row, pros and cons columns.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T07",
+    "split": "test",
+    "group": "image",
+    "question": "Inspect Figure O.8. Match the Energy, Talent and Enterprise panels to the economists named above them.",
+    "answerable": true,
+    "expected_answer": "Energy: Schumpeter; Talent: Aghion and Howitt; Enterprise: Akcigit and Kerr.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "44",
+          "printed_page": "12",
+          "region_label": "Figure O.8",
+          "evidence_description": "Three illustrated panels with the field and economist names.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T08",
+    "split": "test",
+    "group": "image",
+    "question": "Inspect Figure O.10. Which force is oversized in the left-hand configuration, and how are the three forces rebalanced on the right?",
+    "answerable": true,
+    "expected_answer": "Preservation is oversized on the left. On the right preservation shrinks while creation and destruction become stronger/more balanced.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "49",
+          "printed_page": "17",
+          "region_label": "Figure O.10",
+          "evidence_description": "Before/after circle diagram shows a large orange Preservation circle becoming smaller and the other two becoming larger.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T09",
+    "split": "test",
+    "group": "image",
+    "question": "In the quality-ladder schematic Figure 4.3, which firm is marked IN and which is marked OUT?",
+    "answerable": true,
+    "expected_answer": "Firm 5 is IN and Firm 4 is OUT.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "120",
+          "printed_page": "88",
+          "region_label": "Figure 4.3",
+          "evidence_description": "Top ladder rung has incoming Firm 5; next rung has outgoing Firm 4.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T10",
+    "split": "test",
+    "group": "image",
+    "question": "Inspect Figure 7.2. What box is directly above Contestability, and which three policy boxes feed into Contestability?",
+    "answerable": true,
+    "expected_answer": "Disciplining incumbency is above Contestability; Institutions, Incentives and Interventions feed into it.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "195",
+          "printed_page": "163",
+          "region_label": "Figure 7.2",
+          "evidence_description": "Arrow diagram with three base boxes, central Contestability and top Disciplining incumbency.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T11",
+    "split": "test",
+    "group": "image",
+    "question": "Read Map 6.2. What do the orange lines represent, and what year do the mapped networks describe?",
+    "answerable": true,
+    "expected_answer": "Power transmission lines; electricity transmission networks in 2023.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "182",
+          "printed_page": "150",
+          "region_label": "Map 6.2",
+          "evidence_description": "Map legend labels orange lines as power transmission lines; note specifies networks in 2023.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T12",
+    "split": "test",
+    "group": "chart",
+    "question": "Inspect Figure 3.1. In 2020, is the harmful-trade-policy line above or below the helpful-policy line, and what does the vertical axis count?",
+    "answerable": true,
+    "expected_answer": "The harmful line is above the helpful line. The y-axis counts new global trade policies.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "104",
+          "printed_page": "72",
+          "region_label": "Figure 3.1",
+          "evidence_description": "Orange harmful line above dark helpful line at 2020; y-axis is Number of new global trade policies.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T13",
+    "split": "test",
+    "group": "chart",
+    "question": "Read the legend and vertical axes of Figure 3.2. Which two semiconductor HS codes are plotted, and what is counted?",
+    "answerable": true,
+    "expected_answer": "8541 and 8542 semiconductors; the number of new trade interventions per year.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "105",
+          "printed_page": "73",
+          "region_label": "Figure 3.2",
+          "evidence_description": "Legend lists 8541/8542; panels count new helpful/harmful interventions per year.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T14",
+    "split": "test",
+    "group": "chart",
+    "question": "Inspect Figure 6.1. Is the vertical price axis logarithmic or linear, and by about 2020 are solar photovoltaics lower or higher than software on that index?",
+    "answerable": true,
+    "expected_answer": "Logarithmic; solar photovoltaics are lower than software.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "171",
+          "printed_page": "139",
+          "region_label": "Figure 6.1",
+          "evidence_description": "Axis explicitly says log scale; PV curve ends far below the software curve.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T15",
+    "split": "test",
+    "group": "chart",
+    "question": "Read Figure 7.8. What shares are shown for SOEs in coal capacity and the private sector in renewable capacity, and what is their percentage-point difference?",
+    "answerable": true,
+    "expected_answer": "84 percent for SOEs in coal and 80 percent for private renewable capacity; difference 4 percentage points. China is shown separately.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "201",
+          "printed_page": "169",
+          "region_label": "Figure 7.8",
+          "evidence_description": "Two pie charts show SOEs 84% coal and private sector 80% renewable; note separates China ownership.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T16",
+    "split": "test",
+    "group": "chart",
+    "question": "Inspect Figure 9.12. What unit is used for global primary energy consumption, and what is the final year on the horizontal axis?",
+    "answerable": true,
+    "expected_answer": "Terawatt-hours (TWh); 2022.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "267",
+          "printed_page": "235",
+          "region_label": "Figure 9.12",
+          "evidence_description": "Stacked area chart y-axis includes TWh, x-axis ends in 2022.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T17",
+    "split": "test",
+    "group": "multi_hop",
+    "question": "Using Table O.1 and Figure O.4, calculate the combined global population share of lower- and upper-middle-income countries and identify the 2i and 3i strategy components.",
+    "answerable": true,
+    "expected_answer": "40.3 + 35.1 = 75.4 percent. 2i is investment plus infusion; 3i adds innovation.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "36",
+          "printed_page": "4",
+          "region_label": "Table O.1",
+          "evidence_description": "Population shares 40.3 and 35.1.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ],
+      [
+        {
+          "source_id": "wdr",
+          "page": "39",
+          "printed_page": "7",
+          "region_label": "Figure O.4",
+          "evidence_description": "2i Investment + Infusion; 3i Investment + Infusion + Innovation.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T18",
+    "split": "test",
+    "group": "multi_hop",
+    "question": "Combine Table O.2 with Table O.3: is infusion a high priority for lower-middle-income countries, and how should their enterprise policy discipline market leaders?",
+    "answerable": true,
+    "expected_answer": "Yes, infusion is a higher priority; discipline market leaders through integration into globally contestable markets.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "39",
+          "printed_page": "7",
+          "region_label": "Table O.2",
+          "evidence_description": "Lower-middle-income row, infusion higher priority.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ],
+      [
+        {
+          "source_id": "wdr",
+          "page": "59",
+          "printed_page": "27",
+          "region_label": "Table O.3",
+          "evidence_description": "Lower-middle-income enterprise column recommends globally contestable markets.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T19",
+    "split": "test",
+    "group": "multi_hop",
+    "question": "Using Figure 7.8 and the Energy row of Table O.3, state the SOE share in coal capacity and the recommended budget-constraint policy for SOEs in lower-middle-income countries.",
+    "answerable": true,
+    "expected_answer": "SOEs have 84 percent of coal capacity in the depicted sample; harden SOE budget constraints.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "201",
+          "printed_page": "169",
+          "region_label": "Figure 7.8",
+          "evidence_description": "Coal pie chart SOEs 84%, China separate.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ],
+      [
+        {
+          "source_id": "wdr",
+          "page": "59",
+          "printed_page": "27",
+          "region_label": "Table O.3",
+          "evidence_description": "Lower-middle-income Energy row: discipline SOEs by hardening budget constraints.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T20",
+    "split": "test",
+    "group": "multi_hop",
+    "question": "Combine the Jobs row of Table 4.1 with the foundational-skills discussion on printed page 190. How can demand for skilled workers rise while educational preparation remains a constraint?",
+    "answerable": true,
+    "expected_answer": "Market power can raise demand for highly skilled workers while depressing low-skilled wages/capturing talent. The text says upper-secondary enrollment/completion lag and weak foundational skills weaken the talent pipeline.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "135",
+          "printed_page": "103",
+          "region_label": "Table 4.1",
+          "evidence_description": "Jobs row pros and cons.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ],
+      [
+        {
+          "source_id": "wdr",
+          "page": "222",
+          "printed_page": "190",
+          "region_label": "Foundational skills",
+          "evidence_description": "Upper-secondary enrollment/completion lag; unless foundational skills improve the talent pipeline remains weak.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T21",
+    "split": "test",
+    "group": "text",
+    "question": "How does the structural-change section define the middle-income trap?",
+    "answerable": true,
+    "expected_answer": "Risk of slowdown or stagnation when a country fails to adapt policies and institutions to changing economic and structural needs.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "87",
+          "printed_page": "55",
+          "region_label": "Economic development = structural change",
+          "evidence_description": "First paragraph defines middle-income trap.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T22",
+    "split": "test",
+    "group": "text",
+    "question": "According to the overview, what high-income transition year and GDP-per-capita growth ambition does Viet Nam’s 2021–2030 strategy specify?",
+    "answerable": true,
+    "expected_answer": "Transition to high-income status by 2045, with sustained GDP per capita growth of 7 percent through the decade.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "34",
+          "printed_page": "2",
+          "region_label": "To get rich is glorious",
+          "evidence_description": "Viet Nam paragraph gives 7 percent and 2045.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T23",
+    "split": "test",
+    "group": "text",
+    "question": "How many new low-carbon-technology job openings were identified in 2022, and approximately what share of online jobs did they represent?",
+    "answerable": true,
+    "expected_answer": "3.3 million; just under 2 percent of jobs posted online in 2022.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "171",
+          "printed_page": "139",
+          "region_label": "Low-carbon jobs paragraph",
+          "evidence_description": "Paragraph on one billion postings across 86 countries states 3.3 million and just under 2 percent.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T24",
+    "split": "test",
+    "group": "text",
+    "question": "What is one terawatt-hour equivalent to in watt-hours, according to the note beneath Figure 9.12?",
+    "answerable": true,
+    "expected_answer": "One trillion watt-hours.",
+    "evidence_groups": [
+      [
+        {
+          "source_id": "wdr",
+          "page": "267",
+          "printed_page": "235",
+          "region_label": "Figure 9.12 note",
+          "evidence_description": "Note defines one TWh as 1 trillion watt-hours.",
+          "bbox": [
+            0.0,
+            0.0,
+            576.0,
+            756.0
+          ]
+        }
+      ]
+    ],
+    "author": "Codex assistant, original PDF inspected",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T25",
+    "split": "test",
+    "group": "missing",
+    "question": "What exact 2037 GNI per capita does Table O.1 give for Viet Nam?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "Table O.1 describes 2022 income groups and has no 2037 Viet Nam forecast.",
+    "absence_search_terms": [
+      "2037",
+      "Table O.1"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T26",
+    "split": "test",
+    "group": "missing",
+    "question": "What exact percentage of global population will be upper-middle-income in 2099 according to this report?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "The requested 2099 point estimate is not supplied.",
+    "absence_search_terms": [
+      "2099",
+      "upper-middle-income"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T27",
+    "split": "test",
+    "group": "missing",
+    "question": "What exact US-dollar tariff for one household’s electricity does Map 6.2 prescribe?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "The map depicts transmission networks and supplies no household tariff.",
+    "absence_search_terms": [
+      "household tariff",
+      "Map 6.2"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T28",
+    "split": "test",
+    "group": "missing",
+    "question": "What is the guaranteed stock-market return from investing in every company mentioned in this report?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "No guaranteed stock return is provided for the companies mentioned.",
+    "absence_search_terms": [
+      "guaranteed stock",
+      "stock-market return"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T29",
+    "split": "test",
+    "group": "missing",
+    "question": "What are the names and personal phone numbers of every job applicant represented in Map 6.1?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "The map is aggregate geographic job-posting data, not individual applicants or phone numbers.",
+    "absence_search_terms": [
+      "phone numbers",
+      "applicant"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  },
+  {
+    "id": "T30",
+    "split": "test",
+    "group": "missing",
+    "question": "What exact price and launch date does this report predict for a commercial fusion reactor in 2049?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "The report does not provide the requested information.",
+    "absence_reason": "The report does not give this exact product price and launch-date prediction.",
+    "absence_search_terms": [
+      "2049",
+      "fusion reactor"
+    ],
+    "absence_check": "Full-document text search plus relevant section inspection; confirm against original PDF.",
+    "human_confirmation": "pending"
+  }
+]

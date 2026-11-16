@@ -1,0 +1,2090 @@
+{
+  "status": "abstain",
+  "answer": "I couldn’t find retrieved evidence for an exact future release date of “scikit-learn version 10.”",
+  "citations": [],
+  "question": "What is the exact future release date of scikit-learn version 10?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "scikit-learn version 10 future release date",
+      "results": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 11.30352939296335,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 11.30352939296335,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0034732999993138947
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn future release date version 1.0 release date",
+      "results": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 12.602552202944395,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 11.051837705059972,
+          "rank": 2
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 9.678549490096414,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 9.366213435161837,
+          "rank": 4
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 9.030267449886551,
+          "rank": 5
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 8.685797800936792,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 12.602552202944395,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 11.051837705059972,
+          "rank": 2
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 9.678549490096414,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 9.366213435161837,
+          "rank": 4
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 9.030267449886551,
+          "rank": 5
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 8.685797800936792,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0029150000009394716
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn 1.0 release date",
+      "results": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 11.051837705059972,
+          "rank": 1
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 9.678549490096414,
+          "rank": 2
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 9.366213435161837,
+          "rank": 3
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 9.030267449886551,
+          "rank": 4
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 8.685797800936792,
+          "rank": 5
+        },
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 7.093067589516938,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 11.051837705059972,
+          "rank": 1
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 9.678549490096414,
+          "rank": 2
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 9.366213435161837,
+          "rank": 3
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 9.030267449886551,
+          "rank": 4
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 8.685797800936792,
+          "rank": 5
+        },
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 7.093067589516938,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0020758000027853996
+    },
+    {
+      "event": "search",
+      "query": "site:scikit-learn.org scikit-learn 1.0 release date future",
+      "results": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 20.64078574247653,
+          "rank": 1
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 15.673604114326734,
+          "rank": 2
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 14.744147072947754,
+          "rank": 3
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 14.344112256072725,
+          "rank": 4
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 13.44937627448537,
+          "rank": 5
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 13.048509329639604,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 20.64078574247653,
+          "rank": 1
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 15.673604114326734,
+          "rank": 2
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 14.744147072947754,
+          "rank": 3
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 14.344112256072725,
+          "rank": 4
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 13.44937627448537,
+          "rank": 5
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 13.048509329639604,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.005815500000608154
+    },
+    {
+      "event": "search",
+      "query": "\"What's New\" scikit-learn 1.0 release",
+      "results": [
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 11.679785357825939,
+          "rank": 1
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 11.617998752939773,
+          "rank": 2
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 11.051837705059972,
+          "rank": 3
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 9.678549490096414,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 9.366213435161837,
+          "rank": 5
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 9.030267449886551,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 11.679785357825939,
+          "rank": 1
+        },
+        {
+          "id": "02e231c38d3b1a4dd44b5903",
+          "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 1193,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 365
+          },
+          "score": 11.617998752939773,
+          "rank": 2
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 11.051837705059972,
+          "rank": 3
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 9.678549490096414,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 9.366213435161837,
+          "rank": 5
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 9.030267449886551,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0022490000010293443
+    },
+    {
+      "event": "search",
+      "query": "\"version 10\" scikit-learn",
+      "results": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 11.303529392963352,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 11.303529392963352,
+          "rank": 1
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 9.58894803741656,
+          "rank": 2
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 6.524254664819802,
+          "rank": 3
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 6.478727994608549,
+          "rank": 4
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 6.307390679164898,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 5.960662520753461,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.003722999997989973
+    }
+  ],
+  "context": [
+    {
+      "id": "8cbd5c032892c48a7691158b",
+      "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 3367,
+        "start": 1977,
+        "topic": "model_selection",
+        "anchor": "randomized-parameter-optimization",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 352
+      },
+      "score": 11.303529392963352,
+      "rank": 1
+    },
+    {
+      "id": "7c2b2cda8d7888782bcc46a3",
+      "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 3696,
+        "start": 3266,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 96
+      },
+      "score": 9.58894803741656,
+      "rank": 2
+    },
+    {
+      "id": "2e9b0d772f10d0672417d2fd",
+      "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:005",
+      "metadata": {
+        "end": 2099,
+        "start": 1442,
+        "topic": "model_selection",
+        "anchor": "using-multiple-metric-evaluation",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18651,
+        "unit_start": 14616,
+        "token_count": 175
+      },
+      "score": 6.524254664819802,
+      "rank": 3
+    },
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 6.478727994608549,
+      "rank": 4
+    },
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 6.307390679164898,
+      "rank": 5
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 5.960662520753461,
+      "rank": 6
+    },
+    {
+      "id": "2021f79c2f01fa48a4d6249b",
+      "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:006",
+      "metadata": {
+        "end": 3284,
+        "start": 2213,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 22404,
+        "unit_start": 18117,
+        "token_count": 358
+      },
+      "score": 9.678549490096414,
+      "rank": 4
+    },
+    {
+      "id": "75c34c1f9dacc20523109b41",
+      "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:003",
+      "metadata": {
+        "end": 1786,
+        "start": 839,
+        "topic": "preprocessing",
+        "anchor": "keeping-the-number-of-features-constant",
+        "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11852,
+        "unit_start": 8181,
+        "token_count": 282
+      },
+      "score": 9.030267449886551,
+      "rank": 6
+    },
+    {
+      "id": "02e231c38d3b1a4dd44b5903",
+      "text": "8.3.4. Encoding categorical features\n\nOften features are not given as continuous values but categorical. For example a person could have features [\"male\", \"female\"] , [\"from Europe\", \"from US\", \"from Asia\"] , [\"uses Firefox\", \"uses Chrome\", \"uses Safari\", \"uses Internet Explorer\"] . Such features can be efficiently coded as integers, for instance [\"male\", \"from US\", \"uses Internet Explorer\"] could be expressed as [0, 1, 3] while [\"female\", \"from Asia\", \"uses Chrome\"] would be [1, 2, 1] .\n\nTo convert categorical features to such integer codes, we can use the OrdinalEncoder . This estimator transforms each categorical feature to one new feature of integers (0 to n_categories - 1):\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOrdinalEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari']])\narray([[0., 1., 1.]])\n\nSuch integer representation can, however, not be used directly with all scikit-learn estimators, as these expect continuous input, and would interpret the categories as being ordered, which is often not desired (i.e. the set of browsers was ordered arbitrarily).",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:006",
+      "metadata": {
+        "end": 1193,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 22404,
+        "unit_start": 18117,
+        "token_count": 365
+      },
+      "score": 11.617998752939773,
+      "rank": 2
+    },
+    {
+      "id": "ba7dfa66b6f9c432c10567fd",
+      "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1080,
+        "start": 145,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 341
+      },
+      "score": 11.679785357825939,
+      "rank": 1
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:40:01.320526+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 82,
+        "output_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "total_tokens": 591
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:03.863255+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2904,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 103,
+        "output_tokens_details": {
+          "reasoning_tokens": 71
+        },
+        "total_tokens": 3007
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:06.188450+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5517,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 58,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 5575
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:07.963682+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8085,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 82,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 8167
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:10.443938+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 10506,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 5376,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 56,
+        "output_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 10562
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:14.288751+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 13121,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2816,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "reasoning_tokens": 160
+        },
+        "total_tokens": 13308
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:20.544416+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 15441,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 395,
+        "output_tokens_details": {
+          "reasoning_tokens": 251
+        },
+        "total_tokens": 15836
+      }
+    }
+  ],
+  "seconds": 21.47230529999797,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q22",
+  "initial_ranking": [
+    {
+      "id": "8cbd5c032892c48a7691158b",
+      "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 3367,
+        "start": 1977,
+        "topic": "model_selection",
+        "anchor": "randomized-parameter-optimization",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 352
+      },
+      "score": 17.564384220513812,
+      "rank": 1
+    },
+    {
+      "id": "7c2b2cda8d7888782bcc46a3",
+      "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 3696,
+        "start": 3266,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 96
+      },
+      "score": 14.702744614407518,
+      "rank": 2
+    },
+    {
+      "id": "c20c9e9817766f4a53d7ef4c",
+      "text": "3.4.6.12. Visual evaluation of regression models\n\nAmong methods to assess the quality of regression models, scikit-learn provides the PredictionErrorDisplay class. It allows to visually inspect the prediction errors of a model in two different manners.\n\nThe plot on the left shows the actual values vs predicted values. For a noise-free regression task aiming to predict the (conditional) expectation of y , a perfect regression model would display data points on the diagonal defined by predicted equal to actual values. The further away from this optimal line, the larger the error of the model. In a more realistic setting with irreducible noise, that is, when not all the variations of y can be explained by features in X , then the best model would lead to a cloud of points densely arranged around the diagonal.\n\nNote that the above only holds when the predicted values is the expected value of y given X . This is typically the case for regression models that minimize the mean squared error objective function or more generally the mean Tweedie deviance for any value of its “power” parameter.\n\nWhen plotting the predictions of an estimator that predicts a quantile of y given X , e.g. QuantileRegressor or any other model minimizing the pinball loss , a fraction of the points are either expected to lie above or below the diagonal depending on the estimated quantile level.\n\nAll in all, while intuitive to read, this plot does not really inform us on what to do to obtain a better model.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:030",
+      "metadata": {
+        "end": 3558,
+        "start": 2061,
+        "topic": "model_selection",
+        "anchor": "visual-evaluation-of-regression-models",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.12. Visual evaluation of regression models",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 109777,
+        "unit_start": 106219,
+        "token_count": 309
+      },
+      "score": 13.123596482169878,
+      "rank": 3
+    },
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 12.942182597993568,
+      "rank": 4
+    },
+    {
+      "id": "f13d9041c7b9b8407466bf24",
+      "text": "3.2.3. Searching for optimal parameters with successive halving\n\nScikit-learn also provides the HalvingGridSearchCV and HalvingRandomSearchCV estimators that can be used to search a parameter space using successive halving [ 1 ] [ 2 ] . Successive halving (SH) is like a tournament among candidate parameter combinations. SH is an iterative selection process where all candidates (the parameter combinations) are evaluated with a small amount of resources at the first iteration. Only some of these candidates are selected for the next iteration, which will be allocated more resources. For parameter tuning, the resource is typically the number of training samples, but it can also be an arbitrary numeric parameter such as n_estimators in a random forest.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 4126,
+        "start": 3369,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 159
+      },
+      "score": 12.1436077257441,
+      "rank": 5
+    },
+    {
+      "id": "5d5f352d6d93ec4a2a198685",
+      "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 1865,
+        "start": 672,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 235
+      },
+      "score": 11.985232000170152,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942"
+}

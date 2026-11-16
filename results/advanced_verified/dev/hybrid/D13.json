@@ -1,0 +1,2112 @@
+{
+  "status": "abstain",
+  "answer": "The report does not give an absolute headcount; it says the middle-income countries are home to about 75% of the world’s population, so I can’t convert that to a specific number of people from the report alone.",
+  "citations": [],
+  "question": "Approximately how many people live in the middle-income countries discussed by the report?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "middle-income countries discussed by the report approximately how many people live in middle-income countries report",
+      "results": [
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03252247488101534,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p018-text-000",
+          "text": "This has implications for the whole world. Middle-income countries are home to three\n            out of every four people—and nearly two-thirds of those who struggle in extreme poverty.\n          They are responsible for 40 percent of the world’s total economic output—and nearly two-\n             thirds of global carbon emissions. In short, the global effort to end extreme poverty and\n            spread prosperity and livability will largely be won or lost in these countries.\n            The road ahead has even stiffer challenges than those seen in the past: rapidly aging\n            populations and burgeoning debt, fierce geopolitical and trade frictions, and the growing\n               difficulty of speeding up economic progress without fouling the environment. Yet many\n           middle-income countries still use a playbook from the last century, relying mainly on pol­\n               icies designed to expand investment. That is like driving a car just in first gear and trying\n             to make it go faster. If they stick with the old playbook, most developing countries will lose\n            the race to create reasonably prosperous societies by the middle of this century. At current\n             trends, it will take China more than 10 years just to reach one-quarter of US income per\n              capita, Indonesia nearly 70 years, and India 75 years.\n            The team that has written this report hopes to radically alter this arithmetic. Our hope\n                 is that World Development Report 2024 will, in short order, make the expression “middle-\n           income trap” completely obsolete.\n\n                                                                                Indermit Gill\n                                                            Chief Economist of the World Bank Group and\n                                                         Senior Vice President for Development Economics\n\nxvi   | Foreword\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "18",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 18,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03055037313432836,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p065-text-001",
+          "text": "Introduction                                         •  They had more resources available to raise\n                                                        the living standards of the poor.\n The problem of economic growth in middle-­income\n economies has been a concern of development pol-   The 1978 Report emphasized the central role of\n icy practitioners for at least five decades. In the    cultivating engineering talent to design products\n first World Development Report, published in 1978,    that change continually and rapidly, alongside\n “middle-income” was an omnibus term applied to    better organizing workshops and other produc-\n countries with diverse economic characteristics    tion facilities so they are made efficiently.3\n at various stages of development.1 Middle-income       Interest in the economic growth of middle-­\n countries were  defined  as those with annual   income countries rose over the last two decades,\n income per capita of over US$250.2 By that defini-    especially after a 2007 World Bank regional report\n tion, 58 countries, home to about 900 million peo-   on East Asia introduced the term “­middle-income\n ple, were designated middle-income. Despite the     trap.” 4 The term encapsulated the concern that\n ­diversity, World Development Report 1978 identified    middle-income countries are prone to systematic\n two  characteristics  that  distinguished  middle-­   slowdowns in growth demonstrated, for example,\n income from low-­income countries:                by the economic stagnation in Latin America and\n                                                  the Middle East since the mid-1970s. This chapter\n     •  Their growth prospects were more sen-                                                       assesses whether the experience of the developing\n         sitive  to  economic  conditions  in  the                                                world is consistent with this concern. It finds that\n        industrialized  (high-income)  countries,                                                  the majority of growth slowdowns do take place",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.029437229437229435,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.02878726010616578,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p191-text-001",
+          "text": "       art 2 of this Report describes how the          energy markets and other sectors now\n       forces of creation—the protagonist of eco-         dominated by favored entities, especially\n      nomic growth—are weak in middle-income          state-owned  enterprises.  In  addition,P countries. Many large incumbents do not innovate          middle-income  countries  will need  to\n or infuse global technologies, and many entrants          strengthen the capacity of competition\n do not disrupt. By contrast, the forces of preser-           agencies to identify and rein in firms that\n vation—the antagonist to creation—are strong in          abuse their incumbency advantage. Insti-\n middle-income countries. Incumbent firms and           tuting progressive tax policies to discipline\n social elites often preserve the status quo. Mean-         incumbent elites while still incentivizing\n while, the forces of destruction—which are often          innovation will be needed as well.\n needed to remove the obstacles to creation—are         •  Rewarding merit (chapter 8). To strengthen\n held back by the forces of preservation. Together,          the  forces  of  creation, middle-income\n the forces of creation, preservation, and destruc-           countries should reward merit activities—\n tion are unbalanced in middle-income countries          those with  positive  externalities;  that\n struggling with slower growth.                                         is, those with positive effects on general\n   Part  3  of  this  Report  examines  how           well-being. This entails redesigning poli-\n middle-income countries can accelerate growth            cies to focus on assessing the value added\n by balancing these three forces, which entails           of firms in jobs, exports, technology infu-\n the following:                                                 sion, and innovation instead of designing\n                                                                 policies that simply focus on the size of\n     •  Disciplining   incumbency   (chapter",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "191",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 191,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.01639344262295082,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p036-text-002",
+          "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n4   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p256-text-002",
+          "text": "as discussed in chapter 6. Many inputs into clean    overall technological sophistication (as discussed\nenergy value chains are also highly concentrated.    in ­chapter  6). Middle-income countries tapping\nFor example, the Democratic Republic of Congo    into manufacturing opportunities for clean energy\nsupplies 74 percent of cobalt, China 68 percent of    technologies are typically those already competitive\nrare earth elements, and Indonesia 49 percent of    in manufacturing or exporters of high-­technology\nnickel. Australia accounts for 47 percent of lith­    products.9 Research conducted  for  this Report\nium mining, and Chile for 24 percent. Processing    shows that the share of online job postings for all\nof these minerals is also highly concentrated, with    disruptive technologies is highly correlated with the\nChina refining 90 percent of rare earth elements    share of online job postings related to low-­carbon\nand 65 percent and 74 percent, respectively, of    technologies.10 This finding suggests that coun­\nlithium and cobalt (figure 9.3).                           tries experiencing a rapid diffusion of all emerging\n  One  pathway   for  middle-income  coun­     ­disruptive technologies are also witnessing a rapid\ntries  is to improve their firm  capabilities and    diffusion of low-carbon technologies.\n\n224   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "256",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 256,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p264-chart-00-000",
+          "text": "Figure 9.9\nBar chart titled \"Today’s upper-middle-income countries are more energy efficient than upper-middle-income countries in the past.\" The y-axis is \"Elasticity of energy intensity\" ranging from 0 to 1.2 with tick marks at 0.2 intervals. The x-axis has four categories, shown with angled labels: Low-income, Lower-middle-income, Upper-middle-income, and Upper-middle-income (1960–2016). There are four vertical bars: Low-income is approximately 0.81; Lower-middle-income is approximately 0.82; Upper-middle-income is approximately 0.75; Upper-middle-income (1960–2016) is approximately 1.10. The first three bars are dark blue; the last bar is orange. Source note on the figure: WDR 2024 team calculations based on data from Fetter (2022). Note states that elasticity of energy intensity refers to the energy used per unit of gross domestic product (GDP); estimates are based on a fixed-effect dynamic response lag model covering 136 countries over 1960–2017 (34,800 observations), including log price index, two lags of end-user energy consumption, dummies for structural breaks in data series, and country-sector fixed effects. The note also says the elasticity values can be interpreted as follows: if GDP increases by 1 percent, energy consumption increases only by 0.75 percent in upper-middle-income countries that achieved upper-middle-income status as of 2017, compared with 1.1 percent in upper-middle-income countries that achieved upper-middle-income status within 1960–2016.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "264",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-264.png",
+            "label": "Figure 9.9",
+            "pdf_page": 264,
+            "visual_id": "wdr-p264-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The exact bar heights are not labeled on the chart and are estimated visually from the plotted bars.",
+              "The figure uses no visible legend; color meaning is inferred only from the bar colors and labels."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015625,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.015384615384615385,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p263-chart-00-000",
+          "text": "Figure 9.8\nBar chart titled \"In low- and middle-income countries, the cost of capital for renewables is high.\" Vertical axis: \"Cost of capital (%)\" from 0 to 9. Four orange bars on the horizontal axis: Low-income (approximately 8.8%), Lower-middle-income (approximately 8.5%), Upper-middle-income (approximately 7.1%), and High-income (approximately 3.8%). Bars decrease from low-income to high-income. Source: IRENA 2023. Note: Data are for 2021 and 2022.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "263",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-263.png",
+            "label": "Figure 9.8",
+            "pdf_page": 263,
+            "visual_id": "wdr-p263-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bar values are not printed on the figure; heights are estimated from the axis and may differ slightly from the underlying data.",
+              "The plot shows no legend beyond the category labels; only one series is visible.",
+              "The chart title and labels are partly reproduced from the page and may include minor OCR/reading ambiguity."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015384615384615385,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03252247488101534,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p018-text-000",
+          "text": "This has implications for the whole world. Middle-income countries are home to three\n            out of every four people—and nearly two-thirds of those who struggle in extreme poverty.\n          They are responsible for 40 percent of the world’s total economic output—and nearly two-\n             thirds of global carbon emissions. In short, the global effort to end extreme poverty and\n            spread prosperity and livability will largely be won or lost in these countries.\n            The road ahead has even stiffer challenges than those seen in the past: rapidly aging\n            populations and burgeoning debt, fierce geopolitical and trade frictions, and the growing\n               difficulty of speeding up economic progress without fouling the environment. Yet many\n           middle-income countries still use a playbook from the last century, relying mainly on pol­\n               icies designed to expand investment. That is like driving a car just in first gear and trying\n             to make it go faster. If they stick with the old playbook, most developing countries will lose\n            the race to create reasonably prosperous societies by the middle of this century. At current\n             trends, it will take China more than 10 years just to reach one-quarter of US income per\n              capita, Indonesia nearly 70 years, and India 75 years.\n            The team that has written this report hopes to radically alter this arithmetic. Our hope\n                 is that World Development Report 2024 will, in short order, make the expression “middle-\n           income trap” completely obsolete.\n\n                                                                                Indermit Gill\n                                                            Chief Economist of the World Bank Group and\n                                                         Senior Vice President for Development Economics\n\nxvi   | Foreword\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "18",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 18,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03055037313432836,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p065-text-001",
+          "text": "Introduction                                         •  They had more resources available to raise\n                                                        the living standards of the poor.\n The problem of economic growth in middle-­income\n economies has been a concern of development pol-   The 1978 Report emphasized the central role of\n icy practitioners for at least five decades. In the    cultivating engineering talent to design products\n first World Development Report, published in 1978,    that change continually and rapidly, alongside\n “middle-income” was an omnibus term applied to    better organizing workshops and other produc-\n countries with diverse economic characteristics    tion facilities so they are made efficiently.3\n at various stages of development.1 Middle-income       Interest in the economic growth of middle-­\n countries were  defined  as those with annual   income countries rose over the last two decades,\n income per capita of over US$250.2 By that defini-    especially after a 2007 World Bank regional report\n tion, 58 countries, home to about 900 million peo-   on East Asia introduced the term “­middle-income\n ple, were designated middle-income. Despite the     trap.” 4 The term encapsulated the concern that\n ­diversity, World Development Report 1978 identified    middle-income countries are prone to systematic\n two  characteristics  that  distinguished  middle-­   slowdowns in growth demonstrated, for example,\n income from low-­income countries:                by the economic stagnation in Latin America and\n                                                  the Middle East since the mid-1970s. This chapter\n     •  Their growth prospects were more sen-                                                       assesses whether the experience of the developing\n         sitive  to  economic  conditions  in  the                                                world is consistent with this concern. It finds that\n        industrialized  (high-income)  countries,                                                  the majority of growth slowdowns do take place",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.029437229437229435,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.02878726010616578,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p191-text-001",
+          "text": "       art 2 of this Report describes how the          energy markets and other sectors now\n       forces of creation—the protagonist of eco-         dominated by favored entities, especially\n      nomic growth—are weak in middle-income          state-owned  enterprises.  In  addition,P countries. Many large incumbents do not innovate          middle-income  countries  will need  to\n or infuse global technologies, and many entrants          strengthen the capacity of competition\n do not disrupt. By contrast, the forces of preser-           agencies to identify and rein in firms that\n vation—the antagonist to creation—are strong in          abuse their incumbency advantage. Insti-\n middle-income countries. Incumbent firms and           tuting progressive tax policies to discipline\n social elites often preserve the status quo. Mean-         incumbent elites while still incentivizing\n while, the forces of destruction—which are often          innovation will be needed as well.\n needed to remove the obstacles to creation—are         •  Rewarding merit (chapter 8). To strengthen\n held back by the forces of preservation. Together,          the  forces  of  creation, middle-income\n the forces of creation, preservation, and destruc-           countries should reward merit activities—\n tion are unbalanced in middle-income countries          those with  positive  externalities;  that\n struggling with slower growth.                                         is, those with positive effects on general\n   Part  3  of  this  Report  examines  how           well-being. This entails redesigning poli-\n middle-income countries can accelerate growth            cies to focus on assessing the value added\n by balancing these three forces, which entails           of firms in jobs, exports, technology infu-\n the following:                                                 sion, and innovation instead of designing\n                                                                 policies that simply focus on the size of\n     •  Disciplining   incumbency   (chapter",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "191",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 191,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.01639344262295082,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p036-text-002",
+          "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n4   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p256-text-002",
+          "text": "as discussed in chapter 6. Many inputs into clean    overall technological sophistication (as discussed\nenergy value chains are also highly concentrated.    in ­chapter  6). Middle-income countries tapping\nFor example, the Democratic Republic of Congo    into manufacturing opportunities for clean energy\nsupplies 74 percent of cobalt, China 68 percent of    technologies are typically those already competitive\nrare earth elements, and Indonesia 49 percent of    in manufacturing or exporters of high-­technology\nnickel. Australia accounts for 47 percent of lith­    products.9 Research conducted  for  this Report\nium mining, and Chile for 24 percent. Processing    shows that the share of online job postings for all\nof these minerals is also highly concentrated, with    disruptive technologies is highly correlated with the\nChina refining 90 percent of rare earth elements    share of online job postings related to low-­carbon\nand 65 percent and 74 percent, respectively, of    technologies.10 This finding suggests that coun­\nlithium and cobalt (figure 9.3).                           tries experiencing a rapid diffusion of all emerging\n  One  pathway   for  middle-income  coun­     ­disruptive technologies are also witnessing a rapid\ntries  is to improve their firm  capabilities and    diffusion of low-carbon technologies.\n\n224   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "256",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 256,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p264-chart-00-000",
+          "text": "Figure 9.9\nBar chart titled \"Today’s upper-middle-income countries are more energy efficient than upper-middle-income countries in the past.\" The y-axis is \"Elasticity of energy intensity\" ranging from 0 to 1.2 with tick marks at 0.2 intervals. The x-axis has four categories, shown with angled labels: Low-income, Lower-middle-income, Upper-middle-income, and Upper-middle-income (1960–2016). There are four vertical bars: Low-income is approximately 0.81; Lower-middle-income is approximately 0.82; Upper-middle-income is approximately 0.75; Upper-middle-income (1960–2016) is approximately 1.10. The first three bars are dark blue; the last bar is orange. Source note on the figure: WDR 2024 team calculations based on data from Fetter (2022). Note states that elasticity of energy intensity refers to the energy used per unit of gross domestic product (GDP); estimates are based on a fixed-effect dynamic response lag model covering 136 countries over 1960–2017 (34,800 observations), including log price index, two lags of end-user energy consumption, dummies for structural breaks in data series, and country-sector fixed effects. The note also says the elasticity values can be interpreted as follows: if GDP increases by 1 percent, energy consumption increases only by 0.75 percent in upper-middle-income countries that achieved upper-middle-income status as of 2017, compared with 1.1 percent in upper-middle-income countries that achieved upper-middle-income status within 1960–2016.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "264",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-264.png",
+            "label": "Figure 9.9",
+            "pdf_page": 264,
+            "visual_id": "wdr-p264-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The exact bar heights are not labeled on the chart and are estimated visually from the plotted bars.",
+              "The figure uses no visible legend; color meaning is inferred only from the bar colors and labels."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015625,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.015384615384615385,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p263-chart-00-000",
+          "text": "Figure 9.8\nBar chart titled \"In low- and middle-income countries, the cost of capital for renewables is high.\" Vertical axis: \"Cost of capital (%)\" from 0 to 9. Four orange bars on the horizontal axis: Low-income (approximately 8.8%), Lower-middle-income (approximately 8.5%), Upper-middle-income (approximately 7.1%), and High-income (approximately 3.8%). Bars decrease from low-income to high-income. Source: IRENA 2023. Note: Data are for 2021 and 2022.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "263",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-263.png",
+            "label": "Figure 9.8",
+            "pdf_page": 263,
+            "visual_id": "wdr-p263-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bar values are not printed on the figure; heights are estimated from the axis and may differ slightly from the underlying data.",
+              "The plot shows no legend beyond the category labels; only one series is visible.",
+              "The chart title and labels are partly reproduced from the page and may include minor OCR/reading ambiguity."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015384615384615385,
+          "rank": 10
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.37646460000178195
+    },
+    {
+      "event": "search",
+      "query": "\"about 75 percent of the world’s population\" report 6 billion middle-income countries",
+      "results": [
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.032018442622950824,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.031099324975891997,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.030834914611005692,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p036-text-001",
+          "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.028577260665441927,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p018-text-000",
+          "text": "This has implications for the whole world. Middle-income countries are home to three\n            out of every four people—and nearly two-thirds of those who struggle in extreme poverty.\n          They are responsible for 40 percent of the world’s total economic output—and nearly two-\n             thirds of global carbon emissions. In short, the global effort to end extreme poverty and\n            spread prosperity and livability will largely be won or lost in these countries.\n            The road ahead has even stiffer challenges than those seen in the past: rapidly aging\n            populations and burgeoning debt, fierce geopolitical and trade frictions, and the growing\n               difficulty of speeding up economic progress without fouling the environment. Yet many\n           middle-income countries still use a playbook from the last century, relying mainly on pol­\n               icies designed to expand investment. That is like driving a car just in first gear and trying\n             to make it go faster. If they stick with the old playbook, most developing countries will lose\n            the race to create reasonably prosperous societies by the middle of this century. At current\n             trends, it will take China more than 10 years just to reach one-quarter of US income per\n              capita, Indonesia nearly 70 years, and India 75 years.\n            The team that has written this report hopes to radically alter this arithmetic. Our hope\n                 is that World Development Report 2024 will, in short order, make the expression “middle-\n           income trap” completely obsolete.\n\n                                                                                Indermit Gill\n                                                            Chief Economist of the World Bank Group and\n                                                         Senior Vice President for Development Economics\n\nxvi   | Foreword\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "18",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 18,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.02804284323271665,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p102-text-001",
+          "text": "                       Korea, Rep.                                              18\n                    Bangladesh                                                      20\n                           Türkiye                                                   20\n                                Brazil                                                   22\n                       Malaysia                                                     23\n                       Indonesia                                                      24\n                               India                                                      25\n                          China                                              25\n                       Japan                                 25\n                 Middle-income                                                    26\n           Upper-middle-income                                                 27\n           Lower-middle-income                                                          31\n                  United Kingdom                                  45\n                        Argentina                                                   60\n                   High-income                                          61\n                    United States                                             69\n                         France                                   115\n                           1860  1880  1900  1920  1940  1960  1980  2000  2020  2040  2060\n\n            Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population\n              Division, Department of Economic and Social Affairs, United Nations, New York, https://population​\n            .un.org/wpp/; World Bank (2016).\n            Note: The bars indicate beginning and end years for transitioning from 7 percent (aging) to\n           14 percent (aged) of the population age 65 and older. The number corresponding to each bar\n          shows total number of years to transition from aging to aged. Aging and aged thresholds are based\n          on definitions by the Population Division of the United Nations Department of Economic and Social\n             Affairs (UN DESA). Bars for income groups represent the averages of countries included in the\n           corresponding income group. The dashed vertical line indicates the year 2023.\n\n                                                                                                  (Box continues next page)\n\n70   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 102,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.027651515151515153,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p017-text-002",
+          "text": "income ladder. Based on these ideas and evidence, it proposes a sequenced, three-pronged\napproach for today’s 100-odd middle-income countries: first investment, then infusion of\nnew technology from around the world, and then innovation. Each shift requires a new mix\nof policies that, if implemented reasonably well, result in increasingly dynamic enterprises,\nan increasingly productive workforce, and an increasingly energy-efficient economy.\nIt is an approach that can benefit all countries—low-, middle-, and high-income—seeking\nhigh-quality growth.\n  We are not naive enough to think this will be easy. Middle-income countries will have to\nwork miracles—not only to lift themselves up to high-income status but also to shift away\nfrom carbon-intensive growth paths that will lead to environmental ruin. Income levels in\nSub-Saharan Africa, where more than half the population lives in middle-income coun­\ntries, are the same as they were a decade ago. Economic growth rates in middle-income\ncountries have been falling and are expected to average just 4 percent in the 2020s, down\nfrom 5 percent in the 2010s and more than 6 percent in the 2000s.\n\n                                                                                                        xv\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "17",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 17,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "xv"
+          },
+          "score": 0.02667140825035562,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p264-text-001",
+          "text": "). Estimates\nper dollar of GDP) and carbon intensity (carbon     of the elasticity of energy intensity in the long run are\nemissions per unit of energy)—have declined    based on a fixed effect dynamic response lag model\n                                                           covering 136 countries over the period 1960–2017 (34,800\nglobally from about 0.69 million tons of car­                                                              observations), including log price index, two lags of end-\nbon dioxide (CO2) per billion dollars of GDP in    user energy consumption, dummies for structural breaks\n1980 to 0.46 million tons in 2018 (figure 9.10).38     in data series, and country-sector fixed effects. Values\n                                                              of the elasticity of energy intensity can be interpreted as\nIn particular, China’s drop in carbon intensity                                                                 follows: if GDP increases by 1 percent, energy consumption\nis globally material because China is the world’s     increases only by 0.75 percent in upper-middle-income\nlargest emitter.39 More broadly, the carbon emis­     countries that achieved upper-middle-income status as of\n                                                             2017, compared with 1.1 percent in upper-middle-income\nsions per unit of GDP over time of upper-​middle-​                                                            countries  that  achieved  upper-middle-income  status\nincome and lower-middle-income countries have     within the period 1960–2016.\ndeclined, even when supply chain emissions\nare taken into account. A recent study cover­    innovation and research into renewables. Those\ning 137 countries also finds that countries with    measures  substantially  compensated  for  the\nhigher GDP per capita have lower energy inten­    increase in these countries’ emissions arising\nsity. Furthermore, countries with a high level of   from a growing economy (figure 9.11).",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "264",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 264,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.016129032258064516,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p063-text-002",
+          "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n                                                                                                                                                                                                                            ﻿ ﻿ | 3131\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p180-text-002",
+          "text": "middle-income countries than in high-income    of providing incentives and regulatory support for\ncountries. Middle-income countries, ­particularly    renewable energy and planning for the expansion\nenergy exporters, have significantly lower carbon    of renewable energy. In addition, middle-­income\nprices.40 Consumer fossil fuel subsidies in ­middle-    countries  generally  provide  highly  polluting\nincome countries totaled over US$800  ­billion    industries with higher corporate tax incentives.\nin 2022, of a global total of US$900 billion.41   Such incentives are particularly high in the Middle\nEstimates of  explicit consumer and producer    East and North Africa, as measured by the World\n­fossil fuel subsidies in 2022 from the International    Bank’s Global Corporate Income Tax Incentives\nMonetary Fund (IMF) also show that middle-­   Database.\nincome countries account for 65 percent of the       Incentives  that  support  incumbent  firms\ntotal.42 Fossil fuel subsidies have a sizable fiscal   and energy sources, as well as major barriers to\ncost and exacerbate air pollution, contributing    entry in power markets, also severely limit pri­\ndirectly to premature deaths.43                      vate innovation  in middle-income  countries.\n   Middle-income countries also score lower on   Over the last 35 years, many countries have\nthe RISE Index, particularly on the components    introduced competitive markets in parts of the\n\n148   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.032018442622950824,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.031099324975891997,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.030834914611005692,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p036-text-001",
+          "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.028577260665441927,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p018-text-000",
+          "text": "This has implications for the whole world. Middle-income countries are home to three\n            out of every four people—and nearly two-thirds of those who struggle in extreme poverty.\n          They are responsible for 40 percent of the world’s total economic output—and nearly two-\n             thirds of global carbon emissions. In short, the global effort to end extreme poverty and\n            spread prosperity and livability will largely be won or lost in these countries.\n            The road ahead has even stiffer challenges than those seen in the past: rapidly aging\n            populations and burgeoning debt, fierce geopolitical and trade frictions, and the growing\n               difficulty of speeding up economic progress without fouling the environment. Yet many\n           middle-income countries still use a playbook from the last century, relying mainly on pol­\n               icies designed to expand investment. That is like driving a car just in first gear and trying\n             to make it go faster. If they stick with the old playbook, most developing countries will lose\n            the race to create reasonably prosperous societies by the middle of this century. At current\n             trends, it will take China more than 10 years just to reach one-quarter of US income per\n              capita, Indonesia nearly 70 years, and India 75 years.\n            The team that has written this report hopes to radically alter this arithmetic. Our hope\n                 is that World Development Report 2024 will, in short order, make the expression “middle-\n           income trap” completely obsolete.\n\n                                                                                Indermit Gill\n                                                            Chief Economist of the World Bank Group and\n                                                         Senior Vice President for Development Economics\n\nxvi   | Foreword\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "18",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 18,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.02804284323271665,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p102-text-001",
+          "text": "                       Korea, Rep.                                              18\n                    Bangladesh                                                      20\n                           Türkiye                                                   20\n                                Brazil                                                   22\n                       Malaysia                                                     23\n                       Indonesia                                                      24\n                               India                                                      25\n                          China                                              25\n                       Japan                                 25\n                 Middle-income                                                    26\n           Upper-middle-income                                                 27\n           Lower-middle-income                                                          31\n                  United Kingdom                                  45\n                        Argentina                                                   60\n                   High-income                                          61\n                    United States                                             69\n                         France                                   115\n                           1860  1880  1900  1920  1940  1960  1980  2000  2020  2040  2060\n\n            Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population\n              Division, Department of Economic and Social Affairs, United Nations, New York, https://population​\n            .un.org/wpp/; World Bank (2016).\n            Note: The bars indicate beginning and end years for transitioning from 7 percent (aging) to\n           14 percent (aged) of the population age 65 and older. The number corresponding to each bar\n          shows total number of years to transition from aging to aged. Aging and aged thresholds are based\n          on definitions by the Population Division of the United Nations Department of Economic and Social\n             Affairs (UN DESA). Bars for income groups represent the averages of countries included in the\n           corresponding income group. The dashed vertical line indicates the year 2023.\n\n                                                                                                  (Box continues next page)\n\n70   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 102,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.027651515151515153,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p017-text-002",
+          "text": "income ladder. Based on these ideas and evidence, it proposes a sequenced, three-pronged\napproach for today’s 100-odd middle-income countries: first investment, then infusion of\nnew technology from around the world, and then innovation. Each shift requires a new mix\nof policies that, if implemented reasonably well, result in increasingly dynamic enterprises,\nan increasingly productive workforce, and an increasingly energy-efficient economy.\nIt is an approach that can benefit all countries—low-, middle-, and high-income—seeking\nhigh-quality growth.\n  We are not naive enough to think this will be easy. Middle-income countries will have to\nwork miracles—not only to lift themselves up to high-income status but also to shift away\nfrom carbon-intensive growth paths that will lead to environmental ruin. Income levels in\nSub-Saharan Africa, where more than half the population lives in middle-income coun­\ntries, are the same as they were a decade ago. Economic growth rates in middle-income\ncountries have been falling and are expected to average just 4 percent in the 2020s, down\nfrom 5 percent in the 2010s and more than 6 percent in the 2000s.\n\n                                                                                                        xv\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "17",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 17,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "xv"
+          },
+          "score": 0.02667140825035562,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p264-text-001",
+          "text": "). Estimates\nper dollar of GDP) and carbon intensity (carbon     of the elasticity of energy intensity in the long run are\nemissions per unit of energy)—have declined    based on a fixed effect dynamic response lag model\n                                                           covering 136 countries over the period 1960–2017 (34,800\nglobally from about 0.69 million tons of car­                                                              observations), including log price index, two lags of end-\nbon dioxide (CO2) per billion dollars of GDP in    user energy consumption, dummies for structural breaks\n1980 to 0.46 million tons in 2018 (figure 9.10).38     in data series, and country-sector fixed effects. Values\n                                                              of the elasticity of energy intensity can be interpreted as\nIn particular, China’s drop in carbon intensity                                                                 follows: if GDP increases by 1 percent, energy consumption\nis globally material because China is the world’s     increases only by 0.75 percent in upper-middle-income\nlargest emitter.39 More broadly, the carbon emis­     countries that achieved upper-middle-income status as of\n                                                             2017, compared with 1.1 percent in upper-middle-income\nsions per unit of GDP over time of upper-​middle-​                                                            countries  that  achieved  upper-middle-income  status\nincome and lower-middle-income countries have     within the period 1960–2016.\ndeclined, even when supply chain emissions\nare taken into account. A recent study cover­    innovation and research into renewables. Those\ning 137 countries also finds that countries with    measures  substantially  compensated  for  the\nhigher GDP per capita have lower energy inten­    increase in these countries’ emissions arising\nsity. Furthermore, countries with a high level of   from a growing economy (figure 9.11).",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "264",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 264,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.016129032258064516,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p063-text-002",
+          "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n                                                                                                                                                                                                                            ﻿ ﻿ | 3131\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p180-text-002",
+          "text": "middle-income countries than in high-income    of providing incentives and regulatory support for\ncountries. Middle-income countries, ­particularly    renewable energy and planning for the expansion\nenergy exporters, have significantly lower carbon    of renewable energy. In addition, middle-­income\nprices.40 Consumer fossil fuel subsidies in ­middle-    countries  generally  provide  highly  polluting\nincome countries totaled over US$800  ­billion    industries with higher corporate tax incentives.\nin 2022, of a global total of US$900 billion.41   Such incentives are particularly high in the Middle\nEstimates of  explicit consumer and producer    East and North Africa, as measured by the World\n­fossil fuel subsidies in 2022 from the International    Bank’s Global Corporate Income Tax Incentives\nMonetary Fund (IMF) also show that middle-­   Database.\nincome countries account for 65 percent of the       Incentives  that  support  incumbent  firms\ntotal.42 Fossil fuel subsidies have a sizable fiscal   and energy sources, as well as major barriers to\ncost and exacerbate air pollution, contributing    entry in power markets, also severely limit pri­\ndirectly to premature deaths.43                      vate innovation  in middle-income  countries.\n   Middle-income countries also score lower on   Over the last 35 years, many countries have\nthe RISE Index, particularly on the components    introduced competitive markets in parts of the\n\n148   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 10
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.38965660000030766
+    },
+    {
+      "event": "search",
+      "query": "\"6 billion\" middle-income countries report population",
+      "results": [
+        {
+          "id": "wdr-p102-text-001",
+          "text": "                       Korea, Rep.                                              18\n                    Bangladesh                                                      20\n                           Türkiye                                                   20\n                                Brazil                                                   22\n                       Malaysia                                                     23\n                       Indonesia                                                      24\n                               India                                                      25\n                          China                                              25\n                       Japan                                 25\n                 Middle-income                                                    26\n           Upper-middle-income                                                 27\n           Lower-middle-income                                                          31\n                  United Kingdom                                  45\n                        Argentina                                                   60\n                   High-income                                          61\n                    United States                                             69\n                         France                                   115\n                           1860  1880  1900  1920  1940  1960  1980  2000  2020  2040  2060\n\n            Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population\n              Division, Department of Economic and Social Affairs, United Nations, New York, https://population​\n            .un.org/wpp/; World Bank (2016).\n            Note: The bars indicate beginning and end years for transitioning from 7 percent (aging) to\n           14 percent (aged) of the population age 65 and older. The number corresponding to each bar\n          shows total number of years to transition from aging to aged. Aging and aged thresholds are based\n          on definitions by the Population Division of the United Nations Department of Economic and Social\n             Affairs (UN DESA). Bars for income groups represent the averages of countries included in the\n           corresponding income group. The dashed vertical line indicates the year 2023.\n\n                                                                                                  (Box continues next page)\n\n70   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 102,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03057889822595705,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p103-text-001",
+          "text": "  Working-age populations are already declining in middle-income countries in East Asia.d\nLatin America will retain a large workforce until the early 2040s, while the Middle East and\nNorth Africa and South and Central Asia regions will begin to lose working-age persons by\n2045. As a result, middle-income countries can no longer rely on increasing employment\nas a primary source of output growth. This prospect of “growing old before becoming\nrich” makes escaping the middle-income trap more challenging and more urgent, includ­\ning among the largest middle-income countries such as Brazil, China, Mexico, and Türkiye.\n  The demographic challenge has implications for public policy. Investments will be\nneeded in infrastructure and technologies to support the elderly, in addition to expanding\nfiscal transfers for older persons. These measures will, in turn, necessitate policies that\nsupport savings among the working-age population. Meanwhile, countries will need to\ninvest in upgrading skills of their workforce and ensuring that everyone’s talent is used\nappropriately and efficiently. Furthermore, automation and other productivity-enhancing\ntechnologies to compensate for a shrinking workforce will have to be deployed and have\nbeen prioritized by aging countries such as Japan.e The path from imitative to innova­\ntive growth is the key for middle-income countries to address the needs of their aging\npopulations.\n   Finally, the booming populations in low-income countries and lower-middle-income\ncountries in Sub-Saharan Africa and elsewhere will need to be integrated into graying\nsocieties’ labor markets (especially those in middle-income countries).f Canada has suc­\ncessfully relied on immigration as a strategy to manage its low fertility rates and labor\nshortages.g World Development Report 2023: Migrants, Refugees, and Societies argues that\nif managed effectively, migration could unlock further growth for destination countries.h\nAnd this migration need",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "103",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 103,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029906956136464335,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p102-chart-00-000",
+          "text": "Figure B3.1.1\nTitle: \"Today’s middle-income countries are aging more rapidly than high-income countries did in the past.\" Horizontal timeline chart with years on the x-axis from 1860 to 2060 (tick marks shown every 20 years). A dashed vertical reference line marks year 2023. The y-axis lists countries and income-group averages. Each horizontal bar shows the span from when the share of population age 65+ rises from 7 percent (aging) to 14 percent (aged); the number printed next to each bar is the total number of years for the transition. Readable labels and durations: Korea, Rep. — 18; Bangladesh — 20; Türkiye — 20; Brazil — 22; Malaysia — 23; Indonesia — 24; India — 25; China — 25; Japan — 25; Middle-income — 26; Upper-middle-income — 27; Lower-middle-income — 31; United Kingdom — 45; Argentina — 60; High-income — 61; United States — 69; France — 115. The figure visually distinguishes income-group averages (highlighted in orange) from country bars (dark). Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population Division, Department of Economic and Social Affairs, United Nations, New York, https://population.un.org/wpp/; World Bank (2016). Note: Bars indicate beginning and end years for transitioning from 7 percent (aging) to 14 percent (aged) of the population age 65 and older; aging and aged thresholds are based on UN DESA definitions; bars for income groups represent averages of countries in the corresponding income group; the dashed vertical line indicates year 2023.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-102.png",
+            "label": "Figure B3.1.1",
+            "pdf_page": 102,
+            "visual_id": "wdr-p102-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact beginning and end years for each bar are not numerically labeled in the image; only the duration labels are clearly readable.",
+              "The color mapping is inferred from the visual styling in the figure (orange for income-group averages, dark bars for individual countries)."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.028782894736842105,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.028283227848101264,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p036-text-001",
+          "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.026785714285714288,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.026709401709401708,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p180-text-002",
+          "text": "middle-income countries than in high-income    of providing incentives and regulatory support for\ncountries. Middle-income countries, ­particularly    renewable energy and planning for the expansion\nenergy exporters, have significantly lower carbon    of renewable energy. In addition, middle-­income\nprices.40 Consumer fossil fuel subsidies in ­middle-    countries  generally  provide  highly  polluting\nincome countries totaled over US$800  ­billion    industries with higher corporate tax incentives.\nin 2022, of a global total of US$900 billion.41   Such incentives are particularly high in the Middle\nEstimates of  explicit consumer and producer    East and North Africa, as measured by the World\n­fossil fuel subsidies in 2022 from the International    Bank’s Global Corporate Income Tax Incentives\nMonetary Fund (IMF) also show that middle-­   Database.\nincome countries account for 65 percent of the       Incentives  that  support  incumbent  firms\ntotal.42 Fossil fuel subsidies have a sizable fiscal   and energy sources, as well as major barriers to\ncost and exacerbate air pollution, contributing    entry in power markets, also severely limit pri­\ndirectly to premature deaths.43                      vate innovation  in middle-income  countries.\n   Middle-income countries also score lower on   Over the last 35 years, many countries have\nthe RISE Index, particularly on the components    introduced competitive markets in parts of the\n\n148   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.01639344262295082,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p063-text-002",
+          "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n                                                                                                                                                                                                                            ﻿ ﻿ | 3131\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.016129032258064516,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p254-text-002",
+          "text": "    tion, middle-income countries can infuse global\nand Nigeria by 2050, and three-quarters of the   knowledge into their own industries and subse­\nworld’s urban infrastructure that will exist in    quently increase their “economic complexity.”5\n30 years has not yet been built.3 By building     An example  is the solar photovoltaic (PV)\ngreen,  investments  in  middle-income  coun­    industry (figure 9.1). From 2008 to 2020, the glo­\ntries can help reduce emissions at a lower cost    balized market for PV modules saved PV installers\nthan in high-­income countries that would have    in China US$36 billion, those in the United States\n\n222   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "254",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 254,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.016129032258064516,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p102-text-001",
+          "text": "                       Korea, Rep.                                              18\n                    Bangladesh                                                      20\n                           Türkiye                                                   20\n                                Brazil                                                   22\n                       Malaysia                                                     23\n                       Indonesia                                                      24\n                               India                                                      25\n                          China                                              25\n                       Japan                                 25\n                 Middle-income                                                    26\n           Upper-middle-income                                                 27\n           Lower-middle-income                                                          31\n                  United Kingdom                                  45\n                        Argentina                                                   60\n                   High-income                                          61\n                    United States                                             69\n                         France                                   115\n                           1860  1880  1900  1920  1940  1960  1980  2000  2020  2040  2060\n\n            Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population\n              Division, Department of Economic and Social Affairs, United Nations, New York, https://population​\n            .un.org/wpp/; World Bank (2016).\n            Note: The bars indicate beginning and end years for transitioning from 7 percent (aging) to\n           14 percent (aged) of the population age 65 and older. The number corresponding to each bar\n          shows total number of years to transition from aging to aged. Aging and aged thresholds are based\n          on definitions by the Population Division of the United Nations Department of Economic and Social\n             Affairs (UN DESA). Bars for income groups represent the averages of countries included in the\n           corresponding income group. The dashed vertical line indicates the year 2023.\n\n                                                                                                  (Box continues next page)\n\n70   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 102,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03057889822595705,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p103-text-001",
+          "text": "  Working-age populations are already declining in middle-income countries in East Asia.d\nLatin America will retain a large workforce until the early 2040s, while the Middle East and\nNorth Africa and South and Central Asia regions will begin to lose working-age persons by\n2045. As a result, middle-income countries can no longer rely on increasing employment\nas a primary source of output growth. This prospect of “growing old before becoming\nrich” makes escaping the middle-income trap more challenging and more urgent, includ­\ning among the largest middle-income countries such as Brazil, China, Mexico, and Türkiye.\n  The demographic challenge has implications for public policy. Investments will be\nneeded in infrastructure and technologies to support the elderly, in addition to expanding\nfiscal transfers for older persons. These measures will, in turn, necessitate policies that\nsupport savings among the working-age population. Meanwhile, countries will need to\ninvest in upgrading skills of their workforce and ensuring that everyone’s talent is used\nappropriately and efficiently. Furthermore, automation and other productivity-enhancing\ntechnologies to compensate for a shrinking workforce will have to be deployed and have\nbeen prioritized by aging countries such as Japan.e The path from imitative to innova­\ntive growth is the key for middle-income countries to address the needs of their aging\npopulations.\n   Finally, the booming populations in low-income countries and lower-middle-income\ncountries in Sub-Saharan Africa and elsewhere will need to be integrated into graying\nsocieties’ labor markets (especially those in middle-income countries).f Canada has suc­\ncessfully relied on immigration as a strategy to manage its low fertility rates and labor\nshortages.g World Development Report 2023: Migrants, Refugees, and Societies argues that\nif managed effectively, migration could unlock further growth for destination countries.h\nAnd this migration need",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "103",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 103,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029906956136464335,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p102-chart-00-000",
+          "text": "Figure B3.1.1\nTitle: \"Today’s middle-income countries are aging more rapidly than high-income countries did in the past.\" Horizontal timeline chart with years on the x-axis from 1860 to 2060 (tick marks shown every 20 years). A dashed vertical reference line marks year 2023. The y-axis lists countries and income-group averages. Each horizontal bar shows the span from when the share of population age 65+ rises from 7 percent (aging) to 14 percent (aged); the number printed next to each bar is the total number of years for the transition. Readable labels and durations: Korea, Rep. — 18; Bangladesh — 20; Türkiye — 20; Brazil — 22; Malaysia — 23; Indonesia — 24; India — 25; China — 25; Japan — 25; Middle-income — 26; Upper-middle-income — 27; Lower-middle-income — 31; United Kingdom — 45; Argentina — 60; High-income — 61; United States — 69; France — 115. The figure visually distinguishes income-group averages (highlighted in orange) from country bars (dark). Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population Division, Department of Economic and Social Affairs, United Nations, New York, https://population.un.org/wpp/; World Bank (2016). Note: Bars indicate beginning and end years for transitioning from 7 percent (aging) to 14 percent (aged) of the population age 65 and older; aging and aged thresholds are based on UN DESA definitions; bars for income groups represent averages of countries in the corresponding income group; the dashed vertical line indicates year 2023.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-102.png",
+            "label": "Figure B3.1.1",
+            "pdf_page": 102,
+            "visual_id": "wdr-p102-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact beginning and end years for each bar are not numerically labeled in the image; only the duration labels are clearly readable.",
+              "The color mapping is inferred from the visual styling in the figure (orange for income-group averages, dark bars for individual countries)."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.028782894736842105,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.028283227848101264,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p036-text-001",
+          "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.026785714285714288,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 0.026709401709401708,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p180-text-002",
+          "text": "middle-income countries than in high-income    of providing incentives and regulatory support for\ncountries. Middle-income countries, ­particularly    renewable energy and planning for the expansion\nenergy exporters, have significantly lower carbon    of renewable energy. In addition, middle-­income\nprices.40 Consumer fossil fuel subsidies in ­middle-    countries  generally  provide  highly  polluting\nincome countries totaled over US$800  ­billion    industries with higher corporate tax incentives.\nin 2022, of a global total of US$900 billion.41   Such incentives are particularly high in the Middle\nEstimates of  explicit consumer and producer    East and North Africa, as measured by the World\n­fossil fuel subsidies in 2022 from the International    Bank’s Global Corporate Income Tax Incentives\nMonetary Fund (IMF) also show that middle-­   Database.\nincome countries account for 65 percent of the       Incentives  that  support  incumbent  firms\ntotal.42 Fossil fuel subsidies have a sizable fiscal   and energy sources, as well as major barriers to\ncost and exacerbate air pollution, contributing    entry in power markets, also severely limit pri­\ndirectly to premature deaths.43                      vate innovation  in middle-income  countries.\n   Middle-income countries also score lower on   Over the last 35 years, many countries have\nthe RISE Index, particularly on the components    introduced competitive markets in parts of the\n\n148   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.01639344262295082,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p063-text-002",
+          "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n                                                                                                                                                                                                                            ﻿ ﻿ | 3131\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.016129032258064516,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p254-text-002",
+          "text": "    tion, middle-income countries can infuse global\nand Nigeria by 2050, and three-quarters of the   knowledge into their own industries and subse­\nworld’s urban infrastructure that will exist in    quently increase their “economic complexity.”5\n30 years has not yet been built.3 By building     An example  is the solar photovoltaic (PV)\ngreen,  investments  in  middle-income  coun­    industry (figure 9.1). From 2008 to 2020, the glo­\ntries can help reduce emissions at a lower cost    balized market for PV modules saved PV installers\nthan in high-­income countries that would have    in China US$36 billion, those in the United States\n\n222   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "254",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 254,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.016129032258064516,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.015873015873015872,
+          "rank": 10
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.345865600000252
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p063-text-000",
+      "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.028283227848101264,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p018-text-000",
+      "text": "This has implications for the whole world. Middle-income countries are home to three\n            out of every four people—and nearly two-thirds of those who struggle in extreme poverty.\n          They are responsible for 40 percent of the world’s total economic output—and nearly two-\n             thirds of global carbon emissions. In short, the global effort to end extreme poverty and\n            spread prosperity and livability will largely be won or lost in these countries.\n            The road ahead has even stiffer challenges than those seen in the past: rapidly aging\n            populations and burgeoning debt, fierce geopolitical and trade frictions, and the growing\n               difficulty of speeding up economic progress without fouling the environment. Yet many\n           middle-income countries still use a playbook from the last century, relying mainly on pol­\n               icies designed to expand investment. That is like driving a car just in first gear and trying\n             to make it go faster. If they stick with the old playbook, most developing countries will lose\n            the race to create reasonably prosperous societies by the middle of this century. At current\n             trends, it will take China more than 10 years just to reach one-quarter of US income per\n              capita, Indonesia nearly 70 years, and India 75 years.\n            The team that has written this report hopes to radically alter this arithmetic. Our hope\n                 is that World Development Report 2024 will, in short order, make the expression “middle-\n           income trap” completely obsolete.\n\n                                                                                Indermit Gill\n                                                            Chief Economist of the World Bank Group and\n                                                         Senior Vice President for Development Economics\n\nxvi   | Foreword\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "18",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 18,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.02804284323271665,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p065-text-001",
+      "text": "Introduction                                         •  They had more resources available to raise\n                                                        the living standards of the poor.\n The problem of economic growth in middle-­income\n economies has been a concern of development pol-   The 1978 Report emphasized the central role of\n icy practitioners for at least five decades. In the    cultivating engineering talent to design products\n first World Development Report, published in 1978,    that change continually and rapidly, alongside\n “middle-income” was an omnibus term applied to    better organizing workshops and other produc-\n countries with diverse economic characteristics    tion facilities so they are made efficiently.3\n at various stages of development.1 Middle-income       Interest in the economic growth of middle-­\n countries were  defined  as those with annual   income countries rose over the last two decades,\n income per capita of over US$250.2 By that defini-    especially after a 2007 World Bank regional report\n tion, 58 countries, home to about 900 million peo-   on East Asia introduced the term “­middle-income\n ple, were designated middle-income. Despite the     trap.” 4 The term encapsulated the concern that\n ­diversity, World Development Report 1978 identified    middle-income countries are prone to systematic\n two  characteristics  that  distinguished  middle-­   slowdowns in growth demonstrated, for example,\n income from low-­income countries:                by the economic stagnation in Latin America and\n                                                  the Middle East since the mid-1970s. This chapter\n     •  Their growth prospects were more sen-                                                       assesses whether the experience of the developing\n         sitive  to  economic  conditions  in  the                                                world is consistent with this concern. It finds that\n        industrialized  (high-income)  countries,                                                  the majority of growth slowdowns do take place",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "65",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 65,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "33"
+      },
+      "score": 0.029437229437229435,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.015873015873015872,
+      "rank": 10
+    },
+    {
+      "id": "wdr-p191-text-001",
+      "text": "       art 2 of this Report describes how the          energy markets and other sectors now\n       forces of creation—the protagonist of eco-         dominated by favored entities, especially\n      nomic growth—are weak in middle-income          state-owned  enterprises.  In  addition,P countries. Many large incumbents do not innovate          middle-income  countries  will need  to\n or infuse global technologies, and many entrants          strengthen the capacity of competition\n do not disrupt. By contrast, the forces of preser-           agencies to identify and rein in firms that\n vation—the antagonist to creation—are strong in          abuse their incumbency advantage. Insti-\n middle-income countries. Incumbent firms and           tuting progressive tax policies to discipline\n social elites often preserve the status quo. Mean-         incumbent elites while still incentivizing\n while, the forces of destruction—which are often          innovation will be needed as well.\n needed to remove the obstacles to creation—are         •  Rewarding merit (chapter 8). To strengthen\n held back by the forces of preservation. Together,          the  forces  of  creation, middle-income\n the forces of creation, preservation, and destruc-           countries should reward merit activities—\n tion are unbalanced in middle-income countries          those with  positive  externalities;  that\n struggling with slower growth.                                         is, those with positive effects on general\n   Part  3  of  this  Report  examines  how           well-being. This entails redesigning poli-\n middle-income countries can accelerate growth            cies to focus on assessing the value added\n by balancing these three forces, which entails           of firms in jobs, exports, technology infu-\n the following:                                                 sion, and innovation instead of designing\n                                                                 policies that simply focus on the size of\n     •  Disciplining   incumbency   (chapter",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "191",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 191,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.01639344262295082,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p036-text-002",
+      "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n4   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 36,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.015873015873015872,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p256-text-002",
+      "text": "as discussed in chapter 6. Many inputs into clean    overall technological sophistication (as discussed\nenergy value chains are also highly concentrated.    in ­chapter  6). Middle-income countries tapping\nFor example, the Democratic Republic of Congo    into manufacturing opportunities for clean energy\nsupplies 74 percent of cobalt, China 68 percent of    technologies are typically those already competitive\nrare earth elements, and Indonesia 49 percent of    in manufacturing or exporters of high-­technology\nnickel. Australia accounts for 47 percent of lith­    products.9 Research conducted  for  this Report\nium mining, and Chile for 24 percent. Processing    shows that the share of online job postings for all\nof these minerals is also highly concentrated, with    disruptive technologies is highly correlated with the\nChina refining 90 percent of rare earth elements    share of online job postings related to low-­carbon\nand 65 percent and 74 percent, respectively, of    technologies.10 This finding suggests that coun­\nlithium and cobalt (figure 9.3).                           tries experiencing a rapid diffusion of all emerging\n  One  pathway   for  middle-income  coun­     ­disruptive technologies are also witnessing a rapid\ntries  is to improve their firm  capabilities and    diffusion of low-carbon technologies.\n\n224   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "256",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 256,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.015873015873015872,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p264-chart-00-000",
+      "text": "Figure 9.9\nBar chart titled \"Today’s upper-middle-income countries are more energy efficient than upper-middle-income countries in the past.\" The y-axis is \"Elasticity of energy intensity\" ranging from 0 to 1.2 with tick marks at 0.2 intervals. The x-axis has four categories, shown with angled labels: Low-income, Lower-middle-income, Upper-middle-income, and Upper-middle-income (1960–2016). There are four vertical bars: Low-income is approximately 0.81; Lower-middle-income is approximately 0.82; Upper-middle-income is approximately 0.75; Upper-middle-income (1960–2016) is approximately 1.10. The first three bars are dark blue; the last bar is orange. Source note on the figure: WDR 2024 team calculations based on data from Fetter (2022). Note states that elasticity of energy intensity refers to the energy used per unit of gross domestic product (GDP); estimates are based on a fixed-effect dynamic response lag model covering 136 countries over 1960–2017 (34,800 observations), including log price index, two lags of end-user energy consumption, dummies for structural breaks in data series, and country-sector fixed effects. The note also says the elasticity values can be interpreted as follows: if GDP increases by 1 percent, energy consumption increases only by 0.75 percent in upper-middle-income countries that achieved upper-middle-income status as of 2017, compared with 1.1 percent in upper-middle-income countries that achieved upper-middle-income status within 1960–2016.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "264",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-264.png",
+        "label": "Figure 9.9",
+        "pdf_page": 264,
+        "visual_id": "wdr-p264-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The exact bar heights are not labeled on the chart and are estimated visually from the plotted bars.",
+          "The figure uses no visible legend; color meaning is inferred only from the bar colors and labels."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.015625,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p065-text-000",
+      "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "65",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 65,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "33"
+      },
+      "score": 0.026709401709401708,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p263-chart-00-000",
+      "text": "Figure 9.8\nBar chart titled \"In low- and middle-income countries, the cost of capital for renewables is high.\" Vertical axis: \"Cost of capital (%)\" from 0 to 9. Four orange bars on the horizontal axis: Low-income (approximately 8.8%), Lower-middle-income (approximately 8.5%), Upper-middle-income (approximately 7.1%), and High-income (approximately 3.8%). Bars decrease from low-income to high-income. Source: IRENA 2023. Note: Data are for 2021 and 2022.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "263",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-263.png",
+        "label": "Figure 9.8",
+        "pdf_page": 263,
+        "visual_id": "wdr-p263-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bar values are not printed on the figure; heights are estimated from the axis and may differ slightly from the underlying data.",
+          "The plot shows no legend beyond the category labels; only one series is visible.",
+          "The chart title and labels are partly reproduced from the page and may include minor OCR/reading ambiguity."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.015384615384615385,
+      "rank": 10
+    },
+    {
+      "id": "wdr-p036-text-001",
+      "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 36,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.026785714285714288,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p102-text-001",
+      "text": "                       Korea, Rep.                                              18\n                    Bangladesh                                                      20\n                           Türkiye                                                   20\n                                Brazil                                                   22\n                       Malaysia                                                     23\n                       Indonesia                                                      24\n                               India                                                      25\n                          China                                              25\n                       Japan                                 25\n                 Middle-income                                                    26\n           Upper-middle-income                                                 27\n           Lower-middle-income                                                          31\n                  United Kingdom                                  45\n                        Argentina                                                   60\n                   High-income                                          61\n                    United States                                             69\n                         France                                   115\n                           1860  1880  1900  1920  1940  1960  1980  2000  2020  2040  2060\n\n            Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population\n              Division, Department of Economic and Social Affairs, United Nations, New York, https://population​\n            .un.org/wpp/; World Bank (2016).\n            Note: The bars indicate beginning and end years for transitioning from 7 percent (aging) to\n           14 percent (aged) of the population age 65 and older. The number corresponding to each bar\n          shows total number of years to transition from aging to aged. Aging and aged thresholds are based\n          on definitions by the Population Division of the United Nations Department of Economic and Social\n             Affairs (UN DESA). Bars for income groups represent the averages of countries included in the\n           corresponding income group. The dashed vertical line indicates the year 2023.\n\n                                                                                                  (Box continues next page)\n\n70   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "102",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 102,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.03057889822595705,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p017-text-002",
+      "text": "income ladder. Based on these ideas and evidence, it proposes a sequenced, three-pronged\napproach for today’s 100-odd middle-income countries: first investment, then infusion of\nnew technology from around the world, and then innovation. Each shift requires a new mix\nof policies that, if implemented reasonably well, result in increasingly dynamic enterprises,\nan increasingly productive workforce, and an increasingly energy-efficient economy.\nIt is an approach that can benefit all countries—low-, middle-, and high-income—seeking\nhigh-quality growth.\n  We are not naive enough to think this will be easy. Middle-income countries will have to\nwork miracles—not only to lift themselves up to high-income status but also to shift away\nfrom carbon-intensive growth paths that will lead to environmental ruin. Income levels in\nSub-Saharan Africa, where more than half the population lives in middle-income coun­\ntries, are the same as they were a decade ago. Economic growth rates in middle-income\ncountries have been falling and are expected to average just 4 percent in the 2020s, down\nfrom 5 percent in the 2010s and more than 6 percent in the 2000s.\n\n                                                                                                        xv\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "17",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 17,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "xv"
+      },
+      "score": 0.02667140825035562,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p264-text-001",
+      "text": "). Estimates\nper dollar of GDP) and carbon intensity (carbon     of the elasticity of energy intensity in the long run are\nemissions per unit of energy)—have declined    based on a fixed effect dynamic response lag model\n                                                           covering 136 countries over the period 1960–2017 (34,800\nglobally from about 0.69 million tons of car­                                                              observations), including log price index, two lags of end-\nbon dioxide (CO2) per billion dollars of GDP in    user energy consumption, dummies for structural breaks\n1980 to 0.46 million tons in 2018 (figure 9.10).38     in data series, and country-sector fixed effects. Values\n                                                              of the elasticity of energy intensity can be interpreted as\nIn particular, China’s drop in carbon intensity                                                                 follows: if GDP increases by 1 percent, energy consumption\nis globally material because China is the world’s     increases only by 0.75 percent in upper-middle-income\nlargest emitter.39 More broadly, the carbon emis­     countries that achieved upper-middle-income status as of\n                                                             2017, compared with 1.1 percent in upper-middle-income\nsions per unit of GDP over time of upper-​middle-​                                                            countries  that  achieved  upper-middle-income  status\nincome and lower-middle-income countries have     within the period 1960–2016.\ndeclined, even when supply chain emissions\nare taken into account. A recent study cover­    innovation and research into renewables. Those\ning 137 countries also finds that countries with    measures  substantially  compensated  for  the\nhigher GDP per capita have lower energy inten­    increase in these countries’ emissions arising\nsity. Furthermore, countries with a high level of   from a growing economy (figure 9.11).",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "264",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 264,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.016129032258064516,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p063-text-002",
+      "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n                                                                                                                                                                                                                            ﻿ ﻿ | 3131\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.016129032258064516,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p180-text-002",
+      "text": "middle-income countries than in high-income    of providing incentives and regulatory support for\ncountries. Middle-income countries, ­particularly    renewable energy and planning for the expansion\nenergy exporters, have significantly lower carbon    of renewable energy. In addition, middle-­income\nprices.40 Consumer fossil fuel subsidies in ­middle-    countries  generally  provide  highly  polluting\nincome countries totaled over US$800  ­billion    industries with higher corporate tax incentives.\nin 2022, of a global total of US$900 billion.41   Such incentives are particularly high in the Middle\nEstimates of  explicit consumer and producer    East and North Africa, as measured by the World\n­fossil fuel subsidies in 2022 from the International    Bank’s Global Corporate Income Tax Incentives\nMonetary Fund (IMF) also show that middle-­   Database.\nincome countries account for 65 percent of the       Incentives  that  support  incumbent  firms\ntotal.42 Fossil fuel subsidies have a sizable fiscal   and energy sources, as well as major barriers to\ncost and exacerbate air pollution, contributing    entry in power markets, also severely limit pri­\ndirectly to premature deaths.43                      vate innovation  in middle-income  countries.\n   Middle-income countries also score lower on   Over the last 35 years, many countries have\nthe RISE Index, particularly on the components    introduced competitive markets in parts of the\n\n148   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "180",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 180,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.01639344262295082,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p103-text-001",
+      "text": "  Working-age populations are already declining in middle-income countries in East Asia.d\nLatin America will retain a large workforce until the early 2040s, while the Middle East and\nNorth Africa and South and Central Asia regions will begin to lose working-age persons by\n2045. As a result, middle-income countries can no longer rely on increasing employment\nas a primary source of output growth. This prospect of “growing old before becoming\nrich” makes escaping the middle-income trap more challenging and more urgent, includ­\ning among the largest middle-income countries such as Brazil, China, Mexico, and Türkiye.\n  The demographic challenge has implications for public policy. Investments will be\nneeded in infrastructure and technologies to support the elderly, in addition to expanding\nfiscal transfers for older persons. These measures will, in turn, necessitate policies that\nsupport savings among the working-age population. Meanwhile, countries will need to\ninvest in upgrading skills of their workforce and ensuring that everyone’s talent is used\nappropriately and efficiently. Furthermore, automation and other productivity-enhancing\ntechnologies to compensate for a shrinking workforce will have to be deployed and have\nbeen prioritized by aging countries such as Japan.e The path from imitative to innova­\ntive growth is the key for middle-income countries to address the needs of their aging\npopulations.\n   Finally, the booming populations in low-income countries and lower-middle-income\ncountries in Sub-Saharan Africa and elsewhere will need to be integrated into graying\nsocieties’ labor markets (especially those in middle-income countries).f Canada has suc­\ncessfully relied on immigration as a strategy to manage its low fertility rates and labor\nshortages.g World Development Report 2023: Migrants, Refugees, and Societies argues that\nif managed effectively, migration could unlock further growth for destination countries.h\nAnd this migration need",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "103",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 103,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.029906956136464335,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p102-chart-00-000",
+      "text": "Figure B3.1.1\nTitle: \"Today’s middle-income countries are aging more rapidly than high-income countries did in the past.\" Horizontal timeline chart with years on the x-axis from 1860 to 2060 (tick marks shown every 20 years). A dashed vertical reference line marks year 2023. The y-axis lists countries and income-group averages. Each horizontal bar shows the span from when the share of population age 65+ rises from 7 percent (aging) to 14 percent (aged); the number printed next to each bar is the total number of years for the transition. Readable labels and durations: Korea, Rep. — 18; Bangladesh — 20; Türkiye — 20; Brazil — 22; Malaysia — 23; Indonesia — 24; India — 25; China — 25; Japan — 25; Middle-income — 26; Upper-middle-income — 27; Lower-middle-income — 31; United Kingdom — 45; Argentina — 60; High-income — 61; United States — 69; France — 115. The figure visually distinguishes income-group averages (highlighted in orange) from country bars (dark). Sources: WDR 2024 team using data of World Population Prospects (dashboard), Population Division, Department of Economic and Social Affairs, United Nations, New York, https://population.un.org/wpp/; World Bank (2016). Note: Bars indicate beginning and end years for transitioning from 7 percent (aging) to 14 percent (aged) of the population age 65 and older; aging and aged thresholds are based on UN DESA definitions; bars for income groups represent averages of countries in the corresponding income group; the dashed vertical line indicates year 2023.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "102",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-102.png",
+        "label": "Figure B3.1.1",
+        "pdf_page": 102,
+        "visual_id": "wdr-p102-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact beginning and end years for each bar are not numerically labeled in the image; only the duration labels are clearly readable.",
+          "The color mapping is inferred from the visual styling in the figure (orange for income-group averages, dark bars for individual countries)."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.028782894736842105,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p254-text-002",
+      "text": "    tion, middle-income countries can infuse global\nand Nigeria by 2050, and three-quarters of the   knowledge into their own industries and subse­\nworld’s urban infrastructure that will exist in    quently increase their “economic complexity.”5\n30 years has not yet been built.3 By building     An example  is the solar photovoltaic (PV)\ngreen,  investments  in  middle-income  coun­    industry (figure 9.1). From 2008 to 2020, the glo­\ntries can help reduce emissions at a lower cost    balized market for PV modules saved PV installers\nthan in high-­income countries that would have    in China US$36 billion, those in the United States\n\n222   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "254",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 254,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.016129032258064516,
+      "rank": 9
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:45:58.905563+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 508,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 56,
+        "output_tokens_details": {
+          "reasoning_tokens": 21
+        },
+        "total_tokens": 564
+      }
+    },
+    {
+      "at": "2026-11-16T15:46:02.618495+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5332,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 218,
+        "output_tokens_details": {
+          "reasoning_tokens": 182
+        },
+        "total_tokens": 5550
+      }
+    },
+    {
+      "at": "2026-11-16T15:46:05.853547+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 10242,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 5120,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 121,
+        "output_tokens_details": {
+          "reasoning_tokens": 94
+        },
+        "total_tokens": 10363
+      }
+    },
+    {
+      "at": "2026-11-16T15:46:11.571255+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 15114,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 10112,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 479,
+        "output_tokens_details": {
+          "reasoning_tokens": 409
+        },
+        "total_tokens": 15593
+      }
+    }
+  ],
+  "seconds": 15.161457999998674,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D13",
+  "initial_ranking": [
+    {
+      "id": "wdr-p063-text-000",
+      "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p018-text-000",
+      "text": "This has implications for the whole world. Middle-income countries are home to three\n            out of every four people—and nearly two-thirds of those who struggle in extreme poverty.\n          They are responsible for 40 percent of the world’s total economic output—and nearly two-\n             thirds of global carbon emissions. In short, the global effort to end extreme poverty and\n            spread prosperity and livability will largely be won or lost in these countries.\n            The road ahead has even stiffer challenges than those seen in the past: rapidly aging\n            populations and burgeoning debt, fierce geopolitical and trade frictions, and the growing\n               difficulty of speeding up economic progress without fouling the environment. Yet many\n           middle-income countries still use a playbook from the last century, relying mainly on pol­\n               icies designed to expand investment. That is like driving a car just in first gear and trying\n             to make it go faster. If they stick with the old playbook, most developing countries will lose\n            the race to create reasonably prosperous societies by the middle of this century. At current\n             trends, it will take China more than 10 years just to reach one-quarter of US income per\n              capita, Indonesia nearly 70 years, and India 75 years.\n            The team that has written this report hopes to radically alter this arithmetic. Our hope\n                 is that World Development Report 2024 will, in short order, make the expression “middle-\n           income trap” completely obsolete.\n\n                                                                                Indermit Gill\n                                                            Chief Economist of the World Bank Group and\n                                                         Senior Vice President for Development Economics\n\nxvi   | Foreword\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "18",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 18,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.029571646010002173,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.028205128205128206,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p035-text-000",
+      "text": "2010 to US$7,000 by 2030. Other middle-income    considered the world’s economic leader; people\ncountries have similar aspirations.                    living in countries with incomes higher than those\n    If these plans succeed, your country will reach    of Americans add up to fewer than 25 million.\nhigh-income status in less than one generation,    Since 1970 the mean income per capita of middle-\nor in one or two. Your firms will be earning like   income countries has never risen above one-tenth\nnever before. Your people will be consuming like    that of the United States (figure O.1).\nnever before. Far fewer people will be poor, with     Compared with the United States, middle-­\nnone desperately poor. In the halls of government,   income countries seem trapped at modest income\nthese plans generate tremendous optimism.            levels.\n  But there is a problem.                       The observed rates of economic growth in\n  According to widely used measures such as    middle-income countries do not exceed those in\nthe World Bank’s World Development Indicators,    high-income countries by the margins needed\nyou see that economic growth in middle-income    to catch up in one generation—or even two or\ncountries—including your own—is not acceler-    three. Estimates using the World Bank’s Long\nating. If anything, it is slowing down as incomes   Term Growth Model, which is based on the cel-\nincrease—and even more so every decade.           ebrated Solow-Swan growth model, suggest that\n  Moreover, your country  is not catching up      if the drivers of economic growth—investments\nwith the income levels in advanced economies.    in human capital, total factor productivity, labor\nAmong those economies, the United States is still    force participation, and the shares of economic\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.02632034632034632,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p036-text-002",
+      "text": "Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog),\nWorld Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from\nPIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon\ndioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www​\n.climatewatchdata.org/.\nNote: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank\nAtlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465);\n54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of\nUS$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n4   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 36,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.016129032258064516,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p191-text-001",
+      "text": "       art 2 of this Report describes how the          energy markets and other sectors now\n       forces of creation—the protagonist of eco-         dominated by favored entities, especially\n      nomic growth—are weak in middle-income          state-owned  enterprises.  In  addition,P countries. Many large incumbents do not innovate          middle-income  countries  will need  to\n or infuse global technologies, and many entrants          strengthen the capacity of competition\n do not disrupt. By contrast, the forces of preser-           agencies to identify and rein in firms that\n vation—the antagonist to creation—are strong in          abuse their incumbency advantage. Insti-\n middle-income countries. Incumbent firms and           tuting progressive tax policies to discipline\n social elites often preserve the status quo. Mean-         incumbent elites while still incentivizing\n while, the forces of destruction—which are often          innovation will be needed as well.\n needed to remove the obstacles to creation—are         •  Rewarding merit (chapter 8). To strengthen\n held back by the forces of preservation. Together,          the  forces  of  creation, middle-income\n the forces of creation, preservation, and destruc-           countries should reward merit activities—\n tion are unbalanced in middle-income countries          those with  positive  externalities;  that\n struggling with slower growth.                                         is, those with positive effects on general\n   Part  3  of  this  Report  examines  how           well-being. This entails redesigning poli-\n middle-income countries can accelerate growth            cies to focus on assessing the value added\n by balancing these three forces, which entails           of firms in jobs, exports, technology infu-\n the following:                                                 sion, and innovation instead of designing\n                                                                 policies that simply focus on the size of\n     •  Disciplining   incumbency   (chapter",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "191",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 191,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.016129032258064516,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p078-text-001",
+      "text": " Monetary Fund, Washington, DC.\n   and  Ekaterina  Vostroknutova.  Washington,  DC:     Pritchett, Lant H., Kunal Sen, Sabyasachi Kar, and Selim\n   World Bank.                                                Raihan. 2016. “Trillions Gained and Lost: Estimating the\nGill, Indermit Singh, and Homi Kharas. 2015. “The Middle-       Magnitude of Growth Episodes.” Economic Modelling\n   Income Trap Turns Ten.” Policy Research Working       55 (June): 279–91.\n   Paper 7403, World Bank, Washington, DC.                    Ravallion, Martin. 2009. “Do Poorer Countries Have Less\nGrossman, Gene M., and Elhanan Helpman. 1991. Innovation        Capacity for Redistribution?” Policy Research Working\n   and Growth in the Global Economy. Cambridge, MA: MIT       Paper 5046, World Bank, Washington, DC.\n    Press.                                                        Ravallion, Martin. 2012. “Should We Care Equally about\nHamadeh, Nada,  Aart  C.  Kraay,  Eric Metreau, Marko       Poor People Wherever They May Live?”  Let’s Talk\n   Rissanen, Giovanni Tonutti, Catherine Van Rompaey,       Development (blog), November 8, 2012. https://blogs​\n   Mizuku Yamanaka, and Kathryn Young. 2022. “Using        .worldbank.org/en/developmenttalk/should-we-care​\n   Purchasing  Power  Parities  in  the  World  Bank’s        -equally-about-poor-people-wherever-they-may-live.\n    Classifications  of  Countries  by",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "78",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 78,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.015873015873015872,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p065-text-000",
+      "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "65",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 65,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "33"
+      },
+      "score": 0.015625,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p264-chart-00-000",
+      "text": "Figure 9.9\nBar chart titled \"Today’s upper-middle-income countries are more energy efficient than upper-middle-income countries in the past.\" The y-axis is \"Elasticity of energy intensity\" ranging from 0 to 1.2 with tick marks at 0.2 intervals. The x-axis has four categories, shown with angled labels: Low-income, Lower-middle-income, Upper-middle-income, and Upper-middle-income (1960–2016). There are four vertical bars: Low-income is approximately 0.81; Lower-middle-income is approximately 0.82; Upper-middle-income is approximately 0.75; Upper-middle-income (1960–2016) is approximately 1.10. The first three bars are dark blue; the last bar is orange. Source note on the figure: WDR 2024 team calculations based on data from Fetter (2022). Note states that elasticity of energy intensity refers to the energy used per unit of gross domestic product (GDP); estimates are based on a fixed-effect dynamic response lag model covering 136 countries over 1960–2017 (34,800 observations), including log price index, two lags of end-user energy consumption, dummies for structural breaks in data series, and country-sector fixed effects. The note also says the elasticity values can be interpreted as follows: if GDP increases by 1 percent, energy consumption increases only by 0.75 percent in upper-middle-income countries that achieved upper-middle-income status as of 2017, compared with 1.1 percent in upper-middle-income countries that achieved upper-middle-income status within 1960–2016.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "264",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-264.png",
+        "label": "Figure 9.9",
+        "pdf_page": 264,
+        "visual_id": "wdr-p264-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The exact bar heights are not labeled on the chart and are estimated visually from the plotted bars.",
+          "The figure uses no visible legend; color meaning is inferred only from the bar colors and labels."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.015625,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p256-text-002",
+      "text": "as discussed in chapter 6. Many inputs into clean    overall technological sophistication (as discussed\nenergy value chains are also highly concentrated.    in ­chapter  6). Middle-income countries tapping\nFor example, the Democratic Republic of Congo    into manufacturing opportunities for clean energy\nsupplies 74 percent of cobalt, China 68 percent of    technologies are typically those already competitive\nrare earth elements, and Indonesia 49 percent of    in manufacturing or exporters of high-­technology\nnickel. Australia accounts for 47 percent of lith­    products.9 Research conducted  for  this Report\nium mining, and Chile for 24 percent. Processing    shows that the share of online job postings for all\nof these minerals is also highly concentrated, with    disruptive technologies is highly correlated with the\nChina refining 90 percent of rare earth elements    share of online job postings related to low-­carbon\nand 65 percent and 74 percent, respectively, of    technologies.10 This finding suggests that coun­\nlithium and cobalt (figure 9.3).                           tries experiencing a rapid diffusion of all emerging\n  One  pathway   for  middle-income  coun­     ­disruptive technologies are also witnessing a rapid\ntries  is to improve their firm  capabilities and    diffusion of low-carbon technologies.\n\n224   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "256",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 256,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.015384615384615385,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": false
+}

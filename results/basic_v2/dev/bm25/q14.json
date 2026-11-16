@@ -1,0 +1,592 @@
+{
+  "status": "answered",
+  "answer": "Because scikit-learn’s scoring API follows the convention that **higher scores are better**. Losses like mean squared error are quantities you normally want to **minimize**, so they are exposed with a `neg_` prefix and returned as the **negated value** of the loss, e.g. `neg_mean_squared_error`. This lets cross-validation and grid search compare models using the same “higher is better” rule. [2a4c71dd4e1d45d936ff9c5d][e8be83f893d0cf5cbd4ff116]",
+  "citations": [
+    "2a4c71dd4e1d45d936ff9c5d",
+    "e8be83f893d0cf5cbd4ff116"
+  ],
+  "question": "Why do scoring names for losses such as mean squared error have a neg_ prefix?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "neg_mean_squared_error scoring name neg_ prefix why loss scores are negated documentation",
+      "results": [
+        {
+          "id": "2a4c71dd4e1d45d936ff9c5d",
+          "text": "3.4.3.1. String name scorers\n\nFor the most common use cases, you can designate a scorer object with the scoring parameter via a string name; the table below shows all possible values. All scorer objects follow the convention that higher return values are better than lower return values . Thus metrics which measure the distance between the model and the data, like metrics.mean_squared_error , are available as ‘neg_mean_squared_error’ which return the negated value of the metric.\n\nScoring string name Function Comment Classification ‘accuracy’ metrics.accuracy_score ‘balanced_accuracy’ metrics.balanced_accuracy_score ‘top_k_accuracy’ metrics.top_k_accuracy_score ‘average_precision’ metrics.average_precision_score ‘neg_brier_score’ metrics.brier_score_loss requires predict_proba support ‘f1’ metrics.f1_score for binary targets ‘f1_micro’ metrics.f1_score micro-averaged ‘f1_macro’ metrics.f1_score macro-averaged ‘f1_weighted’ metrics.f1_score weighted average ‘f1_samples’ metrics.f1_score by multilabel sample ‘neg_log_loss’ metrics.log_loss requires predict_proba support ‘precision’ etc. metrics.precision_score suffixes apply as with ‘f1’ ‘recall’ etc. metrics.recall_score suffixes apply as with ‘f1’ ‘jaccard’ etc.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:003",
+          "metadata": {
+            "end": 1991,
+            "start": 762,
+            "topic": "model_selection",
+            "anchor": "string-name-scorers",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10912,
+            "unit_start": 7345,
+            "token_count": 322
+          },
+          "score": 17.147136603001446,
+          "rank": 1
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          },
+          "score": 12.614001306807598,
+          "rank": 2
+        },
+        {
+          "id": "e8be83f893d0cf5cbd4ff116",
+          "text": "3.4.3.2.2. Creating a custom scorer object\n\nYou can create your own custom scorer object using make_scorer .\n\nYou can build a completely custom scorer object from a simple python function using make_scorer , which can take several parameters:\n\nthe python function you want to use ( my_custom_loss_func in the example below)\n\nwhether the python function returns a score ( greater_is_better=True , the default) or a loss ( greater_is_better=False ). If a loss, the output of the python function is negated by the scorer object, conforming to the cross validation convention that scorers return higher values for better models.\n\nfor classification metrics only: whether the python function you provided requires continuous decision certainties. If the scoring function only accepts probability estimates (e.g. metrics.log_loss ), then one needs to set the parameter response_method=\"predict_proba\" . Some scoring functions do not necessarily require probability estimates but rather non-thresholded decision values (e.g. metrics.roc_auc_score ). In this case, one can provide a list (e.g., response_method=[\"decision_function\", \"predict_proba\"] ), and scorer will use the first available method, in the order given in the list, to compute the scores.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:004",
+          "metadata": {
+            "end": 3700,
+            "start": 2453,
+            "topic": "model_selection",
+            "anchor": "creating-a-custom-scorer-object",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.2. Callable scorers > 3.4.3.2.2. Creating a custom scorer object",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14614,
+            "unit_start": 10914,
+            "token_count": 287
+          },
+          "score": 11.097483630683723,
+          "rank": 3
+        },
+        {
+          "id": "1290251ed40d49cb085dd8a5",
+          "text": "3.2.4.2. Specifying multiple metrics for evaluation\n\nGridSearchCV and RandomizedSearchCV allow specifying multiple metrics for the scoring parameter.\n\nMultimetric scoring can either be specified as a list of strings of predefined scores names or a dict mapping the scorer name to the scorer function and/or the predefined scorer name(s). See Using multiple metric evaluation for more details.\n\nWhen specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example usage.\n\nHalvingRandomSearchCV and HalvingGridSearchCV do not support multimetric scoring.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 2155,
+            "start": 1239,
+            "topic": "model_selection",
+            "anchor": "specifying-multiple-metrics-for-evaluation",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.2. Specifying multiple metrics for evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 218
+          },
+          "score": 9.87575561328453,
+          "rank": 4
+        },
+        {
+          "id": "903596c8038c330ef8626a41",
+          "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 3546,
+            "start": 2244,
+            "topic": "model_selection",
+            "anchor": "scoring-api-overview",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 275
+          },
+          "score": 9.44565694855682,
+          "rank": 5
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 8.786457183708068,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "2a4c71dd4e1d45d936ff9c5d",
+          "text": "3.4.3.1. String name scorers\n\nFor the most common use cases, you can designate a scorer object with the scoring parameter via a string name; the table below shows all possible values. All scorer objects follow the convention that higher return values are better than lower return values . Thus metrics which measure the distance between the model and the data, like metrics.mean_squared_error , are available as ‘neg_mean_squared_error’ which return the negated value of the metric.\n\nScoring string name Function Comment Classification ‘accuracy’ metrics.accuracy_score ‘balanced_accuracy’ metrics.balanced_accuracy_score ‘top_k_accuracy’ metrics.top_k_accuracy_score ‘average_precision’ metrics.average_precision_score ‘neg_brier_score’ metrics.brier_score_loss requires predict_proba support ‘f1’ metrics.f1_score for binary targets ‘f1_micro’ metrics.f1_score micro-averaged ‘f1_macro’ metrics.f1_score macro-averaged ‘f1_weighted’ metrics.f1_score weighted average ‘f1_samples’ metrics.f1_score by multilabel sample ‘neg_log_loss’ metrics.log_loss requires predict_proba support ‘precision’ etc. metrics.precision_score suffixes apply as with ‘f1’ ‘recall’ etc. metrics.recall_score suffixes apply as with ‘f1’ ‘jaccard’ etc.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:003",
+          "metadata": {
+            "end": 1991,
+            "start": 762,
+            "topic": "model_selection",
+            "anchor": "string-name-scorers",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10912,
+            "unit_start": 7345,
+            "token_count": 322
+          },
+          "score": 17.147136603001446,
+          "rank": 1
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          },
+          "score": 12.614001306807598,
+          "rank": 2
+        },
+        {
+          "id": "e8be83f893d0cf5cbd4ff116",
+          "text": "3.4.3.2.2. Creating a custom scorer object\n\nYou can create your own custom scorer object using make_scorer .\n\nYou can build a completely custom scorer object from a simple python function using make_scorer , which can take several parameters:\n\nthe python function you want to use ( my_custom_loss_func in the example below)\n\nwhether the python function returns a score ( greater_is_better=True , the default) or a loss ( greater_is_better=False ). If a loss, the output of the python function is negated by the scorer object, conforming to the cross validation convention that scorers return higher values for better models.\n\nfor classification metrics only: whether the python function you provided requires continuous decision certainties. If the scoring function only accepts probability estimates (e.g. metrics.log_loss ), then one needs to set the parameter response_method=\"predict_proba\" . Some scoring functions do not necessarily require probability estimates but rather non-thresholded decision values (e.g. metrics.roc_auc_score ). In this case, one can provide a list (e.g., response_method=[\"decision_function\", \"predict_proba\"] ), and scorer will use the first available method, in the order given in the list, to compute the scores.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:004",
+          "metadata": {
+            "end": 3700,
+            "start": 2453,
+            "topic": "model_selection",
+            "anchor": "creating-a-custom-scorer-object",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.2. Callable scorers > 3.4.3.2.2. Creating a custom scorer object",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14614,
+            "unit_start": 10914,
+            "token_count": 287
+          },
+          "score": 11.097483630683723,
+          "rank": 3
+        },
+        {
+          "id": "1290251ed40d49cb085dd8a5",
+          "text": "3.2.4.2. Specifying multiple metrics for evaluation\n\nGridSearchCV and RandomizedSearchCV allow specifying multiple metrics for the scoring parameter.\n\nMultimetric scoring can either be specified as a list of strings of predefined scores names or a dict mapping the scorer name to the scorer function and/or the predefined scorer name(s). See Using multiple metric evaluation for more details.\n\nWhen specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example usage.\n\nHalvingRandomSearchCV and HalvingGridSearchCV do not support multimetric scoring.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 2155,
+            "start": 1239,
+            "topic": "model_selection",
+            "anchor": "specifying-multiple-metrics-for-evaluation",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.2. Specifying multiple metrics for evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 218
+          },
+          "score": 9.87575561328453,
+          "rank": 4
+        },
+        {
+          "id": "903596c8038c330ef8626a41",
+          "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 3546,
+            "start": 2244,
+            "topic": "model_selection",
+            "anchor": "scoring-api-overview",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 275
+          },
+          "score": 9.44565694855682,
+          "rank": 5
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 8.786457183708068,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0020961000009265263
+    }
+  ],
+  "context": [
+    {
+      "id": "2a4c71dd4e1d45d936ff9c5d",
+      "text": "3.4.3.1. String name scorers\n\nFor the most common use cases, you can designate a scorer object with the scoring parameter via a string name; the table below shows all possible values. All scorer objects follow the convention that higher return values are better than lower return values . Thus metrics which measure the distance between the model and the data, like metrics.mean_squared_error , are available as ‘neg_mean_squared_error’ which return the negated value of the metric.\n\nScoring string name Function Comment Classification ‘accuracy’ metrics.accuracy_score ‘balanced_accuracy’ metrics.balanced_accuracy_score ‘top_k_accuracy’ metrics.top_k_accuracy_score ‘average_precision’ metrics.average_precision_score ‘neg_brier_score’ metrics.brier_score_loss requires predict_proba support ‘f1’ metrics.f1_score for binary targets ‘f1_micro’ metrics.f1_score micro-averaged ‘f1_macro’ metrics.f1_score macro-averaged ‘f1_weighted’ metrics.f1_score weighted average ‘f1_samples’ metrics.f1_score by multilabel sample ‘neg_log_loss’ metrics.log_loss requires predict_proba support ‘precision’ etc. metrics.precision_score suffixes apply as with ‘f1’ ‘recall’ etc. metrics.recall_score suffixes apply as with ‘f1’ ‘jaccard’ etc.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:003",
+      "metadata": {
+        "end": 1991,
+        "start": 762,
+        "topic": "model_selection",
+        "anchor": "string-name-scorers",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10912,
+        "unit_start": 7345,
+        "token_count": 322
+      },
+      "score": 17.147136603001446,
+      "rank": 1
+    },
+    {
+      "id": "88a1c965fd891745eab2cb6b",
+      "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 1818,
+        "start": 837,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 379
+      },
+      "score": 12.614001306807598,
+      "rank": 2
+    },
+    {
+      "id": "e8be83f893d0cf5cbd4ff116",
+      "text": "3.4.3.2.2. Creating a custom scorer object\n\nYou can create your own custom scorer object using make_scorer .\n\nYou can build a completely custom scorer object from a simple python function using make_scorer , which can take several parameters:\n\nthe python function you want to use ( my_custom_loss_func in the example below)\n\nwhether the python function returns a score ( greater_is_better=True , the default) or a loss ( greater_is_better=False ). If a loss, the output of the python function is negated by the scorer object, conforming to the cross validation convention that scorers return higher values for better models.\n\nfor classification metrics only: whether the python function you provided requires continuous decision certainties. If the scoring function only accepts probability estimates (e.g. metrics.log_loss ), then one needs to set the parameter response_method=\"predict_proba\" . Some scoring functions do not necessarily require probability estimates but rather non-thresholded decision values (e.g. metrics.roc_auc_score ). In this case, one can provide a list (e.g., response_method=[\"decision_function\", \"predict_proba\"] ), and scorer will use the first available method, in the order given in the list, to compute the scores.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:004",
+      "metadata": {
+        "end": 3700,
+        "start": 2453,
+        "topic": "model_selection",
+        "anchor": "creating-a-custom-scorer-object",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.2. Callable scorers > 3.4.3.2.2. Creating a custom scorer object",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14614,
+        "unit_start": 10914,
+        "token_count": 287
+      },
+      "score": 11.097483630683723,
+      "rank": 3
+    },
+    {
+      "id": "1290251ed40d49cb085dd8a5",
+      "text": "3.2.4.2. Specifying multiple metrics for evaluation\n\nGridSearchCV and RandomizedSearchCV allow specifying multiple metrics for the scoring parameter.\n\nMultimetric scoring can either be specified as a list of strings of predefined scores names or a dict mapping the scorer name to the scorer function and/or the predefined scorer name(s). See Using multiple metric evaluation for more details.\n\nWhen specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example usage.\n\nHalvingRandomSearchCV and HalvingGridSearchCV do not support multimetric scoring.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 2155,
+        "start": 1239,
+        "topic": "model_selection",
+        "anchor": "specifying-multiple-metrics-for-evaluation",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.2. Specifying multiple metrics for evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 218
+      },
+      "score": 9.87575561328453,
+      "rank": 4
+    },
+    {
+      "id": "903596c8038c330ef8626a41",
+      "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:002",
+      "metadata": {
+        "end": 3546,
+        "start": 2244,
+        "topic": "model_selection",
+        "anchor": "scoring-api-overview",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7343,
+        "unit_start": 3797,
+        "token_count": 275
+      },
+      "score": 9.44565694855682,
+      "rank": 5
+    },
+    {
+      "id": "2e9b0d772f10d0672417d2fd",
+      "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:005",
+      "metadata": {
+        "end": 2099,
+        "start": 1442,
+        "topic": "model_selection",
+        "anchor": "using-multiple-metric-evaluation",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18651,
+        "unit_start": 14616,
+        "token_count": 175
+      },
+      "score": 8.786457183708068,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:52.190441+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 510,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 80,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 590
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:59.297326+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3272,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 358,
+        "output_tokens_details": {
+          "reasoning_tokens": 177
+        },
+        "total_tokens": 3630
+      }
+    }
+  ],
+  "seconds": 9.691212099998666,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q14",
+  "initial_ranking": [
+    {
+      "id": "027a8f1d804f4bba0be3bd4b",
+      "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:002",
+      "metadata": {
+        "end": 1631,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "which-scoring-function-should-i-use",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7343,
+        "unit_start": 3797,
+        "token_count": 360
+      },
+      "score": 16.75266421363703,
+      "rank": 1
+    },
+    {
+      "id": "6229bbe54d7ce6cc49a662e1",
+      "text": "3.4.6.3. Mean squared error\n\nThe mean_squared_error function computes mean squared error , a risk metric corresponding to the expected value of the squared (quadratic) error or loss.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean squared error (MSE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MSE}(y, \\hat{y}) = \\frac{1}{n_\\text{samples}} \\sum_{i=0}^{n_\\text{samples} - 1} (y_i - \\hat{y}_i)^2.\\]\n\nHere is a small example of usage of the mean_squared_error function:\n\n>>> from sklearn.metrics import mean_squared_error\n>>> y_true = [3, -0.5, 2, 7]\n>>> y_pred = [2.5, 0.0, 2, 8]\n>>> mean_squared_error(y_true, y_pred)\n0.375\n>>> y_true = [[0.5, 1], [-1, 1], [7, -6]]\n>>> y_pred = [[0, 2], [-1, 2], [8, -5]]\n>>> mean_squared_error(y_true, y_pred)\n0.7083\n\nExamples\n\nSee Gradient Boosting regression for an example of mean squared error usage to evaluate gradient boosting regression.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 1804,
+        "start": 830,
+        "topic": "model_selection",
+        "anchor": "mean-squared-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.3. Mean squared error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 378
+      },
+      "score": 16.351308787004037,
+      "rank": 2
+    },
+    {
+      "id": "588b67a202ee7363b49300e1",
+      "text": "3.4.6. Regression metrics\n\nThe sklearn.metrics module implements several loss, score, and utility functions to measure regression performance. Some of those have been enhanced to handle the multioutput case: mean_squared_error , mean_absolute_error , r2_score , explained_variance_score , mean_pinball_loss , d2_pinball_score and d2_absolute_error_score .\n\nThese functions have a multioutput keyword argument which specifies the way the scores or losses for each individual target should be averaged. The default is 'uniform_average' , which specifies a uniformly weighted mean over outputs. If an ndarray of shape (n_outputs,) is passed, then its entries are interpreted as weights and an according weighted average is returned. If multioutput is 'raw_values' , then all unaltered individual scores or losses will be returned in an array of shape (n_outputs,) .",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:024",
+      "metadata": {
+        "end": 3601,
+        "start": 2739,
+        "topic": "model_selection",
+        "anchor": "regression-metrics",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 88199,
+        "unit_start": 84598,
+        "token_count": 202
+      },
+      "score": 16.327776983365833,
+      "rank": 3
+    },
+    {
+      "id": "1290251ed40d49cb085dd8a5",
+      "text": "3.2.4.2. Specifying multiple metrics for evaluation\n\nGridSearchCV and RandomizedSearchCV allow specifying multiple metrics for the scoring parameter.\n\nMultimetric scoring can either be specified as a list of strings of predefined scores names or a dict mapping the scorer name to the scorer function and/or the predefined scorer name(s). See Using multiple metric evaluation for more details.\n\nWhen specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example usage.\n\nHalvingRandomSearchCV and HalvingGridSearchCV do not support multimetric scoring.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 2155,
+        "start": 1239,
+        "topic": "model_selection",
+        "anchor": "specifying-multiple-metrics-for-evaluation",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.2. Specifying multiple metrics for evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 218
+      },
+      "score": 16.250924645665947,
+      "rank": 4
+    },
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 15.713940125127886,
+      "rank": 5
+    },
+    {
+      "id": "72cce0e69ac40990f36597d4",
+      "text": "3.4.6.4. Mean squared logarithmic error\n\nThe mean_squared_log_error function computes a risk metric corresponding to the expected value of the squared logarithmic (quadratic) error or loss.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean squared logarithmic error (MSLE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MSLE}(y, \\hat{y}) = \\frac{1}{n_\\text{samples}} \\sum_{i=0}^{n_\\text{samples} - 1} (\\log_e (1 + y_i) - \\log_e (1 + \\hat{y}_i) )^2.\\]\n\nWhere \\(\\log_e (x)\\) means the natural logarithm of \\(x\\) . This metric is best to use when targets having exponential growth, such as population counts, average sales of a commodity over a span of years etc. Note that this metric penalizes an under-predicted estimate greater than an over-predicted estimate.\n\nHere is a small example of usage of the mean_squared_log_error function:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 2964,
+        "start": 2040,
+        "topic": "model_selection",
+        "anchor": "mean-squared-logarithmic-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.4. Mean squared logarithmic error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 300
+      },
+      "score": 15.70428936974568,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": true
+}

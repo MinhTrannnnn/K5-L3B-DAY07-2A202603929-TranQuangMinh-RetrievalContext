@@ -1,0 +1,25 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source page model_evaluation:003 explicitly says scorer objects use the convention that higher return values are better and that mean_squared_error is available as neg_mean_squared_error with the negated value. This directly supports the explanation for the neg_ prefix; the added note about MSE being a loss/minimized is consistent with the docs but not essential.",
+  "query_id": "q14",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "b9bf5f645fdd68b68dade84ed5096df79a8e73aef9703a383c3a188e0b8babfe",
+  "alternative_cited_pages": [
+    "model_evaluation:003",
+    "model_evaluation:026"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

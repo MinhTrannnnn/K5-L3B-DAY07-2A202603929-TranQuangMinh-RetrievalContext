@@ -1,0 +1,2174 @@
+{
+  "status": "abstain",
+  "answer": "I can’t determine a universal minimum RAM in GB for scikit-learn for every possible dataset from the retrieved documentation. The docs I found discuss resources in terms of samples and model-specific behavior, not a fixed RAM floor, so a single GB value is not specified here.",
+  "citations": [],
+  "question": "What is the minimum RAM in GB required by scikit-learn for every possible dataset?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "scikit-learn minimum RAM requirement every possible dataset memory requirements official documentation",
+      "results": [
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.610346097062412,
+          "rank": 1
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5978662015279422,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.5940048694610596,
+          "rank": 3
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5856019156453751,
+          "rank": 4
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 0.5796094536781311,
+          "rank": 5
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          },
+          "score": 0.5769920349121094,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.610346097062412,
+          "rank": 1
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5978662015279422,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.5940048694610596,
+          "rank": 3
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5856019156453751,
+          "rank": 4
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 0.5796094536781311,
+          "rank": 5
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          },
+          "score": 0.5769920349121094,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.12360110000008717
+    },
+    {
+      "event": "search",
+      "query": "site:scikit-learn.org scikit-learn RAM requirement system requirements memory GB documentation",
+      "results": [
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.6219709740894463,
+          "rank": 1
+        },
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.6120536144955894,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.6039917941103227,
+          "rank": 3
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          },
+          "score": 0.5994556784954274,
+          "rank": 4
+        },
+        {
+          "id": "85d2faeabd501210447954cd",
+          "text": "5989 {‘criterion’: ‘gini’, ‘max_depth’: None, ‘max_features’: 10, ‘min_samples_split’: 4}\n\nEach row corresponds to a given parameter combination (a candidate) and a given iteration. The iteration is given by the iter column. The n_resources column tells you how many resources were used.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:006",
+          "metadata": {
+            "end": 3520,
+            "start": 3233,
+            "topic": "model_selection",
+            "anchor": "analyzing-results-with-the-cv-results-attribute",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.2. Analyzing results with the cv_results_ attribute",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21823,
+            "unit_start": 18303,
+            "token_count": 79
+          },
+          "score": 0.5986988187611818,
+          "rank": 5
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5914480820689065,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.6219709740894463,
+          "rank": 1
+        },
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.6120536144955894,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.6039917941103227,
+          "rank": 3
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          },
+          "score": 0.5994556784954274,
+          "rank": 4
+        },
+        {
+          "id": "85d2faeabd501210447954cd",
+          "text": "5989 {‘criterion’: ‘gini’, ‘max_depth’: None, ‘max_features’: 10, ‘min_samples_split’: 4}\n\nEach row corresponds to a given parameter combination (a candidate) and a given iteration. The iteration is given by the iter column. The n_resources column tells you how many resources were used.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:006",
+          "metadata": {
+            "end": 3520,
+            "start": 3233,
+            "topic": "model_selection",
+            "anchor": "analyzing-results-with-the-cv-results-attribute",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.2. Analyzing results with the cv_results_ attribute",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21823,
+            "unit_start": 18303,
+            "token_count": 79
+          },
+          "score": 0.5986988187611818,
+          "rank": 5
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5914480820689065,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.17957150000074762
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn RAM memory usage FAQ documentation RAM dataset size",
+      "results": [
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.6318659374673947,
+          "rank": 1
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.6106613278388977,
+          "rank": 2
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.6096659171979569,
+          "rank": 3
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.6036989329040697,
+          "rank": 4
+        },
+        {
+          "id": "63c81580fdd7023b2aaf32ac",
+          "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 974,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 379
+          },
+          "score": 0.5946974045398987,
+          "rank": 5
+        },
+        {
+          "id": "85d2faeabd501210447954cd",
+          "text": "5989 {‘criterion’: ‘gini’, ‘max_depth’: None, ‘max_features’: 10, ‘min_samples_split’: 4}\n\nEach row corresponds to a given parameter combination (a candidate) and a given iteration. The iteration is given by the iter column. The n_resources column tells you how many resources were used.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:006",
+          "metadata": {
+            "end": 3520,
+            "start": 3233,
+            "topic": "model_selection",
+            "anchor": "analyzing-results-with-the-cv-results-attribute",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.2. Analyzing results with the cv_results_ attribute",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21823,
+            "unit_start": 18303,
+            "token_count": 79
+          },
+          "score": 0.5916426181793213,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.6318659374673947,
+          "rank": 1
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.6106613278388977,
+          "rank": 2
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.6096659171979569,
+          "rank": 3
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.6036989329040697,
+          "rank": 4
+        },
+        {
+          "id": "63c81580fdd7023b2aaf32ac",
+          "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 974,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 379
+          },
+          "score": 0.5946974045398987,
+          "rank": 5
+        },
+        {
+          "id": "85d2faeabd501210447954cd",
+          "text": "5989 {‘criterion’: ‘gini’, ‘max_depth’: None, ‘max_features’: 10, ‘min_samples_split’: 4}\n\nEach row corresponds to a given parameter combination (a candidate) and a given iteration. The iteration is given by the iter column. The n_resources column tells you how many resources were used.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:006",
+          "metadata": {
+            "end": 3520,
+            "start": 3233,
+            "topic": "model_selection",
+            "anchor": "analyzing-results-with-the-cv-results-attribute",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.2. Analyzing results with the cv_results_ attribute",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21823,
+            "unit_start": 18303,
+            "token_count": 79
+          },
+          "score": 0.5916426181793213,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.15867480000088108
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn installation requirements RAM official documentation 1 GB 2 GB memory",
+      "results": [
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5812903448843134,
+          "rank": 1
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 0.5806739830167355,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.5731915744314742,
+          "rank": 3
+        },
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.5621413681976827,
+          "rank": 4
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 0.560526568795461,
+          "rank": 5
+        },
+        {
+          "id": "63c81580fdd7023b2aaf32ac",
+          "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 974,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 379
+          },
+          "score": 0.5554182993368388,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5812903448843134,
+          "rank": 1
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 0.5806739830167355,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.5731915744314742,
+          "rank": 3
+        },
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.5621413681976827,
+          "rank": 4
+        },
+        {
+          "id": "2e9b0d772f10d0672417d2fd",
+          "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2099,
+            "start": 1442,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 175
+          },
+          "score": 0.560526568795461,
+          "rank": 5
+        },
+        {
+          "id": "63c81580fdd7023b2aaf32ac",
+          "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 974,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 379
+          },
+          "score": 0.5554182993368388,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.1615590000001248
+    },
+    {
+      "event": "search",
+      "query": "site:scikit-learn.org \"large datasets\" memory scikit-learn out-of-core documentation",
+      "results": [
+        {
+          "id": "51884ff0789880ccd3eab418",
+          "text": "3.2.5.3. Out of Bag Estimates\n\nWhen using ensemble methods based upon bagging, i.e. generating new training sets using sampling with replacement, part of the training set remains unused. For each classifier in the ensemble, a different part of the training set is left out.\n\nThis left out portion can be used to estimate the generalization error without having to rely on a separate validation set. This estimate comes “for free” as no additional data is needed and can be used for model selection.\n\nThis is currently implemented in the following classes:\n\nensemble.RandomForestClassifier ([...]) A random forest classifier. ensemble.RandomForestRegressor ([...]) A random forest regressor. ensemble.ExtraTreesClassifier ([...]) An extra-trees classifier. ensemble.ExtraTreesRegressor ([n_estimators, ...]) An extra-trees regressor. ensemble.GradientBoostingClassifier (*[, ...]) Gradient Boosting for classification. ensemble.GradientBoostingRegressor (*[, ...]) Gradient Boosting for regression.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:008",
+          "metadata": {
+            "end": 4421,
+            "start": 3424,
+            "topic": "model_selection",
+            "anchor": "out-of-bag-estimates",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.5. Alternatives to brute force parameter search > 3.2.5.3. Out of Bag Estimates",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 30038,
+            "unit_start": 25617,
+            "token_count": 255
+          },
+          "score": 0.6141627660892756,
+          "rank": 1
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 0.6016713618235979,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.5999509930639878,
+          "rank": 3
+        },
+        {
+          "id": "63c81580fdd7023b2aaf32ac",
+          "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 974,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 379
+          },
+          "score": 0.5952022203441475,
+          "rank": 4
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 0.594008266925816,
+          "rank": 5
+        },
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.5937572540713199,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "51884ff0789880ccd3eab418",
+          "text": "3.2.5.3. Out of Bag Estimates\n\nWhen using ensemble methods based upon bagging, i.e. generating new training sets using sampling with replacement, part of the training set remains unused. For each classifier in the ensemble, a different part of the training set is left out.\n\nThis left out portion can be used to estimate the generalization error without having to rely on a separate validation set. This estimate comes “for free” as no additional data is needed and can be used for model selection.\n\nThis is currently implemented in the following classes:\n\nensemble.RandomForestClassifier ([...]) A random forest classifier. ensemble.RandomForestRegressor ([...]) A random forest regressor. ensemble.ExtraTreesClassifier ([...]) An extra-trees classifier. ensemble.ExtraTreesRegressor ([n_estimators, ...]) An extra-trees regressor. ensemble.GradientBoostingClassifier (*[, ...]) Gradient Boosting for classification. ensemble.GradientBoostingRegressor (*[, ...]) Gradient Boosting for regression.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:008",
+          "metadata": {
+            "end": 4421,
+            "start": 3424,
+            "topic": "model_selection",
+            "anchor": "out-of-bag-estimates",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.5. Alternatives to brute force parameter search > 3.2.5.3. Out of Bag Estimates",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 30038,
+            "unit_start": 25617,
+            "token_count": 255
+          },
+          "score": 0.6141627660892756,
+          "rank": 1
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 0.6016713618235979,
+          "rank": 2
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.5999509930639878,
+          "rank": 3
+        },
+        {
+          "id": "63c81580fdd7023b2aaf32ac",
+          "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 974,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 379
+          },
+          "score": 0.5952022203441475,
+          "rank": 4
+        },
+        {
+          "id": "7c2b2cda8d7888782bcc46a3",
+          "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3696,
+            "start": 3266,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 96
+          },
+          "score": 0.594008266925816,
+          "rank": 5
+        },
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.5937572540713199,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.1761886999993294
+    },
+    {
+      "event": "search",
+      "query": "scikit-learn installation system requirements minimum RAM site:scikit-learn.org/1.9",
+      "results": [
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.6266521179663052,
+          "rank": 1
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.6225616110898036,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.6073895692825361,
+          "rank": 3
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 0.5967557189915024,
+          "rank": 4
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5954382064677449,
+          "rank": 5
+        },
+        {
+          "id": "9542baf5b658a12c26bf7859",
+          "text": "where \\(|\\cdot|\\) computes the cardinality of the set (i.e., the number of elements in the set) and \\(||\\cdot||_0\\) is the \\(\\ell_0\\) “norm” (which computes the number of nonzero elements in a vector).\n\nHere is a small example of usage of this function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import label_ranking_loss\n>>> y_true = np.array([[1, 0, 0], [0, 0, 1]])\n>>> y_score = np.array([[0.75, 0.5, 1], [1, 0.2, 0.1]])\n>>> label_ranking_loss(y_true, y_score)\n0.75\n>>> # With the following prediction, we have perfect and minimal loss\n>>> y_score = np.array([[1.0, 0.1, 0.2], [0.1, 0.2, 0.9]])\n>>> label_ranking_loss(y_true, y_score)\n0.0",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:023",
+          "metadata": {
+            "end": 3741,
+            "start": 3093,
+            "topic": "model_selection",
+            "anchor": "ranking-loss",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.5. Multilabel ranking metrics > 3.4.5.3. Ranking loss",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 84596,
+            "unit_start": 80855,
+            "token_count": 274
+          },
+          "score": 0.5935672521591229,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "699fd113760f0ca2d1496e44",
+          "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 1317,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 381
+          },
+          "score": 0.6266521179663052,
+          "rank": 1
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 0.6225616110898036,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.6073895692825361,
+          "rank": 3
+        },
+        {
+          "id": "2021f79c2f01fa48a4d6249b",
+          "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 3284,
+            "start": 2213,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 358
+          },
+          "score": 0.5967557189915024,
+          "rank": 4
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.5954382064677449,
+          "rank": 5
+        },
+        {
+          "id": "9542baf5b658a12c26bf7859",
+          "text": "where \\(|\\cdot|\\) computes the cardinality of the set (i.e., the number of elements in the set) and \\(||\\cdot||_0\\) is the \\(\\ell_0\\) “norm” (which computes the number of nonzero elements in a vector).\n\nHere is a small example of usage of this function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import label_ranking_loss\n>>> y_true = np.array([[1, 0, 0], [0, 0, 1]])\n>>> y_score = np.array([[0.75, 0.5, 1], [1, 0.2, 0.1]])\n>>> label_ranking_loss(y_true, y_score)\n0.75\n>>> # With the following prediction, we have perfect and minimal loss\n>>> y_score = np.array([[1.0, 0.1, 0.2], [0.1, 0.2, 0.9]])\n>>> label_ranking_loss(y_true, y_score)\n0.0",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:023",
+          "metadata": {
+            "end": 3741,
+            "start": 3093,
+            "topic": "model_selection",
+            "anchor": "ranking-loss",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.5. Multilabel ranking metrics > 3.4.5.3. Ranking loss",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 84596,
+            "unit_start": 80855,
+            "token_count": 274
+          },
+          "score": 0.5935672521591229,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.16000089999943157
+    }
+  ],
+  "context": [
+    {
+      "id": "699fd113760f0ca2d1496e44",
+      "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 1317,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 381
+      },
+      "score": 0.6266521179663052,
+      "rank": 1
+    },
+    {
+      "id": "ab2621291f798dbea23b764e",
+      "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 2629,
+        "start": 1319,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 382
+      },
+      "score": 0.6073895692825361,
+      "rank": 3
+    },
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 0.6225616110898036,
+      "rank": 2
+    },
+    {
+      "id": "5d5f352d6d93ec4a2a198685",
+      "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 1865,
+        "start": 672,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 235
+      },
+      "score": 0.5954382064677449,
+      "rank": 5
+    },
+    {
+      "id": "75c34c1f9dacc20523109b41",
+      "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:003",
+      "metadata": {
+        "end": 1786,
+        "start": 839,
+        "topic": "preprocessing",
+        "anchor": "keeping-the-number-of-features-constant",
+        "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11852,
+        "unit_start": 8181,
+        "token_count": 282
+      },
+      "score": 0.5796094536781311,
+      "rank": 5
+    },
+    {
+      "id": "5591bb33bc5cc0d6e234b031",
+      "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 668,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "imputation-of-missing-values",
+        "heading": "8.4. Imputation of missing values",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 150
+      },
+      "score": 0.5769920349121094,
+      "rank": 6
+    },
+    {
+      "id": "88a1c965fd891745eab2cb6b",
+      "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 1818,
+        "start": 837,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 379
+      },
+      "score": 0.5994556784954274,
+      "rank": 4
+    },
+    {
+      "id": "85d2faeabd501210447954cd",
+      "text": "5989 {‘criterion’: ‘gini’, ‘max_depth’: None, ‘max_features’: 10, ‘min_samples_split’: 4}\n\nEach row corresponds to a given parameter combination (a candidate) and a given iteration. The iteration is given by the iter column. The n_resources column tells you how many resources were used.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:006",
+      "metadata": {
+        "end": 3520,
+        "start": 3233,
+        "topic": "model_selection",
+        "anchor": "analyzing-results-with-the-cv-results-attribute",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.2. Analyzing results with the cv_results_ attribute",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21823,
+        "unit_start": 18303,
+        "token_count": 79
+      },
+      "score": 0.5916426181793213,
+      "rank": 6
+    },
+    {
+      "id": "63c81580fdd7023b2aaf32ac",
+      "text": ">>> from tempfile import mkdtemp\n>>> from shutil import rmtree\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.svm import SVC\n>>> from sklearn.pipeline import Pipeline\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> cachedir = mkdtemp()\n>>> pipe = Pipeline(estimators, memory=cachedir)\n>>> pipe\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA()), ('clf', SVC())])\n>>> # Clear the cache directory when you don't need it anymore\n>>> rmtree(cachedir)\n\nUsing a Pipeline without cache enabled, it is possible to inspect the original instance such as:\n\n>>> from sklearn.datasets import load_digits\n>>> X_digits, y_digits = load_digits(return_X_y=True)\n>>> pca1 = PCA(n_components=10)\n>>> svm1 = SVC()\n>>> pipe = Pipeline([('reduce_dim', pca1), ('clf', svm1)])\n>>> pipe.fit(X_digits, y_digits)\nPipeline(steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> # The pca instance can be inspected directly\n>>> pca1.components_.shape\n(10, 64)",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:003",
+      "metadata": {
+        "end": 974,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "caching-transformers-avoid-repeated-computation",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10609,
+        "unit_start": 7040,
+        "token_count": 379
+      },
+      "score": 0.5952022203441475,
+      "rank": 4
+    },
+    {
+      "id": "2021f79c2f01fa48a4d6249b",
+      "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:006",
+      "metadata": {
+        "end": 3284,
+        "start": 2213,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 22404,
+        "unit_start": 18117,
+        "token_count": 358
+      },
+      "score": 0.5967557189915024,
+      "rank": 4
+    },
+    {
+      "id": "2e9b0d772f10d0672417d2fd",
+      "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:005",
+      "metadata": {
+        "end": 2099,
+        "start": 1442,
+        "topic": "model_selection",
+        "anchor": "using-multiple-metric-evaluation",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18651,
+        "unit_start": 14616,
+        "token_count": 175
+      },
+      "score": 0.560526568795461,
+      "rank": 5
+    },
+    {
+      "id": "51884ff0789880ccd3eab418",
+      "text": "3.2.5.3. Out of Bag Estimates\n\nWhen using ensemble methods based upon bagging, i.e. generating new training sets using sampling with replacement, part of the training set remains unused. For each classifier in the ensemble, a different part of the training set is left out.\n\nThis left out portion can be used to estimate the generalization error without having to rely on a separate validation set. This estimate comes “for free” as no additional data is needed and can be used for model selection.\n\nThis is currently implemented in the following classes:\n\nensemble.RandomForestClassifier ([...]) A random forest classifier. ensemble.RandomForestRegressor ([...]) A random forest regressor. ensemble.ExtraTreesClassifier ([...]) An extra-trees classifier. ensemble.ExtraTreesRegressor ([n_estimators, ...]) An extra-trees regressor. ensemble.GradientBoostingClassifier (*[, ...]) Gradient Boosting for classification. ensemble.GradientBoostingRegressor (*[, ...]) Gradient Boosting for regression.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:008",
+      "metadata": {
+        "end": 4421,
+        "start": 3424,
+        "topic": "model_selection",
+        "anchor": "out-of-bag-estimates",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.5. Alternatives to brute force parameter search > 3.2.5.3. Out of Bag Estimates",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 30038,
+        "unit_start": 25617,
+        "token_count": 255
+      },
+      "score": 0.6141627660892756,
+      "rank": 1
+    },
+    {
+      "id": "7c2b2cda8d7888782bcc46a3",
+      "text": "8.1.4. ColumnTransformer for heterogeneous data\n\nMany datasets contain features of different types, say text, floats, and dates, where each type of feature requires separate preprocessing or feature extraction steps. Often it is easiest to preprocess data before applying scikit-learn methods, for example using pandas . Processing your data before passing it to scikit-learn might be problematic for one of the following reasons:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 3696,
+        "start": 3266,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 96
+      },
+      "score": 0.594008266925816,
+      "rank": 5
+    },
+    {
+      "id": "9542baf5b658a12c26bf7859",
+      "text": "where \\(|\\cdot|\\) computes the cardinality of the set (i.e., the number of elements in the set) and \\(||\\cdot||_0\\) is the \\(\\ell_0\\) “norm” (which computes the number of nonzero elements in a vector).\n\nHere is a small example of usage of this function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import label_ranking_loss\n>>> y_true = np.array([[1, 0, 0], [0, 0, 1]])\n>>> y_score = np.array([[0.75, 0.5, 1], [1, 0.2, 0.1]])\n>>> label_ranking_loss(y_true, y_score)\n0.75\n>>> # With the following prediction, we have perfect and minimal loss\n>>> y_score = np.array([[1.0, 0.1, 0.2], [0.1, 0.2, 0.9]])\n>>> label_ranking_loss(y_true, y_score)\n0.0",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:023",
+      "metadata": {
+        "end": 3741,
+        "start": 3093,
+        "topic": "model_selection",
+        "anchor": "ranking-loss",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.5. Multilabel ranking metrics > 3.4.5.3. Ranking loss",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 84596,
+        "unit_start": 80855,
+        "token_count": 274
+      },
+      "score": 0.5935672521591229,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:06.128135+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 511,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 75,
+        "output_tokens_details": {
+          "reasoning_tokens": 43
+        },
+        "total_tokens": 586
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:09.685766+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3260,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 108,
+        "output_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "total_tokens": 3368
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:12.621821+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6085,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3072,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 51,
+        "output_tokens_details": {
+          "reasoning_tokens": 21
+        },
+        "total_tokens": 6136
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:18.253614+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8821,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 5888,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 70,
+        "output_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "total_tokens": 8891
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:22.294907+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 11592,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 8704,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 218,
+        "output_tokens_details": {
+          "reasoning_tokens": 180
+        },
+        "total_tokens": 11810
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:27.682897+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 14409,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 11392,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 183,
+        "output_tokens_details": {
+          "reasoning_tokens": 145
+        },
+        "total_tokens": 14592
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:35.073567+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 17246,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 595,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 17841
+      }
+    }
+  ],
+  "seconds": 33.69503050000276,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q21",
+  "initial_ranking": [
+    {
+      "id": "ab2621291f798dbea23b764e",
+      "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 2629,
+        "start": 1319,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 382
+      },
+      "score": 0.6424306248169777,
+      "rank": 1
+    },
+    {
+      "id": "699fd113760f0ca2d1496e44",
+      "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 1317,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 381
+      },
+      "score": 0.6385126900229663,
+      "rank": 2
+    },
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 0.6125531196594238,
+      "rank": 3
+    },
+    {
+      "id": "5d5f352d6d93ec4a2a198685",
+      "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 1865,
+        "start": 672,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 235
+      },
+      "score": 0.6074926128992347,
+      "rank": 4
+    },
+    {
+      "id": "85d2faeabd501210447954cd",
+      "text": "5989 {‘criterion’: ‘gini’, ‘max_depth’: None, ‘max_features’: 10, ‘min_samples_split’: 4}\n\nEach row corresponds to a given parameter combination (a candidate) and a given iteration. The iteration is given by the iter column. The n_resources column tells you how many resources were used.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:006",
+      "metadata": {
+        "end": 3520,
+        "start": 3233,
+        "topic": "model_selection",
+        "anchor": "analyzing-results-with-the-cv-results-attribute",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.2. Analyzing results with the cv_results_ attribute",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21823,
+        "unit_start": 18303,
+        "token_count": 79
+      },
+      "score": 0.6025745272636414,
+      "rank": 5
+    },
+    {
+      "id": "14ce9eb9004fa7a41a3c4cb0",
+      "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 3547,
+        "start": 2774,
+        "topic": "preprocessing",
+        "anchor": "scaling-sparse-data",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 166
+      },
+      "score": 0.6017364263534546,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942"
+}

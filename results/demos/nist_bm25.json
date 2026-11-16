@@ -1,0 +1,1062 @@
+{
+  "status": "answered",
+  "answer": "Theo Table 5, SAML do OASIS ban hành. Dòng SAML trong bảng ghi \"SDO: OASIS\" [nist-p063-table-00-000].",
+  "citations": [
+    "nist-p063-table-00-000"
+  ],
+  "question": "Theo Table 5, SAML do SDO nào ban hành? Kiểm tra ảnh bảng.",
+  "corpus": "nist",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "Table 5 SAML SDO ban hành NIST Table 5 SAML SDO",
+      "results": [
+        {
+          "id": "nist-p065-table-00-000",
+          "text": "Table 8 – Security Standards: Identity Management\nColumn headers: Categorization | Available Standards | SDO | Status. Merged category cell: \"Identity Management\" spans all listed standards in the first column.\nRows:\n1) Available Standards: \"X.idmcc\"; second line: \"Requirement of IdM in Cloud Computing\" | SDO: ITU-T | Status: Under Development.\n2) Available Standards: \"FIPS 201-1\"; second line: \"Personal Identity Verification (PIV) of Federal Employees and Contractors\" | SDO: NIST | Status: Approved Standard; Market Acceptance.\n3) Available Standards: \"Service Provisioning Markup Language (SPML)\" | SDO: OASIS | Status: Approved Standard.\n4) Available Standards: \"Web Services Federation Language (WS-Federation) Version 1.2\" | SDO: OASIS | Status: Approved Standard.\n5) Available Standards: \"WS-Trust 1.3\" | SDO: OASIS | Status: Approved Standard.\n6) Available Standards: \"Security Assertion Markup Language (SAML)\" | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n7) Available Standards: \"OpenID Authentication 1.1\" | SDO: OpenID Foundation | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-065.png",
+            "label": "Table 8 – Security Standards: Identity Management",
+            "pdf_page": 65,
+            "visual_id": "nist-p065-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 20.843324726192854,
+          "rank": 1
+        },
+        {
+          "id": "nist-p063-text-002",
+          "text": "                      Security Assertion Markup Language (SAML)     OASIS        Approved Standard\n                                                                              Market Acceptance\n\n             Table 5 – Security Standards: Authentication and Authorization\n\n                                       52\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52"
+          },
+          "score": 19.403963463935796,
+          "rank": 2
+        },
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 19.086710318677017,
+          "rank": 3
+        },
+        {
+          "id": "nist-p065-text-000",
+          "text": "Categorization          Available Standards         SDO            Status\n                               X.idmcc                  ITU-T      Under Development\n   Identity      Requirement of IdM in Cloud Computing\n Management                             FIPS 201-1                 NIST       Approved Standard\n                     Personal Identity Verification (PIV) of                   Market Acceptance\n                      Federal Employees and Contractors\n                    Service Provisioning Markup Language     OASIS      Approved Standard\n                           (SPML)\n             Web Services Federation Language (WS-     OASIS      Approved Standard\n                            Federation) Version 1.2\n                            WS-Trust 1.3               OASIS      Approved Standard\n                      Security Assertion Markup Language      OASIS      Approved Standard\n                          (SAML)                                                                      Market Acceptance\n                     OpenID Authentication 1.1          OpenID      Approved Standard\n                                                           Foundation                                                                      Market Acceptance\n\n                  Table 8 – Security Standards: Identity Management\n\n                                       54\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54"
+          },
+          "score": 17.347315583104017,
+          "rank": 4
+        },
+        {
+          "id": "nist-p064-table-00-000",
+          "text": "Table 6 – Security Standards: Confidentiality\nColumns: Categorization | Available Standards | SDO | Status.\nCategorization cell is merged for the category Confidentiality across all visible rows.\nVisible entries under Confidentiality:\n1) Available Standards cell visually contains two lines: \"RFC 5246\" and \"Secure Sockets Layer (SSL)/ Transport Layer Security (TLS)\". SDO: IETF. Status cell shows \"Approved Standard\" and \"Market Acceptance\".\n2) Key Management Interoperability Protocol (KMIP) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n3) XML Encryption Syntax and Processing | SDO: W3C | Status: Approved Standard; Market Acceptance.\n4) FIPS 140-2 / Security Requirements for Cryptographic Modules | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n5) FIPS 185 / Escrowed Encryption Standard (EES) | SDO: NIST | Status: Approved Standard; Market Acceptance.\n6) FIPS 197 / Advanced Encryption Standard (AES) | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n7) FIPS 188 / Standard Security Label for Information Transfer | SDO: NIST | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "64",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-064.png",
+            "label": "Table 6 – Security Standards: Confidentiality",
+            "pdf_page": 64,
+            "visual_id": "nist-p064-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "53",
+            "uncertainties": [
+              "The first visible entry is visually merged and could represent one or two standards; the row split between RFC 5246 and SSL/TLS is ambiguous from the page image.",
+              "The status cells use stacked text; the exact mapping of each status line to each standard is inferred from layout, not explicitly separated by grid lines."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.496305661244829,
+          "rank": 5
+        },
+        {
+          "id": "nist-p068-table-00-000",
+          "text": "Table 11 – Security Standards: Security Policy Management\nHeader columns: Categorization | Available Standards | SDO | Status. Merged first-column category cell spans all listed rows: Security Policy Management.\nRows:\n1) Available Standards: ATIS-02000008; Trusted Information Exchange (TIE) | SDO: ATIS | Status: Approved Standard; Commercially Available.\n2) Available Standards: FIPS 199; Standards for Security Categorization of Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n3) Available Standards: FIPS 200; Minimum Security Requirements for Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n4) Available Standards: ISO/IEC 27002; Code of practice for information security management | SDO: ISO/IEC | Status: Approved Standard; Market Acceptance.\n5) Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-068.png",
+            "label": "Table 11 – Security Standards: Security Policy Management",
+            "pdf_page": 68,
+            "visual_id": "nist-p068-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "57",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.282716992960314,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p065-table-00-000",
+          "text": "Table 8 – Security Standards: Identity Management\nColumn headers: Categorization | Available Standards | SDO | Status. Merged category cell: \"Identity Management\" spans all listed standards in the first column.\nRows:\n1) Available Standards: \"X.idmcc\"; second line: \"Requirement of IdM in Cloud Computing\" | SDO: ITU-T | Status: Under Development.\n2) Available Standards: \"FIPS 201-1\"; second line: \"Personal Identity Verification (PIV) of Federal Employees and Contractors\" | SDO: NIST | Status: Approved Standard; Market Acceptance.\n3) Available Standards: \"Service Provisioning Markup Language (SPML)\" | SDO: OASIS | Status: Approved Standard.\n4) Available Standards: \"Web Services Federation Language (WS-Federation) Version 1.2\" | SDO: OASIS | Status: Approved Standard.\n5) Available Standards: \"WS-Trust 1.3\" | SDO: OASIS | Status: Approved Standard.\n6) Available Standards: \"Security Assertion Markup Language (SAML)\" | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n7) Available Standards: \"OpenID Authentication 1.1\" | SDO: OpenID Foundation | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-065.png",
+            "label": "Table 8 – Security Standards: Identity Management",
+            "pdf_page": 65,
+            "visual_id": "nist-p065-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 20.843324726192854,
+          "rank": 1
+        },
+        {
+          "id": "nist-p063-text-002",
+          "text": "                      Security Assertion Markup Language (SAML)     OASIS        Approved Standard\n                                                                              Market Acceptance\n\n             Table 5 – Security Standards: Authentication and Authorization\n\n                                       52\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52"
+          },
+          "score": 19.403963463935796,
+          "rank": 2
+        },
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 19.086710318677017,
+          "rank": 3
+        },
+        {
+          "id": "nist-p065-text-000",
+          "text": "Categorization          Available Standards         SDO            Status\n                               X.idmcc                  ITU-T      Under Development\n   Identity      Requirement of IdM in Cloud Computing\n Management                             FIPS 201-1                 NIST       Approved Standard\n                     Personal Identity Verification (PIV) of                   Market Acceptance\n                      Federal Employees and Contractors\n                    Service Provisioning Markup Language     OASIS      Approved Standard\n                           (SPML)\n             Web Services Federation Language (WS-     OASIS      Approved Standard\n                            Federation) Version 1.2\n                            WS-Trust 1.3               OASIS      Approved Standard\n                      Security Assertion Markup Language      OASIS      Approved Standard\n                          (SAML)                                                                      Market Acceptance\n                     OpenID Authentication 1.1          OpenID      Approved Standard\n                                                           Foundation                                                                      Market Acceptance\n\n                  Table 8 – Security Standards: Identity Management\n\n                                       54\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54"
+          },
+          "score": 17.347315583104017,
+          "rank": 4
+        },
+        {
+          "id": "nist-p064-table-00-000",
+          "text": "Table 6 – Security Standards: Confidentiality\nColumns: Categorization | Available Standards | SDO | Status.\nCategorization cell is merged for the category Confidentiality across all visible rows.\nVisible entries under Confidentiality:\n1) Available Standards cell visually contains two lines: \"RFC 5246\" and \"Secure Sockets Layer (SSL)/ Transport Layer Security (TLS)\". SDO: IETF. Status cell shows \"Approved Standard\" and \"Market Acceptance\".\n2) Key Management Interoperability Protocol (KMIP) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n3) XML Encryption Syntax and Processing | SDO: W3C | Status: Approved Standard; Market Acceptance.\n4) FIPS 140-2 / Security Requirements for Cryptographic Modules | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n5) FIPS 185 / Escrowed Encryption Standard (EES) | SDO: NIST | Status: Approved Standard; Market Acceptance.\n6) FIPS 197 / Advanced Encryption Standard (AES) | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n7) FIPS 188 / Standard Security Label for Information Transfer | SDO: NIST | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "64",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-064.png",
+            "label": "Table 6 – Security Standards: Confidentiality",
+            "pdf_page": 64,
+            "visual_id": "nist-p064-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "53",
+            "uncertainties": [
+              "The first visible entry is visually merged and could represent one or two standards; the row split between RFC 5246 and SSL/TLS is ambiguous from the page image.",
+              "The status cells use stacked text; the exact mapping of each status line to each standard is inferred from layout, not explicitly separated by grid lines."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.496305661244829,
+          "rank": 5
+        },
+        {
+          "id": "nist-p068-table-00-000",
+          "text": "Table 11 – Security Standards: Security Policy Management\nHeader columns: Categorization | Available Standards | SDO | Status. Merged first-column category cell spans all listed rows: Security Policy Management.\nRows:\n1) Available Standards: ATIS-02000008; Trusted Information Exchange (TIE) | SDO: ATIS | Status: Approved Standard; Commercially Available.\n2) Available Standards: FIPS 199; Standards for Security Categorization of Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n3) Available Standards: FIPS 200; Minimum Security Requirements for Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n4) Available Standards: ISO/IEC 27002; Code of practice for information security management | SDO: ISO/IEC | Status: Approved Standard; Market Acceptance.\n5) Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-068.png",
+            "label": "Table 11 – Security Standards: Security Policy Management",
+            "pdf_page": 68,
+            "visual_id": "nist-p068-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "57",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.282716992960314,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0016953999984252732
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "nist-p063-table-00",
+      "seconds": 6.300000677583739e-06
+    },
+    {
+      "event": "search",
+      "query": "\"Table 5\" \"Security Standards: Authentication and Authorization\" SAML OASIS page image",
+      "results": [
+        {
+          "id": "nist-p063-text-002",
+          "text": "                      Security Assertion Markup Language (SAML)     OASIS        Approved Standard\n                                                                              Market Acceptance\n\n             Table 5 – Security Standards: Authentication and Authorization\n\n                                       52\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52"
+          },
+          "score": 25.130343239067408,
+          "rank": 1
+        },
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 19.80497063748865,
+          "rank": 2
+        },
+        {
+          "id": "nist-p065-text-000",
+          "text": "Categorization          Available Standards         SDO            Status\n                               X.idmcc                  ITU-T      Under Development\n   Identity      Requirement of IdM in Cloud Computing\n Management                             FIPS 201-1                 NIST       Approved Standard\n                     Personal Identity Verification (PIV) of                   Market Acceptance\n                      Federal Employees and Contractors\n                    Service Provisioning Markup Language     OASIS      Approved Standard\n                           (SPML)\n             Web Services Federation Language (WS-     OASIS      Approved Standard\n                            Federation) Version 1.2\n                            WS-Trust 1.3               OASIS      Approved Standard\n                      Security Assertion Markup Language      OASIS      Approved Standard\n                          (SAML)                                                                      Market Acceptance\n                     OpenID Authentication 1.1          OpenID      Approved Standard\n                                                           Foundation                                                                      Market Acceptance\n\n                  Table 8 – Security Standards: Identity Management\n\n                                       54\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54"
+          },
+          "score": 15.951615997112444,
+          "rank": 3
+        },
+        {
+          "id": "nist-p065-table-00-000",
+          "text": "Table 8 – Security Standards: Identity Management\nColumn headers: Categorization | Available Standards | SDO | Status. Merged category cell: \"Identity Management\" spans all listed standards in the first column.\nRows:\n1) Available Standards: \"X.idmcc\"; second line: \"Requirement of IdM in Cloud Computing\" | SDO: ITU-T | Status: Under Development.\n2) Available Standards: \"FIPS 201-1\"; second line: \"Personal Identity Verification (PIV) of Federal Employees and Contractors\" | SDO: NIST | Status: Approved Standard; Market Acceptance.\n3) Available Standards: \"Service Provisioning Markup Language (SPML)\" | SDO: OASIS | Status: Approved Standard.\n4) Available Standards: \"Web Services Federation Language (WS-Federation) Version 1.2\" | SDO: OASIS | Status: Approved Standard.\n5) Available Standards: \"WS-Trust 1.3\" | SDO: OASIS | Status: Approved Standard.\n6) Available Standards: \"Security Assertion Markup Language (SAML)\" | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n7) Available Standards: \"OpenID Authentication 1.1\" | SDO: OpenID Foundation | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-065.png",
+            "label": "Table 8 – Security Standards: Identity Management",
+            "pdf_page": 65,
+            "visual_id": "nist-p065-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.947189528912935,
+          "rank": 4
+        },
+        {
+          "id": "nist-p010-text-000",
+          "text": "LIST OF TABLES\nTABLE 1 – CLOUD CONSUMER AND CLOUD PROVIDER ....................................................................... 14\nTABLE 2 – DEPLOYMENT CASES FOR HIGH LEVEL SCENARIOS ........................................................... 28\nTABLE 3 – SCENARIOS AND TECHNICAL REQUIREMENTS .................................................................... 31\nTABLE 4 – STANDARDS MATURITY MODEL ........................................................................................ 39\nTABLE 5 – SECURITY STANDARDS: AUTHENTICATION AND AUTHORIZATION ..................................... 52\nTABLE 6 – SECURITY STANDARDS: CONFIDENTIALITY ........................................................................ 53\nTABLE 7 – SECURITY STANDARDS: INTEGRITY .................................................................................... 53\nTABLE 8 – SECURITY STANDARDS: IDENTITY MANAGEMENT ............................................................. 54\nTABLE 9 – SECURITY STANDARDS: SECURITY MONITORING & INCIDENT RESPONSE .......................... 55\nTABLE 10 – SECURITY STANDARDS: SECURITY CONTROLS ................................................................. 56\nTABLE 11 – SECURITY STANDARDS: SECURITY POLICY MANAGEMENT .............................................. 57\nTABLE 12 – SECURITY STANDARDS: AVAILABILITY ............................................................................ 57\nTABLE 13 – INTEROPERABILITY STANDARDS ...................................................................................... 58\nTABLE 14 – PORTABILITY STANDARDS ............................................................................................... 59\nTABLE 15 – PERFORMANCE STANDARDS ............................................................................................. 60\nTABLE 16 – ACCESSIBILITY STANDARDS ............................................................................................. 61\nTABLE 17 – AREAS OF STANDARDIZATION GAPS AND STANDARDIZATION PRIORITIES ....................... 75\nTABLE 18 – DOD SELECTION CRITERIA AND DESCRIPTION SUMMARY ............................................. 100\nTABLE 19 – DOD STANDARDS SOURCES PREFERENCES .................................................................... 101\n\n                                        x\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "10",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 10,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "x"
+          },
+          "score": 14.98188467524156,
+          "rank": 5
+        },
+        {
+          "id": "nist-p086-table-00-000",
+          "text": "Table 17 – Areas of Standardization Gaps and Standardization Priorities\nTwo-column table under the page header \"NIST Cloud Computing Standards Roadmap\".\n\nColumn headers:\n- Area of Standardization Gaps\n- High Priorities for Standardization Based On USG Requirements\n\nRow 1 (Security):\nLeft column: \"Security (Section 9.1.5), e.g.,\" followed by bullet items:\n- Standards for identity provisioning and management across different network and administration domains\n- Standards for secure and efficient replication of identity and access policy information across systems\n- Single Sign-On interface and protocol standards that support strong authentication\n- Standards in policies, processes, and technical controls in supporting the security auditing, regulation, and law compliance needs\nRight column: \"High standardization priorities on:\" followed by bullet items:\n- Security auditing and compliance standards to support secure deployment, assess, and accreditation process for cloud-specific deployment (Section 9.2.1)\n- Identity and access management standards to support secure integration of cloud systems into existing enterprise security infrastructure (Section 9.2.2)\n\nRow 2 (Accessibility):\nLeft column: \"Accessibility (Section 9.1.6), e.g.\" followed by bullet item:\n- Standardized “framework” for exchanging an individual’s accessibility requirements\nRight column: \"Not a high standardization priority at this time\"\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-086.png",
+            "label": "Table 17 – Areas of Standardization Gaps and Standardization Priorities",
+            "pdf_page": 86,
+            "visual_id": "nist-p086-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "75",
+            "uncertainties": [
+              "The right-column bullet item in the security row is line-wrapped in the source; wording is transcribed as read from the visible page.",
+              "The left-column accessibility row ends with \"e.g.\" in the visible page; no further examples are shown on this page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 13.043361069913187,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p063-text-002",
+          "text": "                      Security Assertion Markup Language (SAML)     OASIS        Approved Standard\n                                                                              Market Acceptance\n\n             Table 5 – Security Standards: Authentication and Authorization\n\n                                       52\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52"
+          },
+          "score": 25.130343239067408,
+          "rank": 1
+        },
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 19.80497063748865,
+          "rank": 2
+        },
+        {
+          "id": "nist-p065-text-000",
+          "text": "Categorization          Available Standards         SDO            Status\n                               X.idmcc                  ITU-T      Under Development\n   Identity      Requirement of IdM in Cloud Computing\n Management                             FIPS 201-1                 NIST       Approved Standard\n                     Personal Identity Verification (PIV) of                   Market Acceptance\n                      Federal Employees and Contractors\n                    Service Provisioning Markup Language     OASIS      Approved Standard\n                           (SPML)\n             Web Services Federation Language (WS-     OASIS      Approved Standard\n                            Federation) Version 1.2\n                            WS-Trust 1.3               OASIS      Approved Standard\n                      Security Assertion Markup Language      OASIS      Approved Standard\n                          (SAML)                                                                      Market Acceptance\n                     OpenID Authentication 1.1          OpenID      Approved Standard\n                                                           Foundation                                                                      Market Acceptance\n\n                  Table 8 – Security Standards: Identity Management\n\n                                       54\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54"
+          },
+          "score": 15.951615997112444,
+          "rank": 3
+        },
+        {
+          "id": "nist-p065-table-00-000",
+          "text": "Table 8 – Security Standards: Identity Management\nColumn headers: Categorization | Available Standards | SDO | Status. Merged category cell: \"Identity Management\" spans all listed standards in the first column.\nRows:\n1) Available Standards: \"X.idmcc\"; second line: \"Requirement of IdM in Cloud Computing\" | SDO: ITU-T | Status: Under Development.\n2) Available Standards: \"FIPS 201-1\"; second line: \"Personal Identity Verification (PIV) of Federal Employees and Contractors\" | SDO: NIST | Status: Approved Standard; Market Acceptance.\n3) Available Standards: \"Service Provisioning Markup Language (SPML)\" | SDO: OASIS | Status: Approved Standard.\n4) Available Standards: \"Web Services Federation Language (WS-Federation) Version 1.2\" | SDO: OASIS | Status: Approved Standard.\n5) Available Standards: \"WS-Trust 1.3\" | SDO: OASIS | Status: Approved Standard.\n6) Available Standards: \"Security Assertion Markup Language (SAML)\" | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n7) Available Standards: \"OpenID Authentication 1.1\" | SDO: OpenID Foundation | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-065.png",
+            "label": "Table 8 – Security Standards: Identity Management",
+            "pdf_page": 65,
+            "visual_id": "nist-p065-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "54",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.947189528912935,
+          "rank": 4
+        },
+        {
+          "id": "nist-p010-text-000",
+          "text": "LIST OF TABLES\nTABLE 1 – CLOUD CONSUMER AND CLOUD PROVIDER ....................................................................... 14\nTABLE 2 – DEPLOYMENT CASES FOR HIGH LEVEL SCENARIOS ........................................................... 28\nTABLE 3 – SCENARIOS AND TECHNICAL REQUIREMENTS .................................................................... 31\nTABLE 4 – STANDARDS MATURITY MODEL ........................................................................................ 39\nTABLE 5 – SECURITY STANDARDS: AUTHENTICATION AND AUTHORIZATION ..................................... 52\nTABLE 6 – SECURITY STANDARDS: CONFIDENTIALITY ........................................................................ 53\nTABLE 7 – SECURITY STANDARDS: INTEGRITY .................................................................................... 53\nTABLE 8 – SECURITY STANDARDS: IDENTITY MANAGEMENT ............................................................. 54\nTABLE 9 – SECURITY STANDARDS: SECURITY MONITORING & INCIDENT RESPONSE .......................... 55\nTABLE 10 – SECURITY STANDARDS: SECURITY CONTROLS ................................................................. 56\nTABLE 11 – SECURITY STANDARDS: SECURITY POLICY MANAGEMENT .............................................. 57\nTABLE 12 – SECURITY STANDARDS: AVAILABILITY ............................................................................ 57\nTABLE 13 – INTEROPERABILITY STANDARDS ...................................................................................... 58\nTABLE 14 – PORTABILITY STANDARDS ............................................................................................... 59\nTABLE 15 – PERFORMANCE STANDARDS ............................................................................................. 60\nTABLE 16 – ACCESSIBILITY STANDARDS ............................................................................................. 61\nTABLE 17 – AREAS OF STANDARDIZATION GAPS AND STANDARDIZATION PRIORITIES ....................... 75\nTABLE 18 – DOD SELECTION CRITERIA AND DESCRIPTION SUMMARY ............................................. 100\nTABLE 19 – DOD STANDARDS SOURCES PREFERENCES .................................................................... 101\n\n                                        x\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "10",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 10,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "x"
+          },
+          "score": 14.98188467524156,
+          "rank": 5
+        },
+        {
+          "id": "nist-p086-table-00-000",
+          "text": "Table 17 – Areas of Standardization Gaps and Standardization Priorities\nTwo-column table under the page header \"NIST Cloud Computing Standards Roadmap\".\n\nColumn headers:\n- Area of Standardization Gaps\n- High Priorities for Standardization Based On USG Requirements\n\nRow 1 (Security):\nLeft column: \"Security (Section 9.1.5), e.g.,\" followed by bullet items:\n- Standards for identity provisioning and management across different network and administration domains\n- Standards for secure and efficient replication of identity and access policy information across systems\n- Single Sign-On interface and protocol standards that support strong authentication\n- Standards in policies, processes, and technical controls in supporting the security auditing, regulation, and law compliance needs\nRight column: \"High standardization priorities on:\" followed by bullet items:\n- Security auditing and compliance standards to support secure deployment, assess, and accreditation process for cloud-specific deployment (Section 9.2.1)\n- Identity and access management standards to support secure integration of cloud systems into existing enterprise security infrastructure (Section 9.2.2)\n\nRow 2 (Accessibility):\nLeft column: \"Accessibility (Section 9.1.6), e.g.\" followed by bullet item:\n- Standardized “framework” for exchanging an individual’s accessibility requirements\nRight column: \"Not a high standardization priority at this time\"\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-086.png",
+            "label": "Table 17 – Areas of Standardization Gaps and Standardization Priorities",
+            "pdf_page": 86,
+            "visual_id": "nist-p086-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "75",
+            "uncertainties": [
+              "The right-column bullet item in the security row is line-wrapped in the source; wording is transcribed as read from the visible page.",
+              "The left-column accessibility row ends with \"e.g.\" in the visible page; no further examples are shown on this page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 13.043361069913187,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.006375600001774728
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "nist-p063-table-00",
+      "seconds": 5.999998393235728e-06
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "nist-p063-table-00-000",
+      "context": [
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        }
+      ],
+      "seconds": 0.0008392999989155214
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "nist-p063-table-00",
+      "seconds": 3.2999996619764715e-06
+    }
+  ],
+  "context": [
+    {
+      "id": "nist-p065-table-00-000",
+      "text": "Table 8 – Security Standards: Identity Management\nColumn headers: Categorization | Available Standards | SDO | Status. Merged category cell: \"Identity Management\" spans all listed standards in the first column.\nRows:\n1) Available Standards: \"X.idmcc\"; second line: \"Requirement of IdM in Cloud Computing\" | SDO: ITU-T | Status: Under Development.\n2) Available Standards: \"FIPS 201-1\"; second line: \"Personal Identity Verification (PIV) of Federal Employees and Contractors\" | SDO: NIST | Status: Approved Standard; Market Acceptance.\n3) Available Standards: \"Service Provisioning Markup Language (SPML)\" | SDO: OASIS | Status: Approved Standard.\n4) Available Standards: \"Web Services Federation Language (WS-Federation) Version 1.2\" | SDO: OASIS | Status: Approved Standard.\n5) Available Standards: \"WS-Trust 1.3\" | SDO: OASIS | Status: Approved Standard.\n6) Available Standards: \"Security Assertion Markup Language (SAML)\" | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n7) Available Standards: \"OpenID Authentication 1.1\" | SDO: OpenID Foundation | Status: Approved Standard; Market Acceptance.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "65",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-065.png",
+        "label": "Table 8 – Security Standards: Identity Management",
+        "pdf_page": 65,
+        "visual_id": "nist-p065-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "54",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 15.947189528912935,
+      "rank": 4
+    },
+    {
+      "id": "nist-p063-text-002",
+      "text": "                      Security Assertion Markup Language (SAML)     OASIS        Approved Standard\n                                                                              Market Acceptance\n\n             Table 5 – Security Standards: Authentication and Authorization\n\n                                       52\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "52"
+      },
+      "score": 25.130343239067408,
+      "rank": 1
+    },
+    {
+      "id": "nist-p063-table-00-000",
+      "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-063.png",
+        "label": "Table 5 – Security Standards: Authentication and Authorization",
+        "pdf_page": 63,
+        "visual_id": "nist-p063-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "52",
+        "uncertainties": [
+          "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+          "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "nist-p065-text-000",
+      "text": "Categorization          Available Standards         SDO            Status\n                               X.idmcc                  ITU-T      Under Development\n   Identity      Requirement of IdM in Cloud Computing\n Management                             FIPS 201-1                 NIST       Approved Standard\n                     Personal Identity Verification (PIV) of                   Market Acceptance\n                      Federal Employees and Contractors\n                    Service Provisioning Markup Language     OASIS      Approved Standard\n                           (SPML)\n             Web Services Federation Language (WS-     OASIS      Approved Standard\n                            Federation) Version 1.2\n                            WS-Trust 1.3               OASIS      Approved Standard\n                      Security Assertion Markup Language      OASIS      Approved Standard\n                          (SAML)                                                                      Market Acceptance\n                     OpenID Authentication 1.1          OpenID      Approved Standard\n                                                           Foundation                                                                      Market Acceptance\n\n                  Table 8 – Security Standards: Identity Management\n\n                                       54\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "65",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 65,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "54"
+      },
+      "score": 15.951615997112444,
+      "rank": 3
+    },
+    {
+      "id": "nist-p064-table-00-000",
+      "text": "Table 6 – Security Standards: Confidentiality\nColumns: Categorization | Available Standards | SDO | Status.\nCategorization cell is merged for the category Confidentiality across all visible rows.\nVisible entries under Confidentiality:\n1) Available Standards cell visually contains two lines: \"RFC 5246\" and \"Secure Sockets Layer (SSL)/ Transport Layer Security (TLS)\". SDO: IETF. Status cell shows \"Approved Standard\" and \"Market Acceptance\".\n2) Key Management Interoperability Protocol (KMIP) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n3) XML Encryption Syntax and Processing | SDO: W3C | Status: Approved Standard; Market Acceptance.\n4) FIPS 140-2 / Security Requirements for Cryptographic Modules | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n5) FIPS 185 / Escrowed Encryption Standard (EES) | SDO: NIST | Status: Approved Standard; Market Acceptance.\n6) FIPS 197 / Advanced Encryption Standard (AES) | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n7) FIPS 188 / Standard Security Label for Information Transfer | SDO: NIST | Status: Approved Standard; Market Acceptance.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "64",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-064.png",
+        "label": "Table 6 – Security Standards: Confidentiality",
+        "pdf_page": 64,
+        "visual_id": "nist-p064-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "53",
+        "uncertainties": [
+          "The first visible entry is visually merged and could represent one or two standards; the row split between RFC 5246 and SSL/TLS is ambiguous from the page image.",
+          "The status cells use stacked text; the exact mapping of each status line to each standard is inferred from layout, not explicitly separated by grid lines."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 14.496305661244829,
+      "rank": 5
+    },
+    {
+      "id": "nist-p068-table-00-000",
+      "text": "Table 11 – Security Standards: Security Policy Management\nHeader columns: Categorization | Available Standards | SDO | Status. Merged first-column category cell spans all listed rows: Security Policy Management.\nRows:\n1) Available Standards: ATIS-02000008; Trusted Information Exchange (TIE) | SDO: ATIS | Status: Approved Standard; Commercially Available.\n2) Available Standards: FIPS 199; Standards for Security Categorization of Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n3) Available Standards: FIPS 200; Minimum Security Requirements for Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n4) Available Standards: ISO/IEC 27002; Code of practice for information security management | SDO: ISO/IEC | Status: Approved Standard; Market Acceptance.\n5) Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-068.png",
+        "label": "Table 11 – Security Standards: Security Policy Management",
+        "pdf_page": 68,
+        "visual_id": "nist-p068-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "57",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 14.282716992960314,
+      "rank": 6
+    },
+    {
+      "id": "nist-p010-text-000",
+      "text": "LIST OF TABLES\nTABLE 1 – CLOUD CONSUMER AND CLOUD PROVIDER ....................................................................... 14\nTABLE 2 – DEPLOYMENT CASES FOR HIGH LEVEL SCENARIOS ........................................................... 28\nTABLE 3 – SCENARIOS AND TECHNICAL REQUIREMENTS .................................................................... 31\nTABLE 4 – STANDARDS MATURITY MODEL ........................................................................................ 39\nTABLE 5 – SECURITY STANDARDS: AUTHENTICATION AND AUTHORIZATION ..................................... 52\nTABLE 6 – SECURITY STANDARDS: CONFIDENTIALITY ........................................................................ 53\nTABLE 7 – SECURITY STANDARDS: INTEGRITY .................................................................................... 53\nTABLE 8 – SECURITY STANDARDS: IDENTITY MANAGEMENT ............................................................. 54\nTABLE 9 – SECURITY STANDARDS: SECURITY MONITORING & INCIDENT RESPONSE .......................... 55\nTABLE 10 – SECURITY STANDARDS: SECURITY CONTROLS ................................................................. 56\nTABLE 11 – SECURITY STANDARDS: SECURITY POLICY MANAGEMENT .............................................. 57\nTABLE 12 – SECURITY STANDARDS: AVAILABILITY ............................................................................ 57\nTABLE 13 – INTEROPERABILITY STANDARDS ...................................................................................... 58\nTABLE 14 – PORTABILITY STANDARDS ............................................................................................... 59\nTABLE 15 – PERFORMANCE STANDARDS ............................................................................................. 60\nTABLE 16 – ACCESSIBILITY STANDARDS ............................................................................................. 61\nTABLE 17 – AREAS OF STANDARDIZATION GAPS AND STANDARDIZATION PRIORITIES ....................... 75\nTABLE 18 – DOD SELECTION CRITERIA AND DESCRIPTION SUMMARY ............................................. 100\nTABLE 19 – DOD STANDARDS SOURCES PREFERENCES .................................................................... 101\n\n                                        x\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "10",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 10,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "x"
+      },
+      "score": 14.98188467524156,
+      "rank": 5
+    },
+    {
+      "id": "nist-p086-table-00-000",
+      "text": "Table 17 – Areas of Standardization Gaps and Standardization Priorities\nTwo-column table under the page header \"NIST Cloud Computing Standards Roadmap\".\n\nColumn headers:\n- Area of Standardization Gaps\n- High Priorities for Standardization Based On USG Requirements\n\nRow 1 (Security):\nLeft column: \"Security (Section 9.1.5), e.g.,\" followed by bullet items:\n- Standards for identity provisioning and management across different network and administration domains\n- Standards for secure and efficient replication of identity and access policy information across systems\n- Single Sign-On interface and protocol standards that support strong authentication\n- Standards in policies, processes, and technical controls in supporting the security auditing, regulation, and law compliance needs\nRight column: \"High standardization priorities on:\" followed by bullet items:\n- Security auditing and compliance standards to support secure deployment, assess, and accreditation process for cloud-specific deployment (Section 9.2.1)\n- Identity and access management standards to support secure integration of cloud systems into existing enterprise security infrastructure (Section 9.2.2)\n\nRow 2 (Accessibility):\nLeft column: \"Accessibility (Section 9.1.6), e.g.\" followed by bullet item:\n- Standardized “framework” for exchanging an individual’s accessibility requirements\nRight column: \"Not a high standardization priority at this time\"\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "86",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-086.png",
+        "label": "Table 17 – Areas of Standardization Gaps and Standardization Priorities",
+        "pdf_page": 86,
+        "visual_id": "nist-p086-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "75",
+        "uncertainties": [
+          "The right-column bullet item in the security row is line-wrapped in the source; wording is transcribed as read from the visible page.",
+          "The left-column accessibility row ends with \"e.g.\" in the visible page; no further examples are shown on this page."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 13.043361069913187,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T14:58:05.041577+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 415,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 82,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 497
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:07.175216+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3406,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 99,
+        "output_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "total_tokens": 3505
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:09.901383+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3529,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3200,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 161,
+        "output_tokens_details": {
+          "reasoning_tokens": 123
+        },
+        "total_tokens": 3690
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:11.993562+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6657,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3328,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 44,
+        "output_tokens_details": {
+          "reasoning_tokens": 17
+        },
+        "total_tokens": 6701
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:14.524952+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6725,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 6528,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 134,
+        "output_tokens_details": {
+          "reasoning_tokens": 104
+        },
+        "total_tokens": 6859
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:16.393736+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7633,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 6528,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 38,
+        "output_tokens_details": {
+          "reasoning_tokens": 11
+        },
+        "total_tokens": 7671
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:19.825088+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7513,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 388,
+        "output_tokens_details": {
+          "reasoning_tokens": 319
+        },
+        "total_tokens": 7901
+      }
+    }
+  ],
+  "seconds": 17.40113779999956,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review"
+}

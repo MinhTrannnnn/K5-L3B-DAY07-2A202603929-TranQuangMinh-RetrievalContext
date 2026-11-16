@@ -1,0 +1,1161 @@
+{
+  "status": "answered",
+  "answer": "Map 6.3 shows low-carbon technology jobs concentrated in China’s east coast, especially the southeast/coastal manufacturing hubs around Fujian, Guangdong, Beijing, and Shanghai, while fossil-fuel jobs are concentrated more in north-central China around Shanxi and near coal-mining areas [wdr-p186-diagram-00-000] [wdr-p186-text-000].",
+  "citations": [
+    "wdr-p186-diagram-00-000",
+    "wdr-p186-text-000"
+  ],
+  "question": "Inspect Map 6.3. Where in China are low-carbon technology jobs concentrated compared with fossil-fuel jobs?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Map 6.3\" China low-carbon technology jobs fossil-fuel jobs",
+      "results": [
+        {
+          "id": "wdr-p186-diagram-00-000",
+          "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\dc69d858e364\\page-186.png",
+            "label": "Map 6.3",
+            "pdf_page": 186,
+            "visual_id": "wdr-p186-diagram-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+              "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.8263771331683964,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p186-text-000",
+          "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 186,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.7217794795951794,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p173-text-000",
+          "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.663328627662918,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p180-text-000",
+          "text": "Figure 6.6 Costa Rica and China are the global front-runners in jobs related to low-carbon\ntechnologies\n\n                                                           Job creation leaders\n                        Job creation laggards                      Higher demand\n                          Lower demand than                      than high-income\n                        high-income country average                   country average\n      8                                                                              800,000\n\n      7                                                                              700,000                                                                                                                                                                                                                                                                                                                                             postings\n    (%) 6                                                                              600,000postings                                                                                                                          job\njob     LCTs      5                                                                              500,000  LCT\n      4                                                                              400,000  to\nonline    3                                                                              300,000                                                                                                                                                                                                                                                          online\nof\n         High-income country average (1.7%)                                             200,000 of         related 2\nShare    1                                                                              100,000      0                                                                      0                    Number\n\n                        Sri   GuatemalaBulgariaEcuadorJordanThailandSerbiaMauritius                         LankaColombiaFederationPhilippinesIndiaPeruMexicoArgentinaMalaysiaJamaicaLebanonNamibiaRepublicAfricaSenegalGeorgiaBrazilCostaChinaRica                                                           South\n                          Russian                         Dominican\n\n               LCT share of job postings   Number of LCT job postings (right axis)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6591475266368106,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p180-chart-00-000",
+          "text": "Figure 6.6\nFigure 6.6. Costa Rica and China are the global front-runners in jobs related to low-carbon technologies. Combined bar-and-dot chart for middle-income countries in 2022. X-axis lists countries in this order: Guatemala, Bulgaria, Ecuador, Jordan, Thailand, Serbia, Mauritius, Sri Lanka, Colombia, Russian Federation, Philippines, India, Peru, Mexico, Argentina, Malaysia, Jamaica, Lebanon, Namibia, Dominican Republic, South Africa, Senegal, Georgia, Brazil, China, Costa Rica. Left y-axis: Share of online job postings related to LCTs (%), from 0 to 8. Right y-axis: Number of online LCT job postings, from 0 to 800,000. Dark navy vertical bars represent LCT share of job postings; teal circles represent number of LCT job postings on the right axis. An orange dashed horizontal reference line marks the high-income country average (1.7%). Brackets above the plot divide the countries into Job creation laggards (Lower demand than high-income country average) on the left and Job creation leaders (Higher demand than high-income country average) on the right. Visually, most countries are below 1.7%; Brazil is slightly above it; China is around 5%; Costa Rica is the highest at roughly 7.5% to 7.8%. The teal-dot series is near zero for many countries and is largest for the far-right countries, especially China and Costa Rica, near the top of the right axis. Source note on the page: WDR 2024 team analysis extending Bastos et al. (2023). Note: LCTs are low-carbon technologies as defined by the European Patent Office classification of climate change mitigation technologies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-180.png",
+            "label": "Figure 6.6",
+            "pdf_page": 180,
+            "visual_id": "wdr-p180-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact teal-dot values for the number of LCT job postings are not legible from the provided page image; only relative positions and approximate extremes are described.",
+              "Bar heights for individual countries other than the most prominent ones are approximated from the visible plot.",
+              "Country labels are reproduced from the chart order as visible; some labels are line-wrapped in the source image."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6355199099964217,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p174-chart-00-000",
+          "text": "Figure 6.3\nLow-carbon innovation is driving the emergence of new spatial clusters, start-ups, and financing. Composite figure with two panels. Panel a is a vertical bar chart titled \"Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\" with the subtitle \"3.3 million online job openings were related to low-carbon technologies in 2022, with one-third in middle-income countries.\" Y-axis: \"Number of online job postings\" from 0 to 80,000. Bars are color-coded by legend: orange = Middle-income, dark blue = High-income. The bars are ordered from highest to lowest and the visible labels, left to right, are: Catalonia, Spain; Guangdong, China; Madrid, Spain; Beijing, China; Rhône-Alpes, France; California, United States; Shanghai, China; Suzhou, China; Shenzhen, China; Île-de-France, France; Geneva, Switzerland; Wuhan, China; Hangzhou, China; Chengdu, China; Lombardy, Italy; Prague, Czechia; Upper Bavaria, Germany; Espace Mittelland, Switzerland; Western Slovakia, Slovak Republic; Singapore; Texas, United States; Stuttgart, Germany; Zurich, Switzerland; United Kingdom; London, United Kingdom; Nanjing, China; Pays de la Loire, France; Andalusia, Spain; Hamburg, Germany; Berlin, Germany; Darmstadt, Germany. Panel b is a line chart titled \"Creation of clean energy start-ups\" with the subtitle \"1,506 clean energy start-ups were listed on Crunchbase in 2021, one-quarter in middle-income countries.\" X-axis shows years 1990 through 2021. Y-axis: \"Number of clean energy start-ups\" from 0 to 1,600. Two series are shown in the legend: orange = Middle-income countries; dark blue = High-income countries. The high-income series is consistently much higher, rising from the early 1990s to a peak around 2009, then dipping and fluctuating through 2021; the middle-income series stays low in the 1990s and 2000s, then rises gradually in the 2010s, with a visible spike around 2018 and a lower value by 2021.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "174",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-174.png",
+            "label": "Figure 6.3",
+            "pdf_page": 174,
+            "visual_id": "wdr-p174-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Some panel a location labels are tightly spaced and partially overlapping; transcription may be imperfect for a few names.",
+              "Panel b values are described from the visible curve and are approximate where exact points are not labeled."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6173493241711774,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p174-text-000",
+          "text": "will be altered and potentially intensified         most rapidly in centers of research and\n      because the geographical determinants           agglomeration.23\n       of low-carbon energy sources differ from         •   Shifts between industries. Because low-­carbon\n       those of fossil fuel–based economies, and           technologies  are  generally  being  mass\n       technological innovation is likely to occur          manufactured, the low-carbon transition is\n\nFigure 6.3 Low-carbon innovation is driving the emergence of new spatial clusters, start-ups,\nand financing\n\n             a. Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\n                      3.3 million online job openings were related to low-carbon technologies in 2022,\n                                       with one-third in middle-income countries\n\n    80,000\n\n    70,000 postings\n    60,000\n job    50,000\n\n    40,000 online    30,000\nof\n    20,000\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "174",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 174,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6115782943138485,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.61116368562257,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p172-text-000",
+          "text": "Figure 6.2 The diffusion of low-carbon technologies is rapidly accelerating\n\n                              a. Share of jobs related to low-carbon technologies in 35 countries\n       2.5\n\n       2.0\n\n    (%)\n\n       1.5postings     LCTs\njob to\n\n       1.0\nof relatedShare\n       0.5\n\n        0\n            2014    2015     2016     2017     2018     2019     2020     2021     2022\n\n               b. Share of publicly listed firms mentioning low-carbon technologies in shareholder meetings\n\n       35\n\n    (%)  30\nfirms\n       25listed meetings\n       20\n\n       15publicly inLCTs\nof\nShare    10            mentioning   5\n\n        0\n           2012   2013   2014   2015   2016   2017   2018   2019   2020   2021  2022\n\nSource: Bastos et al. 2023.\nNote: Panel a displays the share of online job postings in 35 countries that mention low-carbon technologies (LCTs) as\ndefined by the Y02 classification of patents adopted by the European Patent Office. See Classification of Patents: Climate\nChange Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en/news-events​\n/­in-focus​/classification/climate-change. Panel b displays the share of shareholder meeting transcripts from publicly listed\nfirms that mention these technologies.\n\n140   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "172",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 172,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6044765249881638,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p180-text-001",
+          "text": "Source: WDR 2024 team analysis extending Bastos et al. (2023).\nNote: The figure displays the share of online job postings of middle-income countries in 2022 that mention low-carbon\ntechnologies (LCTs) as defined by the classification of patents related to “climate change mitigation technologies” adopted\nby the European Patent Office. It also displays the total number of low-carbon technology postings in 2022. See Classification\nof Patents: Climate Change Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en​\n/news-events/in-focus/classification/climate-change.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.5994389769630626,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p186-diagram-00-000",
+          "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\dc69d858e364\\page-186.png",
+            "label": "Map 6.3",
+            "pdf_page": 186,
+            "visual_id": "wdr-p186-diagram-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+              "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.8263771331683964,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p186-text-000",
+          "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 186,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.7217794795951794,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p173-text-000",
+          "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.663328627662918,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p180-text-000",
+          "text": "Figure 6.6 Costa Rica and China are the global front-runners in jobs related to low-carbon\ntechnologies\n\n                                                           Job creation leaders\n                        Job creation laggards                      Higher demand\n                          Lower demand than                      than high-income\n                        high-income country average                   country average\n      8                                                                              800,000\n\n      7                                                                              700,000                                                                                                                                                                                                                                                                                                                                             postings\n    (%) 6                                                                              600,000postings                                                                                                                          job\njob     LCTs      5                                                                              500,000  LCT\n      4                                                                              400,000  to\nonline    3                                                                              300,000                                                                                                                                                                                                                                                          online\nof\n         High-income country average (1.7%)                                             200,000 of         related 2\nShare    1                                                                              100,000      0                                                                      0                    Number\n\n                        Sri   GuatemalaBulgariaEcuadorJordanThailandSerbiaMauritius                         LankaColombiaFederationPhilippinesIndiaPeruMexicoArgentinaMalaysiaJamaicaLebanonNamibiaRepublicAfricaSenegalGeorgiaBrazilCostaChinaRica                                                           South\n                          Russian                         Dominican\n\n               LCT share of job postings   Number of LCT job postings (right axis)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6591475266368106,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p180-chart-00-000",
+          "text": "Figure 6.6\nFigure 6.6. Costa Rica and China are the global front-runners in jobs related to low-carbon technologies. Combined bar-and-dot chart for middle-income countries in 2022. X-axis lists countries in this order: Guatemala, Bulgaria, Ecuador, Jordan, Thailand, Serbia, Mauritius, Sri Lanka, Colombia, Russian Federation, Philippines, India, Peru, Mexico, Argentina, Malaysia, Jamaica, Lebanon, Namibia, Dominican Republic, South Africa, Senegal, Georgia, Brazil, China, Costa Rica. Left y-axis: Share of online job postings related to LCTs (%), from 0 to 8. Right y-axis: Number of online LCT job postings, from 0 to 800,000. Dark navy vertical bars represent LCT share of job postings; teal circles represent number of LCT job postings on the right axis. An orange dashed horizontal reference line marks the high-income country average (1.7%). Brackets above the plot divide the countries into Job creation laggards (Lower demand than high-income country average) on the left and Job creation leaders (Higher demand than high-income country average) on the right. Visually, most countries are below 1.7%; Brazil is slightly above it; China is around 5%; Costa Rica is the highest at roughly 7.5% to 7.8%. The teal-dot series is near zero for many countries and is largest for the far-right countries, especially China and Costa Rica, near the top of the right axis. Source note on the page: WDR 2024 team analysis extending Bastos et al. (2023). Note: LCTs are low-carbon technologies as defined by the European Patent Office classification of climate change mitigation technologies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-180.png",
+            "label": "Figure 6.6",
+            "pdf_page": 180,
+            "visual_id": "wdr-p180-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact teal-dot values for the number of LCT job postings are not legible from the provided page image; only relative positions and approximate extremes are described.",
+              "Bar heights for individual countries other than the most prominent ones are approximated from the visible plot.",
+              "Country labels are reproduced from the chart order as visible; some labels are line-wrapped in the source image."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6355199099964217,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p174-chart-00-000",
+          "text": "Figure 6.3\nLow-carbon innovation is driving the emergence of new spatial clusters, start-ups, and financing. Composite figure with two panels. Panel a is a vertical bar chart titled \"Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\" with the subtitle \"3.3 million online job openings were related to low-carbon technologies in 2022, with one-third in middle-income countries.\" Y-axis: \"Number of online job postings\" from 0 to 80,000. Bars are color-coded by legend: orange = Middle-income, dark blue = High-income. The bars are ordered from highest to lowest and the visible labels, left to right, are: Catalonia, Spain; Guangdong, China; Madrid, Spain; Beijing, China; Rhône-Alpes, France; California, United States; Shanghai, China; Suzhou, China; Shenzhen, China; Île-de-France, France; Geneva, Switzerland; Wuhan, China; Hangzhou, China; Chengdu, China; Lombardy, Italy; Prague, Czechia; Upper Bavaria, Germany; Espace Mittelland, Switzerland; Western Slovakia, Slovak Republic; Singapore; Texas, United States; Stuttgart, Germany; Zurich, Switzerland; United Kingdom; London, United Kingdom; Nanjing, China; Pays de la Loire, France; Andalusia, Spain; Hamburg, Germany; Berlin, Germany; Darmstadt, Germany. Panel b is a line chart titled \"Creation of clean energy start-ups\" with the subtitle \"1,506 clean energy start-ups were listed on Crunchbase in 2021, one-quarter in middle-income countries.\" X-axis shows years 1990 through 2021. Y-axis: \"Number of clean energy start-ups\" from 0 to 1,600. Two series are shown in the legend: orange = Middle-income countries; dark blue = High-income countries. The high-income series is consistently much higher, rising from the early 1990s to a peak around 2009, then dipping and fluctuating through 2021; the middle-income series stays low in the 1990s and 2000s, then rises gradually in the 2010s, with a visible spike around 2018 and a lower value by 2021.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "174",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-174.png",
+            "label": "Figure 6.3",
+            "pdf_page": 174,
+            "visual_id": "wdr-p174-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Some panel a location labels are tightly spaced and partially overlapping; transcription may be imperfect for a few names.",
+              "Panel b values are described from the visible curve and are approximate where exact points are not labeled."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6173493241711774,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p174-text-000",
+          "text": "will be altered and potentially intensified         most rapidly in centers of research and\n      because the geographical determinants           agglomeration.23\n       of low-carbon energy sources differ from         •   Shifts between industries. Because low-­carbon\n       those of fossil fuel–based economies, and           technologies  are  generally  being  mass\n       technological innovation is likely to occur          manufactured, the low-carbon transition is\n\nFigure 6.3 Low-carbon innovation is driving the emergence of new spatial clusters, start-ups,\nand financing\n\n             a. Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\n                      3.3 million online job openings were related to low-carbon technologies in 2022,\n                                       with one-third in middle-income countries\n\n    80,000\n\n    70,000 postings\n    60,000\n job    50,000\n\n    40,000 online    30,000\nof\n    20,000\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "174",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 174,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6115782943138485,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.61116368562257,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p172-text-000",
+          "text": "Figure 6.2 The diffusion of low-carbon technologies is rapidly accelerating\n\n                              a. Share of jobs related to low-carbon technologies in 35 countries\n       2.5\n\n       2.0\n\n    (%)\n\n       1.5postings     LCTs\njob to\n\n       1.0\nof relatedShare\n       0.5\n\n        0\n            2014    2015     2016     2017     2018     2019     2020     2021     2022\n\n               b. Share of publicly listed firms mentioning low-carbon technologies in shareholder meetings\n\n       35\n\n    (%)  30\nfirms\n       25listed meetings\n       20\n\n       15publicly inLCTs\nof\nShare    10            mentioning   5\n\n        0\n           2012   2013   2014   2015   2016   2017   2018   2019   2020   2021  2022\n\nSource: Bastos et al. 2023.\nNote: Panel a displays the share of online job postings in 35 countries that mention low-carbon technologies (LCTs) as\ndefined by the Y02 classification of patents adopted by the European Patent Office. See Classification of Patents: Climate\nChange Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en/news-events​\n/­in-focus​/classification/climate-change. Panel b displays the share of shareholder meeting transcripts from publicly listed\nfirms that mention these technologies.\n\n140   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "172",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 172,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6044765249881638,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p180-text-001",
+          "text": "Source: WDR 2024 team analysis extending Bastos et al. (2023).\nNote: The figure displays the share of online job postings of middle-income countries in 2022 that mention low-carbon\ntechnologies (LCTs) as defined by the classification of patents related to “climate change mitigation technologies” adopted\nby the European Patent Office. It also displays the total number of low-carbon technology postings in 2022. See Classification\nof Patents: Climate Change Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en​\n/news-events/in-focus/classification/climate-change.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "180",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 180,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.5994389769630626,
+          "rank": 10
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.3507557999982964
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p186-diagram-00",
+      "seconds": 2.6000016077887267e-06
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p186-diagram-00-000",
+      "pdf_page": 186,
+      "image": "data\\processed\\agent_pages\\wdr\\page-186.png",
+      "seconds": 0.006995499999902677
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by Map 6.3 and the accompanying text. It correctly states that low-carbon technology jobs are concentrated on China’s east/southeast coast, especially around Fujian, Guangdong, Beijing, and Shanghai, while fossil-fuel jobs are concentrated around Shanxi in northern/north-central China and near coal mines."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p186-diagram-00-000",
+      "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\dc69d858e364\\page-186.png",
+        "label": "Map 6.3",
+        "pdf_page": 186,
+        "visual_id": "wdr-p186-diagram-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+          "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.8263771331683964,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p186-text-000",
+      "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 186,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.7217794795951794,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p173-text-000",
+      "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.663328627662918,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p180-text-000",
+      "text": "Figure 6.6 Costa Rica and China are the global front-runners in jobs related to low-carbon\ntechnologies\n\n                                                           Job creation leaders\n                        Job creation laggards                      Higher demand\n                          Lower demand than                      than high-income\n                        high-income country average                   country average\n      8                                                                              800,000\n\n      7                                                                              700,000                                                                                                                                                                                                                                                                                                                                             postings\n    (%) 6                                                                              600,000postings                                                                                                                          job\njob     LCTs      5                                                                              500,000  LCT\n      4                                                                              400,000  to\nonline    3                                                                              300,000                                                                                                                                                                                                                                                          online\nof\n         High-income country average (1.7%)                                             200,000 of         related 2\nShare    1                                                                              100,000      0                                                                      0                    Number\n\n                        Sri   GuatemalaBulgariaEcuadorJordanThailandSerbiaMauritius                         LankaColombiaFederationPhilippinesIndiaPeruMexicoArgentinaMalaysiaJamaicaLebanonNamibiaRepublicAfricaSenegalGeorgiaBrazilCostaChinaRica                                                           South\n                          Russian                         Dominican\n\n               LCT share of job postings   Number of LCT job postings (right axis)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "180",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 180,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6591475266368106,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p180-chart-00-000",
+      "text": "Figure 6.6\nFigure 6.6. Costa Rica and China are the global front-runners in jobs related to low-carbon technologies. Combined bar-and-dot chart for middle-income countries in 2022. X-axis lists countries in this order: Guatemala, Bulgaria, Ecuador, Jordan, Thailand, Serbia, Mauritius, Sri Lanka, Colombia, Russian Federation, Philippines, India, Peru, Mexico, Argentina, Malaysia, Jamaica, Lebanon, Namibia, Dominican Republic, South Africa, Senegal, Georgia, Brazil, China, Costa Rica. Left y-axis: Share of online job postings related to LCTs (%), from 0 to 8. Right y-axis: Number of online LCT job postings, from 0 to 800,000. Dark navy vertical bars represent LCT share of job postings; teal circles represent number of LCT job postings on the right axis. An orange dashed horizontal reference line marks the high-income country average (1.7%). Brackets above the plot divide the countries into Job creation laggards (Lower demand than high-income country average) on the left and Job creation leaders (Higher demand than high-income country average) on the right. Visually, most countries are below 1.7%; Brazil is slightly above it; China is around 5%; Costa Rica is the highest at roughly 7.5% to 7.8%. The teal-dot series is near zero for many countries and is largest for the far-right countries, especially China and Costa Rica, near the top of the right axis. Source note on the page: WDR 2024 team analysis extending Bastos et al. (2023). Note: LCTs are low-carbon technologies as defined by the European Patent Office classification of climate change mitigation technologies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "180",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-180.png",
+        "label": "Figure 6.6",
+        "pdf_page": 180,
+        "visual_id": "wdr-p180-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact teal-dot values for the number of LCT job postings are not legible from the provided page image; only relative positions and approximate extremes are described.",
+          "Bar heights for individual countries other than the most prominent ones are approximated from the visible plot.",
+          "Country labels are reproduced from the chart order as visible; some labels are line-wrapped in the source image."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6355199099964217,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p174-chart-00-000",
+      "text": "Figure 6.3\nLow-carbon innovation is driving the emergence of new spatial clusters, start-ups, and financing. Composite figure with two panels. Panel a is a vertical bar chart titled \"Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\" with the subtitle \"3.3 million online job openings were related to low-carbon technologies in 2022, with one-third in middle-income countries.\" Y-axis: \"Number of online job postings\" from 0 to 80,000. Bars are color-coded by legend: orange = Middle-income, dark blue = High-income. The bars are ordered from highest to lowest and the visible labels, left to right, are: Catalonia, Spain; Guangdong, China; Madrid, Spain; Beijing, China; Rhône-Alpes, France; California, United States; Shanghai, China; Suzhou, China; Shenzhen, China; Île-de-France, France; Geneva, Switzerland; Wuhan, China; Hangzhou, China; Chengdu, China; Lombardy, Italy; Prague, Czechia; Upper Bavaria, Germany; Espace Mittelland, Switzerland; Western Slovakia, Slovak Republic; Singapore; Texas, United States; Stuttgart, Germany; Zurich, Switzerland; United Kingdom; London, United Kingdom; Nanjing, China; Pays de la Loire, France; Andalusia, Spain; Hamburg, Germany; Berlin, Germany; Darmstadt, Germany. Panel b is a line chart titled \"Creation of clean energy start-ups\" with the subtitle \"1,506 clean energy start-ups were listed on Crunchbase in 2021, one-quarter in middle-income countries.\" X-axis shows years 1990 through 2021. Y-axis: \"Number of clean energy start-ups\" from 0 to 1,600. Two series are shown in the legend: orange = Middle-income countries; dark blue = High-income countries. The high-income series is consistently much higher, rising from the early 1990s to a peak around 2009, then dipping and fluctuating through 2021; the middle-income series stays low in the 1990s and 2000s, then rises gradually in the 2010s, with a visible spike around 2018 and a lower value by 2021.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "174",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-174.png",
+        "label": "Figure 6.3",
+        "pdf_page": 174,
+        "visual_id": "wdr-p174-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Some panel a location labels are tightly spaced and partially overlapping; transcription may be imperfect for a few names.",
+          "Panel b values are described from the visible curve and are approximate where exact points are not labeled."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6173493241711774,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p174-text-000",
+      "text": "will be altered and potentially intensified         most rapidly in centers of research and\n      because the geographical determinants           agglomeration.23\n       of low-carbon energy sources differ from         •   Shifts between industries. Because low-­carbon\n       those of fossil fuel–based economies, and           technologies  are  generally  being  mass\n       technological innovation is likely to occur          manufactured, the low-carbon transition is\n\nFigure 6.3 Low-carbon innovation is driving the emergence of new spatial clusters, start-ups,\nand financing\n\n             a. Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\n                      3.3 million online job openings were related to low-carbon technologies in 2022,\n                                       with one-third in middle-income countries\n\n    80,000\n\n    70,000 postings\n    60,000\n job    50,000\n\n    40,000 online    30,000\nof\n    20,000\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "174",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 174,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6115782943138485,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p173-image-00-000",
+      "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-173.png",
+        "label": "Map 6.1",
+        "pdf_page": 173,
+        "visual_id": "wdr-p173-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+          "Country-by-country labels are not readable at this resolution.",
+          "The map projection and any underlying scale are not specified in the visible figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.61116368562257,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p172-text-000",
+      "text": "Figure 6.2 The diffusion of low-carbon technologies is rapidly accelerating\n\n                              a. Share of jobs related to low-carbon technologies in 35 countries\n       2.5\n\n       2.0\n\n    (%)\n\n       1.5postings     LCTs\njob to\n\n       1.0\nof relatedShare\n       0.5\n\n        0\n            2014    2015     2016     2017     2018     2019     2020     2021     2022\n\n               b. Share of publicly listed firms mentioning low-carbon technologies in shareholder meetings\n\n       35\n\n    (%)  30\nfirms\n       25listed meetings\n       20\n\n       15publicly inLCTs\nof\nShare    10            mentioning   5\n\n        0\n           2012   2013   2014   2015   2016   2017   2018   2019   2020   2021  2022\n\nSource: Bastos et al. 2023.\nNote: Panel a displays the share of online job postings in 35 countries that mention low-carbon technologies (LCTs) as\ndefined by the Y02 classification of patents adopted by the European Patent Office. See Classification of Patents: Climate\nChange Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en/news-events​\n/­in-focus​/classification/climate-change. Panel b displays the share of shareholder meeting transcripts from publicly listed\nfirms that mention these technologies.\n\n140   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "172",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 172,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6044765249881638,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p180-text-001",
+      "text": "Source: WDR 2024 team analysis extending Bastos et al. (2023).\nNote: The figure displays the share of online job postings of middle-income countries in 2022 that mention low-carbon\ntechnologies (LCTs) as defined by the classification of patents related to “climate change mitigation technologies” adopted\nby the European Patent Office. It also displays the total number of low-carbon technology postings in 2022. See Classification\nof Patents: Climate Change Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en​\n/news-events/in-focus/classification/climate-change.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "180",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 180,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5994389769630626,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:43:02.433237+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 101,
+        "output_tokens_details": {
+          "reasoning_tokens": 67
+        },
+        "total_tokens": 617
+      }
+    },
+    {
+      "at": "2026-11-16T15:43:05.011352+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5589,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 111,
+        "output_tokens_details": {
+          "reasoning_tokens": 82
+        },
+        "total_tokens": 5700
+      }
+    },
+    {
+      "at": "2026-11-16T15:43:07.263332+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5724,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 65,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 5789
+      }
+    },
+    {
+      "at": "2026-11-16T15:43:11.446291+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7752,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 317,
+        "output_tokens_details": {
+          "reasoning_tokens": 198
+        },
+        "total_tokens": 8069
+      }
+    },
+    {
+      "at": "2026-11-16T15:43:17.523398+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7339,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 601,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 7940
+      }
+    }
+  ],
+  "seconds": 17.841692000001785,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D05",
+  "initial_ranking": [
+    {
+      "id": "wdr-p186-diagram-00-000",
+      "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\dc69d858e364\\page-186.png",
+        "label": "Map 6.3",
+        "pdf_page": 186,
+        "visual_id": "wdr-p186-diagram-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+          "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.8388772553015054,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p186-text-000",
+      "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 186,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.7217402605924619,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p173-text-000",
+      "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.630977770833975,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p174-chart-00-000",
+      "text": "Figure 6.3\nLow-carbon innovation is driving the emergence of new spatial clusters, start-ups, and financing. Composite figure with two panels. Panel a is a vertical bar chart titled \"Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\" with the subtitle \"3.3 million online job openings were related to low-carbon technologies in 2022, with one-third in middle-income countries.\" Y-axis: \"Number of online job postings\" from 0 to 80,000. Bars are color-coded by legend: orange = Middle-income, dark blue = High-income. The bars are ordered from highest to lowest and the visible labels, left to right, are: Catalonia, Spain; Guangdong, China; Madrid, Spain; Beijing, China; Rhône-Alpes, France; California, United States; Shanghai, China; Suzhou, China; Shenzhen, China; Île-de-France, France; Geneva, Switzerland; Wuhan, China; Hangzhou, China; Chengdu, China; Lombardy, Italy; Prague, Czechia; Upper Bavaria, Germany; Espace Mittelland, Switzerland; Western Slovakia, Slovak Republic; Singapore; Texas, United States; Stuttgart, Germany; Zurich, Switzerland; United Kingdom; London, United Kingdom; Nanjing, China; Pays de la Loire, France; Andalusia, Spain; Hamburg, Germany; Berlin, Germany; Darmstadt, Germany. Panel b is a line chart titled \"Creation of clean energy start-ups\" with the subtitle \"1,506 clean energy start-ups were listed on Crunchbase in 2021, one-quarter in middle-income countries.\" X-axis shows years 1990 through 2021. Y-axis: \"Number of clean energy start-ups\" from 0 to 1,600. Two series are shown in the legend: orange = Middle-income countries; dark blue = High-income countries. The high-income series is consistently much higher, rising from the early 1990s to a peak around 2009, then dipping and fluctuating through 2021; the middle-income series stays low in the 1990s and 2000s, then rises gradually in the 2010s, with a visible spike around 2018 and a lower value by 2021.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "174",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-174.png",
+        "label": "Figure 6.3",
+        "pdf_page": 174,
+        "visual_id": "wdr-p174-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Some panel a location labels are tightly spaced and partially overlapping; transcription may be imperfect for a few names.",
+          "Panel b values are described from the visible curve and are approximate where exact points are not labeled."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6255805200212341,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p180-chart-00-000",
+      "text": "Figure 6.6\nFigure 6.6. Costa Rica and China are the global front-runners in jobs related to low-carbon technologies. Combined bar-and-dot chart for middle-income countries in 2022. X-axis lists countries in this order: Guatemala, Bulgaria, Ecuador, Jordan, Thailand, Serbia, Mauritius, Sri Lanka, Colombia, Russian Federation, Philippines, India, Peru, Mexico, Argentina, Malaysia, Jamaica, Lebanon, Namibia, Dominican Republic, South Africa, Senegal, Georgia, Brazil, China, Costa Rica. Left y-axis: Share of online job postings related to LCTs (%), from 0 to 8. Right y-axis: Number of online LCT job postings, from 0 to 800,000. Dark navy vertical bars represent LCT share of job postings; teal circles represent number of LCT job postings on the right axis. An orange dashed horizontal reference line marks the high-income country average (1.7%). Brackets above the plot divide the countries into Job creation laggards (Lower demand than high-income country average) on the left and Job creation leaders (Higher demand than high-income country average) on the right. Visually, most countries are below 1.7%; Brazil is slightly above it; China is around 5%; Costa Rica is the highest at roughly 7.5% to 7.8%. The teal-dot series is near zero for many countries and is largest for the far-right countries, especially China and Costa Rica, near the top of the right axis. Source note on the page: WDR 2024 team analysis extending Bastos et al. (2023). Note: LCTs are low-carbon technologies as defined by the European Patent Office classification of climate change mitigation technologies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "180",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-180.png",
+        "label": "Figure 6.6",
+        "pdf_page": 180,
+        "visual_id": "wdr-p180-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact teal-dot values for the number of LCT job postings are not legible from the provided page image; only relative positions and approximate extremes are described.",
+          "Bar heights for individual countries other than the most prominent ones are approximated from the visible plot.",
+          "Country labels are reproduced from the chart order as visible; some labels are line-wrapped in the source image."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6252082284755673,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p180-text-000",
+      "text": "Figure 6.6 Costa Rica and China are the global front-runners in jobs related to low-carbon\ntechnologies\n\n                                                           Job creation leaders\n                        Job creation laggards                      Higher demand\n                          Lower demand than                      than high-income\n                        high-income country average                   country average\n      8                                                                              800,000\n\n      7                                                                              700,000                                                                                                                                                                                                                                                                                                                                             postings\n    (%) 6                                                                              600,000postings                                                                                                                          job\njob     LCTs      5                                                                              500,000  LCT\n      4                                                                              400,000  to\nonline    3                                                                              300,000                                                                                                                                                                                                                                                          online\nof\n         High-income country average (1.7%)                                             200,000 of         related 2\nShare    1                                                                              100,000      0                                                                      0                    Number\n\n                        Sri   GuatemalaBulgariaEcuadorJordanThailandSerbiaMauritius                         LankaColombiaFederationPhilippinesIndiaPeruMexicoArgentinaMalaysiaJamaicaLebanonNamibiaRepublicAfricaSenegalGeorgiaBrazilCostaChinaRica                                                           South\n                          Russian                         Dominican\n\n               LCT share of job postings   Number of LCT job postings (right axis)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "180",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 180,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6216565887132821,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p174-text-000",
+      "text": "will be altered and potentially intensified         most rapidly in centers of research and\n      because the geographical determinants           agglomeration.23\n       of low-carbon energy sources differ from         •   Shifts between industries. Because low-­carbon\n       those of fossil fuel–based economies, and           technologies  are  generally  being  mass\n       technological innovation is likely to occur          manufactured, the low-carbon transition is\n\nFigure 6.3 Low-carbon innovation is driving the emergence of new spatial clusters, start-ups,\nand financing\n\n             a. Online job postings related to low-carbon technologies in 2022, by city, state, region, or country\n                      3.3 million online job openings were related to low-carbon technologies in 2022,\n                                       with one-third in middle-income countries\n\n    80,000\n\n    70,000 postings\n    60,000\n job    50,000\n\n    40,000 online    30,000\nof\n    20,000\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "174",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 174,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6178990376329557,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p173-image-00-000",
+      "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-173.png",
+        "label": "Map 6.1",
+        "pdf_page": 173,
+        "visual_id": "wdr-p173-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+          "Country-by-country labels are not readable at this resolution.",
+          "The map projection and any underlying scale are not specified in the visible figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5999213876509767,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p173-text-002",
+      "text": " been highly concentrated\ninternational trade policy. Access to fossil fuels           in the inland provinces highly reliant on\nhas fundamentally shaped the world’s economic           coal mining, low-carbon technology jobs\ngeography for nearly a century, with heavy indus­           are growing in the manufacturing hubs\ntry close to coal beds and petrochemical plants         on the  east  coast.22  Spatial  disparities\n\n                                                                Destruction    | 141\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5995196651223522,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p175-text-001",
+      "text": "Sources: Panel a: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries. Panel b: Data and Statistics\n(dashboard), International Energy Agency,  Paris, https://www.iea.org/data-and-statistics. Panel  c: 2022 data from\nBloombergNEF (dashboard), Bloomberg, New York, https://about.bnef.com/.\nNote: Panel a displays the number of online job postings by city, state, region, or country that mention low-carbon\ntechnologies as defined by the Y02 classification of patents adopted by the European Patent Office. See Classification of\nPatents: Climate Change Mitigation Technologies (dashboard), European Patent Office, Munich, https://www.epo.org/en​\n/news-events/in-focus/classification/climate-change. Panel b displays the number of new clean energy start-ups by year for\nmiddle- and high-income countries. Panel c displays the value of clean energy financing by year globally.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "175",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 175,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5795664471074378,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

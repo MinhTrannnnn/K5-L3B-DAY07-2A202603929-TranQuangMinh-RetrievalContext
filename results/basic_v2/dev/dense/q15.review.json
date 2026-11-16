@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source page model_evaluation:010 states that precision is the ability not to label a negative sample as positive and recall is the ability to find all positive samples. The answer matches this and its extra wording is consistent with the precision/recall formulas on page 011.",
+  "query_id": "q15",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "834936828492d30541ceb99abd3a847813000c91493c720f766d9c013585d029",
+  "alternative_cited_pages": [
+    "model_evaluation:010"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

@@ -1,0 +1,592 @@
+{
+  "status": "answered",
+  "answer": "GridSearchCV explores the parameter space exhaustively: it tries all specified parameter combinations. RandomizedSearchCV explores it by randomly sampling a fixed number of candidate settings from the parameter space, using specified distributions or discrete choices, so the search budget is set by `n_iter` rather than by enumerating every combination [1317a3570638f4816af20d9b][7a6bf5ac1441c144fe72785d].",
+  "citations": [
+    "1317a3570638f4816af20d9b",
+    "7a6bf5ac1441c144fe72785d"
+  ],
+  "question": "How does GridSearchCV explore a parameter space differently from RandomizedSearchCV?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "GridSearchCV RandomizedSearchCV explores parameter space differently documentation all combinations random distributions",
+      "results": [
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 16.62537907677849,
+          "rank": 1
+        },
+        {
+          "id": "f13d9041c7b9b8407466bf24",
+          "text": "3.2.3. Searching for optimal parameters with successive halving\n\nScikit-learn also provides the HalvingGridSearchCV and HalvingRandomSearchCV estimators that can be used to search a parameter space using successive halving [ 1 ] [ 2 ] . Successive halving (SH) is like a tournament among candidate parameter combinations. SH is an iterative selection process where all candidates (the parameter combinations) are evaluated with a small amount of resources at the first iteration. Only some of these candidates are selected for the next iteration, which will be allocated more resources. For parameter tuning, the resource is typically the number of training samples, but it can also be an arbitrary numeric parameter such as n_estimators in a random forest.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 4126,
+            "start": 3369,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 159
+          },
+          "score": 15.59065437241534,
+          "rank": 2
+        },
+        {
+          "id": "7a6bf5ac1441c144fe72785d",
+          "text": "3.2.2. Randomized Parameter Optimization\n\nWhile using a grid of parameter settings is currently the most widely used method for parameter optimization, other search methods have more favorable properties. RandomizedSearchCV implements a randomized search over parameters, where each setting is sampled from a distribution over possible parameter values. This has two main benefits over an exhaustive search:\n\nA budget can be chosen independent of the number of parameters and possible values.\n\nAdding parameters that do not influence the performance does not decrease efficiency.\n\nSpecifying how parameters should be sampled is done using a dictionary, very similar to specifying parameters for GridSearchCV . Additionally, a computation budget, being the number of sampled candidates or sampling iterations, is specified using the n_iter parameter. For each parameter, either a distribution over possible values or a list of discrete choices (which will be sampled uniformly) can be specified:\n\n{'C': scipy.stats.expon(scale=100), 'gamma': scipy.stats.expon(scale=.1),\n  'kernel': ['rbf'], 'class_weight':['balanced', None]}\n\nThis example uses the scipy.stats module, which contains many useful distributions for sampling parameters, such as expon , gamma , uniform , loguniform or randint .\n\nIn principle, any function can be passed that provides a rvs (random variate sample) method to sample a value. A call to the rvs function should provide independent random samples from possible parameter values on consecutive calls.\n\nWarning",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 1975,
+            "start": 440,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 324
+          },
+          "score": 12.684959799620277,
+          "rank": 3
+        },
+        {
+          "id": "4c76c354f5cfb1c32c85d324",
+          "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 3115,
+            "start": 2157,
+            "topic": "model_selection",
+            "anchor": "composite-estimators-and-parameter-spaces",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 332
+          },
+          "score": 11.345784806412695,
+          "rank": 4
+        },
+        {
+          "id": "903596c8038c330ef8626a41",
+          "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 3546,
+            "start": 2244,
+            "topic": "model_selection",
+            "anchor": "scoring-api-overview",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 275
+          },
+          "score": 10.412372065979305,
+          "rank": 5
+        },
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 9.015140198753283,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 16.62537907677849,
+          "rank": 1
+        },
+        {
+          "id": "f13d9041c7b9b8407466bf24",
+          "text": "3.2.3. Searching for optimal parameters with successive halving\n\nScikit-learn also provides the HalvingGridSearchCV and HalvingRandomSearchCV estimators that can be used to search a parameter space using successive halving [ 1 ] [ 2 ] . Successive halving (SH) is like a tournament among candidate parameter combinations. SH is an iterative selection process where all candidates (the parameter combinations) are evaluated with a small amount of resources at the first iteration. Only some of these candidates are selected for the next iteration, which will be allocated more resources. For parameter tuning, the resource is typically the number of training samples, but it can also be an arbitrary numeric parameter such as n_estimators in a random forest.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 4126,
+            "start": 3369,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 159
+          },
+          "score": 15.59065437241534,
+          "rank": 2
+        },
+        {
+          "id": "7a6bf5ac1441c144fe72785d",
+          "text": "3.2.2. Randomized Parameter Optimization\n\nWhile using a grid of parameter settings is currently the most widely used method for parameter optimization, other search methods have more favorable properties. RandomizedSearchCV implements a randomized search over parameters, where each setting is sampled from a distribution over possible parameter values. This has two main benefits over an exhaustive search:\n\nA budget can be chosen independent of the number of parameters and possible values.\n\nAdding parameters that do not influence the performance does not decrease efficiency.\n\nSpecifying how parameters should be sampled is done using a dictionary, very similar to specifying parameters for GridSearchCV . Additionally, a computation budget, being the number of sampled candidates or sampling iterations, is specified using the n_iter parameter. For each parameter, either a distribution over possible values or a list of discrete choices (which will be sampled uniformly) can be specified:\n\n{'C': scipy.stats.expon(scale=100), 'gamma': scipy.stats.expon(scale=.1),\n  'kernel': ['rbf'], 'class_weight':['balanced', None]}\n\nThis example uses the scipy.stats module, which contains many useful distributions for sampling parameters, such as expon , gamma , uniform , loguniform or randint .\n\nIn principle, any function can be passed that provides a rvs (random variate sample) method to sample a value. A call to the rvs function should provide independent random samples from possible parameter values on consecutive calls.\n\nWarning",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 1975,
+            "start": 440,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 324
+          },
+          "score": 12.684959799620277,
+          "rank": 3
+        },
+        {
+          "id": "4c76c354f5cfb1c32c85d324",
+          "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 3115,
+            "start": 2157,
+            "topic": "model_selection",
+            "anchor": "composite-estimators-and-parameter-spaces",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 332
+          },
+          "score": 11.345784806412695,
+          "rank": 4
+        },
+        {
+          "id": "903596c8038c330ef8626a41",
+          "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 3546,
+            "start": 2244,
+            "topic": "model_selection",
+            "anchor": "scoring-api-overview",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 275
+          },
+          "score": 10.412372065979305,
+          "rank": 5
+        },
+        {
+          "id": "8cbd5c032892c48a7691158b",
+          "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 3367,
+            "start": 1977,
+            "topic": "model_selection",
+            "anchor": "randomized-parameter-optimization",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 352
+          },
+          "score": 9.015140198753283,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0066613000017241575
+    }
+  ],
+  "context": [
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 16.62537907677849,
+      "rank": 1
+    },
+    {
+      "id": "f13d9041c7b9b8407466bf24",
+      "text": "3.2.3. Searching for optimal parameters with successive halving\n\nScikit-learn also provides the HalvingGridSearchCV and HalvingRandomSearchCV estimators that can be used to search a parameter space using successive halving [ 1 ] [ 2 ] . Successive halving (SH) is like a tournament among candidate parameter combinations. SH is an iterative selection process where all candidates (the parameter combinations) are evaluated with a small amount of resources at the first iteration. Only some of these candidates are selected for the next iteration, which will be allocated more resources. For parameter tuning, the resource is typically the number of training samples, but it can also be an arbitrary numeric parameter such as n_estimators in a random forest.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 4126,
+        "start": 3369,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 159
+      },
+      "score": 15.59065437241534,
+      "rank": 2
+    },
+    {
+      "id": "7a6bf5ac1441c144fe72785d",
+      "text": "3.2.2. Randomized Parameter Optimization\n\nWhile using a grid of parameter settings is currently the most widely used method for parameter optimization, other search methods have more favorable properties. RandomizedSearchCV implements a randomized search over parameters, where each setting is sampled from a distribution over possible parameter values. This has two main benefits over an exhaustive search:\n\nA budget can be chosen independent of the number of parameters and possible values.\n\nAdding parameters that do not influence the performance does not decrease efficiency.\n\nSpecifying how parameters should be sampled is done using a dictionary, very similar to specifying parameters for GridSearchCV . Additionally, a computation budget, being the number of sampled candidates or sampling iterations, is specified using the n_iter parameter. For each parameter, either a distribution over possible values or a list of discrete choices (which will be sampled uniformly) can be specified:\n\n{'C': scipy.stats.expon(scale=100), 'gamma': scipy.stats.expon(scale=.1),\n  'kernel': ['rbf'], 'class_weight':['balanced', None]}\n\nThis example uses the scipy.stats module, which contains many useful distributions for sampling parameters, such as expon , gamma , uniform , loguniform or randint .\n\nIn principle, any function can be passed that provides a rvs (random variate sample) method to sample a value. A call to the rvs function should provide independent random samples from possible parameter values on consecutive calls.\n\nWarning",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 1975,
+        "start": 440,
+        "topic": "model_selection",
+        "anchor": "randomized-parameter-optimization",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 324
+      },
+      "score": 12.684959799620277,
+      "rank": 3
+    },
+    {
+      "id": "4c76c354f5cfb1c32c85d324",
+      "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 3115,
+        "start": 2157,
+        "topic": "model_selection",
+        "anchor": "composite-estimators-and-parameter-spaces",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 332
+      },
+      "score": 11.345784806412695,
+      "rank": 4
+    },
+    {
+      "id": "903596c8038c330ef8626a41",
+      "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:002",
+      "metadata": {
+        "end": 3546,
+        "start": 2244,
+        "topic": "model_selection",
+        "anchor": "scoring-api-overview",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7343,
+        "unit_start": 3797,
+        "token_count": 275
+      },
+      "score": 10.412372065979305,
+      "rank": 5
+    },
+    {
+      "id": "8cbd5c032892c48a7691158b",
+      "text": "The distributions in scipy.stats prior to version scipy 0.16 do not allow specifying a random state. Instead, they use the global numpy random state, that can be seeded via np.random.seed or set using np.random.set_state . However, beginning scikit-learn 0.18, the sklearn.model_selection module sets the random state provided by the user if scipy >= 0.16 is also available.\n\nFor continuous parameters, such as C above, it is important to specify a continuous distribution to take full advantage of the randomization. This way, increasing n_iter will always lead to a finer search.\n\nA continuous log-uniform random variable is the continuous version of a log-spaced parameter. For example to specify the equivalent of C from above, loguniform(1, 100) can be used instead of [1, 10, 100] .\n\nMirroring the example above in grid search, we can specify a continuous random variable that is log-uniformly distributed between 1e0 and 1e3 :\n\nfrom sklearn.utils.fixes import loguniform\n{'C': loguniform(1e0, 1e3),\n 'gamma': loguniform(1e-4, 1e-3),\n 'kernel': ['rbf'],\n 'class_weight':['balanced', None]}\n\nExamples\n\nComparing randomized search and grid search for hyperparameter estimation compares the usage and efficiency of randomized search and grid search.\n\nReferences\n\nBergstra, J. and Bengio, Y., Random search for hyper-parameter optimization, The Journal of Machine Learning Research (2012)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 3367,
+        "start": 1977,
+        "topic": "model_selection",
+        "anchor": "randomized-parameter-optimization",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 352
+      },
+      "score": 9.015140198753283,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:50.778838+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 63,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 572
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:54.689623+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3322,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 213,
+        "output_tokens_details": {
+          "reasoning_tokens": 67
+        },
+        "total_tokens": 3535
+      }
+    }
+  ],
+  "seconds": 6.372895500000595,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q12",
+  "initial_ranking": [
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 14.47637431948901,
+      "rank": 1
+    },
+    {
+      "id": "7a6bf5ac1441c144fe72785d",
+      "text": "3.2.2. Randomized Parameter Optimization\n\nWhile using a grid of parameter settings is currently the most widely used method for parameter optimization, other search methods have more favorable properties. RandomizedSearchCV implements a randomized search over parameters, where each setting is sampled from a distribution over possible parameter values. This has two main benefits over an exhaustive search:\n\nA budget can be chosen independent of the number of parameters and possible values.\n\nAdding parameters that do not influence the performance does not decrease efficiency.\n\nSpecifying how parameters should be sampled is done using a dictionary, very similar to specifying parameters for GridSearchCV . Additionally, a computation budget, being the number of sampled candidates or sampling iterations, is specified using the n_iter parameter. For each parameter, either a distribution over possible values or a list of discrete choices (which will be sampled uniformly) can be specified:\n\n{'C': scipy.stats.expon(scale=100), 'gamma': scipy.stats.expon(scale=.1),\n  'kernel': ['rbf'], 'class_weight':['balanced', None]}\n\nThis example uses the scipy.stats module, which contains many useful distributions for sampling parameters, such as expon , gamma , uniform , loguniform or randint .\n\nIn principle, any function can be passed that provides a rvs (random variate sample) method to sample a value. A call to the rvs function should provide independent random samples from possible parameter values on consecutive calls.\n\nWarning",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 1975,
+        "start": 440,
+        "topic": "model_selection",
+        "anchor": "randomized-parameter-optimization",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.2. Randomized Parameter Optimization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 324
+      },
+      "score": 13.483389484651928,
+      "rank": 2
+    },
+    {
+      "id": "4c76c354f5cfb1c32c85d324",
+      "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 3115,
+        "start": 2157,
+        "topic": "model_selection",
+        "anchor": "composite-estimators-and-parameter-spaces",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 332
+      },
+      "score": 12.969045325294674,
+      "rank": 3
+    },
+    {
+      "id": "6dfbf8defc413458a32e6dc3",
+      "text": "See Balance model complexity and cross-validated score for an example of using refit=callable interface in GridSearchCV . The example shows how this interface adds a certain amount of flexibility in identifying the “best” estimator. This interface can also be used in multiple metrics evaluation.\n\nSee Statistical comparison of models using grid search for an example of how to do a statistical comparison on the outputs of GridSearchCV .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 438,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 89
+      },
+      "score": 11.1347909759909,
+      "rank": 4
+    },
+    {
+      "id": "1290251ed40d49cb085dd8a5",
+      "text": "3.2.4.2. Specifying multiple metrics for evaluation\n\nGridSearchCV and RandomizedSearchCV allow specifying multiple metrics for the scoring parameter.\n\nMultimetric scoring can either be specified as a list of strings of predefined scores names or a dict mapping the scorer name to the scorer function and/or the predefined scorer name(s). See Using multiple metric evaluation for more details.\n\nWhen specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example usage.\n\nHalvingRandomSearchCV and HalvingGridSearchCV do not support multimetric scoring.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 2155,
+        "start": 1239,
+        "topic": "model_selection",
+        "anchor": "specifying-multiple-metrics-for-evaluation",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.2. Specifying multiple metrics for evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 218
+      },
+      "score": 10.532939318692645,
+      "rank": 5
+    },
+    {
+      "id": "2e9b0d772f10d0672417d2fd",
+      "text": "3.4.3.3. Using multiple metric evaluation\n\nScikit-learn also permits evaluation of multiple metrics in GridSearchCV , RandomizedSearchCV and cross_validate .\n\nThere are three ways to specify multiple scoring metrics for the scoring parameter:\n\nAs an iterable of string metrics: >>> scoring = [ 'accuracy' , 'precision' ]\n\nAs a dict mapping the scorer name to the scoring function: >>> from sklearn.metrics import accuracy_score >>> from sklearn.metrics import make_scorer >>> scoring = { 'accuracy' : make_scorer ( accuracy_score ), ... 'prec' : 'precision' } Note that the dict values can either be scorer functions or one of the predefined metric strings.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:005",
+      "metadata": {
+        "end": 2099,
+        "start": 1442,
+        "topic": "model_selection",
+        "anchor": "using-multiple-metric-evaluation",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18651,
+        "unit_start": 14616,
+        "token_count": 175
+      },
+      "score": 10.49690618022614,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

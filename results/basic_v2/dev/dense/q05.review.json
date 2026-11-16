@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Supported by impute:001 (section 8.4.2, lines around the SimpleImputer paragraph): it says missing values can be imputed with a provided constant value, or using per-column mean, median, or most frequent statistics.",
+  "query_id": "q05",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "9068283ac55aa01c588767720b3c58e0860cf7d0b852f11a86802e8f7975f86e",
+  "alternative_cited_pages": [
+    "impute:001"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

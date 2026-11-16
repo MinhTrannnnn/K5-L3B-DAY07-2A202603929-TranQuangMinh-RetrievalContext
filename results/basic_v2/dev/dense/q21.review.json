@@ -1,0 +1,17 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": true,
+  "citation_support": [],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "The retrieved scikit-learn pages do not specify any universal RAM minimum in GB. The relevant grid-search section says the successive-halving resource is, by default, the number of samples and can be manually set via the `resource` parameter, with examples using samples/estimators rather than memory (grid_search:005; also grid_search:006/008). So abstaining from a fixed RAM value is supported.",
+  "query_id": "q21",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "09db88a80980006aedff95fb4ea50175dd815ccd0f8e0f7c7243ce84abd929f2"
+}

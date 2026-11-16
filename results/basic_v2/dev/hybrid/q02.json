@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "Set `output_distribution='normal'` in `QuantileTransformer` to map values to a normal distribution rather than the default uniform distribution [0fd77454a9255d456db9f506].",
+  "citations": [
+    "0fd77454a9255d456db9f506"
+  ],
+  "question": "Which QuantileTransformer setting maps values to a normal rather than uniform distribution?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "QuantileTransformer output_distribution normal uniform setting maps values to a normal rather than uniform distribution sklearn",
+      "results": [
+        {
+          "id": "8223f3ad3a51da633b61815e",
+          "text": "8.3.2.1. Mapping to a Uniform distribution\n\nQuantileTransformer provides a non-parametric transformation to map the data to a uniform distribution with values between 0 and 1:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> quantile_transformer = preprocessing.QuantileTransformer(random_state=0)\n>>> X_train_trans = quantile_transformer.fit_transform(X_train)\n>>> X_test_trans = quantile_transformer.transform(X_test)\n>>> np.percentile(X_train[:, 0], [0, 25, 50, 75, 100])\narray([ 4.3,  5.1,  5.8,  6.5,  7.9])\n\nThis feature corresponds to the sepal length in cm. Once the quantile transformation is applied, those landmarks approach closely the percentiles previously defined:\n\n>>> np.percentile(X_train_trans[:, 0], [0, 25, 50, 75, 100])\n...\narray([ 0.00 ,  0.24,  0.49,  0.73,  0.99 ])\n\nThis can be confirmed on an independent testing set with similar remarks:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:004",
+          "metadata": {
+            "end": 2251,
+            "start": 1214,
+            "topic": "preprocessing",
+            "anchor": "mapping-to-a-uniform-distribution",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.1. Mapping to a Uniform distribution",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14481,
+            "unit_start": 10707,
+            "token_count": 352
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "c71cf8e0ca4d0f37b80b518e",
+          "text": ">>> pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)\n>>> X_lognormal = np.random.RandomState(616).lognormal(size=(3, 3))\n>>> X_lognormal\narray([[1.28, 1.18 , 0.84 ],\n       [0.94, 1.60 , 0.388],\n       [1.35, 0.217, 1.09 ]])\n>>> pt.fit_transform(X_lognormal)\narray([[ 0.49 ,  0.179, -0.156],\n       [-0.051,  0.589, -0.576],\n       [ 0.69 , -0.849,  0.101]])\n\nWhile the above example sets the standardize option to False , PowerTransformer will apply zero-mean, unit-variance normalization to the transformed output by default.\n\nBelow are examples of Box-Cox and Yeo-Johnson applied to various probability distributions. Note that when applied to certain distributions, the power transforms achieve very Gaussian-like results, but with others, they are ineffective. This highlights the importance of visualizing the data before and after transformation.\n\nIt is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:005",
+          "metadata": {
+            "end": 1052,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "mapping-to-a-gaussian-distribution",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18115,
+            "unit_start": 14483,
+            "token_count": 319
+          },
+          "score": 0.03200204813108039,
+          "rank": 2
+        },
+        {
+          "id": "0fd77454a9255d456db9f506",
+          "text": ">>> quantile_transformer = preprocessing.QuantileTransformer(\n...     output_distribution='normal', random_state=0)\n>>> X_trans = quantile_transformer.fit_transform(X)\n>>> quantile_transformer.quantiles_\narray([[4.3, 2. , 1. , 0.1],\n       [4.4, 2.2, 1.1, 0.1],\n       [4.4, 2.2, 1.2, 0.1],\n       ...,\n       [7.7, 4.1, 6.7, 2.5],\n       [7.7, 4.2, 6.7, 2.5],\n       [7.9, 4.4, 6.9, 2.5]])\n\nThus the median of the input becomes the mean of the output, centered at 0. The normal output is clipped so that the input’s minimum and maximum — corresponding to the 1e-7 and 1 - 1e-7 quantiles respectively — do not become infinite under the transformation.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:005",
+          "metadata": {
+            "end": 1705,
+            "start": 1054,
+            "topic": "preprocessing",
+            "anchor": "mapping-to-a-gaussian-distribution",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18115,
+            "unit_start": 14483,
+            "token_count": 243
+          },
+          "score": 0.031754032258064516,
+          "rank": 3
+        },
+        {
+          "id": "fb2d61101699055011c92fbe",
+          "text": ">>> import numpy as np\n>>> from sklearn.datasets import make_regression\n>>> from sklearn.compose import TransformedTargetRegressor\n>>> from sklearn.preprocessing import QuantileTransformer\n>>> from sklearn.linear_model import LinearRegression\n>>> from sklearn.model_selection import train_test_split\n>>> # create a synthetic dataset\n>>> X, y = make_regression(n_samples=20640,\n...                        n_features=8,\n...                        noise=100.0,\n...                        random_state=0)\n>>> y = np.exp( 1 + (y - y.min()) * (4 / (y.max() - y.min())))\n>>> X, y = X[:2000, :], y[:2000]  # select a subset of data\n>>> transformer = QuantileTransformer(output_distribution='normal')\n>>> regressor = LinearRegression()\n>>> regr = TransformedTargetRegressor(regressor=regressor,\n...                                   transformer=transformer)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> regr.fit(X_train, y_train)\nTransformedTargetRegressor(...)\n>>> print(f\"R2 score: {regr.score(X_test, y_test):.2f}\")\nR2 score: 0.67",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 3273,
+            "start": 2212,
+            "topic": "preprocessing",
+            "anchor": "transforming-target-in-regression",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.2. Transforming target in regression",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 380
+          },
+          "score": 0.03149801587301587,
+          "rank": 4
+        },
+        {
+          "id": "da90d79f28c2a0d39172cbb3",
+          "text": "8.3.2. Non-linear transformation\n\nTwo types of transformations are available: quantile transforms and power transforms. Both quantile and power transforms are based on monotonic transformations of the features and thus preserve the rank of the values along each feature.\n\nQuantile transforms put all features into the same desired distribution based on the formula \\(G^{-1}(F(X))\\) where \\(F\\) is the cumulative distribution function of the feature and \\(G^{-1}\\) the quantile function of the desired output distribution \\(G\\) . This formula is using the two following facts: (i) if \\(X\\) is a random variable with a continuous cumulative distribution function \\(F\\) then \\(F(X)\\) is uniformly distributed on \\([0,1]\\) ; (ii) if \\(U\\) is a random variable with uniform distribution on \\([0,1]\\) then \\(G^{-1}(U)\\) has distribution \\(G\\) . By performing a rank transformation, a quantile transform smooths out unusual distributions and is less influenced by outliers than scaling methods. It does, however, distort correlations and distances within and across features.\n\nPower transforms are a family of parametric transformations that aim to map data from any distribution to as close to a Gaussian distribution.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:004",
+          "metadata": {
+            "end": 1212,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "non-linear-transformation",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14481,
+            "unit_start": 10707,
+            "token_count": 297
+          },
+          "score": 0.03076923076923077,
+          "rank": 5
+        },
+        {
+          "id": "083a321cea69d3ffee67a6f8",
+          "text": "Discretization is similar to constructing histograms for continuous data. However, histograms focus on counting features which fall into particular bins, whereas discretization focuses on assigning feature values to these bins.\n\nKBinsDiscretizer implements different binning strategies, which can be selected with the strategy parameter. The ‘uniform’ strategy uses constant-width bins. The ‘quantile’ strategy uses the quantiles values to have equally populated bins in each feature. The ‘kmeans’ strategy defines bins based on a k-means clustering procedure performed on each feature independently.\n\nBe aware that one can specify custom bins by passing a callable defining the discretization strategy to FunctionTransformer . For instance, we can use the Pandas function pandas.cut :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:011",
+          "metadata": {
+            "end": 2832,
+            "start": 2047,
+            "topic": "preprocessing",
+            "anchor": "k-bins-discretization",
+            "heading": "8.3. Preprocessing data > 8.3.5. Discretization > 8.3.5.1. K-bins discretization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 40141,
+            "unit_start": 36626,
+            "token_count": 169
+          },
+          "score": 0.02877846790890269,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "8223f3ad3a51da633b61815e",
+          "text": "8.3.2.1. Mapping to a Uniform distribution\n\nQuantileTransformer provides a non-parametric transformation to map the data to a uniform distribution with values between 0 and 1:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> quantile_transformer = preprocessing.QuantileTransformer(random_state=0)\n>>> X_train_trans = quantile_transformer.fit_transform(X_train)\n>>> X_test_trans = quantile_transformer.transform(X_test)\n>>> np.percentile(X_train[:, 0], [0, 25, 50, 75, 100])\narray([ 4.3,  5.1,  5.8,  6.5,  7.9])\n\nThis feature corresponds to the sepal length in cm. Once the quantile transformation is applied, those landmarks approach closely the percentiles previously defined:\n\n>>> np.percentile(X_train_trans[:, 0], [0, 25, 50, 75, 100])\n...\narray([ 0.00 ,  0.24,  0.49,  0.73,  0.99 ])\n\nThis can be confirmed on an independent testing set with similar remarks:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:004",
+          "metadata": {
+            "end": 2251,
+            "start": 1214,
+            "topic": "preprocessing",
+            "anchor": "mapping-to-a-uniform-distribution",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.1. Mapping to a Uniform distribution",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14481,
+            "unit_start": 10707,
+            "token_count": 352
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "c71cf8e0ca4d0f37b80b518e",
+          "text": ">>> pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)\n>>> X_lognormal = np.random.RandomState(616).lognormal(size=(3, 3))\n>>> X_lognormal\narray([[1.28, 1.18 , 0.84 ],\n       [0.94, 1.60 , 0.388],\n       [1.35, 0.217, 1.09 ]])\n>>> pt.fit_transform(X_lognormal)\narray([[ 0.49 ,  0.179, -0.156],\n       [-0.051,  0.589, -0.576],\n       [ 0.69 , -0.849,  0.101]])\n\nWhile the above example sets the standardize option to False , PowerTransformer will apply zero-mean, unit-variance normalization to the transformed output by default.\n\nBelow are examples of Box-Cox and Yeo-Johnson applied to various probability distributions. Note that when applied to certain distributions, the power transforms achieve very Gaussian-like results, but with others, they are ineffective. This highlights the importance of visualizing the data before and after transformation.\n\nIt is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:005",
+          "metadata": {
+            "end": 1052,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "mapping-to-a-gaussian-distribution",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18115,
+            "unit_start": 14483,
+            "token_count": 319
+          },
+          "score": 0.03200204813108039,
+          "rank": 2
+        },
+        {
+          "id": "0fd77454a9255d456db9f506",
+          "text": ">>> quantile_transformer = preprocessing.QuantileTransformer(\n...     output_distribution='normal', random_state=0)\n>>> X_trans = quantile_transformer.fit_transform(X)\n>>> quantile_transformer.quantiles_\narray([[4.3, 2. , 1. , 0.1],\n       [4.4, 2.2, 1.1, 0.1],\n       [4.4, 2.2, 1.2, 0.1],\n       ...,\n       [7.7, 4.1, 6.7, 2.5],\n       [7.7, 4.2, 6.7, 2.5],\n       [7.9, 4.4, 6.9, 2.5]])\n\nThus the median of the input becomes the mean of the output, centered at 0. The normal output is clipped so that the input’s minimum and maximum — corresponding to the 1e-7 and 1 - 1e-7 quantiles respectively — do not become infinite under the transformation.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:005",
+          "metadata": {
+            "end": 1705,
+            "start": 1054,
+            "topic": "preprocessing",
+            "anchor": "mapping-to-a-gaussian-distribution",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18115,
+            "unit_start": 14483,
+            "token_count": 243
+          },
+          "score": 0.031754032258064516,
+          "rank": 3
+        },
+        {
+          "id": "fb2d61101699055011c92fbe",
+          "text": ">>> import numpy as np\n>>> from sklearn.datasets import make_regression\n>>> from sklearn.compose import TransformedTargetRegressor\n>>> from sklearn.preprocessing import QuantileTransformer\n>>> from sklearn.linear_model import LinearRegression\n>>> from sklearn.model_selection import train_test_split\n>>> # create a synthetic dataset\n>>> X, y = make_regression(n_samples=20640,\n...                        n_features=8,\n...                        noise=100.0,\n...                        random_state=0)\n>>> y = np.exp( 1 + (y - y.min()) * (4 / (y.max() - y.min())))\n>>> X, y = X[:2000, :], y[:2000]  # select a subset of data\n>>> transformer = QuantileTransformer(output_distribution='normal')\n>>> regressor = LinearRegression()\n>>> regr = TransformedTargetRegressor(regressor=regressor,\n...                                   transformer=transformer)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> regr.fit(X_train, y_train)\nTransformedTargetRegressor(...)\n>>> print(f\"R2 score: {regr.score(X_test, y_test):.2f}\")\nR2 score: 0.67",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 3273,
+            "start": 2212,
+            "topic": "preprocessing",
+            "anchor": "transforming-target-in-regression",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.2. Transforming target in regression",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 380
+          },
+          "score": 0.03149801587301587,
+          "rank": 4
+        },
+        {
+          "id": "da90d79f28c2a0d39172cbb3",
+          "text": "8.3.2. Non-linear transformation\n\nTwo types of transformations are available: quantile transforms and power transforms. Both quantile and power transforms are based on monotonic transformations of the features and thus preserve the rank of the values along each feature.\n\nQuantile transforms put all features into the same desired distribution based on the formula \\(G^{-1}(F(X))\\) where \\(F\\) is the cumulative distribution function of the feature and \\(G^{-1}\\) the quantile function of the desired output distribution \\(G\\) . This formula is using the two following facts: (i) if \\(X\\) is a random variable with a continuous cumulative distribution function \\(F\\) then \\(F(X)\\) is uniformly distributed on \\([0,1]\\) ; (ii) if \\(U\\) is a random variable with uniform distribution on \\([0,1]\\) then \\(G^{-1}(U)\\) has distribution \\(G\\) . By performing a rank transformation, a quantile transform smooths out unusual distributions and is less influenced by outliers than scaling methods. It does, however, distort correlations and distances within and across features.\n\nPower transforms are a family of parametric transformations that aim to map data from any distribution to as close to a Gaussian distribution.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:004",
+          "metadata": {
+            "end": 1212,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "non-linear-transformation",
+            "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14481,
+            "unit_start": 10707,
+            "token_count": 297
+          },
+          "score": 0.03076923076923077,
+          "rank": 5
+        },
+        {
+          "id": "083a321cea69d3ffee67a6f8",
+          "text": "Discretization is similar to constructing histograms for continuous data. However, histograms focus on counting features which fall into particular bins, whereas discretization focuses on assigning feature values to these bins.\n\nKBinsDiscretizer implements different binning strategies, which can be selected with the strategy parameter. The ‘uniform’ strategy uses constant-width bins. The ‘quantile’ strategy uses the quantiles values to have equally populated bins in each feature. The ‘kmeans’ strategy defines bins based on a k-means clustering procedure performed on each feature independently.\n\nBe aware that one can specify custom bins by passing a callable defining the discretization strategy to FunctionTransformer . For instance, we can use the Pandas function pandas.cut :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:011",
+          "metadata": {
+            "end": 2832,
+            "start": 2047,
+            "topic": "preprocessing",
+            "anchor": "k-bins-discretization",
+            "heading": "8.3. Preprocessing data > 8.3.5. Discretization > 8.3.5.1. K-bins discretization",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 40141,
+            "unit_start": 36626,
+            "token_count": 169
+          },
+          "score": 0.02877846790890269,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.11612820000300417
+    }
+  ],
+  "context": [
+    {
+      "id": "8223f3ad3a51da633b61815e",
+      "text": "8.3.2.1. Mapping to a Uniform distribution\n\nQuantileTransformer provides a non-parametric transformation to map the data to a uniform distribution with values between 0 and 1:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> quantile_transformer = preprocessing.QuantileTransformer(random_state=0)\n>>> X_train_trans = quantile_transformer.fit_transform(X_train)\n>>> X_test_trans = quantile_transformer.transform(X_test)\n>>> np.percentile(X_train[:, 0], [0, 25, 50, 75, 100])\narray([ 4.3,  5.1,  5.8,  6.5,  7.9])\n\nThis feature corresponds to the sepal length in cm. Once the quantile transformation is applied, those landmarks approach closely the percentiles previously defined:\n\n>>> np.percentile(X_train_trans[:, 0], [0, 25, 50, 75, 100])\n...\narray([ 0.00 ,  0.24,  0.49,  0.73,  0.99 ])\n\nThis can be confirmed on an independent testing set with similar remarks:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:004",
+      "metadata": {
+        "end": 2251,
+        "start": 1214,
+        "topic": "preprocessing",
+        "anchor": "mapping-to-a-uniform-distribution",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.1. Mapping to a Uniform distribution",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14481,
+        "unit_start": 10707,
+        "token_count": 352
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "c71cf8e0ca4d0f37b80b518e",
+      "text": ">>> pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)\n>>> X_lognormal = np.random.RandomState(616).lognormal(size=(3, 3))\n>>> X_lognormal\narray([[1.28, 1.18 , 0.84 ],\n       [0.94, 1.60 , 0.388],\n       [1.35, 0.217, 1.09 ]])\n>>> pt.fit_transform(X_lognormal)\narray([[ 0.49 ,  0.179, -0.156],\n       [-0.051,  0.589, -0.576],\n       [ 0.69 , -0.849,  0.101]])\n\nWhile the above example sets the standardize option to False , PowerTransformer will apply zero-mean, unit-variance normalization to the transformed output by default.\n\nBelow are examples of Box-Cox and Yeo-Johnson applied to various probability distributions. Note that when applied to certain distributions, the power transforms achieve very Gaussian-like results, but with others, they are ineffective. This highlights the importance of visualizing the data before and after transformation.\n\nIt is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:005",
+      "metadata": {
+        "end": 1052,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "mapping-to-a-gaussian-distribution",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18115,
+        "unit_start": 14483,
+        "token_count": 319
+      },
+      "score": 0.03200204813108039,
+      "rank": 2
+    },
+    {
+      "id": "0fd77454a9255d456db9f506",
+      "text": ">>> quantile_transformer = preprocessing.QuantileTransformer(\n...     output_distribution='normal', random_state=0)\n>>> X_trans = quantile_transformer.fit_transform(X)\n>>> quantile_transformer.quantiles_\narray([[4.3, 2. , 1. , 0.1],\n       [4.4, 2.2, 1.1, 0.1],\n       [4.4, 2.2, 1.2, 0.1],\n       ...,\n       [7.7, 4.1, 6.7, 2.5],\n       [7.7, 4.2, 6.7, 2.5],\n       [7.9, 4.4, 6.9, 2.5]])\n\nThus the median of the input becomes the mean of the output, centered at 0. The normal output is clipped so that the input’s minimum and maximum — corresponding to the 1e-7 and 1 - 1e-7 quantiles respectively — do not become infinite under the transformation.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:005",
+      "metadata": {
+        "end": 1705,
+        "start": 1054,
+        "topic": "preprocessing",
+        "anchor": "mapping-to-a-gaussian-distribution",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18115,
+        "unit_start": 14483,
+        "token_count": 243
+      },
+      "score": 0.031754032258064516,
+      "rank": 3
+    },
+    {
+      "id": "fb2d61101699055011c92fbe",
+      "text": ">>> import numpy as np\n>>> from sklearn.datasets import make_regression\n>>> from sklearn.compose import TransformedTargetRegressor\n>>> from sklearn.preprocessing import QuantileTransformer\n>>> from sklearn.linear_model import LinearRegression\n>>> from sklearn.model_selection import train_test_split\n>>> # create a synthetic dataset\n>>> X, y = make_regression(n_samples=20640,\n...                        n_features=8,\n...                        noise=100.0,\n...                        random_state=0)\n>>> y = np.exp( 1 + (y - y.min()) * (4 / (y.max() - y.min())))\n>>> X, y = X[:2000, :], y[:2000]  # select a subset of data\n>>> transformer = QuantileTransformer(output_distribution='normal')\n>>> regressor = LinearRegression()\n>>> regr = TransformedTargetRegressor(regressor=regressor,\n...                                   transformer=transformer)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> regr.fit(X_train, y_train)\nTransformedTargetRegressor(...)\n>>> print(f\"R2 score: {regr.score(X_test, y_test):.2f}\")\nR2 score: 0.67",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:003",
+      "metadata": {
+        "end": 3273,
+        "start": 2212,
+        "topic": "preprocessing",
+        "anchor": "transforming-target-in-regression",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.2. Transforming target in regression",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10609,
+        "unit_start": 7040,
+        "token_count": 380
+      },
+      "score": 0.03149801587301587,
+      "rank": 4
+    },
+    {
+      "id": "da90d79f28c2a0d39172cbb3",
+      "text": "8.3.2. Non-linear transformation\n\nTwo types of transformations are available: quantile transforms and power transforms. Both quantile and power transforms are based on monotonic transformations of the features and thus preserve the rank of the values along each feature.\n\nQuantile transforms put all features into the same desired distribution based on the formula \\(G^{-1}(F(X))\\) where \\(F\\) is the cumulative distribution function of the feature and \\(G^{-1}\\) the quantile function of the desired output distribution \\(G\\) . This formula is using the two following facts: (i) if \\(X\\) is a random variable with a continuous cumulative distribution function \\(F\\) then \\(F(X)\\) is uniformly distributed on \\([0,1]\\) ; (ii) if \\(U\\) is a random variable with uniform distribution on \\([0,1]\\) then \\(G^{-1}(U)\\) has distribution \\(G\\) . By performing a rank transformation, a quantile transform smooths out unusual distributions and is less influenced by outliers than scaling methods. It does, however, distort correlations and distances within and across features.\n\nPower transforms are a family of parametric transformations that aim to map data from any distribution to as close to a Gaussian distribution.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:004",
+      "metadata": {
+        "end": 1212,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "non-linear-transformation",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14481,
+        "unit_start": 10707,
+        "token_count": 297
+      },
+      "score": 0.03076923076923077,
+      "rank": 5
+    },
+    {
+      "id": "083a321cea69d3ffee67a6f8",
+      "text": "Discretization is similar to constructing histograms for continuous data. However, histograms focus on counting features which fall into particular bins, whereas discretization focuses on assigning feature values to these bins.\n\nKBinsDiscretizer implements different binning strategies, which can be selected with the strategy parameter. The ‘uniform’ strategy uses constant-width bins. The ‘quantile’ strategy uses the quantiles values to have equally populated bins in each feature. The ‘kmeans’ strategy defines bins based on a k-means clustering procedure performed on each feature independently.\n\nBe aware that one can specify custom bins by passing a callable defining the discretization strategy to FunctionTransformer . For instance, we can use the Pandas function pandas.cut :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:011",
+      "metadata": {
+        "end": 2832,
+        "start": 2047,
+        "topic": "preprocessing",
+        "anchor": "k-bins-discretization",
+        "heading": "8.3. Preprocessing data > 8.3.5. Discretization > 8.3.5.1. K-bins discretization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 40141,
+        "unit_start": 36626,
+        "token_count": 169
+      },
+      "score": 0.02877846790890269,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:40:02.642788+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 508,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 60,
+        "output_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "total_tokens": 568
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:05.842734+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3269,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 142,
+        "output_tokens_details": {
+          "reasoning_tokens": 63
+        },
+        "total_tokens": 3411
+      }
+    }
+  ],
+  "seconds": 5.413876499998878,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q02",
+  "initial_ranking": [
+    {
+      "id": "8223f3ad3a51da633b61815e",
+      "text": "8.3.2.1. Mapping to a Uniform distribution\n\nQuantileTransformer provides a non-parametric transformation to map the data to a uniform distribution with values between 0 and 1:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> quantile_transformer = preprocessing.QuantileTransformer(random_state=0)\n>>> X_train_trans = quantile_transformer.fit_transform(X_train)\n>>> X_test_trans = quantile_transformer.transform(X_test)\n>>> np.percentile(X_train[:, 0], [0, 25, 50, 75, 100])\narray([ 4.3,  5.1,  5.8,  6.5,  7.9])\n\nThis feature corresponds to the sepal length in cm. Once the quantile transformation is applied, those landmarks approach closely the percentiles previously defined:\n\n>>> np.percentile(X_train_trans[:, 0], [0, 25, 50, 75, 100])\n...\narray([ 0.00 ,  0.24,  0.49,  0.73,  0.99 ])\n\nThis can be confirmed on an independent testing set with similar remarks:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:004",
+      "metadata": {
+        "end": 2251,
+        "start": 1214,
+        "topic": "preprocessing",
+        "anchor": "mapping-to-a-uniform-distribution",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.1. Mapping to a Uniform distribution",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14481,
+        "unit_start": 10707,
+        "token_count": 352
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "c71cf8e0ca4d0f37b80b518e",
+      "text": ">>> pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)\n>>> X_lognormal = np.random.RandomState(616).lognormal(size=(3, 3))\n>>> X_lognormal\narray([[1.28, 1.18 , 0.84 ],\n       [0.94, 1.60 , 0.388],\n       [1.35, 0.217, 1.09 ]])\n>>> pt.fit_transform(X_lognormal)\narray([[ 0.49 ,  0.179, -0.156],\n       [-0.051,  0.589, -0.576],\n       [ 0.69 , -0.849,  0.101]])\n\nWhile the above example sets the standardize option to False , PowerTransformer will apply zero-mean, unit-variance normalization to the transformed output by default.\n\nBelow are examples of Box-Cox and Yeo-Johnson applied to various probability distributions. Note that when applied to certain distributions, the power transforms achieve very Gaussian-like results, but with others, they are ineffective. This highlights the importance of visualizing the data before and after transformation.\n\nIt is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:005",
+      "metadata": {
+        "end": 1052,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "mapping-to-a-gaussian-distribution",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18115,
+        "unit_start": 14483,
+        "token_count": 319
+      },
+      "score": 0.03200204813108039,
+      "rank": 2
+    },
+    {
+      "id": "da90d79f28c2a0d39172cbb3",
+      "text": "8.3.2. Non-linear transformation\n\nTwo types of transformations are available: quantile transforms and power transforms. Both quantile and power transforms are based on monotonic transformations of the features and thus preserve the rank of the values along each feature.\n\nQuantile transforms put all features into the same desired distribution based on the formula \\(G^{-1}(F(X))\\) where \\(F\\) is the cumulative distribution function of the feature and \\(G^{-1}\\) the quantile function of the desired output distribution \\(G\\) . This formula is using the two following facts: (i) if \\(X\\) is a random variable with a continuous cumulative distribution function \\(F\\) then \\(F(X)\\) is uniformly distributed on \\([0,1]\\) ; (ii) if \\(U\\) is a random variable with uniform distribution on \\([0,1]\\) then \\(G^{-1}(U)\\) has distribution \\(G\\) . By performing a rank transformation, a quantile transform smooths out unusual distributions and is less influenced by outliers than scaling methods. It does, however, distort correlations and distances within and across features.\n\nPower transforms are a family of parametric transformations that aim to map data from any distribution to as close to a Gaussian distribution.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:004",
+      "metadata": {
+        "end": 1212,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "non-linear-transformation",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14481,
+        "unit_start": 10707,
+        "token_count": 297
+      },
+      "score": 0.03149801587301587,
+      "rank": 3
+    },
+    {
+      "id": "0fd77454a9255d456db9f506",
+      "text": ">>> quantile_transformer = preprocessing.QuantileTransformer(\n...     output_distribution='normal', random_state=0)\n>>> X_trans = quantile_transformer.fit_transform(X)\n>>> quantile_transformer.quantiles_\narray([[4.3, 2. , 1. , 0.1],\n       [4.4, 2.2, 1.1, 0.1],\n       [4.4, 2.2, 1.2, 0.1],\n       ...,\n       [7.7, 4.1, 6.7, 2.5],\n       [7.7, 4.2, 6.7, 2.5],\n       [7.9, 4.4, 6.9, 2.5]])\n\nThus the median of the input becomes the mean of the output, centered at 0. The normal output is clipped so that the input’s minimum and maximum — corresponding to the 1e-7 and 1 - 1e-7 quantiles respectively — do not become infinite under the transformation.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:005",
+      "metadata": {
+        "end": 1705,
+        "start": 1054,
+        "topic": "preprocessing",
+        "anchor": "mapping-to-a-gaussian-distribution",
+        "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18115,
+        "unit_start": 14483,
+        "token_count": 243
+      },
+      "score": 0.0304147465437788,
+      "rank": 4
+    },
+    {
+      "id": "fb2d61101699055011c92fbe",
+      "text": ">>> import numpy as np\n>>> from sklearn.datasets import make_regression\n>>> from sklearn.compose import TransformedTargetRegressor\n>>> from sklearn.preprocessing import QuantileTransformer\n>>> from sklearn.linear_model import LinearRegression\n>>> from sklearn.model_selection import train_test_split\n>>> # create a synthetic dataset\n>>> X, y = make_regression(n_samples=20640,\n...                        n_features=8,\n...                        noise=100.0,\n...                        random_state=0)\n>>> y = np.exp( 1 + (y - y.min()) * (4 / (y.max() - y.min())))\n>>> X, y = X[:2000, :], y[:2000]  # select a subset of data\n>>> transformer = QuantileTransformer(output_distribution='normal')\n>>> regressor = LinearRegression()\n>>> regr = TransformedTargetRegressor(regressor=regressor,\n...                                   transformer=transformer)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> regr.fit(X_train, y_train)\nTransformedTargetRegressor(...)\n>>> print(f\"R2 score: {regr.score(X_test, y_test):.2f}\")\nR2 score: 0.67",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:003",
+      "metadata": {
+        "end": 3273,
+        "start": 2212,
+        "topic": "preprocessing",
+        "anchor": "transforming-target-in-regression",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.2. Transforming target in regression",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10609,
+        "unit_start": 7040,
+        "token_count": 380
+      },
+      "score": 0.02964426877470356,
+      "rank": 5
+    },
+    {
+      "id": "083a321cea69d3ffee67a6f8",
+      "text": "Discretization is similar to constructing histograms for continuous data. However, histograms focus on counting features which fall into particular bins, whereas discretization focuses on assigning feature values to these bins.\n\nKBinsDiscretizer implements different binning strategies, which can be selected with the strategy parameter. The ‘uniform’ strategy uses constant-width bins. The ‘quantile’ strategy uses the quantiles values to have equally populated bins in each feature. The ‘kmeans’ strategy defines bins based on a k-means clustering procedure performed on each feature independently.\n\nBe aware that one can specify custom bins by passing a callable defining the discretization strategy to FunctionTransformer . For instance, we can use the Pandas function pandas.cut :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:011",
+      "metadata": {
+        "end": 2832,
+        "start": 2047,
+        "topic": "preprocessing",
+        "anchor": "k-bins-discretization",
+        "heading": "8.3. Preprocessing data > 8.3.5. Discretization > 8.3.5.1. K-bins discretization",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 40141,
+        "unit_start": 36626,
+        "token_count": 169
+      },
+      "score": 0.029631255487269532,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

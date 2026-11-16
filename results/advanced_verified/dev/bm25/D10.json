@@ -1,0 +1,1733 @@
+{
+  "status": "answered",
+  "answer": "The overview discusses more than 100 middle-income economies, defined as having incomes per capita between US$1,100 and US$14,000 [wdr-p276-text-000].",
+  "citations": [
+    "wdr-p276-text-000"
+  ],
+  "question": "According to the overview, how many middle-income countries are discussed, and what per-capita income range defines them?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "overview middle-income countries per-capita income range defines them",
+      "results": [
+        {
+          "id": "wdr-p035-text-001",
+          "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.42829684221315,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p074-text-002",
+          "text": " Aiyar et al. (2013) define the middle-income trap as a special case of growth slowdowns.\n       They distinguish between natural slowdowns in growth and unusually severe slowdowns.\n       Although economies in all income groups experience growth slowdowns, based on their\n         analysis covering 1960–2005 middle-income countries are especially vulnerable to growth\n       slowdowns. They point to steep drops in the growth of total factor productivity (TFP)b as\n       a key driver of such slowdowns. Spence (2011) also finds slowdowns clustering in a narrow\n       band of countries with income per capita of between US$5,000 and US$10,000.\n         Im and Rosenblatt (2013) focus on the probability of a country transitioning to the next\n       income category. They find that the transition from upper-middle- to high-income status\n           is just as likely as the transition from lower-middle- to upper-middle-income status. They\n        argue that income per capita relative to the frontier stagnates after reaching middle-­\n       income status (for both lower-middle- and upper-middle-income countries). Their analysis\n        suggests that it will take a century or more for middle-income countries to catch up to\n        high-income countries if middle-income economies grow by 3–4 percent in per capita\n        terms, assuming that the growth rate of high-income countries proceeds at the world\n        average, which is 1.8 percent.\n          Robertson and Ye (2013) identify the middle-income trap as an ailment in which a\n        country’s GDP per capita is time-invariantc and stays in the middle-income range, defined\n        as between 8 percent and 36 ­percent of GDP per capita of the United States.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "74",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 74,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.44233841000594,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 17.040134007251837,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.610800035564058,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p074-text-001",
+          "text": "        Several studies have examined the reasons for growth slowdowns. Eichengreen, Park,\n       and Shin (2011) identify frequent slowdowns in middle-income countries. They define a\n       slowdown as a decline in the seven-year average growth rate of gross domestic product\n       (GDP) per capita by at least 2 percentage points, with growth being higher than 3.5 per­\n        cent in the preceding years. In addition, they limit slowdowns to cases in which GDP per\n        capita is greater than US$10,000 in 2005 constant international prices adjusted for pur­\n        chasing power parity (PPP). They discover slowdowns when GDP per capita reaches about\n       US$16,540 (in 2005 constant international PPP prices). Extensions of the analysis indicate\n        that growth in middle-income countries slows even at points early in the middle-income\n         stage: specifically, in the range of US$10,000–US$11,000 GDP per capita (in 2005 con­\n        stant prices) and in the range of US$15,000–US$16,000 (in 2005 constant prices).\n           Eichengreen, Park, and Shin (2011) find that slowdowns are driven largely by low pro­\n         ductivity growth. They also find that the probability of middle-income traps is higher in\n        countries with high investment rates, high old-age dependency ratios,a and undervalued\n         real exchange rates that translate into a barrier to move up the technology ladder. In addi­\n         tion, they find that the level and structure of human capital, the level and structure of\n        exports (specifically, the relative importance of low- and high-tech exports), financial and\n          political stability, and external shocks are among the significant correlates of slowdowns.\n          ",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "74",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 74,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.496000243779342,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p068-text-000",
+          "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.916026588952441,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p090-chart-00-000",
+          "text": "Figure 2.3\nScatter plot titled \"The demand for highly skilled workers increases in middle-income countries.\" Y-axis: \"Share of highly skilled workers in labor force (%)\" from 0 to 60. X-axis: \"GDP per capita (constant PPP 2017 US$1,000, log scale)\" with visible tick labels around 20, 40, 60, 80. Three groups are encoded by color: Low-income (orange), Middle-income (dark blue), High-income (teal). Orange points cluster mostly at low GDP per capita and low shares of highly skilled workers, with a few points around 20% to 23%. Dark blue points occupy the middle of the plot, spanning roughly 4% to 50% on the y-axis and a broad range of GDP per capita; the fitted black curve rises gradually then more steeply at higher GDP per capita. Teal points cluster on the right at higher GDP per capita and generally higher shares, mostly around 17% to 54%, with the trend line ending near the upper-right corner. The figure includes horizontal gridlines and a smooth black upward-sloping fitted line across the scatter. Source and note below the chart state: WDR 2024 team using DataBank: Jobs, World Bank, and WDI (World Development Indicators); skilled workers are defined as the top three ISCO occupational codes; GDP = gross domestic product; PPP = purchasing power parity.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "90",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-090.png",
+            "label": "Figure 2.3",
+            "pdf_page": 90,
+            "visual_id": "wdr-p090-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact individual point values are not readable from the image.",
+              "The fitted line is visible but its underlying method is not stated in the figure.",
+              "Only the visible portion of the chart is described; no hidden or cut-off data are inferred."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.27196994584656,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.190637407730597,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p079-text-001",
+          "text": "From X-rays to MRIs: The       Enterprise\nneed for a clear picture of         Middle-income growth  requires a  shift from\neconomic structure                   investment in physical capital to infusion of tech­\n                                               nology and innovation. At this stage, countries\nWhat indicates that a middle-income economy                                            need to improve their capabilities to produce a\nis advancing in its efforts to catch up with high-                                               range of sophisticated products. The Economic\nincome economies?                                              Complexity Index (ECI) provides a measure of a\n  The  World  Bank’s  income  classification                                                    country’s productive capabilities based on the\naims to reflect a country’s level of development,                                                        diversity and complexity of its export basket.\ndrawing on Atlas gross national income (GNI)                                                 At this stage of growth, countries also need\nper capita as a broadly available indicator of                                                   to improve the allocation of resources to their\neconomic capacity.1 GNI per capita is a useful                                           most productive firms. In fact, efficient allocation\nindicator that is often closely correlated with                                                     of the factors of production accounts for about\nother, nonmonetary measures  of  quality  of                                            25 percent of productivity growth in developing\nlife. However,  it does not directly measure a                                                       countries.4  Efficiency  in  allocating  resources\ncountry’s level of development or the welfare of                                                 boosts job and output growth as well as creates\nits residents.2 Moreover, measures of income per                                                       positive spillovers for other businesses along the\ncapita can reflect high levels of investment and                                                   value chain.5\nconsumption  expenditure  by  governments—                                             By    reducing    productivity-constraining\nas well as good fortune in the area of natural                                                 distortions—defined as policy measures that curb\nresources.3                                                the expansion and growth of productive firms—\n  Because of these limitations,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "79",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 79,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "47"
+          },
+          "score": 14.642717638815471,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p156-text-002",
+          "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.470434165989596,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p035-text-001",
+          "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.42829684221315,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p074-text-002",
+          "text": " Aiyar et al. (2013) define the middle-income trap as a special case of growth slowdowns.\n       They distinguish between natural slowdowns in growth and unusually severe slowdowns.\n       Although economies in all income groups experience growth slowdowns, based on their\n         analysis covering 1960–2005 middle-income countries are especially vulnerable to growth\n       slowdowns. They point to steep drops in the growth of total factor productivity (TFP)b as\n       a key driver of such slowdowns. Spence (2011) also finds slowdowns clustering in a narrow\n       band of countries with income per capita of between US$5,000 and US$10,000.\n         Im and Rosenblatt (2013) focus on the probability of a country transitioning to the next\n       income category. They find that the transition from upper-middle- to high-income status\n           is just as likely as the transition from lower-middle- to upper-middle-income status. They\n        argue that income per capita relative to the frontier stagnates after reaching middle-­\n       income status (for both lower-middle- and upper-middle-income countries). Their analysis\n        suggests that it will take a century or more for middle-income countries to catch up to\n        high-income countries if middle-income economies grow by 3–4 percent in per capita\n        terms, assuming that the growth rate of high-income countries proceeds at the world\n        average, which is 1.8 percent.\n          Robertson and Ye (2013) identify the middle-income trap as an ailment in which a\n        country’s GDP per capita is time-invariantc and stays in the middle-income range, defined\n        as between 8 percent and 36 ­percent of GDP per capita of the United States.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "74",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 74,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.44233841000594,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 17.040134007251837,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.610800035564058,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p074-text-001",
+          "text": "        Several studies have examined the reasons for growth slowdowns. Eichengreen, Park,\n       and Shin (2011) identify frequent slowdowns in middle-income countries. They define a\n       slowdown as a decline in the seven-year average growth rate of gross domestic product\n       (GDP) per capita by at least 2 percentage points, with growth being higher than 3.5 per­\n        cent in the preceding years. In addition, they limit slowdowns to cases in which GDP per\n        capita is greater than US$10,000 in 2005 constant international prices adjusted for pur­\n        chasing power parity (PPP). They discover slowdowns when GDP per capita reaches about\n       US$16,540 (in 2005 constant international PPP prices). Extensions of the analysis indicate\n        that growth in middle-income countries slows even at points early in the middle-income\n         stage: specifically, in the range of US$10,000–US$11,000 GDP per capita (in 2005 con­\n        stant prices) and in the range of US$15,000–US$16,000 (in 2005 constant prices).\n           Eichengreen, Park, and Shin (2011) find that slowdowns are driven largely by low pro­\n         ductivity growth. They also find that the probability of middle-income traps is higher in\n        countries with high investment rates, high old-age dependency ratios,a and undervalued\n         real exchange rates that translate into a barrier to move up the technology ladder. In addi­\n         tion, they find that the level and structure of human capital, the level and structure of\n        exports (specifically, the relative importance of low- and high-tech exports), financial and\n          political stability, and external shocks are among the significant correlates of slowdowns.\n          ",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "74",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 74,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.496000243779342,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p068-text-000",
+          "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.916026588952441,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p090-chart-00-000",
+          "text": "Figure 2.3\nScatter plot titled \"The demand for highly skilled workers increases in middle-income countries.\" Y-axis: \"Share of highly skilled workers in labor force (%)\" from 0 to 60. X-axis: \"GDP per capita (constant PPP 2017 US$1,000, log scale)\" with visible tick labels around 20, 40, 60, 80. Three groups are encoded by color: Low-income (orange), Middle-income (dark blue), High-income (teal). Orange points cluster mostly at low GDP per capita and low shares of highly skilled workers, with a few points around 20% to 23%. Dark blue points occupy the middle of the plot, spanning roughly 4% to 50% on the y-axis and a broad range of GDP per capita; the fitted black curve rises gradually then more steeply at higher GDP per capita. Teal points cluster on the right at higher GDP per capita and generally higher shares, mostly around 17% to 54%, with the trend line ending near the upper-right corner. The figure includes horizontal gridlines and a smooth black upward-sloping fitted line across the scatter. Source and note below the chart state: WDR 2024 team using DataBank: Jobs, World Bank, and WDI (World Development Indicators); skilled workers are defined as the top three ISCO occupational codes; GDP = gross domestic product; PPP = purchasing power parity.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "90",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-090.png",
+            "label": "Figure 2.3",
+            "pdf_page": 90,
+            "visual_id": "wdr-p090-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact individual point values are not readable from the image.",
+              "The fitted line is visible but its underlying method is not stated in the figure.",
+              "Only the visible portion of the chart is described; no hidden or cut-off data are inferred."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.27196994584656,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.190637407730597,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p079-text-001",
+          "text": "From X-rays to MRIs: The       Enterprise\nneed for a clear picture of         Middle-income growth  requires a  shift from\neconomic structure                   investment in physical capital to infusion of tech­\n                                               nology and innovation. At this stage, countries\nWhat indicates that a middle-income economy                                            need to improve their capabilities to produce a\nis advancing in its efforts to catch up with high-                                               range of sophisticated products. The Economic\nincome economies?                                              Complexity Index (ECI) provides a measure of a\n  The  World  Bank’s  income  classification                                                    country’s productive capabilities based on the\naims to reflect a country’s level of development,                                                        diversity and complexity of its export basket.\ndrawing on Atlas gross national income (GNI)                                                 At this stage of growth, countries also need\nper capita as a broadly available indicator of                                                   to improve the allocation of resources to their\neconomic capacity.1 GNI per capita is a useful                                           most productive firms. In fact, efficient allocation\nindicator that is often closely correlated with                                                     of the factors of production accounts for about\nother, nonmonetary measures  of  quality  of                                            25 percent of productivity growth in developing\nlife. However,  it does not directly measure a                                                       countries.4  Efficiency  in  allocating  resources\ncountry’s level of development or the welfare of                                                 boosts job and output growth as well as creates\nits residents.2 Moreover, measures of income per                                                       positive spillovers for other businesses along the\ncapita can reflect high levels of investment and                                                   value chain.5\nconsumption  expenditure  by  governments—                                             By    reducing    productivity-constraining\nas well as good fortune in the area of natural                                                 distortions—defined as policy measures that curb\nresources.3                                                the expansion and growth of productive firms—\n  Because of these limitations,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "79",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 79,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "47"
+          },
+          "score": 14.642717638815471,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p156-text-002",
+          "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.470434165989596,
+          "rank": 10
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.012690900002780836
+    },
+    {
+      "event": "search",
+      "query": "\"more than 100 economies\" \"US$1,100 and US$14,000\" overview middle-income",
+      "results": [
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 30.636901147557644,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p144-chart-00-000",
+          "text": "Figure 5.1\nStacked bar chart titled \"The share of skilled workers in large firms increases with GDP per capita.\" Vertical axis: \"Share of workers (%)\" from 0 to 100. Horizontal axis: four categories, \"Country income group 1,\" \"Country income group 2,\" \"Country income group 3,\" and \"Country income group 4.\" Each bar is a 100% stack with six legend categories: gray = Small firms, low skills; orange = Small firms, high skills; teal = Medium firms, low skills; gold = Medium firms, high skills; dark blue = Large firms, low skills; olive green = Large firms, high skills. Visually, the share in small firms with low skills is largest in country income group 1 and declines steadily across groups; the share in large firms with high skills rises steadily and is largest in country income group 4. Approximate visible composition by group: group 1 has about half small-firm low-skill workers, with the remaining half split across the other five categories; group 2 shows a smaller gray segment and a noticeably larger olive segment; group 3 and group 4 are increasingly dominated by medium/large firm and high-skill segments, especially olive green (large firms, high skills). Source: Gottlieb, Poschke, and Tueting 2024. Note states that the figure shows the share of low-skilled and highly skilled workers employed in small, medium, and large firms across four country income categories corresponding to GDP per capita levels of US$0–US$3,000 (group 1), US$3,000–US$10,000 (group 2), US$10,000–US$30,000 (group 3), and more than US$30,000 (group 4). Shares are computed from nationally representative labor force surveys from 76 countries covering 805 country-years. Small firms have fewer than 10 employees; medium firms have 10–50 employees; large firms have more than 50 employees. Workers are classified as low-skilled if they have less than nine years of formal education and as highly skilled otherwise. For countries in each income group, the bars add up to 100 percent.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "144",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-144.png",
+            "label": "Figure 5.1",
+            "pdf_page": 144,
+            "visual_id": "wdr-p144-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The chart does not print exact percentage values for each stacked segment; the composition is described from the visible bar heights and is approximate.",
+              "The page image resolution limits precise reading of small legend/text details, though the main labels and source/note are readable."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 26.226361936981185,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p144-text-001",
+          "text": "\nlarge firms across four country income categories, which    resources through politics.5\ncorrespond to gross domestic product (GDP) per capita      Countries  characterized by  higher income\nlevels of US$0–US$3,000 (group 1), US$3,000–US$10,000                                                     inequality are often those in which a significant(group 2), US$10,000–US$30,000 (group 3), and more than\nUS$30,000 (group 4). Shares are computed from nationally    portion of economic advantage  is transmitted\nrepresentative  labor  force surveys from 76  countries   from parents to their children. The association\ncovering 805 country-years. Small firms have fewer than                                            between income inequality and intergenerational10 employees. Medium firms have 10–50 employees. Large\nfirms have more than 50 employees. Workers are classified    immobility—often referred to as the “Great Gatsby\nas low-skilled if they have less than nine years of formal    Curve”—is positive as more unequal countries are\neducation, and as highly skilled otherwise. For countries in                                         more socially immobile (figure 5.2).6 This associ-each income group, the bars add up to 100 percent.\n                                                    ation is much stronger for middle-income coun-\nfirms increases steadily. As economies transition     tries than for high-income countries.\nto higher-income status, the demand for skilled      At one end of the income equality scale is\nworkers such as technicians, professionals, and    Finland, where schooling is largely free at all lev-\nmanagers increases substantially. In turn, more     els and is of very high quality by international\neducated managers are more likely to adopt tech-    standards. There, 80 percent of children attain\nnology for general and sector-specific business",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "144",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 144,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.805768368978413,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p053-text-000",
+          "text": "Figure O.11  In emerging market and developing economies, few companies are funded by\nventure capital or private equity\n\n     100                                                                         35\n\n      90\n                                                                                30\n      80by                                                                               by\n\n                                                                                25         persons 70                                                                                                                                                                                                                                                                                                      personsfunded                                                                                                                                                                                                                                              funded\n      60         million                                                                            20                                                                                                                                                                                                                                                                                                      million\n 1\n      50                                      1    per                                                                                                                              percompanies                                                                              15   companies\n      40\nof                                                                               of         capital                                                                                                                                                                                                                                              equity\n      30                                                                                10Number                                                                                                                                                                                                                                              Number      20                                                                                                                                                                                                                                                                           private          ventural\n                                                                                5\n      10\n\n                                                                                0\n        0           20,000       40,000       60,000       80,000      100,000      120,000\n\n                         GDP per capita (US$), 2020\n\n            High-income economies funded by venture capital  EMDEs funded by venture capital\n            High-income economies funded by private equity   EMDEs funded by private equity\n\nSource: Didier and Chelva 2023.\nNote: The figure displays the number of companies funded by venture capital (left axis) and private equity (right axis) from\ndeals concluded 2018–19. Economies are classified according to the World Bank’s income classification as of June 2020\n(Serajuddin and Hamadeh 2020). EMDEs = emerging market and developing economies; GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "53",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 53,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 24.936859104744673,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p238-text-001",
+          "text": "                                                        FRO                                    LUX\n                                                                                  ISL         persons  20                                   SWE\n                                                   AUS           NORcompanies         million      15                           AND      FIN                         CYM\nof 1                                              DNK\n                                        GBR    NLD        SGP           IRL                              ESP\n                                        FRA    per  10             BHR\n                   SAU     EST             NZL           USANumber       5      LCA               CYPMLT   ISR   DEUBEL                        CHE\n             MUS  BRB    PRT                HKG\n                             CZE      ITA    ARE   AUT\n                             SVN KOR   JPN            QAT\n       0                     20,000        40,000        60,000        80,000       100,000       120,000\n\n                           GDP per capita (US$), 2020\n\n                              EMDEs   High-income economies\n\nSource: Didier and Chelva 2023.\nNote: The figure displays the number of companies funded through venture capital (panel a) and private equity (panel b)\ninvestments from deals concluded during 2018–19. Economies are classified according to the World Bank’s income\nclassification as of June 2020 (Serajuddin and Hamadeh 2020). For country abbreviations, see International Organization\nfor Standardization (ISO), https://www.iso.org/obp/ui/#search. EMDEs = emerging market and developing economies;\nGDP = gross domestic product.\n\n206   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "238",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 238,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.15924318798501,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 21.636872736412023,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p123-chart-00-000",
+          "text": "Figure 4.6\nLine chart titled “Entrants and incumbents can reinforce one another’s growth: The case of the US business services industry.” X-axis: year, with labeled ticks at 1910, 1930, 1950, 1970, 1990, and 2010. Y-axis: “Number of employees (log scale),” with visible tick labels at 10, 100, 1,000, 10,000, 100,000, and 400,000. Five time-series are shown and identified by the legend below the plot: Dell (gray), HP (orange/red), IBM (teal), Microsoft (gold), and Oracle (blue). IBM rises from roughly the low-thousands in the 1910s to around 400,000 by the 2000s, then slightly dips before ending near the high-300,000s. HP begins in the 1940s at a very small scale, grows through the postwar decades, and reaches roughly the 100,000–200,000 range by the 2000s. Dell begins in the late 1980s/early 1990s from a few hundred employees and rises steeply to around 50,000–70,000 by 2010. Microsoft begins in the mid-1970s at under 10 employees and grows rapidly to around 50,000–60,000 by 2010. Oracle begins in the late 1970s/early 1980s at around a few dozen to about 100 employees and grows to roughly 50,000–70,000 by 2010. Source note: Luttmer 2011. Note below figure: “The figure reports the number of employees for a selected group of US business services firms: Dell, Hewlett Packard (HP), IBM, Microsoft, and Oracle.”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "123",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-123.png",
+            "label": "Figure 4.6",
+            "pdf_page": 123,
+            "visual_id": "wdr-p123-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not readable from the image and are described approximately.",
+              "The HP series appears partly dashed/segmented in early years; the precise continuity of those early points is unclear.",
+              "The y-axis includes a bottom label that appears as “0” in the scan, but the axis is explicitly logarithmic, so that label may be a rendering artifact."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 21.525769986165244,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p123-text-000",
+          "text": "Similarly, Hewlett and Packard did not envi-   Figure 4.6 Entrants and incumbents can\nsion that their frequency oscillator would pave    reinforce one another’s growth: The case of\nthe way for their small firm to become a leading    the US business services industry\nmanufacturer of personal computers that would\ncompete with a giant like IBM. Yet both compa-        400,000\nnies found themselves competing against each        100,000                                                                                                                                      scale)other for decades. It was only later that many\nothers, such as Dell and Microsoft, entered the       (log  10,000\nmarket to compete.\n  On the surface, the forces of creation are          1,000\nmore apparent than the forces of destruction inthe Schumpeterian view of forces of innovation.                employees     100\nIn the US business services industry, as HP, Dell,    of\nMicrosoft, and Oracle entered various branches of                                                     10\nthe hardware, software, and computing ­services                                                                                                                                      Numbermarkets, the pace of growth of IBM  (as the                                                      0\n­incumbent) slowed—but not to the level of shut-            1910  1930  1950  1970  1990  2010\nting down the company (figure 4.6). Destruction                                                                                    Dell    HP    IBM\nstill occurs within firms as they replace older                                                                          Microsoft        Oracle\nproducts and tap into newer markets.\n  But dominant firms can  also use  their     Source: Luttmer 2011.\nincumbency advantage to block entry and resist     Note: The figure reports the number of employees for a\n                                                            selected group of US business services firms: Dell, Hewlett\ninnovation. They can collude, with the most    Packard (HP",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "123",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 123,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.555781805380526,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.392855250923255,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p238-text-000",
+          "text": "Figure 8.5 In emerging market and developing economies, few companies are funded through\nventure capital or private equity\n\n                                                      a. Venture capital\n\n      90\n                                                     SGP      ISL\n                                                       ISR\n      80                     EST                                                  IRLfunded      70\n\n                                             SWE         persons  60                              GBR                             CHE             LUX\n                                                         FIN     DNK\n      50                       MLT                      USAcompanies         million      40                                      BEL                 NORof 1\n                                          CAN\n    per  30                               NZL       NLD                                   BMU\n                                          HKG   AUS                                          FRA\n                                ESP                                               AUT      20     ASM      LTU                                  CYP                            PRTNumber\n                 HUN  LVA        KOR        DEU\n      10     LBN            SVN   BHS   ARE           QAT\n                              CZE     ITA   JPN\n                            SAU   KWT\n       0\n                     20,000        40,000        60,000        80,000       100,000       120,000\n\n                           GDP per capita (US$), 2020\n\n                                                      b. Private equity\n\n      35\n\n                                          CAN\nfunded    3025\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "238",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 238,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.924274069762404,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 30.636901147557644,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p144-chart-00-000",
+          "text": "Figure 5.1\nStacked bar chart titled \"The share of skilled workers in large firms increases with GDP per capita.\" Vertical axis: \"Share of workers (%)\" from 0 to 100. Horizontal axis: four categories, \"Country income group 1,\" \"Country income group 2,\" \"Country income group 3,\" and \"Country income group 4.\" Each bar is a 100% stack with six legend categories: gray = Small firms, low skills; orange = Small firms, high skills; teal = Medium firms, low skills; gold = Medium firms, high skills; dark blue = Large firms, low skills; olive green = Large firms, high skills. Visually, the share in small firms with low skills is largest in country income group 1 and declines steadily across groups; the share in large firms with high skills rises steadily and is largest in country income group 4. Approximate visible composition by group: group 1 has about half small-firm low-skill workers, with the remaining half split across the other five categories; group 2 shows a smaller gray segment and a noticeably larger olive segment; group 3 and group 4 are increasingly dominated by medium/large firm and high-skill segments, especially olive green (large firms, high skills). Source: Gottlieb, Poschke, and Tueting 2024. Note states that the figure shows the share of low-skilled and highly skilled workers employed in small, medium, and large firms across four country income categories corresponding to GDP per capita levels of US$0–US$3,000 (group 1), US$3,000–US$10,000 (group 2), US$10,000–US$30,000 (group 3), and more than US$30,000 (group 4). Shares are computed from nationally representative labor force surveys from 76 countries covering 805 country-years. Small firms have fewer than 10 employees; medium firms have 10–50 employees; large firms have more than 50 employees. Workers are classified as low-skilled if they have less than nine years of formal education and as highly skilled otherwise. For countries in each income group, the bars add up to 100 percent.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "144",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-144.png",
+            "label": "Figure 5.1",
+            "pdf_page": 144,
+            "visual_id": "wdr-p144-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The chart does not print exact percentage values for each stacked segment; the composition is described from the visible bar heights and is approximate.",
+              "The page image resolution limits precise reading of small legend/text details, though the main labels and source/note are readable."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 26.226361936981185,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p144-text-001",
+          "text": "\nlarge firms across four country income categories, which    resources through politics.5\ncorrespond to gross domestic product (GDP) per capita      Countries  characterized by  higher income\nlevels of US$0–US$3,000 (group 1), US$3,000–US$10,000                                                     inequality are often those in which a significant(group 2), US$10,000–US$30,000 (group 3), and more than\nUS$30,000 (group 4). Shares are computed from nationally    portion of economic advantage  is transmitted\nrepresentative  labor  force surveys from 76  countries   from parents to their children. The association\ncovering 805 country-years. Small firms have fewer than                                            between income inequality and intergenerational10 employees. Medium firms have 10–50 employees. Large\nfirms have more than 50 employees. Workers are classified    immobility—often referred to as the “Great Gatsby\nas low-skilled if they have less than nine years of formal    Curve”—is positive as more unequal countries are\neducation, and as highly skilled otherwise. For countries in                                         more socially immobile (figure 5.2).6 This associ-each income group, the bars add up to 100 percent.\n                                                    ation is much stronger for middle-income coun-\nfirms increases steadily. As economies transition     tries than for high-income countries.\nto higher-income status, the demand for skilled      At one end of the income equality scale is\nworkers such as technicians, professionals, and    Finland, where schooling is largely free at all lev-\nmanagers increases substantially. In turn, more     els and is of very high quality by international\neducated managers are more likely to adopt tech-    standards. There, 80 percent of children attain\nnology for general and sector-specific business",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "144",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 144,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.805768368978413,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p053-text-000",
+          "text": "Figure O.11  In emerging market and developing economies, few companies are funded by\nventure capital or private equity\n\n     100                                                                         35\n\n      90\n                                                                                30\n      80by                                                                               by\n\n                                                                                25         persons 70                                                                                                                                                                                                                                                                                                      personsfunded                                                                                                                                                                                                                                              funded\n      60         million                                                                            20                                                                                                                                                                                                                                                                                                      million\n 1\n      50                                      1    per                                                                                                                              percompanies                                                                              15   companies\n      40\nof                                                                               of         capital                                                                                                                                                                                                                                              equity\n      30                                                                                10Number                                                                                                                                                                                                                                              Number      20                                                                                                                                                                                                                                                                           private          ventural\n                                                                                5\n      10\n\n                                                                                0\n        0           20,000       40,000       60,000       80,000      100,000      120,000\n\n                         GDP per capita (US$), 2020\n\n            High-income economies funded by venture capital  EMDEs funded by venture capital\n            High-income economies funded by private equity   EMDEs funded by private equity\n\nSource: Didier and Chelva 2023.\nNote: The figure displays the number of companies funded by venture capital (left axis) and private equity (right axis) from\ndeals concluded 2018–19. Economies are classified according to the World Bank’s income classification as of June 2020\n(Serajuddin and Hamadeh 2020). EMDEs = emerging market and developing economies; GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "53",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 53,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 24.936859104744673,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p238-text-001",
+          "text": "                                                        FRO                                    LUX\n                                                                                  ISL         persons  20                                   SWE\n                                                   AUS           NORcompanies         million      15                           AND      FIN                         CYM\nof 1                                              DNK\n                                        GBR    NLD        SGP           IRL                              ESP\n                                        FRA    per  10             BHR\n                   SAU     EST             NZL           USANumber       5      LCA               CYPMLT   ISR   DEUBEL                        CHE\n             MUS  BRB    PRT                HKG\n                             CZE      ITA    ARE   AUT\n                             SVN KOR   JPN            QAT\n       0                     20,000        40,000        60,000        80,000       100,000       120,000\n\n                           GDP per capita (US$), 2020\n\n                              EMDEs   High-income economies\n\nSource: Didier and Chelva 2023.\nNote: The figure displays the number of companies funded through venture capital (panel a) and private equity (panel b)\ninvestments from deals concluded during 2018–19. Economies are classified according to the World Bank’s income\nclassification as of June 2020 (Serajuddin and Hamadeh 2020). For country abbreviations, see International Organization\nfor Standardization (ISO), https://www.iso.org/obp/ui/#search. EMDEs = emerging market and developing economies;\nGDP = gross domestic product.\n\n206   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "238",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 238,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.15924318798501,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 21.636872736412023,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p123-chart-00-000",
+          "text": "Figure 4.6\nLine chart titled “Entrants and incumbents can reinforce one another’s growth: The case of the US business services industry.” X-axis: year, with labeled ticks at 1910, 1930, 1950, 1970, 1990, and 2010. Y-axis: “Number of employees (log scale),” with visible tick labels at 10, 100, 1,000, 10,000, 100,000, and 400,000. Five time-series are shown and identified by the legend below the plot: Dell (gray), HP (orange/red), IBM (teal), Microsoft (gold), and Oracle (blue). IBM rises from roughly the low-thousands in the 1910s to around 400,000 by the 2000s, then slightly dips before ending near the high-300,000s. HP begins in the 1940s at a very small scale, grows through the postwar decades, and reaches roughly the 100,000–200,000 range by the 2000s. Dell begins in the late 1980s/early 1990s from a few hundred employees and rises steeply to around 50,000–70,000 by 2010. Microsoft begins in the mid-1970s at under 10 employees and grows rapidly to around 50,000–60,000 by 2010. Oracle begins in the late 1970s/early 1980s at around a few dozen to about 100 employees and grows to roughly 50,000–70,000 by 2010. Source note: Luttmer 2011. Note below figure: “The figure reports the number of employees for a selected group of US business services firms: Dell, Hewlett Packard (HP), IBM, Microsoft, and Oracle.”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "123",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-123.png",
+            "label": "Figure 4.6",
+            "pdf_page": 123,
+            "visual_id": "wdr-p123-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not readable from the image and are described approximately.",
+              "The HP series appears partly dashed/segmented in early years; the precise continuity of those early points is unclear.",
+              "The y-axis includes a bottom label that appears as “0” in the scan, but the axis is explicitly logarithmic, so that label may be a rendering artifact."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 21.525769986165244,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p123-text-000",
+          "text": "Similarly, Hewlett and Packard did not envi-   Figure 4.6 Entrants and incumbents can\nsion that their frequency oscillator would pave    reinforce one another’s growth: The case of\nthe way for their small firm to become a leading    the US business services industry\nmanufacturer of personal computers that would\ncompete with a giant like IBM. Yet both compa-        400,000\nnies found themselves competing against each        100,000                                                                                                                                      scale)other for decades. It was only later that many\nothers, such as Dell and Microsoft, entered the       (log  10,000\nmarket to compete.\n  On the surface, the forces of creation are          1,000\nmore apparent than the forces of destruction inthe Schumpeterian view of forces of innovation.                employees     100\nIn the US business services industry, as HP, Dell,    of\nMicrosoft, and Oracle entered various branches of                                                     10\nthe hardware, software, and computing ­services                                                                                                                                      Numbermarkets, the pace of growth of IBM  (as the                                                      0\n­incumbent) slowed—but not to the level of shut-            1910  1930  1950  1970  1990  2010\nting down the company (figure 4.6). Destruction                                                                                    Dell    HP    IBM\nstill occurs within firms as they replace older                                                                          Microsoft        Oracle\nproducts and tap into newer markets.\n  But dominant firms can  also use  their     Source: Luttmer 2011.\nincumbency advantage to block entry and resist     Note: The figure reports the number of employees for a\n                                                            selected group of US business services firms: Dell, Hewlett\ninnovation. They can collude, with the most    Packard (HP",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "123",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 123,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.555781805380526,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.392855250923255,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p238-text-000",
+          "text": "Figure 8.5 In emerging market and developing economies, few companies are funded through\nventure capital or private equity\n\n                                                      a. Venture capital\n\n      90\n                                                     SGP      ISL\n                                                       ISR\n      80                     EST                                                  IRLfunded      70\n\n                                             SWE         persons  60                              GBR                             CHE             LUX\n                                                         FIN     DNK\n      50                       MLT                      USAcompanies         million      40                                      BEL                 NORof 1\n                                          CAN\n    per  30                               NZL       NLD                                   BMU\n                                          HKG   AUS                                          FRA\n                                ESP                                               AUT      20     ASM      LTU                                  CYP                            PRTNumber\n                 HUN  LVA        KOR        DEU\n      10     LBN            SVN   BHS   ARE           QAT\n                              CZE     ITA   JPN\n                            SAU   KWT\n       0\n                     20,000        40,000        60,000        80,000       100,000       120,000\n\n                           GDP per capita (US$), 2020\n\n                                                      b. Private equity\n\n      35\n\n                                          CAN\nfunded    3025\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "238",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 238,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.924274069762404,
+          "rank": 10
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.012412100000801729
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by the overview evidence: it states there are “more than 100 economies” with incomes per capita between US$1,100 and US$14,000. The cited source is relevant and the income range matches exactly."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.42829684221315,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p074-text-002",
+      "text": " Aiyar et al. (2013) define the middle-income trap as a special case of growth slowdowns.\n       They distinguish between natural slowdowns in growth and unusually severe slowdowns.\n       Although economies in all income groups experience growth slowdowns, based on their\n         analysis covering 1960–2005 middle-income countries are especially vulnerable to growth\n       slowdowns. They point to steep drops in the growth of total factor productivity (TFP)b as\n       a key driver of such slowdowns. Spence (2011) also finds slowdowns clustering in a narrow\n       band of countries with income per capita of between US$5,000 and US$10,000.\n         Im and Rosenblatt (2013) focus on the probability of a country transitioning to the next\n       income category. They find that the transition from upper-middle- to high-income status\n           is just as likely as the transition from lower-middle- to upper-middle-income status. They\n        argue that income per capita relative to the frontier stagnates after reaching middle-­\n       income status (for both lower-middle- and upper-middle-income countries). Their analysis\n        suggests that it will take a century or more for middle-income countries to catch up to\n        high-income countries if middle-income economies grow by 3–4 percent in per capita\n        terms, assuming that the growth rate of high-income countries proceeds at the world\n        average, which is 1.8 percent.\n          Robertson and Ye (2013) identify the middle-income trap as an ailment in which a\n        country’s GDP per capita is time-invariantc and stays in the middle-income range, defined\n        as between 8 percent and 36 ­percent of GDP per capita of the United States.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "74",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 74,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.44233841000594,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 17.040134007251837,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p039-text-001",
+      "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 39,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.392855250923255,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p074-text-001",
+      "text": "        Several studies have examined the reasons for growth slowdowns. Eichengreen, Park,\n       and Shin (2011) identify frequent slowdowns in middle-income countries. They define a\n       slowdown as a decline in the seven-year average growth rate of gross domestic product\n       (GDP) per capita by at least 2 percentage points, with growth being higher than 3.5 per­\n        cent in the preceding years. In addition, they limit slowdowns to cases in which GDP per\n        capita is greater than US$10,000 in 2005 constant international prices adjusted for pur­\n        chasing power parity (PPP). They discover slowdowns when GDP per capita reaches about\n       US$16,540 (in 2005 constant international PPP prices). Extensions of the analysis indicate\n        that growth in middle-income countries slows even at points early in the middle-income\n         stage: specifically, in the range of US$10,000–US$11,000 GDP per capita (in 2005 con­\n        stant prices) and in the range of US$15,000–US$16,000 (in 2005 constant prices).\n           Eichengreen, Park, and Shin (2011) find that slowdowns are driven largely by low pro­\n         ductivity growth. They also find that the probability of middle-income traps is higher in\n        countries with high investment rates, high old-age dependency ratios,a and undervalued\n         real exchange rates that translate into a barrier to move up the technology ladder. In addi­\n         tion, they find that the level and structure of human capital, the level and structure of\n        exports (specifically, the relative importance of low- and high-tech exports), financial and\n          political stability, and external shocks are among the significant correlates of slowdowns.\n          ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "74",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 74,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 16.496000243779342,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p068-text-000",
+      "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 68,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.916026588952441,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p090-chart-00-000",
+      "text": "Figure 2.3\nScatter plot titled \"The demand for highly skilled workers increases in middle-income countries.\" Y-axis: \"Share of highly skilled workers in labor force (%)\" from 0 to 60. X-axis: \"GDP per capita (constant PPP 2017 US$1,000, log scale)\" with visible tick labels around 20, 40, 60, 80. Three groups are encoded by color: Low-income (orange), Middle-income (dark blue), High-income (teal). Orange points cluster mostly at low GDP per capita and low shares of highly skilled workers, with a few points around 20% to 23%. Dark blue points occupy the middle of the plot, spanning roughly 4% to 50% on the y-axis and a broad range of GDP per capita; the fitted black curve rises gradually then more steeply at higher GDP per capita. Teal points cluster on the right at higher GDP per capita and generally higher shares, mostly around 17% to 54%, with the trend line ending near the upper-right corner. The figure includes horizontal gridlines and a smooth black upward-sloping fitted line across the scatter. Source and note below the chart state: WDR 2024 team using DataBank: Jobs, World Bank, and WDI (World Development Indicators); skilled workers are defined as the top three ISCO occupational codes; GDP = gross domestic product; PPP = purchasing power parity.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "90",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-090.png",
+        "label": "Figure 2.3",
+        "pdf_page": 90,
+        "visual_id": "wdr-p090-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact individual point values are not readable from the image.",
+          "The fitted line is visible but its underlying method is not stated in the figure.",
+          "Only the visible portion of the chart is described; no hidden or cut-off data are inferred."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 15.27196994584656,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 30.636901147557644,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p079-text-001",
+      "text": "From X-rays to MRIs: The       Enterprise\nneed for a clear picture of         Middle-income growth  requires a  shift from\neconomic structure                   investment in physical capital to infusion of tech­\n                                               nology and innovation. At this stage, countries\nWhat indicates that a middle-income economy                                            need to improve their capabilities to produce a\nis advancing in its efforts to catch up with high-                                               range of sophisticated products. The Economic\nincome economies?                                              Complexity Index (ECI) provides a measure of a\n  The  World  Bank’s  income  classification                                                    country’s productive capabilities based on the\naims to reflect a country’s level of development,                                                        diversity and complexity of its export basket.\ndrawing on Atlas gross national income (GNI)                                                 At this stage of growth, countries also need\nper capita as a broadly available indicator of                                                   to improve the allocation of resources to their\neconomic capacity.1 GNI per capita is a useful                                           most productive firms. In fact, efficient allocation\nindicator that is often closely correlated with                                                     of the factors of production accounts for about\nother, nonmonetary measures  of  quality  of                                            25 percent of productivity growth in developing\nlife. However,  it does not directly measure a                                                       countries.4  Efficiency  in  allocating  resources\ncountry’s level of development or the welfare of                                                 boosts job and output growth as well as creates\nits residents.2 Moreover, measures of income per                                                       positive spillovers for other businesses along the\ncapita can reflect high levels of investment and                                                   value chain.5\nconsumption  expenditure  by  governments—                                             By    reducing    productivity-constraining\nas well as good fortune in the area of natural                                                 distortions—defined as policy measures that curb\nresources.3                                                the expansion and growth of productive firms—\n  Because of these limitations,",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "79",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 79,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "47"
+      },
+      "score": 14.642717638815471,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p156-text-002",
+      "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 14.470434165989596,
+      "rank": 10
+    },
+    {
+      "id": "wdr-p144-chart-00-000",
+      "text": "Figure 5.1\nStacked bar chart titled \"The share of skilled workers in large firms increases with GDP per capita.\" Vertical axis: \"Share of workers (%)\" from 0 to 100. Horizontal axis: four categories, \"Country income group 1,\" \"Country income group 2,\" \"Country income group 3,\" and \"Country income group 4.\" Each bar is a 100% stack with six legend categories: gray = Small firms, low skills; orange = Small firms, high skills; teal = Medium firms, low skills; gold = Medium firms, high skills; dark blue = Large firms, low skills; olive green = Large firms, high skills. Visually, the share in small firms with low skills is largest in country income group 1 and declines steadily across groups; the share in large firms with high skills rises steadily and is largest in country income group 4. Approximate visible composition by group: group 1 has about half small-firm low-skill workers, with the remaining half split across the other five categories; group 2 shows a smaller gray segment and a noticeably larger olive segment; group 3 and group 4 are increasingly dominated by medium/large firm and high-skill segments, especially olive green (large firms, high skills). Source: Gottlieb, Poschke, and Tueting 2024. Note states that the figure shows the share of low-skilled and highly skilled workers employed in small, medium, and large firms across four country income categories corresponding to GDP per capita levels of US$0–US$3,000 (group 1), US$3,000–US$10,000 (group 2), US$10,000–US$30,000 (group 3), and more than US$30,000 (group 4). Shares are computed from nationally representative labor force surveys from 76 countries covering 805 country-years. Small firms have fewer than 10 employees; medium firms have 10–50 employees; large firms have more than 50 employees. Workers are classified as low-skilled if they have less than nine years of formal education and as highly skilled otherwise. For countries in each income group, the bars add up to 100 percent.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "144",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-144.png",
+        "label": "Figure 5.1",
+        "pdf_page": 144,
+        "visual_id": "wdr-p144-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The chart does not print exact percentage values for each stacked segment; the composition is described from the visible bar heights and is approximate.",
+          "The page image resolution limits precise reading of small legend/text details, though the main labels and source/note are readable."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 26.226361936981185,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p144-text-001",
+      "text": "\nlarge firms across four country income categories, which    resources through politics.5\ncorrespond to gross domestic product (GDP) per capita      Countries  characterized by  higher income\nlevels of US$0–US$3,000 (group 1), US$3,000–US$10,000                                                     inequality are often those in which a significant(group 2), US$10,000–US$30,000 (group 3), and more than\nUS$30,000 (group 4). Shares are computed from nationally    portion of economic advantage  is transmitted\nrepresentative  labor  force surveys from 76  countries   from parents to their children. The association\ncovering 805 country-years. Small firms have fewer than                                            between income inequality and intergenerational10 employees. Medium firms have 10–50 employees. Large\nfirms have more than 50 employees. Workers are classified    immobility—often referred to as the “Great Gatsby\nas low-skilled if they have less than nine years of formal    Curve”—is positive as more unequal countries are\neducation, and as highly skilled otherwise. For countries in                                         more socially immobile (figure 5.2).6 This associ-each income group, the bars add up to 100 percent.\n                                                    ation is much stronger for middle-income coun-\nfirms increases steadily. As economies transition     tries than for high-income countries.\nto higher-income status, the demand for skilled      At one end of the income equality scale is\nworkers such as technicians, professionals, and    Finland, where schooling is largely free at all lev-\nmanagers increases substantially. In turn, more     els and is of very high quality by international\neducated managers are more likely to adopt tech-    standards. There, 80 percent of children attain\nnology for general and sector-specific business",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "144",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 144,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.805768368978413,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p053-text-000",
+      "text": "Figure O.11  In emerging market and developing economies, few companies are funded by\nventure capital or private equity\n\n     100                                                                         35\n\n      90\n                                                                                30\n      80by                                                                               by\n\n                                                                                25         persons 70                                                                                                                                                                                                                                                                                                      personsfunded                                                                                                                                                                                                                                              funded\n      60         million                                                                            20                                                                                                                                                                                                                                                                                                      million\n 1\n      50                                      1    per                                                                                                                              percompanies                                                                              15   companies\n      40\nof                                                                               of         capital                                                                                                                                                                                                                                              equity\n      30                                                                                10Number                                                                                                                                                                                                                                              Number      20                                                                                                                                                                                                                                                                           private          ventural\n                                                                                5\n      10\n\n                                                                                0\n        0           20,000       40,000       60,000       80,000      100,000      120,000\n\n                         GDP per capita (US$), 2020\n\n            High-income economies funded by venture capital  EMDEs funded by venture capital\n            High-income economies funded by private equity   EMDEs funded by private equity\n\nSource: Didier and Chelva 2023.\nNote: The figure displays the number of companies funded by venture capital (left axis) and private equity (right axis) from\ndeals concluded 2018–19. Economies are classified according to the World Bank’s income classification as of June 2020\n(Serajuddin and Hamadeh 2020). EMDEs = emerging market and developing economies; GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "53",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 53,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 24.936859104744673,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p238-text-001",
+      "text": "                                                        FRO                                    LUX\n                                                                                  ISL         persons  20                                   SWE\n                                                   AUS           NORcompanies         million      15                           AND      FIN                         CYM\nof 1                                              DNK\n                                        GBR    NLD        SGP           IRL                              ESP\n                                        FRA    per  10             BHR\n                   SAU     EST             NZL           USANumber       5      LCA               CYPMLT   ISR   DEUBEL                        CHE\n             MUS  BRB    PRT                HKG\n                             CZE      ITA    ARE   AUT\n                             SVN KOR   JPN            QAT\n       0                     20,000        40,000        60,000        80,000       100,000       120,000\n\n                           GDP per capita (US$), 2020\n\n                              EMDEs   High-income economies\n\nSource: Didier and Chelva 2023.\nNote: The figure displays the number of companies funded through venture capital (panel a) and private equity (panel b)\ninvestments from deals concluded during 2018–19. Economies are classified according to the World Bank’s income\nclassification as of June 2020 (Serajuddin and Hamadeh 2020). For country abbreviations, see International Organization\nfor Standardization (ISO), https://www.iso.org/obp/ui/#search. EMDEs = emerging market and developing economies;\nGDP = gross domestic product.\n\n206   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "238",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 238,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 22.15924318798501,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 21.636872736412023,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p123-chart-00-000",
+      "text": "Figure 4.6\nLine chart titled “Entrants and incumbents can reinforce one another’s growth: The case of the US business services industry.” X-axis: year, with labeled ticks at 1910, 1930, 1950, 1970, 1990, and 2010. Y-axis: “Number of employees (log scale),” with visible tick labels at 10, 100, 1,000, 10,000, 100,000, and 400,000. Five time-series are shown and identified by the legend below the plot: Dell (gray), HP (orange/red), IBM (teal), Microsoft (gold), and Oracle (blue). IBM rises from roughly the low-thousands in the 1910s to around 400,000 by the 2000s, then slightly dips before ending near the high-300,000s. HP begins in the 1940s at a very small scale, grows through the postwar decades, and reaches roughly the 100,000–200,000 range by the 2000s. Dell begins in the late 1980s/early 1990s from a few hundred employees and rises steeply to around 50,000–70,000 by 2010. Microsoft begins in the mid-1970s at under 10 employees and grows rapidly to around 50,000–60,000 by 2010. Oracle begins in the late 1970s/early 1980s at around a few dozen to about 100 employees and grows to roughly 50,000–70,000 by 2010. Source note: Luttmer 2011. Note below figure: “The figure reports the number of employees for a selected group of US business services firms: Dell, Hewlett Packard (HP), IBM, Microsoft, and Oracle.”\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "123",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-123.png",
+        "label": "Figure 4.6",
+        "pdf_page": 123,
+        "visual_id": "wdr-p123-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not readable from the image and are described approximately.",
+          "The HP series appears partly dashed/segmented in early years; the precise continuity of those early points is unclear.",
+          "The y-axis includes a bottom label that appears as “0” in the scan, but the axis is explicitly logarithmic, so that label may be a rendering artifact."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 21.525769986165244,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p123-text-000",
+      "text": "Similarly, Hewlett and Packard did not envi-   Figure 4.6 Entrants and incumbents can\nsion that their frequency oscillator would pave    reinforce one another’s growth: The case of\nthe way for their small firm to become a leading    the US business services industry\nmanufacturer of personal computers that would\ncompete with a giant like IBM. Yet both compa-        400,000\nnies found themselves competing against each        100,000                                                                                                                                      scale)other for decades. It was only later that many\nothers, such as Dell and Microsoft, entered the       (log  10,000\nmarket to compete.\n  On the surface, the forces of creation are          1,000\nmore apparent than the forces of destruction inthe Schumpeterian view of forces of innovation.                employees     100\nIn the US business services industry, as HP, Dell,    of\nMicrosoft, and Oracle entered various branches of                                                     10\nthe hardware, software, and computing ­services                                                                                                                                      Numbermarkets, the pace of growth of IBM  (as the                                                      0\n­incumbent) slowed—but not to the level of shut-            1910  1930  1950  1970  1990  2010\nting down the company (figure 4.6). Destruction                                                                                    Dell    HP    IBM\nstill occurs within firms as they replace older                                                                          Microsoft        Oracle\nproducts and tap into newer markets.\n  But dominant firms can  also use  their     Source: Luttmer 2011.\nincumbency advantage to block entry and resist     Note: The figure reports the number of employees for a\n                                                            selected group of US business services firms: Dell, Hewlett\ninnovation. They can collude, with the most    Packard (HP",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "123",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 123,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.555781805380526,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p238-text-000",
+      "text": "Figure 8.5 In emerging market and developing economies, few companies are funded through\nventure capital or private equity\n\n                                                      a. Venture capital\n\n      90\n                                                     SGP      ISL\n                                                       ISR\n      80                     EST                                                  IRLfunded      70\n\n                                             SWE         persons  60                              GBR                             CHE             LUX\n                                                         FIN     DNK\n      50                       MLT                      USAcompanies         million      40                                      BEL                 NORof 1\n                                          CAN\n    per  30                               NZL       NLD                                   BMU\n                                          HKG   AUS                                          FRA\n                                ESP                                               AUT      20     ASM      LTU                                  CYP                            PRTNumber\n                 HUN  LVA        KOR        DEU\n      10     LBN            SVN   BHS   ARE           QAT\n                              CZE     ITA   JPN\n                            SAU   KWT\n       0\n                     20,000        40,000        60,000        80,000       100,000       120,000\n\n                           GDP per capita (US$), 2020\n\n                                                      b. Private equity\n\n      35\n\n                                          CAN\nfunded    3025\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "238",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 238,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.924274069762404,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:44:37.453048+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 49,
+        "output_tokens_details": {
+          "reasoning_tokens": 20
+        },
+        "total_tokens": 565
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:42.988137+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5675,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 249,
+        "output_tokens_details": {
+          "reasoning_tokens": 208
+        },
+        "total_tokens": 5924
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:47.285116+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 11183,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 5504,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 273,
+        "output_tokens_details": {
+          "reasoning_tokens": 204
+        },
+        "total_tokens": 11456
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:53.852465+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 9952,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 583,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 10535
+      }
+    }
+  ],
+  "seconds": 18.42927260000215,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D10",
+  "initial_ranking": [
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 26.663078161857072,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p069-text-000",
+      "text": "Even without these headwinds, today’s ­middle-      These tasks have proved to be surprisingly dif­\nincome countries would  still face long odds of     ficult, and they are likely to become even harder.\nachieving high-income status because of what the\nWorld Bank has called—since 2007—a “­middle-​  Measuring progress throughincome trap.” 9 Although the term connotes inevi­\ntability, the original proposition was that getting  the middle stages of\nmired in the middle stages of development is a  development\npossibility, not an inevitability. It would be inevi­\n                                      What indicates that an economy is developing?\ntable only if countries did not adapt their policies\n                                           Income per capita is the most commonly used\nand institutions to changing economic and struc­\n                                                 metric to measure the pace of economic develop­\ntural needs. The three priorities for middle-income\n                                              ment. But measures of average income can differ\ncountries to evade the trap and maintain a growth\n                                                           greatly, depending on the measure. For exam­\nmomentum10 could be summarized as:\n                                                             ple, the World Bank, other international organi­\n     •  Increasing the sophistication of processes    zations, and bilateral aid agencies use GDP per\n      and products through integration into    capita at market exchange rates for analysis and\n      world markets, generally accompanied by    lending (box 1.1). On the other hand, the use of\n       the growing specialization of production    GDP per capita based on adjustments for purchas­\n     •  Keeping up  with  changing  education    ing power parity (PPP, which reflects the purchas­\n      system priorities to help workers acquire    ing power of a consumer for goods and services)\n        skills that enable them to adjust to new    can yield different",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "69",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 69,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.920747917514316,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p074-text-002",
+      "text": " Aiyar et al. (2013) define the middle-income trap as a special case of growth slowdowns.\n       They distinguish between natural slowdowns in growth and unusually severe slowdowns.\n       Although economies in all income groups experience growth slowdowns, based on their\n         analysis covering 1960–2005 middle-income countries are especially vulnerable to growth\n       slowdowns. They point to steep drops in the growth of total factor productivity (TFP)b as\n       a key driver of such slowdowns. Spence (2011) also finds slowdowns clustering in a narrow\n       band of countries with income per capita of between US$5,000 and US$10,000.\n         Im and Rosenblatt (2013) focus on the probability of a country transitioning to the next\n       income category. They find that the transition from upper-middle- to high-income status\n           is just as likely as the transition from lower-middle- to upper-middle-income status. They\n        argue that income per capita relative to the frontier stagnates after reaching middle-­\n       income status (for both lower-middle- and upper-middle-income countries). Their analysis\n        suggests that it will take a century or more for middle-income countries to catch up to\n        high-income countries if middle-income economies grow by 3–4 percent in per capita\n        terms, assuming that the growth rate of high-income countries proceeds at the world\n        average, which is 1.8 percent.\n          Robertson and Ye (2013) identify the middle-income trap as an ailment in which a\n        country’s GDP per capita is time-invariantc and stays in the middle-income range, defined\n        as between 8 percent and 36 ­percent of GDP per capita of the United States.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "74",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 74,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.832500767810004,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p156-text-002",
+      "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.646423238343097,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p143-text-001",
+      "text": " to increase its share sub­\n   comers to a city or country are welcome.     stantially. In general, as middle-income countries\n  The status quo is preserved by keeping    grow—particularly as they approach high-income\n   “others” out.                                  status and must innovate rather than simply adopt\n• How does gender inequality hold back the    technologies—they require increasingly sophisti­\n   potential of women? In many middle-­    cated talent. Such transformations in the economy\n  income  countries,  patriarchal gender   make the development and efficient allocation of\n  norms hold back women from taking    talent particularly important for ­middle-income\n   advantage of attractive opportunities in    countries and place social mobility and equitable\n   the labor market and for entrepreneur­    access to opportunities at the forefront of policies to\n   ship. Discrimination, sexism, and misog­    promote growth and social welfare.\n   yny occur in all walks of life, including\n   the businesses women own, the jobs                                         Skilled workers are key to economic,   they get and the pay they receive; how\n                                          structural, and technological  much their families spend on educating\n                                    transformation  them and for how long; and their abil­\n   ity to operate bank accounts. Unequal    Firms grow as skilled workers, such as manag­\n   social norms and beliefs and the institu­    ers and professionals, become more abundant.\n   tions that reinforce men’s status advan­    In lower-income countries with gross domestic\n   tage and access to more resources and    product (GDP) per capita under US$3,000, most\n  power hold back nearly half a country’s    workers are unskilled and employed in small\n   people, curtailing an economy’s growth.    firms with fewer than 10 employees",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "143",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 143,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.52017268446412,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.46303946255374,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 25.36730613600386,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p079-text-001",
+      "text": "From X-rays to MRIs: The       Enterprise\nneed for a clear picture of         Middle-income growth  requires a  shift from\neconomic structure                   investment in physical capital to infusion of tech­\n                                               nology and innovation. At this stage, countries\nWhat indicates that a middle-income economy                                            need to improve their capabilities to produce a\nis advancing in its efforts to catch up with high-                                               range of sophisticated products. The Economic\nincome economies?                                              Complexity Index (ECI) provides a measure of a\n  The  World  Bank’s  income  classification                                                    country’s productive capabilities based on the\naims to reflect a country’s level of development,                                                        diversity and complexity of its export basket.\ndrawing on Atlas gross national income (GNI)                                                 At this stage of growth, countries also need\nper capita as a broadly available indicator of                                                   to improve the allocation of resources to their\neconomic capacity.1 GNI per capita is a useful                                           most productive firms. In fact, efficient allocation\nindicator that is often closely correlated with                                                     of the factors of production accounts for about\nother, nonmonetary measures  of  quality  of                                            25 percent of productivity growth in developing\nlife. However,  it does not directly measure a                                                       countries.4  Efficiency  in  allocating  resources\ncountry’s level of development or the welfare of                                                 boosts job and output growth as well as creates\nits residents.2 Moreover, measures of income per                                                       positive spillovers for other businesses along the\ncapita can reflect high levels of investment and                                                   value chain.5\nconsumption  expenditure  by  governments—                                             By    reducing    productivity-constraining\nas well as good fortune in the area of natural                                                 distortions—defined as policy measures that curb\nresources.3                                                the expansion and growth of productive firms—\n  Because of these limitations,",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "79",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 79,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "47"
+      },
+      "score": 24.78490205118057,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p053-chart-00-000",
+      "text": "Figure O.11\nScatter plot titled \"In emerging market and developing economies, few companies are funded by venture capital or private equity.\" X-axis: \"GDP per capita (US$), 2020\" from 0 to 120,000. Left Y-axis: \"Number of companies funded by venture capital per 1 million persons\" from 0 to 100. Right Y-axis: \"Number of companies funded by private equity per 1 million persons\" from 0 to 35. Four series shown by legend: orange circles = High-income economies funded by venture capital; dark blue circles = EMDEs funded by venture capital; teal triangles = High-income economies funded by private equity; orange-brown triangles = EMDEs funded by private equity. The plotted points are concentrated at low GDP per capita with low counts for EMDEs, while high-income economies span a much wider GDP range and generally higher counts. Many EMDE private-equity points cluster near the bottom-left, mostly below about 5 per 1 million persons, with a few higher outliers; high-income venture-capital points reach much higher levels, including several around 50–90 per 1 million persons on the left axis and private-equity values around 10–30 per 1 million persons on the right axis. Source note shown: Didier and Chelva 2023. Note states the figure displays the number of companies funded by venture capital (left axis) and private equity (right axis) from deals concluded 2018–19; economies are classified according to the World Bank income classification as of June 2020; EMDEs means emerging market and developing economies; GDP means gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "53",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-053.png",
+        "label": "Figure O.11",
+        "pdf_page": 53,
+        "visual_id": "wdr-p053-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Individual data-point values are not labeled and can only be approximated from the plot.",
+          "The two y-axes use different scales; exact mapping of each plotted point to a precise count is not available from the image alone."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 24.438885319696045,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p069-text-001",
+      "text": " results.11\n       technologies and shape new products and     A comparison of these two sets of mea­\n       processes                                  sures  for Türkiye and Chile  illustrates the\n     •  Quickening the pace of innovation by    problem. According to World Bank estimates\n      both  fostering  entrepreneurial  activity    that  use  market  exchange  rates,  Türkiye\n      and keeping markets open to competition.     is a middle-­income country, and Chile  is a\n\n      Box 1.1 Misunderstanding through misclassification\n\n      The World Bank’s income classification method for grouping countries was first\n       presented in the 1978 World Development Report.a It introduced groupings of “low-​\n       income” and “middle-income” countries using a threshold of US$250 gross national\n       income (GNI) per capita between the groups. The low-income threshold was set in\n       keeping with the guidelines for procurement of goods and services for civil works\n        projects for countries eligible for assistance from the International Development\n        Association (IDA), the organization in the World Bank Group that supports the world’s\n         least developed countries. Specifically, the threshold was based on the “civil works\n        preference” operational guideline for IDA countries.\n         The process of setting thresholds for income per capita began with finding a “stable\n         relationship” between a summary measure of well-being such as poverty incidence and\n         infant mortality, on the one hand, and economic variables, including GNI per capita esti­\n       mated using the World Bank’s Atlas method, on the other.b Based on such a relationship\n       and the annual availability of the World Bank’s resources, the original income per capita\n        thresholds were established.c They were last updated in 1989, using GNI per capita valued\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "69",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 69,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 24.29700657278411,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": false
+}

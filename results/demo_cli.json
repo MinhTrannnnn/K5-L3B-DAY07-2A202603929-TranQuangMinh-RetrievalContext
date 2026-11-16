@@ -1,0 +1,520 @@
+{
+  "status": "answered",
+  "answer": "Theo Table 5, XACML do OASIS ban hành (SDO: OASIS) [nist-p063-table-00-000].",
+  "citations": [
+    "nist-p063-table-00-000"
+  ],
+  "question": "Theo Table 5, XACML do tổ chức nào ban hành?",
+  "corpus": "nist",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "Table 5 XACML organization ban hành XACML Table 5 NIST",
+      "results": [
+        {
+          "id": "nist-p068-table-00-000",
+          "text": "Table 11 – Security Standards: Security Policy Management\nHeader columns: Categorization | Available Standards | SDO | Status. Merged first-column category cell spans all listed rows: Security Policy Management.\nRows:\n1) Available Standards: ATIS-02000008; Trusted Information Exchange (TIE) | SDO: ATIS | Status: Approved Standard; Commercially Available.\n2) Available Standards: FIPS 199; Standards for Security Categorization of Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n3) Available Standards: FIPS 200; Minimum Security Requirements for Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n4) Available Standards: ISO/IEC 27002; Code of practice for information security management | SDO: ISO/IEC | Status: Approved Standard; Market Acceptance.\n5) Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-068.png",
+            "label": "Table 11 – Security Standards: Security Policy Management",
+            "pdf_page": 68,
+            "visual_id": "nist-p068-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "57",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.424137845092462,
+          "rank": 1
+        },
+        {
+          "id": "nist-p068-text-000",
+          "text": "Categorization          Available Standards         SDO            Status\n                           ATIS-02000008               ATIS       Approved Standard\nSecurity Policy     Trusted Information Exchange (TIE)                       Commercially\n Management                                                                    Available\n                              FIPS 199                 NIST       Approved Standard\n                    Standards for Security Categorization of                           Testing\n                      Federal Information and Information                    Market Acceptance\n                                Systems\n                              FIPS 200                 NIST       Approved Standard\n                Minimum Security Requirements for                            Testing\n                      Federal Information and Information                    Market Acceptance\n                                Systems\n                           ISO/IEC 27002               ISO/IEC      Approved Standard\n                Code of practice for information security                  Market Acceptance\n                            management\n                       eXtensible Access Control Markup       OASIS      Approved Standard\n                         Language (XACML)                           Market Acceptance\n\n               Table 11 – Security Standards: Security Policy Management\n\nCategorization          Available Standards         SDO            Status\n                        ATIS-02000009             ATIS      Approved Standard\n  Availability     Cloud Services Lifecycle Checklist\n                     ISO/PAS 22399:2007            ISO      Approved Standard\n                      Societal security - Guideline for                   Market Acceptance\n                   incident preparedness and operational\n                          continuity management\n\n                      Table 12 – Security Standards: Availability\n\n                                       57\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "57"
+          },
+          "score": 13.88599905095513,
+          "rank": 2
+        },
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 12.315624972977153,
+          "rank": 3
+        },
+        {
+          "id": "nist-p007-text-000",
+          "text": "TABLE OF CONTENTS\n1   EXECUTIVE SUMMARY ..................................................................................................................................... 1\n2   INTRODUCTION ................................................................................................................................................... 5\n   2.1    BACKGROUND.................................................................................................................................................. 5\n   2.2  NIST CLOUD COMPUTING VISION ............................................................................................................... 6\n   2.3  NIST CLOUD COMPUTING STANDARDS ROADMAP WORKING GROUP ............................................. 7\n   2.4 HOW THIS REPORT WAS PRODUCED .......................................................................................................... 7\n3   THE NIST DEFINITION OF CLOUD COMPUTING ....................................................................................... 8\n4  CLOUD COMPUTING REFERENCE ARCHITECTURE...............................................................................11\n   4.1  OVERVIEW .......................................................................................................................................................11\n   4.2  CLOUD CONSUMER ........................................................................................................................................14\n   4.3  CLOUD PROVIDER ..........................................................................................................................................16\n      4.3.1   SERVICE DEPLOYMENT .........................................................................................................................17\n      4.3.2   SERVICEORCHESTRATION ....................................................................................................................18\n      4.3.3  CLOUD SERVICE MANAGEMENT .........................................................................................................19\n      4.3.4   SECURITY .................................................................................................................................................20\n      4.3.5   PRIVACY ...................................................................................................................................................21\n   4.4  CLOUD AUDITOR ............................................................................................................................................23\n   4.5  CLOUD BROKER ..............................................................................................................................................23\n   4.6  CLOUD CARRIER .............................................................................................................................................24\n5  CLOUD COMPUTING USE CASES ...................................................................................................................25\n   5.1  BUSINESS USE CASES ....................................................................................................................................25\n   5.2  TECHNICAL USE CASES ................................................................................................................................26\n   5.3  DEPLOYMENT SCENARIO PERSPECTIVE ................................................................",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "7",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 7,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "vii"
+          },
+          "score": 9.713105568852361,
+          "rank": 4
+        },
+        {
+          "id": "nist-p099-text-000",
+          "text": "P2P  Peer-to-Peer\n     PaaS  Platform as a Service\n    PDA  Personal Digital Assistant\n     PHP  PHP: Hypertext Preprocessor\n        PI  Personal Information\n        PII  Personal Identifiable Information\n      PIV  Personal Identity Verification\n      PKI  Public Key Infrastructure\n     QoS  Quality of Service\n    RDF  Resource Description Framework\n    REST  Representational State Transfer\n     RSS  Really Simple Syndication\n     SaaS  Software as a Service\n SAJACC  Standards Acceleration to Jumpstart Adoption of Cloud Computing\n   SAML  Security Assertion Markup Language\n   SCAP  Security Content Automation Protocol\n    SDOs  Standards Developing Organizations\n    SLA  Service Level Agreement\n    SNIA  Storage Networking Industry Association\n    SOA  Service-Oriented Architecture\n   SOAP  Simple Object Access Protocol\n   SPML  Service Provisioning Markup Language\n     SSL  Secure Sockets Layer\n     SSO  Standard Setting Organization\nSTANAGS  Standardization Agreements\n    TCG  Trusted Computing Group\n     TCP  Transmission Control Protocol\n     TLS  Transport Layer Security\n   UDDI  Universal Description Discovery and Integration\n    USG  United States Government\n    VM  Virtual Machine\n    W3C  World Wide Web Consortium\n    WG  Working Group\n XACML  OASIS eXtensible Access Control Markup Language\n   XML  Extensible Markup Language\n\n                                   88\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "99",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 99,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "88"
+          },
+          "score": 9.469799945455668,
+          "rank": 5
+        },
+        {
+          "id": "nist-p042-table-00-000",
+          "text": "Table 3\nTable caption: \"Table 3 – Scenarios and Technical Requirements\". Two-column table with header row: \"Scenarios\" and \"Technical Requirements\". Row 1: \"1.\" — \"Creating, accessing, updating, deleting data objects in cloud systems;\" Row 2: \"2.\" — \"Moving VMs and virtual appliances between cloud systems;\" Row 3: \"3.\" — \"Selecting the best IaaS vendor for private externally hosted cloud system;\" Row 4: \"4.\" — \"Tools for monitoring and managing multiple cloud systems;\" Row 5: \"5.\" — \"Migrating data between cloud systems;\" Row 6: \"6.\" — \"Single sign-on access to multiple cloud systems;\" Row 7: \"7.\" — \"Orchestrated processes across cloud systems;\" Row 8: \"8.\" — \"Discovering cloud resources;\" Row 9: \"9.\" — \"Evaluating SLAs and penalties; and\" Row 10: \"10.\" — \"Auditing cloud systems.\"\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "42",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-042.png",
+            "label": "Table 3",
+            "pdf_page": 42,
+            "visual_id": "nist-p042-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "31",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 8.958028445348429,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p068-table-00-000",
+          "text": "Table 11 – Security Standards: Security Policy Management\nHeader columns: Categorization | Available Standards | SDO | Status. Merged first-column category cell spans all listed rows: Security Policy Management.\nRows:\n1) Available Standards: ATIS-02000008; Trusted Information Exchange (TIE) | SDO: ATIS | Status: Approved Standard; Commercially Available.\n2) Available Standards: FIPS 199; Standards for Security Categorization of Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n3) Available Standards: FIPS 200; Minimum Security Requirements for Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n4) Available Standards: ISO/IEC 27002; Code of practice for information security management | SDO: ISO/IEC | Status: Approved Standard; Market Acceptance.\n5) Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-068.png",
+            "label": "Table 11 – Security Standards: Security Policy Management",
+            "pdf_page": 68,
+            "visual_id": "nist-p068-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "57",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.424137845092462,
+          "rank": 1
+        },
+        {
+          "id": "nist-p068-text-000",
+          "text": "Categorization          Available Standards         SDO            Status\n                           ATIS-02000008               ATIS       Approved Standard\nSecurity Policy     Trusted Information Exchange (TIE)                       Commercially\n Management                                                                    Available\n                              FIPS 199                 NIST       Approved Standard\n                    Standards for Security Categorization of                           Testing\n                      Federal Information and Information                    Market Acceptance\n                                Systems\n                              FIPS 200                 NIST       Approved Standard\n                Minimum Security Requirements for                            Testing\n                      Federal Information and Information                    Market Acceptance\n                                Systems\n                           ISO/IEC 27002               ISO/IEC      Approved Standard\n                Code of practice for information security                  Market Acceptance\n                            management\n                       eXtensible Access Control Markup       OASIS      Approved Standard\n                         Language (XACML)                           Market Acceptance\n\n               Table 11 – Security Standards: Security Policy Management\n\nCategorization          Available Standards         SDO            Status\n                        ATIS-02000009             ATIS      Approved Standard\n  Availability     Cloud Services Lifecycle Checklist\n                     ISO/PAS 22399:2007            ISO      Approved Standard\n                      Societal security - Guideline for                   Market Acceptance\n                   incident preparedness and operational\n                          continuity management\n\n                      Table 12 – Security Standards: Availability\n\n                                       57\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "57"
+          },
+          "score": 13.88599905095513,
+          "rank": 2
+        },
+        {
+          "id": "nist-p063-table-00-000",
+          "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-063.png",
+            "label": "Table 5 – Security Standards: Authentication and Authorization",
+            "pdf_page": 63,
+            "visual_id": "nist-p063-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "52",
+            "uncertainties": [
+              "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+              "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 12.315624972977153,
+          "rank": 3
+        },
+        {
+          "id": "nist-p007-text-000",
+          "text": "TABLE OF CONTENTS\n1   EXECUTIVE SUMMARY ..................................................................................................................................... 1\n2   INTRODUCTION ................................................................................................................................................... 5\n   2.1    BACKGROUND.................................................................................................................................................. 5\n   2.2  NIST CLOUD COMPUTING VISION ............................................................................................................... 6\n   2.3  NIST CLOUD COMPUTING STANDARDS ROADMAP WORKING GROUP ............................................. 7\n   2.4 HOW THIS REPORT WAS PRODUCED .......................................................................................................... 7\n3   THE NIST DEFINITION OF CLOUD COMPUTING ....................................................................................... 8\n4  CLOUD COMPUTING REFERENCE ARCHITECTURE...............................................................................11\n   4.1  OVERVIEW .......................................................................................................................................................11\n   4.2  CLOUD CONSUMER ........................................................................................................................................14\n   4.3  CLOUD PROVIDER ..........................................................................................................................................16\n      4.3.1   SERVICE DEPLOYMENT .........................................................................................................................17\n      4.3.2   SERVICEORCHESTRATION ....................................................................................................................18\n      4.3.3  CLOUD SERVICE MANAGEMENT .........................................................................................................19\n      4.3.4   SECURITY .................................................................................................................................................20\n      4.3.5   PRIVACY ...................................................................................................................................................21\n   4.4  CLOUD AUDITOR ............................................................................................................................................23\n   4.5  CLOUD BROKER ..............................................................................................................................................23\n   4.6  CLOUD CARRIER .............................................................................................................................................24\n5  CLOUD COMPUTING USE CASES ...................................................................................................................25\n   5.1  BUSINESS USE CASES ....................................................................................................................................25\n   5.2  TECHNICAL USE CASES ................................................................................................................................26\n   5.3  DEPLOYMENT SCENARIO PERSPECTIVE ................................................................",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "7",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 7,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "vii"
+          },
+          "score": 9.713105568852361,
+          "rank": 4
+        },
+        {
+          "id": "nist-p099-text-000",
+          "text": "P2P  Peer-to-Peer\n     PaaS  Platform as a Service\n    PDA  Personal Digital Assistant\n     PHP  PHP: Hypertext Preprocessor\n        PI  Personal Information\n        PII  Personal Identifiable Information\n      PIV  Personal Identity Verification\n      PKI  Public Key Infrastructure\n     QoS  Quality of Service\n    RDF  Resource Description Framework\n    REST  Representational State Transfer\n     RSS  Really Simple Syndication\n     SaaS  Software as a Service\n SAJACC  Standards Acceleration to Jumpstart Adoption of Cloud Computing\n   SAML  Security Assertion Markup Language\n   SCAP  Security Content Automation Protocol\n    SDOs  Standards Developing Organizations\n    SLA  Service Level Agreement\n    SNIA  Storage Networking Industry Association\n    SOA  Service-Oriented Architecture\n   SOAP  Simple Object Access Protocol\n   SPML  Service Provisioning Markup Language\n     SSL  Secure Sockets Layer\n     SSO  Standard Setting Organization\nSTANAGS  Standardization Agreements\n    TCG  Trusted Computing Group\n     TCP  Transmission Control Protocol\n     TLS  Transport Layer Security\n   UDDI  Universal Description Discovery and Integration\n    USG  United States Government\n    VM  Virtual Machine\n    W3C  World Wide Web Consortium\n    WG  Working Group\n XACML  OASIS eXtensible Access Control Markup Language\n   XML  Extensible Markup Language\n\n                                   88\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "99",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 99,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "88"
+          },
+          "score": 9.469799945455668,
+          "rank": 5
+        },
+        {
+          "id": "nist-p042-table-00-000",
+          "text": "Table 3\nTable caption: \"Table 3 – Scenarios and Technical Requirements\". Two-column table with header row: \"Scenarios\" and \"Technical Requirements\". Row 1: \"1.\" — \"Creating, accessing, updating, deleting data objects in cloud systems;\" Row 2: \"2.\" — \"Moving VMs and virtual appliances between cloud systems;\" Row 3: \"3.\" — \"Selecting the best IaaS vendor for private externally hosted cloud system;\" Row 4: \"4.\" — \"Tools for monitoring and managing multiple cloud systems;\" Row 5: \"5.\" — \"Migrating data between cloud systems;\" Row 6: \"6.\" — \"Single sign-on access to multiple cloud systems;\" Row 7: \"7.\" — \"Orchestrated processes across cloud systems;\" Row 8: \"8.\" — \"Discovering cloud resources;\" Row 9: \"9.\" — \"Evaluating SLAs and penalties; and\" Row 10: \"10.\" — \"Auditing cloud systems.\"\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "42",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-042.png",
+            "label": "Table 3",
+            "pdf_page": 42,
+            "visual_id": "nist-p042-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "31",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 8.958028445348429,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.1259107000005315
+    }
+  ],
+  "context": [
+    {
+      "id": "nist-p068-table-00-000",
+      "text": "Table 11 – Security Standards: Security Policy Management\nHeader columns: Categorization | Available Standards | SDO | Status. Merged first-column category cell spans all listed rows: Security Policy Management.\nRows:\n1) Available Standards: ATIS-02000008; Trusted Information Exchange (TIE) | SDO: ATIS | Status: Approved Standard; Commercially Available.\n2) Available Standards: FIPS 199; Standards for Security Categorization of Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n3) Available Standards: FIPS 200; Minimum Security Requirements for Federal Information and Information Systems | SDO: NIST | Status: Approved Standard; Testing; Market Acceptance.\n4) Available Standards: ISO/IEC 27002; Code of practice for information security management | SDO: ISO/IEC | Status: Approved Standard; Market Acceptance.\n5) Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-068.png",
+        "label": "Table 11 – Security Standards: Security Policy Management",
+        "pdf_page": 68,
+        "visual_id": "nist-p068-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "57",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 15.424137845092462,
+      "rank": 1
+    },
+    {
+      "id": "nist-p068-text-000",
+      "text": "Categorization          Available Standards         SDO            Status\n                           ATIS-02000008               ATIS       Approved Standard\nSecurity Policy     Trusted Information Exchange (TIE)                       Commercially\n Management                                                                    Available\n                              FIPS 199                 NIST       Approved Standard\n                    Standards for Security Categorization of                           Testing\n                      Federal Information and Information                    Market Acceptance\n                                Systems\n                              FIPS 200                 NIST       Approved Standard\n                Minimum Security Requirements for                            Testing\n                      Federal Information and Information                    Market Acceptance\n                                Systems\n                           ISO/IEC 27002               ISO/IEC      Approved Standard\n                Code of practice for information security                  Market Acceptance\n                            management\n                       eXtensible Access Control Markup       OASIS      Approved Standard\n                         Language (XACML)                           Market Acceptance\n\n               Table 11 – Security Standards: Security Policy Management\n\nCategorization          Available Standards         SDO            Status\n                        ATIS-02000009             ATIS      Approved Standard\n  Availability     Cloud Services Lifecycle Checklist\n                     ISO/PAS 22399:2007            ISO      Approved Standard\n                      Societal security - Guideline for                   Market Acceptance\n                   incident preparedness and operational\n                          continuity management\n\n                      Table 12 – Security Standards: Availability\n\n                                       57\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 68,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "57"
+      },
+      "score": 13.88599905095513,
+      "rank": 2
+    },
+    {
+      "id": "nist-p063-table-00-000",
+      "text": "Table 5 – Security Standards: Authentication and Authorization\nColumns: Categorization | Available Standards | SDO | Status\n\nMerged category cell spanning all listed rows: Authentication & Authorization.\n\nRows:\n1. Available Standards: RFC 5246; Secure Sockets Layer (SSL)/ Transport Layer Security (TLS) | SDO: IETF | Status: Approved Standard; Market Acceptance\n2. Available Standards: RFC 3820: X.509; Public Key Infrastructure (PKI) Proxy Certificate Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n3. Available Standards: RFC5280: Internet X.509; Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile | SDO: IETF | Status: Approved Standard; Market Acceptance\n4. Available Standards: RFC 5849; OAuth (Open Authorization Protocol) | SDO: IETF | Status: Approved Standard; Market Acceptance\n5. Available Standards: ISO/IEC 9594-8:2008 | X.509; Information technology -- Open Systems Interconnection -- The Directory: Public-key and attribute certificate frameworks | SDO: ISO/IEC & ITU-T | Status: Approved Standard; Market Acceptance\n6. Available Standards: ISO/IEC 29115 | X.1254; Information technology -- Security techniques -- Entity authentication assurance framework | SDO: ISO/IEC & ITU-T | Status: Approved Standard\n7. Available Standards: FIPS 181; Automated Password Generator | SDO: NIST | Status: Approved Standard; Market Acceptance\n8. Available Standards: FIPS 190; Guideline for the Use of Advanced Authentication Technology Alternatives | SDO: NIST | Status: Approved Standard; Market Acceptance\n9. Available Standards: FIPS 196; Entity Authentication Using Public Key Cryptography | SDO: NIST | Status: Approved Standard; Market Acceptance\n10. Available Standards: OpenID Authentication | SDO: OpenID | Status: Approved Standard; Market Acceptance\n11. Available Standards: eXtensible Access Control Markup Language (XACML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n12. Available Standards: Security Assertion Markup Language (SAML) | SDO: OASIS | Status: Approved Standard; Market Acceptance\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-063.png",
+        "label": "Table 5 – Security Standards: Authentication and Authorization",
+        "pdf_page": 63,
+        "visual_id": "nist-p063-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "52",
+        "uncertainties": [
+          "The table uses merged cells; the categorization 'Authentication & Authorization' applies to all rows.",
+          "One row (ISO/IEC 29115 | X.1254) appears to show only 'Approved Standard' in the status column in the visible image; 'Market Acceptance' is not visible for that row."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 12.315624972977153,
+      "rank": 3
+    },
+    {
+      "id": "nist-p007-text-000",
+      "text": "TABLE OF CONTENTS\n1   EXECUTIVE SUMMARY ..................................................................................................................................... 1\n2   INTRODUCTION ................................................................................................................................................... 5\n   2.1    BACKGROUND.................................................................................................................................................. 5\n   2.2  NIST CLOUD COMPUTING VISION ............................................................................................................... 6\n   2.3  NIST CLOUD COMPUTING STANDARDS ROADMAP WORKING GROUP ............................................. 7\n   2.4 HOW THIS REPORT WAS PRODUCED .......................................................................................................... 7\n3   THE NIST DEFINITION OF CLOUD COMPUTING ....................................................................................... 8\n4  CLOUD COMPUTING REFERENCE ARCHITECTURE...............................................................................11\n   4.1  OVERVIEW .......................................................................................................................................................11\n   4.2  CLOUD CONSUMER ........................................................................................................................................14\n   4.3  CLOUD PROVIDER ..........................................................................................................................................16\n      4.3.1   SERVICE DEPLOYMENT .........................................................................................................................17\n      4.3.2   SERVICEORCHESTRATION ....................................................................................................................18\n      4.3.3  CLOUD SERVICE MANAGEMENT .........................................................................................................19\n      4.3.4   SECURITY .................................................................................................................................................20\n      4.3.5   PRIVACY ...................................................................................................................................................21\n   4.4  CLOUD AUDITOR ............................................................................................................................................23\n   4.5  CLOUD BROKER ..............................................................................................................................................23\n   4.6  CLOUD CARRIER .............................................................................................................................................24\n5  CLOUD COMPUTING USE CASES ...................................................................................................................25\n   5.1  BUSINESS USE CASES ....................................................................................................................................25\n   5.2  TECHNICAL USE CASES ................................................................................................................................26\n   5.3  DEPLOYMENT SCENARIO PERSPECTIVE ................................................................",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "7",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 7,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "vii"
+      },
+      "score": 9.713105568852361,
+      "rank": 4
+    },
+    {
+      "id": "nist-p099-text-000",
+      "text": "P2P  Peer-to-Peer\n     PaaS  Platform as a Service\n    PDA  Personal Digital Assistant\n     PHP  PHP: Hypertext Preprocessor\n        PI  Personal Information\n        PII  Personal Identifiable Information\n      PIV  Personal Identity Verification\n      PKI  Public Key Infrastructure\n     QoS  Quality of Service\n    RDF  Resource Description Framework\n    REST  Representational State Transfer\n     RSS  Really Simple Syndication\n     SaaS  Software as a Service\n SAJACC  Standards Acceleration to Jumpstart Adoption of Cloud Computing\n   SAML  Security Assertion Markup Language\n   SCAP  Security Content Automation Protocol\n    SDOs  Standards Developing Organizations\n    SLA  Service Level Agreement\n    SNIA  Storage Networking Industry Association\n    SOA  Service-Oriented Architecture\n   SOAP  Simple Object Access Protocol\n   SPML  Service Provisioning Markup Language\n     SSL  Secure Sockets Layer\n     SSO  Standard Setting Organization\nSTANAGS  Standardization Agreements\n    TCG  Trusted Computing Group\n     TCP  Transmission Control Protocol\n     TLS  Transport Layer Security\n   UDDI  Universal Description Discovery and Integration\n    USG  United States Government\n    VM  Virtual Machine\n    W3C  World Wide Web Consortium\n    WG  Working Group\n XACML  OASIS eXtensible Access Control Markup Language\n   XML  Extensible Markup Language\n\n                                   88\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "99",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 99,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "88"
+      },
+      "score": 9.469799945455668,
+      "rank": 5
+    },
+    {
+      "id": "nist-p042-table-00-000",
+      "text": "Table 3\nTable caption: \"Table 3 – Scenarios and Technical Requirements\". Two-column table with header row: \"Scenarios\" and \"Technical Requirements\". Row 1: \"1.\" — \"Creating, accessing, updating, deleting data objects in cloud systems;\" Row 2: \"2.\" — \"Moving VMs and virtual appliances between cloud systems;\" Row 3: \"3.\" — \"Selecting the best IaaS vendor for private externally hosted cloud system;\" Row 4: \"4.\" — \"Tools for monitoring and managing multiple cloud systems;\" Row 5: \"5.\" — \"Migrating data between cloud systems;\" Row 6: \"6.\" — \"Single sign-on access to multiple cloud systems;\" Row 7: \"7.\" — \"Orchestrated processes across cloud systems;\" Row 8: \"8.\" — \"Discovering cloud resources;\" Row 9: \"9.\" — \"Evaluating SLAs and penalties; and\" Row 10: \"10.\" — \"Auditing cloud systems.\"\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "42",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-042.png",
+        "label": "Table 3",
+        "pdf_page": 42,
+        "visual_id": "nist-p042-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "31",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 8.958028445348429,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:01:33.461253+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 410,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 81,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 491
+      }
+    },
+    {
+      "at": "2026-11-16T15:01:36.396050+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3627,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 171,
+        "output_tokens_details": {
+          "reasoning_tokens": 109
+        },
+        "total_tokens": 3798
+      }
+    }
+  ],
+  "seconds": 5.828423099999782,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review"
+}

@@ -1,0 +1,820 @@
+{
+  "status": "answered",
+  "answer": "The orange color in Map 6.1 represents the upper-middle-income group [wdr-p173-image-00-000].",
+  "citations": [
+    "wdr-p173-image-00-000"
+  ],
+  "question": "Read the legend of Map 6.1. Which income group is colored orange?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Map 6.1\" legend orange income group",
+      "results": [
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 21.591313640460346,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p182-image-00-000",
+          "text": "Map 6.2\nLimited or outdated electricity transmission networks serve as barriers to the entry of renewable sources. World map showing electricity transmission networks in 2023. Power transmission lines are drawn as thin red/orange line segments across regions. Coverage is dense in North America, Europe, India, eastern China, parts of South America, southern Africa, and Australia; much sparser across much of Africa, the Middle East, and interior regions of some continents. Two boxed callouts mark areas for enlargement: 'See inset map A for more detail' over Europe / North Africa / West Asia, and 'See inset map B for more detail' over East Asia. Inset map A at lower left shows a denser close-up of transmission lines across Europe and adjacent regions. Inset map B at right shows a close-up of East Asia, especially China and neighboring areas, with dense transmission lines. Legend at lower left labels the line symbol as 'Power transmission lines.' Source credited to Arkolakis and Walsh 2023; note states the map displays electricity transmission networks in 2023 and the two insets focus on areas of particular interest due to geographic disparities in coverage of transmission networks in these regions.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "182",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-182.png",
+            "label": "Map 6.2",
+            "pdf_page": 182,
+            "visual_id": "wdr-p182-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.819867129697723,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p144-chart-00-000",
+          "text": "Figure 5.1\nStacked bar chart titled \"The share of skilled workers in large firms increases with GDP per capita.\" Vertical axis: \"Share of workers (%)\" from 0 to 100. Horizontal axis: four categories, \"Country income group 1,\" \"Country income group 2,\" \"Country income group 3,\" and \"Country income group 4.\" Each bar is a 100% stack with six legend categories: gray = Small firms, low skills; orange = Small firms, high skills; teal = Medium firms, low skills; gold = Medium firms, high skills; dark blue = Large firms, low skills; olive green = Large firms, high skills. Visually, the share in small firms with low skills is largest in country income group 1 and declines steadily across groups; the share in large firms with high skills rises steadily and is largest in country income group 4. Approximate visible composition by group: group 1 has about half small-firm low-skill workers, with the remaining half split across the other five categories; group 2 shows a smaller gray segment and a noticeably larger olive segment; group 3 and group 4 are increasingly dominated by medium/large firm and high-skill segments, especially olive green (large firms, high skills). Source: Gottlieb, Poschke, and Tueting 2024. Note states that the figure shows the share of low-skilled and highly skilled workers employed in small, medium, and large firms across four country income categories corresponding to GDP per capita levels of US$0–US$3,000 (group 1), US$3,000–US$10,000 (group 2), US$10,000–US$30,000 (group 3), and more than US$30,000 (group 4). Shares are computed from nationally representative labor force surveys from 76 countries covering 805 country-years. Small firms have fewer than 10 employees; medium firms have 10–50 employees; large firms have more than 50 employees. Workers are classified as low-skilled if they have less than nine years of formal education and as highly skilled otherwise. For countries in each income group, the bars add up to 100 percent.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "144",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-144.png",
+            "label": "Figure 5.1",
+            "pdf_page": 144,
+            "visual_id": "wdr-p144-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The chart does not print exact percentage values for each stacked segment; the composition is described from the visible bar heights and is approximate.",
+              "The page image resolution limits precise reading of small legend/text details, though the main labels and source/note are readable."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 12.075273953918284,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p186-diagram-00-000",
+          "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\dc69d858e364\\page-186.png",
+            "label": "Map 6.3",
+            "pdf_page": 186,
+            "visual_id": "wdr-p186-diagram-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+              "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 11.87670156633291,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p086-table-00-000",
+          "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-086.png",
+            "label": "Table 2.1",
+            "pdf_page": 86,
+            "visual_id": "wdr-p086-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 11.802915554277742,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p173-text-000",
+          "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.738200074078811,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 21.591313640460346,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p182-image-00-000",
+          "text": "Map 6.2\nLimited or outdated electricity transmission networks serve as barriers to the entry of renewable sources. World map showing electricity transmission networks in 2023. Power transmission lines are drawn as thin red/orange line segments across regions. Coverage is dense in North America, Europe, India, eastern China, parts of South America, southern Africa, and Australia; much sparser across much of Africa, the Middle East, and interior regions of some continents. Two boxed callouts mark areas for enlargement: 'See inset map A for more detail' over Europe / North Africa / West Asia, and 'See inset map B for more detail' over East Asia. Inset map A at lower left shows a denser close-up of transmission lines across Europe and adjacent regions. Inset map B at right shows a close-up of East Asia, especially China and neighboring areas, with dense transmission lines. Legend at lower left labels the line symbol as 'Power transmission lines.' Source credited to Arkolakis and Walsh 2023; note states the map displays electricity transmission networks in 2023 and the two insets focus on areas of particular interest due to geographic disparities in coverage of transmission networks in these regions.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "182",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-182.png",
+            "label": "Map 6.2",
+            "pdf_page": 182,
+            "visual_id": "wdr-p182-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.819867129697723,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p144-chart-00-000",
+          "text": "Figure 5.1\nStacked bar chart titled \"The share of skilled workers in large firms increases with GDP per capita.\" Vertical axis: \"Share of workers (%)\" from 0 to 100. Horizontal axis: four categories, \"Country income group 1,\" \"Country income group 2,\" \"Country income group 3,\" and \"Country income group 4.\" Each bar is a 100% stack with six legend categories: gray = Small firms, low skills; orange = Small firms, high skills; teal = Medium firms, low skills; gold = Medium firms, high skills; dark blue = Large firms, low skills; olive green = Large firms, high skills. Visually, the share in small firms with low skills is largest in country income group 1 and declines steadily across groups; the share in large firms with high skills rises steadily and is largest in country income group 4. Approximate visible composition by group: group 1 has about half small-firm low-skill workers, with the remaining half split across the other five categories; group 2 shows a smaller gray segment and a noticeably larger olive segment; group 3 and group 4 are increasingly dominated by medium/large firm and high-skill segments, especially olive green (large firms, high skills). Source: Gottlieb, Poschke, and Tueting 2024. Note states that the figure shows the share of low-skilled and highly skilled workers employed in small, medium, and large firms across four country income categories corresponding to GDP per capita levels of US$0–US$3,000 (group 1), US$3,000–US$10,000 (group 2), US$10,000–US$30,000 (group 3), and more than US$30,000 (group 4). Shares are computed from nationally representative labor force surveys from 76 countries covering 805 country-years. Small firms have fewer than 10 employees; medium firms have 10–50 employees; large firms have more than 50 employees. Workers are classified as low-skilled if they have less than nine years of formal education and as highly skilled otherwise. For countries in each income group, the bars add up to 100 percent.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "144",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-144.png",
+            "label": "Figure 5.1",
+            "pdf_page": 144,
+            "visual_id": "wdr-p144-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The chart does not print exact percentage values for each stacked segment; the composition is described from the visible bar heights and is approximate.",
+              "The page image resolution limits precise reading of small legend/text details, though the main labels and source/note are readable."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 12.075273953918284,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p186-diagram-00-000",
+          "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\dc69d858e364\\page-186.png",
+            "label": "Map 6.3",
+            "pdf_page": 186,
+            "visual_id": "wdr-p186-diagram-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+              "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 11.87670156633291,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p086-table-00-000",
+          "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-086.png",
+            "label": "Table 2.1",
+            "pdf_page": 86,
+            "visual_id": "wdr-p086-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 11.802915554277742,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p173-text-000",
+          "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.738200074078811,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.004290400000172667
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "wdr-p173-image-00-000",
+      "context": [
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        }
+      ],
+      "seconds": 0.00040169999920181
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p173-image-00-000",
+      "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-173.png",
+        "label": "Map 6.1",
+        "pdf_page": 173,
+        "visual_id": "wdr-p173-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+          "Country-by-country labels are not readable at this resolution.",
+          "The map projection and any underlying scale are not specified in the visible figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p182-image-00-000",
+      "text": "Map 6.2\nLimited or outdated electricity transmission networks serve as barriers to the entry of renewable sources. World map showing electricity transmission networks in 2023. Power transmission lines are drawn as thin red/orange line segments across regions. Coverage is dense in North America, Europe, India, eastern China, parts of South America, southern Africa, and Australia; much sparser across much of Africa, the Middle East, and interior regions of some continents. Two boxed callouts mark areas for enlargement: 'See inset map A for more detail' over Europe / North Africa / West Asia, and 'See inset map B for more detail' over East Asia. Inset map A at lower left shows a denser close-up of transmission lines across Europe and adjacent regions. Inset map B at right shows a close-up of East Asia, especially China and neighboring areas, with dense transmission lines. Legend at lower left labels the line symbol as 'Power transmission lines.' Source credited to Arkolakis and Walsh 2023; note states the map displays electricity transmission networks in 2023 and the two insets focus on areas of particular interest due to geographic disparities in coverage of transmission networks in these regions.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "182",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-182.png",
+        "label": "Map 6.2",
+        "pdf_page": 182,
+        "visual_id": "wdr-p182-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 14.819867129697723,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p144-chart-00-000",
+      "text": "Figure 5.1\nStacked bar chart titled \"The share of skilled workers in large firms increases with GDP per capita.\" Vertical axis: \"Share of workers (%)\" from 0 to 100. Horizontal axis: four categories, \"Country income group 1,\" \"Country income group 2,\" \"Country income group 3,\" and \"Country income group 4.\" Each bar is a 100% stack with six legend categories: gray = Small firms, low skills; orange = Small firms, high skills; teal = Medium firms, low skills; gold = Medium firms, high skills; dark blue = Large firms, low skills; olive green = Large firms, high skills. Visually, the share in small firms with low skills is largest in country income group 1 and declines steadily across groups; the share in large firms with high skills rises steadily and is largest in country income group 4. Approximate visible composition by group: group 1 has about half small-firm low-skill workers, with the remaining half split across the other five categories; group 2 shows a smaller gray segment and a noticeably larger olive segment; group 3 and group 4 are increasingly dominated by medium/large firm and high-skill segments, especially olive green (large firms, high skills). Source: Gottlieb, Poschke, and Tueting 2024. Note states that the figure shows the share of low-skilled and highly skilled workers employed in small, medium, and large firms across four country income categories corresponding to GDP per capita levels of US$0–US$3,000 (group 1), US$3,000–US$10,000 (group 2), US$10,000–US$30,000 (group 3), and more than US$30,000 (group 4). Shares are computed from nationally representative labor force surveys from 76 countries covering 805 country-years. Small firms have fewer than 10 employees; medium firms have 10–50 employees; large firms have more than 50 employees. Workers are classified as low-skilled if they have less than nine years of formal education and as highly skilled otherwise. For countries in each income group, the bars add up to 100 percent.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "144",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-144.png",
+        "label": "Figure 5.1",
+        "pdf_page": 144,
+        "visual_id": "wdr-p144-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The chart does not print exact percentage values for each stacked segment; the composition is described from the visible bar heights and is approximate.",
+          "The page image resolution limits precise reading of small legend/text details, though the main labels and source/note are readable."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 12.075273953918284,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p186-diagram-00-000",
+      "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\dc69d858e364\\page-186.png",
+        "label": "Map 6.3",
+        "pdf_page": 186,
+        "visual_id": "wdr-p186-diagram-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+          "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 11.87670156633291,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p086-table-00-000",
+      "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "86",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-086.png",
+        "label": "Table 2.1",
+        "pdf_page": 86,
+        "visual_id": "wdr-p086-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 11.802915554277742,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p173-text-000",
+      "text": "Map 6.1 In 2022, one-third of online job postings related to low-carbon technologies were in\nmiddle-income countries\n\nSource: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 11.738200074078811,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:35:05.463523+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 510,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 65,
+        "output_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "total_tokens": 575
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:08.481868+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3692,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 163,
+        "output_tokens_details": {
+          "reasoning_tokens": 132
+        },
+        "total_tokens": 3855
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:10.971606+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 4328,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3584,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 71,
+        "output_tokens_details": {
+          "reasoning_tokens": 12
+        },
+        "total_tokens": 4399
+      }
+    }
+  ],
+  "seconds": 7.655366899998626,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D04",
+  "initial_ranking": [
+    {
+      "id": "wdr-p173-image-00-000",
+      "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-173.png",
+        "label": "Map 6.1",
+        "pdf_page": 173,
+        "visual_id": "wdr-p173-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+          "Country-by-country labels are not readable at this resolution.",
+          "The map projection and any underlying scale are not specified in the visible figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 26.59351299906444,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p182-image-00-000",
+      "text": "Map 6.2\nLimited or outdated electricity transmission networks serve as barriers to the entry of renewable sources. World map showing electricity transmission networks in 2023. Power transmission lines are drawn as thin red/orange line segments across regions. Coverage is dense in North America, Europe, India, eastern China, parts of South America, southern Africa, and Australia; much sparser across much of Africa, the Middle East, and interior regions of some continents. Two boxed callouts mark areas for enlargement: 'See inset map A for more detail' over Europe / North Africa / West Asia, and 'See inset map B for more detail' over East Asia. Inset map A at lower left shows a denser close-up of transmission lines across Europe and adjacent regions. Inset map B at right shows a close-up of East Asia, especially China and neighboring areas, with dense transmission lines. Legend at lower left labels the line symbol as 'Power transmission lines.' Source credited to Arkolakis and Walsh 2023; note states the map displays electricity transmission networks in 2023 and the two insets focus on areas of particular interest due to geographic disparities in coverage of transmission networks in these regions.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "182",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-182.png",
+        "label": "Map 6.2",
+        "pdf_page": 182,
+        "visual_id": "wdr-p182-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 20.337370336685698,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p110-chart-00-000",
+      "text": "Figure 3.7\nScatter plot titled “Low- and middle-income countries are exposed to similar levels of risk from climate change, and they have less adaptive capacity.” The x-axis is Exposure index (higher scores indicate greater risk), scaled from 0 to 0.8. The y-axis is Adaptive capacity index (higher scores indicate lower capacity), scaled from 0 to 1.0. Three country-income groups are shown with colored dots and separate solid linear trend lines: Low-income (dark navy), Middle-income (orange), and High-income (teal). The low-income group clusters mostly around exposure roughly 0.35–0.55 and adaptive capacity roughly 0.65–0.87, with an upward-sloping trend line. The middle-income group clusters mainly around exposure roughly 0.25–0.58 and adaptive capacity roughly 0.35–0.78, with a moderately upward-sloping trend line; one visible orange point lies near exposure about 0.71 and adaptive capacity about 0.50. The high-income group clusters mainly around exposure roughly 0.26–0.58 and adaptive capacity roughly 0.18–0.62, with a nearly flat but slightly upward-sloping trend line. Source note: WDR 2024 team using data from ND-GAIN Country Index (University of Notre Dame Global Adaptation Index) dashboard, University of Notre Dame, Notre Dame, IN, https://gain.nd.edu/our-work/country-index/. Note: The solid lines show the linear relationship for each country group.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "110",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-110.png",
+        "label": "Figure 3.7",
+        "pdf_page": 110,
+        "visual_id": "wdr-p110-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact data values for individual points are not labeled and cannot be recovered precisely from the figure image.",
+          "The number of plotted observations in each group is visible only approximately from the dots, not exactly.",
+          "No country names are shown for individual observations."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 19.9472220661424,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p199-chart-00-000",
+      "text": "Figure 7.6\nTitle: “The BRICS and large middle-income countries have a significant presence of publicly owned enterprises and governance frameworks that stifle competition.” Vertical bar chart with y-axis labeled “Economywide public ownership score (0–6)” and grid/ticks from 0 to 5. Legend indicates orange = Middle-income and dark blue = High-income. Categories left to right with approximate scores read from the bars: United Kingdom 1.1; Chile 1.3; Top 5 average 1.3; Portugal 1.5; Czechia 1.7; Colombia 1.9; United States 1.9; Japan 1.9; Slovenia 1.9; Germany 2.1; OECD average 2.1; Mexico 2.2; Republic of Korea 2.2; Brazil 2.4; Bulgaria 2.4; Türkiye 2.8; Poland 3.0; Romania 3.0; Costa Rica 3.1; Argentina 3.2; South Africa 3.4; Malaysia 3.7; Russian Federation 4.0; Kazakhstan 4.0; Viet Nam 4.1; China 4.8; Indonesia 4.9. Source shown beneath the chart: WDR 2024 team based on 2018 data from PMR Database (OECD-WBG Product Market Regulation Database) dashboard, Data Catalogue, World Bank, Washington, DC, and PMR Indicators dashboard, OECD, Paris. Note shown: BRICS nations are Brazil, the Russian Federation, India, China, and South Africa; the public ownership indicator shows the extent of the presence of state-owned enterprises (SOEs) in the economy and their governance; a higher score indicates higher presence of SOEs with weaker governance of SOEs; OECD = Organisation for Economic Co-operation and Development.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "199",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-199.png",
+        "label": "Figure 7.6",
+        "pdf_page": 199,
+        "visual_id": "wdr-p199-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "All bar heights are approximate readings from the figure rather than exact numeric labels.",
+          "The x-axis label for Republic of Korea is partially unclear in the image but is most likely ‘Republic of Korea’/‘Korea, Rep.’.",
+          "The source/note text is transcribed from the figure caption area and may contain minor OCR errors."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 18.652727938856163,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p186-diagram-00-000",
+      "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\dc69d858e364\\page-186.png",
+        "label": "Map 6.3",
+        "pdf_page": 186,
+        "visual_id": "wdr-p186-diagram-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+          "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 17.651528903322127,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p109-chart-00-000",
+      "text": "Figure 3.6\nChart title: \"In middle-income countries, the weighted average cost of capital for utility-scale solar power projects is substantially higher than the cost in high-income countries.\" Combination bar-and-dot chart by country, grouped by income class. Left y-axis: GDP per capita (constant 2015 US$), ranging from 0 to 70,000. Right y-axis: Weighted average cost of capital (%), ranging from 0 to 21. Orange vertical bars show GDP per capita for each country. Dark blue circular markers with thin vertical stems show each country's weighted average cost of capital (right axis). Horizontal colored reference lines show income-group WACC averages: low-income (olive), lower-middle-income (orange), upper-middle-income (blue), and high-income (teal). The x-axis lists countries ordered from lower to higher GDP per capita and separated into four labeled groups with slanted divider lines: Low-income, Lower-middle-income, Upper-middle-income, High-income. Visible country labels, left to right: Burkina Faso, Ethiopia, Uganda, Rwanda, Yemen, Rep., Senegal, Pakistan, Kenya, Bangladesh, Ghana, India, Viet Nam, Sri Lanka, Algeria, Egypt, Arab Rep., Iran, Islamic Rep., South Africa, Colombia, Brazil, Bulgaria, Russian Federation, Mexico, Kazakhstan, Malaysia, China, Argentina, Türkiye, Chile, Hungary, Poland, Slovak Rep., Czechia, Spain, Italy, Japan, France, Germany, United Kingdom, Australia, United States. The pattern shown is that GDP per capita increases steadily from low-income to high-income countries, while WACC is generally higher and more dispersed in middle-income countries and lower in many high-income countries, with a few high-WACC outliers. Source note on page: WDR 2024 team using IRENA (2023) and WDI (World Development Indicators), World Bank. Note: GDP = gross domestic product; WACC = weighted average cost of capital.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "109",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-109.png",
+        "label": "Figure 3.6",
+        "pdf_page": 109,
+        "visual_id": "wdr-p109-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact numeric values for individual country bars and WACC points are not legible at this resolution, so only the visible structure and labels are transcribed.",
+          "Some country labels are crowded/angled; the label list reflects the visible rendering as closely as possible."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 17.40747394112985,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

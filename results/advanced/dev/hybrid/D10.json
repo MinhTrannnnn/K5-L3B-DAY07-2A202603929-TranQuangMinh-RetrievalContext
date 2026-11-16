@@ -1,0 +1,627 @@
+{
+  "status": "answered",
+  "answer": "According to the overview, the discussion covers more than 100 middle-income economies, defined as those with incomes per capita between US$1,100 and US$14,000 [wdr-p276-text-000].",
+  "citations": [
+    "wdr-p276-text-000"
+  ],
+  "question": "According to the overview, how many middle-income countries are discussed, and what per-capita income range defines them?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "overview middle-income countries per-capita income range defines them",
+      "results": [
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.031099324975891997,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p035-text-001",
+          "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.030886196246139225,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.030798389007344232,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p068-text-000",
+          "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029857397504456328,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p036-text-001",
+          "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029386529386529386,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p069-text-000",
+          "text": "Even without these headwinds, today’s ­middle-      These tasks have proved to be surprisingly dif­\nincome countries would  still face long odds of     ficult, and they are likely to become even harder.\nachieving high-income status because of what the\nWorld Bank has called—since 2007—a “­middle-​  Measuring progress throughincome trap.” 9 Although the term connotes inevi­\ntability, the original proposition was that getting  the middle stages of\nmired in the middle stages of development is a  development\npossibility, not an inevitability. It would be inevi­\n                                      What indicates that an economy is developing?\ntable only if countries did not adapt their policies\n                                           Income per capita is the most commonly used\nand institutions to changing economic and struc­\n                                                 metric to measure the pace of economic develop­\ntural needs. The three priorities for middle-income\n                                              ment. But measures of average income can differ\ncountries to evade the trap and maintain a growth\n                                                           greatly, depending on the measure. For exam­\nmomentum10 could be summarized as:\n                                                             ple, the World Bank, other international organi­\n     •  Increasing the sophistication of processes    zations, and bilateral aid agencies use GDP per\n      and products through integration into    capita at market exchange rates for analysis and\n      world markets, generally accompanied by    lending (box 1.1). On the other hand, the use of\n       the growing specialization of production    GDP per capita based on adjustments for purchas­\n     •  Keeping up  with  changing  education    ing power parity (PPP, which reflects the purchas­\n      system priorities to help workers acquire    ing power of a consumer for goods and services)\n        skills that enable them to adjust to new    can yield different",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "69",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 69,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.0273972602739726,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.031099324975891997,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p035-text-001",
+          "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.030886196246139225,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.030798389007344232,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p068-text-000",
+          "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029857397504456328,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p036-text-001",
+          "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029386529386529386,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p069-text-000",
+          "text": "Even without these headwinds, today’s ­middle-      These tasks have proved to be surprisingly dif­\nincome countries would  still face long odds of     ficult, and they are likely to become even harder.\nachieving high-income status because of what the\nWorld Bank has called—since 2007—a “­middle-​  Measuring progress throughincome trap.” 9 Although the term connotes inevi­\ntability, the original proposition was that getting  the middle stages of\nmired in the middle stages of development is a  development\npossibility, not an inevitability. It would be inevi­\n                                      What indicates that an economy is developing?\ntable only if countries did not adapt their policies\n                                           Income per capita is the most commonly used\nand institutions to changing economic and struc­\n                                                 metric to measure the pace of economic develop­\ntural needs. The three priorities for middle-income\n                                              ment. But measures of average income can differ\ncountries to evade the trap and maintain a growth\n                                                           greatly, depending on the measure. For exam­\nmomentum10 could be summarized as:\n                                                             ple, the World Bank, other international organi­\n     •  Increasing the sophistication of processes    zations, and bilateral aid agencies use GDP per\n      and products through integration into    capita at market exchange rates for analysis and\n      world markets, generally accompanied by    lending (box 1.1). On the other hand, the use of\n       the growing specialization of production    GDP per capita based on adjustments for purchas­\n     •  Keeping up  with  changing  education    ing power parity (PPP, which reflects the purchas­\n      system priorities to help workers acquire    ing power of a consumer for goods and services)\n        skills that enable them to adjust to new    can yield different",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "69",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 69,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.0273972602739726,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.039717200001177844
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.031099324975891997,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.030886196246139225,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.030798389007344232,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p068-text-000",
+      "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 68,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.029857397504456328,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p036-text-001",
+      "text": "   depend increasingly on its ability to boost the\nthey increase in size, which means that changes    sophistication of its production methods.\nin the pace of growth stem from factors that are       Since 2007, the World Bank has called this\nnew to them. Although these imperatives can vary    dependence the “middle-income trap.”2 And over\nacross countries, economic expansion, on average,    the last 34 years, only 34 economies have suc-\nbegins to decelerate and often reaches a plateau    ceeded in breaking out of it.\nin income per capita growth, typically at about     To achieve high-income  status, a middle-​\n11 percent of US GDP per capita. Today, this figure   income country needs to ramp up the sophis-\nwould be about US$8,000, or around the level at    tication of  its economic structure. Using the\n\nTable O.1  World Bank country classifications and selected global indicators, 2022\n                     SHARE OF      SHARE OF    SHARE OF PEOPLE IN    SHARE OF GLOBAL\n      INCOME           GLOBAL        GLOBAL     EXTREME POVERTY   CARBON DIOXIDE (CO2)\n   CLASSIFICATION    POPULATION (%)    GDP (%)        GLOBALLY (%)         EMISSIONS (%)\n Low-income                      8.9                 0.6                 36.5                          0.5\n\n Lower-middle-income           40.3                 8.3                 55.4                       15.7\n\n Upper-middle-income            35.1               30.3                    7.1                       48.6\n\n High-income                   15.7               60.8                    1.0                       35.2\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 36,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.029386529386529386,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p069-text-000",
+      "text": "Even without these headwinds, today’s ­middle-      These tasks have proved to be surprisingly dif­\nincome countries would  still face long odds of     ficult, and they are likely to become even harder.\nachieving high-income status because of what the\nWorld Bank has called—since 2007—a “­middle-​  Measuring progress throughincome trap.” 9 Although the term connotes inevi­\ntability, the original proposition was that getting  the middle stages of\nmired in the middle stages of development is a  development\npossibility, not an inevitability. It would be inevi­\n                                      What indicates that an economy is developing?\ntable only if countries did not adapt their policies\n                                           Income per capita is the most commonly used\nand institutions to changing economic and struc­\n                                                 metric to measure the pace of economic develop­\ntural needs. The three priorities for middle-income\n                                              ment. But measures of average income can differ\ncountries to evade the trap and maintain a growth\n                                                           greatly, depending on the measure. For exam­\nmomentum10 could be summarized as:\n                                                             ple, the World Bank, other international organi­\n     •  Increasing the sophistication of processes    zations, and bilateral aid agencies use GDP per\n      and products through integration into    capita at market exchange rates for analysis and\n      world markets, generally accompanied by    lending (box 1.1). On the other hand, the use of\n       the growing specialization of production    GDP per capita based on adjustments for purchas­\n     •  Keeping up  with  changing  education    ing power parity (PPP, which reflects the purchas­\n      system priorities to help workers acquire    ing power of a consumer for goods and services)\n        skills that enable them to adjust to new    can yield different",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "69",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 69,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.0273972602739726,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:36:10.920058+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 58,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 574
+      }
+    },
+    {
+      "at": "2026-11-16T15:36:14.753446+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3752,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 296,
+        "output_tokens_details": {
+          "reasoning_tokens": 221
+        },
+        "total_tokens": 4048
+      }
+    }
+  ],
+  "seconds": 5.944572399999743,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D10",
+  "initial_ranking": [
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.03128054740957967,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.029850746268656716,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.02921395544346364,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.028484848484848488,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p068-text-000",
+      "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 68,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.026153846153846153,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p063-text-000",
+      "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.01639344262295082,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": false
+}

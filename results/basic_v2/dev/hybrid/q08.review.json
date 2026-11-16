@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "compose:002 explicitly states that parameters of estimators in a pipeline are accessible using the <estimator>__<parameter> syntax, and the cited example `clf__C=10` matches the page’s code block.",
+  "query_id": "q08",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "12187a417cb3aeb8089b8d6092aacc7cc241d447fa773e4f9aaaa8c10fe547dc",
+  "alternative_cited_pages": [
+    "compose:002"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

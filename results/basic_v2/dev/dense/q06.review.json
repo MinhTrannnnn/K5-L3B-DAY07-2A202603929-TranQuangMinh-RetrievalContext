@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source impute:003/004 explicitly says MissingIndicator provides a binary missing-value mask and that SimpleImputer and IterativeImputer support add_indicator=True to stack these indicators with the imputed output. The answer matches this and adds no unsupported claim.",
+  "query_id": "q06",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "858ce79b28ac466001aa30a04a7b9726022eaa9c6ea6d472d1965552393bd406",
+  "alternative_cited_pages": [
+    "impute:003"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

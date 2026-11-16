@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "SimpleImputer provides these basic replacement strategies for missing values: **mean**, **median**, **most_frequent**, and **constant** (using a provided constant value). [7ec13427a119dad976f5383c]",
+  "citations": [
+    "7ec13427a119dad976f5383c"
+  ],
+  "question": "Which basic replacement strategies does SimpleImputer provide for missing values?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "SimpleImputer basic replacement strategies missing values mean median most_frequent constant documentation",
+      "results": [
+        {
+          "id": "7ec13427a119dad976f5383c",
+          "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 1963,
+            "start": 1052,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 264
+          },
+          "score": 30.91921677027865,
+          "rank": 1
+        },
+        {
+          "id": "be3b1da9c776f955f57b418f",
+          "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 2640,
+            "start": 1965,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 240
+          },
+          "score": 21.495565413256656,
+          "rank": 2
+        },
+        {
+          "id": "8f32179531c8c198bb601d1e",
+          "text": "mean always predicts the mean of the training targets.\n\nmedian always predicts the median of the training targets.\n\nquantile always predicts a user provided quantile of the training targets.\n\nconstant always predicts a constant value that is provided by the user.\n\nIn all these strategies, the predict method completely ignores the input data.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:031",
+          "metadata": {
+            "end": 4564,
+            "start": 4221,
+            "topic": "model_selection",
+            "anchor": "dummy-estimators",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.8. Dummy estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 114343,
+            "unit_start": 109779,
+            "token_count": 65
+          },
+          "score": 19.66558733639236,
+          "rank": 3
+        },
+        {
+          "id": "5db67e2400256ec645b36f0d",
+          "text": ">>> import pandas as pd\n>>> df = pd.DataFrame([[\"a\", \"x\"],\n...                    [np.nan, \"y\"],\n...                    [\"a\", np.nan],\n...                    [\"b\", \"y\"]], dtype=\"category\")\n...\n>>> imp = SimpleImputer(strategy=\"most_frequent\")\n>>> print(imp.fit_transform(df))\n[['a' 'x']\n ['a' 'y']\n ['a' 'y']\n ['b' 'y']]\n\nFor another example on usage, see Imputing missing values before building an estimator .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 3052,
+            "start": 2642,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 165
+          },
+          "score": 15.463674244858392,
+          "rank": 4
+        },
+        {
+          "id": "93de675f600e3451504fd4d4",
+          "text": "By default, OrdinalEncoder will also passthrough missing values that are indicated by np.nan .\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male'], ['female'], [np.nan], ['female']]\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [nan],\n       [ 0.]])\n\nOrdinalEncoder provides a parameter encoded_missing_value to encode the missing values without the need to create a pipeline and using SimpleImputer .\n\n>>> enc = preprocessing.OrdinalEncoder(encoded_missing_value=-1)\n>>> X = [['male'], ['female'], [np.nan], ['female']]\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [-1.],\n       [ 0.]])\n\nThe above processing is equivalent to the following pipeline:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.impute import SimpleImputer\n>>> enc = Pipeline(steps=[\n...     (\"encoder\", preprocessing.OrdinalEncoder()),\n...     (\"imputer\", SimpleImputer(strategy=\"constant\", fill_value=-1)),\n... ])\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [-1.],\n       [ 0.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 2211,
+            "start": 1195,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 375
+          },
+          "score": 14.621615574030214,
+          "rank": 5
+        },
+        {
+          "id": "fc48ae96b4f10aae70ab45d7",
+          "text": "3.4.8. Dummy estimators\n\nWhen doing supervised learning, a simple sanity check consists of comparing one’s estimator against simple rules of thumb. DummyClassifier implements several such simple strategies for classification:\n\nstratified generates random predictions by respecting the training set class distribution.\n\nmost_frequent always predicts the most frequent label in the training set.\n\nprior always predicts the class that maximizes the class prior (like most_frequent ) and predict_proba returns the class prior.\n\nuniform generates predictions uniformly at random.\n\nconstant always predicts a constant label that is provided by the user. A major motivation of this method is F1-scoring, when the positive class is in the minority.\n\nNote that with all these strategies, the predict method completely ignores the input data!\n\nTo illustrate DummyClassifier , first let’s create an imbalanced dataset:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> y[y != 1] = -1\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n\nNext, let’s compare the accuracy of SVC and most_frequent :",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:031",
+          "metadata": {
+            "end": 2906,
+            "start": 1702,
+            "topic": "model_selection",
+            "anchor": "dummy-estimators",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.8. Dummy estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 114343,
+            "unit_start": 109779,
+            "token_count": 292
+          },
+          "score": 14.252434869264931,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7ec13427a119dad976f5383c",
+          "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 1963,
+            "start": 1052,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 264
+          },
+          "score": 30.91921677027865,
+          "rank": 1
+        },
+        {
+          "id": "be3b1da9c776f955f57b418f",
+          "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 2640,
+            "start": 1965,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 240
+          },
+          "score": 21.495565413256656,
+          "rank": 2
+        },
+        {
+          "id": "8f32179531c8c198bb601d1e",
+          "text": "mean always predicts the mean of the training targets.\n\nmedian always predicts the median of the training targets.\n\nquantile always predicts a user provided quantile of the training targets.\n\nconstant always predicts a constant value that is provided by the user.\n\nIn all these strategies, the predict method completely ignores the input data.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:031",
+          "metadata": {
+            "end": 4564,
+            "start": 4221,
+            "topic": "model_selection",
+            "anchor": "dummy-estimators",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.8. Dummy estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 114343,
+            "unit_start": 109779,
+            "token_count": 65
+          },
+          "score": 19.66558733639236,
+          "rank": 3
+        },
+        {
+          "id": "5db67e2400256ec645b36f0d",
+          "text": ">>> import pandas as pd\n>>> df = pd.DataFrame([[\"a\", \"x\"],\n...                    [np.nan, \"y\"],\n...                    [\"a\", np.nan],\n...                    [\"b\", \"y\"]], dtype=\"category\")\n...\n>>> imp = SimpleImputer(strategy=\"most_frequent\")\n>>> print(imp.fit_transform(df))\n[['a' 'x']\n ['a' 'y']\n ['a' 'y']\n ['b' 'y']]\n\nFor another example on usage, see Imputing missing values before building an estimator .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 3052,
+            "start": 2642,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 165
+          },
+          "score": 15.463674244858392,
+          "rank": 4
+        },
+        {
+          "id": "93de675f600e3451504fd4d4",
+          "text": "By default, OrdinalEncoder will also passthrough missing values that are indicated by np.nan .\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male'], ['female'], [np.nan], ['female']]\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [nan],\n       [ 0.]])\n\nOrdinalEncoder provides a parameter encoded_missing_value to encode the missing values without the need to create a pipeline and using SimpleImputer .\n\n>>> enc = preprocessing.OrdinalEncoder(encoded_missing_value=-1)\n>>> X = [['male'], ['female'], [np.nan], ['female']]\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [-1.],\n       [ 0.]])\n\nThe above processing is equivalent to the following pipeline:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.impute import SimpleImputer\n>>> enc = Pipeline(steps=[\n...     (\"encoder\", preprocessing.OrdinalEncoder()),\n...     (\"imputer\", SimpleImputer(strategy=\"constant\", fill_value=-1)),\n... ])\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [-1.],\n       [ 0.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:006",
+          "metadata": {
+            "end": 2211,
+            "start": 1195,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 22404,
+            "unit_start": 18117,
+            "token_count": 375
+          },
+          "score": 14.621615574030214,
+          "rank": 5
+        },
+        {
+          "id": "fc48ae96b4f10aae70ab45d7",
+          "text": "3.4.8. Dummy estimators\n\nWhen doing supervised learning, a simple sanity check consists of comparing one’s estimator against simple rules of thumb. DummyClassifier implements several such simple strategies for classification:\n\nstratified generates random predictions by respecting the training set class distribution.\n\nmost_frequent always predicts the most frequent label in the training set.\n\nprior always predicts the class that maximizes the class prior (like most_frequent ) and predict_proba returns the class prior.\n\nuniform generates predictions uniformly at random.\n\nconstant always predicts a constant label that is provided by the user. A major motivation of this method is F1-scoring, when the positive class is in the minority.\n\nNote that with all these strategies, the predict method completely ignores the input data!\n\nTo illustrate DummyClassifier , first let’s create an imbalanced dataset:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> y[y != 1] = -1\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n\nNext, let’s compare the accuracy of SVC and most_frequent :",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:031",
+          "metadata": {
+            "end": 2906,
+            "start": 1702,
+            "topic": "model_selection",
+            "anchor": "dummy-estimators",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.8. Dummy estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 114343,
+            "unit_start": 109779,
+            "token_count": 292
+          },
+          "score": 14.252434869264931,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.006237800000235438
+    }
+  ],
+  "context": [
+    {
+      "id": "7ec13427a119dad976f5383c",
+      "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 1963,
+        "start": 1052,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 264
+      },
+      "score": 30.91921677027865,
+      "rank": 1
+    },
+    {
+      "id": "be3b1da9c776f955f57b418f",
+      "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 2640,
+        "start": 1965,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 240
+      },
+      "score": 21.495565413256656,
+      "rank": 2
+    },
+    {
+      "id": "8f32179531c8c198bb601d1e",
+      "text": "mean always predicts the mean of the training targets.\n\nmedian always predicts the median of the training targets.\n\nquantile always predicts a user provided quantile of the training targets.\n\nconstant always predicts a constant value that is provided by the user.\n\nIn all these strategies, the predict method completely ignores the input data.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:031",
+      "metadata": {
+        "end": 4564,
+        "start": 4221,
+        "topic": "model_selection",
+        "anchor": "dummy-estimators",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.8. Dummy estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 114343,
+        "unit_start": 109779,
+        "token_count": 65
+      },
+      "score": 19.66558733639236,
+      "rank": 3
+    },
+    {
+      "id": "5db67e2400256ec645b36f0d",
+      "text": ">>> import pandas as pd\n>>> df = pd.DataFrame([[\"a\", \"x\"],\n...                    [np.nan, \"y\"],\n...                    [\"a\", np.nan],\n...                    [\"b\", \"y\"]], dtype=\"category\")\n...\n>>> imp = SimpleImputer(strategy=\"most_frequent\")\n>>> print(imp.fit_transform(df))\n[['a' 'x']\n ['a' 'y']\n ['a' 'y']\n ['b' 'y']]\n\nFor another example on usage, see Imputing missing values before building an estimator .",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 3052,
+        "start": 2642,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 165
+      },
+      "score": 15.463674244858392,
+      "rank": 4
+    },
+    {
+      "id": "93de675f600e3451504fd4d4",
+      "text": "By default, OrdinalEncoder will also passthrough missing values that are indicated by np.nan .\n\n>>> enc = preprocessing.OrdinalEncoder()\n>>> X = [['male'], ['female'], [np.nan], ['female']]\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [nan],\n       [ 0.]])\n\nOrdinalEncoder provides a parameter encoded_missing_value to encode the missing values without the need to create a pipeline and using SimpleImputer .\n\n>>> enc = preprocessing.OrdinalEncoder(encoded_missing_value=-1)\n>>> X = [['male'], ['female'], [np.nan], ['female']]\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [-1.],\n       [ 0.]])\n\nThe above processing is equivalent to the following pipeline:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.impute import SimpleImputer\n>>> enc = Pipeline(steps=[\n...     (\"encoder\", preprocessing.OrdinalEncoder()),\n...     (\"imputer\", SimpleImputer(strategy=\"constant\", fill_value=-1)),\n... ])\n>>> enc.fit_transform(X)\narray([[ 1.],\n       [ 0.],\n       [-1.],\n       [ 0.]])",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:006",
+      "metadata": {
+        "end": 2211,
+        "start": 1195,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 22404,
+        "unit_start": 18117,
+        "token_count": 375
+      },
+      "score": 14.621615574030214,
+      "rank": 5
+    },
+    {
+      "id": "fc48ae96b4f10aae70ab45d7",
+      "text": "3.4.8. Dummy estimators\n\nWhen doing supervised learning, a simple sanity check consists of comparing one’s estimator against simple rules of thumb. DummyClassifier implements several such simple strategies for classification:\n\nstratified generates random predictions by respecting the training set class distribution.\n\nmost_frequent always predicts the most frequent label in the training set.\n\nprior always predicts the class that maximizes the class prior (like most_frequent ) and predict_proba returns the class prior.\n\nuniform generates predictions uniformly at random.\n\nconstant always predicts a constant label that is provided by the user. A major motivation of this method is F1-scoring, when the positive class is in the minority.\n\nNote that with all these strategies, the predict method completely ignores the input data!\n\nTo illustrate DummyClassifier , first let’s create an imbalanced dataset:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> y[y != 1] = -1\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n\nNext, let’s compare the accuracy of SVC and most_frequent :",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:031",
+      "metadata": {
+        "end": 2906,
+        "start": 1702,
+        "topic": "model_selection",
+        "anchor": "dummy-estimators",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.8. Dummy estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 114343,
+        "unit_start": 109779,
+        "token_count": 292
+      },
+      "score": 14.252434869264931,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:34.062610+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 506,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 59,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 565
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:37.514617+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2878,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 185,
+        "output_tokens_details": {
+          "reasoning_tokens": 101
+        },
+        "total_tokens": 3063
+      }
+    }
+  ],
+  "seconds": 5.759942800003046,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q05",
+  "initial_ranking": [
+    {
+      "id": "7ec13427a119dad976f5383c",
+      "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 1963,
+        "start": 1052,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 264
+      },
+      "score": 24.271831358512877,
+      "rank": 1
+    },
+    {
+      "id": "5591bb33bc5cc0d6e234b031",
+      "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 668,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "imputation-of-missing-values",
+        "heading": "8.4. Imputation of missing values",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 150
+      },
+      "score": 15.060284401361589,
+      "rank": 2
+    },
+    {
+      "id": "bc1b30cb9239fd4dce3db979",
+      "text": "8.4.1. Univariate vs. Multivariate Imputation\n\nOne type of imputation algorithm is univariate, which imputes values in the i-th feature dimension using only non-missing values in that feature dimension (e.g. SimpleImputer ). By contrast, multivariate imputation algorithms use the entire set of available feature dimensions to estimate the missing values (e.g. IterativeImputer ).",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 1050,
+        "start": 670,
+        "topic": "preprocessing",
+        "anchor": "univariate-vs-multivariate-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.1. Univariate vs. Multivariate Imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 94
+      },
+      "score": 13.134226128724748,
+      "rank": 3
+    },
+    {
+      "id": "71efb637f429aef361d9e24f",
+      "text": "8.4.6. Marking imputed values\n\nThe MissingIndicator transformer is useful to transform a dataset into corresponding binary matrix indicating the presence of missing values in the dataset. This transformation is useful in conjunction with imputation. When using imputation, preserving the information about which values had been missing can be informative. Note that both the SimpleImputer and IterativeImputer have the boolean parameter add_indicator ( False by default) which when set to True provides a convenient way of stacking the output of the MissingIndicator transformer with the output of the imputer.\n\nNaN is usually used as the placeholder for missing values. However, it enforces the data type to be float. The parameter missing_values allows to specify other placeholder such as integer. In the following example, we will use -1 as missing values:\n\n>>> from sklearn.impute import MissingIndicator\n>>> X = np.array([[-1, -1, 1, 3],\n...               [4, -1, 0, -1],\n...               [8, -1, 1, 0]])\n>>> indicator = MissingIndicator(missing_values=-1)\n>>> mask_missing_values_only = indicator.fit_transform(X)\n>>> mask_missing_values_only\narray([[ True,  True, False],\n       [False,  True,  True],\n       [False,  True, False]])\n\nThe features parameter is used to choose the features for which the mask is constructed. By default, it is 'missing-only' which returns the imputer mask of the features containing missing values at fit time:\n\n>>> indicator.features_\narray([0, 1, 3])",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:003",
+      "metadata": {
+        "end": 3280,
+        "start": 1788,
+        "topic": "preprocessing",
+        "anchor": "marking-imputed-values",
+        "heading": "8.4. Imputation of missing values > 8.4.6. Marking imputed values",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11852,
+        "unit_start": 8181,
+        "token_count": 378
+      },
+      "score": 12.882481030706373,
+      "rank": 4
+    },
+    {
+      "id": "be3b1da9c776f955f57b418f",
+      "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 2640,
+        "start": 1965,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 240
+      },
+      "score": 11.872060662168433,
+      "rank": 5
+    },
+    {
+      "id": "42a6c1bb8187479049c2c85f",
+      "text": "8.4.3. Multivariate feature imputation\n\nA more sophisticated approach is to use the IterativeImputer class, which models each feature with missing values as a function of other features, and uses that estimate for imputation. It does so in an iterated round-robin fashion: at each step, a feature column is designated as output y and the other feature columns are treated as inputs X . A regressor is fit on (X, y) for known y . Then, the regressor is used to predict the missing values of y . This is done for each feature in an iterative fashion, and then is repeated for max_iter imputation rounds. The results of the final imputation round are returned.",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 3711,
+        "start": 3054,
+        "topic": "preprocessing",
+        "anchor": "multivariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.3. Multivariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 152
+      },
+      "score": 11.67976793610536,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

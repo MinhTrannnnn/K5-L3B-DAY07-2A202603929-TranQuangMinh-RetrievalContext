@@ -1,0 +1,592 @@
+{
+  "status": "answered",
+  "answer": "By default, the remaining rating columns are ignored, because `remainder='drop'` [99301dfa26148f99cfcb7b6a].",
+  "citations": [
+    "99301dfa26148f99cfcb7b6a"
+  ],
+  "question": "In the ColumnTransformer example, what happens to the remaining rating columns by default?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "ColumnTransformer example remaining rating columns by default remainder drop rating columns example",
+      "results": [
+        {
+          "id": "ba365dab5b4405735affac69",
+          "text": "Strings can reference columns if the input is a DataFrame, integers are always interpreted as the positional columns.\n\nWe can keep the remaining rating columns by setting remainder='passthrough' . The values are appended to the end of the transformation:\n\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(dtype='int'),['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='passthrough')\n\n>>> column_trans.fit_transform(X)\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 5, 4],\n       [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 3, 5],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 4],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 5, 3]]...)\n\nThe remainder parameter can be set to an estimator to transform the remaining rating columns. The transformed values are appended to the end of the transformation:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:006",
+          "metadata": {
+            "end": 900,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21249,
+            "unit_start": 17937,
+            "token_count": 335
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "99301dfa26148f99cfcb7b6a",
+          "text": "Incorporating statistics from test data into the preprocessors makes cross-validation scores unreliable (known as data leakage ), for example in the case of scalers or imputing missing values.\n\nYou may want to include the parameters of the preprocessors in a parameter search .\n\nThe ColumnTransformer helps performing different transformations for different columns of the data, within a Pipeline that is safe from data leakage and that can be parametrized. ColumnTransformer works on arrays, sparse matrices, and pandas DataFrames .\n\nTo each column, a different transformation can be applied, such as preprocessing or a specific feature extraction method:\n\n>>> import pandas as pd\n>>> X = pd.DataFrame(\n...     {'city': ['London', 'London', 'Paris', 'Sallisaw'],\n...      'title': [\"His Last Bow\", \"How Watson Learned the Trick\",\n...                \"A Moveable Feast\", \"The Grapes of Wrath\"],\n...      'expert_rating': [5, 3, 4, 5],\n...      'user_rating': [4, 5, 4, 3]})\n\nFor this data, we might want to encode the 'city' column as a categorical variable using OneHotEncoder but apply a CountVectorizer to the 'title' column. As we might use multiple feature extraction methods on the same column, we give each transformer a unique name, say 'city_category' and 'title_bow' . By default, the remaining rating columns are ignored ( remainder='drop' ):",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 1352,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 354
+          },
+          "score": 0.03225806451612903,
+          "rank": 2
+        },
+        {
+          "id": "5bf8ed50c4fd4d2057e866d6",
+          "text": ">>> from sklearn.preprocessing import MinMaxScaler\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder=MinMaxScaler())\n\n>>> column_trans.fit_transform(X)[:, -2:]\narray([[1. , 0.5],\n       [0. , 1. ],\n       [0.5, 0.5],\n       [1. , 0. ]])\n\nThe make_column_transformer function is available to more easily create a ColumnTransformer object. Specifically, the names will be given automatically. The equivalent for the above example would be:\n\n>>> from sklearn.compose import make_column_transformer\n>>> column_trans = make_column_transformer(\n...     (OneHotEncoder(), ['city']),\n...     (CountVectorizer(), 'title'),\n...     remainder=MinMaxScaler())\n>>> column_trans\nColumnTransformer(remainder=MinMaxScaler(),\n                  transformers=[('onehotencoder', OneHotEncoder(), ['city']),\n                                ('countvectorizer', CountVectorizer(),\n                                 'title')])\n\nIf ColumnTransformer is fitted with a dataframe and the dataframe only has string column names, then transforming a dataframe will use the column names to select the columns:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:006",
+          "metadata": {
+            "end": 2093,
+            "start": 902,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21249,
+            "unit_start": 17937,
+            "token_count": 373
+          },
+          "score": 0.031746031746031744,
+          "rank": 3
+        },
+        {
+          "id": "d9c901fabc2adb6236e56016",
+          "text": ">>> from sklearn.compose import ColumnTransformer\n>>> from sklearn.feature_extraction.text import CountVectorizer\n>>> from sklearn.preprocessing import OneHotEncoder\n>>> column_trans = ColumnTransformer(\n...     [('categories', OneHotEncoder(dtype='int'), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='drop', verbose_feature_names_out=False)\n\n>>> column_trans.fit(X)\nColumnTransformer(transformers=[('categories', OneHotEncoder(dtype='int'),\n                                 ['city']),\n                                ('title_bow', CountVectorizer(), 'title')],\n                  verbose_feature_names_out=False)\n\n>>> column_trans.get_feature_names_out()\narray(['city_London', 'city_Paris', 'city_Sallisaw', 'bow', 'feast',\n'grapes', 'his', 'how', 'last', 'learned', 'moveable', 'of', 'the',\n 'trick', 'watson', 'wrath'], ...)\n\n>>> column_trans.transform(X).toarray()\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 2315,
+            "start": 1354,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 365
+          },
+          "score": 0.030536130536130537,
+          "rank": 4
+        },
+        {
+          "id": "4da5c9d0aaf3ed46706871db",
+          "text": "It is also possible to encode each column into n_categories - 1 columns instead of n_categories columns by using the drop parameter. This parameter allows the user to specify a category for each feature to be dropped. This is useful to avoid co-linearity in the input matrix in some classifiers. Such functionality is useful, for example, when using non-regularized regression ( LinearRegression ), since co-linearity would cause the covariance matrix to be non-invertible:\n\n>>> X = [['male', 'from US', 'uses Safari'],\n...      ['female', 'from Europe', 'uses Firefox']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='first').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object),\n array(['uses Firefox', 'uses Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 1., 1.],\n       [0., 0., 0.]])\n\nOne might want to drop one of the two columns only for features with 2 categories. In this case, you can set the parameter drop='if_binary' .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 1924,
+            "start": 896,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 326
+          },
+          "score": 0.030330882352941176,
+          "rank": 5
+        },
+        {
+          "id": "95529a4aeea0650992ac7a3a",
+          "text": "[1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]]...)\n\nIn the above example, the CountVectorizer expects a 1D array as input and therefore the columns were specified as a string ( 'title' ). However, OneHotEncoder as most of other transformers expects 2D data, therefore in that case you need to specify the column as a list of strings ( ['city'] ).\n\nApart from a scalar or a single item list, the column selection can be specified as a list of multiple items, an integer array, a slice, a boolean mask, or with a make_column_selector . The make_column_selector is used to select columns based on data type or column name:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 3059,
+            "start": 2323,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 241
+          },
+          "score": 0.029631255487269532,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "ba365dab5b4405735affac69",
+          "text": "Strings can reference columns if the input is a DataFrame, integers are always interpreted as the positional columns.\n\nWe can keep the remaining rating columns by setting remainder='passthrough' . The values are appended to the end of the transformation:\n\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(dtype='int'),['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='passthrough')\n\n>>> column_trans.fit_transform(X)\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 5, 4],\n       [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 3, 5],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 4],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 5, 3]]...)\n\nThe remainder parameter can be set to an estimator to transform the remaining rating columns. The transformed values are appended to the end of the transformation:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:006",
+          "metadata": {
+            "end": 900,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21249,
+            "unit_start": 17937,
+            "token_count": 335
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "99301dfa26148f99cfcb7b6a",
+          "text": "Incorporating statistics from test data into the preprocessors makes cross-validation scores unreliable (known as data leakage ), for example in the case of scalers or imputing missing values.\n\nYou may want to include the parameters of the preprocessors in a parameter search .\n\nThe ColumnTransformer helps performing different transformations for different columns of the data, within a Pipeline that is safe from data leakage and that can be parametrized. ColumnTransformer works on arrays, sparse matrices, and pandas DataFrames .\n\nTo each column, a different transformation can be applied, such as preprocessing or a specific feature extraction method:\n\n>>> import pandas as pd\n>>> X = pd.DataFrame(\n...     {'city': ['London', 'London', 'Paris', 'Sallisaw'],\n...      'title': [\"His Last Bow\", \"How Watson Learned the Trick\",\n...                \"A Moveable Feast\", \"The Grapes of Wrath\"],\n...      'expert_rating': [5, 3, 4, 5],\n...      'user_rating': [4, 5, 4, 3]})\n\nFor this data, we might want to encode the 'city' column as a categorical variable using OneHotEncoder but apply a CountVectorizer to the 'title' column. As we might use multiple feature extraction methods on the same column, we give each transformer a unique name, say 'city_category' and 'title_bow' . By default, the remaining rating columns are ignored ( remainder='drop' ):",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 1352,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 354
+          },
+          "score": 0.03225806451612903,
+          "rank": 2
+        },
+        {
+          "id": "5bf8ed50c4fd4d2057e866d6",
+          "text": ">>> from sklearn.preprocessing import MinMaxScaler\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder=MinMaxScaler())\n\n>>> column_trans.fit_transform(X)[:, -2:]\narray([[1. , 0.5],\n       [0. , 1. ],\n       [0.5, 0.5],\n       [1. , 0. ]])\n\nThe make_column_transformer function is available to more easily create a ColumnTransformer object. Specifically, the names will be given automatically. The equivalent for the above example would be:\n\n>>> from sklearn.compose import make_column_transformer\n>>> column_trans = make_column_transformer(\n...     (OneHotEncoder(), ['city']),\n...     (CountVectorizer(), 'title'),\n...     remainder=MinMaxScaler())\n>>> column_trans\nColumnTransformer(remainder=MinMaxScaler(),\n                  transformers=[('onehotencoder', OneHotEncoder(), ['city']),\n                                ('countvectorizer', CountVectorizer(),\n                                 'title')])\n\nIf ColumnTransformer is fitted with a dataframe and the dataframe only has string column names, then transforming a dataframe will use the column names to select the columns:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:006",
+          "metadata": {
+            "end": 2093,
+            "start": 902,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21249,
+            "unit_start": 17937,
+            "token_count": 373
+          },
+          "score": 0.031746031746031744,
+          "rank": 3
+        },
+        {
+          "id": "d9c901fabc2adb6236e56016",
+          "text": ">>> from sklearn.compose import ColumnTransformer\n>>> from sklearn.feature_extraction.text import CountVectorizer\n>>> from sklearn.preprocessing import OneHotEncoder\n>>> column_trans = ColumnTransformer(\n...     [('categories', OneHotEncoder(dtype='int'), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='drop', verbose_feature_names_out=False)\n\n>>> column_trans.fit(X)\nColumnTransformer(transformers=[('categories', OneHotEncoder(dtype='int'),\n                                 ['city']),\n                                ('title_bow', CountVectorizer(), 'title')],\n                  verbose_feature_names_out=False)\n\n>>> column_trans.get_feature_names_out()\narray(['city_London', 'city_Paris', 'city_Sallisaw', 'bow', 'feast',\n'grapes', 'his', 'how', 'last', 'learned', 'moveable', 'of', 'the',\n 'trick', 'watson', 'wrath'], ...)\n\n>>> column_trans.transform(X).toarray()\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 2315,
+            "start": 1354,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 365
+          },
+          "score": 0.030536130536130537,
+          "rank": 4
+        },
+        {
+          "id": "4da5c9d0aaf3ed46706871db",
+          "text": "It is also possible to encode each column into n_categories - 1 columns instead of n_categories columns by using the drop parameter. This parameter allows the user to specify a category for each feature to be dropped. This is useful to avoid co-linearity in the input matrix in some classifiers. Such functionality is useful, for example, when using non-regularized regression ( LinearRegression ), since co-linearity would cause the covariance matrix to be non-invertible:\n\n>>> X = [['male', 'from US', 'uses Safari'],\n...      ['female', 'from Europe', 'uses Firefox']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='first').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object),\n array(['uses Firefox', 'uses Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 1., 1.],\n       [0., 0., 0.]])\n\nOne might want to drop one of the two columns only for features with 2 categories. In this case, you can set the parameter drop='if_binary' .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 1924,
+            "start": 896,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 326
+          },
+          "score": 0.030330882352941176,
+          "rank": 5
+        },
+        {
+          "id": "95529a4aeea0650992ac7a3a",
+          "text": "[1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]]...)\n\nIn the above example, the CountVectorizer expects a 1D array as input and therefore the columns were specified as a string ( 'title' ). However, OneHotEncoder as most of other transformers expects 2D data, therefore in that case you need to specify the column as a list of strings ( ['city'] ).\n\nApart from a scalar or a single item list, the column selection can be specified as a list of multiple items, an integer array, a slice, a boolean mask, or with a make_column_selector . The make_column_selector is used to select columns based on data type or column name:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 3059,
+            "start": 2323,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 241
+          },
+          "score": 0.029631255487269532,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.1791720000001078
+    }
+  ],
+  "context": [
+    {
+      "id": "ba365dab5b4405735affac69",
+      "text": "Strings can reference columns if the input is a DataFrame, integers are always interpreted as the positional columns.\n\nWe can keep the remaining rating columns by setting remainder='passthrough' . The values are appended to the end of the transformation:\n\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(dtype='int'),['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='passthrough')\n\n>>> column_trans.fit_transform(X)\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 5, 4],\n       [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 3, 5],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 4],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 5, 3]]...)\n\nThe remainder parameter can be set to an estimator to transform the remaining rating columns. The transformed values are appended to the end of the transformation:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:006",
+      "metadata": {
+        "end": 900,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21249,
+        "unit_start": 17937,
+        "token_count": 335
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "99301dfa26148f99cfcb7b6a",
+      "text": "Incorporating statistics from test data into the preprocessors makes cross-validation scores unreliable (known as data leakage ), for example in the case of scalers or imputing missing values.\n\nYou may want to include the parameters of the preprocessors in a parameter search .\n\nThe ColumnTransformer helps performing different transformations for different columns of the data, within a Pipeline that is safe from data leakage and that can be parametrized. ColumnTransformer works on arrays, sparse matrices, and pandas DataFrames .\n\nTo each column, a different transformation can be applied, such as preprocessing or a specific feature extraction method:\n\n>>> import pandas as pd\n>>> X = pd.DataFrame(\n...     {'city': ['London', 'London', 'Paris', 'Sallisaw'],\n...      'title': [\"His Last Bow\", \"How Watson Learned the Trick\",\n...                \"A Moveable Feast\", \"The Grapes of Wrath\"],\n...      'expert_rating': [5, 3, 4, 5],\n...      'user_rating': [4, 5, 4, 3]})\n\nFor this data, we might want to encode the 'city' column as a categorical variable using OneHotEncoder but apply a CountVectorizer to the 'title' column. As we might use multiple feature extraction methods on the same column, we give each transformer a unique name, say 'city_category' and 'title_bow' . By default, the remaining rating columns are ignored ( remainder='drop' ):",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 1352,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 354
+      },
+      "score": 0.03225806451612903,
+      "rank": 2
+    },
+    {
+      "id": "5bf8ed50c4fd4d2057e866d6",
+      "text": ">>> from sklearn.preprocessing import MinMaxScaler\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder=MinMaxScaler())\n\n>>> column_trans.fit_transform(X)[:, -2:]\narray([[1. , 0.5],\n       [0. , 1. ],\n       [0.5, 0.5],\n       [1. , 0. ]])\n\nThe make_column_transformer function is available to more easily create a ColumnTransformer object. Specifically, the names will be given automatically. The equivalent for the above example would be:\n\n>>> from sklearn.compose import make_column_transformer\n>>> column_trans = make_column_transformer(\n...     (OneHotEncoder(), ['city']),\n...     (CountVectorizer(), 'title'),\n...     remainder=MinMaxScaler())\n>>> column_trans\nColumnTransformer(remainder=MinMaxScaler(),\n                  transformers=[('onehotencoder', OneHotEncoder(), ['city']),\n                                ('countvectorizer', CountVectorizer(),\n                                 'title')])\n\nIf ColumnTransformer is fitted with a dataframe and the dataframe only has string column names, then transforming a dataframe will use the column names to select the columns:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:006",
+      "metadata": {
+        "end": 2093,
+        "start": 902,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21249,
+        "unit_start": 17937,
+        "token_count": 373
+      },
+      "score": 0.031746031746031744,
+      "rank": 3
+    },
+    {
+      "id": "d9c901fabc2adb6236e56016",
+      "text": ">>> from sklearn.compose import ColumnTransformer\n>>> from sklearn.feature_extraction.text import CountVectorizer\n>>> from sklearn.preprocessing import OneHotEncoder\n>>> column_trans = ColumnTransformer(\n...     [('categories', OneHotEncoder(dtype='int'), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='drop', verbose_feature_names_out=False)\n\n>>> column_trans.fit(X)\nColumnTransformer(transformers=[('categories', OneHotEncoder(dtype='int'),\n                                 ['city']),\n                                ('title_bow', CountVectorizer(), 'title')],\n                  verbose_feature_names_out=False)\n\n>>> column_trans.get_feature_names_out()\narray(['city_London', 'city_Paris', 'city_Sallisaw', 'bow', 'feast',\n'grapes', 'his', 'how', 'last', 'learned', 'moveable', 'of', 'the',\n 'trick', 'watson', 'wrath'], ...)\n\n>>> column_trans.transform(X).toarray()\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 2315,
+        "start": 1354,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 365
+      },
+      "score": 0.030536130536130537,
+      "rank": 4
+    },
+    {
+      "id": "4da5c9d0aaf3ed46706871db",
+      "text": "It is also possible to encode each column into n_categories - 1 columns instead of n_categories columns by using the drop parameter. This parameter allows the user to specify a category for each feature to be dropped. This is useful to avoid co-linearity in the input matrix in some classifiers. Such functionality is useful, for example, when using non-regularized regression ( LinearRegression ), since co-linearity would cause the covariance matrix to be non-invertible:\n\n>>> X = [['male', 'from US', 'uses Safari'],\n...      ['female', 'from Europe', 'uses Firefox']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='first').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object),\n array(['uses Firefox', 'uses Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 1., 1.],\n       [0., 0., 0.]])\n\nOne might want to drop one of the two columns only for features with 2 categories. In this case, you can set the parameter drop='if_binary' .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 1924,
+        "start": 896,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 326
+      },
+      "score": 0.030330882352941176,
+      "rank": 5
+    },
+    {
+      "id": "95529a4aeea0650992ac7a3a",
+      "text": "[1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]]...)\n\nIn the above example, the CountVectorizer expects a 1D array as input and therefore the columns were specified as a string ( 'title' ). However, OneHotEncoder as most of other transformers expects 2D data, therefore in that case you need to specify the column as a list of strings ( ['city'] ).\n\nApart from a scalar or a single item list, the column selection can be specified as a list of multiple items, an integer array, a slice, a boolean mask, or with a make_column_selector . The make_column_selector is used to select columns based on data type or column name:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 3059,
+        "start": 2323,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 241
+      },
+      "score": 0.029631255487269532,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:21.010421+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 75,
+        "output_tokens_details": {
+          "reasoning_tokens": 44
+        },
+        "total_tokens": 584
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:23.662575+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3483,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 116,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 3599
+      }
+    }
+  ],
+  "seconds": 4.7781424000022525,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N02",
+  "initial_ranking": [
+    {
+      "id": "ba365dab5b4405735affac69",
+      "text": "Strings can reference columns if the input is a DataFrame, integers are always interpreted as the positional columns.\n\nWe can keep the remaining rating columns by setting remainder='passthrough' . The values are appended to the end of the transformation:\n\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(dtype='int'),['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder='passthrough')\n\n>>> column_trans.fit_transform(X)\narray([[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 5, 4],\n       [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 3, 5],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 4],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 5, 3]]...)\n\nThe remainder parameter can be set to an estimator to transform the remaining rating columns. The transformed values are appended to the end of the transformation:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:006",
+      "metadata": {
+        "end": 900,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21249,
+        "unit_start": 17937,
+        "token_count": 335
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "99301dfa26148f99cfcb7b6a",
+      "text": "Incorporating statistics from test data into the preprocessors makes cross-validation scores unreliable (known as data leakage ), for example in the case of scalers or imputing missing values.\n\nYou may want to include the parameters of the preprocessors in a parameter search .\n\nThe ColumnTransformer helps performing different transformations for different columns of the data, within a Pipeline that is safe from data leakage and that can be parametrized. ColumnTransformer works on arrays, sparse matrices, and pandas DataFrames .\n\nTo each column, a different transformation can be applied, such as preprocessing or a specific feature extraction method:\n\n>>> import pandas as pd\n>>> X = pd.DataFrame(\n...     {'city': ['London', 'London', 'Paris', 'Sallisaw'],\n...      'title': [\"His Last Bow\", \"How Watson Learned the Trick\",\n...                \"A Moveable Feast\", \"The Grapes of Wrath\"],\n...      'expert_rating': [5, 3, 4, 5],\n...      'user_rating': [4, 5, 4, 3]})\n\nFor this data, we might want to encode the 'city' column as a categorical variable using OneHotEncoder but apply a CountVectorizer to the 'title' column. As we might use multiple feature extraction methods on the same column, we give each transformer a unique name, say 'city_category' and 'title_bow' . By default, the remaining rating columns are ignored ( remainder='drop' ):",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 1352,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 354
+      },
+      "score": 0.03225806451612903,
+      "rank": 2
+    },
+    {
+      "id": "5bf8ed50c4fd4d2057e866d6",
+      "text": ">>> from sklearn.preprocessing import MinMaxScaler\n>>> column_trans = ColumnTransformer(\n...     [('city_category', OneHotEncoder(), ['city']),\n...      ('title_bow', CountVectorizer(), 'title')],\n...     remainder=MinMaxScaler())\n\n>>> column_trans.fit_transform(X)[:, -2:]\narray([[1. , 0.5],\n       [0. , 1. ],\n       [0.5, 0.5],\n       [1. , 0. ]])\n\nThe make_column_transformer function is available to more easily create a ColumnTransformer object. Specifically, the names will be given automatically. The equivalent for the above example would be:\n\n>>> from sklearn.compose import make_column_transformer\n>>> column_trans = make_column_transformer(\n...     (OneHotEncoder(), ['city']),\n...     (CountVectorizer(), 'title'),\n...     remainder=MinMaxScaler())\n>>> column_trans\nColumnTransformer(remainder=MinMaxScaler(),\n                  transformers=[('onehotencoder', OneHotEncoder(), ['city']),\n                                ('countvectorizer', CountVectorizer(),\n                                 'title')])\n\nIf ColumnTransformer is fitted with a dataframe and the dataframe only has string column names, then transforming a dataframe will use the column names to select the columns:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:006",
+      "metadata": {
+        "end": 2093,
+        "start": 902,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21249,
+        "unit_start": 17937,
+        "token_count": 373
+      },
+      "score": 0.03149801587301587,
+      "rank": 3
+    },
+    {
+      "id": "4da5c9d0aaf3ed46706871db",
+      "text": "It is also possible to encode each column into n_categories - 1 columns instead of n_categories columns by using the drop parameter. This parameter allows the user to specify a category for each feature to be dropped. This is useful to avoid co-linearity in the input matrix in some classifiers. Such functionality is useful, for example, when using non-regularized regression ( LinearRegression ), since co-linearity would cause the covariance matrix to be non-invertible:\n\n>>> X = [['male', 'from US', 'uses Safari'],\n...      ['female', 'from Europe', 'uses Firefox']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='first').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object),\n array(['uses Firefox', 'uses Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 1., 1.],\n       [0., 0., 0.]])\n\nOne might want to drop one of the two columns only for features with 2 categories. In this case, you can set the parameter drop='if_binary' .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 1924,
+        "start": 896,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 326
+      },
+      "score": 0.02946912242686891,
+      "rank": 4
+    },
+    {
+      "id": "95529a4aeea0650992ac7a3a",
+      "text": "[1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],\n       [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],\n       [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1]]...)\n\nIn the above example, the CountVectorizer expects a 1D array as input and therefore the columns were specified as a string ( 'title' ). However, OneHotEncoder as most of other transformers expects 2D data, therefore in that case you need to specify the column as a list of strings ( ['city'] ).\n\nApart from a scalar or a single item list, the column selection can be specified as a list of multiple items, an integer array, a slice, a boolean mask, or with a make_column_selector . The make_column_selector is used to select columns based on data type or column name:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 3059,
+        "start": 2323,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 241
+      },
+      "score": 0.028814262023217248,
+      "rank": 5
+    },
+    {
+      "id": "823ae3f366e1300530806607",
+      "text": "3.4.3. The scoring parameter: defining model evaluation rules\n\nModel selection and evaluation tools that internally use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) take a scoring parameter that controls what metric they apply to the estimators evaluated.\n\nThey can be specified in several ways:\n\nNone : the estimator’s default evaluation criterion (i.e., the metric used in the estimator’s score method) is used.\n\nString name : common metrics can be passed via a string name.\n\nCallable : more complex metrics can be passed via a custom metric callable (e.g., function).\n\nSome tools do also accept multiple metric evaluation. See Using multiple metric evaluation for details.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:003",
+      "metadata": {
+        "end": 760,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "the-scoring-parameter-defining-model-evaluation-rules",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10912,
+        "unit_start": 7345,
+        "token_count": 172
+      },
+      "score": 0.027809742999616416,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

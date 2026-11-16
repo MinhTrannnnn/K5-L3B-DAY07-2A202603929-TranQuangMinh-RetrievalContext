@@ -1,0 +1,25 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source page 010 states that precision means not labeling a negative sample as positive and recall means finding all positive samples; page 011 gives the matching formulas precision=tp/(tp+fp) and recall=tp/(tp+fn). The answer matches both.",
+  "query_id": "q15",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "76cde5dd720ab99fe4f0e5400487d428d719b429cd49b9a2673e7926a8685ef8",
+  "alternative_cited_pages": [
+    "model_evaluation:010",
+    "model_evaluation:011"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

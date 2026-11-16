@@ -1,0 +1,1151 @@
+{
+  "status": "answered",
+  "answer": "The two highlighted regions are the Middle East and North Africa, and South Asia [wdr-p156-text-000].",
+  "citations": [
+    "wdr-p156-text-000"
+  ],
+  "question": "Read Figure 5.8. Which two regions are highlighted as having low female labor force participation?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Figure 5.8\" female labor force participation low regions highlighted",
+      "results": [
+        {
+          "id": "wdr-p156-chart-01-000",
+          "text": "Figure 5.8\nMulti-line chart titled 'Female labor force participation is low in the Middle East and North Africa and in South Asia'. Horizontal axis shows years 1960, 1980, 2000, 2020. Vertical axis: 'Female labor participation, ages 15–64 (%)', scaled from 0 to 60. Legend and visible series: East Asia and Pacific (gray) rises from about 33 in 1960 to about 55 in 1990, then around 54 in 2000 and about 52 in 2020; Europe and Central Asia (orange-red) starts about 54 in 1960, around 50 in 1970–1980, about 48 in 1990, about 47 in 2000, and about 50 in 2020; Latin America and the Caribbean (teal) rises from about 20 in 1960 to about 28 in 1970, 34 in 1980, 45 in 1990, 49 in 2000, 51 in 2010, and 52 in 2020; Middle East and North Africa (brown/gold) rises from about 6 in 1960 to 9 in 1970, 12 in 1980, 20 in 1990, about 18 in 2000–2010, and about 15 in 2020; South Asia (dark blue) is about 30 in 1960, drops to about 17 in 1970, about 20 in 1980, rises to about 33 in 1990, 36 in 2000, 40 in 2010, and about 38 in 2020; Sub-Saharan Africa (olive) is about 40 in 1960, 45 in 1970, 40 in 1980, 50 in 1990, 52 in 2000, 54 in 2010, and 55 in 2020. Source: WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note: data are averages of national estimates for middle-income countries in each region.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-156.png",
+            "label": "Figure 5.8",
+            "pdf_page": 156,
+            "visual_id": "wdr-p156-chart-01",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact intermediate year values are estimated from the plotted lines where no point labels are shown."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.7977153659261369,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p156-text-000",
+          "text": "Figure 5.7 There is a substantial gap          Figure 5.8 Female labor force participation\nbetween low- and high-income countries in       is low in the Middle East and North Africa and\nfemale educational attainment                    in South Asia\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.741963006263755,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p156-text-001",
+          "text": "    (%) 80                                           60at\n      70                                69.3                                                   50with\n      60\n                                52.5                        (%) 4025+ education      50                                                                                                                                                                                                                                                                                                                       participation,age                                                 30      40                                                                                                 15−64\n                                                                                                               labor                                                   20      30             27.0                                                                                              ages women\n      20\nof                                                 10                                                                                                                                     Female                   upper-secondary 10     6.4\n                                                    0 Share       0                                            1960      1980      2000      2020      least        LICs    LMICs   UMICs    HICs\n                                                                  East Asia and Pacific\nSource: WDR 2024 team.                                           Europe and Central Asia\nNote: The  figure  illustrates educational attainment of                    Latin America and the Caribbean\nwomen 25+ years of age for at least upper-secondary\neducation. The data cover 141 countries. HICs = high-                  Middle East and North Africa\nincome countries; LICs = low-income countries; LMICs =                 South Asia     Sub-Saharan Africa\nlower-middle-income countries; UMICs = upper-middle-\nincome countries.                                          Source: WDI (World Development Indicators) (DataBank),\n                                                      World Bank, Washington, DC, https://databank.worldbank​\nWomen: Missing at work                               .org/source/world-development-indicators.\nFemale labor force participation is low in sev-     Note: Data are averages of national estimates for middle-\n                                                   income countries in each region.\neral middle-income countries, particularly in the\nMiddle East and North Africa and in South Asia    returns to  talent, education, and experience.\n(­figure 5.8). By contrast, female labor force par-   Compounding the problem, fewer higher-skilled\nt",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.7264671172163073,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p157-chart-00-000",
+          "text": "Figure 5.9\nLine chart titled 'Female labor force participation has evolved differently across countries.' Y-axis: 'Female labor force participation, ages 15–64 (%)' from 0 to 80. X-axis: years 1990, 2000, 2010, 2019. Eight country series are shown with a legend: China, Egypt, Arab Rep., India, Indonesia, Japan, Korea, Rep., Malaysia, Türkiye. Visible patterns: China starts near 79% in 1990 and declines gradually to about 71% by 2019; Japan rises from about 58% to about 73%; Korea, Rep. rises from about 50% to about 60%; Malaysia rises from about 52% to about 56%; Indonesia rises from about 45% to about 56%, with a noticeable uptick after around 2012; Türkiye falls from about 36% to about 24% in the early 2000s, then recovers to about 38% by 2019; India is roughly flat around 29%–32% until the 2010s, then dips to about 22% before a slight rebound near 25% in 2019; Egypt, Arab Rep. trends from about 24% to about 18% by 2019, with a mild rise in the middle years. The chart emphasizes that some countries increased participation while others stagnated or declined.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "157",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-157.png",
+            "label": "Figure 5.9",
+            "pdf_page": 157,
+            "visual_id": "wdr-p157-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact values are not labeled; all values are approximate from the plotted lines.",
+              "Series colors and minor year-to-year fluctuations are preserved only approximately.",
+              "The last visible point for India appears to rebound slightly near 2019; the exact endpoint is not labeled."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.7264206995985203,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p157-text-000",
+          "text": "Figure 5.9 Female labor force                 Figure 5.10 The share of female\nparticipation has evolved differently             professionals has risen in some countries but\nacross countries                              not others\n\n       80                                                60\n\n    (%)  70\n                                                                              (%) 50       60                                                                                                                           highly\n                                                  in force 15−64\n       50                                                40\n labor ages  40                                                                                                                                               females  occupations 30\n       30                                         of Female    20                                                                                                                                                                                      skilled 20                                                                                                                            Share                   participation,  10\n                                                         10        0                                                                  1          5   10   20   40 60\n       1990      2000      2010      2019\n                                               GDP per capita (US$1,000, log scale)\n               China         Egypt, Arab Rep.                 Brazil, 1970–2010                 Chile, 1960–2002\n                  India         Indonesia                      Egypt, Arab Rep., 1986–2006     India, 1983–2009\n              Japan        Korea, Rep.                    Indonesia, 1971–2005          Mexico, 1960–2015\n                Malaysia     Türkiye                      South Africa, 1996–2007        United States, 1960–2015\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "157",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 157,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.672423632378024,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p157-chart-01-000",
+          "text": "Figure 5.10\nScatter/segment chart titled 'The share of female professionals has risen in some countries but not others.' Y-axis: 'Share of females in highly skilled occupations (%)' from 10 to 60. X-axis: 'GDP per capita (US$1,000, log scale)' with labeled ticks at 1, 5, 10, 20, 40, 60. The figure uses short line segments for country-period trajectories, with legend entries: Brazil, 1970–2010; Chile, 1960–2002; Egypt, Arab Rep., 1986–2006; India, 1983–2009; Indonesia, 1971–2005; Malaysia, 1996–2007; Mexico, 1960–2015; United States, 1960–2015. Visible relationships: Brazil rises from roughly 31% at GDP per capita around 6 to about 48% around 10; Chile rises from about 31% around 4 to about 43% around 9; Egypt, Arab Rep. rises from about 27% around 3 to about 29% around 4; India rises from about 15% around 0.6 to about 18% around 1.5; Indonesia rises from about 21% around 0.8 to about 43% around 2; Malaysia is nearly flat/slightly down around 47% to 46% near GDP per capita 4.5–5; Mexico rises from about 31% around 4.5 to about 47% around 10; United States rises from about 35% around 20 to about 53% around 60. Overall, the figure shows a positive association in many countries, but with different starting levels and magnitudes of increase.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "157",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-157.png",
+            "label": "Figure 5.10",
+            "pdf_page": 157,
+            "visual_id": "wdr-p157-chart-01",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact values are not labeled; all plotted coordinates are approximate from the figure.",
+              "Some line segments are short and partly overlap, so exact endpoints and slopes are approximate.",
+              "The log-scale axis is visible, but intermediate unlabeled positions are estimated visually."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6248264425280043,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p156-text-002",
+          "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.614227509770046,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p156-chart-00-000",
+          "text": "Figure 5.7\nBar chart titled 'There is a substantial gap between low- and high-income countries in female educational attainment'. Vertical axis: 'Share of women age 25+ with at least upper-secondary education (%)', scaled from 0 to 80. Four orange bars with value labels: LICs 6.4; LMICs 27.0; UMICs 52.5; HICs 69.3. Source shown: 'WDR 2024 team.' Note states the figure illustrates educational attainment of women 25+ years of age for at least upper-secondary education; data cover 141 countries; HICs = high-income countries, LICs = low-income countries, LMICs = lower-middle-income countries, UMICs = upper-middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-156.png",
+            "label": "Figure 5.7",
+            "pdf_page": 156,
+            "visual_id": "wdr-p156-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6071863464311512,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p159-chart-00-000",
+          "text": "Figure 5.12\nScatter plot titled 'Women lag behind men in having financial accounts'. X-axis: 'GDP per capita (constant PPP 2017 US$1,000, log scale)' with visible tick labels around 50 and 100. Y-axis: 'Account ownership gap (percentage points)' with tick marks from about -10 to 40. The plotted points show the absolute difference in financial account ownership between men and women across 157 countries. A dark downward-sloping trend line runs roughly from about 6-7 percentage points at low GDP per capita to about 1-2 points at the highest GDP per capita, with a dotted horizontal zero line across the plot. Several countries are labeled in orange on the scatter: Morocco (around 24-25), Nigeria (around 17-18), Bangladesh (around 12-13), China (around 6-7), Colombia (around 9-10), Chile (around 5-6), and Sweden (around 0 or slightly below). Many unlabeled light-blue points are scattered throughout, with some higher-gap outliers near 20-35 percentage points and several points near zero or slightly negative. Sources noted below the plot: Global Findex (Global Financial Inclusion Database), World Bank, Washington, DC, https://globalfindex.worldbank.org/#data_sec_focus; WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note states the figure shows the absolute difference (in percentage points) in 157 countries between the share of men with a financial account and the share of women with a financial account; accounts include those in financial institutions and mobile accounts. GDP = gross domestic product; PPP = purchasing power parity.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "159",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-159.png",
+            "label": "Figure 5.12",
+            "pdf_page": 159,
+            "visual_id": "wdr-p159-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact coordinates of unlabeled points and the fitted line are approximate from the image.",
+              "The x-axis tick at 50 is visible, but the left-side x-axis tick labels are not fully shown in the provided page image."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5936638022597863,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p158-chart-00-000",
+          "text": "Figure 5.11\nGlobally, women own a smaller share of firms than men. Vertical bar chart with y-axis labeled \"Share of firms that are female-owned (%)\" ranging from 0 to 40. Bars are orange and include thin error bars. The 25 sectors are ordered from lowest to highest share of female-owned firms. Approximate bar heights from left to right: Petroleum (~3%); Leather products (~5%); Wood products (~6%); Hospitality and tourism (~14%); Transport (~15%); Printing and publishing (~15%); Hotels and restaurants (~16%); Other (~17%); Construction (~17%); Mining (~18%); Other services (~18%); Other manufacturing (~18%); Manufacturing (~19%); Metal products (~19%); IT and IT services (~20%); Nonmetallic products (~21%); Food (~21%); Retail (~22%); Plastics and rubber (~24%); Machinery and electronics (~28%); Wholesale (~31%); Chemicals (~32%); Garments (~33%); Services (~34%); Textiles (~35%). Source note: Chiplunkar and Goldberg 2021; WBES (World Bank Enterprise Surveys) dashboard, World Bank, Washington, DC, https://www.enterprisesurveys.org/en/enterprisesurveys. Note: the figure shows the share of female-owned firms across 25 sectors, as well as the confidence intervals for the 95th percentile. The WBES sample covers 141 countries across 13 years (2006–18). IT = information technology.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "158",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-158.png",
+            "label": "Figure 5.11",
+            "pdf_page": 158,
+            "visual_id": "wdr-p158-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact numeric values are not printed on the chart; percentages above are visual estimates from bar heights.",
+              "The error bars are visible but their exact numerical bounds are not labeled.",
+              "The note says \"confidence intervals for the 95th percentile,\" which is reproduced as visible even though the plotted measure appears to be sector shares."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.581085663283208,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p156-chart-01-000",
+          "text": "Figure 5.8\nMulti-line chart titled 'Female labor force participation is low in the Middle East and North Africa and in South Asia'. Horizontal axis shows years 1960, 1980, 2000, 2020. Vertical axis: 'Female labor participation, ages 15–64 (%)', scaled from 0 to 60. Legend and visible series: East Asia and Pacific (gray) rises from about 33 in 1960 to about 55 in 1990, then around 54 in 2000 and about 52 in 2020; Europe and Central Asia (orange-red) starts about 54 in 1960, around 50 in 1970–1980, about 48 in 1990, about 47 in 2000, and about 50 in 2020; Latin America and the Caribbean (teal) rises from about 20 in 1960 to about 28 in 1970, 34 in 1980, 45 in 1990, 49 in 2000, 51 in 2010, and 52 in 2020; Middle East and North Africa (brown/gold) rises from about 6 in 1960 to 9 in 1970, 12 in 1980, 20 in 1990, about 18 in 2000–2010, and about 15 in 2020; South Asia (dark blue) is about 30 in 1960, drops to about 17 in 1970, about 20 in 1980, rises to about 33 in 1990, 36 in 2000, 40 in 2010, and about 38 in 2020; Sub-Saharan Africa (olive) is about 40 in 1960, 45 in 1970, 40 in 1980, 50 in 1990, 52 in 2000, 54 in 2010, and 55 in 2020. Source: WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note: data are averages of national estimates for middle-income countries in each region.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-156.png",
+            "label": "Figure 5.8",
+            "pdf_page": 156,
+            "visual_id": "wdr-p156-chart-01",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact intermediate year values are estimated from the plotted lines where no point labels are shown."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.7977153659261369,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p156-text-000",
+          "text": "Figure 5.7 There is a substantial gap          Figure 5.8 Female labor force participation\nbetween low- and high-income countries in       is low in the Middle East and North Africa and\nfemale educational attainment                    in South Asia\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.741963006263755,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p156-text-001",
+          "text": "    (%) 80                                           60at\n      70                                69.3                                                   50with\n      60\n                                52.5                        (%) 4025+ education      50                                                                                                                                                                                                                                                                                                                       participation,age                                                 30      40                                                                                                 15−64\n                                                                                                               labor                                                   20      30             27.0                                                                                              ages women\n      20\nof                                                 10                                                                                                                                     Female                   upper-secondary 10     6.4\n                                                    0 Share       0                                            1960      1980      2000      2020      least        LICs    LMICs   UMICs    HICs\n                                                                  East Asia and Pacific\nSource: WDR 2024 team.                                           Europe and Central Asia\nNote: The  figure  illustrates educational attainment of                    Latin America and the Caribbean\nwomen 25+ years of age for at least upper-secondary\neducation. The data cover 141 countries. HICs = high-                  Middle East and North Africa\nincome countries; LICs = low-income countries; LMICs =                 South Asia     Sub-Saharan Africa\nlower-middle-income countries; UMICs = upper-middle-\nincome countries.                                          Source: WDI (World Development Indicators) (DataBank),\n                                                      World Bank, Washington, DC, https://databank.worldbank​\nWomen: Missing at work                               .org/source/world-development-indicators.\nFemale labor force participation is low in sev-     Note: Data are averages of national estimates for middle-\n                                                   income countries in each region.\neral middle-income countries, particularly in the\nMiddle East and North Africa and in South Asia    returns to  talent, education, and experience.\n(­figure 5.8). By contrast, female labor force par-   Compounding the problem, fewer higher-skilled\nt",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.7264671172163073,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p157-chart-00-000",
+          "text": "Figure 5.9\nLine chart titled 'Female labor force participation has evolved differently across countries.' Y-axis: 'Female labor force participation, ages 15–64 (%)' from 0 to 80. X-axis: years 1990, 2000, 2010, 2019. Eight country series are shown with a legend: China, Egypt, Arab Rep., India, Indonesia, Japan, Korea, Rep., Malaysia, Türkiye. Visible patterns: China starts near 79% in 1990 and declines gradually to about 71% by 2019; Japan rises from about 58% to about 73%; Korea, Rep. rises from about 50% to about 60%; Malaysia rises from about 52% to about 56%; Indonesia rises from about 45% to about 56%, with a noticeable uptick after around 2012; Türkiye falls from about 36% to about 24% in the early 2000s, then recovers to about 38% by 2019; India is roughly flat around 29%–32% until the 2010s, then dips to about 22% before a slight rebound near 25% in 2019; Egypt, Arab Rep. trends from about 24% to about 18% by 2019, with a mild rise in the middle years. The chart emphasizes that some countries increased participation while others stagnated or declined.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "157",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-157.png",
+            "label": "Figure 5.9",
+            "pdf_page": 157,
+            "visual_id": "wdr-p157-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact values are not labeled; all values are approximate from the plotted lines.",
+              "Series colors and minor year-to-year fluctuations are preserved only approximately.",
+              "The last visible point for India appears to rebound slightly near 2019; the exact endpoint is not labeled."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.7264206995985203,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p157-text-000",
+          "text": "Figure 5.9 Female labor force                 Figure 5.10 The share of female\nparticipation has evolved differently             professionals has risen in some countries but\nacross countries                              not others\n\n       80                                                60\n\n    (%)  70\n                                                                              (%) 50       60                                                                                                                           highly\n                                                  in force 15−64\n       50                                                40\n labor ages  40                                                                                                                                               females  occupations 30\n       30                                         of Female    20                                                                                                                                                                                      skilled 20                                                                                                                            Share                   participation,  10\n                                                         10        0                                                                  1          5   10   20   40 60\n       1990      2000      2010      2019\n                                               GDP per capita (US$1,000, log scale)\n               China         Egypt, Arab Rep.                 Brazil, 1970–2010                 Chile, 1960–2002\n                  India         Indonesia                      Egypt, Arab Rep., 1986–2006     India, 1983–2009\n              Japan        Korea, Rep.                    Indonesia, 1971–2005          Mexico, 1960–2015\n                Malaysia     Türkiye                      South Africa, 1996–2007        United States, 1960–2015\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "157",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 157,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.672423632378024,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p157-chart-01-000",
+          "text": "Figure 5.10\nScatter/segment chart titled 'The share of female professionals has risen in some countries but not others.' Y-axis: 'Share of females in highly skilled occupations (%)' from 10 to 60. X-axis: 'GDP per capita (US$1,000, log scale)' with labeled ticks at 1, 5, 10, 20, 40, 60. The figure uses short line segments for country-period trajectories, with legend entries: Brazil, 1970–2010; Chile, 1960–2002; Egypt, Arab Rep., 1986–2006; India, 1983–2009; Indonesia, 1971–2005; Malaysia, 1996–2007; Mexico, 1960–2015; United States, 1960–2015. Visible relationships: Brazil rises from roughly 31% at GDP per capita around 6 to about 48% around 10; Chile rises from about 31% around 4 to about 43% around 9; Egypt, Arab Rep. rises from about 27% around 3 to about 29% around 4; India rises from about 15% around 0.6 to about 18% around 1.5; Indonesia rises from about 21% around 0.8 to about 43% around 2; Malaysia is nearly flat/slightly down around 47% to 46% near GDP per capita 4.5–5; Mexico rises from about 31% around 4.5 to about 47% around 10; United States rises from about 35% around 20 to about 53% around 60. Overall, the figure shows a positive association in many countries, but with different starting levels and magnitudes of increase.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "157",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-157.png",
+            "label": "Figure 5.10",
+            "pdf_page": 157,
+            "visual_id": "wdr-p157-chart-01",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact values are not labeled; all plotted coordinates are approximate from the figure.",
+              "Some line segments are short and partly overlap, so exact endpoints and slopes are approximate.",
+              "The log-scale axis is visible, but intermediate unlabeled positions are estimated visually."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6248264425280043,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p156-text-002",
+          "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.614227509770046,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p156-chart-00-000",
+          "text": "Figure 5.7\nBar chart titled 'There is a substantial gap between low- and high-income countries in female educational attainment'. Vertical axis: 'Share of women age 25+ with at least upper-secondary education (%)', scaled from 0 to 80. Four orange bars with value labels: LICs 6.4; LMICs 27.0; UMICs 52.5; HICs 69.3. Source shown: 'WDR 2024 team.' Note states the figure illustrates educational attainment of women 25+ years of age for at least upper-secondary education; data cover 141 countries; HICs = high-income countries, LICs = low-income countries, LMICs = lower-middle-income countries, UMICs = upper-middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-156.png",
+            "label": "Figure 5.7",
+            "pdf_page": 156,
+            "visual_id": "wdr-p156-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6071863464311512,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p159-chart-00-000",
+          "text": "Figure 5.12\nScatter plot titled 'Women lag behind men in having financial accounts'. X-axis: 'GDP per capita (constant PPP 2017 US$1,000, log scale)' with visible tick labels around 50 and 100. Y-axis: 'Account ownership gap (percentage points)' with tick marks from about -10 to 40. The plotted points show the absolute difference in financial account ownership between men and women across 157 countries. A dark downward-sloping trend line runs roughly from about 6-7 percentage points at low GDP per capita to about 1-2 points at the highest GDP per capita, with a dotted horizontal zero line across the plot. Several countries are labeled in orange on the scatter: Morocco (around 24-25), Nigeria (around 17-18), Bangladesh (around 12-13), China (around 6-7), Colombia (around 9-10), Chile (around 5-6), and Sweden (around 0 or slightly below). Many unlabeled light-blue points are scattered throughout, with some higher-gap outliers near 20-35 percentage points and several points near zero or slightly negative. Sources noted below the plot: Global Findex (Global Financial Inclusion Database), World Bank, Washington, DC, https://globalfindex.worldbank.org/#data_sec_focus; WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note states the figure shows the absolute difference (in percentage points) in 157 countries between the share of men with a financial account and the share of women with a financial account; accounts include those in financial institutions and mobile accounts. GDP = gross domestic product; PPP = purchasing power parity.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "159",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-159.png",
+            "label": "Figure 5.12",
+            "pdf_page": 159,
+            "visual_id": "wdr-p159-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact coordinates of unlabeled points and the fitted line are approximate from the image.",
+              "The x-axis tick at 50 is visible, but the left-side x-axis tick labels are not fully shown in the provided page image."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5936638022597863,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p158-chart-00-000",
+          "text": "Figure 5.11\nGlobally, women own a smaller share of firms than men. Vertical bar chart with y-axis labeled \"Share of firms that are female-owned (%)\" ranging from 0 to 40. Bars are orange and include thin error bars. The 25 sectors are ordered from lowest to highest share of female-owned firms. Approximate bar heights from left to right: Petroleum (~3%); Leather products (~5%); Wood products (~6%); Hospitality and tourism (~14%); Transport (~15%); Printing and publishing (~15%); Hotels and restaurants (~16%); Other (~17%); Construction (~17%); Mining (~18%); Other services (~18%); Other manufacturing (~18%); Manufacturing (~19%); Metal products (~19%); IT and IT services (~20%); Nonmetallic products (~21%); Food (~21%); Retail (~22%); Plastics and rubber (~24%); Machinery and electronics (~28%); Wholesale (~31%); Chemicals (~32%); Garments (~33%); Services (~34%); Textiles (~35%). Source note: Chiplunkar and Goldberg 2021; WBES (World Bank Enterprise Surveys) dashboard, World Bank, Washington, DC, https://www.enterprisesurveys.org/en/enterprisesurveys. Note: the figure shows the share of female-owned firms across 25 sectors, as well as the confidence intervals for the 95th percentile. The WBES sample covers 141 countries across 13 years (2006–18). IT = information technology.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "158",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-158.png",
+            "label": "Figure 5.11",
+            "pdf_page": 158,
+            "visual_id": "wdr-p158-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact numeric values are not printed on the chart; percentages above are visual estimates from bar heights.",
+              "The error bars are visible but their exact numerical bounds are not labeled.",
+              "The note says \"confidence intervals for the 95th percentile,\" which is reproduced as visible even though the plotted measure appears to be sector shares."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.581085663283208,
+          "rank": 10
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.34909669999979087
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by Figure 5.8 and correctly identifies the two highlighted regions as the Middle East and North Africa and South Asia."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p156-chart-01-000",
+      "text": "Figure 5.8\nMulti-line chart titled 'Female labor force participation is low in the Middle East and North Africa and in South Asia'. Horizontal axis shows years 1960, 1980, 2000, 2020. Vertical axis: 'Female labor participation, ages 15–64 (%)', scaled from 0 to 60. Legend and visible series: East Asia and Pacific (gray) rises from about 33 in 1960 to about 55 in 1990, then around 54 in 2000 and about 52 in 2020; Europe and Central Asia (orange-red) starts about 54 in 1960, around 50 in 1970–1980, about 48 in 1990, about 47 in 2000, and about 50 in 2020; Latin America and the Caribbean (teal) rises from about 20 in 1960 to about 28 in 1970, 34 in 1980, 45 in 1990, 49 in 2000, 51 in 2010, and 52 in 2020; Middle East and North Africa (brown/gold) rises from about 6 in 1960 to 9 in 1970, 12 in 1980, 20 in 1990, about 18 in 2000–2010, and about 15 in 2020; South Asia (dark blue) is about 30 in 1960, drops to about 17 in 1970, about 20 in 1980, rises to about 33 in 1990, 36 in 2000, 40 in 2010, and about 38 in 2020; Sub-Saharan Africa (olive) is about 40 in 1960, 45 in 1970, 40 in 1980, 50 in 1990, 52 in 2000, 54 in 2010, and 55 in 2020. Source: WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note: data are averages of national estimates for middle-income countries in each region.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-156.png",
+        "label": "Figure 5.8",
+        "pdf_page": 156,
+        "visual_id": "wdr-p156-chart-01",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact intermediate year values are estimated from the plotted lines where no point labels are shown."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.7977153659261369,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p156-text-000",
+      "text": "Figure 5.7 There is a substantial gap          Figure 5.8 Female labor force participation\nbetween low- and high-income countries in       is low in the Middle East and North Africa and\nfemale educational attainment                    in South Asia\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.741963006263755,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p156-text-001",
+      "text": "    (%) 80                                           60at\n      70                                69.3                                                   50with\n      60\n                                52.5                        (%) 4025+ education      50                                                                                                                                                                                                                                                                                                                       participation,age                                                 30      40                                                                                                 15−64\n                                                                                                               labor                                                   20      30             27.0                                                                                              ages women\n      20\nof                                                 10                                                                                                                                     Female                   upper-secondary 10     6.4\n                                                    0 Share       0                                            1960      1980      2000      2020      least        LICs    LMICs   UMICs    HICs\n                                                                  East Asia and Pacific\nSource: WDR 2024 team.                                           Europe and Central Asia\nNote: The  figure  illustrates educational attainment of                    Latin America and the Caribbean\nwomen 25+ years of age for at least upper-secondary\neducation. The data cover 141 countries. HICs = high-                  Middle East and North Africa\nincome countries; LICs = low-income countries; LMICs =                 South Asia     Sub-Saharan Africa\nlower-middle-income countries; UMICs = upper-middle-\nincome countries.                                          Source: WDI (World Development Indicators) (DataBank),\n                                                      World Bank, Washington, DC, https://databank.worldbank​\nWomen: Missing at work                               .org/source/world-development-indicators.\nFemale labor force participation is low in sev-     Note: Data are averages of national estimates for middle-\n                                                   income countries in each region.\neral middle-income countries, particularly in the\nMiddle East and North Africa and in South Asia    returns to  talent, education, and experience.\n(­figure 5.8). By contrast, female labor force par-   Compounding the problem, fewer higher-skilled\nt",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.7264671172163073,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p157-chart-00-000",
+      "text": "Figure 5.9\nLine chart titled 'Female labor force participation has evolved differently across countries.' Y-axis: 'Female labor force participation, ages 15–64 (%)' from 0 to 80. X-axis: years 1990, 2000, 2010, 2019. Eight country series are shown with a legend: China, Egypt, Arab Rep., India, Indonesia, Japan, Korea, Rep., Malaysia, Türkiye. Visible patterns: China starts near 79% in 1990 and declines gradually to about 71% by 2019; Japan rises from about 58% to about 73%; Korea, Rep. rises from about 50% to about 60%; Malaysia rises from about 52% to about 56%; Indonesia rises from about 45% to about 56%, with a noticeable uptick after around 2012; Türkiye falls from about 36% to about 24% in the early 2000s, then recovers to about 38% by 2019; India is roughly flat around 29%–32% until the 2010s, then dips to about 22% before a slight rebound near 25% in 2019; Egypt, Arab Rep. trends from about 24% to about 18% by 2019, with a mild rise in the middle years. The chart emphasizes that some countries increased participation while others stagnated or declined.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "157",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-157.png",
+        "label": "Figure 5.9",
+        "pdf_page": 157,
+        "visual_id": "wdr-p157-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact values are not labeled; all values are approximate from the plotted lines.",
+          "Series colors and minor year-to-year fluctuations are preserved only approximately.",
+          "The last visible point for India appears to rebound slightly near 2019; the exact endpoint is not labeled."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.7264206995985203,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p157-text-000",
+      "text": "Figure 5.9 Female labor force                 Figure 5.10 The share of female\nparticipation has evolved differently             professionals has risen in some countries but\nacross countries                              not others\n\n       80                                                60\n\n    (%)  70\n                                                                              (%) 50       60                                                                                                                           highly\n                                                  in force 15−64\n       50                                                40\n labor ages  40                                                                                                                                               females  occupations 30\n       30                                         of Female    20                                                                                                                                                                                      skilled 20                                                                                                                            Share                   participation,  10\n                                                         10        0                                                                  1          5   10   20   40 60\n       1990      2000      2010      2019\n                                               GDP per capita (US$1,000, log scale)\n               China         Egypt, Arab Rep.                 Brazil, 1970–2010                 Chile, 1960–2002\n                  India         Indonesia                      Egypt, Arab Rep., 1986–2006     India, 1983–2009\n              Japan        Korea, Rep.                    Indonesia, 1971–2005          Mexico, 1960–2015\n                Malaysia     Türkiye                      South Africa, 1996–2007        United States, 1960–2015\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "157",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 157,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.672423632378024,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p157-chart-01-000",
+      "text": "Figure 5.10\nScatter/segment chart titled 'The share of female professionals has risen in some countries but not others.' Y-axis: 'Share of females in highly skilled occupations (%)' from 10 to 60. X-axis: 'GDP per capita (US$1,000, log scale)' with labeled ticks at 1, 5, 10, 20, 40, 60. The figure uses short line segments for country-period trajectories, with legend entries: Brazil, 1970–2010; Chile, 1960–2002; Egypt, Arab Rep., 1986–2006; India, 1983–2009; Indonesia, 1971–2005; Malaysia, 1996–2007; Mexico, 1960–2015; United States, 1960–2015. Visible relationships: Brazil rises from roughly 31% at GDP per capita around 6 to about 48% around 10; Chile rises from about 31% around 4 to about 43% around 9; Egypt, Arab Rep. rises from about 27% around 3 to about 29% around 4; India rises from about 15% around 0.6 to about 18% around 1.5; Indonesia rises from about 21% around 0.8 to about 43% around 2; Malaysia is nearly flat/slightly down around 47% to 46% near GDP per capita 4.5–5; Mexico rises from about 31% around 4.5 to about 47% around 10; United States rises from about 35% around 20 to about 53% around 60. Overall, the figure shows a positive association in many countries, but with different starting levels and magnitudes of increase.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "157",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-157.png",
+        "label": "Figure 5.10",
+        "pdf_page": 157,
+        "visual_id": "wdr-p157-chart-01",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact values are not labeled; all plotted coordinates are approximate from the figure.",
+          "Some line segments are short and partly overlap, so exact endpoints and slopes are approximate.",
+          "The log-scale axis is visible, but intermediate unlabeled positions are estimated visually."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6248264425280043,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p156-text-002",
+      "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.614227509770046,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p156-chart-00-000",
+      "text": "Figure 5.7\nBar chart titled 'There is a substantial gap between low- and high-income countries in female educational attainment'. Vertical axis: 'Share of women age 25+ with at least upper-secondary education (%)', scaled from 0 to 80. Four orange bars with value labels: LICs 6.4; LMICs 27.0; UMICs 52.5; HICs 69.3. Source shown: 'WDR 2024 team.' Note states the figure illustrates educational attainment of women 25+ years of age for at least upper-secondary education; data cover 141 countries; HICs = high-income countries, LICs = low-income countries, LMICs = lower-middle-income countries, UMICs = upper-middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-156.png",
+        "label": "Figure 5.7",
+        "pdf_page": 156,
+        "visual_id": "wdr-p156-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6071863464311512,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p159-chart-00-000",
+      "text": "Figure 5.12\nScatter plot titled 'Women lag behind men in having financial accounts'. X-axis: 'GDP per capita (constant PPP 2017 US$1,000, log scale)' with visible tick labels around 50 and 100. Y-axis: 'Account ownership gap (percentage points)' with tick marks from about -10 to 40. The plotted points show the absolute difference in financial account ownership between men and women across 157 countries. A dark downward-sloping trend line runs roughly from about 6-7 percentage points at low GDP per capita to about 1-2 points at the highest GDP per capita, with a dotted horizontal zero line across the plot. Several countries are labeled in orange on the scatter: Morocco (around 24-25), Nigeria (around 17-18), Bangladesh (around 12-13), China (around 6-7), Colombia (around 9-10), Chile (around 5-6), and Sweden (around 0 or slightly below). Many unlabeled light-blue points are scattered throughout, with some higher-gap outliers near 20-35 percentage points and several points near zero or slightly negative. Sources noted below the plot: Global Findex (Global Financial Inclusion Database), World Bank, Washington, DC, https://globalfindex.worldbank.org/#data_sec_focus; WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note states the figure shows the absolute difference (in percentage points) in 157 countries between the share of men with a financial account and the share of women with a financial account; accounts include those in financial institutions and mobile accounts. GDP = gross domestic product; PPP = purchasing power parity.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "159",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-159.png",
+        "label": "Figure 5.12",
+        "pdf_page": 159,
+        "visual_id": "wdr-p159-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact coordinates of unlabeled points and the fitted line are approximate from the image.",
+          "The x-axis tick at 50 is visible, but the left-side x-axis tick labels are not fully shown in the provided page image."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5936638022597863,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p158-chart-00-000",
+      "text": "Figure 5.11\nGlobally, women own a smaller share of firms than men. Vertical bar chart with y-axis labeled \"Share of firms that are female-owned (%)\" ranging from 0 to 40. Bars are orange and include thin error bars. The 25 sectors are ordered from lowest to highest share of female-owned firms. Approximate bar heights from left to right: Petroleum (~3%); Leather products (~5%); Wood products (~6%); Hospitality and tourism (~14%); Transport (~15%); Printing and publishing (~15%); Hotels and restaurants (~16%); Other (~17%); Construction (~17%); Mining (~18%); Other services (~18%); Other manufacturing (~18%); Manufacturing (~19%); Metal products (~19%); IT and IT services (~20%); Nonmetallic products (~21%); Food (~21%); Retail (~22%); Plastics and rubber (~24%); Machinery and electronics (~28%); Wholesale (~31%); Chemicals (~32%); Garments (~33%); Services (~34%); Textiles (~35%). Source note: Chiplunkar and Goldberg 2021; WBES (World Bank Enterprise Surveys) dashboard, World Bank, Washington, DC, https://www.enterprisesurveys.org/en/enterprisesurveys. Note: the figure shows the share of female-owned firms across 25 sectors, as well as the confidence intervals for the 95th percentile. The WBES sample covers 141 countries across 13 years (2006–18). IT = information technology.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "158",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-158.png",
+        "label": "Figure 5.11",
+        "pdf_page": 158,
+        "visual_id": "wdr-p158-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact numeric values are not printed on the chart; percentages above are visual estimates from bar heights.",
+          "The error bars are visible but their exact numerical bounds are not labeled.",
+          "The note says \"confidence intervals for the 95th percentile,\" which is reproduced as visible even though the plotted measure appears to be sector shares."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.581085663283208,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:43:17.768616+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 513,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 73,
+        "output_tokens_details": {
+          "reasoning_tokens": 41
+        },
+        "total_tokens": 586
+      }
+    },
+    {
+      "at": "2026-11-16T15:43:20.761842+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5860,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 102,
+        "output_tokens_details": {
+          "reasoning_tokens": 47
+        },
+        "total_tokens": 5962
+      }
+    },
+    {
+      "at": "2026-11-16T15:43:23.927975+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5499,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 170,
+        "output_tokens_details": {
+          "reasoning_tokens": 124
+        },
+        "total_tokens": 5669
+      }
+    }
+  ],
+  "seconds": 10.72459749999689,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D09",
+  "initial_ranking": [
+    {
+      "id": "wdr-p156-chart-01-000",
+      "text": "Figure 5.8\nMulti-line chart titled 'Female labor force participation is low in the Middle East and North Africa and in South Asia'. Horizontal axis shows years 1960, 1980, 2000, 2020. Vertical axis: 'Female labor participation, ages 15–64 (%)', scaled from 0 to 60. Legend and visible series: East Asia and Pacific (gray) rises from about 33 in 1960 to about 55 in 1990, then around 54 in 2000 and about 52 in 2020; Europe and Central Asia (orange-red) starts about 54 in 1960, around 50 in 1970–1980, about 48 in 1990, about 47 in 2000, and about 50 in 2020; Latin America and the Caribbean (teal) rises from about 20 in 1960 to about 28 in 1970, 34 in 1980, 45 in 1990, 49 in 2000, 51 in 2010, and 52 in 2020; Middle East and North Africa (brown/gold) rises from about 6 in 1960 to 9 in 1970, 12 in 1980, 20 in 1990, about 18 in 2000–2010, and about 15 in 2020; South Asia (dark blue) is about 30 in 1960, drops to about 17 in 1970, about 20 in 1980, rises to about 33 in 1990, 36 in 2000, 40 in 2010, and about 38 in 2020; Sub-Saharan Africa (olive) is about 40 in 1960, 45 in 1970, 40 in 1980, 50 in 1990, 52 in 2000, 54 in 2010, and 55 in 2020. Source: WDI (World Development Indicators) (DataBank), World Bank, Washington, DC, https://databank.worldbank.org/source/world-development-indicators. Note: data are averages of national estimates for middle-income countries in each region.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-156.png",
+        "label": "Figure 5.8",
+        "pdf_page": 156,
+        "visual_id": "wdr-p156-chart-01",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact intermediate year values are estimated from the plotted lines where no point labels are shown."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.7524829797538106,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p156-text-000",
+      "text": "Figure 5.7 There is a substantial gap          Figure 5.8 Female labor force participation\nbetween low- and high-income countries in       is low in the Middle East and North Africa and\nfemale educational attainment                    in South Asia\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.7433882595054914,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p156-text-001",
+      "text": "    (%) 80                                           60at\n      70                                69.3                                                   50with\n      60\n                                52.5                        (%) 4025+ education      50                                                                                                                                                                                                                                                                                                                       participation,age                                                 30      40                                                                                                 15−64\n                                                                                                               labor                                                   20      30             27.0                                                                                              ages women\n      20\nof                                                 10                                                                                                                                     Female                   upper-secondary 10     6.4\n                                                    0 Share       0                                            1960      1980      2000      2020      least        LICs    LMICs   UMICs    HICs\n                                                                  East Asia and Pacific\nSource: WDR 2024 team.                                           Europe and Central Asia\nNote: The  figure  illustrates educational attainment of                    Latin America and the Caribbean\nwomen 25+ years of age for at least upper-secondary\neducation. The data cover 141 countries. HICs = high-                  Middle East and North Africa\nincome countries; LICs = low-income countries; LMICs =                 South Asia     Sub-Saharan Africa\nlower-middle-income countries; UMICs = upper-middle-\nincome countries.                                          Source: WDI (World Development Indicators) (DataBank),\n                                                      World Bank, Washington, DC, https://databank.worldbank​\nWomen: Missing at work                               .org/source/world-development-indicators.\nFemale labor force participation is low in sev-     Note: Data are averages of national estimates for middle-\n                                                   income countries in each region.\neral middle-income countries, particularly in the\nMiddle East and North Africa and in South Asia    returns to  talent, education, and experience.\n(­figure 5.8). By contrast, female labor force par-   Compounding the problem, fewer higher-skilled\nt",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.7086797220834496,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p157-chart-00-000",
+      "text": "Figure 5.9\nLine chart titled 'Female labor force participation has evolved differently across countries.' Y-axis: 'Female labor force participation, ages 15–64 (%)' from 0 to 80. X-axis: years 1990, 2000, 2010, 2019. Eight country series are shown with a legend: China, Egypt, Arab Rep., India, Indonesia, Japan, Korea, Rep., Malaysia, Türkiye. Visible patterns: China starts near 79% in 1990 and declines gradually to about 71% by 2019; Japan rises from about 58% to about 73%; Korea, Rep. rises from about 50% to about 60%; Malaysia rises from about 52% to about 56%; Indonesia rises from about 45% to about 56%, with a noticeable uptick after around 2012; Türkiye falls from about 36% to about 24% in the early 2000s, then recovers to about 38% by 2019; India is roughly flat around 29%–32% until the 2010s, then dips to about 22% before a slight rebound near 25% in 2019; Egypt, Arab Rep. trends from about 24% to about 18% by 2019, with a mild rise in the middle years. The chart emphasizes that some countries increased participation while others stagnated or declined.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "157",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-157.png",
+        "label": "Figure 5.9",
+        "pdf_page": 157,
+        "visual_id": "wdr-p157-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact values are not labeled; all values are approximate from the plotted lines.",
+          "Series colors and minor year-to-year fluctuations are preserved only approximately.",
+          "The last visible point for India appears to rebound slightly near 2019; the exact endpoint is not labeled."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6712597162920557,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p157-text-000",
+      "text": "Figure 5.9 Female labor force                 Figure 5.10 The share of female\nparticipation has evolved differently             professionals has risen in some countries but\nacross countries                              not others\n\n       80                                                60\n\n    (%)  70\n                                                                              (%) 50       60                                                                                                                           highly\n                                                  in force 15−64\n       50                                                40\n labor ages  40                                                                                                                                               females  occupations 30\n       30                                         of Female    20                                                                                                                                                                                      skilled 20                                                                                                                            Share                   participation,  10\n                                                         10        0                                                                  1          5   10   20   40 60\n       1990      2000      2010      2019\n                                               GDP per capita (US$1,000, log scale)\n               China         Egypt, Arab Rep.                 Brazil, 1970–2010                 Chile, 1960–2002\n                  India         Indonesia                      Egypt, Arab Rep., 1986–2006     India, 1983–2009\n              Japan        Korea, Rep.                    Indonesia, 1971–2005          Mexico, 1960–2015\n                Malaysia     Türkiye                      South Africa, 1996–2007        United States, 1960–2015\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "157",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 157,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6343171146351317,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p156-text-002",
+      "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6253745308299541,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p157-chart-01-000",
+      "text": "Figure 5.10\nScatter/segment chart titled 'The share of female professionals has risen in some countries but not others.' Y-axis: 'Share of females in highly skilled occupations (%)' from 10 to 60. X-axis: 'GDP per capita (US$1,000, log scale)' with labeled ticks at 1, 5, 10, 20, 40, 60. The figure uses short line segments for country-period trajectories, with legend entries: Brazil, 1970–2010; Chile, 1960–2002; Egypt, Arab Rep., 1986–2006; India, 1983–2009; Indonesia, 1971–2005; Malaysia, 1996–2007; Mexico, 1960–2015; United States, 1960–2015. Visible relationships: Brazil rises from roughly 31% at GDP per capita around 6 to about 48% around 10; Chile rises from about 31% around 4 to about 43% around 9; Egypt, Arab Rep. rises from about 27% around 3 to about 29% around 4; India rises from about 15% around 0.6 to about 18% around 1.5; Indonesia rises from about 21% around 0.8 to about 43% around 2; Malaysia is nearly flat/slightly down around 47% to 46% near GDP per capita 4.5–5; Mexico rises from about 31% around 4.5 to about 47% around 10; United States rises from about 35% around 20 to about 53% around 60. Overall, the figure shows a positive association in many countries, but with different starting levels and magnitudes of increase.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "157",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-157.png",
+        "label": "Figure 5.10",
+        "pdf_page": 157,
+        "visual_id": "wdr-p157-chart-01",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact values are not labeled; all plotted coordinates are approximate from the figure.",
+          "Some line segments are short and partly overlap, so exact endpoints and slopes are approximate.",
+          "The log-scale axis is visible, but intermediate unlabeled positions are estimated visually."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5817678022906198,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p013-text-000",
+      "text": "124   5.7    There is a substantial gap      162   7.1     In Italy, market leaders\n            between low- and high-                        increase their political\n            income countries in female                   connections while\n             educational attainment                      reducing innovation\n124   5.8    Female labor force           163   7.2    Promoting contestability\n              participation is low in the                   through institutions,\n            Middle East and North                          incentives, and interventions\n              Africa and in South Asia       164   7.3     In many middle-income\n125   5.9    Female labor force                              countries, markets are\n              participation has evolved                   dominated by a few\n               differently across countries                    business groups, as a survey\n125  5.10   The share of female                           suggests\n              professionals has risen in      165   7.4     In middle-income countries,\n           some countries but not                           restrictive product market\n              others                                        regulations are pervasive\n126  5.11    Globally, women own a        166   7.5     In middle-income countries,\n              smaller share of firms than                  both economywide and\n          men                                            sectoral input and product\n127  5.12  Women lag behind men in                  market regulations are more\n             having financial accounts                        restrictive than in high-\n139   6.1    Learning by doing in the                   income countries\n            manufacture of key low-       167   7.6    The BRICS and large\n            carbon technologies has                    middle-income countries\n              resulted in rapid cost                        have a significant presence of\n              declines                                         publicly owned enterprises\n140  6.2    The diffusion of low-carbon                and governance\n             technologies is rapidly                     frameworks that stifle\n              accelerating                                competition\n142   ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "13",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 13,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.564554040770533,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p203-text-001",
+      "text": " this view. Correcting this    middle-income countries reveals that increasing\nmisperception can lead to a significant increase    access to and reducing the cost of childcare can\nin female labor force participation.28 Saudi Arabia    improve maternal labor market outcomes, includ­\nhas experienced an unprecedented surge in female    ing employment, hours worked, income, produc­\nlabor force participation since 2017 as a result of     tivity, and job type.33 Governments can use various\nchanging regulations and shifting social norms,    options that range from free state-provided care to\nthe implementation of sound structural reforms,    offering providers and parents financial subsidies,\nand effective government communications. Saudi    tax incentives, or other forms of support. The chal­\nArabia’s success in increasing female labor force    lenge of accessing affordable childcare dispropor­\nparticipation from 17.4 percent in 2017 to 36 per­    tionately affects poor families. Childcare subsidies\ncent in 2023 may contain important lessons for    in low-income countries can help make childcare\nother countries and regions.                    more affordable. However, such targeted policies\n   In Bangladesh, the robust growth of the gar­    are not very common in lower-middle-income and\nment manufacturing  industry  has  generated    upper-­middle-income countries, where only 9 per­\nmore than 5 million jobs, amounting to 60 per­    cent and 41 percent of countries, respectively, have a\ncent  of  female  employment,  one-quarter  of    law that establishes some form of financial ­support\nindustrial employment, and three-quarters of    for families for childcare services, compared with\nthe country’s export earnings in recent years.   80 percent of high-income countries.34\nEmployment in the garment industry has enabled      In",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "203",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 203,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5644223220830248,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p158-chart-00-000",
+      "text": "Figure 5.11\nGlobally, women own a smaller share of firms than men. Vertical bar chart with y-axis labeled \"Share of firms that are female-owned (%)\" ranging from 0 to 40. Bars are orange and include thin error bars. The 25 sectors are ordered from lowest to highest share of female-owned firms. Approximate bar heights from left to right: Petroleum (~3%); Leather products (~5%); Wood products (~6%); Hospitality and tourism (~14%); Transport (~15%); Printing and publishing (~15%); Hotels and restaurants (~16%); Other (~17%); Construction (~17%); Mining (~18%); Other services (~18%); Other manufacturing (~18%); Manufacturing (~19%); Metal products (~19%); IT and IT services (~20%); Nonmetallic products (~21%); Food (~21%); Retail (~22%); Plastics and rubber (~24%); Machinery and electronics (~28%); Wholesale (~31%); Chemicals (~32%); Garments (~33%); Services (~34%); Textiles (~35%). Source note: Chiplunkar and Goldberg 2021; WBES (World Bank Enterprise Surveys) dashboard, World Bank, Washington, DC, https://www.enterprisesurveys.org/en/enterprisesurveys. Note: the figure shows the share of female-owned firms across 25 sectors, as well as the confidence intervals for the 95th percentile. The WBES sample covers 141 countries across 13 years (2006–18). IT = information technology.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "158",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-158.png",
+        "label": "Figure 5.11",
+        "pdf_page": 158,
+        "visual_id": "wdr-p158-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact numeric values are not printed on the chart; percentages above are visual estimates from bar heights.",
+          "The error bars are visible but their exact numerical bounds are not labeled.",
+          "The note says \"confidence intervals for the 95th percentile,\" which is reproduced as visible even though the plotted measure appears to be sector shares."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5574957301045694,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

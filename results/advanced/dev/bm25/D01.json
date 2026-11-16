@@ -1,0 +1,657 @@
+{
+  "status": "answered",
+  "answer": "In Table O.2, investment is a **higher priority** for all three income groups: **low-income**, **lower-middle-income**, and **upper-middle-income** [wdr-p039-table-00-000].",
+  "citations": [
+    "wdr-p039-table-00-000"
+  ],
+  "question": "Inspect Table O.2. Is investment a higher or lower priority for each of the three income groups?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Table O.2\" investment priority income groups",
+      "results": [
+        {
+          "id": "wdr-p039-table-00-000",
+          "text": "Table O.2\nTitle: \"To achieve high-income status, countries will need to recalibrate their mix of investment, infusion, and innovation.\" Columns: Income classification | Investment | Infusion | Innovation. Row 1: Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). Row 2: Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). Row 3: Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-039.png",
+            "label": "Table O.2",
+            "pdf_page": 39,
+            "visual_id": "wdr-p039-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 23.824702046002365,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p039-text-000",
+          "text": "Table O.2  To achieve high-income status, countries will need to recalibrate their mix of\n­investment, infusion, and innovation\n  INCOME CLASSIFICATION       INVESTMENT             INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority              Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority               Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority               Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\nFigure O.4  Middle-income countries must engineer two successive transitions to move to\nhigh-income status\n\n       1i                              2i                                        3i\n Investment            Investment + Infusion          Investment + Infusion + Innovation\n\n                Capital                                                                    Productivity contribution growth\nRelative to\n\n                                       Proximity to the frontier\n\nSource: WDR 2024 team.\nNote: The curves illustrate the relative contributions of capital and productivity to economic growth (y-axis), according to\ncountries’ proximity to the frontier (represented by the leading economies). Countries farther out on the x-axis are closer to\nthe frontier.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 23.35700424245208,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p086-table-00-000",
+          "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-086.png",
+            "label": "Table 2.1",
+            "pdf_page": 86,
+            "visual_id": "wdr-p086-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 20.843759734269373,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p086-text-001",
+          "text": " needed to sustain\nsustain high-income levels. The first is to transi­    them. They did so by getting rid of obsolete\ntion from a 1i strategy for accelerating investment   economic arrangements, by weakening the forces\nto a 2i strategy focusing on both investment and    of preservation, and by creating the necessary\ninfusion in which a country brings technologies   new  ones.  However,   it  appears  that  these\nfrom abroad and  diffuses them domestically    countries—such  as Argentina and República\n(table 2.1). Policy makers in ­lower-middle-income    Bolivariana de Venezuela—also find it difficult to\ncountries will need to add to investment strat­    ensure that their income gains are durable, and\negies to infuse modern technologies and busi­    even more difficult to continue to close the gaps\nness practices from global leaders into their own    in living standards with economies at the global\neconomies.                                  economic frontier.\n\nTable 2.1 Middle-income countries will need to engineer two successive transitions to develop\neconomic structures that can sustain high-income status\n INCOME CLASSIFICATION        INVESTMENT            INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority            Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority              Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority              Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n54   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 86,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.066666715203077,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p059-text-001",
+          "text": "Table O.3  The 3i strategy: What countries should do at different stages of development\n                                                                   UPPER-MIDDLE-INCOME\n             LOW-INCOME                                               COUNTRIES\n              COUNTRIES         LOWER-MIDDLE-INCOME COUNTRIES                                                                                                                   3i: Investment + Infusion +\n                       1i: Investment                         2i: Investment + Infusion                       Innovation\n Enterprise    •  Improve the              •   Discipline market leaders through integration into     •  Deepen capital markets\n                investment climate        globally contestable markets.                     and expand equity\n                  to increase               •   Diffuse global technologies with fluid factor and         financing.\n               domestic and            product markets.                                              •  Strengthen antitrust\n                  foreign investment.                                                     •  Reward value-adding firms to stimulate business        regulation and\n                                    dynamism.                                         competition agencies.\n                                                                                                                             •   Protect intellectual\n                                                                                                property rights.\n\n Talent         •   Invest in human         •   Discipline elites by providing equal opportunities      •  Strengthen industry-\n                   capital by                  for women, minorities, and disadvantaged groups.     academia links\n                broadening               •  Improve allocation of talent to task.                    domestically.\n                 foundational skills                                                     •  Develop links among local and globally leading        •  Expand programs to              and improving                                                universities.                                      connect with diaspora in\n                  learning outcomes.                                                    advanced economies.\n                                                     •  Allow emigration of educated workers whose\n                                                    skills are not valued in domestic markets.               •  Enhance economic and\n                                                                                                                   political freedoms.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "59",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 59,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.636484619437141,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p059-table-00-000",
+          "text": "Table O.3\nThe 3i strategy: What countries should do at different stages of development.\n\nColumns:\n- Low-income countries: 1i: Investment\n- Lower-middle-income countries: 2i: Investment + Infusion\n- Upper-middle-income countries: 3i: Investment + Infusion + Innovation\n\nRows and entries:\n\nEnterprise\n- Low-income countries: Improve the investment climate to increase domestic and foreign investment.\n- Lower-middle-income countries: Discipline market leaders through integration into globally contestable markets. Diffuse global technologies with fluid factor and product markets. Reward value-adding firms to stimulate business dynamism.\n- Upper-middle-income countries: Deepen capital markets and expand equity financing. Strengthen antitrust regulation and competition agencies. Protect intellectual property rights.\n\nTalent\n- Low-income countries: Invest in human capital by broadening foundational skills and improving learning outcomes.\n- Lower-middle-income countries: Discipline elites by providing equal opportunities for women, minorities, and disadvantaged groups. Improve allocation of talent to task. Develop links among local and globally leading universities. Allow emigration of educated workers whose skills are not valued in domestic markets.\n- Upper-middle-income countries: Strengthen industry-academia links domestically. Expand programs to connect with diaspora in advanced economies. Enhance economic and political freedoms.\n\nEnergy\n- Low-income countries: Increase investment in expanding access and grid networks. Reform regulatory frameworks to attract private investment and ensure fair competition.\n- Lower-middle-income countries: Discipline SOEs by hardening budget constraints. Use international coalitions to encourage advanced economies to ease protection of domestic incumbents. Aid adoption of energy-efficient practices. Enhance economic efficiency by reflecting environmental costs in energy prices.\n- Upper-middle-income countries: Lower the cost of capital for low-carbon energy by reducing risks involving technology, markets, and policy. Increase multilateral finance for very long-term investments.\n\nSource: WDR 2024 team.\nNote: SOEs = state-owned enterprises.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "59",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-059.png",
+            "label": "Table O.3",
+            "pdf_page": 59,
+            "visual_id": "wdr-p059-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 12.844051699076369,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p039-table-00-000",
+          "text": "Table O.2\nTitle: \"To achieve high-income status, countries will need to recalibrate their mix of investment, infusion, and innovation.\" Columns: Income classification | Investment | Infusion | Innovation. Row 1: Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). Row 2: Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). Row 3: Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-039.png",
+            "label": "Table O.2",
+            "pdf_page": 39,
+            "visual_id": "wdr-p039-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 23.824702046002365,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p039-text-000",
+          "text": "Table O.2  To achieve high-income status, countries will need to recalibrate their mix of\n­investment, infusion, and innovation\n  INCOME CLASSIFICATION       INVESTMENT             INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority              Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority               Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority               Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\nFigure O.4  Middle-income countries must engineer two successive transitions to move to\nhigh-income status\n\n       1i                              2i                                        3i\n Investment            Investment + Infusion          Investment + Infusion + Innovation\n\n                Capital                                                                    Productivity contribution growth\nRelative to\n\n                                       Proximity to the frontier\n\nSource: WDR 2024 team.\nNote: The curves illustrate the relative contributions of capital and productivity to economic growth (y-axis), according to\ncountries’ proximity to the frontier (represented by the leading economies). Countries farther out on the x-axis are closer to\nthe frontier.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 23.35700424245208,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p086-table-00-000",
+          "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-086.png",
+            "label": "Table 2.1",
+            "pdf_page": 86,
+            "visual_id": "wdr-p086-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 20.843759734269373,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p086-text-001",
+          "text": " needed to sustain\nsustain high-income levels. The first is to transi­    them. They did so by getting rid of obsolete\ntion from a 1i strategy for accelerating investment   economic arrangements, by weakening the forces\nto a 2i strategy focusing on both investment and    of preservation, and by creating the necessary\ninfusion in which a country brings technologies   new  ones.  However,   it  appears  that  these\nfrom abroad and  diffuses them domestically    countries—such  as Argentina and República\n(table 2.1). Policy makers in ­lower-middle-income    Bolivariana de Venezuela—also find it difficult to\ncountries will need to add to investment strat­    ensure that their income gains are durable, and\negies to infuse modern technologies and busi­    even more difficult to continue to close the gaps\nness practices from global leaders into their own    in living standards with economies at the global\neconomies.                                  economic frontier.\n\nTable 2.1 Middle-income countries will need to engineer two successive transitions to develop\neconomic structures that can sustain high-income status\n INCOME CLASSIFICATION        INVESTMENT            INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority            Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority              Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority              Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n54   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "86",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 86,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.066666715203077,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p059-text-001",
+          "text": "Table O.3  The 3i strategy: What countries should do at different stages of development\n                                                                   UPPER-MIDDLE-INCOME\n             LOW-INCOME                                               COUNTRIES\n              COUNTRIES         LOWER-MIDDLE-INCOME COUNTRIES                                                                                                                   3i: Investment + Infusion +\n                       1i: Investment                         2i: Investment + Infusion                       Innovation\n Enterprise    •  Improve the              •   Discipline market leaders through integration into     •  Deepen capital markets\n                investment climate        globally contestable markets.                     and expand equity\n                  to increase               •   Diffuse global technologies with fluid factor and         financing.\n               domestic and            product markets.                                              •  Strengthen antitrust\n                  foreign investment.                                                     •  Reward value-adding firms to stimulate business        regulation and\n                                    dynamism.                                         competition agencies.\n                                                                                                                             •   Protect intellectual\n                                                                                                property rights.\n\n Talent         •   Invest in human         •   Discipline elites by providing equal opportunities      •  Strengthen industry-\n                   capital by                  for women, minorities, and disadvantaged groups.     academia links\n                broadening               •  Improve allocation of talent to task.                    domestically.\n                 foundational skills                                                     •  Develop links among local and globally leading        •  Expand programs to              and improving                                                universities.                                      connect with diaspora in\n                  learning outcomes.                                                    advanced economies.\n                                                     •  Allow emigration of educated workers whose\n                                                    skills are not valued in domestic markets.               •  Enhance economic and\n                                                                                                                   political freedoms.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "59",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 59,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.636484619437141,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p059-table-00-000",
+          "text": "Table O.3\nThe 3i strategy: What countries should do at different stages of development.\n\nColumns:\n- Low-income countries: 1i: Investment\n- Lower-middle-income countries: 2i: Investment + Infusion\n- Upper-middle-income countries: 3i: Investment + Infusion + Innovation\n\nRows and entries:\n\nEnterprise\n- Low-income countries: Improve the investment climate to increase domestic and foreign investment.\n- Lower-middle-income countries: Discipline market leaders through integration into globally contestable markets. Diffuse global technologies with fluid factor and product markets. Reward value-adding firms to stimulate business dynamism.\n- Upper-middle-income countries: Deepen capital markets and expand equity financing. Strengthen antitrust regulation and competition agencies. Protect intellectual property rights.\n\nTalent\n- Low-income countries: Invest in human capital by broadening foundational skills and improving learning outcomes.\n- Lower-middle-income countries: Discipline elites by providing equal opportunities for women, minorities, and disadvantaged groups. Improve allocation of talent to task. Develop links among local and globally leading universities. Allow emigration of educated workers whose skills are not valued in domestic markets.\n- Upper-middle-income countries: Strengthen industry-academia links domestically. Expand programs to connect with diaspora in advanced economies. Enhance economic and political freedoms.\n\nEnergy\n- Low-income countries: Increase investment in expanding access and grid networks. Reform regulatory frameworks to attract private investment and ensure fair competition.\n- Lower-middle-income countries: Discipline SOEs by hardening budget constraints. Use international coalitions to encourage advanced economies to ease protection of domestic incumbents. Aid adoption of energy-efficient practices. Enhance economic efficiency by reflecting environmental costs in energy prices.\n- Upper-middle-income countries: Lower the cost of capital for low-carbon energy by reducing risks involving technology, markets, and policy. Increase multilateral finance for very long-term investments.\n\nSource: WDR 2024 team.\nNote: SOEs = state-owned enterprises.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "59",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-059.png",
+            "label": "Table O.3",
+            "pdf_page": 59,
+            "visual_id": "wdr-p059-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 12.844051699076369,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.007049400002870243
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p039-table-00-000",
+      "text": "Table O.2\nTitle: \"To achieve high-income status, countries will need to recalibrate their mix of investment, infusion, and innovation.\" Columns: Income classification | Investment | Infusion | Innovation. Row 1: Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). Row 2: Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). Row 3: Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-039.png",
+        "label": "Table O.2",
+        "pdf_page": 39,
+        "visual_id": "wdr-p039-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 23.824702046002365,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p039-text-000",
+      "text": "Table O.2  To achieve high-income status, countries will need to recalibrate their mix of\n­investment, infusion, and innovation\n  INCOME CLASSIFICATION       INVESTMENT             INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority              Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority               Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority               Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\nFigure O.4  Middle-income countries must engineer two successive transitions to move to\nhigh-income status\n\n       1i                              2i                                        3i\n Investment            Investment + Infusion          Investment + Infusion + Innovation\n\n                Capital                                                                    Productivity contribution growth\nRelative to\n\n                                       Proximity to the frontier\n\nSource: WDR 2024 team.\nNote: The curves illustrate the relative contributions of capital and productivity to economic growth (y-axis), according to\ncountries’ proximity to the frontier (represented by the leading economies). Countries farther out on the x-axis are closer to\nthe frontier.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 39,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 23.35700424245208,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p086-table-00-000",
+      "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "86",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-086.png",
+        "label": "Table 2.1",
+        "pdf_page": 86,
+        "visual_id": "wdr-p086-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 20.843759734269373,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p086-text-001",
+      "text": " needed to sustain\nsustain high-income levels. The first is to transi­    them. They did so by getting rid of obsolete\ntion from a 1i strategy for accelerating investment   economic arrangements, by weakening the forces\nto a 2i strategy focusing on both investment and    of preservation, and by creating the necessary\ninfusion in which a country brings technologies   new  ones.  However,   it  appears  that  these\nfrom abroad and  diffuses them domestically    countries—such  as Argentina and República\n(table 2.1). Policy makers in ­lower-middle-income    Bolivariana de Venezuela—also find it difficult to\ncountries will need to add to investment strat­    ensure that their income gains are durable, and\negies to infuse modern technologies and busi­    even more difficult to continue to close the gaps\nness practices from global leaders into their own    in living standards with economies at the global\neconomies.                                  economic frontier.\n\nTable 2.1 Middle-income countries will need to engineer two successive transitions to develop\neconomic structures that can sustain high-income status\n INCOME CLASSIFICATION        INVESTMENT            INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority            Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority              Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority              Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n54   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "86",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 86,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.066666715203077,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p059-text-001",
+      "text": "Table O.3  The 3i strategy: What countries should do at different stages of development\n                                                                   UPPER-MIDDLE-INCOME\n             LOW-INCOME                                               COUNTRIES\n              COUNTRIES         LOWER-MIDDLE-INCOME COUNTRIES                                                                                                                   3i: Investment + Infusion +\n                       1i: Investment                         2i: Investment + Infusion                       Innovation\n Enterprise    •  Improve the              •   Discipline market leaders through integration into     •  Deepen capital markets\n                investment climate        globally contestable markets.                     and expand equity\n                  to increase               •   Diffuse global technologies with fluid factor and         financing.\n               domestic and            product markets.                                              •  Strengthen antitrust\n                  foreign investment.                                                     •  Reward value-adding firms to stimulate business        regulation and\n                                    dynamism.                                         competition agencies.\n                                                                                                                             •   Protect intellectual\n                                                                                                property rights.\n\n Talent         •   Invest in human         •   Discipline elites by providing equal opportunities      •  Strengthen industry-\n                   capital by                  for women, minorities, and disadvantaged groups.     academia links\n                broadening               •  Improve allocation of talent to task.                    domestically.\n                 foundational skills                                                     •  Develop links among local and globally leading        •  Expand programs to              and improving                                                universities.                                      connect with diaspora in\n                  learning outcomes.                                                    advanced economies.\n                                                     •  Allow emigration of educated workers whose\n                                                    skills are not valued in domestic markets.               •  Enhance economic and\n                                                                                                                   political freedoms.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "59",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 59,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 14.636484619437141,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p059-table-00-000",
+      "text": "Table O.3\nThe 3i strategy: What countries should do at different stages of development.\n\nColumns:\n- Low-income countries: 1i: Investment\n- Lower-middle-income countries: 2i: Investment + Infusion\n- Upper-middle-income countries: 3i: Investment + Infusion + Innovation\n\nRows and entries:\n\nEnterprise\n- Low-income countries: Improve the investment climate to increase domestic and foreign investment.\n- Lower-middle-income countries: Discipline market leaders through integration into globally contestable markets. Diffuse global technologies with fluid factor and product markets. Reward value-adding firms to stimulate business dynamism.\n- Upper-middle-income countries: Deepen capital markets and expand equity financing. Strengthen antitrust regulation and competition agencies. Protect intellectual property rights.\n\nTalent\n- Low-income countries: Invest in human capital by broadening foundational skills and improving learning outcomes.\n- Lower-middle-income countries: Discipline elites by providing equal opportunities for women, minorities, and disadvantaged groups. Improve allocation of talent to task. Develop links among local and globally leading universities. Allow emigration of educated workers whose skills are not valued in domestic markets.\n- Upper-middle-income countries: Strengthen industry-academia links domestically. Expand programs to connect with diaspora in advanced economies. Enhance economic and political freedoms.\n\nEnergy\n- Low-income countries: Increase investment in expanding access and grid networks. Reform regulatory frameworks to attract private investment and ensure fair competition.\n- Lower-middle-income countries: Discipline SOEs by hardening budget constraints. Use international coalitions to encourage advanced economies to ease protection of domestic incumbents. Aid adoption of energy-efficient practices. Enhance economic efficiency by reflecting environmental costs in energy prices.\n- Upper-middle-income countries: Lower the cost of capital for low-carbon energy by reducing risks involving technology, markets, and policy. Increase multilateral finance for very long-term investments.\n\nSource: WDR 2024 team.\nNote: SOEs = state-owned enterprises.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "59",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-059.png",
+        "label": "Table O.3",
+        "pdf_page": 59,
+        "visual_id": "wdr-p059-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 12.844051699076369,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:34:55.283486+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 514,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 72,
+        "output_tokens_details": {
+          "reasoning_tokens": 44
+        },
+        "total_tokens": 586
+      }
+    },
+    {
+      "at": "2026-11-16T15:34:58.458824+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3477,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 223,
+        "output_tokens_details": {
+          "reasoning_tokens": 145
+        },
+        "total_tokens": 3700
+      }
+    }
+  ],
+  "seconds": 5.55100179999863,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D01",
+  "initial_ranking": [
+    {
+      "id": "wdr-p039-table-00-000",
+      "text": "Table O.2\nTitle: \"To achieve high-income status, countries will need to recalibrate their mix of investment, infusion, and innovation.\" Columns: Income classification | Investment | Infusion | Innovation. Row 1: Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). Row 2: Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). Row 3: Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-039.png",
+        "label": "Table O.2",
+        "pdf_page": 39,
+        "visual_id": "wdr-p039-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 39.54599526667973,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p039-text-000",
+      "text": "Table O.2  To achieve high-income status, countries will need to recalibrate their mix of\n­investment, infusion, and innovation\n  INCOME CLASSIFICATION       INVESTMENT             INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority              Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority               Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority               Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\nFigure O.4  Middle-income countries must engineer two successive transitions to move to\nhigh-income status\n\n       1i                              2i                                        3i\n Investment            Investment + Infusion          Investment + Infusion + Innovation\n\n                Capital                                                                    Productivity contribution growth\nRelative to\n\n                                       Proximity to the frontier\n\nSource: WDR 2024 team.\nNote: The curves illustrate the relative contributions of capital and productivity to economic growth (y-axis), according to\ncountries’ proximity to the frontier (represented by the leading economies). Countries farther out on the x-axis are closer to\nthe frontier.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 39,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 39.17744669730456,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p086-text-001",
+      "text": " needed to sustain\nsustain high-income levels. The first is to transi­    them. They did so by getting rid of obsolete\ntion from a 1i strategy for accelerating investment   economic arrangements, by weakening the forces\nto a 2i strategy focusing on both investment and    of preservation, and by creating the necessary\ninfusion in which a country brings technologies   new  ones.  However,   it  appears  that  these\nfrom abroad and  diffuses them domestically    countries—such  as Argentina and República\n(table 2.1). Policy makers in ­lower-middle-income    Bolivariana de Venezuela—also find it difficult to\ncountries will need to add to investment strat­    ensure that their income gains are durable, and\negies to infuse modern technologies and busi­    even more difficult to continue to close the gaps\nness practices from global leaders into their own    in living standards with economies at the global\neconomies.                                  economic frontier.\n\nTable 2.1 Middle-income countries will need to engineer two successive transitions to develop\neconomic structures that can sustain high-income status\n INCOME CLASSIFICATION        INVESTMENT            INFUSION            INNOVATION\n Low-income\n\n                                       Higher priority            Lower priority              Lower priority\n\n Lower-middle-income\n\n                                       Higher priority              Higher priority              Lower priority\n\n Upper-middle-income\n\n                                       Higher priority              Higher priority               Higher priority\n\nSource: WDR 2024 team.\nNote: The orange dials indicate a strategy that is a priority for that particular income group. The blue dials indicate a strategy\nthat is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n54   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "86",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 86,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 35.491527139704466,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p086-table-00-000",
+      "text": "Table 2.1\nTitle: \"Middle-income countries will need to engineer two successive transitions to develop economic structures that can sustain high-income status.\" Columns: Income classification; Investment; Infusion; Innovation. Rows and cell contents: 1) Low-income — Investment: Higher priority (orange dial); Infusion: Lower priority (blue dial); Innovation: Lower priority (blue dial). 2) Lower-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Lower priority (blue dial). 3) Upper-middle-income — Investment: Higher priority (orange dial); Infusion: Higher priority (orange dial); Innovation: Higher priority (orange dial). Source: WDR 2024 team. Note: Orange dials indicate a strategy that is a priority for that particular income group. Blue dials indicate a strategy that is less of a priority for that particular income group until the priority strategy is successfully achieved.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "86",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-086.png",
+        "label": "Table 2.1",
+        "pdf_page": 86,
+        "visual_id": "wdr-p086-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 35.01922159301775,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p037-text-001",
+      "text": " the three\nNote: The bars show the simple average for middle-income    drivers of economic growth—investment, infusion,\ncountries  in 2019. The data are calculated using the                                          and innovation—as they move through middle-methodology outlined in Jones (2016). Following Jones\n(2016), the figure is based on Hicks-neutral and a constant   income status (table O.2).\nlabor share of two-thirds. GDP = gross domestic product.      What makes the move from middle-income\n                                                     status to high-income status so difficult? One\neconomic  complexity  of  a  country’s  export    reason  is that as they move through middle-\nbasket—a measure of sophistication—there is a   income status, countries cannot leap all at once\nrising relationship between sophistication and   from investment-driven growth to innovation-\nincome for all economies that transitioned from    driven growth. Infusion of technology comes\na GDP per capita of less than US$13,000 to more     first and then innovation.\nthan US$31,000,  regardless  of whether  their\nexport baskets became more or less diversified\n                                       Infusion first(figure O.3).\n  However, the pace of progress in middle-­   Economic  success  in lower-income  countries\nincome countries  is slowing. Average annual    stems largely from accelerating investment. As\nincome growth in these countries slipped by    these economies move to middle-income status,\nnearly one-third in the first two decades of this    continued progress requires complementing a\ncentury—from 5 percent in the 2000s to 3.5 per-   good investment climate with measures delib-\ncent in the 2010s.3 A turnaround is not likely    erately designed to bring new ideas from abroad\nsoon because middle-income countries are facing   and diffuse them across the economy—so-called",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "37",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 37,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.458178782390785,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p047-text-002",
+      "text": " = high-income countries;\nLICs = low-income countries; LMICs = lower-middle-income countries; UMICs = upper-middle-income countries. Panel c\nillustrates the average employment across a cohort of firms of different ages in the cross-section of firms. The number of\nemployees serves as a proxy for firm size. The y-axis axis reports the average employment of each cohort relative to the\naverage employment across firms under five years of age.\n\n  Why do preservation forces persist in con-    inequality across generations, exacerbating the\nstraining the opportunities for so many people?    inequality of opportunity.\nPart of the answer  is that preservation insu-      Three kinds of preservation forces perpetuate\nlates members of social elites from the forces of    social immobility in middle-income countries,\ndestruction that, in a more open society with    shutting out talent from economic creation. The\nmeritocratic institutions, might dissipate their     first force is norms—biases that foreclose or limit\nadvantages in wealth and privilege. The same    opportunity for women and other members of\nforces ensure that, beyond elites, few children    marginalized groups. Next are networks—above\nwill get the chance to climb to a higher rung on      all, family connections. And the last force  is\na country’s income ladder than that occupied by    neighborhoods—regional  and  local  disparities\ntheir parents. So, income inequality remains high    in access to education and jobs. Although  all\nand social mobility remains low, transmitting    three factors can have positive impacts on talent\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 15\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "47",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 47,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 23.960199440998462,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

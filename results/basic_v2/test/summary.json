@@ -1,0 +1,64 @@
+[
+  {
+    "passed": 6,
+    "total": 7,
+    "rate": 0.8571428571428571,
+    "groups": {
+      "basic": {
+        "passed": 6,
+        "total": 7
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 1,
+    "gold_issues": 0,
+    "method": "dense",
+    "split": "test",
+    "hit1": {
+      "n": 3,
+      "N": 5
+    },
+    "hit3": {
+      "n": 4,
+      "N": 5
+    },
+    "context_evidence": {
+      "n": 5,
+      "N": 5
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 68.24337789999481
+  },
+  {
+    "passed": 1,
+    "total": 7,
+    "rate": 0.14285714285714285,
+    "groups": {
+      "basic": {
+        "passed": 1,
+        "total": 7
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 6,
+    "gold_issues": 0,
+    "method": "hybrid",
+    "split": "test",
+    "hit1": {
+      "n": 3,
+      "N": 5
+    },
+    "hit3": {
+      "n": 5,
+      "N": 5
+    },
+    "context_evidence": {
+      "n": 5,
+      "N": 5
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 59.64260749999448
+  }
+]

@@ -1,0 +1,922 @@
+{
+  "status": "answered",
+  "answer": "India’s GNI per capita, Atlas method (current US$, 2023), is US$2,540 [wdr-p081-table-00-000].",
+  "citations": [
+    "wdr-p081-table-00-000"
+  ],
+  "question": "Inspect the original rotated Table S.1. What GNI per capita in current US dollars (2023) is listed for India?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Table S.1\" India GNI per capita current US dollars 2023 rotated",
+      "results": [
+        {
+          "id": "wdr-p081-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 25.293274681997072,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p082-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.285718712579204,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p082-table-00-001",
+          "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.96982003392521,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p081-table-00-002",
+          "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 3.8898350979350025,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p081-table-00-001",
+          "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 2.320178735035752,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p095-text-002",
+          "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "95",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 95,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.78002794690327,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p081-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 25.293274681997072,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p082-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.285718712579204,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p082-table-00-001",
+          "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.96982003392521,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p081-table-00-002",
+          "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 3.8898350979350025,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p081-table-00-001",
+          "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 2.320178735035752,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p095-text-002",
+          "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "95",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 95,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.78002794690327,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.006760300002497388
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p081-table-00",
+      "seconds": 2.2999993234407157e-06
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "wdr-p081-table-00-001",
+      "context": [
+        {
+          "id": "wdr-p081-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        },
+        {
+          "id": "wdr-p081-table-00-001",
+          "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        },
+        {
+          "id": "wdr-p081-table-00-002",
+          "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        }
+      ],
+      "seconds": 0.002636599998368183
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p081-table-00-000",
+      "pdf_page": 81,
+      "image": "data\\processed\\agent_pages\\wdr\\page-081.png",
+      "seconds": 0.09376540000084788
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p081-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p082-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 18.285718712579204,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p082-table-00-001",
+      "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 14.96982003392521,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p081-table-00-002",
+      "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p081-table-00-001",
+      "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p095-text-002",
+      "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "95",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 95,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.78002794690327,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:35:05.797935+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 520,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 91,
+        "output_tokens_details": {
+          "reasoning_tokens": 55
+        },
+        "total_tokens": 611
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:08.482622+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 4444,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 164,
+        "output_tokens_details": {
+          "reasoning_tokens": 136
+        },
+        "total_tokens": 4608
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:11.431057+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 4632,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 194,
+        "output_tokens_details": {
+          "reasoning_tokens": 163
+        },
+        "total_tokens": 4826
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:13.959112+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6892,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 4352,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 61,
+        "output_tokens_details": {
+          "reasoning_tokens": 31
+        },
+        "total_tokens": 6953
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:18.250444+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8710,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 184,
+        "output_tokens_details": {
+          "reasoning_tokens": 117
+        },
+        "total_tokens": 8894
+      }
+    }
+  ],
+  "seconds": 15.340744299999642,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D03",
+  "initial_ranking": [
+    {
+      "id": "wdr-p081-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 27.08831133309989,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p082-table-00-001",
+      "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 25.018464702883698,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p082-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 19.484320039452747,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p081-table-00-002",
+      "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 3.8898350979350025,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p081-table-00-001",
+      "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 2.320178735035752,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p095-text-002",
+      "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "95",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 95,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 31.525376494121414,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

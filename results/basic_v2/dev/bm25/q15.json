@@ -1,0 +1,592 @@
+{
+  "status": "answered",
+  "answer": "Precision is about avoiding false positives: it measures how well a classifier avoids labeling negative samples as positive. Recall is about finding positive samples: it measures how well a classifier finds all the actual positives. In formula terms, precision = tp / (tp + fp) and recall = tp / (tp + fn). [f7310f10a98550af0f19a4eb] [5549f5eab48c6761f14e7e68]",
+  "citations": [
+    "f7310f10a98550af0f19a4eb",
+    "5549f5eab48c6761f14e7e68"
+  ],
+  "question": "How do precision and recall differ in terms of avoiding false positives and finding positive samples?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "precision recall false positives finding positive samples definition",
+      "results": [
+        {
+          "id": "5549f5eab48c6761f14e7e68",
+          "text": "3.4.4.9.1. Binary classification\n\nIn a binary classification task, the terms ‘’positive’’ and ‘’negative’’ refer to the classifier’s prediction, and the terms ‘’true’’ and ‘’false’’ refer to whether that prediction corresponds to the external judgment (sometimes known as the ‘’observation’’). Given these definitions, we can formulate the following table:\n\nActual class (observation) Predicted class (expectation) tp (true positive) Correct result fp (false positive) Unexpected result fn (false negative) Missing result tn (true negative) Correct absence of result\n\nIn this context, we can define the notions of precision and recall:\n\n\\[\\text{precision} = \\frac{\\text{tp}}{\\text{tp} + \\text{fp}},\\]\n\n\\[\\text{recall} = \\frac{\\text{tp}}{\\text{tp} + \\text{fn}},\\]\n\n(Sometimes recall is also called ‘’sensitivity’’)\n\nF-measure is the weighted harmonic mean of precision and recall, with precision’s contribution to the mean weighted by some parameter \\(\\beta\\) :\n\n\\[F_\\beta = (1 + \\beta^2) \\frac{\\text{precision} \\times \\text{recall}}{\\beta^2 \\text{precision} + \\text{recall}}\\]\n\nTo avoid division by zero when precision and recall are zero, Scikit-Learn calculates F-measure with this otherwise-equivalent formula:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:011",
+          "metadata": {
+            "end": 3243,
+            "start": 2030,
+            "topic": "model_selection",
+            "anchor": "binary-classification",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures > 3.4.4.9.1. Binary classification",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 40610,
+            "unit_start": 36947,
+            "token_count": 342
+          },
+          "score": 17.787964620555854,
+          "rank": 1
+        },
+        {
+          "id": "f7310f10a98550af0f19a4eb",
+          "text": "3.4.4.9. Precision, recall and F-measures\n\nIntuitively, precision is the ability of the classifier not to label as positive a sample that is negative, and recall is the ability of the classifier to find all the positive samples.\n\nThe F-measure ( \\(F_\\beta\\) and \\(F_1\\) measures) can be interpreted as a weighted harmonic mean of the precision and recall. A \\(F_\\beta\\) measure reaches its best value at 1 and its worst score at 0. With \\(\\beta = 1\\) , \\(F_\\beta\\) and \\(F_1\\) are equivalent, and the recall and the precision are equally important.\n\nThe precision_recall_curve computes a precision-recall curve from the ground truth label and a score given by the classifier by varying a decision threshold.\n\nThe average_precision_score function computes the average precision (AP) from prediction scores. The value is between 0 and 1 and higher is better. AP is defined as\n\n\\[\\text{AP} = \\sum_n (R_n - R_{n-1}) P_n\\]\n\nwhere \\(P_n\\) and \\(R_n\\) are the precision and recall at the nth threshold. With random predictions, the AP is the fraction of positive samples.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:010",
+          "metadata": {
+            "end": 2886,
+            "start": 1822,
+            "topic": "model_selection",
+            "anchor": "precision-recall-and-f-measures",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 36945,
+            "unit_start": 33398,
+            "token_count": 289
+          },
+          "score": 16.444173828164367,
+          "rank": 2
+        },
+        {
+          "id": "4831adaf1f62a218443fc16a",
+          "text": "In the binary (two-class) case, \\(tp\\) , \\(tn\\) , \\(fp\\) and \\(fn\\) are respectively the number of true positives, true negatives, false positives and false negatives, the MCC is defined as\n\n\\[MCC = \\frac{tp \\times tn - fp \\times fn}{\\sqrt{(tp + fp)(tp + fn)(tn + fp)(tn + fn)}}.\\]\n\nIn the multiclass case, the Matthews correlation coefficient can be defined in terms of a confusion_matrix \\(C\\) for \\(K\\) classes. To simplify the definition consider the following intermediate variables:\n\n\\(t_k=\\sum_{i}^{K} C_{ik}\\) the number of times class \\(k\\) truly occurred,\n\n\\(p_k=\\sum_{i}^{K} C_{ki}\\) the number of times class \\(k\\) was predicted,\n\n\\(c=\\sum_{k}^{K} C_{kk}\\) the total number of samples correctly predicted,\n\n\\(s=\\sum_{i}^{K} \\sum_{j}^{K} C_{ij}\\) the total number of samples.\n\nThen the multiclass MCC is defined as:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:015",
+          "metadata": {
+            "end": 826,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "matthews-correlation-coefficient",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.13. Matthews correlation coefficient",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 55446,
+            "unit_start": 51921,
+            "token_count": 312
+          },
+          "score": 12.92095763664853,
+          "rank": 3
+        },
+        {
+          "id": "3abffd455ec6948db58cb0dd",
+          "text": "3.4.4.14. Multi-label confusion matrix\n\nThe multilabel_confusion_matrix function computes class-wise (default) or sample-wise (samplewise=True) multilabel confusion matrix to evaluate the accuracy of a classification. multilabel_confusion_matrix also treats multiclass data as if it were multilabel, as this is a transformation commonly applied to evaluate multiclass problems with binary classification metrics (such as precision, recall, etc.).\n\nWhen calculating class-wise multilabel confusion matrix \\(C\\) , the count of true negatives for class \\(i\\) is \\(C_{i,0,0}\\) , false negatives is \\(C_{i,1,0}\\) , true positives is \\(C_{i,1,1}\\) and false positives is \\(C_{i,0,1}\\) .\n\nHere is an example demonstrating the use of the multilabel_confusion_matrix function with multilabel indicator matrix input:\n\n>>> import numpy as np\n>>> from sklearn.metrics import multilabel_confusion_matrix\n>>> y_true = np.array([[1, 0, 1],\n...                    [0, 1, 0]])\n>>> y_pred = np.array([[1, 0, 0],\n...                    [0, 1, 1]])\n>>> multilabel_confusion_matrix(y_true, y_pred)\narray([[[1, 0],\n        [0, 1]],\n\n       [[1, 0],\n        [0, 1]],\n\n       [[0, 1],\n        [1, 0]]])",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:015",
+          "metadata": {
+            "end": 2887,
+            "start": 1709,
+            "topic": "model_selection",
+            "anchor": "multi-label-confusion-matrix",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.14. Multi-label confusion matrix",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 55446,
+            "unit_start": 51921,
+            "token_count": 382
+          },
+          "score": 12.269674836007297,
+          "rank": 4
+        },
+        {
+          "id": "a5d2866528c8566c4c04b0b0",
+          "text": "3.4.4.15. Receiver operating characteristic (ROC)\n\nThe function roc_curve computes the receiver operating characteristic curve, or ROC curve . Quoting Wikipedia :\n\n“A receiver operating characteristic (ROC), or simply ROC curve, is a graphical plot which illustrates the performance of a binary classifier system as its discrimination threshold is varied. It is created by plotting the fraction of true positives out of the positives (TPR = true positive rate) vs. the fraction of false positives out of the negatives (FPR = false positive rate), at various threshold settings. TPR is also known as sensitivity, and FPR is one minus the specificity or true negative rate.”\n\nThis function requires the true binary value and the target scores, which can either be probability estimates of the positive class or non-thresholded decision values (as returned by decision_function on some classifiers). Here is a small example of how to use the roc_curve function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import roc_curve\n>>> y = np.array([1, 1, 2, 2])\n>>> scores = np.array([0.1, 0.4, 0.35, 0.8])\n>>> fpr, tpr, thresholds = roc_curve(y, scores, pos_label=2)\n>>> fpr\narray([0. , 0. , 0.5, 0.5, 1. ])\n>>> tpr\narray([0. , 0.5, 0.5, 1. , 1. ])\n>>> thresholds\narray([ inf, 0.8 , 0.4 , 0.35, 0.1 ])",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:016",
+          "metadata": {
+            "end": 2371,
+            "start": 1075,
+            "topic": "model_selection",
+            "anchor": "receiver-operating-characteristic-roc",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.15. Receiver operating characteristic (ROC)",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 59152,
+            "unit_start": 55448,
+            "token_count": 376
+          },
+          "score": 10.99011668980045,
+          "rank": 5
+        },
+        {
+          "id": "547d93472ccde7a9d2b3fabc",
+          "text": "average_precision_score (y_true, y_score, *) Compute average precision (AP) from prediction scores. f1_score (y_true, y_pred, *[, labels, ...]) Compute the F1 score, also known as balanced F-score or F-measure. fbeta_score (y_true, y_pred, *, beta[, ...]) Compute the F-beta score. precision_recall_curve (y_true, y_score, *[, ...]) Compute precision-recall pairs for different probability thresholds. precision_recall_fscore_support (y_true, ...) Compute precision, recall, F-measure and support for each class. precision_score (y_true, y_pred, *[, labels, ...]) Compute the precision. recall_score (y_true, y_pred, *[, labels, ...]) Compute the recall.\n\nNote that the precision_recall_curve function is restricted to the binary case. The average_precision_score function supports multiclass and multilabel formats by computing each class score in a One-vs-the-rest (OvR) fashion and averaging them or not depending of its average argument value.\n\nThe PrecisionRecallDisplay.from_estimator and PrecisionRecallDisplay.from_predictions functions will plot the precision-recall curve as follows.\n\nExamples\n\nSee Custom refit strategy of a grid search with cross-validation for an example of precision_score and recall_score usage to estimate parameters using grid search with nested cross-validation.\n\nSee Precision-Recall for an example of precision_recall_curve usage to evaluate classifier output quality.\n\nReferences",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:011",
+          "metadata": {
+            "end": 1417,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "precision-recall-and-f-measures",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 40610,
+            "unit_start": 36947,
+            "token_count": 374
+          },
+          "score": 10.535613165688533,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "5549f5eab48c6761f14e7e68",
+          "text": "3.4.4.9.1. Binary classification\n\nIn a binary classification task, the terms ‘’positive’’ and ‘’negative’’ refer to the classifier’s prediction, and the terms ‘’true’’ and ‘’false’’ refer to whether that prediction corresponds to the external judgment (sometimes known as the ‘’observation’’). Given these definitions, we can formulate the following table:\n\nActual class (observation) Predicted class (expectation) tp (true positive) Correct result fp (false positive) Unexpected result fn (false negative) Missing result tn (true negative) Correct absence of result\n\nIn this context, we can define the notions of precision and recall:\n\n\\[\\text{precision} = \\frac{\\text{tp}}{\\text{tp} + \\text{fp}},\\]\n\n\\[\\text{recall} = \\frac{\\text{tp}}{\\text{tp} + \\text{fn}},\\]\n\n(Sometimes recall is also called ‘’sensitivity’’)\n\nF-measure is the weighted harmonic mean of precision and recall, with precision’s contribution to the mean weighted by some parameter \\(\\beta\\) :\n\n\\[F_\\beta = (1 + \\beta^2) \\frac{\\text{precision} \\times \\text{recall}}{\\beta^2 \\text{precision} + \\text{recall}}\\]\n\nTo avoid division by zero when precision and recall are zero, Scikit-Learn calculates F-measure with this otherwise-equivalent formula:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:011",
+          "metadata": {
+            "end": 3243,
+            "start": 2030,
+            "topic": "model_selection",
+            "anchor": "binary-classification",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures > 3.4.4.9.1. Binary classification",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 40610,
+            "unit_start": 36947,
+            "token_count": 342
+          },
+          "score": 17.787964620555854,
+          "rank": 1
+        },
+        {
+          "id": "f7310f10a98550af0f19a4eb",
+          "text": "3.4.4.9. Precision, recall and F-measures\n\nIntuitively, precision is the ability of the classifier not to label as positive a sample that is negative, and recall is the ability of the classifier to find all the positive samples.\n\nThe F-measure ( \\(F_\\beta\\) and \\(F_1\\) measures) can be interpreted as a weighted harmonic mean of the precision and recall. A \\(F_\\beta\\) measure reaches its best value at 1 and its worst score at 0. With \\(\\beta = 1\\) , \\(F_\\beta\\) and \\(F_1\\) are equivalent, and the recall and the precision are equally important.\n\nThe precision_recall_curve computes a precision-recall curve from the ground truth label and a score given by the classifier by varying a decision threshold.\n\nThe average_precision_score function computes the average precision (AP) from prediction scores. The value is between 0 and 1 and higher is better. AP is defined as\n\n\\[\\text{AP} = \\sum_n (R_n - R_{n-1}) P_n\\]\n\nwhere \\(P_n\\) and \\(R_n\\) are the precision and recall at the nth threshold. With random predictions, the AP is the fraction of positive samples.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:010",
+          "metadata": {
+            "end": 2886,
+            "start": 1822,
+            "topic": "model_selection",
+            "anchor": "precision-recall-and-f-measures",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 36945,
+            "unit_start": 33398,
+            "token_count": 289
+          },
+          "score": 16.444173828164367,
+          "rank": 2
+        },
+        {
+          "id": "4831adaf1f62a218443fc16a",
+          "text": "In the binary (two-class) case, \\(tp\\) , \\(tn\\) , \\(fp\\) and \\(fn\\) are respectively the number of true positives, true negatives, false positives and false negatives, the MCC is defined as\n\n\\[MCC = \\frac{tp \\times tn - fp \\times fn}{\\sqrt{(tp + fp)(tp + fn)(tn + fp)(tn + fn)}}.\\]\n\nIn the multiclass case, the Matthews correlation coefficient can be defined in terms of a confusion_matrix \\(C\\) for \\(K\\) classes. To simplify the definition consider the following intermediate variables:\n\n\\(t_k=\\sum_{i}^{K} C_{ik}\\) the number of times class \\(k\\) truly occurred,\n\n\\(p_k=\\sum_{i}^{K} C_{ki}\\) the number of times class \\(k\\) was predicted,\n\n\\(c=\\sum_{k}^{K} C_{kk}\\) the total number of samples correctly predicted,\n\n\\(s=\\sum_{i}^{K} \\sum_{j}^{K} C_{ij}\\) the total number of samples.\n\nThen the multiclass MCC is defined as:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:015",
+          "metadata": {
+            "end": 826,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "matthews-correlation-coefficient",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.13. Matthews correlation coefficient",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 55446,
+            "unit_start": 51921,
+            "token_count": 312
+          },
+          "score": 12.92095763664853,
+          "rank": 3
+        },
+        {
+          "id": "3abffd455ec6948db58cb0dd",
+          "text": "3.4.4.14. Multi-label confusion matrix\n\nThe multilabel_confusion_matrix function computes class-wise (default) or sample-wise (samplewise=True) multilabel confusion matrix to evaluate the accuracy of a classification. multilabel_confusion_matrix also treats multiclass data as if it were multilabel, as this is a transformation commonly applied to evaluate multiclass problems with binary classification metrics (such as precision, recall, etc.).\n\nWhen calculating class-wise multilabel confusion matrix \\(C\\) , the count of true negatives for class \\(i\\) is \\(C_{i,0,0}\\) , false negatives is \\(C_{i,1,0}\\) , true positives is \\(C_{i,1,1}\\) and false positives is \\(C_{i,0,1}\\) .\n\nHere is an example demonstrating the use of the multilabel_confusion_matrix function with multilabel indicator matrix input:\n\n>>> import numpy as np\n>>> from sklearn.metrics import multilabel_confusion_matrix\n>>> y_true = np.array([[1, 0, 1],\n...                    [0, 1, 0]])\n>>> y_pred = np.array([[1, 0, 0],\n...                    [0, 1, 1]])\n>>> multilabel_confusion_matrix(y_true, y_pred)\narray([[[1, 0],\n        [0, 1]],\n\n       [[1, 0],\n        [0, 1]],\n\n       [[0, 1],\n        [1, 0]]])",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:015",
+          "metadata": {
+            "end": 2887,
+            "start": 1709,
+            "topic": "model_selection",
+            "anchor": "multi-label-confusion-matrix",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.14. Multi-label confusion matrix",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 55446,
+            "unit_start": 51921,
+            "token_count": 382
+          },
+          "score": 12.269674836007297,
+          "rank": 4
+        },
+        {
+          "id": "a5d2866528c8566c4c04b0b0",
+          "text": "3.4.4.15. Receiver operating characteristic (ROC)\n\nThe function roc_curve computes the receiver operating characteristic curve, or ROC curve . Quoting Wikipedia :\n\n“A receiver operating characteristic (ROC), or simply ROC curve, is a graphical plot which illustrates the performance of a binary classifier system as its discrimination threshold is varied. It is created by plotting the fraction of true positives out of the positives (TPR = true positive rate) vs. the fraction of false positives out of the negatives (FPR = false positive rate), at various threshold settings. TPR is also known as sensitivity, and FPR is one minus the specificity or true negative rate.”\n\nThis function requires the true binary value and the target scores, which can either be probability estimates of the positive class or non-thresholded decision values (as returned by decision_function on some classifiers). Here is a small example of how to use the roc_curve function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import roc_curve\n>>> y = np.array([1, 1, 2, 2])\n>>> scores = np.array([0.1, 0.4, 0.35, 0.8])\n>>> fpr, tpr, thresholds = roc_curve(y, scores, pos_label=2)\n>>> fpr\narray([0. , 0. , 0.5, 0.5, 1. ])\n>>> tpr\narray([0. , 0.5, 0.5, 1. , 1. ])\n>>> thresholds\narray([ inf, 0.8 , 0.4 , 0.35, 0.1 ])",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:016",
+          "metadata": {
+            "end": 2371,
+            "start": 1075,
+            "topic": "model_selection",
+            "anchor": "receiver-operating-characteristic-roc",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.15. Receiver operating characteristic (ROC)",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 59152,
+            "unit_start": 55448,
+            "token_count": 376
+          },
+          "score": 10.99011668980045,
+          "rank": 5
+        },
+        {
+          "id": "547d93472ccde7a9d2b3fabc",
+          "text": "average_precision_score (y_true, y_score, *) Compute average precision (AP) from prediction scores. f1_score (y_true, y_pred, *[, labels, ...]) Compute the F1 score, also known as balanced F-score or F-measure. fbeta_score (y_true, y_pred, *, beta[, ...]) Compute the F-beta score. precision_recall_curve (y_true, y_score, *[, ...]) Compute precision-recall pairs for different probability thresholds. precision_recall_fscore_support (y_true, ...) Compute precision, recall, F-measure and support for each class. precision_score (y_true, y_pred, *[, labels, ...]) Compute the precision. recall_score (y_true, y_pred, *[, labels, ...]) Compute the recall.\n\nNote that the precision_recall_curve function is restricted to the binary case. The average_precision_score function supports multiclass and multilabel formats by computing each class score in a One-vs-the-rest (OvR) fashion and averaging them or not depending of its average argument value.\n\nThe PrecisionRecallDisplay.from_estimator and PrecisionRecallDisplay.from_predictions functions will plot the precision-recall curve as follows.\n\nExamples\n\nSee Custom refit strategy of a grid search with cross-validation for an example of precision_score and recall_score usage to estimate parameters using grid search with nested cross-validation.\n\nSee Precision-Recall for an example of precision_recall_curve usage to evaluate classifier output quality.\n\nReferences",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:011",
+          "metadata": {
+            "end": 1417,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "precision-recall-and-f-measures",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 40610,
+            "unit_start": 36947,
+            "token_count": 374
+          },
+          "score": 10.535613165688533,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.004850599998462712
+    }
+  ],
+  "context": [
+    {
+      "id": "5549f5eab48c6761f14e7e68",
+      "text": "3.4.4.9.1. Binary classification\n\nIn a binary classification task, the terms ‘’positive’’ and ‘’negative’’ refer to the classifier’s prediction, and the terms ‘’true’’ and ‘’false’’ refer to whether that prediction corresponds to the external judgment (sometimes known as the ‘’observation’’). Given these definitions, we can formulate the following table:\n\nActual class (observation) Predicted class (expectation) tp (true positive) Correct result fp (false positive) Unexpected result fn (false negative) Missing result tn (true negative) Correct absence of result\n\nIn this context, we can define the notions of precision and recall:\n\n\\[\\text{precision} = \\frac{\\text{tp}}{\\text{tp} + \\text{fp}},\\]\n\n\\[\\text{recall} = \\frac{\\text{tp}}{\\text{tp} + \\text{fn}},\\]\n\n(Sometimes recall is also called ‘’sensitivity’’)\n\nF-measure is the weighted harmonic mean of precision and recall, with precision’s contribution to the mean weighted by some parameter \\(\\beta\\) :\n\n\\[F_\\beta = (1 + \\beta^2) \\frac{\\text{precision} \\times \\text{recall}}{\\beta^2 \\text{precision} + \\text{recall}}\\]\n\nTo avoid division by zero when precision and recall are zero, Scikit-Learn calculates F-measure with this otherwise-equivalent formula:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:011",
+      "metadata": {
+        "end": 3243,
+        "start": 2030,
+        "topic": "model_selection",
+        "anchor": "binary-classification",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures > 3.4.4.9.1. Binary classification",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 40610,
+        "unit_start": 36947,
+        "token_count": 342
+      },
+      "score": 17.787964620555854,
+      "rank": 1
+    },
+    {
+      "id": "f7310f10a98550af0f19a4eb",
+      "text": "3.4.4.9. Precision, recall and F-measures\n\nIntuitively, precision is the ability of the classifier not to label as positive a sample that is negative, and recall is the ability of the classifier to find all the positive samples.\n\nThe F-measure ( \\(F_\\beta\\) and \\(F_1\\) measures) can be interpreted as a weighted harmonic mean of the precision and recall. A \\(F_\\beta\\) measure reaches its best value at 1 and its worst score at 0. With \\(\\beta = 1\\) , \\(F_\\beta\\) and \\(F_1\\) are equivalent, and the recall and the precision are equally important.\n\nThe precision_recall_curve computes a precision-recall curve from the ground truth label and a score given by the classifier by varying a decision threshold.\n\nThe average_precision_score function computes the average precision (AP) from prediction scores. The value is between 0 and 1 and higher is better. AP is defined as\n\n\\[\\text{AP} = \\sum_n (R_n - R_{n-1}) P_n\\]\n\nwhere \\(P_n\\) and \\(R_n\\) are the precision and recall at the nth threshold. With random predictions, the AP is the fraction of positive samples.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:010",
+      "metadata": {
+        "end": 2886,
+        "start": 1822,
+        "topic": "model_selection",
+        "anchor": "precision-recall-and-f-measures",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 36945,
+        "unit_start": 33398,
+        "token_count": 289
+      },
+      "score": 16.444173828164367,
+      "rank": 2
+    },
+    {
+      "id": "4831adaf1f62a218443fc16a",
+      "text": "In the binary (two-class) case, \\(tp\\) , \\(tn\\) , \\(fp\\) and \\(fn\\) are respectively the number of true positives, true negatives, false positives and false negatives, the MCC is defined as\n\n\\[MCC = \\frac{tp \\times tn - fp \\times fn}{\\sqrt{(tp + fp)(tp + fn)(tn + fp)(tn + fn)}}.\\]\n\nIn the multiclass case, the Matthews correlation coefficient can be defined in terms of a confusion_matrix \\(C\\) for \\(K\\) classes. To simplify the definition consider the following intermediate variables:\n\n\\(t_k=\\sum_{i}^{K} C_{ik}\\) the number of times class \\(k\\) truly occurred,\n\n\\(p_k=\\sum_{i}^{K} C_{ki}\\) the number of times class \\(k\\) was predicted,\n\n\\(c=\\sum_{k}^{K} C_{kk}\\) the total number of samples correctly predicted,\n\n\\(s=\\sum_{i}^{K} \\sum_{j}^{K} C_{ij}\\) the total number of samples.\n\nThen the multiclass MCC is defined as:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:015",
+      "metadata": {
+        "end": 826,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "matthews-correlation-coefficient",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.13. Matthews correlation coefficient",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 55446,
+        "unit_start": 51921,
+        "token_count": 312
+      },
+      "score": 12.92095763664853,
+      "rank": 3
+    },
+    {
+      "id": "3abffd455ec6948db58cb0dd",
+      "text": "3.4.4.14. Multi-label confusion matrix\n\nThe multilabel_confusion_matrix function computes class-wise (default) or sample-wise (samplewise=True) multilabel confusion matrix to evaluate the accuracy of a classification. multilabel_confusion_matrix also treats multiclass data as if it were multilabel, as this is a transformation commonly applied to evaluate multiclass problems with binary classification metrics (such as precision, recall, etc.).\n\nWhen calculating class-wise multilabel confusion matrix \\(C\\) , the count of true negatives for class \\(i\\) is \\(C_{i,0,0}\\) , false negatives is \\(C_{i,1,0}\\) , true positives is \\(C_{i,1,1}\\) and false positives is \\(C_{i,0,1}\\) .\n\nHere is an example demonstrating the use of the multilabel_confusion_matrix function with multilabel indicator matrix input:\n\n>>> import numpy as np\n>>> from sklearn.metrics import multilabel_confusion_matrix\n>>> y_true = np.array([[1, 0, 1],\n...                    [0, 1, 0]])\n>>> y_pred = np.array([[1, 0, 0],\n...                    [0, 1, 1]])\n>>> multilabel_confusion_matrix(y_true, y_pred)\narray([[[1, 0],\n        [0, 1]],\n\n       [[1, 0],\n        [0, 1]],\n\n       [[0, 1],\n        [1, 0]]])",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:015",
+      "metadata": {
+        "end": 2887,
+        "start": 1709,
+        "topic": "model_selection",
+        "anchor": "multi-label-confusion-matrix",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.14. Multi-label confusion matrix",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 55446,
+        "unit_start": 51921,
+        "token_count": 382
+      },
+      "score": 12.269674836007297,
+      "rank": 4
+    },
+    {
+      "id": "a5d2866528c8566c4c04b0b0",
+      "text": "3.4.4.15. Receiver operating characteristic (ROC)\n\nThe function roc_curve computes the receiver operating characteristic curve, or ROC curve . Quoting Wikipedia :\n\n“A receiver operating characteristic (ROC), or simply ROC curve, is a graphical plot which illustrates the performance of a binary classifier system as its discrimination threshold is varied. It is created by plotting the fraction of true positives out of the positives (TPR = true positive rate) vs. the fraction of false positives out of the negatives (FPR = false positive rate), at various threshold settings. TPR is also known as sensitivity, and FPR is one minus the specificity or true negative rate.”\n\nThis function requires the true binary value and the target scores, which can either be probability estimates of the positive class or non-thresholded decision values (as returned by decision_function on some classifiers). Here is a small example of how to use the roc_curve function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import roc_curve\n>>> y = np.array([1, 1, 2, 2])\n>>> scores = np.array([0.1, 0.4, 0.35, 0.8])\n>>> fpr, tpr, thresholds = roc_curve(y, scores, pos_label=2)\n>>> fpr\narray([0. , 0. , 0.5, 0.5, 1. ])\n>>> tpr\narray([0. , 0.5, 0.5, 1. , 1. ])\n>>> thresholds\narray([ inf, 0.8 , 0.4 , 0.35, 0.1 ])",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:016",
+      "metadata": {
+        "end": 2371,
+        "start": 1075,
+        "topic": "model_selection",
+        "anchor": "receiver-operating-characteristic-roc",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.15. Receiver operating characteristic (ROC)",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 59152,
+        "unit_start": 55448,
+        "token_count": 376
+      },
+      "score": 10.99011668980045,
+      "rank": 5
+    },
+    {
+      "id": "547d93472ccde7a9d2b3fabc",
+      "text": "average_precision_score (y_true, y_score, *) Compute average precision (AP) from prediction scores. f1_score (y_true, y_pred, *[, labels, ...]) Compute the F1 score, also known as balanced F-score or F-measure. fbeta_score (y_true, y_pred, *, beta[, ...]) Compute the F-beta score. precision_recall_curve (y_true, y_score, *[, ...]) Compute precision-recall pairs for different probability thresholds. precision_recall_fscore_support (y_true, ...) Compute precision, recall, F-measure and support for each class. precision_score (y_true, y_pred, *[, labels, ...]) Compute the precision. recall_score (y_true, y_pred, *[, labels, ...]) Compute the recall.\n\nNote that the precision_recall_curve function is restricted to the binary case. The average_precision_score function supports multiclass and multilabel formats by computing each class score in a One-vs-the-rest (OvR) fashion and averaging them or not depending of its average argument value.\n\nThe PrecisionRecallDisplay.from_estimator and PrecisionRecallDisplay.from_predictions functions will plot the precision-recall curve as follows.\n\nExamples\n\nSee Custom refit strategy of a grid search with cross-validation for an example of precision_score and recall_score usage to estimate parameters using grid search with nested cross-validation.\n\nSee Precision-Recall for an example of precision_recall_curve usage to evaluate classifier output quality.\n\nReferences",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:011",
+      "metadata": {
+        "end": 1417,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "precision-recall-and-f-measures",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 40610,
+        "unit_start": 36947,
+        "token_count": 374
+      },
+      "score": 10.535613165688533,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:55.262394+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 510,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 60,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 570
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:59.068546+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3710,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 257,
+        "output_tokens_details": {
+          "reasoning_tokens": 104
+        },
+        "total_tokens": 3967
+      }
+    }
+  ],
+  "seconds": 6.390257499999279,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q15",
+  "initial_ranking": [
+    {
+      "id": "5549f5eab48c6761f14e7e68",
+      "text": "3.4.4.9.1. Binary classification\n\nIn a binary classification task, the terms ‘’positive’’ and ‘’negative’’ refer to the classifier’s prediction, and the terms ‘’true’’ and ‘’false’’ refer to whether that prediction corresponds to the external judgment (sometimes known as the ‘’observation’’). Given these definitions, we can formulate the following table:\n\nActual class (observation) Predicted class (expectation) tp (true positive) Correct result fp (false positive) Unexpected result fn (false negative) Missing result tn (true negative) Correct absence of result\n\nIn this context, we can define the notions of precision and recall:\n\n\\[\\text{precision} = \\frac{\\text{tp}}{\\text{tp} + \\text{fp}},\\]\n\n\\[\\text{recall} = \\frac{\\text{tp}}{\\text{tp} + \\text{fn}},\\]\n\n(Sometimes recall is also called ‘’sensitivity’’)\n\nF-measure is the weighted harmonic mean of precision and recall, with precision’s contribution to the mean weighted by some parameter \\(\\beta\\) :\n\n\\[F_\\beta = (1 + \\beta^2) \\frac{\\text{precision} \\times \\text{recall}}{\\beta^2 \\text{precision} + \\text{recall}}\\]\n\nTo avoid division by zero when precision and recall are zero, Scikit-Learn calculates F-measure with this otherwise-equivalent formula:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:011",
+      "metadata": {
+        "end": 3243,
+        "start": 2030,
+        "topic": "model_selection",
+        "anchor": "binary-classification",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures > 3.4.4.9.1. Binary classification",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 40610,
+        "unit_start": 36947,
+        "token_count": 342
+      },
+      "score": 29.632658425809733,
+      "rank": 1
+    },
+    {
+      "id": "f7310f10a98550af0f19a4eb",
+      "text": "3.4.4.9. Precision, recall and F-measures\n\nIntuitively, precision is the ability of the classifier not to label as positive a sample that is negative, and recall is the ability of the classifier to find all the positive samples.\n\nThe F-measure ( \\(F_\\beta\\) and \\(F_1\\) measures) can be interpreted as a weighted harmonic mean of the precision and recall. A \\(F_\\beta\\) measure reaches its best value at 1 and its worst score at 0. With \\(\\beta = 1\\) , \\(F_\\beta\\) and \\(F_1\\) are equivalent, and the recall and the precision are equally important.\n\nThe precision_recall_curve computes a precision-recall curve from the ground truth label and a score given by the classifier by varying a decision threshold.\n\nThe average_precision_score function computes the average precision (AP) from prediction scores. The value is between 0 and 1 and higher is better. AP is defined as\n\n\\[\\text{AP} = \\sum_n (R_n - R_{n-1}) P_n\\]\n\nwhere \\(P_n\\) and \\(R_n\\) are the precision and recall at the nth threshold. With random predictions, the AP is the fraction of positive samples.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:010",
+      "metadata": {
+        "end": 2886,
+        "start": 1822,
+        "topic": "model_selection",
+        "anchor": "precision-recall-and-f-measures",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 36945,
+        "unit_start": 33398,
+        "token_count": 289
+      },
+      "score": 23.389632340063145,
+      "rank": 2
+    },
+    {
+      "id": "4831adaf1f62a218443fc16a",
+      "text": "In the binary (two-class) case, \\(tp\\) , \\(tn\\) , \\(fp\\) and \\(fn\\) are respectively the number of true positives, true negatives, false positives and false negatives, the MCC is defined as\n\n\\[MCC = \\frac{tp \\times tn - fp \\times fn}{\\sqrt{(tp + fp)(tp + fn)(tn + fp)(tn + fn)}}.\\]\n\nIn the multiclass case, the Matthews correlation coefficient can be defined in terms of a confusion_matrix \\(C\\) for \\(K\\) classes. To simplify the definition consider the following intermediate variables:\n\n\\(t_k=\\sum_{i}^{K} C_{ik}\\) the number of times class \\(k\\) truly occurred,\n\n\\(p_k=\\sum_{i}^{K} C_{ki}\\) the number of times class \\(k\\) was predicted,\n\n\\(c=\\sum_{k}^{K} C_{kk}\\) the total number of samples correctly predicted,\n\n\\(s=\\sum_{i}^{K} \\sum_{j}^{K} C_{ij}\\) the total number of samples.\n\nThen the multiclass MCC is defined as:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:015",
+      "metadata": {
+        "end": 826,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "matthews-correlation-coefficient",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.13. Matthews correlation coefficient",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 55446,
+        "unit_start": 51921,
+        "token_count": 312
+      },
+      "score": 20.224084527934842,
+      "rank": 3
+    },
+    {
+      "id": "d7861d9b0273d62b659f1959",
+      "text": "3.4.4.9.2. Multiclass and multilabel classification\n\nIn a multiclass and multilabel classification task, the notions of precision, recall, and F-measures can be applied to each label independently. There are a few ways to combine results across labels, specified by the average argument to the average_precision_score , f1_score , fbeta_score , precision_recall_fscore_support , precision_score and recall_score functions, as described above .\n\nNote the following behaviors when averaging:\n\nIf all labels are included, “micro”-averaging in a multiclass setting will produce precision, recall and \\(F\\) that are all identical to accuracy.\n\n“weighted” averaging may produce an F-score that is not between precision and recall.\n\n“macro” averaging for F-measures is calculated as the arithmetic mean over per-label/class F-measures, not the harmonic mean over the arithmetic precision and recall means. Both calculations can be seen in the literature but are not equivalent, see [OB2019] for details.\n\nTo make this more explicit, consider the following notation:\n\n\\(y\\) the set of true \\((sample, label)\\) pairs\n\n\\(\\hat{y}\\) the set of predicted \\((sample, label)\\) pairs\n\n\\(L\\) the set of labels\n\n\\(S\\) the set of samples\n\n\\(y_s\\) the subset of \\(y\\) with sample \\(s\\) , i.e. \\(y_s := \\left\\{(s', l) \\in y | s' = s\\right\\}\\)\n\n\\(y_l\\) the subset of \\(y\\) with label \\(l\\)",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:012",
+      "metadata": {
+        "end": 2413,
+        "start": 1046,
+        "topic": "model_selection",
+        "anchor": "multiclass-and-multilabel-classification",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures > 3.4.4.9.2. Multiclass and multilabel classification",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 44470,
+        "unit_start": 40612,
+        "token_count": 372
+      },
+      "score": 18.516747331413306,
+      "rank": 4
+    },
+    {
+      "id": "7ee4fd0473bd5998150a5f48",
+      "text": "References [Manning2008] and [Everingham2010] present alternative variants of AP that interpolate the precision-recall curve. Currently, average_precision_score does not implement any interpolated variant. References [Davis2006] and [Flach2015] describe why a linear interpolation of points on the precision-recall curve provides an overly-optimistic measure of classifier performance. This linear interpolation is used when computing area under the curve with the trapezoidal rule in auc . [Chen2024] benchmarks different interpolation strategies to demonstrate the effects.\n\nSeveral functions allow you to analyze the precision, recall and F-measures score:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:010",
+      "metadata": {
+        "end": 3547,
+        "start": 2888,
+        "topic": "model_selection",
+        "anchor": "precision-recall-and-f-measures",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.9. Precision, recall and F-measures",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 36945,
+        "unit_start": 33398,
+        "token_count": 140
+      },
+      "score": 17.944731335249383,
+      "rank": 5
+    },
+    {
+      "id": "a5d2866528c8566c4c04b0b0",
+      "text": "3.4.4.15. Receiver operating characteristic (ROC)\n\nThe function roc_curve computes the receiver operating characteristic curve, or ROC curve . Quoting Wikipedia :\n\n“A receiver operating characteristic (ROC), or simply ROC curve, is a graphical plot which illustrates the performance of a binary classifier system as its discrimination threshold is varied. It is created by plotting the fraction of true positives out of the positives (TPR = true positive rate) vs. the fraction of false positives out of the negatives (FPR = false positive rate), at various threshold settings. TPR is also known as sensitivity, and FPR is one minus the specificity or true negative rate.”\n\nThis function requires the true binary value and the target scores, which can either be probability estimates of the positive class or non-thresholded decision values (as returned by decision_function on some classifiers). Here is a small example of how to use the roc_curve function:\n\n>>> import numpy as np\n>>> from sklearn.metrics import roc_curve\n>>> y = np.array([1, 1, 2, 2])\n>>> scores = np.array([0.1, 0.4, 0.35, 0.8])\n>>> fpr, tpr, thresholds = roc_curve(y, scores, pos_label=2)\n>>> fpr\narray([0. , 0. , 0.5, 0.5, 1. ])\n>>> tpr\narray([0. , 0.5, 0.5, 1. , 1. ])\n>>> thresholds\narray([ inf, 0.8 , 0.4 , 0.35, 0.1 ])",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:016",
+      "metadata": {
+        "end": 2371,
+        "start": 1075,
+        "topic": "model_selection",
+        "anchor": "receiver-operating-characteristic-roc",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.15. Receiver operating characteristic (ROC)",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 59152,
+        "unit_start": 55448,
+        "token_count": 376
+      },
+      "score": 17.87765432325547,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

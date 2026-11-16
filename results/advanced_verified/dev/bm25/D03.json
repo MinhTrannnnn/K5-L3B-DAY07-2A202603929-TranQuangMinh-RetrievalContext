@@ -1,0 +1,1430 @@
+{
+  "status": "answered",
+  "answer": "India’s GNI per capita (Atlas method, current US$, 2023) is US$2,540 [wdr-p081-table-00-001].",
+  "citations": [
+    "wdr-p081-table-00-001"
+  ],
+  "question": "Inspect the original rotated Table S.1. What GNI per capita in current US dollars (2023) is listed for India?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Table S.1\" India GNI per capita current US dollars 2023",
+      "results": [
+        {
+          "id": "wdr-p081-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 25.293274681997072,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p082-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.285718712579204,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p082-table-00-001",
+          "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.96982003392521,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p081-table-00-002",
+          "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 3.8898350979350025,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p081-table-00-001",
+          "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 2.320178735035752,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p095-text-002",
+          "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "95",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 95,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.78002794690327,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 20.804241275767193,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p081-text-003",
+          "text": " Economic Complexity\n             per Atlas          2023)indicators   capita                                       method (current                                             1,500   2,540   4,180  4,870  6,750  6,870  9,070   10,940   11,650   11,970   12,100   12,520   13,400   13,850   14,250        14,460   15,820   16,670   19,820   26,270                                  US$,      per             GNI capita,\n            Income                                                                                                     HIC HIC HIC HIC                                             Income group  LMIC   LMIC   LMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC      UMICS.1 Suggested                                                                                            Africa                                                Rica\n                                                            Country           Nam                                                                         Pakistan   India   Viet    Indonesia  South    Colombia   Brazil    Kazakhstan   Türkiye    Malaysia   Mexico    Argentina  China  Costa   RussianFederation    Bulgaria  Chile   Romania   Hungary    PortugalTable\n\n                                                                        Spotlight   | 49\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "text",
+            "pdf_page": 81,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.356908829658035,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p036-table-00-000",
+          "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-036.png",
+            "label": "Table O.1",
+            "pdf_page": 36,
+            "visual_id": "wdr-p036-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.94853403510035,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p063-table-00-000",
+          "text": "Table P1.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9, 0.6, 36.5, 0.5. Lower-middle-income — 40.3, 8.3, 55.4, 15.7. Upper-middle-income — 35.1, 30.3, 7.1, 48.6. High-income — 15.7, 60.8, 1.0, 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-063.png",
+            "label": "Table P1.1",
+            "pdf_page": 63,
+            "visual_id": "wdr-p063-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.94853403510035,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p081-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 25.293274681997072,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p082-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.285718712579204,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p082-table-00-001",
+          "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "82",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-082.png",
+            "label": "Table S.1",
+            "pdf_page": 82,
+            "visual_id": "wdr-p082-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 14.96982003392521,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p081-table-00-002",
+          "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 3.8898350979350025,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p081-table-00-001",
+          "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 2.320178735035752,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p095-text-002",
+          "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "95",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 95,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.78002794690327,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 20.804241275767193,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p081-text-003",
+          "text": " Economic Complexity\n             per Atlas          2023)indicators   capita                                       method (current                                             1,500   2,540   4,180  4,870  6,750  6,870  9,070   10,940   11,650   11,970   12,100   12,520   13,400   13,850   14,250        14,460   15,820   16,670   19,820   26,270                                  US$,      per             GNI capita,\n            Income                                                                                                     HIC HIC HIC HIC                                             Income group  LMIC   LMIC   LMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC      UMICS.1 Suggested                                                                                            Africa                                                Rica\n                                                            Country           Nam                                                                         Pakistan   India   Viet    Indonesia  South    Colombia   Brazil    Kazakhstan   Türkiye    Malaysia   Mexico    Argentina  China  Costa   RussianFederation    Bulgaria  Chile   Romania   Hungary    PortugalTable\n\n                                                                        Spotlight   | 49\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "text",
+            "pdf_page": 81,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.356908829658035,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p036-table-00-000",
+          "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-036.png",
+            "label": "Table O.1",
+            "pdf_page": 36,
+            "visual_id": "wdr-p036-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.94853403510035,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p063-table-00-000",
+          "text": "Table P1.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9, 0.6, 36.5, 0.5. Lower-middle-income — 40.3, 8.3, 55.4, 15.7. Upper-middle-income — 35.1, 30.3, 7.1, 48.6. High-income — 15.7, 60.8, 1.0, 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-063.png",
+            "label": "Table P1.1",
+            "pdf_page": 63,
+            "visual_id": "wdr-p063-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 18.94853403510035,
+          "rank": 10
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.022339799998007948
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p081-table-00",
+      "seconds": 2.4000000848900527e-06
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "wdr-p081-table-00-001",
+      "context": [
+        {
+          "id": "wdr-p081-table-00-000",
+          "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        },
+        {
+          "id": "wdr-p081-table-00-001",
+          "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        },
+        {
+          "id": "wdr-p081-table-00-002",
+          "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              756.0,
+              576.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-081.png",
+            "label": "Table S.1",
+            "pdf_page": 81,
+            "visual_id": "wdr-p081-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The page shows only the visible portion of the table; the table continues on the next page.",
+              "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+              "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          }
+        }
+      ],
+      "seconds": 0.003883900000801077
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p081-table-00",
+      "seconds": 4.7000030463095754e-06
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p081-table-00-000",
+      "pdf_page": 81,
+      "image": "data\\processed\\agent_pages\\wdr\\page-081.png",
+      "seconds": 0.0021617999991576653
+    },
+    {
+      "event": "answer_validation",
+      "accept": false,
+      "feedback": "The value US$2,540 for India is supported by the table row evidence, but the cited source ID is wrong. `wdr-p081-table-00-000` only contains the table header/column structure and does not show India’s row. Please cite the evidence item that actually contains the India row (`wdr-p081-table-00-001`) or quote the row directly. "
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by Table S.1: India’s GNI per capita (Atlas method, current US$, 2023) is 2,540. The citation to wdr-p081-table-00-001 matches the evidence."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p081-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p082-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 18.285718712579204,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p082-table-00-001",
+      "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 14.96982003392521,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p081-table-00-002",
+      "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p081-table-00-001",
+      "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      }
+    },
+    {
+      "id": "wdr-p095-text-002",
+      "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "95",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 95,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.78002794690327,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 20.804241275767193,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p081-text-003",
+      "text": " Economic Complexity\n             per Atlas          2023)indicators   capita                                       method (current                                             1,500   2,540   4,180  4,870  6,750  6,870  9,070   10,940   11,650   11,970   12,100   12,520   13,400   13,850   14,250        14,460   15,820   16,670   19,820   26,270                                  US$,      per             GNI capita,\n            Income                                                                                                     HIC HIC HIC HIC                                             Income group  LMIC   LMIC   LMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC  UMIC      UMICS.1 Suggested                                                                                            Africa                                                Rica\n                                                            Country           Nam                                                                         Pakistan   India   Viet    Indonesia  South    Colombia   Brazil    Kazakhstan   Türkiye    Malaysia   Mexico    Argentina  China  Costa   RussianFederation    Bulgaria  Chile   Romania   Hungary    PortugalTable\n\n                                                                        Spotlight   | 49\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "text",
+        "pdf_page": 81,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.356908829658035,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p036-table-00-000",
+      "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-036.png",
+        "label": "Table O.1",
+        "pdf_page": 36,
+        "visual_id": "wdr-p036-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 18.94853403510035,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p063-table-00-000",
+      "text": "Table P1.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9, 0.6, 36.5, 0.5. Lower-middle-income — 40.3, 8.3, 55.4, 15.7. Upper-middle-income — 35.1, 30.3, 7.1, 48.6. High-income — 15.7, 60.8, 1.0, 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-063.png",
+        "label": "Table P1.1",
+        "pdf_page": 63,
+        "visual_id": "wdr-p063-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 18.94853403510035,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:44:02.640616+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 520,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 87,
+        "output_tokens_details": {
+          "reasoning_tokens": 52
+        },
+        "total_tokens": 607
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:05.522879+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6809,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 143,
+        "output_tokens_details": {
+          "reasoning_tokens": 115
+        },
+        "total_tokens": 6952
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:07.661267+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6976,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 6656,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 66,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 7042
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:09.730760+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 9108,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 6784,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 63,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 9171
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:13.440732+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 9195,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 8960,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 144,
+        "output_tokens_details": {
+          "reasoning_tokens": 114
+        },
+        "total_tokens": 9339
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:16.055485+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 11128,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 137,
+        "output_tokens_details": {
+          "reasoning_tokens": 70
+        },
+        "total_tokens": 11265
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:29.353739+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8468,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 584,
+        "output_tokens_details": {
+          "reasoning_tokens": 486
+        },
+        "total_tokens": 9052
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:32.030963+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 11289,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 10624,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 108,
+        "output_tokens_details": {
+          "reasoning_tokens": 41
+        },
+        "total_tokens": 11397
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:35.405767+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8468,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 197,
+        "output_tokens_details": {
+          "reasoning_tokens": 130
+        },
+        "total_tokens": 8665
+      }
+    }
+  ],
+  "seconds": 35.18834770000103,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D03",
+  "initial_ranking": [
+    {
+      "id": "wdr-p081-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy.\n\nColumn structure:\n- Country\n- Income per capita: Income group; GNI per capita, Atlas method (current US$, 2023)\n- Enterprise: Economic Complexity Index; Productivity-constraining distortions; Technology index\n- Talent: Upper-secondary completion rate (% of relevant age group); Social mobility; Researchers per million inhabitants\n- Energy: Energy stability (% of firms identifying electricity as a major constraint); Energy intensity (energy consumption/GDP, exajoules per trillion US$); Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 27.08831133309989,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p082-table-00-001",
+      "text": "Note: Countries are listed within income groups from lowest to highest GNI per capita. The Economic Complexity Index is a ranking of countries based on the diversity and complexity of their export basket. Productivity-constraining distortions are estimates of a regression coefficient between the logarithm of idiosyncratic physical productivity across firms, both computed as in Hsieh and Klenow (2009). The productivity-constraining distortions are reported relative to the level observed in the United States. The technology index is a composite index of patents per capita and the network centrality of the patents created by a country. Completion rate is the percentage of a cohort of children or young people three to five years older than the intended age for the last grade of each level of education (primary, lower secondary, or upper secondary) who have completed that level of education. Social mobility shows the intergenerational mobility between children (in the 1980s birth cohort) and parents’ years of schooling. Social mobility is measured by 1 minus the intergenerational correlation in schooling. Energy stability is measured by the percentage of firms identifying electricity as a major constraint. Energy intensity is defined as the ratio of energy consumption to GDP (in exajoules per trillion US dollars). Carbon intensity of energy consumption is measured by carbon dioxide (CO2) emissions per energy consumption (gigatons per exajoules). GDP = gross domestic product; GNI = gross national income; Gt = gigatons; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country; — = not available.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 25.018464702883698,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p082-table-00-000",
+      "text": "Table S.1\nSuggested indicators provide a clear picture of the underlying structure of an economy (continued)\n\nColumns:\n- Country\n- Income group\n- Income per capita\n  - GNI per capita, Atlas method (current US$, 2023)\n- Enterprise\n  - Economic Complexity Index\n  - Productivity-constraining distortions\n  - Technology index\n- Talent\n  - Upper-secondary completion rate (% of relevant age group)\n  - Social mobility\n  - Researchers per million inhabitants\n- Energy\n  - Energy stability (% of firms identifying electricity as a major constraint)\n  - Energy intensity (energy consumption/GDP, exajoules per trillion US$)\n  - Carbon intensity of energy consumption (CO2 emissions/energy consumption, Gt/exajoules)\n\nRows:\n- Korea, Rep. | HIC | 35,490 | 2.0 | — | 92.5 | 98.75 | 0.79 | — | 7.63 | 0.05\n- Japan | HIC | 39,030 | 2.3 | — | 50.1 | 95.50 | 0.65 | — | 4.22 | 0.06\n- France | HIC | 45,070 | 1.3 | 0.11 | 11.5 | 88.40 | 0.72 | 40.20 | 3.01 | 0.04\n- United Kingdom | HIC | 47,800 | 1.6 | — | 9.9 | 83.33 | 0.79 | — | 2.38 | 0.05\n- United Arab Emirates | HIC | 53,290 | 0.1 | — | 0.2 | — | — | 2,582.8 | 9.95 | 0.05\n- Belgium | HIC | 54,530 | 1.2 | 0.28 | 4.7 | 86.20 | 0.65 | 5,576.4 | 4.23 | 0.04\n- Qatar | HIC | 70,070 | -0.4 | — | — | 84.00 | — | 783.5 | 7.94 | 0.06\n- United States | HIC | 80,300 | 1.4 | 0.00 | 100.0 | 94.00 | 0.66 | 4,340.9 | 3.77 | 0.06\n\nSource: WDR 2024 team.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-082.png",
+        "label": "Table S.1",
+        "pdf_page": 82,
+        "visual_id": "wdr-p082-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 19.484320039452747,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p081-table-00-002",
+      "text": "MIC | 12,520 | -0.2 | — | 0.1 | 63.50 | — | 1,249.7 | 47.20 | 5.69 | 0.10\n- China | UMIC | 13,400 | 1.3 | — | 13.1 | 73.50 | 0.44 | 1,523.5 | 1.80 | 8.87 | 0.08\n- Costa Rica | UMIC | 13,850 | 0.4 | — | 0.1 | 62.20 | — | 369.6 | 63.20 | — | —\n- Russian Federation | UMIC | 14,250 | 0.2 | — | 4.6 | 90.40 | 0.58 | 2,727.0 | 7.70 | 12.90 | 0.08\n- Bulgaria | UMIC | 14,460 | 0.6 | 0.31 | 0.2 | 86.00 | 0.35 | 2,354.6 | 12.70 | 9.37 | 0.06\n- Chile | HIC | 15,820 | -0.3 | 0.31 | 0.1 | 84.50 | 0.60 | 520.1 | 30.10 | 5.94 | 0.06\n- Romania | HIC | 16,670 | 1.2 | 0.30 | 0.2 | 83.60 | 0.28 | 922.2 | 36.10 | 4.31 | 0.07\n- Hungary | HIC | 19,820 | 1.5 | 0.25 | 0.5 | 85.60 | 0.36 | 4,156.8 | 12.40 | 5.35 | 0.06\n- Portugal | HIC | 26,270 | 0.7 | 0.50 | 0.4 | 83.20 | 0.38 | 5,177.3 | 43.80 | 3.68 | 0.06\n\nFootnote/continuation visible: “(Table continues next page)”\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 3.8898350979350025,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p081-table-00-001",
+      "text": "Visible rows:\n- Pakistan | LMIC | 1,500 | -0.6 | 0.47 | 0.0 | 23.25 | 0.23 | 394.9 | 24.20 | 9.57 | 0.12\n- India | LMIC | 2,540 | 0.5 | 0.36 | 1.0 | 54.40 | 0.23 | 255.7 | 12.60 | 10.77 | 0.09\n- Viet Nam | LMIC | 4,180 | 0.0 | — | 0.0 | 63.40 | 0.45 | 772.4 | 3.70 | 11.23 | 0.10\n- Indonesia | UMIC | 4,870 | -0.1 | — | 0.0 | 65.25 | 0.53 | 336.2 | 11.40 | 7.41 | 0.10\n- South Africa | UMIC | 6,750 | -0.1 | — | 0.2 | 53.20 | 0.77 | 491.7 | 19.40 | 11.87 | 0.10\n- Colombia | UMIC | 6,870 | -0.1 | 0.37 | 0.0 | 72.80 | 0.45 | — | 50.10 | 6.38 | 0.09\n- Brazil | UMIC | 9,070 | -0.2 | — | 0.3 | 69.00 | 0.57 | — | 46.00 | 6.98 | 0.08\n- Kazakhstan | UMIC | 10,940 | -0.5 | — | 0.0 | 98.00 | 0.65 | 658.2 | 21.90 | 14.15 | 0.09\n- Türkiye | UMIC | 11,650 | 0.6 | — | 0.2 | 63.00 | 0.38 | 1,736.7 | 17.00 | 7.74 | 0.07\n- Malaysia | UMIC | 11,970 | 0.9 | 0.25 | 0.4 | — | 0.69 | 1,433.0 | 22.20 | 11.90 | 0.06\n- Mexico | UMIC | 12,100 | 1.1 | — | 0.2 | 58.25 | 0.55 | 348.7 | 46.70 | 6.17 | 0.07\n- Argentina | U",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-081.png",
+        "label": "Table S.1",
+        "pdf_page": 81,
+        "visual_id": "wdr-p081-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The page shows only the visible portion of the table; the table continues on the next page.",
+          "Some cells are marked with em dashes (—) indicating missing/not reported values; no values were inferred.",
+          "Header hierarchy and merged cells were reconstructed from the visible layout; exact line breaks may differ slightly from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 2.320178735035752,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p095-text-002",
+      "text": "a. Gross national income (GNI) per capita and gross domestic product (GDP) per capita data in this\n   report are as of July 2023. As of July 2023, Bulgaria was classified by the World Bank as an upper-\n  middle-income country, with a GNI per capita (Atlas method, current US dollars) of US$13,350, short of\n   crossing the high-income country threshold of US$13,846.\nb. These figures are measured using purchasing power parity for the four largest EU economies.\nc. These figures capture net FDI per capita accumulated by the end of 1999.\nd. See GII (Global Innovation Index) (dashboard), World Intellectual Property Organization, Geneva,\n   https://www.wipo.int​/­global_innovation_index/en/.\ne. Pinto, Belka, and Krajewski (1993).\nf. Kolasa (2008).\ng. Gradzewicz et al. (2018).\nh. Bukowski et al. (2006).\n\n                                                       Structural Stasis   | 63\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "95",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 95,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 31.525376494121414,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 27.529882287859355,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p069-text-001",
+      "text": " results.11\n       technologies and shape new products and     A comparison of these two sets of mea­\n       processes                                  sures  for Türkiye and Chile  illustrates the\n     •  Quickening the pace of innovation by    problem. According to World Bank estimates\n      both  fostering  entrepreneurial  activity    that  use  market  exchange  rates,  Türkiye\n      and keeping markets open to competition.     is a middle-­income country, and Chile  is a\n\n      Box 1.1 Misunderstanding through misclassification\n\n      The World Bank’s income classification method for grouping countries was first\n       presented in the 1978 World Development Report.a It introduced groupings of “low-​\n       income” and “middle-income” countries using a threshold of US$250 gross national\n       income (GNI) per capita between the groups. The low-income threshold was set in\n       keeping with the guidelines for procurement of goods and services for civil works\n        projects for countries eligible for assistance from the International Development\n        Association (IDA), the organization in the World Bank Group that supports the world’s\n         least developed countries. Specifically, the threshold was based on the “civil works\n        preference” operational guideline for IDA countries.\n         The process of setting thresholds for income per capita began with finding a “stable\n         relationship” between a summary measure of well-being such as poverty incidence and\n         infant mortality, on the one hand, and economic variables, including GNI per capita esti­\n       mated using the World Bank’s Atlas method, on the other.b Based on such a relationship\n       and the annual availability of the World Bank’s resources, the original income per capita\n        thresholds were established.c They were last updated in 1989, using GNI per capita valued\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "69",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 69,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 26.254387676112138,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p082-text-002",
+      "text": "                            a                                           index  92.5  50.1  11.5                                                                                                                                                                                                                     computed                                                                                                                                                                           peoplelevelmeasured                                                       is                                                                           Technology                                        9.9    0.2    4.7 —  100.0                  highest                                                                                                                                                                                            Energydioxidecountry;                                                             is                                                                                                          both       thatpicture                                               todistortions                                                                                                                                          indexyoung                                                         or                 carbonclear        — —  0.11 — —      0.28 —  0.00               lowest     firms,                      mobilityconstraint.bya     Enterprise                                             Productivity- constraining distortions                                                                                                                                                                                           completed                              high-income\n                                 =                                                                                                                                                                                                                                    children                                                                                                   from     acrosstechnology                                                                                                                                                                                      Socialmajor\n                                                         of                                                                                                                      have a                                                                                                                                                                                                                                                                  measuredHIC                                                               asprovide                                                                              The\n                                                                is                                                                                                                                                    groups                                           Index 2.0 2.3 1.3 1.6    0.1    1.2                                                                                        who                                                                               –0.4 1.4                                                                                                                                                                           cohort                                                    Economic Complexity\n                            a                                                                                                                                                                                                                                                                                                               schooling.                                                                                                                                                                                                                                                                                                                               productivityStates.of                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Productivity-constraining                                                                                                                                                                                                                                                                                                          gigatons;                                                                                                                                                    income         of                           Atlas             per                                           2023)                                                                  Gtindicators   capita                                                                                                                                                                                                                                                                                                                          electricity =                                                                                                                                                                                                                                                                                                      secondary)years          consumption             GNI                                       method (current                                                                                                                                                                                   basket.physicalUnited                                  US$,   35,490   39,030   45,070   47,800        53,290        54,530   70,070   80,300               within      per                                      capita,                                                                                   the                                                                                                                                                                                                                                                                                             percentage                                                       in                                                                                                                                                                                                                                        income;                                                                                                                                                   upper                                                                                                                                                                                                                                                                                                                                                        identifying                                                                                                                                                    listed                                                                                                                                                                                                 energy                                                                                                                                                          export                                                                                                                      team.                                                                ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "82",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          756.0,
+          576.0
+        ],
+        "kind": "text",
+        "pdf_page": 82,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.07113793819093,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p070-text-000",
+      "text": "Box 1.1 Misunderstanding through misclassification (continued)\n\n        annually in US dollars based on a three-year average exchange rate and were expanded to\n        four categories:\n\n          •  Low-income. The low-income threshold was officially set in 1988, still based on the\n            value of the IDA’s “civil works preference” and updated for inflation.d\n          •  Lower-middle-income. The lower-middle-income threshold is based on the oper­\n             ational guidelines cutoff for determining access to 17-year repayment terms for\n            loans through the World Bank Group’s International Bank for Reconstruction and\n          Development (IBRD), although these terms are no longer available. It appears to\n           have first been introduced in the 1983 edition of the World Development Report.e\n          •  Upper-middle-income. The upper-middle-income threshold  is the range between\n            lower-​middle-income and high-income.\n          •  High-income. The high-income threshold does not relate to a cutoff derived from\n            the operational guidelines, but was set at GNI per capita of US$6,000 in 1987 prices\n              in a paper presented to the World Bank’s Board of Executive Directors in January\n            1989, which also reconfirmed the low- and lower-­middle-income threshold levels.f\n          The US$6,000 level has been updated over time for what is called “international infla­\n               tion,” defined as the average inflation rates of Japan, the United Kingdom, the United\n             States, and the euro area. The choice of the high-income threshold was made to\n            address anomalies in the classification of high-income and industrialized economies\n           used in the World Bank’s World Development Indicators prior to that point.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "70",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 70,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 24.20743891400201,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

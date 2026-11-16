@@ -1,0 +1,897 @@
+{
+  "status": "answered",
+  "answer": "The `PolynomialFeatures(interaction_only=True)` setting produces only feature interaction terms, excluding powers like `X1^2` and `X2^2` [bc02fdbf40e90e664804a6f3].",
+  "citations": [
+    "bc02fdbf40e90e664804a6f3"
+  ],
+  "question": "Which PolynomialFeatures setting produces only feature interaction terms?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "PolynomialFeatures only feature interaction terms interaction_only docs",
+      "results": [
+        {
+          "id": "bc02fdbf40e90e664804a6f3",
+          "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3049,
+            "start": 2281,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 285
+          },
+          "score": 0.779239144415963,
+          "rank": 1
+        },
+        {
+          "id": "afda2a24b77a798753baba4a",
+          "text": "8.3.7. Generating polynomial features\n\nOften it’s useful to add complexity to a model by considering nonlinear features of the input data. We show two possibilities that are both based on polynomials: The first one uses pure polynomials, the second one uses splines, i.e. piecewise polynomials.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 2279,
+            "start": 1985,
+            "topic": "preprocessing",
+            "anchor": "generating-polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 62
+          },
+          "score": 0.6612946198827528,
+          "rank": 2
+        },
+        {
+          "id": "9190a13f1ec617d2b610dc48",
+          "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3536,
+            "start": 3051,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 243
+          },
+          "score": 0.6501998930812085,
+          "rank": 3
+        },
+        {
+          "id": "d044ce34c2698e097f0a3011",
+          "text": "Note that polynomial features are used implicitly in kernel methods (e.g., SVC , KernelPCA ) when using polynomial Kernel functions .\n\nSee Polynomial and Spline interpolation for Ridge regression using created polynomial features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 230,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 46
+          },
+          "score": 0.6443316168389823,
+          "rank": 4
+        },
+        {
+          "id": "543298bc065d101c5b322173",
+          "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 1770,
+            "start": 232,
+            "topic": "preprocessing",
+            "anchor": "spline-transformer",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 344
+          },
+          "score": 0.6432561916250852,
+          "rank": 5
+        },
+        {
+          "id": "69c246cfc49ae56b054ba700",
+          "text": "Note that it is common that a small subset of those parameters can have a large impact on the predictive or computation performance of the model while others can be left to their default values. It is recommended to read the docstring of the estimator class to get a finer understanding of their expected behavior, possibly by reading the enclosed reference to the literature.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1885,
+            "start": 1509,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 72
+          },
+          "score": 0.567524450863997,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "bc02fdbf40e90e664804a6f3",
+          "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3049,
+            "start": 2281,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 285
+          },
+          "score": 0.779239144415963,
+          "rank": 1
+        },
+        {
+          "id": "afda2a24b77a798753baba4a",
+          "text": "8.3.7. Generating polynomial features\n\nOften it’s useful to add complexity to a model by considering nonlinear features of the input data. We show two possibilities that are both based on polynomials: The first one uses pure polynomials, the second one uses splines, i.e. piecewise polynomials.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 2279,
+            "start": 1985,
+            "topic": "preprocessing",
+            "anchor": "generating-polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 62
+          },
+          "score": 0.6612946198827528,
+          "rank": 2
+        },
+        {
+          "id": "9190a13f1ec617d2b610dc48",
+          "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3536,
+            "start": 3051,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 243
+          },
+          "score": 0.6501998930812085,
+          "rank": 3
+        },
+        {
+          "id": "d044ce34c2698e097f0a3011",
+          "text": "Note that polynomial features are used implicitly in kernel methods (e.g., SVC , KernelPCA ) when using polynomial Kernel functions .\n\nSee Polynomial and Spline interpolation for Ridge regression using created polynomial features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 230,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 46
+          },
+          "score": 0.6443316168389823,
+          "rank": 4
+        },
+        {
+          "id": "543298bc065d101c5b322173",
+          "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 1770,
+            "start": 232,
+            "topic": "preprocessing",
+            "anchor": "spline-transformer",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 344
+          },
+          "score": 0.6432561916250852,
+          "rank": 5
+        },
+        {
+          "id": "69c246cfc49ae56b054ba700",
+          "text": "Note that it is common that a small subset of those parameters can have a large impact on the predictive or computation performance of the model while others can be left to their default values. It is recommended to read the docstring of the estimator class to get a finer understanding of their expected behavior, possibly by reading the enclosed reference to the literature.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1885,
+            "start": 1509,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 72
+          },
+          "score": 0.567524450863997,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.1725226999988081
+    },
+    {
+      "event": "search",
+      "query": "interaction_only=True PolynomialFeatures only interaction terms among features are required",
+      "results": [
+        {
+          "id": "bc02fdbf40e90e664804a6f3",
+          "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3049,
+            "start": 2281,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 285
+          },
+          "score": 0.7772060036659241,
+          "rank": 1
+        },
+        {
+          "id": "afda2a24b77a798753baba4a",
+          "text": "8.3.7. Generating polynomial features\n\nOften it’s useful to add complexity to a model by considering nonlinear features of the input data. We show two possibilities that are both based on polynomials: The first one uses pure polynomials, the second one uses splines, i.e. piecewise polynomials.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 2279,
+            "start": 1985,
+            "topic": "preprocessing",
+            "anchor": "generating-polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 62
+          },
+          "score": 0.6588385105133057,
+          "rank": 2
+        },
+        {
+          "id": "d044ce34c2698e097f0a3011",
+          "text": "Note that polynomial features are used implicitly in kernel methods (e.g., SVC , KernelPCA ) when using polynomial Kernel functions .\n\nSee Polynomial and Spline interpolation for Ridge regression using created polynomial features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 230,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 46
+          },
+          "score": 0.6351211667060852,
+          "rank": 3
+        },
+        {
+          "id": "9190a13f1ec617d2b610dc48",
+          "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3536,
+            "start": 3051,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 243
+          },
+          "score": 0.6316970210255979,
+          "rank": 4
+        },
+        {
+          "id": "543298bc065d101c5b322173",
+          "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 1770,
+            "start": 232,
+            "topic": "preprocessing",
+            "anchor": "spline-transformer",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 344
+          },
+          "score": 0.6230682359297146,
+          "rank": 5
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 0.5658251047134399,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "bc02fdbf40e90e664804a6f3",
+          "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3049,
+            "start": 2281,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 285
+          },
+          "score": 0.7772060036659241,
+          "rank": 1
+        },
+        {
+          "id": "afda2a24b77a798753baba4a",
+          "text": "8.3.7. Generating polynomial features\n\nOften it’s useful to add complexity to a model by considering nonlinear features of the input data. We show two possibilities that are both based on polynomials: The first one uses pure polynomials, the second one uses splines, i.e. piecewise polynomials.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 2279,
+            "start": 1985,
+            "topic": "preprocessing",
+            "anchor": "generating-polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 62
+          },
+          "score": 0.6588385105133057,
+          "rank": 2
+        },
+        {
+          "id": "d044ce34c2698e097f0a3011",
+          "text": "Note that polynomial features are used implicitly in kernel methods (e.g., SVC , KernelPCA ) when using polynomial Kernel functions .\n\nSee Polynomial and Spline interpolation for Ridge regression using created polynomial features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 230,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 46
+          },
+          "score": 0.6351211667060852,
+          "rank": 3
+        },
+        {
+          "id": "9190a13f1ec617d2b610dc48",
+          "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3536,
+            "start": 3051,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 243
+          },
+          "score": 0.6316970210255979,
+          "rank": 4
+        },
+        {
+          "id": "543298bc065d101c5b322173",
+          "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 1770,
+            "start": 232,
+            "topic": "preprocessing",
+            "anchor": "spline-transformer",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 344
+          },
+          "score": 0.6230682359297146,
+          "rank": 5
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 0.5658251047134399,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.14060240000253543
+    }
+  ],
+  "context": [
+    {
+      "id": "bc02fdbf40e90e664804a6f3",
+      "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3049,
+        "start": 2281,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 285
+      },
+      "score": 0.7772060036659241,
+      "rank": 1
+    },
+    {
+      "id": "afda2a24b77a798753baba4a",
+      "text": "8.3.7. Generating polynomial features\n\nOften it’s useful to add complexity to a model by considering nonlinear features of the input data. We show two possibilities that are both based on polynomials: The first one uses pure polynomials, the second one uses splines, i.e. piecewise polynomials.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 2279,
+        "start": 1985,
+        "topic": "preprocessing",
+        "anchor": "generating-polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 62
+      },
+      "score": 0.6588385105133057,
+      "rank": 2
+    },
+    {
+      "id": "9190a13f1ec617d2b610dc48",
+      "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3536,
+        "start": 3051,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 243
+      },
+      "score": 0.6316970210255979,
+      "rank": 4
+    },
+    {
+      "id": "d044ce34c2698e097f0a3011",
+      "text": "Note that polynomial features are used implicitly in kernel methods (e.g., SVC , KernelPCA ) when using polynomial Kernel functions .\n\nSee Polynomial and Spline interpolation for Ridge regression using created polynomial features.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:013",
+      "metadata": {
+        "end": 230,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 47848,
+        "unit_start": 43681,
+        "token_count": 46
+      },
+      "score": 0.6351211667060852,
+      "rank": 3
+    },
+    {
+      "id": "543298bc065d101c5b322173",
+      "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:013",
+      "metadata": {
+        "end": 1770,
+        "start": 232,
+        "topic": "preprocessing",
+        "anchor": "spline-transformer",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 47848,
+        "unit_start": 43681,
+        "token_count": 344
+      },
+      "score": 0.6230682359297146,
+      "rank": 5
+    },
+    {
+      "id": "69c246cfc49ae56b054ba700",
+      "text": "Note that it is common that a small subset of those parameters can have a large impact on the predictive or computation performance of the model while others can be left to their default values. It is recommended to read the docstring of the estimator class to get a finer understanding of their expected behavior, possibly by reading the enclosed reference to the literature.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1885,
+        "start": 1509,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 72
+      },
+      "score": 0.567524450863997,
+      "rank": 6
+    },
+    {
+      "id": "75c34c1f9dacc20523109b41",
+      "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:003",
+      "metadata": {
+        "end": 1786,
+        "start": 839,
+        "topic": "preprocessing",
+        "anchor": "keeping-the-number-of-features-constant",
+        "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11852,
+        "unit_start": 8181,
+        "token_count": 282
+      },
+      "score": 0.5658251047134399,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:07.904182+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 503,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 56,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 559
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:11.311870+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2732,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 73,
+        "output_tokens_details": {
+          "reasoning_tokens": 43
+        },
+        "total_tokens": 2805
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:14.585226+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5177,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2560,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 178,
+        "output_tokens_details": {
+          "reasoning_tokens": 90
+        },
+        "total_tokens": 5355
+      }
+    }
+  ],
+  "seconds": 10.531350500001281,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N01",
+  "initial_ranking": [
+    {
+      "id": "bc02fdbf40e90e664804a6f3",
+      "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3049,
+        "start": 2281,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 285
+      },
+      "score": 0.814211856471787,
+      "rank": 1
+    },
+    {
+      "id": "afda2a24b77a798753baba4a",
+      "text": "8.3.7. Generating polynomial features\n\nOften it’s useful to add complexity to a model by considering nonlinear features of the input data. We show two possibilities that are both based on polynomials: The first one uses pure polynomials, the second one uses splines, i.e. piecewise polynomials.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 2279,
+        "start": 1985,
+        "topic": "preprocessing",
+        "anchor": "generating-polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 62
+      },
+      "score": 0.7121377758897689,
+      "rank": 2
+    },
+    {
+      "id": "d044ce34c2698e097f0a3011",
+      "text": "Note that polynomial features are used implicitly in kernel methods (e.g., SVC , KernelPCA ) when using polynomial Kernel functions .\n\nSee Polynomial and Spline interpolation for Ridge regression using created polynomial features.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:013",
+      "metadata": {
+        "end": 230,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 47848,
+        "unit_start": 43681,
+        "token_count": 46
+      },
+      "score": 0.6848653146704856,
+      "rank": 3
+    },
+    {
+      "id": "543298bc065d101c5b322173",
+      "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:013",
+      "metadata": {
+        "end": 1770,
+        "start": 232,
+        "topic": "preprocessing",
+        "anchor": "spline-transformer",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 47848,
+        "unit_start": 43681,
+        "token_count": 344
+      },
+      "score": 0.6692765749363214,
+      "rank": 4
+    },
+    {
+      "id": "9190a13f1ec617d2b610dc48",
+      "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3536,
+        "start": 3051,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 243
+      },
+      "score": 0.661370138958676,
+      "rank": 5
+    },
+    {
+      "id": "69c246cfc49ae56b054ba700",
+      "text": "Note that it is common that a small subset of those parameters can have a large impact on the predictive or computation performance of the model while others can be left to their default values. It is recommended to read the docstring of the estimator class to get a finer understanding of their expected behavior, possibly by reading the enclosed reference to the literature.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1885,
+        "start": 1509,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 72
+      },
+      "score": 0.5702358400540543,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

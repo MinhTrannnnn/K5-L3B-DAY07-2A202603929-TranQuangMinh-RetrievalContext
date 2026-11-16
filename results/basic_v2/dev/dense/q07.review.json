@@ -1,0 +1,19 @@
+{
+  "context_grade": 2,
+  "answer_grade": 0,
+  "answer_correct": false,
+  "abstention_correct": false,
+  "citation_support": [],
+  "passed": false,
+  "gold_issue": false,
+  "reason": "compose:001 explicitly says “All estimators in a pipeline, except the last one, must be transformers” and “The last step can be anything, a transformer, a predictor, or a clustering estimator.” The submitted answer abstains despite sufficient evidence, so it does not answer the question.",
+  "query_id": "q07",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "fe3e67f6e20da5a63d0b8221d62b07bdacc7e89319df56a8b92d3f3c70effd29",
+  "alternative_cited_pages": [],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

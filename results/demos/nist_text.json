@@ -1,0 +1,493 @@
+{
+  "status": "answered",
+  "answer": "Theo tài liệu NIST, cloud computing có 3 service model: Software as a Service (SaaS), Platform as a Service (PaaS), và Infrastructure as a Service (IaaS) [nist-p020-text-000].",
+  "citations": [
+    "nist-p020-text-000"
+  ],
+  "question": "Theo tài liệu, cloud computing có những service model nào?",
+  "corpus": "nist",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "cloud computing service models NIST service model Infrastructure as a Service Platform as a Service Software as a Service",
+      "results": [
+        {
+          "id": "nist-p020-text-000",
+          "text": "Service Models:\n\n   Software as a Service (SaaS). The capability provided to the consumer is to use the provider’s\n           applications running on a cloud infrastructure.11 The applications are accessible from\n           various client devices through either a thin client interface, such as a web browser (e.g.,\n         web-based email) or a program interface. The consumer does not manage or control the\n          underlying cloud infrastructure including network, servers, operating systems, storage,\n           or even individual application capabilities, with the possible exception of limited user-\n            specific application configuration settings.\n\n   Platform as a Service (PaaS). The capability provided to the consumer is to deploy onto the\n          cloud   infrastructure  consumer-created  or  acquired  applications  created  using\n         programming languages, libraries, services, and tools supported by the provider.12 The\n         consumer does not manage or control the underlying cloud infrastructure including\n          network, servers, operating systems, or storage, but has control over the deployed\n           applications and possibly configuration settings for the application-hosting environment.\n\n    Infrastructure as a Service (IaaS). The capability provided to the consumer is to provision\n           processing, storage, networks, and other fundamental computing resources where the\n         consumer is able to deploy and run arbitrary software, which can include operating\n          systems and applications. The consumer does not manage or control the underlying\n          cloud infrastructure but has control over operating systems, storage, and deployed\n            applications, and possibly limited control of select networking components (e.g., host\n            firewalls).\n\nDeployment Models:\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "20",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 20,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "9"
+          },
+          "score": 0.6838727868722543,
+          "rank": 1
+        },
+        {
+          "id": "nist-p019-text-000",
+          "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.6247890870986624,
+          "rank": 2
+        },
+        {
+          "id": "nist-p026-diagram-00-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-026.png",
+            "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+            "pdf_page": 26,
+            "visual_id": "nist-p026-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.599055095043452,
+          "rank": 3
+        },
+        {
+          "id": "nist-p013-text-000",
+          "text": "The NIST Definition of Cloud Computing identified cloud computing as a model for enabling\nubiquitous, convenient, on-demand network access to a shared pool of configurable computing\nresources  (e.g.,  networks,  servers,  storage,  applications, and  services)  that  can be  rapidly\nprovisioned and released with minimal management effort or service provider interaction.\n\nAs an extension to the above NIST cloud computing definition, a NIST cloud computing reference\narchitecture has been developed by the NIST Cloud Computing Reference Architecture and\nTaxonomy Working Group that depicts a generic high-level conceptual model for discussing the\nrequirements, structures and operations of cloud computing.  It contains a  set of views and\ndescriptions that are the basis for discussing the characteristics, uses, and standards for cloud\ncomputing, and relates to a companion cloud computing taxonomy.5\n\nCloud computing use cases describe the consumer requirements when using cloud computing\nservice offerings. Through its working groups as described below, the NIST Cloud Computing\nprogram has studied a range of U.S. federal government and general-purpose use cases to extract\nfeatures that are amenable to standardization. Using these examples, the current document analyzes\nhow existing cloud-related standards  fit the needs of federal cloud consumers and identifies\nstandardization gaps.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "13",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 13,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "2"
+          },
+          "score": 0.5987512323709254,
+          "rank": 4
+        },
+        {
+          "id": "nist-p080-text-001",
+          "text": "As the cloud computing conceptual model indicates, cloud computing consumers do not have direct\nvisibility into the physical computing resources. Instead, consumers interact with service providers\nthrough three service model interfaces, IaaS, PaaS, and SaaS, to gain a view of the abstracted\ncomputing resource they are using. As described in Chapter 5, Cloud Computing Standards, these\ninteraction interfaces can be categorized into two types: (1) functional interfaces that expose the\nprimary function of the service, and (2) management interfaces that let the consumers manage the\nrented computing resources. The following areas of standardization gaps are observed through the\nstandards inventory.\n\n                                       69\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "80",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 80,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "69"
+          },
+          "score": 0.5814398885371916,
+          "rank": 5
+        },
+        {
+          "id": "nist-p025-table-00-000",
+          "text": "Table 1 – Cloud Consumer and Cloud Provider\nTable with three columns: Service Models; Consumer Activities; Provider Activities.\nRows:\n1) SaaS | Uses application/service for business process operations. | Installs, manages, maintains, and supports the software application on a cloud infrastructure.\n2) PaaS | Develops, tests, deploys, and manages applications hosted in a cloud system. | Provisions and manages cloud infrastructure and middleware for the platform consumers; provides development, deployment, and administration tools to platform consumers.\n3) IaaS | Creates/installs, manages, and monitors services for IT infrastructure operations. | Provisions and manages the physical processing, storage, networking, and the hosting environment and cloud infrastructure for IaaS consumers.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "25",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-025.png",
+            "label": "Table 1 – Cloud Consumer and Cloud Provider",
+            "pdf_page": 25,
+            "visual_id": "nist-p025-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "14",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5742040922173962,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p020-text-000",
+          "text": "Service Models:\n\n   Software as a Service (SaaS). The capability provided to the consumer is to use the provider’s\n           applications running on a cloud infrastructure.11 The applications are accessible from\n           various client devices through either a thin client interface, such as a web browser (e.g.,\n         web-based email) or a program interface. The consumer does not manage or control the\n          underlying cloud infrastructure including network, servers, operating systems, storage,\n           or even individual application capabilities, with the possible exception of limited user-\n            specific application configuration settings.\n\n   Platform as a Service (PaaS). The capability provided to the consumer is to deploy onto the\n          cloud   infrastructure  consumer-created  or  acquired  applications  created  using\n         programming languages, libraries, services, and tools supported by the provider.12 The\n         consumer does not manage or control the underlying cloud infrastructure including\n          network, servers, operating systems, or storage, but has control over the deployed\n           applications and possibly configuration settings for the application-hosting environment.\n\n    Infrastructure as a Service (IaaS). The capability provided to the consumer is to provision\n           processing, storage, networks, and other fundamental computing resources where the\n         consumer is able to deploy and run arbitrary software, which can include operating\n          systems and applications. The consumer does not manage or control the underlying\n          cloud infrastructure but has control over operating systems, storage, and deployed\n            applications, and possibly limited control of select networking components (e.g., host\n            firewalls).\n\nDeployment Models:\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "20",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 20,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "9"
+          },
+          "score": 0.6838727868722543,
+          "rank": 1
+        },
+        {
+          "id": "nist-p019-text-000",
+          "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.6247890870986624,
+          "rank": 2
+        },
+        {
+          "id": "nist-p026-diagram-00-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-026.png",
+            "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+            "pdf_page": 26,
+            "visual_id": "nist-p026-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.599055095043452,
+          "rank": 3
+        },
+        {
+          "id": "nist-p013-text-000",
+          "text": "The NIST Definition of Cloud Computing identified cloud computing as a model for enabling\nubiquitous, convenient, on-demand network access to a shared pool of configurable computing\nresources  (e.g.,  networks,  servers,  storage,  applications, and  services)  that  can be  rapidly\nprovisioned and released with minimal management effort or service provider interaction.\n\nAs an extension to the above NIST cloud computing definition, a NIST cloud computing reference\narchitecture has been developed by the NIST Cloud Computing Reference Architecture and\nTaxonomy Working Group that depicts a generic high-level conceptual model for discussing the\nrequirements, structures and operations of cloud computing.  It contains a  set of views and\ndescriptions that are the basis for discussing the characteristics, uses, and standards for cloud\ncomputing, and relates to a companion cloud computing taxonomy.5\n\nCloud computing use cases describe the consumer requirements when using cloud computing\nservice offerings. Through its working groups as described below, the NIST Cloud Computing\nprogram has studied a range of U.S. federal government and general-purpose use cases to extract\nfeatures that are amenable to standardization. Using these examples, the current document analyzes\nhow existing cloud-related standards  fit the needs of federal cloud consumers and identifies\nstandardization gaps.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "13",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 13,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "2"
+          },
+          "score": 0.5987512323709254,
+          "rank": 4
+        },
+        {
+          "id": "nist-p080-text-001",
+          "text": "As the cloud computing conceptual model indicates, cloud computing consumers do not have direct\nvisibility into the physical computing resources. Instead, consumers interact with service providers\nthrough three service model interfaces, IaaS, PaaS, and SaaS, to gain a view of the abstracted\ncomputing resource they are using. As described in Chapter 5, Cloud Computing Standards, these\ninteraction interfaces can be categorized into two types: (1) functional interfaces that expose the\nprimary function of the service, and (2) management interfaces that let the consumers manage the\nrented computing resources. The following areas of standardization gaps are observed through the\nstandards inventory.\n\n                                       69\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "80",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 80,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "69"
+          },
+          "score": 0.5814398885371916,
+          "rank": 5
+        },
+        {
+          "id": "nist-p025-table-00-000",
+          "text": "Table 1 – Cloud Consumer and Cloud Provider\nTable with three columns: Service Models; Consumer Activities; Provider Activities.\nRows:\n1) SaaS | Uses application/service for business process operations. | Installs, manages, maintains, and supports the software application on a cloud infrastructure.\n2) PaaS | Develops, tests, deploys, and manages applications hosted in a cloud system. | Provisions and manages cloud infrastructure and middleware for the platform consumers; provides development, deployment, and administration tools to platform consumers.\n3) IaaS | Creates/installs, manages, and monitors services for IT infrastructure operations. | Provisions and manages the physical processing, storage, networking, and the hosting environment and cloud infrastructure for IaaS consumers.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "25",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-025.png",
+            "label": "Table 1 – Cloud Consumer and Cloud Provider",
+            "pdf_page": 25,
+            "visual_id": "nist-p025-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "14",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5742040922173962,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.5027730999972846
+    }
+  ],
+  "context": [
+    {
+      "id": "nist-p020-text-000",
+      "text": "Service Models:\n\n   Software as a Service (SaaS). The capability provided to the consumer is to use the provider’s\n           applications running on a cloud infrastructure.11 The applications are accessible from\n           various client devices through either a thin client interface, such as a web browser (e.g.,\n         web-based email) or a program interface. The consumer does not manage or control the\n          underlying cloud infrastructure including network, servers, operating systems, storage,\n           or even individual application capabilities, with the possible exception of limited user-\n            specific application configuration settings.\n\n   Platform as a Service (PaaS). The capability provided to the consumer is to deploy onto the\n          cloud   infrastructure  consumer-created  or  acquired  applications  created  using\n         programming languages, libraries, services, and tools supported by the provider.12 The\n         consumer does not manage or control the underlying cloud infrastructure including\n          network, servers, operating systems, or storage, but has control over the deployed\n           applications and possibly configuration settings for the application-hosting environment.\n\n    Infrastructure as a Service (IaaS). The capability provided to the consumer is to provision\n           processing, storage, networks, and other fundamental computing resources where the\n         consumer is able to deploy and run arbitrary software, which can include operating\n          systems and applications. The consumer does not manage or control the underlying\n          cloud infrastructure but has control over operating systems, storage, and deployed\n            applications, and possibly limited control of select networking components (e.g., host\n            firewalls).\n\nDeployment Models:\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "20",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 20,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "9"
+      },
+      "score": 0.6838727868722543,
+      "rank": 1
+    },
+    {
+      "id": "nist-p019-text-000",
+      "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "19",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 19,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "8"
+      },
+      "score": 0.6247890870986624,
+      "rank": 2
+    },
+    {
+      "id": "nist-p026-diagram-00-000",
+      "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "26",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\810c2b69a87e\\page-026.png",
+        "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+        "pdf_page": 26,
+        "visual_id": "nist-p026-diagram-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "15",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.599055095043452,
+      "rank": 3
+    },
+    {
+      "id": "nist-p013-text-000",
+      "text": "The NIST Definition of Cloud Computing identified cloud computing as a model for enabling\nubiquitous, convenient, on-demand network access to a shared pool of configurable computing\nresources  (e.g.,  networks,  servers,  storage,  applications, and  services)  that  can be  rapidly\nprovisioned and released with minimal management effort or service provider interaction.\n\nAs an extension to the above NIST cloud computing definition, a NIST cloud computing reference\narchitecture has been developed by the NIST Cloud Computing Reference Architecture and\nTaxonomy Working Group that depicts a generic high-level conceptual model for discussing the\nrequirements, structures and operations of cloud computing.  It contains a  set of views and\ndescriptions that are the basis for discussing the characteristics, uses, and standards for cloud\ncomputing, and relates to a companion cloud computing taxonomy.5\n\nCloud computing use cases describe the consumer requirements when using cloud computing\nservice offerings. Through its working groups as described below, the NIST Cloud Computing\nprogram has studied a range of U.S. federal government and general-purpose use cases to extract\nfeatures that are amenable to standardization. Using these examples, the current document analyzes\nhow existing cloud-related standards  fit the needs of federal cloud consumers and identifies\nstandardization gaps.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "13",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 13,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "2"
+      },
+      "score": 0.5987512323709254,
+      "rank": 4
+    },
+    {
+      "id": "nist-p080-text-001",
+      "text": "As the cloud computing conceptual model indicates, cloud computing consumers do not have direct\nvisibility into the physical computing resources. Instead, consumers interact with service providers\nthrough three service model interfaces, IaaS, PaaS, and SaaS, to gain a view of the abstracted\ncomputing resource they are using. As described in Chapter 5, Cloud Computing Standards, these\ninteraction interfaces can be categorized into two types: (1) functional interfaces that expose the\nprimary function of the service, and (2) management interfaces that let the consumers manage the\nrented computing resources. The following areas of standardization gaps are observed through the\nstandards inventory.\n\n                                       69\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "80",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 80,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "69"
+      },
+      "score": 0.5814398885371916,
+      "rank": 5
+    },
+    {
+      "id": "nist-p025-table-00-000",
+      "text": "Table 1 – Cloud Consumer and Cloud Provider\nTable with three columns: Service Models; Consumer Activities; Provider Activities.\nRows:\n1) SaaS | Uses application/service for business process operations. | Installs, manages, maintains, and supports the software application on a cloud infrastructure.\n2) PaaS | Develops, tests, deploys, and manages applications hosted in a cloud system. | Provisions and manages cloud infrastructure and middleware for the platform consumers; provides development, deployment, and administration tools to platform consumers.\n3) IaaS | Creates/installs, manages, and monitors services for IT infrastructure operations. | Provisions and manages the physical processing, storage, networking, and the hosting environment and cloud infrastructure for IaaS consumers.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "25",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-025.png",
+        "label": "Table 1 – Cloud Consumer and Cloud Provider",
+        "pdf_page": 25,
+        "visual_id": "nist-p025-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "14",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5742040922173962,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T14:57:59.178144+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 407,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 76,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 483
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:02.417720+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3289,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 161,
+        "output_tokens_details": {
+          "reasoning_tokens": 83
+        },
+        "total_tokens": 3450
+      }
+    }
+  ],
+  "seconds": 6.555810900001234,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review"
+}

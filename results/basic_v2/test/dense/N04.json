@@ -1,0 +1,1015 @@
+{
+  "status": "answered",
+  "answer": "In `cross_validate`, `return_train_score` defaults to `False` because computing training-set scores is omitted by default to save computation time. To request training scores, set `return_train_score=True` in the `cross_validate(...)` call. [93d99a35c53a9e83680d15f9][88a1c965fd891745eab2cb6b]",
+  "citations": [
+    "93d99a35c53a9e83680d15f9",
+    "88a1c965fd891745eab2cb6b"
+  ],
+  "question": "In cross_validate, what is the default return_train_score setting, why, and how can training scores be requested?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "cross_validate default return_train_score why training scores requested documentation",
+      "results": [
+        {
+          "id": "c52755d2534f317e1a60224c",
+          "text": "3.1.1.1. The cross_validate function and multiple metric evaluation\n\nThe cross_validate function differs from cross_val_score in two ways:\n\nIt allows specifying multiple metrics for evaluation.\n\nIt returns a dict containing fit-times, score-times (and optionally training scores, fitted estimators, train-test split indices) in addition to the test score.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 3647,
+            "start": 3292,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 83
+          },
+          "score": 0.7032975312116705,
+          "rank": 1
+        },
+        {
+          "id": "dbdf16d62c9f2de124eb5dcc",
+          "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 2111,
+            "start": 1820,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 93
+          },
+          "score": 0.6958397808170461,
+          "rank": 2
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          },
+          "score": 0.6574898566311695,
+          "rank": 3
+        },
+        {
+          "id": "d4a30c6e13e3ebf5bb17906f",
+          "text": "Usage examples:\n\n>>> from sklearn import svm, datasets\n>>> from sklearn.model_selection import cross_val_score\n>>> X, y = datasets.load_iris(return_X_y=True)\n>>> clf = svm.SVC(random_state=0)\n>>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')\narray([0.96, 0.96, 0.96, 0.93, 1.        ])\n\nNote\n\nIf a wrong scoring name is passed, an InvalidParameterError is raised. You can retrieve the names of all available scorers by calling get_scorer_names .",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:004",
+          "metadata": {
+            "end": 456,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "string-name-scorers",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14614,
+            "unit_start": 10914,
+            "token_count": 162
+          },
+          "score": 0.6540196343058483,
+          "rank": 4
+        },
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          },
+          "score": 0.6457348888236417,
+          "rank": 5
+        },
+        {
+          "id": "b64e29c059aa390e1c6d9300",
+          "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 1335,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "computing-cross-validated-metrics",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 384
+          },
+          "score": 0.6417271708412676,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "c52755d2534f317e1a60224c",
+          "text": "3.1.1.1. The cross_validate function and multiple metric evaluation\n\nThe cross_validate function differs from cross_val_score in two ways:\n\nIt allows specifying multiple metrics for evaluation.\n\nIt returns a dict containing fit-times, score-times (and optionally training scores, fitted estimators, train-test split indices) in addition to the test score.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 3647,
+            "start": 3292,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 83
+          },
+          "score": 0.7032975312116705,
+          "rank": 1
+        },
+        {
+          "id": "dbdf16d62c9f2de124eb5dcc",
+          "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 2111,
+            "start": 1820,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 93
+          },
+          "score": 0.6958397808170461,
+          "rank": 2
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          },
+          "score": 0.6574898566311695,
+          "rank": 3
+        },
+        {
+          "id": "d4a30c6e13e3ebf5bb17906f",
+          "text": "Usage examples:\n\n>>> from sklearn import svm, datasets\n>>> from sklearn.model_selection import cross_val_score\n>>> X, y = datasets.load_iris(return_X_y=True)\n>>> clf = svm.SVC(random_state=0)\n>>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')\narray([0.96, 0.96, 0.96, 0.93, 1.        ])\n\nNote\n\nIf a wrong scoring name is passed, an InvalidParameterError is raised. You can retrieve the names of all available scorers by calling get_scorer_names .",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:004",
+          "metadata": {
+            "end": 456,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "string-name-scorers",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14614,
+            "unit_start": 10914,
+            "token_count": 162
+          },
+          "score": 0.6540196343058483,
+          "rank": 4
+        },
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          },
+          "score": 0.6457348888236417,
+          "rank": 5
+        },
+        {
+          "id": "b64e29c059aa390e1c6d9300",
+          "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 1335,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "computing-cross-validated-metrics",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 384
+          },
+          "score": 0.6417271708412676,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.36622580000039306
+    },
+    {
+      "event": "search",
+      "query": "return_train_score default False why training scores are not computed by default cross_validate note",
+      "results": [
+        {
+          "id": "c52755d2534f317e1a60224c",
+          "text": "3.1.1.1. The cross_validate function and multiple metric evaluation\n\nThe cross_validate function differs from cross_val_score in two ways:\n\nIt allows specifying multiple metrics for evaluation.\n\nIt returns a dict containing fit-times, score-times (and optionally training scores, fitted estimators, train-test split indices) in addition to the test score.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 3647,
+            "start": 3292,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 83
+          },
+          "score": 0.727094010883928,
+          "rank": 1
+        },
+        {
+          "id": "dbdf16d62c9f2de124eb5dcc",
+          "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 2111,
+            "start": 1820,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 93
+          },
+          "score": 0.7214003801345825,
+          "rank": 2
+        },
+        {
+          "id": "cee3e8cc0450b04960561569",
+          "text": "As a callable that returns a dictionary of scores: >>> from sklearn.model_selection import cross_validate >>> from sklearn.metrics import confusion_matrix >>> # A sample toy binary classification dataset >>> X , y = datasets . make_classification ( n_classes = 2 , random_state = 0 ) >>> svm = LinearSVC ( random_state = 0 ) >>> def confusion_matrix_scorer ( clf , X , y ): ... y_pred = clf . predict ( X ) ... cm = confusion_matrix ( y , y_pred ) ... return { 'tn' : cm [ 0 , 0 ], 'fp' : cm [ 0 , 1 ], ... 'fn' : cm [ 1 , 0 ], 'tp' : cm [ 1 , 1 ]} >>> cv_results = cross_validate ( svm , X , y , cv = 5 , ... scoring = confusion_matrix_scorer ) >>> # Getting the test set true positive scores >>> print ( cv_results [ 'test_tp' ]) [10 9 8 7 8] >>> # Getting the test set false negative scores >>> print ( cv_results [ 'test_fn' ]) [0 1 2 3 2]",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2944,
+            "start": 2101,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 303
+          },
+          "score": 0.6955071273143824,
+          "rank": 3
+        },
+        {
+          "id": "93d99a35c53a9e83680d15f9",
+          "text": "For single metric evaluation, where the scoring parameter is a string, callable or None, the keys will be - ['test_score', 'fit_time', 'score_time']\n\nAnd for multiple metric evaluation, the return value is a dict with the following keys - ['test_<scorer1_name>', 'test_<scorer2_name>', 'test_<scorer...>', 'fit_time', 'score_time']\n\nreturn_train_score is set to False by default to save computation time. To evaluate the scores on the training set as well you need to set it to True . You may also retain the estimator fitted on each training set by setting return_estimator=True . Similarly, you may set return_indices=True to retain the training and testing indices used to split the dataset into train and test sets for each cv split.\n\nThe multiple metrics can be specified either as a list, tuple or set of predefined scorer names:",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 835,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 220
+          },
+          "score": 0.6899634188435436,
+          "rank": 4
+        },
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          },
+          "score": 0.6888535804239774,
+          "rank": 5
+        },
+        {
+          "id": "d4a30c6e13e3ebf5bb17906f",
+          "text": "Usage examples:\n\n>>> from sklearn import svm, datasets\n>>> from sklearn.model_selection import cross_val_score\n>>> X, y = datasets.load_iris(return_X_y=True)\n>>> clf = svm.SVC(random_state=0)\n>>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')\narray([0.96, 0.96, 0.96, 0.93, 1.        ])\n\nNote\n\nIf a wrong scoring name is passed, an InvalidParameterError is raised. You can retrieve the names of all available scorers by calling get_scorer_names .",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:004",
+          "metadata": {
+            "end": 456,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "string-name-scorers",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14614,
+            "unit_start": 10914,
+            "token_count": 162
+          },
+          "score": 0.6866675819953558,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "c52755d2534f317e1a60224c",
+          "text": "3.1.1.1. The cross_validate function and multiple metric evaluation\n\nThe cross_validate function differs from cross_val_score in two ways:\n\nIt allows specifying multiple metrics for evaluation.\n\nIt returns a dict containing fit-times, score-times (and optionally training scores, fitted estimators, train-test split indices) in addition to the test score.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 3647,
+            "start": 3292,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 83
+          },
+          "score": 0.727094010883928,
+          "rank": 1
+        },
+        {
+          "id": "dbdf16d62c9f2de124eb5dcc",
+          "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 2111,
+            "start": 1820,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 93
+          },
+          "score": 0.7214003801345825,
+          "rank": 2
+        },
+        {
+          "id": "cee3e8cc0450b04960561569",
+          "text": "As a callable that returns a dictionary of scores: >>> from sklearn.model_selection import cross_validate >>> from sklearn.metrics import confusion_matrix >>> # A sample toy binary classification dataset >>> X , y = datasets . make_classification ( n_classes = 2 , random_state = 0 ) >>> svm = LinearSVC ( random_state = 0 ) >>> def confusion_matrix_scorer ( clf , X , y ): ... y_pred = clf . predict ( X ) ... cm = confusion_matrix ( y , y_pred ) ... return { 'tn' : cm [ 0 , 0 ], 'fp' : cm [ 0 , 1 ], ... 'fn' : cm [ 1 , 0 ], 'tp' : cm [ 1 , 1 ]} >>> cv_results = cross_validate ( svm , X , y , cv = 5 , ... scoring = confusion_matrix_scorer ) >>> # Getting the test set true positive scores >>> print ( cv_results [ 'test_tp' ]) [10 9 8 7 8] >>> # Getting the test set false negative scores >>> print ( cv_results [ 'test_fn' ]) [0 1 2 3 2]",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:005",
+          "metadata": {
+            "end": 2944,
+            "start": 2101,
+            "topic": "model_selection",
+            "anchor": "using-multiple-metric-evaluation",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18651,
+            "unit_start": 14616,
+            "token_count": 303
+          },
+          "score": 0.6955071273143824,
+          "rank": 3
+        },
+        {
+          "id": "93d99a35c53a9e83680d15f9",
+          "text": "For single metric evaluation, where the scoring parameter is a string, callable or None, the keys will be - ['test_score', 'fit_time', 'score_time']\n\nAnd for multiple metric evaluation, the return value is a dict with the following keys - ['test_<scorer1_name>', 'test_<scorer2_name>', 'test_<scorer...>', 'fit_time', 'score_time']\n\nreturn_train_score is set to False by default to save computation time. To evaluate the scores on the training set as well you need to set it to True . You may also retain the estimator fitted on each training set by setting return_estimator=True . Similarly, you may set return_indices=True to retain the training and testing indices used to split the dataset into train and test sets for each cv split.\n\nThe multiple metrics can be specified either as a list, tuple or set of predefined scorer names:",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 835,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 220
+          },
+          "score": 0.6899634188435436,
+          "rank": 4
+        },
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          },
+          "score": 0.6888535804239774,
+          "rank": 5
+        },
+        {
+          "id": "d4a30c6e13e3ebf5bb17906f",
+          "text": "Usage examples:\n\n>>> from sklearn import svm, datasets\n>>> from sklearn.model_selection import cross_val_score\n>>> X, y = datasets.load_iris(return_X_y=True)\n>>> clf = svm.SVC(random_state=0)\n>>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')\narray([0.96, 0.96, 0.96, 0.93, 1.        ])\n\nNote\n\nIf a wrong scoring name is passed, an InvalidParameterError is raised. You can retrieve the names of all available scorers by calling get_scorer_names .",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:004",
+          "metadata": {
+            "end": 456,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "string-name-scorers",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14614,
+            "unit_start": 10914,
+            "token_count": 162
+          },
+          "score": 0.6866675819953558,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.17717779999657068
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "93d99a35c53a9e83680d15f9",
+      "context": [
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          }
+        },
+        {
+          "id": "88a1c965fd891745eab2cb6b",
+          "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 1818,
+            "start": 837,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 379
+          }
+        },
+        {
+          "id": "93d99a35c53a9e83680d15f9",
+          "text": "For single metric evaluation, where the scoring parameter is a string, callable or None, the keys will be - ['test_score', 'fit_time', 'score_time']\n\nAnd for multiple metric evaluation, the return value is a dict with the following keys - ['test_<scorer1_name>', 'test_<scorer2_name>', 'test_<scorer...>', 'fit_time', 'score_time']\n\nreturn_train_score is set to False by default to save computation time. To evaluate the scores on the training set as well you need to set it to True . You may also retain the estimator fitted on each training set by setting return_estimator=True . Similarly, you may set return_indices=True to retain the training and testing indices used to split the dataset into train and test sets for each cv split.\n\nThe multiple metrics can be specified either as a list, tuple or set of predefined scorer names:",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 835,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 220
+          }
+        },
+        {
+          "id": "dbdf16d62c9f2de124eb5dcc",
+          "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 2111,
+            "start": 1820,
+            "topic": "model_selection",
+            "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 93
+          }
+        }
+      ],
+      "seconds": 0.0020641000010073185
+    }
+  ],
+  "context": [
+    {
+      "id": "c52755d2534f317e1a60224c",
+      "text": "3.1.1.1. The cross_validate function and multiple metric evaluation\n\nThe cross_validate function differs from cross_val_score in two ways:\n\nIt allows specifying multiple metrics for evaluation.\n\nIt returns a dict containing fit-times, score-times (and optionally training scores, fitted estimators, train-test split indices) in addition to the test score.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:002",
+      "metadata": {
+        "end": 3647,
+        "start": 3292,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7292,
+        "unit_start": 3645,
+        "token_count": 83
+      },
+      "score": 0.727094010883928,
+      "rank": 1
+    },
+    {
+      "id": "dbdf16d62c9f2de124eb5dcc",
+      "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 2111,
+        "start": 1820,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 93
+      }
+    },
+    {
+      "id": "88a1c965fd891745eab2cb6b",
+      "text": ">>> from sklearn.model_selection import cross_validate\n>>> from sklearn.metrics import recall_score\n>>> scoring = ['precision_macro', 'recall_macro']\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=0)\n>>> scores = cross_validate(clf, X, y, scoring=scoring)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro']\n>>> scores['test_recall_macro']\narray([0.96, 1., 0.96, 0.96, 1.])\n\nOr as a dict mapping scorer name to a predefined or custom scoring function:\n\n>>> from sklearn.metrics import make_scorer\n>>> scoring = {'prec_macro': 'precision_macro',\n...            'rec_macro': make_scorer(recall_score, average='macro')}\n>>> scores = cross_validate(clf, X, y, scoring=scoring,\n...                         cv=5, return_train_score=True)\n>>> sorted(scores.keys())\n['fit_time', 'score_time', 'test_prec_macro', 'test_rec_macro',\n 'train_prec_macro', 'train_rec_macro']\n>>> scores['train_rec_macro']\narray([0.97, 0.97, 0.99, 0.98, 0.98])",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 1818,
+        "start": 837,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 379
+      }
+    },
+    {
+      "id": "d4a30c6e13e3ebf5bb17906f",
+      "text": "Usage examples:\n\n>>> from sklearn import svm, datasets\n>>> from sklearn.model_selection import cross_val_score\n>>> X, y = datasets.load_iris(return_X_y=True)\n>>> clf = svm.SVC(random_state=0)\n>>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')\narray([0.96, 0.96, 0.96, 0.93, 1.        ])\n\nNote\n\nIf a wrong scoring name is passed, an InvalidParameterError is raised. You can retrieve the names of all available scorers by calling get_scorer_names .",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:004",
+      "metadata": {
+        "end": 456,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "string-name-scorers",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14614,
+        "unit_start": 10914,
+        "token_count": 162
+      },
+      "score": 0.6866675819953558,
+      "rank": 6
+    },
+    {
+      "id": "455a090db1a434c0e53df6e0",
+      "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 3526,
+        "start": 2113,
+        "topic": "model_selection",
+        "anchor": "obtaining-predictions-by-cross-validation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 279
+      }
+    },
+    {
+      "id": "b64e29c059aa390e1c6d9300",
+      "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:002",
+      "metadata": {
+        "end": 1335,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "computing-cross-validated-metrics",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7292,
+        "unit_start": 3645,
+        "token_count": 384
+      },
+      "score": 0.6417271708412676,
+      "rank": 6
+    },
+    {
+      "id": "cee3e8cc0450b04960561569",
+      "text": "As a callable that returns a dictionary of scores: >>> from sklearn.model_selection import cross_validate >>> from sklearn.metrics import confusion_matrix >>> # A sample toy binary classification dataset >>> X , y = datasets . make_classification ( n_classes = 2 , random_state = 0 ) >>> svm = LinearSVC ( random_state = 0 ) >>> def confusion_matrix_scorer ( clf , X , y ): ... y_pred = clf . predict ( X ) ... cm = confusion_matrix ( y , y_pred ) ... return { 'tn' : cm [ 0 , 0 ], 'fp' : cm [ 0 , 1 ], ... 'fn' : cm [ 1 , 0 ], 'tp' : cm [ 1 , 1 ]} >>> cv_results = cross_validate ( svm , X , y , cv = 5 , ... scoring = confusion_matrix_scorer ) >>> # Getting the test set true positive scores >>> print ( cv_results [ 'test_tp' ]) [10 9 8 7 8] >>> # Getting the test set false negative scores >>> print ( cv_results [ 'test_fn' ]) [0 1 2 3 2]",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:005",
+      "metadata": {
+        "end": 2944,
+        "start": 2101,
+        "topic": "model_selection",
+        "anchor": "using-multiple-metric-evaluation",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.3. Using multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18651,
+        "unit_start": 14616,
+        "token_count": 303
+      },
+      "score": 0.6955071273143824,
+      "rank": 3
+    },
+    {
+      "id": "93d99a35c53a9e83680d15f9",
+      "text": "For single metric evaluation, where the scoring parameter is a string, callable or None, the keys will be - ['test_score', 'fit_time', 'score_time']\n\nAnd for multiple metric evaluation, the return value is a dict with the following keys - ['test_<scorer1_name>', 'test_<scorer2_name>', 'test_<scorer...>', 'fit_time', 'score_time']\n\nreturn_train_score is set to False by default to save computation time. To evaluate the scores on the training set as well you need to set it to True . You may also retain the estimator fitted on each training set by setting return_estimator=True . Similarly, you may set return_indices=True to retain the training and testing indices used to split the dataset into train and test sets for each cv split.\n\nThe multiple metrics can be specified either as a list, tuple or set of predefined scorer names:",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 835,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 220
+      }
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:06.582198+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 49,
+        "output_tokens_details": {
+          "reasoning_tokens": 20
+        },
+        "total_tokens": 565
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:09.076519+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2995,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 57,
+        "output_tokens_details": {
+          "reasoning_tokens": 23
+        },
+        "total_tokens": 3052
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:14.789740+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5287,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2816,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 170,
+        "output_tokens_details": {
+          "reasoning_tokens": 132
+        },
+        "total_tokens": 5457
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:18.978730+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7041,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 5120,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 277,
+        "output_tokens_details": {
+          "reasoning_tokens": 139
+        },
+        "total_tokens": 7318
+      }
+    }
+  ],
+  "seconds": 14.907029699999839,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N04",
+  "initial_ranking": [
+    {
+      "id": "c52755d2534f317e1a60224c",
+      "text": "3.1.1.1. The cross_validate function and multiple metric evaluation\n\nThe cross_validate function differs from cross_val_score in two ways:\n\nIt allows specifying multiple metrics for evaluation.\n\nIt returns a dict containing fit-times, score-times (and optionally training scores, fitted estimators, train-test split indices) in addition to the test score.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:002",
+      "metadata": {
+        "end": 3647,
+        "start": 3292,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7292,
+        "unit_start": 3645,
+        "token_count": 83
+      },
+      "score": 0.7471384779471643,
+      "rank": 1
+    },
+    {
+      "id": "dbdf16d62c9f2de124eb5dcc",
+      "text": "Here is an example of cross_validate using a single metric:\n\n>>> scores = cross_validate(clf, X, y,\n...                         scoring='precision_macro', cv=5,\n...                         return_estimator=True)\n>>> sorted(scores.keys())\n['estimator', 'fit_time', 'score_time', 'test_score']",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 2111,
+        "start": 1820,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 93
+      },
+      "score": 0.741397164505636,
+      "rank": 2
+    },
+    {
+      "id": "455a090db1a434c0e53df6e0",
+      "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 3526,
+        "start": 2113,
+        "topic": "model_selection",
+        "anchor": "obtaining-predictions-by-cross-validation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 279
+      },
+      "score": 0.698652723471742,
+      "rank": 3
+    },
+    {
+      "id": "d4a30c6e13e3ebf5bb17906f",
+      "text": "Usage examples:\n\n>>> from sklearn import svm, datasets\n>>> from sklearn.model_selection import cross_val_score\n>>> X, y = datasets.load_iris(return_X_y=True)\n>>> clf = svm.SVC(random_state=0)\n>>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')\narray([0.96, 0.96, 0.96, 0.93, 1.        ])\n\nNote\n\nIf a wrong scoring name is passed, an InvalidParameterError is raised. You can retrieve the names of all available scorers by calling get_scorer_names .",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:004",
+      "metadata": {
+        "end": 456,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "string-name-scorers",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules > 3.4.3.1. String name scorers",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14614,
+        "unit_start": 10914,
+        "token_count": 162
+      },
+      "score": 0.6933091100042528,
+      "rank": 4
+    },
+    {
+      "id": "b64e29c059aa390e1c6d9300",
+      "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:002",
+      "metadata": {
+        "end": 1335,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "computing-cross-validated-metrics",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7292,
+        "unit_start": 3645,
+        "token_count": 384
+      },
+      "score": 0.6918286291309785,
+      "rank": 5
+    },
+    {
+      "id": "93d99a35c53a9e83680d15f9",
+      "text": "For single metric evaluation, where the scoring parameter is a string, callable or None, the keys will be - ['test_score', 'fit_time', 'score_time']\n\nAnd for multiple metric evaluation, the return value is a dict with the following keys - ['test_<scorer1_name>', 'test_<scorer2_name>', 'test_<scorer...>', 'fit_time', 'score_time']\n\nreturn_train_score is set to False by default to save computation time. To evaluate the scores on the training set as well you need to set it to True . You may also retain the estimator fitted on each training set by setting return_estimator=True . Similarly, you may set return_indices=True to retain the training and testing indices used to split the dataset into train and test sets for each cv split.\n\nThe multiple metrics can be specified either as a list, tuple or set of predefined scorer names:",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 835,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "the-cross-validate-function-and-multiple-metric-evaluation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.1. The cross_validate function and multiple metric evaluation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 220
+      },
+      "score": 0.6802245175771586,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": true
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "nist_text",
+    "status": "answered",
+    "answer": "Theo tài liệu NIST, cloud computing có 3 service model: Software as a Service (SaaS), Platform as a Service (PaaS), và Infrastructure as a Service (IaaS) [nist-p020-text-000].",
+    "method": "dense",
+    "seconds": 6.555810900001234,
+    "events": [
+      "search"
+    ],
+    "trace": "results\\demos\\nist_text.json"
+  },
+  {
+    "name": "nist_bm25",
+    "status": "answered",
+    "answer": "Theo Table 5, SAML do OASIS ban hành. Dòng SAML trong bảng ghi \"SDO: OASIS\" [nist-p063-table-00-000].",
+    "method": "bm25",
+    "seconds": 17.40113779999956,
+    "events": [
+      "search",
+      "inspect_visual",
+      "search",
+      "inspect_visual",
+      "read_evidence",
+      "inspect_visual"
+    ],
+    "trace": "results\\demos\\nist_bm25.json"
+  },
+  {
+    "name": "nist_diagram",
+    "status": "answered",
+    "answer": "Trong Figure 1, Cloud Carrier nằm ở dải ngang phía dưới cùng của sơ đồ, bên dưới các vai trò khác, và là thành phần kéo dài theo chiều ngang toàn bộ đáy hình [nist-p023-diagram-00-000]. Nó đóng vai trò trung gian cung cấp kết nối và vận chuyển dịch vụ cloud giữa Cloud Providers và Cloud Consumers [nist-p023-diagram-00-000][nist-p023-text-000].",
+    "method": "hybrid",
+    "seconds": 10.854165599997941,
+    "events": [
+      "search",
+      "inspect_visual"
+    ],
+    "trace": "results\\demos\\nist_diagram.json"
+  },
+  {
+    "name": "nist_abstain",
+    "status": "abstain",
+    "answer": "Tôi không tìm thấy trong tài liệu đã truy xuất thông tin về gói AWS EC2 năm 2030, nên không thể xác định chính xác mức giá từ nguồn này.",
+    "method": "hybrid",
+    "seconds": 16.632751400000416,
+    "events": [
+      "search",
+      "search",
+      "search",
+      "search",
+      "search"
+    ],
+    "trace": "results\\demos\\nist_abstain.json"
+  },
+  {
+    "name": "day6_dense",
+    "status": "answered",
+    "answer": "Use `StandardScaler(with_mean=False)` to disable centering while keeping variance scaling enabled; the docs say you can disable centering with `with_mean=False` and scaling with `with_std=False` [6b968eaff7a08cc385a0cc51]. If your input is sparse, `with_mean=False` is required because centering would destroy sparsity [14ce9eb9004fa7a41a3c4cb0].",
+    "method": "dense",
+    "seconds": 17.29152350000004,
+    "events": [
+      "search",
+      "search"
+    ],
+    "trace": "results\\demos\\day6_dense.json"
+  }
+]

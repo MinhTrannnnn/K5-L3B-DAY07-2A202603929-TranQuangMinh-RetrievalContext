@@ -1,0 +1,1238 @@
+{
+  "status": "answered",
+  "answer": "The orange color represents the Upper-middle-income group [wdr-p173-image-00-000].",
+  "citations": [
+    "wdr-p173-image-00-000"
+  ],
+  "question": "Read the legend of Map 6.1. Which income group is colored orange?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Map 6.1\" legend orange income group",
+      "results": [
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5203108287548445,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.519263304215032,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p198-chart-00-000",
+          "text": "Figure 7.5\nHorizontal grouped bar chart titled: \"In middle-income countries, both economywide and sectoral input and product market regulations are more restrictive than in high-income countries.\" X-axis: \"PMR score (0–6)\" with visible tick marks from 0 to 3 at 0.5 intervals. Two series in the legend: Middle-income (orange) and High-income (dark blue). The figure is split by left-side grouping labels \"Economywide\" and \"Sector\". Visible categories and approximate bar lengths: 1) \"Distortions induced by state involvement\" — middle-income about 2.6, high-income about 1.6; 2) \"Barriers to domestic and foreign entry\" — middle-income about 1.6, high-income about 1.1; 3) \"Network sectors\" — middle-income about 2.5, high-income about 1.5; 4) \"Professional services\" — middle-income about 1.9, high-income about 1.6; 5) \"Retail trade\" — middle-income about 1.5, high-income about 1.25. Source note visible beneath the chart cites WDR 2024 team using PMR Database / OECD-WBG Product Market Regulation Database and OECD PMR Indicators; note explains PMR ranges from 0 to 6 and lower values indicate more competition-friendly regulation, with data for 38 high-income and 22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-198.png",
+            "label": "Figure 7.5",
+            "pdf_page": 198,
+            "visual_id": "wdr-p198-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar values are estimated visually from the graphic and may be approximate.",
+              "Only the visible portion of the page is transcribed; no hidden/cut-off values are inferred."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5125150864071483,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p067-text-001",
+          "text": "Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: Each scatter point indicates an economy’s 1990 and 2022 gross national income (GNI) per capita in current US dollar\nterms (using the World Bank Atlas method). The blue vertical lines show thresholds to transition to lower-middle-income\nstatus, upper-middle-income status, and high-income status in 1990 (US$610, US$2,465, and US$7,620, respectively), while\nthe blue horizontal lines show these thresholds in 2022 (US$1,135, US$4,465, and US$13,845, respectively) based on the\nWorld Bank income classifications (https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country​\n-and-lending-groups). The figure includes only economies at middle-income levels in 1990. For legibility, only economies that\nhave transitioned to high-income status since 1990 are labeled (1990 data were unavailable for six economies). For country\nabbreviations, see International Organization for Standardization (ISO), https://www.iso.org/obp/ui/#search.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.5082279156255465,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p067-text-000",
+          "text": "Figure 1.1 A handful of economies have transitioned from middle-income to high-income\nstatus over the last three decades\n\n                    Lower-\n           Low-    middle-                 Upper-middle-\n         income   income                  income                     High-income\n    45,000\n                                                     MAC\n\n    40,000\n                                              KOR\n    35,000                                         MLT\n2022  30,000                                         SVN\n                                                           BHR                                CZE                 SAU                           EST\n                                                       PRI   PRT(US$),  25,000                           LTU                                                                                                                                                                                                                                                                                                                                           High-income                    SVK   LVA                                     KNA OMN     GRC    20,000           HRVcapita                            HUN                      BRB                    POL     URY                     ATG\n         GUYper                         PAN  TTO      SYC    15,000             ROM  CHL\nGNI 13,845\n    10,000                                                                                                                                                                                     Upper-middle-income\n\n     5,000\n     4,465     1,135                                                                                                                                                                Lower-middle-income\n        0  6101,000   2,0002,4653,000   4,000   5,000   6,000   7,0007,6208,000   9,000  10,000\n\n                              GNI per capita (US$), 1990\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.5026190895155795,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p110-chart-00-000",
+          "text": "Figure 3.7\nScatter plot titled “Low- and middle-income countries are exposed to similar levels of risk from climate change, and they have less adaptive capacity.” The x-axis is Exposure index (higher scores indicate greater risk), scaled from 0 to 0.8. The y-axis is Adaptive capacity index (higher scores indicate lower capacity), scaled from 0 to 1.0. Three country-income groups are shown with colored dots and separate solid linear trend lines: Low-income (dark navy), Middle-income (orange), and High-income (teal). The low-income group clusters mostly around exposure roughly 0.35–0.55 and adaptive capacity roughly 0.65–0.87, with an upward-sloping trend line. The middle-income group clusters mainly around exposure roughly 0.25–0.58 and adaptive capacity roughly 0.35–0.78, with a moderately upward-sloping trend line; one visible orange point lies near exposure about 0.71 and adaptive capacity about 0.50. The high-income group clusters mainly around exposure roughly 0.26–0.58 and adaptive capacity roughly 0.18–0.62, with a nearly flat but slightly upward-sloping trend line. Source note: WDR 2024 team using data from ND-GAIN Country Index (University of Notre Dame Global Adaptation Index) dashboard, University of Notre Dame, Notre Dame, IN, https://gain.nd.edu/our-work/country-index/. Note: The solid lines show the linear relationship for each country group.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "110",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-110.png",
+            "label": "Figure 3.7",
+            "pdf_page": 110,
+            "visual_id": "wdr-p110-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact data values for individual points are not labeled and cannot be recovered precisely from the figure image.",
+              "The number of plotted observations in each group is visible only approximately from the dots, not exactly.",
+              "No country names are shown for individual observations."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5020873657527509,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p040-chart-00-000",
+          "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "40",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-040.png",
+            "label": "Figure O.5",
+            "pdf_page": 40,
+            "visual_id": "wdr-p040-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+              "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.49851343915362456,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p096-chart-00-000",
+          "text": "Figure 2.6\nBar chart titled 'The innovation gap between high-income countries and others is substantial.' Vertical axis: Technology index, from 0 to 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Orange bars with value labels: Low-income 0.0; Lower-middle-income 0.0; Upper-middle-income 0.6; High-income 8.4. The high-income bar is much taller than the others, showing a large gap.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "96",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-096.png",
+            "label": "Figure 2.6",
+            "pdf_page": 96,
+            "visual_id": "wdr-p096-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.4983855531191205,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p185-chart-00-000",
+          "text": "Figure 6.7\nFigure 6.7. Most of the countries currently “locked in” to declining brown industries are middle-income countries. Composite figure with two panels. Panel a: bar chart titled “Brown Lock-in Index for top 10 highest-risk middle-income countries.” Y-axis is Brown Lock-in Index, ranging from 0 to 3.5. Ten countries on the x-axis, with approximate bar heights (highest to lowest): Iraq (~3.45), Libya (~3.25), Angola (~3.25), Equatorial Guinea (~3.20), Azerbaijan (~3.18), Nigeria (~3.17), Algeria (~2.90), Turkmenistan (~2.48), Timor-Leste (~2.25), Gabon (~2.20). Panel b: scatter plot titled “Brown Lock-in Index versus Transition Outlook for middle-income countries.” X-axis is Brown Lock-in Index (about -1.0 to 4.0); Y-axis is Transition Outlook (about -3.0 to 2.5). Points are color-coded by income group, with legend: Lower-middle-income (teal) and Upper-middle-income (orange). Dashed reference lines cross at approximately x=0 and y=0. Country abbreviations are plotted as labeled points; visible labels include KHM, VUT, LCA, VCT, MDV, BLR, TKM, IRQ, SWZ, NAM, TUV, UZB, EGY, BRA, IDN, MMR, CIV, ARG, GHA, MNG, ECU, RUS, IRN, KAZ, COL, DZA, AZE, CMR, NGA, PNG, AGO, GNQ, TLS, LBY, GAB, BOL, COG, NIC, MRT, and others clustered near the origin. The general pattern shows many countries clustered at low Brown Lock-in Index values near the left side, with several high-lock-in countries on the far right, often with negative Transition Outlook. Source note in the figure cites WDR 2024 team analysis based on Andres et al. (2023) and defines Brown Lock-in Index and Transition Outlook.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "185",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-185.png",
+            "label": "Figure 6.7",
+            "pdf_page": 185,
+            "visual_id": "wdr-p185-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar heights are estimated visually because the figure does not show exact data labels.",
+              "Scatter-point positions are approximate; several labels overlap in the dense cluster near the origin.",
+              "Some country labels are small or partially obscured, so the visible label list may be incomplete."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.49688265846384927,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.49391947411119674,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p173-image-00-000",
+          "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "image",
+            "image": "data\\processed\\dc69d858e364\\page-173.png",
+            "label": "Map 6.1",
+            "pdf_page": 173,
+            "visual_id": "wdr-p173-image-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+              "Country-by-country labels are not readable at this resolution.",
+              "The map projection and any underlying scale are not specified in the visible figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5203108287548445,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.519263304215032,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p198-chart-00-000",
+          "text": "Figure 7.5\nHorizontal grouped bar chart titled: \"In middle-income countries, both economywide and sectoral input and product market regulations are more restrictive than in high-income countries.\" X-axis: \"PMR score (0–6)\" with visible tick marks from 0 to 3 at 0.5 intervals. Two series in the legend: Middle-income (orange) and High-income (dark blue). The figure is split by left-side grouping labels \"Economywide\" and \"Sector\". Visible categories and approximate bar lengths: 1) \"Distortions induced by state involvement\" — middle-income about 2.6, high-income about 1.6; 2) \"Barriers to domestic and foreign entry\" — middle-income about 1.6, high-income about 1.1; 3) \"Network sectors\" — middle-income about 2.5, high-income about 1.5; 4) \"Professional services\" — middle-income about 1.9, high-income about 1.6; 5) \"Retail trade\" — middle-income about 1.5, high-income about 1.25. Source note visible beneath the chart cites WDR 2024 team using PMR Database / OECD-WBG Product Market Regulation Database and OECD PMR Indicators; note explains PMR ranges from 0 to 6 and lower values indicate more competition-friendly regulation, with data for 38 high-income and 22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-198.png",
+            "label": "Figure 7.5",
+            "pdf_page": 198,
+            "visual_id": "wdr-p198-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar values are estimated visually from the graphic and may be approximate.",
+              "Only the visible portion of the page is transcribed; no hidden/cut-off values are inferred."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5125150864071483,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p067-text-001",
+          "text": "Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: Each scatter point indicates an economy’s 1990 and 2022 gross national income (GNI) per capita in current US dollar\nterms (using the World Bank Atlas method). The blue vertical lines show thresholds to transition to lower-middle-income\nstatus, upper-middle-income status, and high-income status in 1990 (US$610, US$2,465, and US$7,620, respectively), while\nthe blue horizontal lines show these thresholds in 2022 (US$1,135, US$4,465, and US$13,845, respectively) based on the\nWorld Bank income classifications (https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country​\n-and-lending-groups). The figure includes only economies at middle-income levels in 1990. For legibility, only economies that\nhave transitioned to high-income status since 1990 are labeled (1990 data were unavailable for six economies). For country\nabbreviations, see International Organization for Standardization (ISO), https://www.iso.org/obp/ui/#search.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.5082279156255465,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p067-text-000",
+          "text": "Figure 1.1 A handful of economies have transitioned from middle-income to high-income\nstatus over the last three decades\n\n                    Lower-\n           Low-    middle-                 Upper-middle-\n         income   income                  income                     High-income\n    45,000\n                                                     MAC\n\n    40,000\n                                              KOR\n    35,000                                         MLT\n2022  30,000                                         SVN\n                                                           BHR                                CZE                 SAU                           EST\n                                                       PRI   PRT(US$),  25,000                           LTU                                                                                                                                                                                                                                                                                                                                           High-income                    SVK   LVA                                     KNA OMN     GRC    20,000           HRVcapita                            HUN                      BRB                    POL     URY                     ATG\n         GUYper                         PAN  TTO      SYC    15,000             ROM  CHL\nGNI 13,845\n    10,000                                                                                                                                                                                     Upper-middle-income\n\n     5,000\n     4,465     1,135                                                                                                                                                                Lower-middle-income\n        0  6101,000   2,0002,4653,000   4,000   5,000   6,000   7,0007,6208,000   9,000  10,000\n\n                              GNI per capita (US$), 1990\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.5026190895155795,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p110-chart-00-000",
+          "text": "Figure 3.7\nScatter plot titled “Low- and middle-income countries are exposed to similar levels of risk from climate change, and they have less adaptive capacity.” The x-axis is Exposure index (higher scores indicate greater risk), scaled from 0 to 0.8. The y-axis is Adaptive capacity index (higher scores indicate lower capacity), scaled from 0 to 1.0. Three country-income groups are shown with colored dots and separate solid linear trend lines: Low-income (dark navy), Middle-income (orange), and High-income (teal). The low-income group clusters mostly around exposure roughly 0.35–0.55 and adaptive capacity roughly 0.65–0.87, with an upward-sloping trend line. The middle-income group clusters mainly around exposure roughly 0.25–0.58 and adaptive capacity roughly 0.35–0.78, with a moderately upward-sloping trend line; one visible orange point lies near exposure about 0.71 and adaptive capacity about 0.50. The high-income group clusters mainly around exposure roughly 0.26–0.58 and adaptive capacity roughly 0.18–0.62, with a nearly flat but slightly upward-sloping trend line. Source note: WDR 2024 team using data from ND-GAIN Country Index (University of Notre Dame Global Adaptation Index) dashboard, University of Notre Dame, Notre Dame, IN, https://gain.nd.edu/our-work/country-index/. Note: The solid lines show the linear relationship for each country group.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "110",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-110.png",
+            "label": "Figure 3.7",
+            "pdf_page": 110,
+            "visual_id": "wdr-p110-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact data values for individual points are not labeled and cannot be recovered precisely from the figure image.",
+              "The number of plotted observations in each group is visible only approximately from the dots, not exactly.",
+              "No country names are shown for individual observations."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.5020873657527509,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p040-chart-00-000",
+          "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "40",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-040.png",
+            "label": "Figure O.5",
+            "pdf_page": 40,
+            "visual_id": "wdr-p040-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+              "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.49851343915362456,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p096-chart-00-000",
+          "text": "Figure 2.6\nBar chart titled 'The innovation gap between high-income countries and others is substantial.' Vertical axis: Technology index, from 0 to 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Orange bars with value labels: Low-income 0.0; Lower-middle-income 0.0; Upper-middle-income 0.6; High-income 8.4. The high-income bar is much taller than the others, showing a large gap.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "96",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-096.png",
+            "label": "Figure 2.6",
+            "pdf_page": 96,
+            "visual_id": "wdr-p096-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.4983855531191205,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p185-chart-00-000",
+          "text": "Figure 6.7\nFigure 6.7. Most of the countries currently “locked in” to declining brown industries are middle-income countries. Composite figure with two panels. Panel a: bar chart titled “Brown Lock-in Index for top 10 highest-risk middle-income countries.” Y-axis is Brown Lock-in Index, ranging from 0 to 3.5. Ten countries on the x-axis, with approximate bar heights (highest to lowest): Iraq (~3.45), Libya (~3.25), Angola (~3.25), Equatorial Guinea (~3.20), Azerbaijan (~3.18), Nigeria (~3.17), Algeria (~2.90), Turkmenistan (~2.48), Timor-Leste (~2.25), Gabon (~2.20). Panel b: scatter plot titled “Brown Lock-in Index versus Transition Outlook for middle-income countries.” X-axis is Brown Lock-in Index (about -1.0 to 4.0); Y-axis is Transition Outlook (about -3.0 to 2.5). Points are color-coded by income group, with legend: Lower-middle-income (teal) and Upper-middle-income (orange). Dashed reference lines cross at approximately x=0 and y=0. Country abbreviations are plotted as labeled points; visible labels include KHM, VUT, LCA, VCT, MDV, BLR, TKM, IRQ, SWZ, NAM, TUV, UZB, EGY, BRA, IDN, MMR, CIV, ARG, GHA, MNG, ECU, RUS, IRN, KAZ, COL, DZA, AZE, CMR, NGA, PNG, AGO, GNQ, TLS, LBY, GAB, BOL, COG, NIC, MRT, and others clustered near the origin. The general pattern shows many countries clustered at low Brown Lock-in Index values near the left side, with several high-lock-in countries on the far right, often with negative Transition Outlook. Source note in the figure cites WDR 2024 team analysis based on Andres et al. (2023) and defines Brown Lock-in Index and Transition Outlook.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "185",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-185.png",
+            "label": "Figure 6.7",
+            "pdf_page": 185,
+            "visual_id": "wdr-p185-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar heights are estimated visually because the figure does not show exact data labels.",
+              "Scatter-point positions are approximate; several labels overlap in the dense cluster near the origin.",
+              "Some country labels are small or partially obscured, so the visible label list may be incomplete."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.49688265846384927,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.49391947411119674,
+          "rank": 10
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.06404019999899901
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by the legend in Map 6.1: orange corresponds to the Upper-middle-income group."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p173-image-00-000",
+      "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-173.png",
+        "label": "Map 6.1",
+        "pdf_page": 173,
+        "visual_id": "wdr-p173-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+          "Country-by-country labels are not readable at this resolution.",
+          "The map projection and any underlying scale are not specified in the visible figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5203108287548445,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.519263304215032,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p198-chart-00-000",
+      "text": "Figure 7.5\nHorizontal grouped bar chart titled: \"In middle-income countries, both economywide and sectoral input and product market regulations are more restrictive than in high-income countries.\" X-axis: \"PMR score (0–6)\" with visible tick marks from 0 to 3 at 0.5 intervals. Two series in the legend: Middle-income (orange) and High-income (dark blue). The figure is split by left-side grouping labels \"Economywide\" and \"Sector\". Visible categories and approximate bar lengths: 1) \"Distortions induced by state involvement\" — middle-income about 2.6, high-income about 1.6; 2) \"Barriers to domestic and foreign entry\" — middle-income about 1.6, high-income about 1.1; 3) \"Network sectors\" — middle-income about 2.5, high-income about 1.5; 4) \"Professional services\" — middle-income about 1.9, high-income about 1.6; 5) \"Retail trade\" — middle-income about 1.5, high-income about 1.25. Source note visible beneath the chart cites WDR 2024 team using PMR Database / OECD-WBG Product Market Regulation Database and OECD PMR Indicators; note explains PMR ranges from 0 to 6 and lower values indicate more competition-friendly regulation, with data for 38 high-income and 22 middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "198",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-198.png",
+        "label": "Figure 7.5",
+        "pdf_page": 198,
+        "visual_id": "wdr-p198-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar values are estimated visually from the graphic and may be approximate.",
+          "Only the visible portion of the page is transcribed; no hidden/cut-off values are inferred."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5125150864071483,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p067-text-001",
+      "text": "Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: Each scatter point indicates an economy’s 1990 and 2022 gross national income (GNI) per capita in current US dollar\nterms (using the World Bank Atlas method). The blue vertical lines show thresholds to transition to lower-middle-income\nstatus, upper-middle-income status, and high-income status in 1990 (US$610, US$2,465, and US$7,620, respectively), while\nthe blue horizontal lines show these thresholds in 2022 (US$1,135, US$4,465, and US$13,845, respectively) based on the\nWorld Bank income classifications (https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country​\n-and-lending-groups). The figure includes only economies at middle-income levels in 1990. For legibility, only economies that\nhave transitioned to high-income status since 1990 are labeled (1990 data were unavailable for six economies). For country\nabbreviations, see International Organization for Standardization (ISO), https://www.iso.org/obp/ui/#search.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5082279156255465,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p067-text-000",
+      "text": "Figure 1.1 A handful of economies have transitioned from middle-income to high-income\nstatus over the last three decades\n\n                    Lower-\n           Low-    middle-                 Upper-middle-\n         income   income                  income                     High-income\n    45,000\n                                                     MAC\n\n    40,000\n                                              KOR\n    35,000                                         MLT\n2022  30,000                                         SVN\n                                                           BHR                                CZE                 SAU                           EST\n                                                       PRI   PRT(US$),  25,000                           LTU                                                                                                                                                                                                                                                                                                                                           High-income                    SVK   LVA                                     KNA OMN     GRC    20,000           HRVcapita                            HUN                      BRB                    POL     URY                     ATG\n         GUYper                         PAN  TTO      SYC    15,000             ROM  CHL\nGNI 13,845\n    10,000                                                                                                                                                                                     Upper-middle-income\n\n     5,000\n     4,465     1,135                                                                                                                                                                Lower-middle-income\n        0  6101,000   2,0002,4653,000   4,000   5,000   6,000   7,0007,6208,000   9,000  10,000\n\n                              GNI per capita (US$), 1990\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5026190895155795,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p110-chart-00-000",
+      "text": "Figure 3.7\nScatter plot titled “Low- and middle-income countries are exposed to similar levels of risk from climate change, and they have less adaptive capacity.” The x-axis is Exposure index (higher scores indicate greater risk), scaled from 0 to 0.8. The y-axis is Adaptive capacity index (higher scores indicate lower capacity), scaled from 0 to 1.0. Three country-income groups are shown with colored dots and separate solid linear trend lines: Low-income (dark navy), Middle-income (orange), and High-income (teal). The low-income group clusters mostly around exposure roughly 0.35–0.55 and adaptive capacity roughly 0.65–0.87, with an upward-sloping trend line. The middle-income group clusters mainly around exposure roughly 0.25–0.58 and adaptive capacity roughly 0.35–0.78, with a moderately upward-sloping trend line; one visible orange point lies near exposure about 0.71 and adaptive capacity about 0.50. The high-income group clusters mainly around exposure roughly 0.26–0.58 and adaptive capacity roughly 0.18–0.62, with a nearly flat but slightly upward-sloping trend line. Source note: WDR 2024 team using data from ND-GAIN Country Index (University of Notre Dame Global Adaptation Index) dashboard, University of Notre Dame, Notre Dame, IN, https://gain.nd.edu/our-work/country-index/. Note: The solid lines show the linear relationship for each country group.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "110",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-110.png",
+        "label": "Figure 3.7",
+        "pdf_page": 110,
+        "visual_id": "wdr-p110-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact data values for individual points are not labeled and cannot be recovered precisely from the figure image.",
+          "The number of plotted observations in each group is visible only approximately from the dots, not exactly.",
+          "No country names are shown for individual observations."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5020873657527509,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p040-chart-00-000",
+      "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "40",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-040.png",
+        "label": "Figure O.5",
+        "pdf_page": 40,
+        "visual_id": "wdr-p040-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+          "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.49851343915362456,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p096-chart-00-000",
+      "text": "Figure 2.6\nBar chart titled 'The innovation gap between high-income countries and others is substantial.' Vertical axis: Technology index, from 0 to 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Orange bars with value labels: Low-income 0.0; Lower-middle-income 0.0; Upper-middle-income 0.6; High-income 8.4. The high-income bar is much taller than the others, showing a large gap.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "96",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-096.png",
+        "label": "Figure 2.6",
+        "pdf_page": 96,
+        "visual_id": "wdr-p096-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4983855531191205,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p185-chart-00-000",
+      "text": "Figure 6.7\nFigure 6.7. Most of the countries currently “locked in” to declining brown industries are middle-income countries. Composite figure with two panels. Panel a: bar chart titled “Brown Lock-in Index for top 10 highest-risk middle-income countries.” Y-axis is Brown Lock-in Index, ranging from 0 to 3.5. Ten countries on the x-axis, with approximate bar heights (highest to lowest): Iraq (~3.45), Libya (~3.25), Angola (~3.25), Equatorial Guinea (~3.20), Azerbaijan (~3.18), Nigeria (~3.17), Algeria (~2.90), Turkmenistan (~2.48), Timor-Leste (~2.25), Gabon (~2.20). Panel b: scatter plot titled “Brown Lock-in Index versus Transition Outlook for middle-income countries.” X-axis is Brown Lock-in Index (about -1.0 to 4.0); Y-axis is Transition Outlook (about -3.0 to 2.5). Points are color-coded by income group, with legend: Lower-middle-income (teal) and Upper-middle-income (orange). Dashed reference lines cross at approximately x=0 and y=0. Country abbreviations are plotted as labeled points; visible labels include KHM, VUT, LCA, VCT, MDV, BLR, TKM, IRQ, SWZ, NAM, TUV, UZB, EGY, BRA, IDN, MMR, CIV, ARG, GHA, MNG, ECU, RUS, IRN, KAZ, COL, DZA, AZE, CMR, NGA, PNG, AGO, GNQ, TLS, LBY, GAB, BOL, COG, NIC, MRT, and others clustered near the origin. The general pattern shows many countries clustered at low Brown Lock-in Index values near the left side, with several high-lock-in countries on the far right, often with negative Transition Outlook. Source note in the figure cites WDR 2024 team analysis based on Andres et al. (2023) and defines Brown Lock-in Index and Transition Outlook.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "185",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-185.png",
+        "label": "Figure 6.7",
+        "pdf_page": 185,
+        "visual_id": "wdr-p185-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar heights are estimated visually because the figure does not show exact data labels.",
+          "Scatter-point positions are approximate; several labels overlap in the dense cluster near the origin.",
+          "Some country labels are small or partially obscured, so the visible label list may be incomplete."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.49688265846384927,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.49391947411119674,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:42:54.454710+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 510,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 74,
+        "output_tokens_details": {
+          "reasoning_tokens": 45
+        },
+        "total_tokens": 584
+      }
+    },
+    {
+      "at": "2026-11-16T15:42:56.825603+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6341,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 120,
+        "output_tokens_details": {
+          "reasoning_tokens": 67
+        },
+        "total_tokens": 6461
+      }
+    },
+    {
+      "at": "2026-11-16T15:42:59.610822+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5977,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 134,
+        "output_tokens_details": {
+          "reasoning_tokens": 93
+        },
+        "total_tokens": 6111
+      }
+    }
+  ],
+  "seconds": 8.074570199998561,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D04",
+  "initial_ranking": [
+    {
+      "id": "wdr-p067-text-000",
+      "text": "Figure 1.1 A handful of economies have transitioned from middle-income to high-income\nstatus over the last three decades\n\n                    Lower-\n           Low-    middle-                 Upper-middle-\n         income   income                  income                     High-income\n    45,000\n                                                     MAC\n\n    40,000\n                                              KOR\n    35,000                                         MLT\n2022  30,000                                         SVN\n                                                           BHR                                CZE                 SAU                           EST\n                                                       PRI   PRT(US$),  25,000                           LTU                                                                                                                                                                                                                                                                                                                                           High-income                    SVK   LVA                                     KNA OMN     GRC    20,000           HRVcapita                            HUN                      BRB                    POL     URY                     ATG\n         GUYper                         PAN  TTO      SYC    15,000             ROM  CHL\nGNI 13,845\n    10,000                                                                                                                                                                                     Upper-middle-income\n\n     5,000\n     4,465     1,135                                                                                                                                                                Lower-middle-income\n        0  6101,000   2,0002,4653,000   4,000   5,000   6,000   7,0007,6208,000   9,000  10,000\n\n                              GNI per capita (US$), 1990\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5119142974823999,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.5114020945417497,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p096-chart-00-000",
+      "text": "Figure 2.6\nBar chart titled 'The innovation gap between high-income countries and others is substantial.' Vertical axis: Technology index, from 0 to 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Orange bars with value labels: Low-income 0.0; Lower-middle-income 0.0; Upper-middle-income 0.6; High-income 8.4. The high-income bar is much taller than the others, showing a large gap.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "96",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-096.png",
+        "label": "Figure 2.6",
+        "pdf_page": 96,
+        "visual_id": "wdr-p096-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4990175327502129,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4896650069511379,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p067-text-001",
+      "text": "Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: Each scatter point indicates an economy’s 1990 and 2022 gross national income (GNI) per capita in current US dollar\nterms (using the World Bank Atlas method). The blue vertical lines show thresholds to transition to lower-middle-income\nstatus, upper-middle-income status, and high-income status in 1990 (US$610, US$2,465, and US$7,620, respectively), while\nthe blue horizontal lines show these thresholds in 2022 (US$1,135, US$4,465, and US$13,845, respectively) based on the\nWorld Bank income classifications (https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country​\n-and-lending-groups). The figure includes only economies at middle-income levels in 1990. For legibility, only economies that\nhave transitioned to high-income status since 1990 are labeled (1990 data were unavailable for six economies). For country\nabbreviations, see International Organization for Standardization (ISO), https://www.iso.org/obp/ui/#search.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.48758645263498857,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p173-image-00-000",
+      "text": "Map 6.1\nWorld map titled: \"In 2022, one-third of online job postings related to low-carbon technologies were in middle-income countries.\" The map shows country outlines with many circular markers/bubbles over selected countries; larger circles indicate larger volumes of postings, but the exact scale is not shown in the visible page. A legend labeled \"Income group\" identifies four color groups: High-income (gray), Upper-middle-income (orange), Lower-middle-income (teal), and Low-income (light green). Visually, the largest clusters are over North America and Europe in gray, and over East and South Asia in orange/red-toned overlap; smaller clusters appear in Latin America, Africa, the Middle East, and Oceania. Source note below the map reads: \"Source: WDR 2024 team analysis extending Bastos et al. (2023) to 86 countries.\" The figure also includes a small credit/date mark at lower right: \"IBRD 47877 | MARCH 2024.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "image",
+        "image": "data\\processed\\dc69d858e364\\page-173.png",
+        "label": "Map 6.1",
+        "pdf_page": 173,
+        "visual_id": "wdr-p173-image-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact bubble values and what each circle size encodes are not stated on the visible page.",
+          "Country-by-country labels are not readable at this resolution.",
+          "The map projection and any underlying scale are not specified in the visible figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4860992158451637,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p040-chart-00-000",
+      "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "40",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-040.png",
+        "label": "Figure O.5",
+        "pdf_page": 40,
+        "visual_id": "wdr-p040-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+          "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4837013656475124,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p198-chart-00-000",
+      "text": "Figure 7.5\nHorizontal grouped bar chart titled: \"In middle-income countries, both economywide and sectoral input and product market regulations are more restrictive than in high-income countries.\" X-axis: \"PMR score (0–6)\" with visible tick marks from 0 to 3 at 0.5 intervals. Two series in the legend: Middle-income (orange) and High-income (dark blue). The figure is split by left-side grouping labels \"Economywide\" and \"Sector\". Visible categories and approximate bar lengths: 1) \"Distortions induced by state involvement\" — middle-income about 2.6, high-income about 1.6; 2) \"Barriers to domestic and foreign entry\" — middle-income about 1.6, high-income about 1.1; 3) \"Network sectors\" — middle-income about 2.5, high-income about 1.5; 4) \"Professional services\" — middle-income about 1.9, high-income about 1.6; 5) \"Retail trade\" — middle-income about 1.5, high-income about 1.25. Source note visible beneath the chart cites WDR 2024 team using PMR Database / OECD-WBG Product Market Regulation Database and OECD PMR Indicators; note explains PMR ranges from 0 to 6 and lower values indicate more competition-friendly regulation, with data for 38 high-income and 22 middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "198",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-198.png",
+        "label": "Figure 7.5",
+        "pdf_page": 198,
+        "visual_id": "wdr-p198-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar values are estimated visually from the graphic and may be approximate.",
+          "Only the visible portion of the page is transcribed; no hidden/cut-off values are inferred."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.475328483121795,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p036-table-00-000",
+      "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-036.png",
+        "label": "Table O.1",
+        "pdf_page": 36,
+        "visual_id": "wdr-p036-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4705094402232317,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p185-chart-00-000",
+      "text": "Figure 6.7\nFigure 6.7. Most of the countries currently “locked in” to declining brown industries are middle-income countries. Composite figure with two panels. Panel a: bar chart titled “Brown Lock-in Index for top 10 highest-risk middle-income countries.” Y-axis is Brown Lock-in Index, ranging from 0 to 3.5. Ten countries on the x-axis, with approximate bar heights (highest to lowest): Iraq (~3.45), Libya (~3.25), Angola (~3.25), Equatorial Guinea (~3.20), Azerbaijan (~3.18), Nigeria (~3.17), Algeria (~2.90), Turkmenistan (~2.48), Timor-Leste (~2.25), Gabon (~2.20). Panel b: scatter plot titled “Brown Lock-in Index versus Transition Outlook for middle-income countries.” X-axis is Brown Lock-in Index (about -1.0 to 4.0); Y-axis is Transition Outlook (about -3.0 to 2.5). Points are color-coded by income group, with legend: Lower-middle-income (teal) and Upper-middle-income (orange). Dashed reference lines cross at approximately x=0 and y=0. Country abbreviations are plotted as labeled points; visible labels include KHM, VUT, LCA, VCT, MDV, BLR, TKM, IRQ, SWZ, NAM, TUV, UZB, EGY, BRA, IDN, MMR, CIV, ARG, GHA, MNG, ECU, RUS, IRN, KAZ, COL, DZA, AZE, CMR, NGA, PNG, AGO, GNQ, TLS, LBY, GAB, BOL, COG, NIC, MRT, and others clustered near the origin. The general pattern shows many countries clustered at low Brown Lock-in Index values near the left side, with several high-lock-in countries on the far right, often with negative Transition Outlook. Source note in the figure cites WDR 2024 team analysis based on Andres et al. (2023) and defines Brown Lock-in Index and Transition Outlook.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "185",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-185.png",
+        "label": "Figure 6.7",
+        "pdf_page": 185,
+        "visual_id": "wdr-p185-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar heights are estimated visually because the figure does not show exact data labels.",
+          "Scatter-point positions are approximate; several labels overlap in the dense cluster near the origin.",
+          "Some country labels are small or partially obscured, so the visible label list may be incomplete."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.4704580189642825,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": true
+}

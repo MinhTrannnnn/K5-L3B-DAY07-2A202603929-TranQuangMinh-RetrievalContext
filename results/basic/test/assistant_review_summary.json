@@ -1,0 +1,72 @@
+[
+  {
+    "passed": 7,
+    "total": 7,
+    "rate": 1.0,
+    "groups": {
+      "basic": {
+        "passed": 7,
+        "total": 7
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "bm25",
+    "context_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 5
+    },
+    "answer_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 5
+    },
+    "grounded_answer_mean": 2.0,
+    "citation_support": {
+      "n": 9,
+      "N": 9
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    }
+  },
+  {
+    "passed": 7,
+    "total": 7,
+    "rate": 1.0,
+    "groups": {
+      "basic": {
+        "passed": 7,
+        "total": 7
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "dense",
+    "context_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 5
+    },
+    "answer_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 5
+    },
+    "grounded_answer_mean": 2.0,
+    "citation_support": {
+      "n": 8,
+      "N": 8
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    }
+  }
+]

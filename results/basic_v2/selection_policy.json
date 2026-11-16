@@ -1,0 +1,20 @@
+{
+  "priority": [
+    "dev assistant-reviewed pass count",
+    "dev retrieval Evidence Hit@3",
+    "lower total agent time"
+  ],
+  "human_confirmation": "pending",
+  "pipeline": {
+    "model": "gpt-5.4-mini",
+    "embedding_model": "BAAI/bge-base-en-v1.5",
+    "dimensions": 768,
+    "instruction_hash": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "chunks_hash": "39796f788c53d364e0d86fcd54b1fbcdbb2bf42e22a779a44d0f1c9e20a652a8",
+    "storage_code_hash": "9e4c6c9e287f78ca6c174ae54e77b2714feaace5ff6772a0d698ad80bc0b5614",
+    "benchmark_hash": "d628d910cf660301c2124db88fd065694d536813d2356bb415aa23acb0df8960",
+    "top_k": 6,
+    "budget": 6500,
+    "max_rounds": 6
+  }
+}

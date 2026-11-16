@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "The last step is never cached, even if it is a transformer. [e53ca849a0e02cb268c56b26]",
+  "citations": [
+    "e53ca849a0e02cb268c56b26"
+  ],
+  "question": "When Pipeline caching is enabled, which step is never cached, even if it is a transformer?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Pipeline caching\" step never cached even if it is a transformer",
+      "results": [
+        {
+          "id": "e53ca849a0e02cb268c56b26",
+          "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:002",
+          "metadata": {
+            "end": 3533,
+            "start": 2826,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7038,
+            "unit_start": 3505,
+            "token_count": 137
+          },
+          "score": 35.65032572596689,
+          "rank": 1
+        },
+        {
+          "id": "ef5929b4a93d39f3fb425d96",
+          "text": "8.1. Pipelines and composite estimators\n\nTo build a composite estimator, transformers are usually combined with other transformers or with predictors (such as classifiers or regressors). The most common tool used for composing estimators is a Pipeline . Pipelines require all steps except the last to be a transformer . The last step can be anything, a transformer, a predictor , or a clustering estimator which might have or not have a .predict(...) method. A pipeline exposes all methods provided by the last estimator: if the last step provides a transform method, then the pipeline would have a transform method and behave like a transformer. If the last step provides a predict method, then the pipeline would expose that method, and given a data X , use all steps except the last to transform the data, and then give that transformed data to the predict method of the last step of the pipeline. The class Pipeline is often used in combination with ColumnTransformer or FeatureUnion which concatenate the output of transformers into a composite feature space. TransformedTargetRegressor deals with transforming the target (i.e. log-transform y ).",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 1151,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "pipelines-and-composite-estimators",
+            "heading": "8.1. Pipelines and composite estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 252
+          },
+          "score": 18.518463872273205,
+          "rank": 2
+        },
+        {
+          "id": "5d431cfaf9e1f351f2882a02",
+          "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 2355,
+            "start": 1153,
+            "topic": "preprocessing",
+            "anchor": "pipeline-chaining-estimators",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 273
+          },
+          "score": 15.937516297295113,
+          "rank": 3
+        },
+        {
+          "id": "50def7c3a28d5880d642e644",
+          "text": "Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. In the following example, accessing the PCA instance pca2 will raise an AttributeError since pca2 will be an unfitted transformer. Instead, use the attribute named_steps to inspect estimators within the pipeline:\n\n>>> cachedir = mkdtemp()\n>>> pca2 = PCA(n_components=10)\n>>> svm2 = SVC()\n>>> cached_pipe = Pipeline([('reduce_dim', pca2), ('clf', svm2)],\n...                        memory=cachedir)\n>>> cached_pipe.fit(X_digits, y_digits)\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> cached_pipe.named_steps['reduce_dim'].components_.shape\n(10, 64)\n>>> # Remove the cache directory\n>>> rmtree(cachedir)\n\nExamples\n\nSelecting dimensionality reduction with Pipeline and GridSearchCV",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 1863,
+            "start": 976,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 279
+          },
+          "score": 14.539547751733283,
+          "rank": 4
+        },
+        {
+          "id": "b6c510f27e39e41411d68f99",
+          "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 3146,
+            "start": 2373,
+            "topic": "preprocessing",
+            "anchor": "build-a-pipeline",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 262
+          },
+          "score": 13.412546739637435,
+          "rank": 5
+        },
+        {
+          "id": "995de81f295db5ec0e799cd3",
+          "text": "8.1.1.1.2. Access pipeline steps\n\nThe estimators of a pipeline are stored as a list in the steps attribute. A sub-pipeline can be extracted using the slicing notation commonly used for Python Sequences such as lists or strings (although only a step of 1 is permitted). This is convenient for performing only some of the transformations (or their inverse):",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 3503,
+            "start": 3148,
+            "topic": "preprocessing",
+            "anchor": "access-pipeline-steps",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.2. Access pipeline steps",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 78
+          },
+          "score": 12.6667661276393,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "e53ca849a0e02cb268c56b26",
+          "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:002",
+          "metadata": {
+            "end": 3533,
+            "start": 2826,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7038,
+            "unit_start": 3505,
+            "token_count": 137
+          },
+          "score": 35.65032572596689,
+          "rank": 1
+        },
+        {
+          "id": "ef5929b4a93d39f3fb425d96",
+          "text": "8.1. Pipelines and composite estimators\n\nTo build a composite estimator, transformers are usually combined with other transformers or with predictors (such as classifiers or regressors). The most common tool used for composing estimators is a Pipeline . Pipelines require all steps except the last to be a transformer . The last step can be anything, a transformer, a predictor , or a clustering estimator which might have or not have a .predict(...) method. A pipeline exposes all methods provided by the last estimator: if the last step provides a transform method, then the pipeline would have a transform method and behave like a transformer. If the last step provides a predict method, then the pipeline would expose that method, and given a data X , use all steps except the last to transform the data, and then give that transformed data to the predict method of the last step of the pipeline. The class Pipeline is often used in combination with ColumnTransformer or FeatureUnion which concatenate the output of transformers into a composite feature space. TransformedTargetRegressor deals with transforming the target (i.e. log-transform y ).",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 1151,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "pipelines-and-composite-estimators",
+            "heading": "8.1. Pipelines and composite estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 252
+          },
+          "score": 18.518463872273205,
+          "rank": 2
+        },
+        {
+          "id": "5d431cfaf9e1f351f2882a02",
+          "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 2355,
+            "start": 1153,
+            "topic": "preprocessing",
+            "anchor": "pipeline-chaining-estimators",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 273
+          },
+          "score": 15.937516297295113,
+          "rank": 3
+        },
+        {
+          "id": "50def7c3a28d5880d642e644",
+          "text": "Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. In the following example, accessing the PCA instance pca2 will raise an AttributeError since pca2 will be an unfitted transformer. Instead, use the attribute named_steps to inspect estimators within the pipeline:\n\n>>> cachedir = mkdtemp()\n>>> pca2 = PCA(n_components=10)\n>>> svm2 = SVC()\n>>> cached_pipe = Pipeline([('reduce_dim', pca2), ('clf', svm2)],\n...                        memory=cachedir)\n>>> cached_pipe.fit(X_digits, y_digits)\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> cached_pipe.named_steps['reduce_dim'].components_.shape\n(10, 64)\n>>> # Remove the cache directory\n>>> rmtree(cachedir)\n\nExamples\n\nSelecting dimensionality reduction with Pipeline and GridSearchCV",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:003",
+          "metadata": {
+            "end": 1863,
+            "start": 976,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10609,
+            "unit_start": 7040,
+            "token_count": 279
+          },
+          "score": 14.539547751733283,
+          "rank": 4
+        },
+        {
+          "id": "b6c510f27e39e41411d68f99",
+          "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 3146,
+            "start": 2373,
+            "topic": "preprocessing",
+            "anchor": "build-a-pipeline",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 262
+          },
+          "score": 13.412546739637435,
+          "rank": 5
+        },
+        {
+          "id": "995de81f295db5ec0e799cd3",
+          "text": "8.1.1.1.2. Access pipeline steps\n\nThe estimators of a pipeline are stored as a list in the steps attribute. A sub-pipeline can be extracted using the slicing notation commonly used for Python Sequences such as lists or strings (although only a step of 1 is permitted). This is convenient for performing only some of the transformations (or their inverse):",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 3503,
+            "start": 3148,
+            "topic": "preprocessing",
+            "anchor": "access-pipeline-steps",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.2. Access pipeline steps",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 78
+          },
+          "score": 12.6667661276393,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0067579999995359685
+    }
+  ],
+  "context": [
+    {
+      "id": "e53ca849a0e02cb268c56b26",
+      "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:002",
+      "metadata": {
+        "end": 3533,
+        "start": 2826,
+        "topic": "preprocessing",
+        "anchor": "caching-transformers-avoid-repeated-computation",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7038,
+        "unit_start": 3505,
+        "token_count": 137
+      },
+      "score": 35.65032572596689,
+      "rank": 1
+    },
+    {
+      "id": "ef5929b4a93d39f3fb425d96",
+      "text": "8.1. Pipelines and composite estimators\n\nTo build a composite estimator, transformers are usually combined with other transformers or with predictors (such as classifiers or regressors). The most common tool used for composing estimators is a Pipeline . Pipelines require all steps except the last to be a transformer . The last step can be anything, a transformer, a predictor , or a clustering estimator which might have or not have a .predict(...) method. A pipeline exposes all methods provided by the last estimator: if the last step provides a transform method, then the pipeline would have a transform method and behave like a transformer. If the last step provides a predict method, then the pipeline would expose that method, and given a data X , use all steps except the last to transform the data, and then give that transformed data to the predict method of the last step of the pipeline. The class Pipeline is often used in combination with ColumnTransformer or FeatureUnion which concatenate the output of transformers into a composite feature space. TransformedTargetRegressor deals with transforming the target (i.e. log-transform y ).",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 1151,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "pipelines-and-composite-estimators",
+        "heading": "8.1. Pipelines and composite estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 252
+      },
+      "score": 18.518463872273205,
+      "rank": 2
+    },
+    {
+      "id": "5d431cfaf9e1f351f2882a02",
+      "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 2355,
+        "start": 1153,
+        "topic": "preprocessing",
+        "anchor": "pipeline-chaining-estimators",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 273
+      },
+      "score": 15.937516297295113,
+      "rank": 3
+    },
+    {
+      "id": "50def7c3a28d5880d642e644",
+      "text": "Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. In the following example, accessing the PCA instance pca2 will raise an AttributeError since pca2 will be an unfitted transformer. Instead, use the attribute named_steps to inspect estimators within the pipeline:\n\n>>> cachedir = mkdtemp()\n>>> pca2 = PCA(n_components=10)\n>>> svm2 = SVC()\n>>> cached_pipe = Pipeline([('reduce_dim', pca2), ('clf', svm2)],\n...                        memory=cachedir)\n>>> cached_pipe.fit(X_digits, y_digits)\nPipeline(memory=...,\n         steps=[('reduce_dim', PCA(n_components=10)), ('clf', SVC())])\n>>> cached_pipe.named_steps['reduce_dim'].components_.shape\n(10, 64)\n>>> # Remove the cache directory\n>>> rmtree(cachedir)\n\nExamples\n\nSelecting dimensionality reduction with Pipeline and GridSearchCV",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:003",
+      "metadata": {
+        "end": 1863,
+        "start": 976,
+        "topic": "preprocessing",
+        "anchor": "caching-transformers-avoid-repeated-computation",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10609,
+        "unit_start": 7040,
+        "token_count": 279
+      },
+      "score": 14.539547751733283,
+      "rank": 4
+    },
+    {
+      "id": "b6c510f27e39e41411d68f99",
+      "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 3146,
+        "start": 2373,
+        "topic": "preprocessing",
+        "anchor": "build-a-pipeline",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 262
+      },
+      "score": 13.412546739637435,
+      "rank": 5
+    },
+    {
+      "id": "995de81f295db5ec0e799cd3",
+      "text": "8.1.1.1.2. Access pipeline steps\n\nThe estimators of a pipeline are stored as a list in the steps attribute. A sub-pipeline can be extracted using the slicing notation commonly used for Python Sequences such as lists or strings (although only a step of 1 is permitted). This is convenient for performing only some of the transformations (or their inverse):",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 3503,
+        "start": 3148,
+        "topic": "preprocessing",
+        "anchor": "access-pipeline-steps",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.2. Access pipeline steps",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 78
+      },
+      "score": 12.6667661276393,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:45.789106+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 512,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 86,
+        "output_tokens_details": {
+          "reasoning_tokens": 55
+        },
+        "total_tokens": 598
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:49.228454+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2869,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 120,
+        "output_tokens_details": {
+          "reasoning_tokens": 52
+        },
+        "total_tokens": 2989
+      }
+    }
+  ],
+  "seconds": 7.129218999998557,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q09",
+  "initial_ranking": [
+    {
+      "id": "e53ca849a0e02cb268c56b26",
+      "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:002",
+      "metadata": {
+        "end": 3533,
+        "start": 2826,
+        "topic": "preprocessing",
+        "anchor": "caching-transformers-avoid-repeated-computation",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7038,
+        "unit_start": 3505,
+        "token_count": 137
+      },
+      "score": 41.30995504289731,
+      "rank": 1
+    },
+    {
+      "id": "ef5929b4a93d39f3fb425d96",
+      "text": "8.1. Pipelines and composite estimators\n\nTo build a composite estimator, transformers are usually combined with other transformers or with predictors (such as classifiers or regressors). The most common tool used for composing estimators is a Pipeline . Pipelines require all steps except the last to be a transformer . The last step can be anything, a transformer, a predictor , or a clustering estimator which might have or not have a .predict(...) method. A pipeline exposes all methods provided by the last estimator: if the last step provides a transform method, then the pipeline would have a transform method and behave like a transformer. If the last step provides a predict method, then the pipeline would expose that method, and given a data X , use all steps except the last to transform the data, and then give that transformed data to the predict method of the last step of the pipeline. The class Pipeline is often used in combination with ColumnTransformer or FeatureUnion which concatenate the output of transformers into a composite feature space. TransformedTargetRegressor deals with transforming the target (i.e. log-transform y ).",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 1151,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "pipelines-and-composite-estimators",
+        "heading": "8.1. Pipelines and composite estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 252
+      },
+      "score": 23.046861120496498,
+      "rank": 2
+    },
+    {
+      "id": "5d431cfaf9e1f351f2882a02",
+      "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 2355,
+        "start": 1153,
+        "topic": "preprocessing",
+        "anchor": "pipeline-chaining-estimators",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 273
+      },
+      "score": 20.128721269407063,
+      "rank": 3
+    },
+    {
+      "id": "b6c510f27e39e41411d68f99",
+      "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 3146,
+        "start": 2373,
+        "topic": "preprocessing",
+        "anchor": "build-a-pipeline",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 262
+      },
+      "score": 17.71159239288329,
+      "rank": 4
+    },
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 17.37065767062531,
+      "rank": 5
+    },
+    {
+      "id": "995de81f295db5ec0e799cd3",
+      "text": "8.1.1.1.2. Access pipeline steps\n\nThe estimators of a pipeline are stored as a list in the steps attribute. A sub-pipeline can be extracted using the slicing notation commonly used for Python Sequences such as lists or strings (although only a step of 1 is permitted). This is convenient for performing only some of the transformations (or their inverse):",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 3503,
+        "start": 3148,
+        "topic": "preprocessing",
+        "anchor": "access-pipeline-steps",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.2. Access pipeline steps",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 78
+      },
+      "score": 16.585061482125273,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

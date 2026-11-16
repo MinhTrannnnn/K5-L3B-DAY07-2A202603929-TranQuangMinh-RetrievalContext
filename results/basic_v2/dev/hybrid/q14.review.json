@@ -1,0 +1,26 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Supported by model_evaluation:003–005: scorer objects use the convention that higher return values are better, so loss metrics like mean_squared_error are exposed as neg_mean_squared_error, and make_scorer negates losses when greater_is_better=False.",
+  "query_id": "q14",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "ca24bdc55255eb090d1f317df9b853e9221037f09b13ef8fa23424fd9b7a1254",
+  "alternative_cited_pages": [
+    "model_evaluation:003",
+    "model_evaluation:004"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

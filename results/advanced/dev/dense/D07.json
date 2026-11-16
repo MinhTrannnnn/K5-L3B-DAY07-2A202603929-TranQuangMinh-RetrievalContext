@@ -1,0 +1,763 @@
+{
+  "status": "answered",
+  "answer": "Figure O.2 shows two bars for middle-income countries: GDP per worker relative to the United States is 21%, and physical/human capital relative to that in the United States is 71% [wdr-p037-chart-00-000].",
+  "citations": [
+    "wdr-p037-chart-00-000"
+  ],
+  "question": "Read Figure O.2. What values are shown on the two bars for GDP per worker and physical/human capital relative to the United States?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Figure O.2\" GDP per worker physical human capital relative to the United States",
+      "results": [
+        {
+          "id": "wdr-p037-chart-00-000",
+          "text": "Figure O.2\nBar chart titled: \"If capital accumulation were enough, work in middle-income countries would be nearly three-quarters as rewarding as in the United States, not just one-fifth.\" The y-axis is labeled \"Percent\" and runs from 0 to 80. The x-axis category is \"Middle-income countries.\" Two bars are shown: a dark blue bar labeled 21 for \"GDP per worker relative to US GDP per worker,\" and an orange bar labeled 71 for \"Physical capital and human capital relative to that in the United States.\" Source note: WDR 2024 team using data from PWT (Penn World Table) database version 10.1, Groningen Growth and Development Centre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc/productivity/pwt/. Note: The bars show the simple average for middle-income countries in 2019. The data are calculated using the methodology outlined in Jones (2016). Following Jones (2016), the figure is based on Hicks-neutral and a constant labor share of two-thirds. GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "37",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-037.png",
+            "label": "Figure O.2",
+            "pdf_page": 37,
+            "visual_id": "wdr-p037-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar values are transcribed from visible labels on the chart and may be approximate if the original image resolution obscures fine detail.",
+              "Only the visible portion of the figure is described; adjacent text and references to other figures/tables are not extracted as separate items."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.7206349917833622,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p087-chart-00-000",
+          "text": "Figure 2.1\nBar chart titled 'As economies develop, capital accumulation brings diminishing returns'. Vertical axis: 'Contribution to growth (% of GDP per capita growth)' with scale from 0 to 60 in increments of 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Two series shown in the legend: dark blue = Physical capital per worker; orange = Total factor productivity. Visually, the bars are approximately: Low-income—physical capital per worker about 46-47, total factor productivity about 27-28; Lower-middle-income—physical capital per worker about 43, total factor productivity about 41; Upper-middle-income—physical capital per worker about 35, total factor productivity about 47-48; High-income—physical capital per worker about 32, total factor productivity about 52. The figure conveys that the contribution of physical capital per worker declines with income level, while the contribution of total factor productivity rises.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "87",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-087.png",
+            "label": "Figure 2.1",
+            "pdf_page": 87,
+            "visual_id": "wdr-p087-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar heights are visually estimated from the image; exact numerical values are not printed on the chart.",
+              "No separate data table is provided in the figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6559238993774171,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6492901985794066,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p043-chart-00-000",
+          "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-043.png",
+            "label": "Figure O.7",
+            "pdf_page": 43,
+            "visual_id": "wdr-p043-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+              "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.644695052622816,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p043-text-000",
+          "text": "Figure O.7  Over the last four decades, as the Republic of Korea’s labor productivity relative to\nthat of the United States continued to climb, Brazil’s peaked—and then sagged\n\n       70\n  %)                                                                                        Korea, Rep.\n       60person         worker,  50per\n  US\n a  40(GDP  to\n\n       30\n          relative                                                                                                               Brazil       20 productivity\n\n       10Labor employed\n        0\n      198019821984198619881990199219941996199820002002200420062008201020122014201620182020\n\nSource: WDR 2024 team using data from PWT (Penn World Table) (database version 10.1), Groningen Growth and Development\nCentre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc​\n/productivity/pwt/.\nNote: GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 43,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6327502051501172,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p038-text-000",
+          "text": "Figure O.3  Economies become more sophisticated as they transition from middle-income to\nhigh-income status\n\n     1.00\n                                                     JPN\n                                         HUN      KOR\n                                                                   DEU\n                                                                      AUT\n     0.50                                       POL                                                                   ITA FRA FIN  BEL                                                                     HKGIndex                                                       ESP                                                   EST CYP                                      PRT   LVA             ISR\n\n       0\n                                     LTU                                               GRC Complexity\n\n    −0.50 Economic\n\n    −1.00\n\n         0    5,000  10,000 15,000 20,000 25,000 30,000 35,000 40,000 45,000 50,000 55,000 60,000\n\n                     GDP per capita (PWT chained PPP 2017 US$)\n\n                      Diversified economies     Concentrated economies     Nonparametric trend\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "38",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 38,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6323812228344498,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p037-chart-00-000",
+          "text": "Figure O.2\nBar chart titled: \"If capital accumulation were enough, work in middle-income countries would be nearly three-quarters as rewarding as in the United States, not just one-fifth.\" The y-axis is labeled \"Percent\" and runs from 0 to 80. The x-axis category is \"Middle-income countries.\" Two bars are shown: a dark blue bar labeled 21 for \"GDP per worker relative to US GDP per worker,\" and an orange bar labeled 71 for \"Physical capital and human capital relative to that in the United States.\" Source note: WDR 2024 team using data from PWT (Penn World Table) database version 10.1, Groningen Growth and Development Centre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc/productivity/pwt/. Note: The bars show the simple average for middle-income countries in 2019. The data are calculated using the methodology outlined in Jones (2016). Following Jones (2016), the figure is based on Hicks-neutral and a constant labor share of two-thirds. GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "37",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-037.png",
+            "label": "Figure O.2",
+            "pdf_page": 37,
+            "visual_id": "wdr-p037-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar values are transcribed from visible labels on the chart and may be approximate if the original image resolution obscures fine detail.",
+              "Only the visible portion of the figure is described; adjacent text and references to other figures/tables are not extracted as separate items."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.7206349917833622,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p087-chart-00-000",
+          "text": "Figure 2.1\nBar chart titled 'As economies develop, capital accumulation brings diminishing returns'. Vertical axis: 'Contribution to growth (% of GDP per capita growth)' with scale from 0 to 60 in increments of 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Two series shown in the legend: dark blue = Physical capital per worker; orange = Total factor productivity. Visually, the bars are approximately: Low-income—physical capital per worker about 46-47, total factor productivity about 27-28; Lower-middle-income—physical capital per worker about 43, total factor productivity about 41; Upper-middle-income—physical capital per worker about 35, total factor productivity about 47-48; High-income—physical capital per worker about 32, total factor productivity about 52. The figure conveys that the contribution of physical capital per worker declines with income level, while the contribution of total factor productivity rises.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "87",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-087.png",
+            "label": "Figure 2.1",
+            "pdf_page": 87,
+            "visual_id": "wdr-p087-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Bar heights are visually estimated from the image; exact numerical values are not printed on the chart.",
+              "No separate data table is provided in the figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6559238993774171,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.6492901985794066,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p043-chart-00-000",
+          "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-043.png",
+            "label": "Figure O.7",
+            "pdf_page": 43,
+            "visual_id": "wdr-p043-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+              "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.644695052622816,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p043-text-000",
+          "text": "Figure O.7  Over the last four decades, as the Republic of Korea’s labor productivity relative to\nthat of the United States continued to climb, Brazil’s peaked—and then sagged\n\n       70\n  %)                                                                                        Korea, Rep.\n       60person         worker,  50per\n  US\n a  40(GDP  to\n\n       30\n          relative                                                                                                               Brazil       20 productivity\n\n       10Labor employed\n        0\n      198019821984198619881990199219941996199820002002200420062008201020122014201620182020\n\nSource: WDR 2024 team using data from PWT (Penn World Table) (database version 10.1), Groningen Growth and Development\nCentre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc​\n/productivity/pwt/.\nNote: GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 43,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6327502051501172,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p038-text-000",
+          "text": "Figure O.3  Economies become more sophisticated as they transition from middle-income to\nhigh-income status\n\n     1.00\n                                                     JPN\n                                         HUN      KOR\n                                                                   DEU\n                                                                      AUT\n     0.50                                       POL                                                                   ITA FRA FIN  BEL                                                                     HKGIndex                                                       ESP                                                   EST CYP                                      PRT   LVA             ISR\n\n       0\n                                     LTU                                               GRC Complexity\n\n    −0.50 Economic\n\n    −1.00\n\n         0    5,000  10,000 15,000 20,000 25,000 30,000 35,000 40,000 45,000 50,000 55,000 60,000\n\n                     GDP per capita (PWT chained PPP 2017 US$)\n\n                      Diversified economies     Concentrated economies     Nonparametric trend\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "38",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 38,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.6323812228344498,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.3257549000009021
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "wdr-p037-chart-00-000",
+      "pdf_page": 37,
+      "image": "data\\processed\\agent_pages\\wdr\\page-037.png",
+      "seconds": 0.09179240000230493
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p037-chart-00-000",
+      "text": "Figure O.2\nBar chart titled: \"If capital accumulation were enough, work in middle-income countries would be nearly three-quarters as rewarding as in the United States, not just one-fifth.\" The y-axis is labeled \"Percent\" and runs from 0 to 80. The x-axis category is \"Middle-income countries.\" Two bars are shown: a dark blue bar labeled 21 for \"GDP per worker relative to US GDP per worker,\" and an orange bar labeled 71 for \"Physical capital and human capital relative to that in the United States.\" Source note: WDR 2024 team using data from PWT (Penn World Table) database version 10.1, Groningen Growth and Development Centre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc/productivity/pwt/. Note: The bars show the simple average for middle-income countries in 2019. The data are calculated using the methodology outlined in Jones (2016). Following Jones (2016), the figure is based on Hicks-neutral and a constant labor share of two-thirds. GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "37",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-037.png",
+        "label": "Figure O.2",
+        "pdf_page": 37,
+        "visual_id": "wdr-p037-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar values are transcribed from visible labels on the chart and may be approximate if the original image resolution obscures fine detail.",
+          "Only the visible portion of the figure is described; adjacent text and references to other figures/tables are not extracted as separate items."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.7206349917833622,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p087-chart-00-000",
+      "text": "Figure 2.1\nBar chart titled 'As economies develop, capital accumulation brings diminishing returns'. Vertical axis: 'Contribution to growth (% of GDP per capita growth)' with scale from 0 to 60 in increments of 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Two series shown in the legend: dark blue = Physical capital per worker; orange = Total factor productivity. Visually, the bars are approximately: Low-income—physical capital per worker about 46-47, total factor productivity about 27-28; Lower-middle-income—physical capital per worker about 43, total factor productivity about 41; Upper-middle-income—physical capital per worker about 35, total factor productivity about 47-48; High-income—physical capital per worker about 32, total factor productivity about 52. The figure conveys that the contribution of physical capital per worker declines with income level, while the contribution of total factor productivity rises.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "87",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-087.png",
+        "label": "Figure 2.1",
+        "pdf_page": 87,
+        "visual_id": "wdr-p087-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar heights are visually estimated from the image; exact numerical values are not printed on the chart.",
+          "No separate data table is provided in the figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6559238993774171,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6492901985794066,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p043-chart-00-000",
+      "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-043.png",
+        "label": "Figure O.7",
+        "pdf_page": 43,
+        "visual_id": "wdr-p043-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+          "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.644695052622816,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p043-text-000",
+      "text": "Figure O.7  Over the last four decades, as the Republic of Korea’s labor productivity relative to\nthat of the United States continued to climb, Brazil’s peaked—and then sagged\n\n       70\n  %)                                                                                        Korea, Rep.\n       60person         worker,  50per\n  US\n a  40(GDP  to\n\n       30\n          relative                                                                                                               Brazil       20 productivity\n\n       10Labor employed\n        0\n      198019821984198619881990199219941996199820002002200420062008201020122014201620182020\n\nSource: WDR 2024 team using data from PWT (Penn World Table) (database version 10.1), Groningen Growth and Development\nCentre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc​\n/productivity/pwt/.\nNote: GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 43,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6327502051501172,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p038-text-000",
+      "text": "Figure O.3  Economies become more sophisticated as they transition from middle-income to\nhigh-income status\n\n     1.00\n                                                     JPN\n                                         HUN      KOR\n                                                                   DEU\n                                                                      AUT\n     0.50                                       POL                                                                   ITA FRA FIN  BEL                                                                     HKGIndex                                                       ESP                                                   EST CYP                                      PRT   LVA             ISR\n\n       0\n                                     LTU                                               GRC Complexity\n\n    −0.50 Economic\n\n    −1.00\n\n         0    5,000  10,000 15,000 20,000 25,000 30,000 35,000 40,000 45,000 50,000 55,000 60,000\n\n                     GDP per capita (PWT chained PPP 2017 US$)\n\n                      Diversified economies     Concentrated economies     Nonparametric trend\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "38",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 38,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.6323812228344498,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:34:20.293701+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 522,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 42
+        },
+        "total_tokens": 599
+      }
+    },
+    {
+      "at": "2026-11-16T15:34:23.616274+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3543,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 147,
+        "output_tokens_details": {
+          "reasoning_tokens": 117
+        },
+        "total_tokens": 3690
+      }
+    },
+    {
+      "at": "2026-11-16T15:34:26.465073+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5677,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 104,
+        "output_tokens_details": {
+          "reasoning_tokens": 20
+        },
+        "total_tokens": 5781
+      }
+    }
+  ],
+  "seconds": 8.435021199999028,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D07",
+  "initial_ranking": [
+    {
+      "id": "wdr-p037-chart-00-000",
+      "text": "Figure O.2\nBar chart titled: \"If capital accumulation were enough, work in middle-income countries would be nearly three-quarters as rewarding as in the United States, not just one-fifth.\" The y-axis is labeled \"Percent\" and runs from 0 to 80. The x-axis category is \"Middle-income countries.\" Two bars are shown: a dark blue bar labeled 21 for \"GDP per worker relative to US GDP per worker,\" and an orange bar labeled 71 for \"Physical capital and human capital relative to that in the United States.\" Source note: WDR 2024 team using data from PWT (Penn World Table) database version 10.1, Groningen Growth and Development Centre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc/productivity/pwt/. Note: The bars show the simple average for middle-income countries in 2019. The data are calculated using the methodology outlined in Jones (2016). Following Jones (2016), the figure is based on Hicks-neutral and a constant labor share of two-thirds. GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "37",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-037.png",
+        "label": "Figure O.2",
+        "pdf_page": 37,
+        "visual_id": "wdr-p037-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar values are transcribed from visible labels on the chart and may be approximate if the original image resolution obscures fine detail.",
+          "Only the visible portion of the figure is described; adjacent text and references to other figures/tables are not extracted as separate items."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.7116085743488098,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p087-chart-00-000",
+      "text": "Figure 2.1\nBar chart titled 'As economies develop, capital accumulation brings diminishing returns'. Vertical axis: 'Contribution to growth (% of GDP per capita growth)' with scale from 0 to 60 in increments of 10. Horizontal categories: Low-income, Lower-middle-income, Upper-middle-income, High-income. Two series shown in the legend: dark blue = Physical capital per worker; orange = Total factor productivity. Visually, the bars are approximately: Low-income—physical capital per worker about 46-47, total factor productivity about 27-28; Lower-middle-income—physical capital per worker about 43, total factor productivity about 41; Upper-middle-income—physical capital per worker about 35, total factor productivity about 47-48; High-income—physical capital per worker about 32, total factor productivity about 52. The figure conveys that the contribution of physical capital per worker declines with income level, while the contribution of total factor productivity rises.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "87",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-087.png",
+        "label": "Figure 2.1",
+        "pdf_page": 87,
+        "visual_id": "wdr-p087-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Bar heights are visually estimated from the image; exact numerical values are not printed on the chart.",
+          "No separate data table is provided in the figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6446523249520336,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p043-chart-00-000",
+      "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-043.png",
+        "label": "Figure O.7",
+        "pdf_page": 43,
+        "visual_id": "wdr-p043-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+          "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6242910789943721,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.6225553723538528,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p043-text-000",
+      "text": "Figure O.7  Over the last four decades, as the Republic of Korea’s labor productivity relative to\nthat of the United States continued to climb, Brazil’s peaked—and then sagged\n\n       70\n  %)                                                                                        Korea, Rep.\n       60person         worker,  50per\n  US\n a  40(GDP  to\n\n       30\n          relative                                                                                                               Brazil       20 productivity\n\n       10Labor employed\n        0\n      198019821984198619881990199219941996199820002002200420062008201020122014201620182020\n\nSource: WDR 2024 team using data from PWT (Penn World Table) (database version 10.1), Groningen Growth and Development\nCentre, Faculty of Economics and Business, University of Groningen, Groningen, the Netherlands, https://www.rug.nl/ggdc​\n/productivity/pwt/.\nNote: GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 43,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5990192734702092,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.5802979764648584,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

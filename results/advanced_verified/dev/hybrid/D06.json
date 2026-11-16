@@ -1,0 +1,1181 @@
+{
+  "status": "abstain",
+  "answer": "Figure O.1 does not show a median middle-income country; it shows the average income per capita of middle-income countries (and middle-income countries excluding China) relative to the United States. So I can’t determine from this figure alone whether Korea or the median middle-income country had the higher GNI per capita relative to the United States around 2022.",
+  "citations": [],
+  "question": "Inspect Figure O.1. Around 2022, does Korea or the median middle-income country have the higher GNI per capita relative to the United States?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Figure O.1\" Korea median middle-income country GNI per capita relative to the United States 2022",
+      "results": [
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03252247488101534,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p035-text-001",
+          "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03200204813108039,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p040-chart-00-000",
+          "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "40",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-040.png",
+            "label": "Figure O.5",
+            "pdf_page": 40,
+            "visual_id": "wdr-p040-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+              "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03131881575727918,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p068-text-000",
+          "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03057889822595705,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p068-chart-00-000",
+          "text": "Figure 1.2\nLine chart titled \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" The x-axis shows years from 1970 to 2022. The y-axis is \"Share of US GNI per capita (%)\" ranging from 0 to 60. Two series are plotted: (1) \"Middle-income countries\" (dark blue/black line) and (2) \"Middle-income countries, excluding China\" (orange line). Both series are near roughly 3% to 5% during the 1970s and 1980s, with small fluctuations and brief bumps in the early/mid-1980s and around 1990. They remain broadly flat through the 1990s and early 2000s, then rise noticeably from about 2005 to a peak around 2014–2015 at roughly 8% to 9% for all middle-income countries and slightly lower for the series excluding China. After the mid-2010s, both lines ease down slightly and level off by 2022, with the excluding-China series ending lower than the all-middle-income series. Source shown: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712. Note shown: the plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-068.png",
+            "label": "Figure 1.2",
+            "pdf_page": 68,
+            "visual_id": "wdr-p068-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact annual values are not labeled and can only be estimated from the plotted lines.",
+              "The two series are visually distinct by color and position, but precise year-by-year values are not readable from the image alone."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.030536130536130537,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p040-text-000",
+          "text": "Figure O.5  In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to\nhigh-income status has been interspersed with economic crises\n\n    35,000                                                                                             Korea, Rep.\n\n    30,000US$)\n2015 25,000\n\n    20,000\n                                                                                        Poland(constant\n    15,000                                                        HIC threshold\ncapita 10,000                                                                                            Chile\nper\n     5,000                                                  UMIC thresholdGNI\n                                                            LMIC threshold\n        0\n      19601962196419661968197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\nSource: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-\nincome country.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "40",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 40,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029877369007803793,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.028782894736842105,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p036-table-00-000",
+          "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-036.png",
+            "label": "Table O.1",
+            "pdf_page": 36,
+            "visual_id": "wdr-p036-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.02797339593114241,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p043-chart-00-000",
+          "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-043.png",
+            "label": "Figure O.7",
+            "pdf_page": 43,
+            "visual_id": "wdr-p043-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+              "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.026153846153846153,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.02548701298701299,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p035-chart-00-000",
+          "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-035.png",
+            "label": "Figure O.1",
+            "pdf_page": 35,
+            "visual_id": "wdr-p035-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact plotted values are not labeled and are approximated from the visible lines.",
+              "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03252247488101534,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p035-text-001",
+          "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03200204813108039,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p040-chart-00-000",
+          "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "40",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-040.png",
+            "label": "Figure O.5",
+            "pdf_page": 40,
+            "visual_id": "wdr-p040-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+              "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03131881575727918,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p068-text-000",
+          "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 68,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.03057889822595705,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p068-chart-00-000",
+          "text": "Figure 1.2\nLine chart titled \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" The x-axis shows years from 1970 to 2022. The y-axis is \"Share of US GNI per capita (%)\" ranging from 0 to 60. Two series are plotted: (1) \"Middle-income countries\" (dark blue/black line) and (2) \"Middle-income countries, excluding China\" (orange line). Both series are near roughly 3% to 5% during the 1970s and 1980s, with small fluctuations and brief bumps in the early/mid-1980s and around 1990. They remain broadly flat through the 1990s and early 2000s, then rise noticeably from about 2005 to a peak around 2014–2015 at roughly 8% to 9% for all middle-income countries and slightly lower for the series excluding China. After the mid-2010s, both lines ease down slightly and level off by 2022, with the excluding-China series ending lower than the all-middle-income series. Source shown: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712. Note shown: the plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "68",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-068.png",
+            "label": "Figure 1.2",
+            "pdf_page": 68,
+            "visual_id": "wdr-p068-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact annual values are not labeled and can only be estimated from the plotted lines.",
+              "The two series are visually distinct by color and position, but precise year-by-year values are not readable from the image alone."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.030536130536130537,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p040-text-000",
+          "text": "Figure O.5  In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to\nhigh-income status has been interspersed with economic crises\n\n    35,000                                                                                             Korea, Rep.\n\n    30,000US$)\n2015 25,000\n\n    20,000\n                                                                                        Poland(constant\n    15,000                                                        HIC threshold\ncapita 10,000                                                                                            Chile\nper\n     5,000                                                  UMIC thresholdGNI\n                                                            LMIC threshold\n        0\n      19601962196419661968197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\nSource: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-\nincome country.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "40",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 40,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.029877369007803793,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p067-chart-00-000",
+          "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-067.png",
+            "label": "Figure 1.1",
+            "pdf_page": 67,
+            "visual_id": "wdr-p067-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+              "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.028782894736842105,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p036-table-00-000",
+          "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\dc69d858e364\\page-036.png",
+            "label": "Table O.1",
+            "pdf_page": 36,
+            "visual_id": "wdr-p036-table-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.02797339593114241,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p043-chart-00-000",
+          "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-043.png",
+            "label": "Figure O.7",
+            "pdf_page": 43,
+            "visual_id": "wdr-p043-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+              "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.026153846153846153,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 0.02548701298701299,
+          "rank": 10
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.052693099998577964
+    },
+    {
+      "event": "answer_validation",
+      "accept": false,
+      "feedback": "The answer is not fully supported because Figure O.1 does not show a median middle-income-country line; it shows the average income per capita of middle-income countries and of middle-income countries excluding China. You can support that Korea is far above the *average* middle-income-country series around 2022, but you cannot answer a median-country comparison from this figure alone. Please revise to explicitly abstain on the median comparison or to state that the figure only provides average, not median, data."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.03252247488101534,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.03200204813108039,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p040-chart-00-000",
+      "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "40",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-040.png",
+        "label": "Figure O.5",
+        "pdf_page": 40,
+        "visual_id": "wdr-p040-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+          "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.03131881575727918,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p068-text-000",
+      "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 68,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.03057889822595705,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p068-chart-00-000",
+      "text": "Figure 1.2\nLine chart titled \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" The x-axis shows years from 1970 to 2022. The y-axis is \"Share of US GNI per capita (%)\" ranging from 0 to 60. Two series are plotted: (1) \"Middle-income countries\" (dark blue/black line) and (2) \"Middle-income countries, excluding China\" (orange line). Both series are near roughly 3% to 5% during the 1970s and 1980s, with small fluctuations and brief bumps in the early/mid-1980s and around 1990. They remain broadly flat through the 1990s and early 2000s, then rise noticeably from about 2005 to a peak around 2014–2015 at roughly 8% to 9% for all middle-income countries and slightly lower for the series excluding China. After the mid-2010s, both lines ease down slightly and level off by 2022, with the excluding-China series ending lower than the all-middle-income series. Source shown: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712. Note shown: the plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-068.png",
+        "label": "Figure 1.2",
+        "pdf_page": 68,
+        "visual_id": "wdr-p068-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact annual values are not labeled and can only be estimated from the plotted lines.",
+          "The two series are visually distinct by color and position, but precise year-by-year values are not readable from the image alone."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.030536130536130537,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p040-text-000",
+      "text": "Figure O.5  In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to\nhigh-income status has been interspersed with economic crises\n\n    35,000                                                                                             Korea, Rep.\n\n    30,000US$)\n2015 25,000\n\n    20,000\n                                                                                        Poland(constant\n    15,000                                                        HIC threshold\ncapita 10,000                                                                                            Chile\nper\n     5,000                                                  UMIC thresholdGNI\n                                                            LMIC threshold\n        0\n      19601962196419661968197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\nSource: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-\nincome country.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "40",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 40,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.029877369007803793,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.028782894736842105,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p036-table-00-000",
+      "text": "Table O.1\nWorld Bank country classifications and selected global indicators, 2022. Columns: Income classification; Share of global population (%); Share of global GDP (%); Share of people in extreme poverty globally (%); Share of global carbon dioxide (CO2) emissions (%). Rows: Low-income — 8.9; 0.6; 36.5; 0.5. Lower-middle-income — 40.3; 8.3; 55.4; 15.7. Upper-middle-income — 35.1; 30.3; 7.1; 48.6. High-income — 15.7; 60.8; 1.0; 35.2. Sources: Population shares and global GDP shares computed from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712; extreme poverty shares from PIP (Poverty and Inequality Platform) (dashboard), World Bank, Washington, DC, https://pip.worldbank.org/home; carbon dioxide emissions data (2022) from Climate Watch (dashboard), World Resources Institute, Washington, DC, https://www.climatewatchdata.org/. Note: The World Bank currently recognizes 26 economies as low-income (GNI per capita, calculated using the World Bank Atlas method, of US$1,135 or less in 2022); 54 as lower-middle-income (GNI per capita of between US$1,136 and US$4,465); 54 as upper-middle-income (GNI per capita of between US$4,466 and US$13,845); and 83 as high-income (GNI per capita of US$13,846 or more). GDP = gross domestic product; GNI = gross national income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\dc69d858e364\\page-036.png",
+        "label": "Table O.1",
+        "pdf_page": 36,
+        "visual_id": "wdr-p036-table-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.02797339593114241,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p043-chart-00-000",
+      "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-043.png",
+        "label": "Figure O.7",
+        "pdf_page": 43,
+        "visual_id": "wdr-p043-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+          "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.026153846153846153,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p039-text-001",
+      "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 39,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.02548701298701299,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:45:39.693483+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 525,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 99,
+        "output_tokens_details": {
+          "reasoning_tokens": 58
+        },
+        "total_tokens": 624
+      }
+    },
+    {
+      "at": "2026-11-16T15:45:45.510367+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6199,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 672,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6871
+      }
+    },
+    {
+      "at": "2026-11-16T15:45:51.386513+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5913,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 635,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6548
+      }
+    },
+    {
+      "at": "2026-11-16T15:45:56.323801+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6407,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 498,
+        "output_tokens_details": {
+          "reasoning_tokens": 402
+        },
+        "total_tokens": 6905
+      }
+    }
+  ],
+  "seconds": 19.04697010000018,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D06",
+  "initial_ranking": [
+    {
+      "id": "wdr-p035-chart-00-000",
+      "text": "Figure O.1\nTitle: \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" \n\nChart type: multi-series line chart.\n\nX-axis: years 1970 to 2022.\nY-axis: \"Share of US GNI per capita (%)\" with tick marks from 0 to 60 in increments of 5.\n\nLegend/series:\n- Dark line: \"Middle-income countries\"\n- Orange line: \"Middle-income countries, excluding China\"\n- Light gray comparison lines labeled in the plot: \"Korea, Rep.\", \"Poland\", and \"Chile\"\n\nVisible relationships/trends:\n- The two aggregate middle-income-country series stay low relative to the United States, generally around the low single digits to about 8% over the period, with a modest rise after roughly 2008 and a slight easing after the mid-2010s.\n- The \"excluding China\" series tracks slightly below the full middle-income-country series for most of the period.\n- Korea, Rep. rises strongly from the mid-teens in the 1970s to just above 50% in the late 2010s/early 2020s, then remains near that level.\n- Poland rises from around 10% in 1970 to the mid-20% range by 2022.\n- Chile rises from roughly the low-to-mid teens in the late 1970s/1980s to about 20%+ by 2022.\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\n\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita of the United States (considered the economic frontier country). Country definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have gross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250; and industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and Development, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-035.png",
+        "label": "Figure O.1",
+        "pdf_page": 35,
+        "visual_id": "wdr-p035-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values are not labeled and are approximated from the visible lines.",
+          "The small duplicate rendering of the same figure near the top of the page appears to be a reduced repeat of Figure O.1 rather than a separate figure."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p035-text-001",
+      "text": "Figure O.1  Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55                                                                                       Korea, Rep.\n   50\n   45capita 40\nper 35\n   30                                                                                         PolandGNI\n   25\nUS   20\nof                                                                                                       Chile\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita of the United States (considered the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less; middle-income countries have GNI per capita of more than US$250;\nand industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation and\nDevelopment, except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 3\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.03200204813108039,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p040-chart-00-000",
+      "text": "Figure O.5\nLine chart titled: \"In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to high-income status has been interspersed with economic crises.\" X-axis: years 1960 to 2022 (tick marks shown at regular intervals, labels rotated). Y-axis: \"GNI per capita (constant 2015 US$)\" from 0 to 35,000. Three country series are shown: Korea, Rep. (dark blue/black line) rising from about 1,000 in 1960 to about 32,000 in 2022, with a noticeable dip/slowdown around the late 1990s and then continued growth; Poland (orange line) starting around 3,000 in 1960, rising gradually with a dip in the early 1980s, then increasing to about 13,000–14,000 by 2022 with a small dip around 2020; Chile (teal line) visible from the mid-1990s onward, rising from about 5,500 to about 16,500 by 2022, with a slight dip around 2020. Three dotted horizontal income-threshold reference lines are labeled within the plot: \"LMIC threshold\" near the bottom, \"UMIC threshold\" around the mid-lower range, and \"HIC threshold\" around the upper-middle range. Country names are printed near the right ends of the corresponding lines. Source note below the chart: \"Source: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712.\" Note: \"GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-income country.\"\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "40",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-040.png",
+        "label": "Figure O.5",
+        "pdf_page": 40,
+        "visual_id": "wdr-p040-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact threshold values are not labeled numerically in the visible figure; only the threshold names and approximate positions are visible.",
+          "Series values are approximate readings from the plotted lines; no data table is shown on the page."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.03128054740957967,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p068-text-000",
+      "text": "Figure 1.2 Income per capita of middle-income countries relative to that of the United States\nhas been stagnant for decades\n\n   60\n(%) 55\n   50\n   45 capita 40\nper 35\nGNI 30\n   25\nUS   20\nof\n   15\n   10Share    5\n    0\n   197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\n                      Middle-income countries     Middle-income countries, excluding China\n\nSource: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC,\nhttps://datacatalog.worldbank.org/search/dataset/0037712.\nNote: The plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income\ncountries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\nCountry definitions are based on the first World Development Report (World Bank 1978), in which low-income countries have\ngross national income (GNI) per capita of US$250 or less, and middle-income countries have GNI per capita of more than\nUS$250; industrialized (high-income) countries consist of member countries of the Organisation for Economic Co-operation\nand Development (OECD), except for Greece, Portugal, Spain, and Türkiye, which are classified as middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 68,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.031024531024531024,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p068-chart-00-000",
+      "text": "Figure 1.2\nLine chart titled \"Income per capita of middle-income countries relative to that of the United States has been stagnant for decades.\" The x-axis shows years from 1970 to 2022. The y-axis is \"Share of US GNI per capita (%)\" ranging from 0 to 60. Two series are plotted: (1) \"Middle-income countries\" (dark blue/black line) and (2) \"Middle-income countries, excluding China\" (orange line). Both series are near roughly 3% to 5% during the 1970s and 1980s, with small fluctuations and brief bumps in the early/mid-1980s and around 1990. They remain broadly flat through the 1990s and early 2000s, then rise noticeably from about 2005 to a peak around 2014–2015 at roughly 8% to 9% for all middle-income countries and slightly lower for the series excluding China. After the mid-2010s, both lines ease down slightly and level off by 2022, with the excluding-China series ending lower than the all-middle-income series. Source shown: WDR 2024 team using data from WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://datacatalog.worldbank.org/search/dataset/0037712. Note shown: the plotted lines indicate the trend of average income per capita in middle-income countries and in middle-income countries, excluding China, relative to income per capita in the United States (considered as the economic frontier country).\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "68",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-068.png",
+        "label": "Figure 1.2",
+        "pdf_page": 68,
+        "visual_id": "wdr-p068-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact annual values are not labeled and can only be estimated from the plotted lines.",
+          "The two series are visually distinct by color and position, but precise year-by-year values are not readable from the image alone."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.031009615384615385,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p067-chart-00-000",
+      "text": "Figure 1.1\nScatter plot showing economies’ GNI per capita in 1990 (x-axis) versus 2022 (y-axis), both in current US dollars. Title: “A handful of economies have transitioned from middle-income to high-income status over the last three decades.” The plot covers x from 0 to 10,000 and y from 0 to 45,000, with light horizontal gridlines and labeled income-group bands. Blue vertical threshold lines mark 1990 income-class cutoffs at US$610 (transition to lower-middle-income), US$2,465 (transition to upper-middle-income), and US$7,620 (transition to high-income). Blue horizontal threshold lines mark the corresponding 2022 cutoffs at US$1,135, US$4,465, and US$13,845. Income-group labels appear across the top as Low-income, Lower-middle-income, Upper-middle-income, High-income, and along the right side as Lower-middle-income, Upper-middle-income, High-income. Orange scatter points represent economies; many are unlabeled, while labeled high/upper-middle economies include GUY, ROM, CHL, PAN, TTO, SYC, PRI, PRT, KNA, OMN, GRC, ATG, BRB, BHR, CZE, EST, LTU, LVA, SVK, HRV, POL, HUN, URY, SVN, MLT, KOR, SAU, and MAC. The labeled points show substantial upward movement for a small set of economies, with MAC highest near 2022 GNI per capita of about US$45,000 and 1990 GNI per capita around US$9,000; KOR is near US$36,000 in 2022 and about US$6,500 in 1990; MLT and SVN are above US$30,000 in 2022; and several economies cluster around the upper-middle/high-income boundary. Source note: WDR 2024 team using WDI (World Development Indicators), World Bank. Note says each point is an economy’s 1990 and 2022 GNI per capita using the World Bank Atlas method; the figure includes only economies at middle-income levels in 1990; only economies that transitioned to high-income status since 1990 are labeled; 1990 data were unavailable for six economies.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-067.png",
+        "label": "Figure 1.1",
+        "pdf_page": 67,
+        "visual_id": "wdr-p067-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Several orange points are unlabeled in the figure and cannot be identified from the image alone.",
+          "A few labels are crowded/close together; label placement may not precisely indicate which point each label refers to, though the intended labels are clear overall."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.0293236301369863,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p040-text-000",
+      "text": "Figure O.5  In the Republic of Korea, Poland, and Chile, the rapid growth from middle- to\nhigh-income status has been interspersed with economic crises\n\n    35,000                                                                                             Korea, Rep.\n\n    30,000US$)\n2015 25,000\n\n    20,000\n                                                                                        Poland(constant\n    15,000                                                        HIC threshold\ncapita 10,000                                                                                            Chile\nper\n     5,000                                                  UMIC thresholdGNI\n                                                            LMIC threshold\n        0\n      19601962196419661968197019721974197619781980198219841986198819901992199419961998200020022004200620082010201220142016201820202022\n\nSource: WDR 2024 team using WDI (World Development Indicators) (Data Catalog), World Bank, Washington, DC, https://\ndatacatalog.worldbank.org/search/dataset/0037712.\nNote: GNI = gross national income; HIC = high-income country; LMIC = lower-middle-income country; UMIC = upper-middle-\nincome country.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "40",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 40,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.028438886647841874,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p043-chart-00-000",
+      "text": "Figure O.7\nLine chart titled: 'Over the last four decades, as the Republic of Korea’s labor productivity relative to that of the United States continued to climb, Brazil’s peaked—and then sagged'. X-axis: years 1980 to 2020 (shown at regular intervals). Y-axis: 'Labor productivity (GDP per person employed relative to a US worker, %)' ranging from 0 to 70. Two series are shown: Korea, Rep. (dark line) rises steadily from a little above 20% in 1980 to a little above 60% by 2019–2020; Brazil (orange line) starts around 44% in 1980, declines through the 1980s and early 1990s to around 30%, briefly edges up in the mid-1990s, then trends downward again, ending around 25% by 2019–2020. Series labels appear near the right edge of the plot. Source note cites WDR 2024 team using PWT (Penn World Table) database version 10.1; note states GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-043.png",
+        "label": "Figure O.7",
+        "pdf_page": 43,
+        "visual_id": "wdr-p043-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact annual values are not labeled and are only visually estimated from the plotted lines.",
+          "The page crop shows the full chart, but the line endpoints are approximate rather than numerically annotated."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.027242401779095628,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p035-text-000",
+      "text": "2010 to US$7,000 by 2030. Other middle-income    considered the world’s economic leader; people\ncountries have similar aspirations.                    living in countries with incomes higher than those\n    If these plans succeed, your country will reach    of Americans add up to fewer than 25 million.\nhigh-income status in less than one generation,    Since 1970 the mean income per capita of middle-\nor in one or two. Your firms will be earning like   income countries has never risen above one-tenth\nnever before. Your people will be consuming like    that of the United States (figure O.1).\nnever before. Far fewer people will be poor, with     Compared with the United States, middle-­\nnone desperately poor. In the halls of government,   income countries seem trapped at modest income\nthese plans generate tremendous optimism.            levels.\n  But there is a problem.                       The observed rates of economic growth in\n  According to widely used measures such as    middle-income countries do not exceed those in\nthe World Bank’s World Development Indicators,    high-income countries by the margins needed\nyou see that economic growth in middle-income    to catch up in one generation—or even two or\ncountries—including your own—is not acceler-    three. Estimates using the World Bank’s Long\nating. If anything, it is slowing down as incomes   Term Growth Model, which is based on the cel-\nincrease—and even more so every decade.           ebrated Solow-Swan growth model, suggest that\n  Moreover, your country  is not catching up      if the drivers of economic growth—investments\nwith the income levels in advanced economies.    in human capital, total factor productivity, labor\nAmong those economies, the United States is still    force participation, and the shares of economic\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 0.02651914295749912,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p076-chart-00-000",
+      "text": "Figure 1.5\nGrowth is expected to slow down as countries approach the economic frontier (United States). Scatter/line chart with x-axis: \"GDP per capita relative to the frontier (United States) (%)\" from 0 to 100, and y-axis: \"Annual growth in GDP per capita (%)\" from 0 to 7. The figure shows multiple country trajectories connecting projected recent-history points, with a legend for Argentina, Bangladesh, Bulgaria, Chile, China, India, Indonesia, Mexico, Poland, and Türkiye. Solid lines indicate countries that will experience convergence to the frontier over 2023–2100; dashed lines indicate countries that will experience divergence from the frontier over 2023–2100, although they were closer to the frontier in 2022. Visible patterns: Poland is a long solid teal line extending from roughly the mid-20s percent of US GDP per capita to 100%, with growth easing from a little above 5% to about 3.3–3.8%; China is a solid orange-red line extending from roughly the low-20s to the low-60s, with growth around 5% falling to around 2–3%; India is a solid brown/orange line around the low single digits to the mid-20s, flattening near 3.8%; Bangladesh is a solid olive line from very low frontier proximity to the high-20s, falling from above 6% toward about 3%; Indonesia is a solid blue line from the high single digits to the high-20s, settling near 3%; Türkiye is a solid gray line from the mid-20s to low-30s, near 2%; Argentina, Chile, Mexico, and Bulgaria are dashed trajectories rising from low frontier proximity into the mid-teens to low-20s while growth rises sharply from near 0–1% to around 1.5–3%. Source: WDR 2024 team. Note: Projections are based on extrapolation of recent historical trends using the World Bank’s Long Term Growth Model. GDP = gross domestic product.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "76",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-076.png",
+        "label": "Figure 1.5",
+        "pdf_page": 76,
+        "visual_id": "wdr-p076-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact plotted values and yearly coordinates are not readable from the image.",
+          "Some country line colors and endpoints are approximate from the visual legend and curves.",
+          "The chart is a projection graphic rather than a tabulated dataset, so only visible trends and labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.026153846153846153,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

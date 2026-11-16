@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "A cross-validation strategy used with `cross_val_predict` must assign all elements to a test set exactly once; otherwise, an exception is raised. [455a090db1a434c0e53df6e0]",
+  "citations": [
+    "455a090db1a434c0e53df6e0"
+  ],
+  "question": "What restriction must a cross-validation strategy satisfy to be used with cross_val_predict?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "cross_val_predict restriction cross-validation strategy must partition all samples into test sets exactly once documentation",
+      "results": [
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          },
+          "score": 27.923979495662444,
+          "rank": 1
+        },
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 23.304302131588546,
+          "rank": 2
+        },
+        {
+          "id": "5d431cfaf9e1f351f2882a02",
+          "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 2355,
+            "start": 1153,
+            "topic": "preprocessing",
+            "anchor": "pipeline-chaining-estimators",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 273
+          },
+          "score": 18.48103479661576,
+          "rank": 3
+        },
+        {
+          "id": "46e816ef2b2e48019d32837c",
+          "text": "3.1.2.6.1. Time Series Split\n\nTimeSeriesSplit is a variation of k-fold which returns first \\(k\\) folds as train set and the \\((k+1)\\) th fold as test set. Note that unlike standard cross-validation methods, successive training sets are supersets of those that come before them. Also, it adds all surplus data to the first training partition, which is always used to train the model.\n\nThis class can be used to cross-validate time series data samples that are observed at fixed time intervals. Indeed, the folds must represent the same duration, in order to have comparable metrics across folds.\n\nExample of 3-split time series cross-validation on a dataset with 6 samples:\n\n>>> from sklearn.model_selection import TimeSeriesSplit\n\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]])\n>>> y = np.array([1, 2, 3, 4, 5, 6])\n>>> tscv = TimeSeriesSplit(n_splits=3)\n>>> print(tscv)\nTimeSeriesSplit(gap=0, max_train_size=None, n_splits=3, test_size=None)\n>>> for train, test in tscv.split(X):\n...     print(\"%s %s\" % (train, test))\n[0 1 2] [3]\n[0 1 2 3] [4]\n[0 1 2 3 4] [5]\n\nHere is a visualization of the cross-validation behavior.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:009",
+          "metadata": {
+            "end": 2605,
+            "start": 1466,
+            "topic": "model_selection",
+            "anchor": "time-series-split",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.6. Cross validation of time series data > 3.1.2.6.1. Time Series Split",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 32683,
+            "unit_start": 29048,
+            "token_count": 374
+          },
+          "score": 18.329027322036993,
+          "rank": 4
+        },
+        {
+          "id": "001cedffd3f8104a70cedde9",
+          "text": "3.1.2.3. Predefined fold-splits / Validation-sets\n\nFor some datasets, a pre-defined split of the data into training- and validation fold or into several cross-validation folds already exists. Using PredefinedSplit it is possible to use these folds e.g. when searching for hyperparameters.\n\nFor example, when using a validation set, set the test_fold to 0 for all samples that are part of the validation set, and to -1 for all other samples.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2944,
+            "start": 2504,
+            "topic": "model_selection",
+            "anchor": "predefined-fold-splits-validation-sets",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.3. Predefined fold-splits / Validation-sets",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 111
+          },
+          "score": 16.453573633605586,
+          "rank": 5
+        },
+        {
+          "id": "42e1c2b6eb6564955c21824b",
+          "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2092,
+            "start": 1044,
+            "topic": "model_selection",
+            "anchor": "k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 381
+          },
+          "score": 15.060180989954086,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "455a090db1a434c0e53df6e0",
+          "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:003",
+          "metadata": {
+            "end": 3526,
+            "start": 2113,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10820,
+            "unit_start": 7294,
+            "token_count": 279
+          },
+          "score": 27.923979495662444,
+          "rank": 1
+        },
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 23.304302131588546,
+          "rank": 2
+        },
+        {
+          "id": "5d431cfaf9e1f351f2882a02",
+          "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 2355,
+            "start": 1153,
+            "topic": "preprocessing",
+            "anchor": "pipeline-chaining-estimators",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 273
+          },
+          "score": 18.48103479661576,
+          "rank": 3
+        },
+        {
+          "id": "46e816ef2b2e48019d32837c",
+          "text": "3.1.2.6.1. Time Series Split\n\nTimeSeriesSplit is a variation of k-fold which returns first \\(k\\) folds as train set and the \\((k+1)\\) th fold as test set. Note that unlike standard cross-validation methods, successive training sets are supersets of those that come before them. Also, it adds all surplus data to the first training partition, which is always used to train the model.\n\nThis class can be used to cross-validate time series data samples that are observed at fixed time intervals. Indeed, the folds must represent the same duration, in order to have comparable metrics across folds.\n\nExample of 3-split time series cross-validation on a dataset with 6 samples:\n\n>>> from sklearn.model_selection import TimeSeriesSplit\n\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]])\n>>> y = np.array([1, 2, 3, 4, 5, 6])\n>>> tscv = TimeSeriesSplit(n_splits=3)\n>>> print(tscv)\nTimeSeriesSplit(gap=0, max_train_size=None, n_splits=3, test_size=None)\n>>> for train, test in tscv.split(X):\n...     print(\"%s %s\" % (train, test))\n[0 1 2] [3]\n[0 1 2 3] [4]\n[0 1 2 3 4] [5]\n\nHere is a visualization of the cross-validation behavior.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:009",
+          "metadata": {
+            "end": 2605,
+            "start": 1466,
+            "topic": "model_selection",
+            "anchor": "time-series-split",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.6. Cross validation of time series data > 3.1.2.6.1. Time Series Split",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 32683,
+            "unit_start": 29048,
+            "token_count": 374
+          },
+          "score": 18.329027322036993,
+          "rank": 4
+        },
+        {
+          "id": "001cedffd3f8104a70cedde9",
+          "text": "3.1.2.3. Predefined fold-splits / Validation-sets\n\nFor some datasets, a pre-defined split of the data into training- and validation fold or into several cross-validation folds already exists. Using PredefinedSplit it is possible to use these folds e.g. when searching for hyperparameters.\n\nFor example, when using a validation set, set the test_fold to 0 for all samples that are part of the validation set, and to -1 for all other samples.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2944,
+            "start": 2504,
+            "topic": "model_selection",
+            "anchor": "predefined-fold-splits-validation-sets",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.3. Predefined fold-splits / Validation-sets",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 111
+          },
+          "score": 16.453573633605586,
+          "rank": 5
+        },
+        {
+          "id": "42e1c2b6eb6564955c21824b",
+          "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2092,
+            "start": 1044,
+            "topic": "model_selection",
+            "anchor": "k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 381
+          },
+          "score": 15.060180989954086,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.004983800001355121
+    }
+  ],
+  "context": [
+    {
+      "id": "455a090db1a434c0e53df6e0",
+      "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 3526,
+        "start": 2113,
+        "topic": "model_selection",
+        "anchor": "obtaining-predictions-by-cross-validation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 279
+      },
+      "score": 27.923979495662444,
+      "rank": 1
+    },
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 23.304302131588546,
+      "rank": 2
+    },
+    {
+      "id": "5d431cfaf9e1f351f2882a02",
+      "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 2355,
+        "start": 1153,
+        "topic": "preprocessing",
+        "anchor": "pipeline-chaining-estimators",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 273
+      },
+      "score": 18.48103479661576,
+      "rank": 3
+    },
+    {
+      "id": "46e816ef2b2e48019d32837c",
+      "text": "3.1.2.6.1. Time Series Split\n\nTimeSeriesSplit is a variation of k-fold which returns first \\(k\\) folds as train set and the \\((k+1)\\) th fold as test set. Note that unlike standard cross-validation methods, successive training sets are supersets of those that come before them. Also, it adds all surplus data to the first training partition, which is always used to train the model.\n\nThis class can be used to cross-validate time series data samples that are observed at fixed time intervals. Indeed, the folds must represent the same duration, in order to have comparable metrics across folds.\n\nExample of 3-split time series cross-validation on a dataset with 6 samples:\n\n>>> from sklearn.model_selection import TimeSeriesSplit\n\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]])\n>>> y = np.array([1, 2, 3, 4, 5, 6])\n>>> tscv = TimeSeriesSplit(n_splits=3)\n>>> print(tscv)\nTimeSeriesSplit(gap=0, max_train_size=None, n_splits=3, test_size=None)\n>>> for train, test in tscv.split(X):\n...     print(\"%s %s\" % (train, test))\n[0 1 2] [3]\n[0 1 2 3] [4]\n[0 1 2 3 4] [5]\n\nHere is a visualization of the cross-validation behavior.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:009",
+      "metadata": {
+        "end": 2605,
+        "start": 1466,
+        "topic": "model_selection",
+        "anchor": "time-series-split",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.6. Cross validation of time series data > 3.1.2.6.1. Time Series Split",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 32683,
+        "unit_start": 29048,
+        "token_count": 374
+      },
+      "score": 18.329027322036993,
+      "rank": 4
+    },
+    {
+      "id": "001cedffd3f8104a70cedde9",
+      "text": "3.1.2.3. Predefined fold-splits / Validation-sets\n\nFor some datasets, a pre-defined split of the data into training- and validation fold or into several cross-validation folds already exists. Using PredefinedSplit it is possible to use these folds e.g. when searching for hyperparameters.\n\nFor example, when using a validation set, set the test_fold to 0 for all samples that are part of the validation set, and to -1 for all other samples.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2944,
+        "start": 2504,
+        "topic": "model_selection",
+        "anchor": "predefined-fold-splits-validation-sets",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.3. Predefined fold-splits / Validation-sets",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 111
+      },
+      "score": 16.453573633605586,
+      "rank": 5
+    },
+    {
+      "id": "42e1c2b6eb6564955c21824b",
+      "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2092,
+        "start": 1044,
+        "topic": "model_selection",
+        "anchor": "k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 381
+      },
+      "score": 15.060180989954086,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:49.090699+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 65,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 574
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:52.673666+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3285,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 117,
+        "output_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "total_tokens": 3402
+      }
+    }
+  ],
+  "seconds": 6.016726500001823,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q11",
+  "initial_ranking": [
+    {
+      "id": "455a090db1a434c0e53df6e0",
+      "text": "3.1.1.2. Obtaining predictions by cross-validation\n\nThe function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).\n\nWarning\n\nNote on inappropriate usage of cross_val_predict\n\nThe result of cross_val_predict may be different from those obtained using cross_val_score as the elements are grouped in different ways. The function cross_val_score takes an average over cross-validation folds, whereas cross_val_predict simply returns the labels (or probabilities) from several distinct models undistinguished. Thus, cross_val_predict is not an appropriate measure of generalization error.\n\nVisualization of predictions obtained from different models.\n\nModel blending: When predictions of one supervised estimator are used to train another estimator in ensemble methods.\n\nThe available cross validation iterators are introduced in the following section.\n\nExamples\n\nReceiver Operating Characteristic (ROC) with cross validation ,\n\nRecursive feature elimination with cross-validation ,\n\nCustom refit strategy of a grid search with cross-validation ,\n\nSample pipeline for text feature extraction and evaluation ,\n\nPlotting Cross-Validated Predictions ,",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:003",
+      "metadata": {
+        "end": 3526,
+        "start": 2113,
+        "topic": "model_selection",
+        "anchor": "obtaining-predictions-by-cross-validation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10820,
+        "unit_start": 7294,
+        "token_count": 279
+      },
+      "score": 22.951692700604035,
+      "rank": 1
+    },
+    {
+      "id": "0cf97b2b632c69802a6d5747",
+      "text": "3.2.5.1. Model specific cross-validation\n\nSome models can fit data for a range of values of some parameter almost as efficiently as fitting the estimator for a single value of the parameter. This feature can be leveraged to perform a more efficient cross-validation used for model selection of this parameter.\n\nThe most common parameter amenable to this strategy is the parameter encoding the strength of the regularizer. In this case we say that we compute the regularization path of the estimator.\n\nHere is the list of such models:",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:008",
+      "metadata": {
+        "end": 1872,
+        "start": 1339,
+        "topic": "model_selection",
+        "anchor": "model-specific-cross-validation",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.5. Alternatives to brute force parameter search > 3.2.5.1. Model specific cross-validation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 30038,
+        "unit_start": 25617,
+        "token_count": 112
+      },
+      "score": 13.465576749874053,
+      "rank": 2
+    },
+    {
+      "id": "823ae3f366e1300530806607",
+      "text": "3.4.3. The scoring parameter: defining model evaluation rules\n\nModel selection and evaluation tools that internally use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) take a scoring parameter that controls what metric they apply to the estimators evaluated.\n\nThey can be specified in several ways:\n\nNone : the estimator’s default evaluation criterion (i.e., the metric used in the estimator’s score method) is used.\n\nString name : common metrics can be passed via a string name.\n\nCallable : more complex metrics can be passed via a custom metric callable (e.g., function).\n\nSome tools do also accept multiple metric evaluation. See Using multiple metric evaluation for details.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:003",
+      "metadata": {
+        "end": 760,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "the-scoring-parameter-defining-model-evaluation-rules",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10912,
+        "unit_start": 7345,
+        "token_count": 172
+      },
+      "score": 12.957125784000064,
+      "rank": 3
+    },
+    {
+      "id": "46e816ef2b2e48019d32837c",
+      "text": "3.1.2.6.1. Time Series Split\n\nTimeSeriesSplit is a variation of k-fold which returns first \\(k\\) folds as train set and the \\((k+1)\\) th fold as test set. Note that unlike standard cross-validation methods, successive training sets are supersets of those that come before them. Also, it adds all surplus data to the first training partition, which is always used to train the model.\n\nThis class can be used to cross-validate time series data samples that are observed at fixed time intervals. Indeed, the folds must represent the same duration, in order to have comparable metrics across folds.\n\nExample of 3-split time series cross-validation on a dataset with 6 samples:\n\n>>> from sklearn.model_selection import TimeSeriesSplit\n\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]])\n>>> y = np.array([1, 2, 3, 4, 5, 6])\n>>> tscv = TimeSeriesSplit(n_splits=3)\n>>> print(tscv)\nTimeSeriesSplit(gap=0, max_train_size=None, n_splits=3, test_size=None)\n>>> for train, test in tscv.split(X):\n...     print(\"%s %s\" % (train, test))\n[0 1 2] [3]\n[0 1 2 3] [4]\n[0 1 2 3 4] [5]\n\nHere is a visualization of the cross-validation behavior.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:009",
+      "metadata": {
+        "end": 2605,
+        "start": 1466,
+        "topic": "model_selection",
+        "anchor": "time-series-split",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.6. Cross validation of time series data > 3.1.2.6.1. Time Series Split",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 32683,
+        "unit_start": 29048,
+        "token_count": 374
+      },
+      "score": 12.742382170074581,
+      "rank": 4
+    },
+    {
+      "id": "5d431cfaf9e1f351f2882a02",
+      "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 2355,
+        "start": 1153,
+        "topic": "preprocessing",
+        "anchor": "pipeline-chaining-estimators",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 273
+      },
+      "score": 12.642784091749862,
+      "rank": 5
+    },
+    {
+      "id": "be3b1da9c776f955f57b418f",
+      "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 2640,
+        "start": 1965,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 240
+      },
+      "score": 12.161522354937983,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

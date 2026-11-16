@@ -1,0 +1,25 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Supported by grid_search:001 and grid_search:002: GridSearchCV “exhaustively considers all parameter combinations” / evaluates “all the possible combinations,” while RandomizedSearchCV “sample[s] a given number of candidates” and uses n_iter as the number of sampled candidates or iterations.",
+  "query_id": "q12",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "6ba5581dda710c8165dcc30dfaeec31d179608ff2000f9cc1dc59e649a0ed6d2",
+  "alternative_cited_pages": [
+    "grid_search:001",
+    "grid_search:002"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

@@ -1,0 +1,24 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "compose:001 states that “all steps except the last” must be transformers, and that “the last step can be anything, a transformer, a predictor, or a clustering estimator.” The answer matches this exactly, and its citations support both claims.",
+  "query_id": "q07",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "81097d8232fc72e0d49438aac59cefbb5ae441103187ac42062b600f14dece6b",
+  "alternative_cited_pages": [
+    "compose:001"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

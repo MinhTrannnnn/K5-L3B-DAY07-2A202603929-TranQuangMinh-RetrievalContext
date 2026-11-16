@@ -1,0 +1,71 @@
+[
+  {
+    "method": "dense",
+    "split": "dev",
+    "answerable_retrieval_successes": 15,
+    "hit1": {
+      "n": 8,
+      "N": 15
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 14,
+      "N": 15
+    },
+    "agent_runs": 17,
+    "total_agent_seconds": 149.17285629999242,
+    "tool_use": 17,
+    "answer_quality_review": "pending_human_review",
+    "errors": 0,
+    "seconds_this_invocation": 4.4200001866556704e-05
+  },
+  {
+    "method": "bm25",
+    "split": "dev",
+    "answerable_retrieval_successes": 15,
+    "hit1": {
+      "n": 9,
+      "N": 15
+    },
+    "hit3": {
+      "n": 14,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "agent_runs": 17,
+    "total_agent_seconds": 147.76512460000595,
+    "tool_use": 17,
+    "answer_quality_review": "pending_human_review",
+    "errors": 0,
+    "seconds_this_invocation": 1.939999856404029e-05
+  },
+  {
+    "method": "hybrid",
+    "split": "dev",
+    "answerable_retrieval_successes": 15,
+    "hit1": {
+      "n": 7,
+      "N": 15
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 15,
+      "N": 15
+    },
+    "agent_runs": 17,
+    "total_agent_seconds": 138.55194219999976,
+    "tool_use": 17,
+    "answer_quality_review": "pending_human_review",
+    "errors": 0,
+    "seconds_this_invocation": 1.9400002202019095e-05
+  }
+]

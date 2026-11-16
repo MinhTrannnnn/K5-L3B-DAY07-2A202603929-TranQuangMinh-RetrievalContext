@@ -1,0 +1,11 @@
+{
+  "fingerprint": "4f41b186ab2e53b583693fc547da6a5a1d54360c4c94b2334160058ff1cc4736",
+  "method": "bm25",
+  "provider": "ollama",
+  "model": "qwen2.5:3b",
+  "status": "configuration_frozen_before_test",
+  "note": "Method explicitly chosen by CLI. Human analysis must justify selection.",
+  "previous_fingerprint": "ba6eeaac52e16836dce6a6b9d3b46deef076fd9c29458d87cac67d0bbd0dd699",
+  "compatibility_note": "Transport-only JSON truncation retry added after dev. Controller prompt, retrieval and saved dev results unchanged. Fingerprint tracks the controller separately from transport.",
+  "rule": "Dev Evidence Hit@3, then Hit@1, then lower agent time."
+}

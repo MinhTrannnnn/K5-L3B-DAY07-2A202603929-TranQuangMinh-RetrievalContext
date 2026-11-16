@@ -1,0 +1,709 @@
+{
+  "status": "answered",
+  "answer": "When `handle_unknown='ignore'` and `drop` is not `None`, unknown categories are encoded as **all zeros**; they have the same mapping as the dropped category [ff9fe26a96956c236143c6d4][13e7836b593ada9e9f446bee].",
+  "citations": [
+    "ff9fe26a96956c236143c6d4",
+    "13e7836b593ada9e9f446bee"
+  ],
+  "question": "What encoding is used for an unknown category when OneHotEncoder ignores unknown values and drop is not None?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "OneHotEncoder unknown category ignores unknown values and drop is not None encoding unknown category",
+      "results": [
+        {
+          "id": "ff9fe26a96956c236143c6d4",
+          "text": ">>> drop_enc = preprocessing.OneHotEncoder(drop='first',\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> drop_enc.transform(X_test).toarray()\narray([[0., 0., 0., 0., 0.]])\n\nAll the categories in X_test are unknown during transform and will be mapped to all zeros. This means that unknown categories will have the same mapping as the dropped category. OneHotEncoder.inverse_transform will map all zeros to the dropped category if a category is dropped and None if a category is not dropped:\n\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary', sparse_output=False,\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> X_trans = drop_enc.transform(X_test)\n>>> X_trans\narray([[0., 0., 0., 0., 0., 0., 0.]])\n>>> drop_enc.inverse_transform(X_trans)\narray([['female', None, None]], dtype=object)",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 3679,
+            "start": 2736,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 328
+          },
+          "score": 52.20774381220437,
+          "rank": 1
+        },
+        {
+          "id": "207194442b83993e19b98d5c",
+          "text": "When 'handle_unknown' is set to 'infrequent_if_exist' and an unknown category is encountered in transform:\n\nIf infrequent category support was not configured or there was no infrequent category during training, the resulting one-hot encoded columns for this feature will be all zeros. In the inverse transform, an unknown category will be denoted as None .\n\nIf there is an infrequent category during training, the unknown category will be considered infrequent. In the inverse transform, ‘infrequent_sklearn’ will be used to represent the infrequent category.\n\nInfrequent categories can also be configured using max_categories . In the following example, we set max_categories=2 to limit the number of features in the output. This will result in all but the 'cat' category to be considered infrequent, leading to two features, one for 'cat' and one for infrequent categories - which are all the others:\n\n>>> enc = preprocessing.OneHotEncoder(max_categories=2, sparse_output=False)\n>>> enc = enc.fit(X)\n>>> enc.transform([['dog'], ['cat'], ['rabbit'], ['snake']])\narray([[0., 1.],\n       [1., 0.],\n       [0., 1.],\n       [0., 1.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:009",
+          "metadata": {
+            "end": 1944,
+            "start": 813,
+            "topic": "preprocessing",
+            "anchor": "infrequent-categories",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33122,
+            "unit_start": 29596,
+            "token_count": 322
+          },
+          "score": 39.87182205914361,
+          "rank": 2
+        },
+        {
+          "id": "13e7836b593ada9e9f446bee",
+          "text": ">>> X = [['male', 'US', 'Safari'],\n...      ['female', 'Europe', 'Firefox'],\n...      ['female', 'Asia', 'Chrome']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['Asia', 'Europe', 'US'], dtype=object),\n array(['Chrome', 'Firefox', 'Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 0., 0., 1., 0., 0., 1.],\n       [0., 0., 1., 0., 0., 1., 0.],\n       [0., 1., 0., 0., 1., 0., 0.]])\n\nIn the transformed X , the first column is the encoding of the feature with categories “male”/”female”, while the remaining 6 columns are the encoding of the 2 features with respectively 3 categories each.\n\nWhen handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 2734,
+            "start": 1926,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 320
+          },
+          "score": 31.65004124563145,
+          "rank": 3
+        },
+        {
+          "id": "b1bf3ea45527639040fce8b8",
+          "text": "If there is a possibility that the training data might have missing categorical features, it can often be better to specify handle_unknown='infrequent_if_exist' instead of setting the categories manually as above. When handle_unknown='infrequent_if_exist' is specified and unknown categories are encountered during transform, no error will be raised but the resulting one-hot encoded columns for this feature will be all zeros or considered as an infrequent category if enabled. ( handle_unknown='infrequent_if_exist' is only supported for one-hot encoding):\n\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> enc.transform([['female', 'from Asia', 'uses Chrome']]).toarray()\narray([[1., 0., 0., 0., 0., 0.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 894,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 288
+          },
+          "score": 28.814122316292472,
+          "rank": 4
+        },
+        {
+          "id": "cb623dd1ad021dc015f4726a",
+          "text": ">>> X = np.array([['dog'] * 5 + ['cat'] * 20 + ['rabbit'] * 10 +\n...               ['snake'] * 3], dtype=object).T\n>>> enc = preprocessing.OrdinalEncoder(min_frequency=6).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[2.],\n       [0.],\n       [1.],\n       [2.]])\n\nOrdinalEncoder ’s max_categories do not take into account missing or unknown categories. Setting unknown_value or encoded_missing_value to an integer will increase the number of unique integer codes by one each. This can result in up to max_categories + 2 integer codes. In the following example, “a” and “d” are considered infrequent and grouped together into a single category, “b” and “c” are their own categories, unknown values are encoded as 3 and missing values are encoded as 4.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:008",
+          "metadata": {
+            "end": 2938,
+            "start": 2078,
+            "topic": "preprocessing",
+            "anchor": "infrequent-categories",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29594,
+            "unit_start": 26087,
+            "token_count": 287
+          },
+          "score": 28.68189650505018,
+          "rank": 5
+        },
+        {
+          "id": "9d4efc36e7690da44a60568c",
+          "text": "\\[S_{ij} = \\lambda_i\\frac{n_{iY_j}}{n_i} + (1 - \\lambda_i)\\frac{n_{Y_j}}{n}\\]\n\nwhere \\(S_{ij}\\) is the encoding for category \\(i\\) and class \\(j\\) , \\(n_{iY_j}\\) is the number of observations with \\(Y=j\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_{Y_j}\\) is the number of observations with \\(Y=j\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) .\n\nFor continuous targets, the formulation is similar to binary classification:\n\n\\[S_i = \\lambda_i\\frac{\\sum_{k\\in L_i}Y_k}{n_i} + (1 - \\lambda_i)\\frac{\\sum_{k=1}^{n}Y_k}{n}\\]\n\nwhere \\(L_i\\) is the set of observations with category \\(i\\) and \\(n_i\\) is the number of observations with category \\(i\\) .\n\nNote\n\nIn TargetEncoder , fit(X, y).transform(X) does not equal fit_transform(X, y) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:010",
+          "metadata": {
+            "end": 1855,
+            "start": 1029,
+            "topic": "preprocessing",
+            "anchor": "target-encoder",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 36624,
+            "unit_start": 33124,
+            "token_count": 348
+          },
+          "score": 21.563058574193924,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "ff9fe26a96956c236143c6d4",
+          "text": ">>> drop_enc = preprocessing.OneHotEncoder(drop='first',\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> drop_enc.transform(X_test).toarray()\narray([[0., 0., 0., 0., 0.]])\n\nAll the categories in X_test are unknown during transform and will be mapped to all zeros. This means that unknown categories will have the same mapping as the dropped category. OneHotEncoder.inverse_transform will map all zeros to the dropped category if a category is dropped and None if a category is not dropped:\n\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary', sparse_output=False,\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> X_trans = drop_enc.transform(X_test)\n>>> X_trans\narray([[0., 0., 0., 0., 0., 0., 0.]])\n>>> drop_enc.inverse_transform(X_trans)\narray([['female', None, None]], dtype=object)",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 3679,
+            "start": 2736,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 328
+          },
+          "score": 52.20774381220437,
+          "rank": 1
+        },
+        {
+          "id": "207194442b83993e19b98d5c",
+          "text": "When 'handle_unknown' is set to 'infrequent_if_exist' and an unknown category is encountered in transform:\n\nIf infrequent category support was not configured or there was no infrequent category during training, the resulting one-hot encoded columns for this feature will be all zeros. In the inverse transform, an unknown category will be denoted as None .\n\nIf there is an infrequent category during training, the unknown category will be considered infrequent. In the inverse transform, ‘infrequent_sklearn’ will be used to represent the infrequent category.\n\nInfrequent categories can also be configured using max_categories . In the following example, we set max_categories=2 to limit the number of features in the output. This will result in all but the 'cat' category to be considered infrequent, leading to two features, one for 'cat' and one for infrequent categories - which are all the others:\n\n>>> enc = preprocessing.OneHotEncoder(max_categories=2, sparse_output=False)\n>>> enc = enc.fit(X)\n>>> enc.transform([['dog'], ['cat'], ['rabbit'], ['snake']])\narray([[0., 1.],\n       [1., 0.],\n       [0., 1.],\n       [0., 1.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:009",
+          "metadata": {
+            "end": 1944,
+            "start": 813,
+            "topic": "preprocessing",
+            "anchor": "infrequent-categories",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33122,
+            "unit_start": 29596,
+            "token_count": 322
+          },
+          "score": 39.87182205914361,
+          "rank": 2
+        },
+        {
+          "id": "13e7836b593ada9e9f446bee",
+          "text": ">>> X = [['male', 'US', 'Safari'],\n...      ['female', 'Europe', 'Firefox'],\n...      ['female', 'Asia', 'Chrome']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['Asia', 'Europe', 'US'], dtype=object),\n array(['Chrome', 'Firefox', 'Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 0., 0., 1., 0., 0., 1.],\n       [0., 0., 1., 0., 0., 1., 0.],\n       [0., 1., 0., 0., 1., 0., 0.]])\n\nIn the transformed X , the first column is the encoding of the feature with categories “male”/”female”, while the remaining 6 columns are the encoding of the 2 features with respectively 3 categories each.\n\nWhen handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 2734,
+            "start": 1926,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 320
+          },
+          "score": 31.65004124563145,
+          "rank": 3
+        },
+        {
+          "id": "b1bf3ea45527639040fce8b8",
+          "text": "If there is a possibility that the training data might have missing categorical features, it can often be better to specify handle_unknown='infrequent_if_exist' instead of setting the categories manually as above. When handle_unknown='infrequent_if_exist' is specified and unknown categories are encountered during transform, no error will be raised but the resulting one-hot encoded columns for this feature will be all zeros or considered as an infrequent category if enabled. ( handle_unknown='infrequent_if_exist' is only supported for one-hot encoding):\n\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> enc.transform([['female', 'from Asia', 'uses Chrome']]).toarray()\narray([[1., 0., 0., 0., 0., 0.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 894,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 288
+          },
+          "score": 28.814122316292472,
+          "rank": 4
+        },
+        {
+          "id": "cb623dd1ad021dc015f4726a",
+          "text": ">>> X = np.array([['dog'] * 5 + ['cat'] * 20 + ['rabbit'] * 10 +\n...               ['snake'] * 3], dtype=object).T\n>>> enc = preprocessing.OrdinalEncoder(min_frequency=6).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[2.],\n       [0.],\n       [1.],\n       [2.]])\n\nOrdinalEncoder ’s max_categories do not take into account missing or unknown categories. Setting unknown_value or encoded_missing_value to an integer will increase the number of unique integer codes by one each. This can result in up to max_categories + 2 integer codes. In the following example, “a” and “d” are considered infrequent and grouped together into a single category, “b” and “c” are their own categories, unknown values are encoded as 3 and missing values are encoded as 4.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:008",
+          "metadata": {
+            "end": 2938,
+            "start": 2078,
+            "topic": "preprocessing",
+            "anchor": "infrequent-categories",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29594,
+            "unit_start": 26087,
+            "token_count": 287
+          },
+          "score": 28.68189650505018,
+          "rank": 5
+        },
+        {
+          "id": "9d4efc36e7690da44a60568c",
+          "text": "\\[S_{ij} = \\lambda_i\\frac{n_{iY_j}}{n_i} + (1 - \\lambda_i)\\frac{n_{Y_j}}{n}\\]\n\nwhere \\(S_{ij}\\) is the encoding for category \\(i\\) and class \\(j\\) , \\(n_{iY_j}\\) is the number of observations with \\(Y=j\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_{Y_j}\\) is the number of observations with \\(Y=j\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) .\n\nFor continuous targets, the formulation is similar to binary classification:\n\n\\[S_i = \\lambda_i\\frac{\\sum_{k\\in L_i}Y_k}{n_i} + (1 - \\lambda_i)\\frac{\\sum_{k=1}^{n}Y_k}{n}\\]\n\nwhere \\(L_i\\) is the set of observations with category \\(i\\) and \\(n_i\\) is the number of observations with category \\(i\\) .\n\nNote\n\nIn TargetEncoder , fit(X, y).transform(X) does not equal fit_transform(X, y) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:010",
+          "metadata": {
+            "end": 1855,
+            "start": 1029,
+            "topic": "preprocessing",
+            "anchor": "target-encoder",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 36624,
+            "unit_start": 33124,
+            "token_count": 348
+          },
+          "score": 21.563058574193924,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.008251400002336595
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "13e7836b593ada9e9f446bee",
+      "context": [
+        {
+          "id": "13e7836b593ada9e9f446bee",
+          "text": ">>> X = [['male', 'US', 'Safari'],\n...      ['female', 'Europe', 'Firefox'],\n...      ['female', 'Asia', 'Chrome']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['Asia', 'Europe', 'US'], dtype=object),\n array(['Chrome', 'Firefox', 'Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 0., 0., 1., 0., 0., 1.],\n       [0., 0., 1., 0., 0., 1., 0.],\n       [0., 1., 0., 0., 1., 0., 0.]])\n\nIn the transformed X , the first column is the encoding of the feature with categories “male”/”female”, while the remaining 6 columns are the encoding of the 2 features with respectively 3 categories each.\n\nWhen handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 2734,
+            "start": 1926,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 320
+          }
+        },
+        {
+          "id": "4da5c9d0aaf3ed46706871db",
+          "text": "It is also possible to encode each column into n_categories - 1 columns instead of n_categories columns by using the drop parameter. This parameter allows the user to specify a category for each feature to be dropped. This is useful to avoid co-linearity in the input matrix in some classifiers. Such functionality is useful, for example, when using non-regularized regression ( LinearRegression ), since co-linearity would cause the covariance matrix to be non-invertible:\n\n>>> X = [['male', 'from US', 'uses Safari'],\n...      ['female', 'from Europe', 'uses Firefox']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='first').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object),\n array(['uses Firefox', 'uses Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 1., 1.],\n       [0., 0., 0.]])\n\nOne might want to drop one of the two columns only for features with 2 categories. In this case, you can set the parameter drop='if_binary' .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 1924,
+            "start": 896,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 326
+          }
+        },
+        {
+          "id": "b1bf3ea45527639040fce8b8",
+          "text": "If there is a possibility that the training data might have missing categorical features, it can often be better to specify handle_unknown='infrequent_if_exist' instead of setting the categories manually as above. When handle_unknown='infrequent_if_exist' is specified and unknown categories are encountered during transform, no error will be raised but the resulting one-hot encoded columns for this feature will be all zeros or considered as an infrequent category if enabled. ( handle_unknown='infrequent_if_exist' is only supported for one-hot encoding):\n\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> enc.transform([['female', 'from Asia', 'uses Chrome']]).toarray()\narray([[1., 0., 0., 0., 0., 0.]])",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 894,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 288
+          }
+        },
+        {
+          "id": "ff9fe26a96956c236143c6d4",
+          "text": ">>> drop_enc = preprocessing.OneHotEncoder(drop='first',\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> drop_enc.transform(X_test).toarray()\narray([[0., 0., 0., 0., 0.]])\n\nAll the categories in X_test are unknown during transform and will be mapped to all zeros. This means that unknown categories will have the same mapping as the dropped category. OneHotEncoder.inverse_transform will map all zeros to the dropped category if a category is dropped and None if a category is not dropped:\n\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary', sparse_output=False,\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> X_trans = drop_enc.transform(X_test)\n>>> X_trans\narray([[0., 0., 0., 0., 0., 0., 0.]])\n>>> drop_enc.inverse_transform(X_trans)\narray([['female', None, None]], dtype=object)",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:007",
+          "metadata": {
+            "end": 3679,
+            "start": 2736,
+            "topic": "preprocessing",
+            "anchor": "encoding-categorical-features",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 26085,
+            "unit_start": 22406,
+            "token_count": 328
+          }
+        }
+      ],
+      "seconds": 0.001378699998895172
+    }
+  ],
+  "context": [
+    {
+      "id": "ff9fe26a96956c236143c6d4",
+      "text": ">>> drop_enc = preprocessing.OneHotEncoder(drop='first',\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> drop_enc.transform(X_test).toarray()\narray([[0., 0., 0., 0., 0.]])\n\nAll the categories in X_test are unknown during transform and will be mapped to all zeros. This means that unknown categories will have the same mapping as the dropped category. OneHotEncoder.inverse_transform will map all zeros to the dropped category if a category is dropped and None if a category is not dropped:\n\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary', sparse_output=False,\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> X_trans = drop_enc.transform(X_test)\n>>> X_trans\narray([[0., 0., 0., 0., 0., 0., 0.]])\n>>> drop_enc.inverse_transform(X_trans)\narray([['female', None, None]], dtype=object)",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 3679,
+        "start": 2736,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 328
+      }
+    },
+    {
+      "id": "207194442b83993e19b98d5c",
+      "text": "When 'handle_unknown' is set to 'infrequent_if_exist' and an unknown category is encountered in transform:\n\nIf infrequent category support was not configured or there was no infrequent category during training, the resulting one-hot encoded columns for this feature will be all zeros. In the inverse transform, an unknown category will be denoted as None .\n\nIf there is an infrequent category during training, the unknown category will be considered infrequent. In the inverse transform, ‘infrequent_sklearn’ will be used to represent the infrequent category.\n\nInfrequent categories can also be configured using max_categories . In the following example, we set max_categories=2 to limit the number of features in the output. This will result in all but the 'cat' category to be considered infrequent, leading to two features, one for 'cat' and one for infrequent categories - which are all the others:\n\n>>> enc = preprocessing.OneHotEncoder(max_categories=2, sparse_output=False)\n>>> enc = enc.fit(X)\n>>> enc.transform([['dog'], ['cat'], ['rabbit'], ['snake']])\narray([[0., 1.],\n       [1., 0.],\n       [0., 1.],\n       [0., 1.]])",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:009",
+      "metadata": {
+        "end": 1944,
+        "start": 813,
+        "topic": "preprocessing",
+        "anchor": "infrequent-categories",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 33122,
+        "unit_start": 29596,
+        "token_count": 322
+      },
+      "score": 39.87182205914361,
+      "rank": 2
+    },
+    {
+      "id": "13e7836b593ada9e9f446bee",
+      "text": ">>> X = [['male', 'US', 'Safari'],\n...      ['female', 'Europe', 'Firefox'],\n...      ['female', 'Asia', 'Chrome']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['Asia', 'Europe', 'US'], dtype=object),\n array(['Chrome', 'Firefox', 'Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 0., 0., 1., 0., 0., 1.],\n       [0., 0., 1., 0., 0., 1., 0.],\n       [0., 1., 0., 0., 1., 0., 0.]])\n\nIn the transformed X , the first column is the encoding of the feature with categories “male”/”female”, while the remaining 6 columns are the encoding of the 2 features with respectively 3 categories each.\n\nWhen handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 2734,
+        "start": 1926,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 320
+      }
+    },
+    {
+      "id": "b1bf3ea45527639040fce8b8",
+      "text": "If there is a possibility that the training data might have missing categorical features, it can often be better to specify handle_unknown='infrequent_if_exist' instead of setting the categories manually as above. When handle_unknown='infrequent_if_exist' is specified and unknown categories are encountered during transform, no error will be raised but the resulting one-hot encoded columns for this feature will be all zeros or considered as an infrequent category if enabled. ( handle_unknown='infrequent_if_exist' is only supported for one-hot encoding):\n\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> enc.transform([['female', 'from Asia', 'uses Chrome']]).toarray()\narray([[1., 0., 0., 0., 0., 0.]])",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 894,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 288
+      }
+    },
+    {
+      "id": "cb623dd1ad021dc015f4726a",
+      "text": ">>> X = np.array([['dog'] * 5 + ['cat'] * 20 + ['rabbit'] * 10 +\n...               ['snake'] * 3], dtype=object).T\n>>> enc = preprocessing.OrdinalEncoder(min_frequency=6).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[2.],\n       [0.],\n       [1.],\n       [2.]])\n\nOrdinalEncoder ’s max_categories do not take into account missing or unknown categories. Setting unknown_value or encoded_missing_value to an integer will increase the number of unique integer codes by one each. This can result in up to max_categories + 2 integer codes. In the following example, “a” and “d” are considered infrequent and grouped together into a single category, “b” and “c” are their own categories, unknown values are encoded as 3 and missing values are encoded as 4.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:008",
+      "metadata": {
+        "end": 2938,
+        "start": 2078,
+        "topic": "preprocessing",
+        "anchor": "infrequent-categories",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29594,
+        "unit_start": 26087,
+        "token_count": 287
+      },
+      "score": 28.68189650505018,
+      "rank": 5
+    },
+    {
+      "id": "9d4efc36e7690da44a60568c",
+      "text": "\\[S_{ij} = \\lambda_i\\frac{n_{iY_j}}{n_i} + (1 - \\lambda_i)\\frac{n_{Y_j}}{n}\\]\n\nwhere \\(S_{ij}\\) is the encoding for category \\(i\\) and class \\(j\\) , \\(n_{iY_j}\\) is the number of observations with \\(Y=j\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_{Y_j}\\) is the number of observations with \\(Y=j\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) .\n\nFor continuous targets, the formulation is similar to binary classification:\n\n\\[S_i = \\lambda_i\\frac{\\sum_{k\\in L_i}Y_k}{n_i} + (1 - \\lambda_i)\\frac{\\sum_{k=1}^{n}Y_k}{n}\\]\n\nwhere \\(L_i\\) is the set of observations with category \\(i\\) and \\(n_i\\) is the number of observations with category \\(i\\) .\n\nNote\n\nIn TargetEncoder , fit(X, y).transform(X) does not equal fit_transform(X, y) .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:010",
+      "metadata": {
+        "end": 1855,
+        "start": 1029,
+        "topic": "preprocessing",
+        "anchor": "target-encoder",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 36624,
+        "unit_start": 33124,
+        "token_count": 348
+      },
+      "score": 21.563058574193924,
+      "rank": 6
+    },
+    {
+      "id": "4da5c9d0aaf3ed46706871db",
+      "text": "It is also possible to encode each column into n_categories - 1 columns instead of n_categories columns by using the drop parameter. This parameter allows the user to specify a category for each feature to be dropped. This is useful to avoid co-linearity in the input matrix in some classifiers. Such functionality is useful, for example, when using non-regularized regression ( LinearRegression ), since co-linearity would cause the covariance matrix to be non-invertible:\n\n>>> X = [['male', 'from US', 'uses Safari'],\n...      ['female', 'from Europe', 'uses Firefox']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='first').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object),\n array(['uses Firefox', 'uses Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 1., 1.],\n       [0., 0., 0.]])\n\nOne might want to drop one of the two columns only for features with 2 categories. In this case, you can set the parameter drop='if_binary' .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 1924,
+        "start": 896,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 326
+      }
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:23.782673+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 514,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 74,
+        "output_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "total_tokens": 588
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:28.083457+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3210,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 125,
+        "output_tokens_details": {
+          "reasoning_tokens": 90
+        },
+        "total_tokens": 3335
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:31.741943+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 4938,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 236,
+        "output_tokens_details": {
+          "reasoning_tokens": 118
+        },
+        "total_tokens": 5174
+      }
+    }
+  ],
+  "seconds": 10.63340959999914,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q03",
+  "initial_ranking": [
+    {
+      "id": "ff9fe26a96956c236143c6d4",
+      "text": ">>> drop_enc = preprocessing.OneHotEncoder(drop='first',\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> drop_enc.transform(X_test).toarray()\narray([[0., 0., 0., 0., 0.]])\n\nAll the categories in X_test are unknown during transform and will be mapped to all zeros. This means that unknown categories will have the same mapping as the dropped category. OneHotEncoder.inverse_transform will map all zeros to the dropped category if a category is dropped and None if a category is not dropped:\n\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary', sparse_output=False,\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> X_trans = drop_enc.transform(X_test)\n>>> X_trans\narray([[0., 0., 0., 0., 0., 0., 0.]])\n>>> drop_enc.inverse_transform(X_trans)\narray([['female', None, None]], dtype=object)",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 3679,
+        "start": 2736,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 328
+      },
+      "score": 40.73885001176727,
+      "rank": 1
+    },
+    {
+      "id": "207194442b83993e19b98d5c",
+      "text": "When 'handle_unknown' is set to 'infrequent_if_exist' and an unknown category is encountered in transform:\n\nIf infrequent category support was not configured or there was no infrequent category during training, the resulting one-hot encoded columns for this feature will be all zeros. In the inverse transform, an unknown category will be denoted as None .\n\nIf there is an infrequent category during training, the unknown category will be considered infrequent. In the inverse transform, ‘infrequent_sklearn’ will be used to represent the infrequent category.\n\nInfrequent categories can also be configured using max_categories . In the following example, we set max_categories=2 to limit the number of features in the output. This will result in all but the 'cat' category to be considered infrequent, leading to two features, one for 'cat' and one for infrequent categories - which are all the others:\n\n>>> enc = preprocessing.OneHotEncoder(max_categories=2, sparse_output=False)\n>>> enc = enc.fit(X)\n>>> enc.transform([['dog'], ['cat'], ['rabbit'], ['snake']])\narray([[0., 1.],\n       [1., 0.],\n       [0., 1.],\n       [0., 1.]])",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:009",
+      "metadata": {
+        "end": 1944,
+        "start": 813,
+        "topic": "preprocessing",
+        "anchor": "infrequent-categories",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 33122,
+        "unit_start": 29596,
+        "token_count": 322
+      },
+      "score": 34.27978545184685,
+      "rank": 2
+    },
+    {
+      "id": "13e7836b593ada9e9f446bee",
+      "text": ">>> X = [['male', 'US', 'Safari'],\n...      ['female', 'Europe', 'Firefox'],\n...      ['female', 'Asia', 'Chrome']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['Asia', 'Europe', 'US'], dtype=object),\n array(['Chrome', 'Firefox', 'Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 0., 0., 1., 0., 0., 1.],\n       [0., 0., 1., 0., 0., 1., 0.],\n       [0., 1., 0., 0., 1., 0., 0.]])\n\nIn the transformed X , the first column is the encoding of the feature with categories “male”/”female”, while the remaining 6 columns are the encoding of the 2 features with respectively 3 categories each.\n\nWhen handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 2734,
+        "start": 1926,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 320
+      },
+      "score": 30.785252842651822,
+      "rank": 3
+    },
+    {
+      "id": "b1bf3ea45527639040fce8b8",
+      "text": "If there is a possibility that the training data might have missing categorical features, it can often be better to specify handle_unknown='infrequent_if_exist' instead of setting the categories manually as above. When handle_unknown='infrequent_if_exist' is specified and unknown categories are encountered during transform, no error will be raised but the resulting one-hot encoded columns for this feature will be all zeros or considered as an infrequent category if enabled. ( handle_unknown='infrequent_if_exist' is only supported for one-hot encoding):\n\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> enc.transform([['female', 'from Asia', 'uses Chrome']]).toarray()\narray([[1., 0., 0., 0., 0., 0.]])",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:007",
+      "metadata": {
+        "end": 894,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "encoding-categorical-features",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 26085,
+        "unit_start": 22406,
+        "token_count": 288
+      },
+      "score": 27.31985289117639,
+      "rank": 4
+    },
+    {
+      "id": "c775493aa85dd45ca3e95542",
+      "text": "For the binary classification target, the target encoding is given by:\n\n\\[S_i = \\lambda_i\\frac{n_{iY}}{n_i} + (1 - \\lambda_i)\\frac{n_Y}{n}\\]\n\nwhere \\(S_i\\) is the encoding for category \\(i\\) , \\(n_{iY}\\) is the number of observations with \\(Y=1\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_Y\\) is the number of observations with \\(Y=1\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) . The shrinkage factor is given by:\n\n\\[\\lambda_i = \\frac{n_i}{m + n_i}\\]\n\nwhere \\(m\\) is a smoothing factor, which is controlled with the smooth parameter in TargetEncoder . Large smoothing factors will put more weight on the global mean. When smooth=\"auto\" , the smoothing factor is computed as an empirical Bayes estimate: \\(m=\\sigma_i^2/\\tau^2\\) , where \\(\\sigma_i^2\\) is the variance of y with category \\(i\\) and \\(\\tau^2\\) is the global variance of y .\n\nFor multiclass classification targets, the formulation is similar to binary classification:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:010",
+      "metadata": {
+        "end": 1027,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "target-encoder",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 36624,
+        "unit_start": 33124,
+        "token_count": 343
+      },
+      "score": 20.81806845555548,
+      "rank": 5
+    },
+    {
+      "id": "cb623dd1ad021dc015f4726a",
+      "text": ">>> X = np.array([['dog'] * 5 + ['cat'] * 20 + ['rabbit'] * 10 +\n...               ['snake'] * 3], dtype=object).T\n>>> enc = preprocessing.OrdinalEncoder(min_frequency=6).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[2.],\n       [0.],\n       [1.],\n       [2.]])\n\nOrdinalEncoder ’s max_categories do not take into account missing or unknown categories. Setting unknown_value or encoded_missing_value to an integer will increase the number of unique integer codes by one each. This can result in up to max_categories + 2 integer codes. In the following example, “a” and “d” are considered infrequent and grouped together into a single category, “b” and “c” are their own categories, unknown values are encoded as 3 and missing values are encoded as 4.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:008",
+      "metadata": {
+        "end": 2938,
+        "start": 2078,
+        "topic": "preprocessing",
+        "anchor": "infrequent-categories",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29594,
+        "unit_start": 26087,
+        "token_count": 287
+      },
+      "score": 20.48589298743703,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

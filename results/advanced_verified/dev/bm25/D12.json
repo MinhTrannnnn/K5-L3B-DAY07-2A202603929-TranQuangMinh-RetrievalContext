@@ -1,0 +1,964 @@
+{
+  "status": "answered",
+  "answer": "It envisions China reaching the median GDP per capita of developed nations by 2035, thereby greatly expanding the middle class [wdr-p034-text-001]. The overview also describes this as achieving the median GDP per capita of developed nations by 2035 with a large increase in the middle class [wdr-p066-text-001].",
+  "citations": [
+    "wdr-p034-text-001",
+    "wdr-p066-text-001"
+  ],
+  "question": "What does China’s 14th Five-Year Plan envision for 2035, as described in the overview?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "China 14th Five-Year Plan overview 2035 envision overview",
+      "results": [
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.451154923911865,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p034-text-001",
+          "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 18.727020773373496,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p033-text-000",
+          "text": "Overview:\nMaking a Miracle\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "33",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 33,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "1"
+          },
+          "score": 13.834968803959038,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.606465484069357,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p037-text-002",
+          "text": "\never-stronger headwinds. They are contending    infusion.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 5\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "37",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 37,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.341813033427378,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p043-text-002",
+          "text": "Success seems to come most quickly to societ-    tudes and personal preferences are supportive\nies that balance the economic forces of creation,    of high carbon consumption, and political pres-\npreservation, and destruction.                        sure groups represent carbon-intensive interests.\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 11\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 43,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.722607871317287,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p051-text-002",
+          "text": " abuse\nket if they had expanded.25 Blanket support for    of dominance by established incumbents. As\nsmall firms can curtail the exit of unproductive   economies (or sectors) move closer to the tech-\nsmall businesses, perpetuate smallness, crowd out    nology frontier, competition agencies will need\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 19\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "51",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 51,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.453567553355219,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p041-text-003",
+          "text": " their skills to work across    technology transfer for domestic ventures. One\nthe European Union, opening another channel   example is the adaptation of Norwegian salmon\nto infusing global knowledge into the Polish    farming technologies to local conditions, making\neconomy.                                        Chile a leading world exporter of salmon.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 9\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "41",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 41,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.40992354665449,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p045-text-002",
+          "text": "the installed capacity of renewable energy.12         mists. In the summer of 1987, Philippe Aghion, a\n  Although  advances  in  low-carbon  energy   new professor at the Massachusetts Institute of\ncan help to decouple economic growth from    Technology (MIT), and Peter Howitt, a Canadian\ncarbon emissions, the diffusion of low-carbon    economist,  formalized  a  theory  of  creative\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 13\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "45",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 45,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.950908758209298,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p057-text-002",
+          "text": " middle-income\nas  middle-income  countries  ramp  up  the           countries  account  for  93  percent  of\nsophistication of their economies by switching            explicit fossil fuel subsidies.49 A promising\nto 2i and 3i strategies and expand their use of          approach  is to consider the concept of\nartificial intelligence and machine learning, their            total carbon price (TCP) to assess the\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 25\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "57",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 57,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.871390592488954,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.451154923911865,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p034-text-001",
+          "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 18.727020773373496,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p033-text-000",
+          "text": "Overview:\nMaking a Miracle\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "33",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 33,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "1"
+          },
+          "score": 13.834968803959038,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p039-text-001",
+          "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "39",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 39,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.606465484069357,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p037-text-002",
+          "text": "\never-stronger headwinds. They are contending    infusion.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 5\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "37",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 37,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.341813033427378,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p043-text-002",
+          "text": "Success seems to come most quickly to societ-    tudes and personal preferences are supportive\nies that balance the economic forces of creation,    of high carbon consumption, and political pres-\npreservation, and destruction.                        sure groups represent carbon-intensive interests.\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 11\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 43,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.722607871317287,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p051-text-002",
+          "text": " abuse\nket if they had expanded.25 Blanket support for    of dominance by established incumbents. As\nsmall firms can curtail the exit of unproductive   economies (or sectors) move closer to the tech-\nsmall businesses, perpetuate smallness, crowd out    nology frontier, competition agencies will need\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 19\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "51",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 51,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.453567553355219,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p041-text-003",
+          "text": " their skills to work across    technology transfer for domestic ventures. One\nthe European Union, opening another channel   example is the adaptation of Norwegian salmon\nto infusing global knowledge into the Polish    farming technologies to local conditions, making\neconomy.                                        Chile a leading world exporter of salmon.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 9\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "41",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 41,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.40992354665449,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p045-text-002",
+          "text": "the installed capacity of renewable energy.12         mists. In the summer of 1987, Philippe Aghion, a\n  Although  advances  in  low-carbon  energy   new professor at the Massachusetts Institute of\ncan help to decouple economic growth from    Technology (MIT), and Peter Howitt, a Canadian\ncarbon emissions, the diffusion of low-carbon    economist,  formalized  a  theory  of  creative\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 13\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "45",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 45,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.950908758209298,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p057-text-002",
+          "text": " middle-income\nas  middle-income  countries  ramp  up  the           countries  account  for  93  percent  of\nsophistication of their economies by switching            explicit fossil fuel subsidies.49 A promising\nto 2i and 3i strategies and expand their use of          approach  is to consider the concept of\nartificial intelligence and machine learning, their            total carbon price (TCP) to assess the\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 25\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "57",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 57,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.871390592488954,
+          "rank": 10
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.008875200001057237
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by the evidence: China’s 14th Five-Year Plan envisions reaching the median GDP per capita of developed nations by 2035 and greatly expanding the middle class."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.451154923911865,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p034-text-001",
+      "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.727020773373496,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p033-text-000",
+      "text": "Overview:\nMaking a Miracle\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "33",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 33,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "1"
+      },
+      "score": 13.834968803959038,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p039-text-001",
+      "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 39,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 13.606465484069357,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p037-text-002",
+      "text": "\never-stronger headwinds. They are contending    infusion.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 5\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "37",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 37,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 13.341813033427378,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p043-text-002",
+      "text": "Success seems to come most quickly to societ-    tudes and personal preferences are supportive\nies that balance the economic forces of creation,    of high carbon consumption, and political pres-\npreservation, and destruction.                        sure groups represent carbon-intensive interests.\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 11\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 43,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 11.722607871317287,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p051-text-002",
+      "text": " abuse\nket if they had expanded.25 Blanket support for    of dominance by established incumbents. As\nsmall firms can curtail the exit of unproductive   economies (or sectors) move closer to the tech-\nsmall businesses, perpetuate smallness, crowd out    nology frontier, competition agencies will need\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 19\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "51",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 51,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 11.453567553355219,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p041-text-003",
+      "text": " their skills to work across    technology transfer for domestic ventures. One\nthe European Union, opening another channel   example is the adaptation of Norwegian salmon\nto infusing global knowledge into the Polish    farming technologies to local conditions, making\neconomy.                                        Chile a leading world exporter of salmon.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 9\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "41",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 41,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 11.40992354665449,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p045-text-002",
+      "text": "the installed capacity of renewable energy.12         mists. In the summer of 1987, Philippe Aghion, a\n  Although  advances  in  low-carbon  energy   new professor at the Massachusetts Institute of\ncan help to decouple economic growth from    Technology (MIT), and Peter Howitt, a Canadian\ncarbon emissions, the diffusion of low-carbon    economist,  formalized  a  theory  of  creative\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 13\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "45",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 45,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 10.950908758209298,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p057-text-002",
+      "text": " middle-income\nas  middle-income  countries  ramp  up  the           countries  account  for  93  percent  of\nsophistication of their economies by switching            explicit fossil fuel subsidies.49 A promising\nto 2i and 3i strategies and expand their use of          approach  is to consider the concept of\nartificial intelligence and machine learning, their            total carbon price (TCP) to assess the\n\n                                                          OVERVIEW: MAKING A MIRACLE   | 25\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "57",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 57,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 10.871390592488954,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:44:47.308847+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 515,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 91,
+        "output_tokens_details": {
+          "reasoning_tokens": 60
+        },
+        "total_tokens": 606
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:51.319091+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3493,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 264,
+        "output_tokens_details": {
+          "reasoning_tokens": 156
+        },
+        "total_tokens": 3757
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:55.354949+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3168,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 338,
+        "output_tokens_details": {
+          "reasoning_tokens": 282
+        },
+        "total_tokens": 3506
+      }
+    }
+  ],
+  "seconds": 10.518868799998017,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D12",
+  "initial_ranking": [
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 28.099206929107673,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p034-text-001",
+      "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 26.997977331296298,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p070-text-000",
+      "text": "Box 1.1 Misunderstanding through misclassification (continued)\n\n        annually in US dollars based on a three-year average exchange rate and were expanded to\n        four categories:\n\n          •  Low-income. The low-income threshold was officially set in 1988, still based on the\n            value of the IDA’s “civil works preference” and updated for inflation.d\n          •  Lower-middle-income. The lower-middle-income threshold is based on the oper­\n             ational guidelines cutoff for determining access to 17-year repayment terms for\n            loans through the World Bank Group’s International Bank for Reconstruction and\n          Development (IBRD), although these terms are no longer available. It appears to\n           have first been introduced in the 1983 edition of the World Development Report.e\n          •  Upper-middle-income. The upper-middle-income threshold  is the range between\n            lower-​middle-income and high-income.\n          •  High-income. The high-income threshold does not relate to a cutoff derived from\n            the operational guidelines, but was set at GNI per capita of US$6,000 in 1987 prices\n              in a paper presented to the World Bank’s Board of Executive Directors in January\n            1989, which also reconfirmed the low- and lower-­middle-income threshold levels.f\n          The US$6,000 level has been updated over time for what is called “international infla­\n               tion,” defined as the average inflation rates of Japan, the United Kingdom, the United\n             States, and the euro area. The choice of the high-income threshold was made to\n            address anomalies in the classification of high-income and industrialized economies\n           used in the World Bank’s World Development Indicators prior to that point.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "70",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 70,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.03485873043093,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p039-text-001",
+      "text": "the Republic of Korea, and Poland—illustrate    innovation policies. Korea was among the least\nthese ideas (figure O.5).                           developed countries globally in the early 1960s,\n   Korea’s success may be the best support for the    with income per capita of less than US$1,200 in\nargument that sustaining high growth requires    1960. By 2023, after an unparalleled five-decade\nadding infusion to accelerations of investment,   run of high output growth, Korea’s income per\nand then again augmenting the 2i mix with    capita had risen to about US$33,000.\n\n                                                           OVERVIEW: MAKING A MIRACLE   | 7\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "39",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 39,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.016435226567403,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p071-text-002",
+      "text": "high-income country. Yet when adjusted for    countries in the production of tradable as well as\npurchasing power, Türkiye’s GDP per capita    nontradable goods and services, including infra­\nis higher than Chile’s. The country for which    structure, health care, and education.\nboth measures are defined as identical is the      However, recent assessments of PPPs appear\nUnited States because purchasing power in any    to be highly correlated with economic activity.\ncountry is measured relative to what a dollar   A ­comparison  of  countries using PPP  adjust­\ncan buy in the United States. Türkiye’s GDP   ments could produce a better understanding of\nper capita relative to that of the United States    the distance to the technology frontier than gross\nis nearly 50 percent when adjusted for PPP but    national income. However, income or GDP per\nless than 15 percent using market exchange    capita does not reflect the wide array of growth\nrates. For Chile, the numbers are, respectively,     ­challenges that countries face. Two high-income\n40 percent and 20 percent.                         countries provide an example. In 2022, Qatar’s\n  PPP adjustments have been criticized for their   GDP per capita was US$88,046, driven mostly by\ninability to reflect the complexity and diversity    exports of hydrocarbons from its abundant reserves\nof economic production and capabilities in indi­    of oil and natural gas. The same year, Denmark’s\nvidual economies.12 The adjustments do not con­   GDP per capita was US$66,983, and its services sec­\nsider quality or productivity differences among    tor employs about 80 percent of labor. Meanwhile,\n\n                                                             Slowing Growth   | 39\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "71",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 71,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 16.62908298903982,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p223-text-001",
+      "text": "Source: WDR 2024 team calculations based on data of UIS.Stat (dashboard), Institute for Statistics, United Nations\nEducational, Scientific, and Cultural Organization, Montreal, http://data.uis.unesco.org/.\nNote: Solid lines show averages for countries that were middle-income countries in the early 1990s and transitioned to\nhigh-income status any time before 2019 (23 countries for enrollment rates and 15 countries for completion rates). Dashed\nlines indicate the current average for middle-income countries that have not yet transitioned. Gross enrollment rate is the\nratio of total enrollment, regardless of age, to the population of the official age group for the education level. Completion\nrate is the percentage of individuals three to five years older than the theoretical age of completion of the level’s last grade\nwho have completed the level’s last grade. For countries that have transitioned, data are for 1981–2022 for enrollment\nrates and 1990–2021 for completion rates. The number of years since graduation is computed as the calendar year minus\ntransition year. For countries not yet transitioned, data are for the most recent year available. HICs = high-income countries;\nMICs = middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "223",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 223,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 16.207518664012564,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p239-text-001",
+      "text": "43 of the world’s most promi­\ntional and technical capabilities. A good starting    nent economists, including 27 Nobel Laureates,\npoint is fiscal policies. These can be surgically    issued a statement published in the Wall Street\nsharp if designed with care. The discussion that    Journal (2019) arguing that a carbon tax in the\n\n      Box 8.5 Productivity growth can slow deforestation in Brazil\n\n          Brazil’s Amazon region provides the world with immense ecosystem services. Estimates\n       peg the services to be worth, at a minimum, US$317 billion a year, US$210 billion of which\n           is accounted for by carbon dioxide (storage) alone.a Deforestation is among Brazil’s lead­\n         ing sources of greenhouse gas emissions and a major threat to biodiversity.b In fact, eco­\n       system collapse in the Amazon stemming from deforestation and climate change ranks\n      among the most catastrophic tipping points for the planet.c In response, Brazil has made\n      much progress in protecting the Amazon, improving forest and land governance by means\n          of, for example, the Action Plan for the Prevention and Control of Deforestation in the\n        Legal Amazon, first launched in 2004 and most recently reinvigorated in 2023.\n        And yet Brazil’s growth model also matters for the Amazon. The fact that it remains\n       anchored in factor accumulation and land accumulation is synonymous with agricultural\n         frontier expansion and deforestation. To overcome the middle-income trap Brazil will have\n        to raise productivity—and growing through productivity rather than factor expansion\n       would also slow deforestation.d Indeed, there is a strong relationship between Brazilian\n         productivity and the change in forest cover in the country’s Amazon (figure B8.5.1).\n\n                                                                                                  (Box continues next page)\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "239",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 239,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.271875948946757,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p234-text-000",
+      "text": "Figure 8.4 Improvements in allocative efficiency in Chile, China, and India have been driven by\nreducing productivity-dependent distortions\n\n     1.3\n\n     1.2 acceleration\ngrowth\nof   1.1\nyear\nﬁrst\nto   1.0\nRelative\n     0.9\n        0                  5                  10                  15                  20\n\n                    Number of years since ﬁrst year of growth acceleration\n\n                                                Chile     China      India\n\nSource: WDR 2024 team based on the methodology in Hsieh and Klenow (2009).\nNote: The first year in each country’s growth acceleration covered by the firm-level data is 1980 in Chile, 1998 in China, and\n2000 in India. Each line in the figure illustrates the evolution of the gap between observed total factor productivity (TFP) in a\ncountry relative to the potential TFP if resources had been allocated efficiently across firms, normalized by the gap observed\nat the beginning of the sample in 1998.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "234",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 234,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 14.84506452754406,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p067-text-002",
+      "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 14.836100388808363,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p234-chart-00-000",
+      "text": "Figure 8.4\nLine chart titled: \"Improvements in allocative efficiency in Chile, China, and India have been driven by reducing productivity-dependent distortions.\" X-axis: \"Number of years since first year of growth acceleration\" from 0 to 20, with plotted data shown roughly from year 1 to year 17. Y-axis: \"Relative to first year of growth acceleration\" from 0.9 to 1.3. Legend shows three series: Chile (orange), China (dark blue), India (teal). All series start at about 1.0 in year 1. Chile rises gradually to about 1.05 by year 3, about 1.09 by year 4, peaks around 1.14–1.15 near year 6, then fluctuates around 1.09–1.14 through year 17, ending near 1.14. China dips slightly below 1.0 around years 2–4 (lowest near 0.97), then climbs steadily to about 1.08 by years 6–8, around 1.10 near year 9, and ends around 1.08 by year 10. India drops to about 0.93 near year 2, rebounds sharply to about 1.09 near year 3, peaks around 1.21 near year 5, then oscillates mostly between about 1.05 and 1.18, with another local high around 1.18 near year 7 and values near 1.10–1.12 in the later years, ending around 1.10 by year 16. Source note: WDR 2024 team based on Hsieh and Klenow (2009). Note: first year in each country's growth acceleration covered by the firm-level data is 1980 in Chile, 1998 in China, and 2000 in India. Each line illustrates the evolution of the gap between observed total factor productivity (TFP) in a country relative to the potential TFP if resources had been allocated efficiently across firms, normalized by the gap observed at the beginning of the sample in 1998.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "234",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-234.png",
+        "label": "Figure 8.4",
+        "pdf_page": 234,
+        "visual_id": "wdr-p234-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact year-by-year plotted values are not fully legible from the image and are described approximately.",
+          "The title and note text are transcribed from the visible figure and may differ in minor punctuation from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 14.824612269541767,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

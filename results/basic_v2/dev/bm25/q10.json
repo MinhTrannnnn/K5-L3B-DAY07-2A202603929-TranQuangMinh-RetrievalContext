@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "The splitter is **GroupKFold**. It “ensures that the same group is not represented in both testing and training sets,” including cases where samples come from different subjects. [ba7dfa66b6f9c432c10567fd]",
+  "citations": [
+    "ba7dfa66b6f9c432c10567fd"
+  ],
+  "question": "Which cross-validation splitter prevents samples belonging to the same subject or group from appearing in both training and testing?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "cross-validation splitter prevents samples belonging to the same subject or group from appearing in both training and testing same subject group train test splitter documentation",
+      "results": [
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 53.33391533018146,
+          "rank": 1
+        },
+        {
+          "id": "7af8cbe9f80addd6cf8a5e89",
+          "text": "3.1.2.4.3. Leave One Group Out\n\nLeaveOneGroupOut is a cross-validation scheme where each split holds out samples belonging to one specific group. Group information is provided via an array that encodes the group of each sample.\n\nEach training set is thus constituted by all the samples except the ones related to a specific group. This is the same as LeavePGroupsOut with n_groups=1 and the same as GroupKFold with n_splits equal to the number of unique labels passed to the groups parameter.\n\nFor example, in the cases of multiple experiments, LeaveOneGroupOut can be used to create a cross-validation based on the different experiments: we create a training set using the samples of all the experiments except one:\n\n>>> from sklearn.model_selection import LeaveOneGroupOut\n\n>>> X = [1, 5, 10, 50, 60, 70, 80]\n>>> y = [0, 1, 1, 2, 2, 2, 2]\n>>> groups = [1, 1, 2, 2, 3, 3, 3]\n>>> logo = LeaveOneGroupOut()\n>>> for train, test in logo.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[2 3 4 5 6] [0 1]\n[0 1 4 5 6] [2 3]\n[0 1 2 3] [4 5 6]\n\nAnother common application is to use time information: for instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:008",
+          "metadata": {
+            "end": 1317,
+            "start": 73,
+            "topic": "model_selection",
+            "anchor": "leave-one-group-out",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.3. Leave One Group Out",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29046,
+            "unit_start": 25505,
+            "token_count": 349
+          },
+          "score": 40.15439680923696,
+          "rank": 2
+        },
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 38.86772997050902,
+          "rank": 3
+        },
+        {
+          "id": "0bb6f20a717fb25827e5ea05",
+          "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:008",
+          "metadata": {
+            "end": 3541,
+            "start": 3167,
+            "topic": "model_selection",
+            "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29046,
+            "unit_start": 25505,
+            "token_count": 82
+          },
+          "score": 32.61640413167864,
+          "rank": 4
+        },
+        {
+          "id": "7588e68f0dae408810b538a2",
+          "text": "3.1.2.1. Cross-validation iterators for i.i.d. data\n\nAssuming that some data is Independent and Identically Distributed (i.i.d.) is making the assumption that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.\n\nThe following cross-validators can be used in such cases.\n\nNote\n\nWhile i.i.d. data is a common assumption in machine learning theory, it rarely holds in practice. If one knows that the samples have been generated using a time-dependent process, it is safer to use a time-series aware cross-validation scheme . Similarly, if we know that the generative process has a group structure (samples collected from different subjects, experiments, measurement devices), it is safer to use group-wise cross-validation .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 1042,
+            "start": 235,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-for-i-i-d-data",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 178
+          },
+          "score": 28.71842684584557,
+          "rank": 5
+        },
+        {
+          "id": "7264d38c5f3cc123f905ac1f",
+          "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 3601,
+            "start": 2629,
+            "topic": "model_selection",
+            "anchor": "stratifiedgroupkfold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 189
+          },
+          "score": 26.168827822050183,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 53.33391533018146,
+          "rank": 1
+        },
+        {
+          "id": "7af8cbe9f80addd6cf8a5e89",
+          "text": "3.1.2.4.3. Leave One Group Out\n\nLeaveOneGroupOut is a cross-validation scheme where each split holds out samples belonging to one specific group. Group information is provided via an array that encodes the group of each sample.\n\nEach training set is thus constituted by all the samples except the ones related to a specific group. This is the same as LeavePGroupsOut with n_groups=1 and the same as GroupKFold with n_splits equal to the number of unique labels passed to the groups parameter.\n\nFor example, in the cases of multiple experiments, LeaveOneGroupOut can be used to create a cross-validation based on the different experiments: we create a training set using the samples of all the experiments except one:\n\n>>> from sklearn.model_selection import LeaveOneGroupOut\n\n>>> X = [1, 5, 10, 50, 60, 70, 80]\n>>> y = [0, 1, 1, 2, 2, 2, 2]\n>>> groups = [1, 1, 2, 2, 3, 3, 3]\n>>> logo = LeaveOneGroupOut()\n>>> for train, test in logo.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[2 3 4 5 6] [0 1]\n[0 1 4 5 6] [2 3]\n[0 1 2 3] [4 5 6]\n\nAnother common application is to use time information: for instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:008",
+          "metadata": {
+            "end": 1317,
+            "start": 73,
+            "topic": "model_selection",
+            "anchor": "leave-one-group-out",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.3. Leave One Group Out",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29046,
+            "unit_start": 25505,
+            "token_count": 349
+          },
+          "score": 40.15439680923696,
+          "rank": 2
+        },
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 38.86772997050902,
+          "rank": 3
+        },
+        {
+          "id": "0bb6f20a717fb25827e5ea05",
+          "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:008",
+          "metadata": {
+            "end": 3541,
+            "start": 3167,
+            "topic": "model_selection",
+            "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29046,
+            "unit_start": 25505,
+            "token_count": 82
+          },
+          "score": 32.61640413167864,
+          "rank": 4
+        },
+        {
+          "id": "7588e68f0dae408810b538a2",
+          "text": "3.1.2.1. Cross-validation iterators for i.i.d. data\n\nAssuming that some data is Independent and Identically Distributed (i.i.d.) is making the assumption that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.\n\nThe following cross-validators can be used in such cases.\n\nNote\n\nWhile i.i.d. data is a common assumption in machine learning theory, it rarely holds in practice. If one knows that the samples have been generated using a time-dependent process, it is safer to use a time-series aware cross-validation scheme . Similarly, if we know that the generative process has a group structure (samples collected from different subjects, experiments, measurement devices), it is safer to use group-wise cross-validation .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 1042,
+            "start": 235,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-for-i-i-d-data",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 178
+          },
+          "score": 28.71842684584557,
+          "rank": 5
+        },
+        {
+          "id": "7264d38c5f3cc123f905ac1f",
+          "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 3601,
+            "start": 2629,
+            "topic": "model_selection",
+            "anchor": "stratifiedgroupkfold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 189
+          },
+          "score": 26.168827822050183,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.009890400000585942
+    }
+  ],
+  "context": [
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 53.33391533018146,
+      "rank": 1
+    },
+    {
+      "id": "7af8cbe9f80addd6cf8a5e89",
+      "text": "3.1.2.4.3. Leave One Group Out\n\nLeaveOneGroupOut is a cross-validation scheme where each split holds out samples belonging to one specific group. Group information is provided via an array that encodes the group of each sample.\n\nEach training set is thus constituted by all the samples except the ones related to a specific group. This is the same as LeavePGroupsOut with n_groups=1 and the same as GroupKFold with n_splits equal to the number of unique labels passed to the groups parameter.\n\nFor example, in the cases of multiple experiments, LeaveOneGroupOut can be used to create a cross-validation based on the different experiments: we create a training set using the samples of all the experiments except one:\n\n>>> from sklearn.model_selection import LeaveOneGroupOut\n\n>>> X = [1, 5, 10, 50, 60, 70, 80]\n>>> y = [0, 1, 1, 2, 2, 2, 2]\n>>> groups = [1, 1, 2, 2, 3, 3, 3]\n>>> logo = LeaveOneGroupOut()\n>>> for train, test in logo.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[2 3 4 5 6] [0 1]\n[0 1 4 5 6] [2 3]\n[0 1 2 3] [4 5 6]\n\nAnother common application is to use time information: for instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:008",
+      "metadata": {
+        "end": 1317,
+        "start": 73,
+        "topic": "model_selection",
+        "anchor": "leave-one-group-out",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.3. Leave One Group Out",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29046,
+        "unit_start": 25505,
+        "token_count": 349
+      },
+      "score": 40.15439680923696,
+      "rank": 2
+    },
+    {
+      "id": "ba7dfa66b6f9c432c10567fd",
+      "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1080,
+        "start": 145,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 341
+      },
+      "score": 38.86772997050902,
+      "rank": 3
+    },
+    {
+      "id": "0bb6f20a717fb25827e5ea05",
+      "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:008",
+      "metadata": {
+        "end": 3541,
+        "start": 3167,
+        "topic": "model_selection",
+        "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29046,
+        "unit_start": 25505,
+        "token_count": 82
+      },
+      "score": 32.61640413167864,
+      "rank": 4
+    },
+    {
+      "id": "7588e68f0dae408810b538a2",
+      "text": "3.1.2.1. Cross-validation iterators for i.i.d. data\n\nAssuming that some data is Independent and Identically Distributed (i.i.d.) is making the assumption that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.\n\nThe following cross-validators can be used in such cases.\n\nNote\n\nWhile i.i.d. data is a common assumption in machine learning theory, it rarely holds in practice. If one knows that the samples have been generated using a time-dependent process, it is safer to use a time-series aware cross-validation scheme . Similarly, if we know that the generative process has a group structure (samples collected from different subjects, experiments, measurement devices), it is safer to use group-wise cross-validation .",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 1042,
+        "start": 235,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-for-i-i-d-data",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 178
+      },
+      "score": 28.71842684584557,
+      "rank": 5
+    },
+    {
+      "id": "7264d38c5f3cc123f905ac1f",
+      "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 3601,
+        "start": 2629,
+        "topic": "model_selection",
+        "anchor": "stratifiedgroupkfold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 189
+      },
+      "score": 26.168827822050183,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:46.459037+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 514,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 102,
+        "output_tokens_details": {
+          "reasoning_tokens": 58
+        },
+        "total_tokens": 616
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:49.598077+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3193,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "reasoning_tokens": 97
+        },
+        "total_tokens": 3380
+      }
+    }
+  ],
+  "seconds": 5.831596200001513,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q10",
+  "initial_ranking": [
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 37.141780915755376,
+      "rank": 1
+    },
+    {
+      "id": "7af8cbe9f80addd6cf8a5e89",
+      "text": "3.1.2.4.3. Leave One Group Out\n\nLeaveOneGroupOut is a cross-validation scheme where each split holds out samples belonging to one specific group. Group information is provided via an array that encodes the group of each sample.\n\nEach training set is thus constituted by all the samples except the ones related to a specific group. This is the same as LeavePGroupsOut with n_groups=1 and the same as GroupKFold with n_splits equal to the number of unique labels passed to the groups parameter.\n\nFor example, in the cases of multiple experiments, LeaveOneGroupOut can be used to create a cross-validation based on the different experiments: we create a training set using the samples of all the experiments except one:\n\n>>> from sklearn.model_selection import LeaveOneGroupOut\n\n>>> X = [1, 5, 10, 50, 60, 70, 80]\n>>> y = [0, 1, 1, 2, 2, 2, 2]\n>>> groups = [1, 1, 2, 2, 3, 3, 3]\n>>> logo = LeaveOneGroupOut()\n>>> for train, test in logo.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[2 3 4 5 6] [0 1]\n[0 1 4 5 6] [2 3]\n[0 1 2 3] [4 5 6]\n\nAnother common application is to use time information: for instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:008",
+      "metadata": {
+        "end": 1317,
+        "start": 73,
+        "topic": "model_selection",
+        "anchor": "leave-one-group-out",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.3. Leave One Group Out",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29046,
+        "unit_start": 25505,
+        "token_count": 349
+      },
+      "score": 27.241293774202138,
+      "rank": 2
+    },
+    {
+      "id": "ba7dfa66b6f9c432c10567fd",
+      "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1080,
+        "start": 145,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 341
+      },
+      "score": 25.077347111398378,
+      "rank": 3
+    },
+    {
+      "id": "0bb6f20a717fb25827e5ea05",
+      "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:008",
+      "metadata": {
+        "end": 3541,
+        "start": 3167,
+        "topic": "model_selection",
+        "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29046,
+        "unit_start": 25505,
+        "token_count": 82
+      },
+      "score": 22.779814971187594,
+      "rank": 4
+    },
+    {
+      "id": "7588e68f0dae408810b538a2",
+      "text": "3.1.2.1. Cross-validation iterators for i.i.d. data\n\nAssuming that some data is Independent and Identically Distributed (i.i.d.) is making the assumption that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.\n\nThe following cross-validators can be used in such cases.\n\nNote\n\nWhile i.i.d. data is a common assumption in machine learning theory, it rarely holds in practice. If one knows that the samples have been generated using a time-dependent process, it is safer to use a time-series aware cross-validation scheme . Similarly, if we know that the generative process has a group structure (samples collected from different subjects, experiments, measurement devices), it is safer to use group-wise cross-validation .",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 1042,
+        "start": 235,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-for-i-i-d-data",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 178
+      },
+      "score": 22.127479477117532,
+      "rank": 5
+    },
+    {
+      "id": "a9a5158d4c2dcac10e55d285",
+      "text": "3.1.2.4. Cross-validation iterators for grouped data\n\nThe i.i.d. assumption is broken if the underlying generative process yields groups of dependent samples.\n\nSuch a grouping of data is domain specific. An example would be when there is medical data collected from multiple patients, with multiple samples taken from each patient. And such data is likely to be dependent on the individual group. In our example, the patient id for each sample will be its group identifier.\n\nIn this case we would like to know if a model trained on a particular set of groups generalizes well to the unseen groups. To measure this, we need to ensure that all the samples in the validation fold come from groups that are not represented at all in the paired training fold.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 3700,
+        "start": 2946,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-for-grouped-data",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 158
+      },
+      "score": 20.393592743504417,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

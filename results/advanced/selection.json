@@ -1,0 +1,18 @@
+{
+  "method": "bm25",
+  "pipeline": {
+    "model": "gpt-5.4-mini",
+    "embedding_model": "text-embedding-3-large",
+    "dimensions": 1536,
+    "instruction_hash": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "chunks_hash": "02acea395223277814426bac9656ee213ad394c5c069d719ec76915b9295abdf",
+    "storage_code_hash": "9e4c6c9e287f78ca6c174ae54e77b2714feaace5ff6772a0d698ad80bc0b5614",
+    "benchmark_hash": "22d95fae6198de7351625a7feb8208bd6d9b065cd1e85c059aefb2efd7b9ba2c",
+    "top_k": 6,
+    "budget": 6500,
+    "max_rounds": 6
+  },
+  "selected_at": "2026-11-16T15:43:51.584354+00:00",
+  "rule": "Dev assistant-reviewed pass count, then Evidence Hit@3, then lower total agent time.",
+  "human_confirmation": "pending"
+}

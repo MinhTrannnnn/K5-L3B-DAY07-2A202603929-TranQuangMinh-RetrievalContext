@@ -1,0 +1,448 @@
+{
+  "status": "answered",
+  "answer": "Để tắt centering trong StandardScaler, bạn có thể sử dụng với_mean=False khi khởi tạo StandardScaler. Điều này có nghĩa là bạn sẽ không trung bình hóa dữ liệu trước khi áp dụng scaling. Điều này có thể được thấy trong ví dụ sau đây từ tài liệu Scikit-learn:\n[id: S5]\n\n>>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nVì vậy, bạn có thể tắt centering bằng cách sử dụng với_mean=False khi khởi tạo StandardScaler. [5a82e239a3d581954a8ff182]",
+  "citations": [
+    "5a82e239a3d581954a8ff182"
+  ],
+  "question": "Làm sao tắt centering trong StandardScaler?",
+  "corpus": "day6",
+  "config": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "method": "bm25",
+    "top_k": 6,
+    "context_budget_tokens": 3000,
+    "max_searches": 1,
+    "controller": "schema-constrained local tool decisions"
+  },
+  "events": [
+    {
+      "event": "controller",
+      "decision": {
+        "action": "search",
+        "query": "how to disable centering in StandardScaler",
+        "answer": "",
+        "citations": []
+      }
+    },
+    {
+      "event": "search",
+      "tool": "search",
+      "query": "how to disable centering in StandardScaler",
+      "method": "bm25",
+      "filters": {},
+      "results": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 22.808095405991196,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 12.629153199227225,
+          "rank": 2
+        },
+        {
+          "id": "7e74bffd11dca8f35722c5da",
+          "text": "8.3.1.4. Centering kernel matrices\n\nIf you have a kernel matrix of a kernel \\(K\\) that computes a dot product in a feature space (possibly implicitly) defined by a function \\(\\phi(\\cdot)\\) , a KernelCenterer can transform the kernel matrix so that it contains inner products in the feature space defined by \\(\\phi\\) followed by the removal of the mean in that space. In other words, KernelCenterer computes the centered Gram matrix associated to a positive semidefinite kernel \\(K\\) .\n\nWe can have a look at the mathematical formulation now that we have the intuition. Let \\(K\\) be a kernel matrix of shape (n_samples, n_samples) computed from \\(X\\) , a data matrix of shape (n_samples, n_features) , during the fit step. \\(K\\) is defined by\n\n\\[K(X, X) = \\phi(X) . \\phi(X)^{T}\\]\n\n\\(\\phi(X)\\) is a function mapping of \\(X\\) to a Hilbert space. A centered kernel \\(\\tilde{K}\\) is defined as:\n\n\\[\\tilde{K}(X, X) = \\tilde{\\phi}(X) . \\tilde{\\phi}(X)^{T}\\]\n\nwhere \\(\\tilde{\\phi}(X)\\) results from centering \\(\\phi(X)\\) in the Hilbert space.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:003",
+          "metadata": {
+            "end": 2286,
+            "start": 1252,
+            "topic": "preprocessing",
+            "anchor": "centering-kernel-matrices",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.4. Centering kernel matrices",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10705,
+            "unit_start": 7059,
+            "token_count": 339
+          },
+          "score": 8.589198563346805,
+          "rank": 3
+        },
+        {
+          "id": "6dfbf8defc413458a32e6dc3",
+          "text": "See Balance model complexity and cross-validated score for an example of using refit=callable interface in GridSearchCV . The example shows how this interface adds a certain amount of flexibility in identifying the “best” estimator. This interface can also be used in multiple metrics evaluation.\n\nSee Statistical comparison of models using grid search for an example of how to do a statistical comparison on the outputs of GridSearchCV .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 438,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 89
+          },
+          "score": 8.2180894349492,
+          "rank": 4
+        },
+        {
+          "id": "5a82e239a3d581954a8ff182",
+          "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 2764,
+            "start": 1867,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 337
+          },
+          "score": 7.7887220310788345,
+          "rank": 5
+        },
+        {
+          "id": "89fed75e8872f870f13aeb69",
+          "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:003",
+          "metadata": {
+            "end": 1250,
+            "start": 517,
+            "topic": "preprocessing",
+            "anchor": "scaling-data-with-outliers",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10705,
+            "unit_start": 7059,
+            "token_count": 157
+          },
+          "score": 7.7303825594053865,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 22.808095405991196,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 12.629153199227225,
+          "rank": 2
+        },
+        {
+          "id": "7e74bffd11dca8f35722c5da",
+          "text": "8.3.1.4. Centering kernel matrices\n\nIf you have a kernel matrix of a kernel \\(K\\) that computes a dot product in a feature space (possibly implicitly) defined by a function \\(\\phi(\\cdot)\\) , a KernelCenterer can transform the kernel matrix so that it contains inner products in the feature space defined by \\(\\phi\\) followed by the removal of the mean in that space. In other words, KernelCenterer computes the centered Gram matrix associated to a positive semidefinite kernel \\(K\\) .\n\nWe can have a look at the mathematical formulation now that we have the intuition. Let \\(K\\) be a kernel matrix of shape (n_samples, n_samples) computed from \\(X\\) , a data matrix of shape (n_samples, n_features) , during the fit step. \\(K\\) is defined by\n\n\\[K(X, X) = \\phi(X) . \\phi(X)^{T}\\]\n\n\\(\\phi(X)\\) is a function mapping of \\(X\\) to a Hilbert space. A centered kernel \\(\\tilde{K}\\) is defined as:\n\n\\[\\tilde{K}(X, X) = \\tilde{\\phi}(X) . \\tilde{\\phi}(X)^{T}\\]\n\nwhere \\(\\tilde{\\phi}(X)\\) results from centering \\(\\phi(X)\\) in the Hilbert space.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:003",
+          "metadata": {
+            "end": 2286,
+            "start": 1252,
+            "topic": "preprocessing",
+            "anchor": "centering-kernel-matrices",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.4. Centering kernel matrices",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10705,
+            "unit_start": 7059,
+            "token_count": 339
+          },
+          "score": 8.589198563346805,
+          "rank": 3
+        },
+        {
+          "id": "6dfbf8defc413458a32e6dc3",
+          "text": "See Balance model complexity and cross-validated score for an example of using refit=callable interface in GridSearchCV . The example shows how this interface adds a certain amount of flexibility in identifying the “best” estimator. This interface can also be used in multiple metrics evaluation.\n\nSee Statistical comparison of models using grid search for an example of how to do a statistical comparison on the outputs of GridSearchCV .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:002",
+          "metadata": {
+            "end": 438,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7753,
+            "unit_start": 3627,
+            "token_count": 89
+          },
+          "score": 8.2180894349492,
+          "rank": 4
+        },
+        {
+          "id": "5a82e239a3d581954a8ff182",
+          "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 2764,
+            "start": 1867,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 337
+          },
+          "score": 7.7887220310788345,
+          "rank": 5
+        },
+        {
+          "id": "89fed75e8872f870f13aeb69",
+          "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:003",
+          "metadata": {
+            "end": 1250,
+            "start": 517,
+            "topic": "preprocessing",
+            "anchor": "scaling-data-with-outliers",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10705,
+            "unit_start": 7059,
+            "token_count": 157
+          },
+          "score": 7.7303825594053865,
+          "rank": 6
+        }
+      ],
+      "seconds": 0.26433819999874686
+    },
+    {
+      "event": "controller",
+      "decision": {
+        "action": "answer",
+        "query": "Làm sao tắt centering trong StandardScaler?",
+        "answer": "Để tắt centering trong StandardScaler, bạn có thể sử dụng với_mean=False khi khởi tạo StandardScaler. Điều này có nghĩa là bạn sẽ không trung bình hóa dữ liệu trước khi áp dụng scaling. Điều này có thể được thấy trong ví dụ sau đây từ tài liệu Scikit-learn:\n[id: S5]\n\n>>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nVì vậy, bạn có thể tắt centering bằng cách sử dụng với_mean=False khi khởi tạo StandardScaler.",
+        "citations": [
+          "S5"
+        ]
+      }
+    }
+  ],
+  "context": [
+    {
+      "id": "6b968eaff7a08cc385a0cc51",
+      "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 144,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 35
+      },
+      "score": 22.808095405991196,
+      "rank": 1
+    },
+    {
+      "id": "14ce9eb9004fa7a41a3c4cb0",
+      "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 3547,
+        "start": 2774,
+        "topic": "preprocessing",
+        "anchor": "scaling-sparse-data",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 166
+      },
+      "score": 12.629153199227225,
+      "rank": 2
+    },
+    {
+      "id": "7e74bffd11dca8f35722c5da",
+      "text": "8.3.1.4. Centering kernel matrices\n\nIf you have a kernel matrix of a kernel \\(K\\) that computes a dot product in a feature space (possibly implicitly) defined by a function \\(\\phi(\\cdot)\\) , a KernelCenterer can transform the kernel matrix so that it contains inner products in the feature space defined by \\(\\phi\\) followed by the removal of the mean in that space. In other words, KernelCenterer computes the centered Gram matrix associated to a positive semidefinite kernel \\(K\\) .\n\nWe can have a look at the mathematical formulation now that we have the intuition. Let \\(K\\) be a kernel matrix of shape (n_samples, n_samples) computed from \\(X\\) , a data matrix of shape (n_samples, n_features) , during the fit step. \\(K\\) is defined by\n\n\\[K(X, X) = \\phi(X) . \\phi(X)^{T}\\]\n\n\\(\\phi(X)\\) is a function mapping of \\(X\\) to a Hilbert space. A centered kernel \\(\\tilde{K}\\) is defined as:\n\n\\[\\tilde{K}(X, X) = \\tilde{\\phi}(X) . \\tilde{\\phi}(X)^{T}\\]\n\nwhere \\(\\tilde{\\phi}(X)\\) results from centering \\(\\phi(X)\\) in the Hilbert space.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:003",
+      "metadata": {
+        "end": 2286,
+        "start": 1252,
+        "topic": "preprocessing",
+        "anchor": "centering-kernel-matrices",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.4. Centering kernel matrices",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10705,
+        "unit_start": 7059,
+        "token_count": 339
+      },
+      "score": 8.589198563346805,
+      "rank": 3
+    },
+    {
+      "id": "6dfbf8defc413458a32e6dc3",
+      "text": "See Balance model complexity and cross-validated score for an example of using refit=callable interface in GridSearchCV . The example shows how this interface adds a certain amount of flexibility in identifying the “best” estimator. This interface can also be used in multiple metrics evaluation.\n\nSee Statistical comparison of models using grid search for an example of how to do a statistical comparison on the outputs of GridSearchCV .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:002",
+      "metadata": {
+        "end": 438,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7753,
+        "unit_start": 3627,
+        "token_count": 89
+      },
+      "score": 8.2180894349492,
+      "rank": 4
+    },
+    {
+      "id": "5a82e239a3d581954a8ff182",
+      "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 2764,
+        "start": 1867,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 337
+      },
+      "score": 7.7887220310788345,
+      "rank": 5
+    },
+    {
+      "id": "89fed75e8872f870f13aeb69",
+      "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:003",
+      "metadata": {
+        "end": 1250,
+        "start": 517,
+        "topic": "preprocessing",
+        "anchor": "scaling-data-with-outliers",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10705,
+        "unit_start": 7059,
+        "token_count": 157
+      },
+      "score": 7.7303825594053865,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 180,
+      "output_tokens": 35,
+      "total_duration_ns": 2144366600
+    },
+    {
+      "input_tokens": 1514,
+      "output_tokens": 407,
+      "total_duration_ns": 9572612100
+    }
+  ],
+  "seconds": 31.467774400000053,
+  "api_cost_usd": 0,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_student_source_check"
+}

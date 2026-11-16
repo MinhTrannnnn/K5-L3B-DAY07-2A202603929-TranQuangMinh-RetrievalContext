@@ -1,0 +1,17 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": true,
+  "citation_support": [],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "The answer correctly abstains: the sources only define SimpleImputer’s mean/median/most_frequent strategies (impute:001) and MAE as the average absolute difference between true and predicted values (model_evaluation:026), but they provide no private dataset, predictions, or experiment result needed for an exact MAE.",
+  "query_id": "N06",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "1bbce9b55b99db5ecd0d2cb19799a5d83ee0788db14f2c3ae027f612784fac8d"
+}

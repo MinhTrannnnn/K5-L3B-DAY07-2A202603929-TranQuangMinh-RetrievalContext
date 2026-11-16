@@ -1,0 +1,989 @@
+{
+  "status": "answered",
+  "answer": "The report says the 108 middle-income countries are home to about three-fourths of the world’s population, or roughly 75% [wdr-p065-text-000].",
+  "citations": [
+    "wdr-p065-text-000"
+  ],
+  "question": "Approximately how many people live in the middle-income countries discussed by the report?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "middle-income countries discussed by the report people live approximately how many people report middle-income countries population",
+      "results": [
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 26.419132630061036,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p141-text-000",
+          "text": "5\nPreservation\n\n  Key messages\n\n      •  Many middle-income countries have a shortage of talent, a key ingredient for bolstering the\n         forces of creation. Yet the forces of preservation prevent talent from developing as well as\n       waste the existing talent.\n      •  Talent matters more in middle-income countries than in low-income countries because in\n       middle-income countries skilled workers have become increasingly key to their economic,\n         structural, and technological transformation.\n      •  The opportunities for social mobility in middle-income countries are few due to three main\n         forces of preservation: networks, neighborhoods, and norms.\n      •  Networks, such as elite pacts, facilitate the formation of groups that can determine access\n        to jobs, services, and policy making. As a result, they tend to keep in-groups in and out-\n       groups out, devalue talent and merit, perpetuate inequities of opportunity, and depress\n        expectations for upward mobility in middle-income countries.\n      •  Neighborhoods shape the access of those who were born, grew up, and lived there to oppor-\n         tunities and aspirations. In many middle-income countries, neighborhoods keep people\n        stuck in place, impede migration, hinder productive agglomeration, slow knowledge diffu-\n         sion, and block the pathways to scale that efficient small enterprises need to become large\n        productive and innovative firms.\n      •  Norms—particularly patriarchal social norms—can hold back women and other marginal-\n        ized communities from entering the labor force, as well as from benefiting from educational\n        opportunities. In this way, norms prevent the development and growth of talent among half\n        the population of middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "141",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 141,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "109"
+          },
+          "score": 23.965344900837202,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p078-text-001",
+          "text": " Monetary Fund, Washington, DC.\n   and  Ekaterina  Vostroknutova.  Washington,  DC:     Pritchett, Lant H., Kunal Sen, Sabyasachi Kar, and Selim\n   World Bank.                                                Raihan. 2016. “Trillions Gained and Lost: Estimating the\nGill, Indermit Singh, and Homi Kharas. 2015. “The Middle-       Magnitude of Growth Episodes.” Economic Modelling\n   Income Trap Turns Ten.” Policy Research Working       55 (June): 279–91.\n   Paper 7403, World Bank, Washington, DC.                    Ravallion, Martin. 2009. “Do Poorer Countries Have Less\nGrossman, Gene M., and Elhanan Helpman. 1991. Innovation        Capacity for Redistribution?” Policy Research Working\n   and Growth in the Global Economy. Cambridge, MA: MIT       Paper 5046, World Bank, Washington, DC.\n    Press.                                                        Ravallion, Martin. 2012. “Should We Care Equally about\nHamadeh, Nada,  Aart  C.  Kraay,  Eric Metreau, Marko       Poor People Wherever They May Live?”  Let’s Talk\n   Rissanen, Giovanni Tonutti, Catherine Van Rompaey,       Development (blog), November 8, 2012. https://blogs​\n   Mizuku Yamanaka, and Kathryn Young. 2022. “Using        .worldbank.org/en/developmenttalk/should-we-care​\n   Purchasing  Power  Parities  in  the  World  Bank’s        -equally-about-poor-people-wherever-they-may-live.\n    Classifications  of  Countries  by",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "78",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 78,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 23.72075515541556,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p222-text-001",
+          "text": " of energy,    high-income status in recent decades sought\n      and consider the social and ecological    to accumulate human  capital, which begins\n       costs of GHG emissions. Because today’s    with developing foundational skills. As a result,\n      middle-income  countries  account  for    their upper-secondary enrollment and gradu­\n       two-thirds of global GHG emissions and    ation rates, as well as their tertiary education\n         all new emissions growth, they will need    enrollment rates, steadily increased (figure 8.1).\n       to consider all options to decouple their    Countries that did not transition to high-income\n      growing economies from higher GHG    status have attained levels of tertiary education\n       emissions.                                  that are close to the levels achieved by countries\n                                                       at the time of their transition, but enrollment in\nThe economic and social          and completion of upper-secondary education\n                                              have lagged for a wider swath of the population.3\nmobility of people                                               For significant shares of the population in coun­\nThe introduction of global technologies must     tries that have not transitioned to high-income\ngo hand in hand with a search for the technical    status, education stops in the early teen years,\nworkers and specialized professionals needed    or earlier, especially for girls and members of\nfor firms to adopt technologies, along with com­    minorities. Unless these countries secure foun­\npetent managers to run firms. Meanwhile, more    dational skills, their talent pipeline will remain\nengineers are needed to build and maintain    weak.\ninfrastructure, teachers to educate students,    How should  countries  allocate education\ndoctors to treat patients, and highly qualified    spending between foundational and advanced\nmen and women to run governments. Chapter 5     skills?  In  setting  priorities,  countries may\nhighlighted that middle-income countries face  ",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "222",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 222,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 23.075792405103016,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p070-text-001",
+          "text": "         Under this current classification method, Zambia (with income per capita of US$1,170)\n       and Bulgaria (with income per capita of US$13,250) are both middle-income economies.\n       But few people would disagree with the observation that these countries have had vastly\n         different development experiences and face vastly different growth challenges and tra­\n         jectories. Yet these income classifications continue to be used widely in the development\n        discourseg and in analyses of economic growth.h Moreover, although the World Bank may\n        not use the income classifications for operational or lending purposes,i other international\n        organizations and bilateral aid agencies do. Given its widespread use, many economists\n       have called for a revision of the current income classification system.j The proposals\n         include:\n\n          •  Reclassifying levels based on fiscal capacity. Ravallion (2009) argues that levels of devel­\n          opment should be assessed based on countries’ internal capacities for redistribution\n            (through taxes) in favor of their poorest citizens. Similarly, Ceriani and Verme (2014)\n           propose a measure of a country’s capacity to reduce its own poverty levels and show\n         how these tools can be used to guide budget or aid allocations.\n          •  Reflecting the multidimensional nature of development. Sumner and Vázquez (2012)\n           use a set of indicators covering definitions of development from four conceptual\n           frameworks (development as structural transformation; development as human\n           development; development as democratic participation and good governance; and\n           development as sustainability) to identify five types of developing countries. Similarly,\n\n                                                                                                  (Box continues next page)\n\n38   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "70",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 70,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.700979412213247,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p035-text-000",
+          "text": "2010 to US$7,000 by 2030. Other middle-income    considered the world’s economic leader; people\ncountries have similar aspirations.                    living in countries with incomes higher than those\n    If these plans succeed, your country will reach    of Americans add up to fewer than 25 million.\nhigh-income status in less than one generation,    Since 1970 the mean income per capita of middle-\nor in one or two. Your firms will be earning like   income countries has never risen above one-tenth\nnever before. Your people will be consuming like    that of the United States (figure O.1).\nnever before. Far fewer people will be poor, with     Compared with the United States, middle-­\nnone desperately poor. In the halls of government,   income countries seem trapped at modest income\nthese plans generate tremendous optimism.            levels.\n  But there is a problem.                       The observed rates of economic growth in\n  According to widely used measures such as    middle-income countries do not exceed those in\nthe World Bank’s World Development Indicators,    high-income countries by the margins needed\nyou see that economic growth in middle-income    to catch up in one generation—or even two or\ncountries—including your own—is not acceler-    three. Estimates using the World Bank’s Long\nating. If anything, it is slowing down as incomes   Term Growth Model, which is based on the cel-\nincrease—and even more so every decade.           ebrated Solow-Swan growth model, suggest that\n  Moreover, your country  is not catching up      if the drivers of economic growth—investments\nwith the income levels in advanced economies.    in human capital, total factor productivity, labor\nAmong those economies, the United States is still    force participation, and the shares of economic\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.55548367895805,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 26.419132630061036,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p141-text-000",
+          "text": "5\nPreservation\n\n  Key messages\n\n      •  Many middle-income countries have a shortage of talent, a key ingredient for bolstering the\n         forces of creation. Yet the forces of preservation prevent talent from developing as well as\n       waste the existing talent.\n      •  Talent matters more in middle-income countries than in low-income countries because in\n       middle-income countries skilled workers have become increasingly key to their economic,\n         structural, and technological transformation.\n      •  The opportunities for social mobility in middle-income countries are few due to three main\n         forces of preservation: networks, neighborhoods, and norms.\n      •  Networks, such as elite pacts, facilitate the formation of groups that can determine access\n        to jobs, services, and policy making. As a result, they tend to keep in-groups in and out-\n       groups out, devalue talent and merit, perpetuate inequities of opportunity, and depress\n        expectations for upward mobility in middle-income countries.\n      •  Neighborhoods shape the access of those who were born, grew up, and lived there to oppor-\n         tunities and aspirations. In many middle-income countries, neighborhoods keep people\n        stuck in place, impede migration, hinder productive agglomeration, slow knowledge diffu-\n         sion, and block the pathways to scale that efficient small enterprises need to become large\n        productive and innovative firms.\n      •  Norms—particularly patriarchal social norms—can hold back women and other marginal-\n        ized communities from entering the labor force, as well as from benefiting from educational\n        opportunities. In this way, norms prevent the development and growth of talent among half\n        the population of middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "141",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 141,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "109"
+          },
+          "score": 23.965344900837202,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p078-text-001",
+          "text": " Monetary Fund, Washington, DC.\n   and  Ekaterina  Vostroknutova.  Washington,  DC:     Pritchett, Lant H., Kunal Sen, Sabyasachi Kar, and Selim\n   World Bank.                                                Raihan. 2016. “Trillions Gained and Lost: Estimating the\nGill, Indermit Singh, and Homi Kharas. 2015. “The Middle-       Magnitude of Growth Episodes.” Economic Modelling\n   Income Trap Turns Ten.” Policy Research Working       55 (June): 279–91.\n   Paper 7403, World Bank, Washington, DC.                    Ravallion, Martin. 2009. “Do Poorer Countries Have Less\nGrossman, Gene M., and Elhanan Helpman. 1991. Innovation        Capacity for Redistribution?” Policy Research Working\n   and Growth in the Global Economy. Cambridge, MA: MIT       Paper 5046, World Bank, Washington, DC.\n    Press.                                                        Ravallion, Martin. 2012. “Should We Care Equally about\nHamadeh, Nada,  Aart  C.  Kraay,  Eric Metreau, Marko       Poor People Wherever They May Live?”  Let’s Talk\n   Rissanen, Giovanni Tonutti, Catherine Van Rompaey,       Development (blog), November 8, 2012. https://blogs​\n   Mizuku Yamanaka, and Kathryn Young. 2022. “Using        .worldbank.org/en/developmenttalk/should-we-care​\n   Purchasing  Power  Parities  in  the  World  Bank’s        -equally-about-poor-people-wherever-they-may-live.\n    Classifications  of  Countries  by",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "78",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 78,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 23.72075515541556,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p222-text-001",
+          "text": " of energy,    high-income status in recent decades sought\n      and consider the social and ecological    to accumulate human  capital, which begins\n       costs of GHG emissions. Because today’s    with developing foundational skills. As a result,\n      middle-income  countries  account  for    their upper-secondary enrollment and gradu­\n       two-thirds of global GHG emissions and    ation rates, as well as their tertiary education\n         all new emissions growth, they will need    enrollment rates, steadily increased (figure 8.1).\n       to consider all options to decouple their    Countries that did not transition to high-income\n      growing economies from higher GHG    status have attained levels of tertiary education\n       emissions.                                  that are close to the levels achieved by countries\n                                                       at the time of their transition, but enrollment in\nThe economic and social          and completion of upper-secondary education\n                                              have lagged for a wider swath of the population.3\nmobility of people                                               For significant shares of the population in coun­\nThe introduction of global technologies must     tries that have not transitioned to high-income\ngo hand in hand with a search for the technical    status, education stops in the early teen years,\nworkers and specialized professionals needed    or earlier, especially for girls and members of\nfor firms to adopt technologies, along with com­    minorities. Unless these countries secure foun­\npetent managers to run firms. Meanwhile, more    dational skills, their talent pipeline will remain\nengineers are needed to build and maintain    weak.\ninfrastructure, teachers to educate students,    How should  countries  allocate education\ndoctors to treat patients, and highly qualified    spending between foundational and advanced\nmen and women to run governments. Chapter 5     skills?  In  setting  priorities,  countries may\nhighlighted that middle-income countries face  ",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "222",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 222,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 23.075792405103016,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p070-text-001",
+          "text": "         Under this current classification method, Zambia (with income per capita of US$1,170)\n       and Bulgaria (with income per capita of US$13,250) are both middle-income economies.\n       But few people would disagree with the observation that these countries have had vastly\n         different development experiences and face vastly different growth challenges and tra­\n         jectories. Yet these income classifications continue to be used widely in the development\n        discourseg and in analyses of economic growth.h Moreover, although the World Bank may\n        not use the income classifications for operational or lending purposes,i other international\n        organizations and bilateral aid agencies do. Given its widespread use, many economists\n       have called for a revision of the current income classification system.j The proposals\n         include:\n\n          •  Reclassifying levels based on fiscal capacity. Ravallion (2009) argues that levels of devel­\n          opment should be assessed based on countries’ internal capacities for redistribution\n            (through taxes) in favor of their poorest citizens. Similarly, Ceriani and Verme (2014)\n           propose a measure of a country’s capacity to reduce its own poverty levels and show\n         how these tools can be used to guide budget or aid allocations.\n          •  Reflecting the multidimensional nature of development. Sumner and Vázquez (2012)\n           use a set of indicators covering definitions of development from four conceptual\n           frameworks (development as structural transformation; development as human\n           development; development as democratic participation and good governance; and\n           development as sustainability) to identify five types of developing countries. Similarly,\n\n                                                                                                  (Box continues next page)\n\n38   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "70",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 70,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.700979412213247,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p035-text-000",
+          "text": "2010 to US$7,000 by 2030. Other middle-income    considered the world’s economic leader; people\ncountries have similar aspirations.                    living in countries with incomes higher than those\n    If these plans succeed, your country will reach    of Americans add up to fewer than 25 million.\nhigh-income status in less than one generation,    Since 1970 the mean income per capita of middle-\nor in one or two. Your firms will be earning like   income countries has never risen above one-tenth\nnever before. Your people will be consuming like    that of the United States (figure O.1).\nnever before. Far fewer people will be poor, with     Compared with the United States, middle-­\nnone desperately poor. In the halls of government,   income countries seem trapped at modest income\nthese plans generate tremendous optimism.            levels.\n  But there is a problem.                       The observed rates of economic growth in\n  According to widely used measures such as    middle-income countries do not exceed those in\nthe World Bank’s World Development Indicators,    high-income countries by the margins needed\nyou see that economic growth in middle-income    to catch up in one generation—or even two or\ncountries—including your own—is not acceler-    three. Estimates using the World Bank’s Long\nating. If anything, it is slowing down as incomes   Term Growth Model, which is based on the cel-\nincrease—and even more so every decade.           ebrated Solow-Swan growth model, suggest that\n  Moreover, your country  is not catching up      if the drivers of economic growth—investments\nwith the income levels in advanced economies.    in human capital, total factor productivity, labor\nAmong those economies, the United States is still    force participation, and the shares of economic\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.55548367895805,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.016983899997285334
+    },
+    {
+      "event": "search",
+      "query": "World Development Report 2024 middle-income countries about three-fourths of the world's population 108 countries account for nearly 40 percent global economic activity",
+      "results": [
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 51.205569377219376,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 38.50867916492686,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p036-text-000",
+          "text": "output devoted to public and  private  invest-   which countries are firmly considered upper-\nment—follow recent and historic trends, most    middle-income. A systematic slowdown in growth\nmiddle-income countries are likely to experience    then  occurs.  Development  strategies  relying\nsignifi­cant slowdowns between 2024 and 2100.    largely on capital accumulation that served these\nCountries such as Brazil and Mexico are likely to    countries well in their low-income phase, for many\nbe even further behind the United States in 2100    even during  their lower-middle-income phase\nthan they are today.                            between US$1,136 and US$4,465—begin to yield\n                                                diminishing returns. Strategies based on factor\n                                               accumulation alone are likely to steadily worsen\nOne trap or two?                                                 results—a natural occurrence as the marginal\nThe World Bank presently classifies 108 countries    productivity of capital declines.\nas “middle-income”—that is, those with annual     To see why, consider this: if capital endowments\nincome per capita ranging from US$1,136 to    were the only economically relevant difference\nUS$13,845.1 These countries are critical to long-   between   ­middle-income   and   high-income\nterm global prosperity. They account for nearly    countries today, the GDP per capita of a typical\n40 percent of global economic activity, more than    middle-income country would have been nearly\n60 percent of people living in extreme poverty,    three-quarters of that of the United States in\nand more than 60 percent of global carbon diox-    2019 (figure O.2). In fact, it is about one-fifth that\nide (CO2) emissions (table O.1).                       of the United States. Its growth prospects now\n   Developing economies change in structure as",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 38.505193207336404,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p200-text-002",
+          "text": "market with a 90 percent market share. In Poland,   SOEs are the largest providers of energy finance—\nfour companies—Polska Grupa  Energetyczna    accounting for 60 percent of energy investment\n(PGE), Tauron  Polska  Energia,  Energa, and     (figure 7.9). A concern is that SOEs account for\nEnea—­control nearly three-fourths of the mar-   50 percent of fossil fuel power investment glob-\nket share in electricity production, with PGE     ally, notably due to expanding coal plants in India\n­holding 40 percent. Poland’s transmission grid is   and South Africa and gas plants in the Middle\nowned and operated by state-owned Polskie Sieci    East and North Africa.\nElektroenergetyczne.14 SOEs use their dominant     SOEs can block entry of new market players\nposition to thwart entrants and protect their    using their outsize market share and control of\nmarkets by blocking technological change.          the grid. To compete for customers, rival firms\n  SOEs are also significant investors in energy,   need access to the grid controlled by a large\ncontributing 36 percent of global energy invest-    incumbent. Thus access pricing becomes import-\nment. In low- and middle-income  countries,    ant. Access prices are set by the sectoral regulator.\n\n168   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "200",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 200,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 34.74662447275675,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 34.03845692101976,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p107-text-002",
+          "text": "Climate action                                                  countries (figure 3.5). Energy intensity (panel a)\nFossil fuels—coal, oil, and natural gas—are the    in middle-income countries is about double that\nmajor contributors to global climate change,    in high-income countries, and the carbon inten­\naccounting for over three-fourths of total green­     sity of their energy consumption (panel b) is also\nhouse gas emissions and about 90 percent of car­     ­relatively inefficient.\nbon dioxide (CO2) emissions.16 The International      At the same time, reliable cheap energy is\nEnergy Agency has announced that achieving     ­critical to supporting industrial activities and\nnet zero emissions by 2050 will require reduc­   powering businesses. It is also correlated with\ning between 2020 and 2050 the global demand    higher living standards. But over 300 million\nfor coal by 90 percent, oil by 75 percent, and    ­people in middle-income countries  still lack\nnatural gas by 55 percent.17 Therefore, climate    access to ­electricity. Moreover, blackouts and\naction—measures to mitigate climate change—   brownouts  are common  in  middle-­income\nrequires changing the way energy is produced    countries. As energy demand rises with income,\nand consumed.                                expanding access to  reliable energy  will be\n  Because  middle-income   countries   pres­    as  critical  as  ­transitioning  to lower-carbon\nently account for about two-thirds of global    energy.18\nCO2 emissions, their decarbonization is mate­      Today, energy  transition technologies con­\nrial to the world’s ability to meet its climate     stitute the largest investment gap. Significant\ngoals. Today, both energy intensity and car­    resources are needed to scale",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "107",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 107,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 32.220508952970846,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p063-text-000",
+          "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "63",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 63,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 51.205569377219376,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p065-text-000",
+          "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "65",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 65,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": "33"
+          },
+          "score": 38.50867916492686,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p036-text-000",
+          "text": "output devoted to public and  private  invest-   which countries are firmly considered upper-\nment—follow recent and historic trends, most    middle-income. A systematic slowdown in growth\nmiddle-income countries are likely to experience    then  occurs.  Development  strategies  relying\nsignifi­cant slowdowns between 2024 and 2100.    largely on capital accumulation that served these\nCountries such as Brazil and Mexico are likely to    countries well in their low-income phase, for many\nbe even further behind the United States in 2100    even during  their lower-middle-income phase\nthan they are today.                            between US$1,136 and US$4,465—begin to yield\n                                                diminishing returns. Strategies based on factor\n                                               accumulation alone are likely to steadily worsen\nOne trap or two?                                                 results—a natural occurrence as the marginal\nThe World Bank presently classifies 108 countries    productivity of capital declines.\nas “middle-income”—that is, those with annual     To see why, consider this: if capital endowments\nincome per capita ranging from US$1,136 to    were the only economically relevant difference\nUS$13,845.1 These countries are critical to long-   between   ­middle-income   and   high-income\nterm global prosperity. They account for nearly    countries today, the GDP per capita of a typical\n40 percent of global economic activity, more than    middle-income country would have been nearly\n60 percent of people living in extreme poverty,    three-quarters of that of the United States in\nand more than 60 percent of global carbon diox-    2019 (figure O.2). In fact, it is about one-fifth that\nide (CO2) emissions (table O.1).                       of the United States. Its growth prospects now\n   Developing economies change in structure as",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 38.505193207336404,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p200-text-002",
+          "text": "market with a 90 percent market share. In Poland,   SOEs are the largest providers of energy finance—\nfour companies—Polska Grupa  Energetyczna    accounting for 60 percent of energy investment\n(PGE), Tauron  Polska  Energia,  Energa, and     (figure 7.9). A concern is that SOEs account for\nEnea—­control nearly three-fourths of the mar-   50 percent of fossil fuel power investment glob-\nket share in electricity production, with PGE     ally, notably due to expanding coal plants in India\n­holding 40 percent. Poland’s transmission grid is   and South Africa and gas plants in the Middle\nowned and operated by state-owned Polskie Sieci    East and North Africa.\nElektroenergetyczne.14 SOEs use their dominant     SOEs can block entry of new market players\nposition to thwart entrants and protect their    using their outsize market share and control of\nmarkets by blocking technological change.          the grid. To compete for customers, rival firms\n  SOEs are also significant investors in energy,   need access to the grid controlled by a large\ncontributing 36 percent of global energy invest-    incumbent. Thus access pricing becomes import-\nment. In low- and middle-income  countries,    ant. Access prices are set by the sectoral regulator.\n\n168   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "200",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 200,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 34.74662447275675,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 34.03845692101976,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p107-text-002",
+          "text": "Climate action                                                  countries (figure 3.5). Energy intensity (panel a)\nFossil fuels—coal, oil, and natural gas—are the    in middle-income countries is about double that\nmajor contributors to global climate change,    in high-income countries, and the carbon inten­\naccounting for over three-fourths of total green­     sity of their energy consumption (panel b) is also\nhouse gas emissions and about 90 percent of car­     ­relatively inefficient.\nbon dioxide (CO2) emissions.16 The International      At the same time, reliable cheap energy is\nEnergy Agency has announced that achieving     ­critical to supporting industrial activities and\nnet zero emissions by 2050 will require reduc­   powering businesses. It is also correlated with\ning between 2020 and 2050 the global demand    higher living standards. But over 300 million\nfor coal by 90 percent, oil by 75 percent, and    ­people in middle-income countries  still lack\nnatural gas by 55 percent.17 Therefore, climate    access to ­electricity. Moreover, blackouts and\naction—measures to mitigate climate change—   brownouts  are common  in  middle-­income\nrequires changing the way energy is produced    countries. As energy demand rises with income,\nand consumed.                                expanding access to  reliable energy  will be\n  Because  middle-income   countries   pres­    as  critical  as  ­transitioning  to lower-carbon\nently account for about two-thirds of global    energy.18\nCO2 emissions, their decarbonization is mate­      Today, energy  transition technologies con­\nrial to the world’s ability to meet its climate     stitute the largest investment gap. Significant\ngoals. Today, both energy intensity and car­    resources are needed to scale",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "107",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 107,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 32.220508952970846,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.014018900001246948
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p063-text-000",
+      "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 51.205569377219376,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p141-text-000",
+      "text": "5\nPreservation\n\n  Key messages\n\n      •  Many middle-income countries have a shortage of talent, a key ingredient for bolstering the\n         forces of creation. Yet the forces of preservation prevent talent from developing as well as\n       waste the existing talent.\n      •  Talent matters more in middle-income countries than in low-income countries because in\n       middle-income countries skilled workers have become increasingly key to their economic,\n         structural, and technological transformation.\n      •  The opportunities for social mobility in middle-income countries are few due to three main\n         forces of preservation: networks, neighborhoods, and norms.\n      •  Networks, such as elite pacts, facilitate the formation of groups that can determine access\n        to jobs, services, and policy making. As a result, they tend to keep in-groups in and out-\n       groups out, devalue talent and merit, perpetuate inequities of opportunity, and depress\n        expectations for upward mobility in middle-income countries.\n      •  Neighborhoods shape the access of those who were born, grew up, and lived there to oppor-\n         tunities and aspirations. In many middle-income countries, neighborhoods keep people\n        stuck in place, impede migration, hinder productive agglomeration, slow knowledge diffu-\n         sion, and block the pathways to scale that efficient small enterprises need to become large\n        productive and innovative firms.\n      •  Norms—particularly patriarchal social norms—can hold back women and other marginal-\n        ized communities from entering the labor force, as well as from benefiting from educational\n        opportunities. In this way, norms prevent the development and growth of talent among half\n        the population of middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "141",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 141,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "109"
+      },
+      "score": 23.965344900837202,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p078-text-001",
+      "text": " Monetary Fund, Washington, DC.\n   and  Ekaterina  Vostroknutova.  Washington,  DC:     Pritchett, Lant H., Kunal Sen, Sabyasachi Kar, and Selim\n   World Bank.                                                Raihan. 2016. “Trillions Gained and Lost: Estimating the\nGill, Indermit Singh, and Homi Kharas. 2015. “The Middle-       Magnitude of Growth Episodes.” Economic Modelling\n   Income Trap Turns Ten.” Policy Research Working       55 (June): 279–91.\n   Paper 7403, World Bank, Washington, DC.                    Ravallion, Martin. 2009. “Do Poorer Countries Have Less\nGrossman, Gene M., and Elhanan Helpman. 1991. Innovation        Capacity for Redistribution?” Policy Research Working\n   and Growth in the Global Economy. Cambridge, MA: MIT       Paper 5046, World Bank, Washington, DC.\n    Press.                                                        Ravallion, Martin. 2012. “Should We Care Equally about\nHamadeh, Nada,  Aart  C.  Kraay,  Eric Metreau, Marko       Poor People Wherever They May Live?”  Let’s Talk\n   Rissanen, Giovanni Tonutti, Catherine Van Rompaey,       Development (blog), November 8, 2012. https://blogs​\n   Mizuku Yamanaka, and Kathryn Young. 2022. “Using        .worldbank.org/en/developmenttalk/should-we-care​\n   Purchasing  Power  Parities  in  the  World  Bank’s        -equally-about-poor-people-wherever-they-may-live.\n    Classifications  of  Countries  by",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "78",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 78,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 23.72075515541556,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p222-text-001",
+      "text": " of energy,    high-income status in recent decades sought\n      and consider the social and ecological    to accumulate human  capital, which begins\n       costs of GHG emissions. Because today’s    with developing foundational skills. As a result,\n      middle-income  countries  account  for    their upper-secondary enrollment and gradu­\n       two-thirds of global GHG emissions and    ation rates, as well as their tertiary education\n         all new emissions growth, they will need    enrollment rates, steadily increased (figure 8.1).\n       to consider all options to decouple their    Countries that did not transition to high-income\n      growing economies from higher GHG    status have attained levels of tertiary education\n       emissions.                                  that are close to the levels achieved by countries\n                                                       at the time of their transition, but enrollment in\nThe economic and social          and completion of upper-secondary education\n                                              have lagged for a wider swath of the population.3\nmobility of people                                               For significant shares of the population in coun­\nThe introduction of global technologies must     tries that have not transitioned to high-income\ngo hand in hand with a search for the technical    status, education stops in the early teen years,\nworkers and specialized professionals needed    or earlier, especially for girls and members of\nfor firms to adopt technologies, along with com­    minorities. Unless these countries secure foun­\npetent managers to run firms. Meanwhile, more    dational skills, their talent pipeline will remain\nengineers are needed to build and maintain    weak.\ninfrastructure, teachers to educate students,    How should  countries  allocate education\ndoctors to treat patients, and highly qualified    spending between foundational and advanced\nmen and women to run governments. Chapter 5     skills?  In  setting  priorities,  countries may\nhighlighted that middle-income countries face  ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "222",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 222,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 23.075792405103016,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p070-text-001",
+      "text": "         Under this current classification method, Zambia (with income per capita of US$1,170)\n       and Bulgaria (with income per capita of US$13,250) are both middle-income economies.\n       But few people would disagree with the observation that these countries have had vastly\n         different development experiences and face vastly different growth challenges and tra­\n         jectories. Yet these income classifications continue to be used widely in the development\n        discourseg and in analyses of economic growth.h Moreover, although the World Bank may\n        not use the income classifications for operational or lending purposes,i other international\n        organizations and bilateral aid agencies do. Given its widespread use, many economists\n       have called for a revision of the current income classification system.j The proposals\n         include:\n\n          •  Reclassifying levels based on fiscal capacity. Ravallion (2009) argues that levels of devel­\n          opment should be assessed based on countries’ internal capacities for redistribution\n            (through taxes) in favor of their poorest citizens. Similarly, Ceriani and Verme (2014)\n           propose a measure of a country’s capacity to reduce its own poverty levels and show\n         how these tools can be used to guide budget or aid allocations.\n          •  Reflecting the multidimensional nature of development. Sumner and Vázquez (2012)\n           use a set of indicators covering definitions of development from four conceptual\n           frameworks (development as structural transformation; development as human\n           development; development as democratic participation and good governance; and\n           development as sustainability) to identify five types of developing countries. Similarly,\n\n                                                                                                  (Box continues next page)\n\n38   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "70",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 70,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 22.700979412213247,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p035-text-000",
+      "text": "2010 to US$7,000 by 2030. Other middle-income    considered the world’s economic leader; people\ncountries have similar aspirations.                    living in countries with incomes higher than those\n    If these plans succeed, your country will reach    of Americans add up to fewer than 25 million.\nhigh-income status in less than one generation,    Since 1970 the mean income per capita of middle-\nor in one or two. Your firms will be earning like   income countries has never risen above one-tenth\nnever before. Your people will be consuming like    that of the United States (figure O.1).\nnever before. Far fewer people will be poor, with     Compared with the United States, middle-­\nnone desperately poor. In the halls of government,   income countries seem trapped at modest income\nthese plans generate tremendous optimism.            levels.\n  But there is a problem.                       The observed rates of economic growth in\n  According to widely used measures such as    middle-income countries do not exceed those in\nthe World Bank’s World Development Indicators,    high-income countries by the margins needed\nyou see that economic growth in middle-income    to catch up in one generation—or even two or\ncountries—including your own—is not acceler-    three. Estimates using the World Bank’s Long\nating. If anything, it is slowing down as incomes   Term Growth Model, which is based on the cel-\nincrease—and even more so every decade.           ebrated Solow-Swan growth model, suggest that\n  Moreover, your country  is not catching up      if the drivers of economic growth—investments\nwith the income levels in advanced economies.    in human capital, total factor productivity, labor\nAmong those economies, the United States is still    force participation, and the shares of economic\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 22.55548367895805,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p065-text-000",
+      "text": "1\nSlowing Growth\n\n   Key messages\n\n      •  Today’s 108 middle-income countries represent about 40 percent of the global economy, are\n      home to about 75 percent of the world’s population and more than 60 percent of the world’s\n        poor, and contribute nearly two-thirds of global carbon dioxide emissions.\n      •  Middle-income countries are prone to systematic growth slowdowns—a concept termed\n        the “middle-income trap.” The median growth slowdown episode occurs when a country\n        reaches about 11 percent of the gross domestic product per capita of the United States.\n      •  Although income per capita is the metric most commonly used to measure the pace of\n       economic development, measures of average income can differ greatly, depending on the\n        measure.\n      •  Countries with weaker institutions—and especially those with lower levels of economic and\n         political freedom—are more susceptible to slowdowns at even lower levels of income.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "65",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 65,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": "33"
+      },
+      "score": 38.50867916492686,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p036-text-000",
+      "text": "output devoted to public and  private  invest-   which countries are firmly considered upper-\nment—follow recent and historic trends, most    middle-income. A systematic slowdown in growth\nmiddle-income countries are likely to experience    then  occurs.  Development  strategies  relying\nsignifi­cant slowdowns between 2024 and 2100.    largely on capital accumulation that served these\nCountries such as Brazil and Mexico are likely to    countries well in their low-income phase, for many\nbe even further behind the United States in 2100    even during  their lower-middle-income phase\nthan they are today.                            between US$1,136 and US$4,465—begin to yield\n                                                diminishing returns. Strategies based on factor\n                                               accumulation alone are likely to steadily worsen\nOne trap or two?                                                 results—a natural occurrence as the marginal\nThe World Bank presently classifies 108 countries    productivity of capital declines.\nas “middle-income”—that is, those with annual     To see why, consider this: if capital endowments\nincome per capita ranging from US$1,136 to    were the only economically relevant difference\nUS$13,845.1 These countries are critical to long-   between   ­middle-income   and   high-income\nterm global prosperity. They account for nearly    countries today, the GDP per capita of a typical\n40 percent of global economic activity, more than    middle-income country would have been nearly\n60 percent of people living in extreme poverty,    three-quarters of that of the United States in\nand more than 60 percent of global carbon diox-    2019 (figure O.2). In fact, it is about one-fifth that\nide (CO2) emissions (table O.1).                       of the United States. Its growth prospects now\n   Developing economies change in structure as",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 36,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 38.505193207336404,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p200-text-002",
+      "text": "market with a 90 percent market share. In Poland,   SOEs are the largest providers of energy finance—\nfour companies—Polska Grupa  Energetyczna    accounting for 60 percent of energy investment\n(PGE), Tauron  Polska  Energia,  Energa, and     (figure 7.9). A concern is that SOEs account for\nEnea—­control nearly three-fourths of the mar-   50 percent of fossil fuel power investment glob-\nket share in electricity production, with PGE     ally, notably due to expanding coal plants in India\n­holding 40 percent. Poland’s transmission grid is   and South Africa and gas plants in the Middle\nowned and operated by state-owned Polskie Sieci    East and North Africa.\nElektroenergetyczne.14 SOEs use their dominant     SOEs can block entry of new market players\nposition to thwart entrants and protect their    using their outsize market share and control of\nmarkets by blocking technological change.          the grid. To compete for customers, rival firms\n  SOEs are also significant investors in energy,   need access to the grid controlled by a large\ncontributing 36 percent of global energy invest-    incumbent. Thus access pricing becomes import-\nment. In low- and middle-income  countries,    ant. Access prices are set by the sectoral regulator.\n\n168   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "200",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 200,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 34.74662447275675,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 34.03845692101976,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p107-text-002",
+      "text": "Climate action                                                  countries (figure 3.5). Energy intensity (panel a)\nFossil fuels—coal, oil, and natural gas—are the    in middle-income countries is about double that\nmajor contributors to global climate change,    in high-income countries, and the carbon inten­\naccounting for over three-fourths of total green­     sity of their energy consumption (panel b) is also\nhouse gas emissions and about 90 percent of car­     ­relatively inefficient.\nbon dioxide (CO2) emissions.16 The International      At the same time, reliable cheap energy is\nEnergy Agency has announced that achieving     ­critical to supporting industrial activities and\nnet zero emissions by 2050 will require reduc­   powering businesses. It is also correlated with\ning between 2020 and 2050 the global demand    higher living standards. But over 300 million\nfor coal by 90 percent, oil by 75 percent, and    ­people in middle-income countries  still lack\nnatural gas by 55 percent.17 Therefore, climate    access to ­electricity. Moreover, blackouts and\naction—measures to mitigate climate change—   brownouts  are common  in  middle-­income\nrequires changing the way energy is produced    countries. As energy demand rises with income,\nand consumed.                                expanding access to  reliable energy  will be\n  Because  middle-income   countries   pres­    as  critical  as  ­transitioning  to lower-carbon\nently account for about two-thirds of global    energy.18\nCO2 emissions, their decarbonization is mate­      Today, energy  transition technologies con­\nrial to the world’s ability to meet its climate     stitute the largest investment gap. Significant\ngoals. Today, both energy intensity and car­    resources are needed to scale",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "107",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 107,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 32.220508952970846,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:35:28.200203+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 508,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 62,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 570
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:34.267102+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3680,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 313,
+        "output_tokens_details": {
+          "reasoning_tokens": 266
+        },
+        "total_tokens": 3993
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:37.503414+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6886,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 198,
+        "output_tokens_details": {
+          "reasoning_tokens": 131
+        },
+        "total_tokens": 7084
+      }
+    }
+  ],
+  "seconds": 11.610478099999455,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D13",
+  "initial_ranking": [
+    {
+      "id": "wdr-p063-text-000",
+      "text": "Part 1\nMiddle-Income Transitions\n\n      he share of middle-income countries in       Notably, the progress of the middle-income\n       the global economy  is increasing—over    countries has slowed in recent decades. The\n       half of countries today are middle-income.   median middle-income economy has income perT  As classified by the World Bank, 108 coun-    capita that is less than one-tenth that of the United\ntries  qualify  as  middle-income. With  about     States. More surprising, this figure has remained\nthree-fourths of the world’s population, these    almost unchanged for 50 years. Meanwhile, the\n108 middle-income countries account for nearly    prospects for middle-income countries are not\n40 percent of global economic activity. Of every    improving in view of the direction the global\nfive people in extreme poverty globally, more than   economy  is going, from healthy to wobbling.\nthree live in middle-income countries. And they    Against these headwinds, today’s middle-income\ngenerate well over 60 percent of all carbon dioxide    countries need to make miracles to develop at\nemissions (table P1.1). Not surprisingly, they will    the pace of the 34 economies that reached high-​\nplay a central role in global development, and the   income status between 1990 and 2021. And even\ndifficulties they face should be of global concern.      if these headwinds were not getting stronger,\nSo where are these economies headed?              middle-​income countries would  still face long\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "63",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 63,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 21.00778379106196,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p191-text-001",
+      "text": "       art 2 of this Report describes how the          energy markets and other sectors now\n       forces of creation—the protagonist of eco-         dominated by favored entities, especially\n      nomic growth—are weak in middle-income          state-owned  enterprises.  In  addition,P countries. Many large incumbents do not innovate          middle-income  countries  will need  to\n or infuse global technologies, and many entrants          strengthen the capacity of competition\n do not disrupt. By contrast, the forces of preser-           agencies to identify and rein in firms that\n vation—the antagonist to creation—are strong in          abuse their incumbency advantage. Insti-\n middle-income countries. Incumbent firms and           tuting progressive tax policies to discipline\n social elites often preserve the status quo. Mean-         incumbent elites while still incentivizing\n while, the forces of destruction—which are often          innovation will be needed as well.\n needed to remove the obstacles to creation—are         •  Rewarding merit (chapter 8). To strengthen\n held back by the forces of preservation. Together,          the  forces  of  creation, middle-income\n the forces of creation, preservation, and destruc-           countries should reward merit activities—\n tion are unbalanced in middle-income countries          those with  positive  externalities;  that\n struggling with slower growth.                                         is, those with positive effects on general\n   Part  3  of  this  Report  examines  how           well-being. This entails redesigning poli-\n middle-income countries can accelerate growth            cies to focus on assessing the value added\n by balancing these three forces, which entails           of firms in jobs, exports, technology infu-\n the following:                                                 sion, and innovation instead of designing\n                                                                 policies that simply focus on the size of\n     •  Disciplining   incumbency   (chapter",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "191",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 191,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.911065364914542,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p078-text-001",
+      "text": " Monetary Fund, Washington, DC.\n   and  Ekaterina  Vostroknutova.  Washington,  DC:     Pritchett, Lant H., Kunal Sen, Sabyasachi Kar, and Selim\n   World Bank.                                                Raihan. 2016. “Trillions Gained and Lost: Estimating the\nGill, Indermit Singh, and Homi Kharas. 2015. “The Middle-       Magnitude of Growth Episodes.” Economic Modelling\n   Income Trap Turns Ten.” Policy Research Working       55 (June): 279–91.\n   Paper 7403, World Bank, Washington, DC.                    Ravallion, Martin. 2009. “Do Poorer Countries Have Less\nGrossman, Gene M., and Elhanan Helpman. 1991. Innovation        Capacity for Redistribution?” Policy Research Working\n   and Growth in the Global Economy. Cambridge, MA: MIT       Paper 5046, World Bank, Washington, DC.\n    Press.                                                        Ravallion, Martin. 2012. “Should We Care Equally about\nHamadeh, Nada,  Aart  C.  Kraay,  Eric Metreau, Marko       Poor People Wherever They May Live?”  Let’s Talk\n   Rissanen, Giovanni Tonutti, Catherine Van Rompaey,       Development (blog), November 8, 2012. https://blogs​\n   Mizuku Yamanaka, and Kathryn Young. 2022. “Using        .worldbank.org/en/developmenttalk/should-we-care​\n   Purchasing  Power  Parities  in  the  World  Bank’s        -equally-about-poor-people-wherever-they-may-live.\n    Classifications  of  Countries  by",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "78",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 78,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.751606058572968,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p264-chart-00-000",
+      "text": "Figure 9.9\nBar chart titled \"Today’s upper-middle-income countries are more energy efficient than upper-middle-income countries in the past.\" The y-axis is \"Elasticity of energy intensity\" ranging from 0 to 1.2 with tick marks at 0.2 intervals. The x-axis has four categories, shown with angled labels: Low-income, Lower-middle-income, Upper-middle-income, and Upper-middle-income (1960–2016). There are four vertical bars: Low-income is approximately 0.81; Lower-middle-income is approximately 0.82; Upper-middle-income is approximately 0.75; Upper-middle-income (1960–2016) is approximately 1.10. The first three bars are dark blue; the last bar is orange. Source note on the figure: WDR 2024 team calculations based on data from Fetter (2022). Note states that elasticity of energy intensity refers to the energy used per unit of gross domestic product (GDP); estimates are based on a fixed-effect dynamic response lag model covering 136 countries over 1960–2017 (34,800 observations), including log price index, two lags of end-user energy consumption, dummies for structural breaks in data series, and country-sector fixed effects. The note also says the elasticity values can be interpreted as follows: if GDP increases by 1 percent, energy consumption increases only by 0.75 percent in upper-middle-income countries that achieved upper-middle-income status as of 2017, compared with 1.1 percent in upper-middle-income countries that achieved upper-middle-income status within 1960–2016.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "264",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-264.png",
+        "label": "Figure 9.9",
+        "pdf_page": 264,
+        "visual_id": "wdr-p264-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The exact bar heights are not labeled on the chart and are estimated visually from the plotted bars.",
+          "The figure uses no visible legend; color meaning is inferred only from the bar colors and labels."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 20.747655209070334,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p256-text-002",
+      "text": "as discussed in chapter 6. Many inputs into clean    overall technological sophistication (as discussed\nenergy value chains are also highly concentrated.    in ­chapter  6). Middle-income countries tapping\nFor example, the Democratic Republic of Congo    into manufacturing opportunities for clean energy\nsupplies 74 percent of cobalt, China 68 percent of    technologies are typically those already competitive\nrare earth elements, and Indonesia 49 percent of    in manufacturing or exporters of high-­technology\nnickel. Australia accounts for 47 percent of lith­    products.9 Research conducted  for  this Report\nium mining, and Chile for 24 percent. Processing    shows that the share of online job postings for all\nof these minerals is also highly concentrated, with    disruptive technologies is highly correlated with the\nChina refining 90 percent of rare earth elements    share of online job postings related to low-­carbon\nand 65 percent and 74 percent, respectively, of    technologies.10 This finding suggests that coun­\nlithium and cobalt (figure 9.3).                           tries experiencing a rapid diffusion of all emerging\n  One  pathway   for  middle-income  coun­     ­disruptive technologies are also witnessing a rapid\ntries  is to improve their firm  capabilities and    diffusion of low-carbon technologies.\n\n224   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "256",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 256,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.68749545314948,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p143-text-001",
+      "text": " to increase its share sub­\n   comers to a city or country are welcome.     stantially. In general, as middle-income countries\n  The status quo is preserved by keeping    grow—particularly as they approach high-income\n   “others” out.                                  status and must innovate rather than simply adopt\n• How does gender inequality hold back the    technologies—they require increasingly sophisti­\n   potential of women? In many middle-­    cated talent. Such transformations in the economy\n  income  countries,  patriarchal gender   make the development and efficient allocation of\n  norms hold back women from taking    talent particularly important for ­middle-income\n   advantage of attractive opportunities in    countries and place social mobility and equitable\n   the labor market and for entrepreneur­    access to opportunities at the forefront of policies to\n   ship. Discrimination, sexism, and misog­    promote growth and social welfare.\n   yny occur in all walks of life, including\n   the businesses women own, the jobs                                         Skilled workers are key to economic,   they get and the pay they receive; how\n                                          structural, and technological  much their families spend on educating\n                                    transformation  them and for how long; and their abil­\n   ity to operate bank accounts. Unequal    Firms grow as skilled workers, such as manag­\n   social norms and beliefs and the institu­    ers and professionals, become more abundant.\n   tions that reinforce men’s status advan­    In lower-income countries with gross domestic\n   tage and access to more resources and    product (GDP) per capita under US$3,000, most\n  power hold back nearly half a country’s    workers are unskilled and employed in small\n   people, curtailing an economy’s growth.    firms with fewer than 10 employees",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "143",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 143,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.48544786228049,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": false
+}

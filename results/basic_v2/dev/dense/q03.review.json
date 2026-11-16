@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Supported by preprocessing:007 near the quoted section: \"When handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros\" and \"will have the same mapping as the dropped category.\" The answer matches this exactly.",
+  "query_id": "q03",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "c963407e0411a218b1e125cd3b14fdb025c217bd6126c543d1f5a37119bacb62",
+  "alternative_cited_pages": [
+    "preprocessing:007"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

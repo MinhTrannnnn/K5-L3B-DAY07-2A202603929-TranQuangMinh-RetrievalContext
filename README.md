@@ -1,5 +1,10 @@
 # Day 7 — Agentic RAG
 
+**Bản hiện tại chạy local trên dữ liệu Day 6**, dùng Qwen2.5 3B qua Ollama,
+BGE 768 chiều, PostgreSQL/pgvector và dense/BM25/hybrid.
+Xem [lệnh chạy nhanh](docs/README.md). Kết quả local ở `results/local/`.
+Báo cáo hiện tại ở `report/individual/2A202603929_TranQuangMinh.md`.
+
 **Bài cá nhân · Python 3.11+ · tiếp nối Day 6**
 
 Dùng embedding và vector store từ Day 6 để xây một agent biết tìm bằng chứng, trả lời có nguồn và nhận biết khi không đủ thông tin. Bạn tự chọn kiến trúc, số tool và cách tổ chức retrieval.

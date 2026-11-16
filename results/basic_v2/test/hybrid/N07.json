@@ -1,0 +1,1190 @@
+{
+  "status": "abstain",
+  "answer": "I can’t determine an exact per-hour cloud-computing price for RepeatedKFold from the retrieved documents.",
+  "citations": [],
+  "question": "What exact per-hour cloud-computing price does RepeatedKFold charge according to these documents?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "RepeatedKFold cloud-computing price per hour charge",
+      "results": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.028814262023217248,
+          "rank": 2
+        },
+        {
+          "id": "e53ca849a0e02cb268c56b26",
+          "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:002",
+          "metadata": {
+            "end": 3533,
+            "start": 2826,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7038,
+            "unit_start": 3505,
+            "token_count": 137
+          },
+          "score": 0.026742734890354787,
+          "rank": 3
+        },
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 0.026013513513513515,
+          "rank": 4
+        },
+        {
+          "id": "1ab12e633b2fc3821ccb82ef",
+          "text": "The kappa score is a number between -1 and 1. Scores above .8 are generally considered good agreement; zero or lower means no agreement (practically random labels).\n\nKappa scores can be computed for binary or multiclass problems, but not for multilabel problems (except by manually computing a per-label score) and not for more than two annotators.\n\n>>> from sklearn.metrics import cohen_kappa_score\n>>> labeling1 = [2, 0, 2, 2, 0, 1]\n>>> labeling2 = [0, 0, 2, 2, 0, 2]\n>>> cohen_kappa_score(labeling1, labeling2)\n0.4285714285714286",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:009",
+          "metadata": {
+            "end": 532,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cohen-s-kappa",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.5. Cohen’s kappa",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33396,
+            "unit_start": 29453,
+            "token_count": 154
+          },
+          "score": 0.016129032258064516,
+          "rank": 5
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.016129032258064516,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.028814262023217248,
+          "rank": 2
+        },
+        {
+          "id": "e53ca849a0e02cb268c56b26",
+          "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:002",
+          "metadata": {
+            "end": 3533,
+            "start": 2826,
+            "topic": "preprocessing",
+            "anchor": "caching-transformers-avoid-repeated-computation",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7038,
+            "unit_start": 3505,
+            "token_count": 137
+          },
+          "score": 0.026742734890354787,
+          "rank": 3
+        },
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 0.026013513513513515,
+          "rank": 4
+        },
+        {
+          "id": "1ab12e633b2fc3821ccb82ef",
+          "text": "The kappa score is a number between -1 and 1. Scores above .8 are generally considered good agreement; zero or lower means no agreement (practically random labels).\n\nKappa scores can be computed for binary or multiclass problems, but not for multilabel problems (except by manually computing a per-label score) and not for more than two annotators.\n\n>>> from sklearn.metrics import cohen_kappa_score\n>>> labeling1 = [2, 0, 2, 2, 0, 1]\n>>> labeling2 = [0, 0, 2, 2, 0, 2]\n>>> cohen_kappa_score(labeling1, labeling2)\n0.4285714285714286",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:009",
+          "metadata": {
+            "end": 532,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cohen-s-kappa",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.5. Cohen’s kappa",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33396,
+            "unit_start": 29453,
+            "token_count": 154
+          },
+          "score": 0.016129032258064516,
+          "rank": 5
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.016129032258064516,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.13385529999868595
+    },
+    {
+      "event": "search",
+      "query": "\"per-hour\" cloud computing price charge",
+      "results": [
+        {
+          "id": "6b7819ac991d6f2efabfbf43",
+          "text": "\"weighted\" accounts for class imbalance by computing the average of binary metrics in which each class’s score is weighted by its presence in the true data sample.\n\n\"micro\" gives each sample-class pair an equal contribution to the overall metric (except as a result of sample-weight). Rather than summing the metric per class, this sums the dividends and divisors that make up the per-class metrics to calculate an overall quotient. Micro-averaging may be preferred in multilabel settings, including multiclass classification where a majority class is to be ignored.\n\n\"samples\" applies only to multilabel problems. It does not calculate a per-class measure, instead calculating the metric over the true and predicted classes for each sample in the evaluation data, and returning their ( sample_weight -weighted) average.\n\nSelecting average=None will return an array with the score for each class.\n\nWhile multiclass data is provided to the metric, like binary targets, as an array of class labels, multilabel data is specified as an indicator matrix, in which cell [i, j] has value 1 if sample i has label j and value 0 otherwise.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:007",
+          "metadata": {
+            "end": 1129,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "from-binary-to-multiclass-and-multilabel",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.1. From binary to multiclass and multilabel",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25903,
+            "unit_start": 22203,
+            "token_count": 241
+          },
+          "score": 0.029116045245077504,
+          "rank": 1
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.02658450704225352,
+          "rank": 2
+        },
+        {
+          "id": "1ab12e633b2fc3821ccb82ef",
+          "text": "The kappa score is a number between -1 and 1. Scores above .8 are generally considered good agreement; zero or lower means no agreement (practically random labels).\n\nKappa scores can be computed for binary or multiclass problems, but not for multilabel problems (except by manually computing a per-label score) and not for more than two annotators.\n\n>>> from sklearn.metrics import cohen_kappa_score\n>>> labeling1 = [2, 0, 2, 2, 0, 1]\n>>> labeling2 = [0, 0, 2, 2, 0, 2]\n>>> cohen_kappa_score(labeling1, labeling2)\n0.4285714285714286",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:009",
+          "metadata": {
+            "end": 532,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cohen-s-kappa",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.5. Cohen’s kappa",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33396,
+            "unit_start": 29453,
+            "token_count": 154
+          },
+          "score": 0.01639344262295082,
+          "rank": 3
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.01639344262295082,
+          "rank": 4
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.016129032258064516,
+          "rank": 5
+        },
+        {
+          "id": "027a8f1d804f4bba0be3bd4b",
+          "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 1631,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "which-scoring-function-should-i-use",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 360
+          },
+          "score": 0.015873015873015872,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6b7819ac991d6f2efabfbf43",
+          "text": "\"weighted\" accounts for class imbalance by computing the average of binary metrics in which each class’s score is weighted by its presence in the true data sample.\n\n\"micro\" gives each sample-class pair an equal contribution to the overall metric (except as a result of sample-weight). Rather than summing the metric per class, this sums the dividends and divisors that make up the per-class metrics to calculate an overall quotient. Micro-averaging may be preferred in multilabel settings, including multiclass classification where a majority class is to be ignored.\n\n\"samples\" applies only to multilabel problems. It does not calculate a per-class measure, instead calculating the metric over the true and predicted classes for each sample in the evaluation data, and returning their ( sample_weight -weighted) average.\n\nSelecting average=None will return an array with the score for each class.\n\nWhile multiclass data is provided to the metric, like binary targets, as an array of class labels, multilabel data is specified as an indicator matrix, in which cell [i, j] has value 1 if sample i has label j and value 0 otherwise.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:007",
+          "metadata": {
+            "end": 1129,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "from-binary-to-multiclass-and-multilabel",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.1. From binary to multiclass and multilabel",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25903,
+            "unit_start": 22203,
+            "token_count": 241
+          },
+          "score": 0.029116045245077504,
+          "rank": 1
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.02658450704225352,
+          "rank": 2
+        },
+        {
+          "id": "1ab12e633b2fc3821ccb82ef",
+          "text": "The kappa score is a number between -1 and 1. Scores above .8 are generally considered good agreement; zero or lower means no agreement (practically random labels).\n\nKappa scores can be computed for binary or multiclass problems, but not for multilabel problems (except by manually computing a per-label score) and not for more than two annotators.\n\n>>> from sklearn.metrics import cohen_kappa_score\n>>> labeling1 = [2, 0, 2, 2, 0, 1]\n>>> labeling2 = [0, 0, 2, 2, 0, 2]\n>>> cohen_kappa_score(labeling1, labeling2)\n0.4285714285714286",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:009",
+          "metadata": {
+            "end": 532,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cohen-s-kappa",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.5. Cohen’s kappa",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33396,
+            "unit_start": 29453,
+            "token_count": 154
+          },
+          "score": 0.01639344262295082,
+          "rank": 3
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.01639344262295082,
+          "rank": 4
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.016129032258064516,
+          "rank": 5
+        },
+        {
+          "id": "027a8f1d804f4bba0be3bd4b",
+          "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 1631,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "which-scoring-function-should-i-use",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 360
+          },
+          "score": 0.015873015873015872,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.14232080000147107
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "6e5607a24622af6e4ce1101e",
+      "context": [
+        {
+          "id": "14d3521b5a944b39973d18f9",
+          "text": "Nested versus non-nested cross-validation .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 43,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "obtaining-predictions-by-cross-validation",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 11
+          }
+        },
+        {
+          "id": "42e1c2b6eb6564955c21824b",
+          "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2092,
+            "start": 1044,
+            "topic": "model_selection",
+            "anchor": "k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 381
+          }
+        },
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          }
+        },
+        {
+          "id": "7588e68f0dae408810b538a2",
+          "text": "3.1.2.1. Cross-validation iterators for i.i.d. data\n\nAssuming that some data is Independent and Identically Distributed (i.i.d.) is making the assumption that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.\n\nThe following cross-validators can be used in such cases.\n\nNote\n\nWhile i.i.d. data is a common assumption in machine learning theory, it rarely holds in practice. If one knows that the samples have been generated using a time-dependent process, it is safer to use a time-series aware cross-validation scheme . Similarly, if we know that the generative process has a group structure (samples collected from different subjects, experiments, measurement devices), it is safer to use group-wise cross-validation .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 1042,
+            "start": 235,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-for-i-i-d-data",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 178
+          }
+        },
+        {
+          "id": "7874e038637eecf5fc291c9f",
+          "text": "3.1.2.1.3. Leave One Out (LOO)\n\nLeaveOneOut (or LOO) is a simple cross-validation. Each learning set is created by taking all the samples except one, the test set being the sample left out. Thus, for \\(n\\) samples, we have \\(n\\) different training sets and \\(n\\) different test sets. This cross-validation procedure does not waste much data as only one sample is removed from the training set:\n\n>>> from sklearn.model_selection import LeaveOneOut\n\n>>> X = [1, 2, 3, 4]\n>>> loo = LeaveOneOut()\n>>> for train, test in loo.split(X):\n...     print(\"%s %s\" % (train, test))\n[1 2 3] [0]\n[0 2 3] [1]\n[0 1 3] [2]\n[0 1 2] [3]\n\nPotential users of LOO for model selection should weigh a few known caveats. When compared with \\(k\\) -fold cross validation, one builds \\(n\\) models from \\(n\\) samples instead of \\(k\\) models, where \\(n > k\\) . Moreover, each is trained on \\(n - 1\\) samples rather than \\((k-1) n / k\\) . In both ways, assuming \\(k\\) is not too large and \\(k < n\\) , LOO is more computationally expensive than \\(k\\) -fold cross validation.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 3778,
+            "start": 2737,
+            "topic": "model_selection",
+            "anchor": "leave-one-out-loo",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.3. Leave One Out (LOO)",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 343
+          }
+        },
+        {
+          "id": "b062f3930d3ee0b587ca1414",
+          "text": "3.1.2. Cross validation iterators\n\nThe following sections list utilities to generate indices that can be used to generate dataset splits according to different cross validation strategies.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 233,
+            "start": 45,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 35
+          }
+        }
+      ],
+      "seconds": 0.003636900000856258
+    }
+  ],
+  "context": [
+    {
+      "id": "6e5607a24622af6e4ce1101e",
+      "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2735,
+        "start": 2094,
+        "topic": "model_selection",
+        "anchor": "repeated-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 245
+      }
+    },
+    {
+      "id": "b00d737a27368c64074d6f05",
+      "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:003",
+      "metadata": {
+        "end": 1861,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11260,
+        "unit_start": 7755,
+        "token_count": 376
+      },
+      "score": 0.02658450704225352,
+      "rank": 2
+    },
+    {
+      "id": "e53ca849a0e02cb268c56b26",
+      "text": "8.1.1.2. Caching transformers: avoid repeated computation\n\nFitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.\n\nThe parameter memory is needed in order to cache the transformers. memory can be either a string containing the directory where to cache the transformers or a joblib.Memory object:",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:002",
+      "metadata": {
+        "end": 3533,
+        "start": 2826,
+        "topic": "preprocessing",
+        "anchor": "caching-transformers-avoid-repeated-computation",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.2. Caching transformers: avoid repeated computation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7038,
+        "unit_start": 3505,
+        "token_count": 137
+      },
+      "score": 0.026742734890354787,
+      "rank": 3
+    },
+    {
+      "id": "ba7dfa66b6f9c432c10567fd",
+      "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1080,
+        "start": 145,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 341
+      },
+      "score": 0.026013513513513515,
+      "rank": 4
+    },
+    {
+      "id": "1ab12e633b2fc3821ccb82ef",
+      "text": "The kappa score is a number between -1 and 1. Scores above .8 are generally considered good agreement; zero or lower means no agreement (practically random labels).\n\nKappa scores can be computed for binary or multiclass problems, but not for multilabel problems (except by manually computing a per-label score) and not for more than two annotators.\n\n>>> from sklearn.metrics import cohen_kappa_score\n>>> labeling1 = [2, 0, 2, 2, 0, 1]\n>>> labeling2 = [0, 0, 2, 2, 0, 2]\n>>> cohen_kappa_score(labeling1, labeling2)\n0.4285714285714286",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:009",
+      "metadata": {
+        "end": 532,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cohen-s-kappa",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.5. Cohen’s kappa",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 33396,
+        "unit_start": 29453,
+        "token_count": 154
+      },
+      "score": 0.01639344262295082,
+      "rank": 3
+    },
+    {
+      "id": "6c9cb2d2ebc2cdf137005b53",
+      "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2210,
+        "start": 1177,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 372
+      },
+      "score": 0.016129032258064516,
+      "rank": 6
+    },
+    {
+      "id": "6b7819ac991d6f2efabfbf43",
+      "text": "\"weighted\" accounts for class imbalance by computing the average of binary metrics in which each class’s score is weighted by its presence in the true data sample.\n\n\"micro\" gives each sample-class pair an equal contribution to the overall metric (except as a result of sample-weight). Rather than summing the metric per class, this sums the dividends and divisors that make up the per-class metrics to calculate an overall quotient. Micro-averaging may be preferred in multilabel settings, including multiclass classification where a majority class is to be ignored.\n\n\"samples\" applies only to multilabel problems. It does not calculate a per-class measure, instead calculating the metric over the true and predicted classes for each sample in the evaluation data, and returning their ( sample_weight -weighted) average.\n\nSelecting average=None will return an array with the score for each class.\n\nWhile multiclass data is provided to the metric, like binary targets, as an array of class labels, multilabel data is specified as an indicator matrix, in which cell [i, j] has value 1 if sample i has label j and value 0 otherwise.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:007",
+      "metadata": {
+        "end": 1129,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "from-binary-to-multiclass-and-multilabel",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.1. From binary to multiclass and multilabel",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25903,
+        "unit_start": 22203,
+        "token_count": 241
+      },
+      "score": 0.029116045245077504,
+      "rank": 1
+    },
+    {
+      "id": "ab2621291f798dbea23b764e",
+      "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 2629,
+        "start": 1319,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 382
+      },
+      "score": 0.01639344262295082,
+      "rank": 4
+    },
+    {
+      "id": "4edc19802bb125636088e274",
+      "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 3533,
+        "start": 2631,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 226
+      },
+      "score": 0.016129032258064516,
+      "rank": 5
+    },
+    {
+      "id": "027a8f1d804f4bba0be3bd4b",
+      "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:002",
+      "metadata": {
+        "end": 1631,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "which-scoring-function-should-i-use",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7343,
+        "unit_start": 3797,
+        "token_count": 360
+      },
+      "score": 0.015873015873015872,
+      "rank": 6
+    },
+    {
+      "id": "14d3521b5a944b39973d18f9",
+      "text": "Nested versus non-nested cross-validation .",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 43,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "obtaining-predictions-by-cross-validation",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics > 3.1.1.2. Obtaining predictions by cross-validation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 11
+      }
+    },
+    {
+      "id": "42e1c2b6eb6564955c21824b",
+      "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2092,
+        "start": 1044,
+        "topic": "model_selection",
+        "anchor": "k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 381
+      }
+    },
+    {
+      "id": "7588e68f0dae408810b538a2",
+      "text": "3.1.2.1. Cross-validation iterators for i.i.d. data\n\nAssuming that some data is Independent and Identically Distributed (i.i.d.) is making the assumption that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.\n\nThe following cross-validators can be used in such cases.\n\nNote\n\nWhile i.i.d. data is a common assumption in machine learning theory, it rarely holds in practice. If one knows that the samples have been generated using a time-dependent process, it is safer to use a time-series aware cross-validation scheme . Similarly, if we know that the generative process has a group structure (samples collected from different subjects, experiments, measurement devices), it is safer to use group-wise cross-validation .",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 1042,
+        "start": 235,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-for-i-i-d-data",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 178
+      }
+    },
+    {
+      "id": "7874e038637eecf5fc291c9f",
+      "text": "3.1.2.1.3. Leave One Out (LOO)\n\nLeaveOneOut (or LOO) is a simple cross-validation. Each learning set is created by taking all the samples except one, the test set being the sample left out. Thus, for \\(n\\) samples, we have \\(n\\) different training sets and \\(n\\) different test sets. This cross-validation procedure does not waste much data as only one sample is removed from the training set:\n\n>>> from sklearn.model_selection import LeaveOneOut\n\n>>> X = [1, 2, 3, 4]\n>>> loo = LeaveOneOut()\n>>> for train, test in loo.split(X):\n...     print(\"%s %s\" % (train, test))\n[1 2 3] [0]\n[0 2 3] [1]\n[0 1 3] [2]\n[0 1 2] [3]\n\nPotential users of LOO for model selection should weigh a few known caveats. When compared with \\(k\\) -fold cross validation, one builds \\(n\\) models from \\(n\\) samples instead of \\(k\\) models, where \\(n > k\\) . Moreover, each is trained on \\(n - 1\\) samples rather than \\((k-1) n / k\\) . In both ways, assuming \\(k\\) is not too large and \\(k < n\\) , LOO is more computationally expensive than \\(k\\) -fold cross validation.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 3778,
+        "start": 2737,
+        "topic": "model_selection",
+        "anchor": "leave-one-out-loo",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.3. Leave One Out (LOO)",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 343
+      }
+    },
+    {
+      "id": "b062f3930d3ee0b587ca1414",
+      "text": "3.1.2. Cross validation iterators\n\nThe following sections list utilities to generate indices that can be used to generate dataset splits according to different cross validation strategies.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 233,
+        "start": 45,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 35
+      }
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:30.837543+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 513,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 66,
+        "output_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "total_tokens": 579
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:33.356329+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3458,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 118,
+        "output_tokens_details": {
+          "reasoning_tokens": 92
+        },
+        "total_tokens": 3576
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:36.327618+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6400,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 161,
+        "output_tokens_details": {
+          "reasoning_tokens": 124
+        },
+        "total_tokens": 6561
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:41.736773+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8836,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3328,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 437,
+        "output_tokens_details": {
+          "reasoning_tokens": 390
+        },
+        "total_tokens": 9273
+      }
+    }
+  ],
+  "seconds": 13.107720199997857,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N07",
+  "initial_ranking": [
+    {
+      "id": "6e5607a24622af6e4ce1101e",
+      "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2735,
+        "start": 2094,
+        "topic": "model_selection",
+        "anchor": "repeated-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 245
+      },
+      "score": 0.032018442622950824,
+      "rank": 1
+    },
+    {
+      "id": "4edc19802bb125636088e274",
+      "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 3533,
+        "start": 2631,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 226
+      },
+      "score": 0.029030910609857977,
+      "rank": 2
+    },
+    {
+      "id": "b00d737a27368c64074d6f05",
+      "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:003",
+      "metadata": {
+        "end": 1861,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11260,
+        "unit_start": 7755,
+        "token_count": 376
+      },
+      "score": 0.02684684684684685,
+      "rank": 3
+    },
+    {
+      "id": "6b7819ac991d6f2efabfbf43",
+      "text": "\"weighted\" accounts for class imbalance by computing the average of binary metrics in which each class’s score is weighted by its presence in the true data sample.\n\n\"micro\" gives each sample-class pair an equal contribution to the overall metric (except as a result of sample-weight). Rather than summing the metric per class, this sums the dividends and divisors that make up the per-class metrics to calculate an overall quotient. Micro-averaging may be preferred in multilabel settings, including multiclass classification where a majority class is to be ignored.\n\n\"samples\" applies only to multilabel problems. It does not calculate a per-class measure, instead calculating the metric over the true and predicted classes for each sample in the evaluation data, and returning their ( sample_weight -weighted) average.\n\nSelecting average=None will return an array with the score for each class.\n\nWhile multiclass data is provided to the metric, like binary targets, as an array of class labels, multilabel data is specified as an indicator matrix, in which cell [i, j] has value 1 if sample i has label j and value 0 otherwise.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:007",
+      "metadata": {
+        "end": 1129,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "from-binary-to-multiclass-and-multilabel",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.1. From binary to multiclass and multilabel",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25903,
+        "unit_start": 22203,
+        "token_count": 241
+      },
+      "score": 0.01639344262295082,
+      "rank": 4
+    },
+    {
+      "id": "6c9cb2d2ebc2cdf137005b53",
+      "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2210,
+        "start": 1177,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 372
+      },
+      "score": 0.016129032258064516,
+      "rank": 5
+    },
+    {
+      "id": "c20c9e9817766f4a53d7ef4c",
+      "text": "3.4.6.12. Visual evaluation of regression models\n\nAmong methods to assess the quality of regression models, scikit-learn provides the PredictionErrorDisplay class. It allows to visually inspect the prediction errors of a model in two different manners.\n\nThe plot on the left shows the actual values vs predicted values. For a noise-free regression task aiming to predict the (conditional) expectation of y , a perfect regression model would display data points on the diagonal defined by predicted equal to actual values. The further away from this optimal line, the larger the error of the model. In a more realistic setting with irreducible noise, that is, when not all the variations of y can be explained by features in X , then the best model would lead to a cloud of points densely arranged around the diagonal.\n\nNote that the above only holds when the predicted values is the expected value of y given X . This is typically the case for regression models that minimize the mean squared error objective function or more generally the mean Tweedie deviance for any value of its “power” parameter.\n\nWhen plotting the predictions of an estimator that predicts a quantile of y given X , e.g. QuantileRegressor or any other model minimizing the pinball loss , a fraction of the points are either expected to lie above or below the diagonal depending on the estimated quantile level.\n\nAll in all, while intuitive to read, this plot does not really inform us on what to do to obtain a better model.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:030",
+      "metadata": {
+        "end": 3558,
+        "start": 2061,
+        "topic": "model_selection",
+        "anchor": "visual-evaluation-of-regression-models",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.12. Visual evaluation of regression models",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 109777,
+        "unit_start": 106219,
+        "token_count": 309
+      },
+      "score": 0.016129032258064516,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942"
+}

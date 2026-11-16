@@ -1,0 +1,550 @@
+[
+  {
+    "query_id": "q01",
+    "method": "dense",
+    "results": [
+      {
+        "id": "6b968eaff7a08cc385a0cc51",
+        "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:002",
+        "metadata": {
+          "end": 144,
+          "start": 0,
+          "topic": "preprocessing",
+          "anchor": "standardization-or-mean-removal-and-variance-scaling",
+          "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 7057,
+          "unit_start": 3510,
+          "token_count": 35
+        },
+        "score": 0.8083818199748347,
+        "rank": 1
+      },
+      {
+        "id": "14ce9eb9004fa7a41a3c4cb0",
+        "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:002",
+        "metadata": {
+          "end": 3547,
+          "start": 2774,
+          "topic": "preprocessing",
+          "anchor": "scaling-sparse-data",
+          "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 7057,
+          "unit_start": 3510,
+          "token_count": 166
+        },
+        "score": 0.671842098236084,
+        "rank": 2
+      },
+      {
+        "id": "89fed75e8872f870f13aeb69",
+        "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:003",
+        "metadata": {
+          "end": 1250,
+          "start": 517,
+          "topic": "preprocessing",
+          "anchor": "scaling-data-with-outliers",
+          "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 10705,
+          "unit_start": 7059,
+          "token_count": 157
+        },
+        "score": 0.6613842248916626,
+        "rank": 3
+      },
+      {
+        "id": "1695ca8e101d86ceaf2ad1d7",
+        "text": "8.3.1.1. Scaling features to a range\n\nAn alternative standardization is scaling features to lie between a given minimum and maximum value, often between zero and one, or so that the maximum absolute value of each feature is scaled to unit size. This can be achieved using MinMaxScaler or MaxAbsScaler , respectively.\n\nThe motivation to use this scaling includes robustness to very small standard deviations of features and preserving zero entries in sparse data.\n\nHere is an example to scale a toy data matrix to the [0, 1] range:\n\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n...\n>>> min_max_scaler = preprocessing.MinMaxScaler()\n>>> X_train_minmax = min_max_scaler.fit_transform(X_train)\n>>> X_train_minmax\narray([[0.5       , 0.        , 1.        ],\n       [1.        , 0.5       , 0.33333333],\n       [0.        , 1.        , 0.        ]])\n\nThe same instance of the transformer can then be applied to some new test data unseen during the fit call: the same scaling and shifting operations will be applied to be consistent with the transformation performed on the train data:",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:002",
+        "metadata": {
+          "end": 1304,
+          "start": 146,
+          "topic": "preprocessing",
+          "anchor": "scaling-features-to-a-range",
+          "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.1. Scaling features to a range",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 7057,
+          "unit_start": 3510,
+          "token_count": 311
+        },
+        "score": 0.640980205477465,
+        "rank": 4
+      },
+      {
+        "id": "5d5f352d6d93ec4a2a198685",
+        "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:001",
+        "metadata": {
+          "end": 1865,
+          "start": 672,
+          "topic": "preprocessing",
+          "anchor": "standardization-or-mean-removal-and-variance-scaling",
+          "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 3508,
+          "unit_start": 0,
+          "token_count": 235
+        },
+        "score": 0.6283575739434318,
+        "rank": 5
+      },
+      {
+        "id": "5a82e239a3d581954a8ff182",
+        "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:001",
+        "metadata": {
+          "end": 2764,
+          "start": 1867,
+          "topic": "preprocessing",
+          "anchor": "standardization-or-mean-removal-and-variance-scaling",
+          "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 3508,
+          "unit_start": 0,
+          "token_count": 337
+        },
+        "score": 0.5774432420730591,
+        "rank": 6
+      }
+    ],
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "status": "error",
+    "error_type": "JSONDecodeError"
+  },
+  {
+    "query_id": "q02",
+    "method": "dense",
+    "results": [
+      {
+        "id": "8223f3ad3a51da633b61815e",
+        "text": "8.3.2.1. Mapping to a Uniform distribution\n\nQuantileTransformer provides a non-parametric transformation to map the data to a uniform distribution with values between 0 and 1:\n\n>>> from sklearn.datasets import load_iris\n>>> from sklearn.model_selection import train_test_split\n>>> X, y = load_iris(return_X_y=True)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> quantile_transformer = preprocessing.QuantileTransformer(random_state=0)\n>>> X_train_trans = quantile_transformer.fit_transform(X_train)\n>>> X_test_trans = quantile_transformer.transform(X_test)\n>>> np.percentile(X_train[:, 0], [0, 25, 50, 75, 100])\narray([ 4.3,  5.1,  5.8,  6.5,  7.9])\n\nThis feature corresponds to the sepal length in cm. Once the quantile transformation is applied, those landmarks approach closely the percentiles previously defined:\n\n>>> np.percentile(X_train_trans[:, 0], [0, 25, 50, 75, 100])\n...\narray([ 0.00 ,  0.24,  0.49,  0.73,  0.99 ])\n\nThis can be confirmed on an independent testing set with similar remarks:",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:004",
+        "metadata": {
+          "end": 2251,
+          "start": 1214,
+          "topic": "preprocessing",
+          "anchor": "mapping-to-a-uniform-distribution",
+          "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.1. Mapping to a Uniform distribution",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 14481,
+          "unit_start": 10707,
+          "token_count": 352
+        },
+        "score": 0.794879341735924,
+        "rank": 1
+      },
+      {
+        "id": "0fd77454a9255d456db9f506",
+        "text": ">>> quantile_transformer = preprocessing.QuantileTransformer(\n...     output_distribution='normal', random_state=0)\n>>> X_trans = quantile_transformer.fit_transform(X)\n>>> quantile_transformer.quantiles_\narray([[4.3, 2. , 1. , 0.1],\n       [4.4, 2.2, 1.1, 0.1],\n       [4.4, 2.2, 1.2, 0.1],\n       ...,\n       [7.7, 4.1, 6.7, 2.5],\n       [7.7, 4.2, 6.7, 2.5],\n       [7.9, 4.4, 6.9, 2.5]])\n\nThus the median of the input becomes the mean of the output, centered at 0. The normal output is clipped so that the input’s minimum and maximum — corresponding to the 1e-7 and 1 - 1e-7 quantiles respectively — do not become infinite under the transformation.",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:005",
+        "metadata": {
+          "end": 1705,
+          "start": 1054,
+          "topic": "preprocessing",
+          "anchor": "mapping-to-a-gaussian-distribution",
+          "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 18115,
+          "unit_start": 14483,
+          "token_count": 243
+        },
+        "score": 0.7465834919710818,
+        "rank": 2
+      },
+      {
+        "id": "c71cf8e0ca4d0f37b80b518e",
+        "text": ">>> pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)\n>>> X_lognormal = np.random.RandomState(616).lognormal(size=(3, 3))\n>>> X_lognormal\narray([[1.28, 1.18 , 0.84 ],\n       [0.94, 1.60 , 0.388],\n       [1.35, 0.217, 1.09 ]])\n>>> pt.fit_transform(X_lognormal)\narray([[ 0.49 ,  0.179, -0.156],\n       [-0.051,  0.589, -0.576],\n       [ 0.69 , -0.849,  0.101]])\n\nWhile the above example sets the standardize option to False , PowerTransformer will apply zero-mean, unit-variance normalization to the transformed output by default.\n\nBelow are examples of Box-Cox and Yeo-Johnson applied to various probability distributions. Note that when applied to certain distributions, the power transforms achieve very Gaussian-like results, but with others, they are ineffective. This highlights the importance of visualizing the data before and after transformation.\n\nIt is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:005",
+        "metadata": {
+          "end": 1052,
+          "start": 0,
+          "topic": "preprocessing",
+          "anchor": "mapping-to-a-gaussian-distribution",
+          "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 18115,
+          "unit_start": 14483,
+          "token_count": 319
+        },
+        "score": 0.7147931626562392,
+        "rank": 3
+      },
+      {
+        "id": "da90d79f28c2a0d39172cbb3",
+        "text": "8.3.2. Non-linear transformation\n\nTwo types of transformations are available: quantile transforms and power transforms. Both quantile and power transforms are based on monotonic transformations of the features and thus preserve the rank of the values along each feature.\n\nQuantile transforms put all features into the same desired distribution based on the formula \\(G^{-1}(F(X))\\) where \\(F\\) is the cumulative distribution function of the feature and \\(G^{-1}\\) the quantile function of the desired output distribution \\(G\\) . This formula is using the two following facts: (i) if \\(X\\) is a random variable with a continuous cumulative distribution function \\(F\\) then \\(F(X)\\) is uniformly distributed on \\([0,1]\\) ; (ii) if \\(U\\) is a random variable with uniform distribution on \\([0,1]\\) then \\(G^{-1}(U)\\) has distribution \\(G\\) . By performing a rank transformation, a quantile transform smooths out unusual distributions and is less influenced by outliers than scaling methods. It does, however, distort correlations and distances within and across features.\n\nPower transforms are a family of parametric transformations that aim to map data from any distribution to as close to a Gaussian distribution.",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:004",
+        "metadata": {
+          "end": 1212,
+          "start": 0,
+          "topic": "preprocessing",
+          "anchor": "non-linear-transformation",
+          "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 14481,
+          "unit_start": 10707,
+          "token_count": 297
+        },
+        "score": 0.6965368390083313,
+        "rank": 4
+      },
+      {
+        "id": "153c1c5a847cf213993a4584",
+        "text": "8.3.2.2. Mapping to a Gaussian distribution\n\nIn many modeling scenarios, normality of the features in a dataset is desirable. Power transforms are a family of parametric, monotonic transformations that aim to map data from any distribution to as close to a Gaussian distribution as possible in order to stabilize variance and minimize skewness.\n\nPowerTransformer currently provides two such power transformations, the Yeo-Johnson transform and the Box-Cox transform.\n\n\\[\\begin{split}x_i^{(\\lambda)} = \\begin{cases} [(x_i + 1)^\\lambda - 1] / \\lambda & \\text{if } \\lambda \\neq 0, x_i \\geq 0, \\\\[8pt] \\ln{(x_i + 1)} & \\text{if } \\lambda = 0, x_i \\geq 0 \\\\[8pt] -[(-x_i + 1)^{2 - \\lambda} - 1] / (2 - \\lambda) & \\text{if } \\lambda \\neq 2, x_i < 0, \\\\[8pt] - \\ln (- x_i + 1) & \\text{if } \\lambda = 2, x_i < 0 \\end{cases}\\end{split}\\]",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:004",
+        "metadata": {
+          "end": 3296,
+          "start": 2468,
+          "topic": "preprocessing",
+          "anchor": "mapping-to-a-gaussian-distribution",
+          "heading": "8.3. Preprocessing data > 8.3.2. Non-linear transformation > 8.3.2.2. Mapping to a Gaussian distribution",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 14481,
+          "unit_start": 10707,
+          "token_count": 294
+        },
+        "score": 0.6685081720352173,
+        "rank": 5
+      },
+      {
+        "id": "fb2d61101699055011c92fbe",
+        "text": ">>> import numpy as np\n>>> from sklearn.datasets import make_regression\n>>> from sklearn.compose import TransformedTargetRegressor\n>>> from sklearn.preprocessing import QuantileTransformer\n>>> from sklearn.linear_model import LinearRegression\n>>> from sklearn.model_selection import train_test_split\n>>> # create a synthetic dataset\n>>> X, y = make_regression(n_samples=20640,\n...                        n_features=8,\n...                        noise=100.0,\n...                        random_state=0)\n>>> y = np.exp( 1 + (y - y.min()) * (4 / (y.max() - y.min())))\n>>> X, y = X[:2000, :], y[:2000]  # select a subset of data\n>>> transformer = QuantileTransformer(output_distribution='normal')\n>>> regressor = LinearRegression()\n>>> regr = TransformedTargetRegressor(regressor=regressor,\n...                                   transformer=transformer)\n>>> X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)\n>>> regr.fit(X_train, y_train)\nTransformedTargetRegressor(...)\n>>> print(f\"R2 score: {regr.score(X_test, y_test):.2f}\")\nR2 score: 0.67",
+        "source_id": "compose",
+        "source": "https://scikit-learn.org/1.9/modules/compose.html",
+        "page": "compose:003",
+        "metadata": {
+          "end": 3273,
+          "start": 2212,
+          "topic": "preprocessing",
+          "anchor": "transforming-target-in-regression",
+          "heading": "8.1. Pipelines and composite estimators > 8.1.2. Transforming target in regression",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 10609,
+          "unit_start": 7040,
+          "token_count": 380
+        },
+        "score": 0.6212423669551403,
+        "rank": 6
+      }
+    ],
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "status": "error",
+    "error_type": "JSONDecodeError"
+  },
+  {
+    "query_id": "q03",
+    "method": "dense",
+    "results": [
+      {
+        "id": "ff9fe26a96956c236143c6d4",
+        "text": ">>> drop_enc = preprocessing.OneHotEncoder(drop='first',\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> drop_enc.transform(X_test).toarray()\narray([[0., 0., 0., 0., 0.]])\n\nAll the categories in X_test are unknown during transform and will be mapped to all zeros. This means that unknown categories will have the same mapping as the dropped category. OneHotEncoder.inverse_transform will map all zeros to the dropped category if a category is dropped and None if a category is not dropped:\n\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary', sparse_output=False,\n...                                        handle_unknown='ignore').fit(X)\n>>> X_test = [['unknown', 'America', 'IE']]\n>>> X_trans = drop_enc.transform(X_test)\n>>> X_trans\narray([[0., 0., 0., 0., 0., 0., 0.]])\n>>> drop_enc.inverse_transform(X_trans)\narray([['female', None, None]], dtype=object)",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:007",
+        "metadata": {
+          "end": 3679,
+          "start": 2736,
+          "topic": "preprocessing",
+          "anchor": "encoding-categorical-features",
+          "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 26085,
+          "unit_start": 22406,
+          "token_count": 328
+        },
+        "score": 0.7962363362312317,
+        "rank": 1
+      },
+      {
+        "id": "67f3f0fe09298b1085111026",
+        "text": "OneHotEncoder supports categorical features with missing values by considering the missing values as an additional category:\n\n>>> X = [['male', 'Safari'],\n...      ['female', None],\n...      [np.nan, 'Firefox']]\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='error').fit(X)\n>>> enc.categories_\n[array(['female', 'male', nan], dtype=object),\narray(['Firefox', 'Safari', None], dtype=object)]\n>>> enc.transform(X).toarray()\narray([[0., 1., 0., 0., 1., 0.],\n      [1., 0., 0., 0., 0., 1.],\n      [0., 0., 1., 1., 0., 0.]])\n\nIf a feature contains both np.nan and None , they will be considered separate categories:",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:008",
+        "metadata": {
+          "end": 617,
+          "start": 0,
+          "topic": "preprocessing",
+          "anchor": "encoding-categorical-features",
+          "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 29594,
+          "unit_start": 26087,
+          "token_count": 243
+        },
+        "score": 0.7570985555648804,
+        "rank": 2
+      },
+      {
+        "id": "13e7836b593ada9e9f446bee",
+        "text": ">>> X = [['male', 'US', 'Safari'],\n...      ['female', 'Europe', 'Firefox'],\n...      ['female', 'Asia', 'Chrome']]\n>>> drop_enc = preprocessing.OneHotEncoder(drop='if_binary').fit(X)\n>>> drop_enc.categories_\n[array(['female', 'male'], dtype=object), array(['Asia', 'Europe', 'US'], dtype=object),\n array(['Chrome', 'Firefox', 'Safari'], dtype=object)]\n>>> drop_enc.transform(X).toarray()\narray([[1., 0., 0., 1., 0., 0., 1.],\n       [0., 0., 1., 0., 0., 1., 0.],\n       [0., 1., 0., 0., 1., 0., 0.]])\n\nIn the transformed X , the first column is the encoding of the feature with categories “male”/”female”, while the remaining 6 columns are the encoding of the 2 features with respectively 3 categories each.\n\nWhen handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:007",
+        "metadata": {
+          "end": 2734,
+          "start": 1926,
+          "topic": "preprocessing",
+          "anchor": "encoding-categorical-features",
+          "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 26085,
+          "unit_start": 22406,
+          "token_count": 320
+        },
+        "score": 0.7441449317845756,
+        "rank": 3
+      },
+      {
+        "id": "b1bf3ea45527639040fce8b8",
+        "text": "If there is a possibility that the training data might have missing categorical features, it can often be better to specify handle_unknown='infrequent_if_exist' instead of setting the categories manually as above. When handle_unknown='infrequent_if_exist' is specified and unknown categories are encountered during transform, no error will be raised but the resulting one-hot encoded columns for this feature will be all zeros or considered as an infrequent category if enabled. ( handle_unknown='infrequent_if_exist' is only supported for one-hot encoding):\n\n>>> enc = preprocessing.OneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder(handle_unknown='infrequent_if_exist')\n>>> enc.transform([['female', 'from Asia', 'uses Chrome']]).toarray()\narray([[1., 0., 0., 0., 0., 0.]])",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:007",
+        "metadata": {
+          "end": 894,
+          "start": 0,
+          "topic": "preprocessing",
+          "anchor": "encoding-categorical-features",
+          "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 26085,
+          "unit_start": 22406,
+          "token_count": 288
+        },
+        "score": 0.7254219814883495,
+        "rank": 4
+      },
+      {
+        "id": "2021f79c2f01fa48a4d6249b",
+        "text": "Another possibility to convert categorical features to features that can be used with scikit-learn estimators is to use a one-of-K, also known as one-hot or dummy encoding. This type of encoding can be obtained with the OneHotEncoder , which transforms each categorical feature with n_categories possible values into n_categories binary features, with one of them 1, and all others 0.\n\nContinuing the example above:\n\n>>> enc = preprocessing.OneHotEncoder()\n>>> X = [['male', 'from US', 'uses Safari'], ['female', 'from Europe', 'uses Firefox']]\n>>> enc.fit(X)\nOneHotEncoder()\n>>> enc.transform([['female', 'from US', 'uses Safari'],\n...                ['male', 'from Europe', 'uses Safari']]).toarray()\narray([[1., 0., 0., 1., 0., 1.],\n       [0., 1., 1., 0., 0., 1.]])\n\nBy default, the values each feature can take is inferred automatically from the dataset and can be found in the categories_ attribute:\n\n>>> enc.categories_\n[array(['female', 'male'], dtype=object), array(['from Europe', 'from US'], dtype=object), array(['uses Firefox', 'uses Safari'], dtype=object)]",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:006",
+        "metadata": {
+          "end": 3284,
+          "start": 2213,
+          "topic": "preprocessing",
+          "anchor": "encoding-categorical-features",
+          "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 22404,
+          "unit_start": 18117,
+          "token_count": 358
+        },
+        "score": 0.7172662019729614,
+        "rank": 5
+      },
+      {
+        "id": "207194442b83993e19b98d5c",
+        "text": "When 'handle_unknown' is set to 'infrequent_if_exist' and an unknown category is encountered in transform:\n\nIf infrequent category support was not configured or there was no infrequent category during training, the resulting one-hot encoded columns for this feature will be all zeros. In the inverse transform, an unknown category will be denoted as None .\n\nIf there is an infrequent category during training, the unknown category will be considered infrequent. In the inverse transform, ‘infrequent_sklearn’ will be used to represent the infrequent category.\n\nInfrequent categories can also be configured using max_categories . In the following example, we set max_categories=2 to limit the number of features in the output. This will result in all but the 'cat' category to be considered infrequent, leading to two features, one for 'cat' and one for infrequent categories - which are all the others:\n\n>>> enc = preprocessing.OneHotEncoder(max_categories=2, sparse_output=False)\n>>> enc = enc.fit(X)\n>>> enc.transform([['dog'], ['cat'], ['rabbit'], ['snake']])\narray([[0., 1.],\n       [1., 0.],\n       [0., 1.],\n       [0., 1.]])",
+        "source_id": "preprocessing",
+        "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+        "page": "preprocessing:009",
+        "metadata": {
+          "end": 1944,
+          "start": 813,
+          "topic": "preprocessing",
+          "anchor": "infrequent-categories",
+          "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 33122,
+          "unit_start": 29596,
+          "token_count": 322
+        },
+        "score": 0.7063499443113921,
+        "rank": 6
+      }
+    ],
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "status": "error",
+    "error_type": "JSONDecodeError"
+  },
+  {
+    "query_id": "q04",
+    "method": "dense",
+    "results": [
+      {
+        "id": "bc1b30cb9239fd4dce3db979",
+        "text": "8.4.1. Univariate vs. Multivariate Imputation\n\nOne type of imputation algorithm is univariate, which imputes values in the i-th feature dimension using only non-missing values in that feature dimension (e.g. SimpleImputer ). By contrast, multivariate imputation algorithms use the entire set of available feature dimensions to estimate the missing values (e.g. IterativeImputer ).",
+        "source_id": "impute",
+        "source": "https://scikit-learn.org/1.9/modules/impute.html",
+        "page": "impute:001",
+        "metadata": {
+          "end": 1050,
+          "start": 670,
+          "topic": "preprocessing",
+          "anchor": "univariate-vs-multivariate-imputation",
+          "heading": "8.4. Imputation of missing values > 8.4.1. Univariate vs. Multivariate Imputation",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 3711,
+          "unit_start": 0,
+          "token_count": 94
+        },
+        "score": 0.8882805109024048,
+        "rank": 1
+      },
+      {
+        "id": "42a6c1bb8187479049c2c85f",
+        "text": "8.4.3. Multivariate feature imputation\n\nA more sophisticated approach is to use the IterativeImputer class, which models each feature with missing values as a function of other features, and uses that estimate for imputation. It does so in an iterated round-robin fashion: at each step, a feature column is designated as output y and the other feature columns are treated as inputs X . A regressor is fit on (X, y) for known y . Then, the regressor is used to predict the missing values of y . This is done for each feature in an iterative fashion, and then is repeated for max_iter imputation rounds. The results of the final imputation round are returned.",
+        "source_id": "impute",
+        "source": "https://scikit-learn.org/1.9/modules/impute.html",
+        "page": "impute:001",
+        "metadata": {
+          "end": 3711,
+          "start": 3054,
+          "topic": "preprocessing",
+          "anchor": "multivariate-feature-imputation",
+          "heading": "8.4. Imputation of missing values > 8.4.3. Multivariate feature imputation",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 3711,
+          "unit_start": 0,
+          "token_count": 152
+        },
+        "score": 0.7737024426460266,
+        "rank": 2
+      },
+      {
+        "id": "7ec13427a119dad976f5383c",
+        "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+        "source_id": "impute",
+        "source": "https://scikit-learn.org/1.9/modules/impute.html",
+        "page": "impute:001",
+        "metadata": {
+          "end": 1963,
+          "start": 1052,
+          "topic": "preprocessing",
+          "anchor": "univariate-feature-imputation",
+          "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 3711,
+          "unit_start": 0,
+          "token_count": 264
+        },
+        "score": 0.7682057619094849,
+        "rank": 3
+      },
+      {
+        "id": "09681e76514c7e56d28a8ef6",
+        "text": "8.4.3.2. Multiple vs. Single Imputation\n\nIn the statistics community, it is common practice to perform multiple imputations, generating, for example, m separate imputations for a single feature matrix. Each of these m imputations is then put through the subsequent analysis pipeline (e.g. feature engineering, clustering, regression, classification). The m final analysis results (e.g. held-out validation errors) allow the data scientist to obtain understanding of how analytic results may differ as a consequence of the inherent uncertainty caused by the missing values. The above practice is called multiple imputation.\n\nOur implementation of IterativeImputer was inspired by the R MICE package (Multivariate Imputation by Chained Equations) [ 1 ] , but differs from it by returning a single imputation instead of multiple imputations. However, IterativeImputer can also be used for multiple imputations by applying it repeatedly to the same dataset with different random seeds when sample_posterior=True . See [ 2 ] , chapter 4 for more discussion on multiple vs. single imputations.\n\nIt is still an open problem as to how useful single vs. multiple imputation is in the context of prediction and classification when the user is not interested in measuring uncertainty due to missing values.\n\nNote that a call to the transform method of IterativeImputer is not allowed to change the number of samples. Therefore multiple imputations cannot be achieved by a single call to transform .\n\nReferences\n\nStef van Buuren, Karin Groothuis-Oudshoorn (2011). “mice: Multivariate Imputation by Chained Equations in R”. Journal of Statistical Software 45: 1-67.",
+        "source_id": "impute",
+        "source": "https://scikit-learn.org/1.9/modules/impute.html",
+        "page": "impute:002",
+        "metadata": {
+          "end": 3209,
+          "start": 1557,
+          "topic": "preprocessing",
+          "anchor": "multiple-vs-single-imputation",
+          "heading": "8.4. Imputation of missing values > 8.4.3. Multivariate feature imputation > 8.4.3.2. Multiple vs. Single Imputation",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 8179,
+          "unit_start": 3713,
+          "token_count": 353
+        },
+        "score": 0.7109962278010722,
+        "rank": 4
+      },
+      {
+        "id": "71efb637f429aef361d9e24f",
+        "text": "8.4.6. Marking imputed values\n\nThe MissingIndicator transformer is useful to transform a dataset into corresponding binary matrix indicating the presence of missing values in the dataset. This transformation is useful in conjunction with imputation. When using imputation, preserving the information about which values had been missing can be informative. Note that both the SimpleImputer and IterativeImputer have the boolean parameter add_indicator ( False by default) which when set to True provides a convenient way of stacking the output of the MissingIndicator transformer with the output of the imputer.\n\nNaN is usually used as the placeholder for missing values. However, it enforces the data type to be float. The parameter missing_values allows to specify other placeholder such as integer. In the following example, we will use -1 as missing values:\n\n>>> from sklearn.impute import MissingIndicator\n>>> X = np.array([[-1, -1, 1, 3],\n...               [4, -1, 0, -1],\n...               [8, -1, 1, 0]])\n>>> indicator = MissingIndicator(missing_values=-1)\n>>> mask_missing_values_only = indicator.fit_transform(X)\n>>> mask_missing_values_only\narray([[ True,  True, False],\n       [False,  True,  True],\n       [False,  True, False]])\n\nThe features parameter is used to choose the features for which the mask is constructed. By default, it is 'missing-only' which returns the imputer mask of the features containing missing values at fit time:\n\n>>> indicator.features_\narray([0, 1, 3])",
+        "source_id": "impute",
+        "source": "https://scikit-learn.org/1.9/modules/impute.html",
+        "page": "impute:003",
+        "metadata": {
+          "end": 3280,
+          "start": 1788,
+          "topic": "preprocessing",
+          "anchor": "marking-imputed-values",
+          "heading": "8.4. Imputation of missing values > 8.4.6. Marking imputed values",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 11852,
+          "unit_start": 8181,
+          "token_count": 378
+        },
+        "score": 0.6982486427874195,
+        "rank": 5
+      },
+      {
+        "id": "5591bb33bc5cc0d6e234b031",
+        "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+        "source_id": "impute",
+        "source": "https://scikit-learn.org/1.9/modules/impute.html",
+        "page": "impute:001",
+        "metadata": {
+          "end": 668,
+          "start": 0,
+          "topic": "preprocessing",
+          "anchor": "imputation-of-missing-values",
+          "heading": "8.4. Imputation of missing values",
+          "version": "1.9",
+          "language": "en",
+          "unit_end": 3711,
+          "unit_start": 0,
+          "token_count": 150
+        },
+        "score": 0.6980827450752258,
+        "rank": 6
+      }
+    ],
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "status": "error",
+    "error_type": "JSONDecodeError"
+  }
+]

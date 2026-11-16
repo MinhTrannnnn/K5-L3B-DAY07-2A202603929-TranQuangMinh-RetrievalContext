@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "The splitter is **GroupKFold**: it ensures that the same group or subject is not represented in both the training and testing sets [ba7dfa66b6f9c432c10567fd].",
+  "citations": [
+    "ba7dfa66b6f9c432c10567fd"
+  ],
+  "question": "Which cross-validation splitter prevents samples belonging to the same subject or group from appearing in both training and testing?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "cross-validation splitter prevents samples belonging to the same subject or group from appearing in both training and testing group k-fold subject group splitter",
+      "results": [
+        {
+          "id": "7a12dc1646af5fcbcb777d02",
+          "text": "The following cross-validation splitters can be used to do that. The grouping identifier for the samples is specified via the groups parameter.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 143,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-for-grouped-data",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 29
+          },
+          "score": 0.7784945500794335,
+          "rank": 1
+        },
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 0.7574612642847751,
+          "rank": 2
+        },
+        {
+          "id": "0bb6f20a717fb25827e5ea05",
+          "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:008",
+          "metadata": {
+            "end": 3541,
+            "start": 3167,
+            "topic": "model_selection",
+            "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29046,
+            "unit_start": 25505,
+            "token_count": 82
+          },
+          "score": 0.7508687525469822,
+          "rank": 3
+        },
+        {
+          "id": "7c6e0a81371277357f568cda",
+          "text": "To perform the train and test split, use the indices for the train and test subsets yielded by the generator output by the split() method of the cross-validation splitter. For example:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import GroupShuffleSplit\n\n>>> X = np.array([0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 0.001])\n>>> y = np.array([\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"a\"])\n>>> groups = np.array([1, 1, 2, 2, 3, 3, 4, 4])\n>>> train_indx, test_indx = next(\n...     GroupShuffleSplit(random_state=7).split(X, y, groups)\n... )\n>>> X_train, X_test, y_train, y_test = \\\n...     X[train_indx], X[test_indx], y[train_indx], y[test_indx]\n>>> X_train.shape, X_test.shape\n((6,), (2,))\n>>> np.unique(groups[train_indx]), np.unique(groups[test_indx])\n(array([1, 2, 4]), array([3]))",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:009",
+          "metadata": {
+            "end": 784,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 32683,
+            "unit_start": 29048,
+            "token_count": 348
+          },
+          "score": 0.7208624482154846,
+          "rank": 4
+        },
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 0.7192107010358167,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 0.7186394333839417,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7a12dc1646af5fcbcb777d02",
+          "text": "The following cross-validation splitters can be used to do that. The grouping identifier for the samples is specified via the groups parameter.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 143,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-for-grouped-data",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 29
+          },
+          "score": 0.7784945500794335,
+          "rank": 1
+        },
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 0.7574612642847751,
+          "rank": 2
+        },
+        {
+          "id": "0bb6f20a717fb25827e5ea05",
+          "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:008",
+          "metadata": {
+            "end": 3541,
+            "start": 3167,
+            "topic": "model_selection",
+            "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 29046,
+            "unit_start": 25505,
+            "token_count": 82
+          },
+          "score": 0.7508687525469822,
+          "rank": 3
+        },
+        {
+          "id": "7c6e0a81371277357f568cda",
+          "text": "To perform the train and test split, use the indices for the train and test subsets yielded by the generator output by the split() method of the cross-validation splitter. For example:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import GroupShuffleSplit\n\n>>> X = np.array([0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 0.001])\n>>> y = np.array([\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"a\"])\n>>> groups = np.array([1, 1, 2, 2, 3, 3, 4, 4])\n>>> train_indx, test_indx = next(\n...     GroupShuffleSplit(random_state=7).split(X, y, groups)\n... )\n>>> X_train, X_test, y_train, y_test = \\\n...     X[train_indx], X[test_indx], y[train_indx], y[test_indx]\n>>> X_train.shape, X_test.shape\n((6,), (2,))\n>>> np.unique(groups[train_indx]), np.unique(groups[test_indx])\n(array([1, 2, 4]), array([3]))",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:009",
+          "metadata": {
+            "end": 784,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 32683,
+            "unit_start": 29048,
+            "token_count": 348
+          },
+          "score": 0.7208624482154846,
+          "rank": 4
+        },
+        {
+          "id": "ba7dfa66b6f9c432c10567fd",
+          "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1080,
+            "start": 145,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 341
+          },
+          "score": 0.7192107010358167,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 0.7186394333839417,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.18463660000270465
+    }
+  ],
+  "context": [
+    {
+      "id": "7a12dc1646af5fcbcb777d02",
+      "text": "The following cross-validation splitters can be used to do that. The grouping identifier for the samples is specified via the groups parameter.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 143,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-for-grouped-data",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 29
+      },
+      "score": 0.7784945500794335,
+      "rank": 1
+    },
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 0.7574612642847751,
+      "rank": 2
+    },
+    {
+      "id": "0bb6f20a717fb25827e5ea05",
+      "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:008",
+      "metadata": {
+        "end": 3541,
+        "start": 3167,
+        "topic": "model_selection",
+        "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29046,
+        "unit_start": 25505,
+        "token_count": 82
+      },
+      "score": 0.7508687525469822,
+      "rank": 3
+    },
+    {
+      "id": "7c6e0a81371277357f568cda",
+      "text": "To perform the train and test split, use the indices for the train and test subsets yielded by the generator output by the split() method of the cross-validation splitter. For example:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import GroupShuffleSplit\n\n>>> X = np.array([0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 0.001])\n>>> y = np.array([\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"a\"])\n>>> groups = np.array([1, 1, 2, 2, 3, 3, 4, 4])\n>>> train_indx, test_indx = next(\n...     GroupShuffleSplit(random_state=7).split(X, y, groups)\n... )\n>>> X_train, X_test, y_train, y_test = \\\n...     X[train_indx], X[test_indx], y[train_indx], y[test_indx]\n>>> X_train.shape, X_test.shape\n((6,), (2,))\n>>> np.unique(groups[train_indx]), np.unique(groups[test_indx])\n(array([1, 2, 4]), array([3]))",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:009",
+      "metadata": {
+        "end": 784,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 32683,
+        "unit_start": 29048,
+        "token_count": 348
+      },
+      "score": 0.7208624482154846,
+      "rank": 4
+    },
+    {
+      "id": "ba7dfa66b6f9c432c10567fd",
+      "text": "3.1.2.4.1. Group K-fold\n\nGroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.\n\nImagine you have three subjects, each with an associated number from 1 to 3:\n\n>>> from sklearn.model_selection import GroupKFold\n\n>>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]\n>>> y = [\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"d\", \"d\", \"d\"]\n>>> groups = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]\n\n>>> gkf = GroupKFold(n_splits=3)\n>>> for train, test in gkf.split(X, y, groups=groups):\n...     print(\"%s %s\" % (train, test))\n[0 1 2 3 4 5] [6 7 8 9]\n[0 1 2 6 7 8 9] [3 4 5]\n[3 4 5 6 7 8 9] [0 1 2]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1080,
+        "start": 145,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 341
+      },
+      "score": 0.7192107010358167,
+      "rank": 5
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 0.7186394333839417,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:38:51.928335+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 514,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 62,
+        "output_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "total_tokens": 576
+      }
+    },
+    {
+      "at": "2026-11-16T15:38:56.465281+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2863,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 177,
+        "output_tokens_details": {
+          "reasoning_tokens": 96
+        },
+        "total_tokens": 3040
+      }
+    }
+  ],
+  "seconds": 9.264913799997885,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q10",
+  "initial_ranking": [
+    {
+      "id": "7a12dc1646af5fcbcb777d02",
+      "text": "The following cross-validation splitters can be used to do that. The grouping identifier for the samples is specified via the groups parameter.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 143,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-for-grouped-data",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 29
+      },
+      "score": 0.7535079864556811,
+      "rank": 1
+    },
+    {
+      "id": "0bb6f20a717fb25827e5ea05",
+      "text": "3.1.2.5. Using cross-validation iterators to split train and test\n\nThe above group cross-validation functions may also be useful for splitting a dataset into training and testing subsets. Note that the convenience function train_test_split is a wrapper around ShuffleSplit and thus only allows for stratified splitting (using the class labels) and cannot account for groups.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:008",
+      "metadata": {
+        "end": 3541,
+        "start": 3167,
+        "topic": "model_selection",
+        "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 29046,
+        "unit_start": 25505,
+        "token_count": 82
+      },
+      "score": 0.7354158916821557,
+      "rank": 2
+    },
+    {
+      "id": "7c6e0a81371277357f568cda",
+      "text": "To perform the train and test split, use the indices for the train and test subsets yielded by the generator output by the split() method of the cross-validation splitter. For example:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import GroupShuffleSplit\n\n>>> X = np.array([0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 0.001])\n>>> y = np.array([\"a\", \"b\", \"b\", \"b\", \"c\", \"c\", \"c\", \"a\"])\n>>> groups = np.array([1, 1, 2, 2, 3, 3, 4, 4])\n>>> train_indx, test_indx = next(\n...     GroupShuffleSplit(random_state=7).split(X, y, groups)\n... )\n>>> X_train, X_test, y_train, y_test = \\\n...     X[train_indx], X[test_indx], y[train_indx], y[test_indx]\n>>> X_train.shape, X_test.shape\n((6,), (2,))\n>>> np.unique(groups[train_indx]), np.unique(groups[test_indx])\n(array([1, 2, 4]), array([3]))",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:009",
+      "metadata": {
+        "end": 784,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "using-cross-validation-iterators-to-split-train-and-test",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.5. Using cross-validation iterators to split train and test",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 32683,
+        "unit_start": 29048,
+        "token_count": 348
+      },
+      "score": 0.7093241214752197,
+      "rank": 3
+    },
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 0.6924403493141932,
+      "rank": 4
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 0.682586669921875,
+      "rank": 5
+    },
+    {
+      "id": "c7533ec0648bfa778179f582",
+      "text": "3.1.2.2. Cross-validation iterators with stratification based on class labels\n\nSome classification tasks can naturally exhibit rare classes: for instance, there could be orders of magnitude more negative observations than positive observations (e.g. medical screening, fraud detection, etc). As a result, cross-validation splitting can generate train or validation folds without any occurrence of a particular class. This typically leads to undefined classification metrics (e.g. ROC AUC), exceptions raised when attempting to call fit or missing columns in the output of the predict_proba or decision_function methods of multiclass classifiers trained on different folds.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:005",
+      "metadata": {
+        "end": 3596,
+        "start": 2924,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18198,
+        "unit_start": 14602,
+        "token_count": 135
+      },
+      "score": 0.6806606244647143,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": false,
+  "context_evidence": true
+}

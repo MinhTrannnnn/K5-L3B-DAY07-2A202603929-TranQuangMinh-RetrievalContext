@@ -1,0 +1,729 @@
+{
+  "status": "answered",
+  "answer": "To disable centering in StandardScaler, you can pass the parameter `with_mean=False` to the constructor. This will prevent the scaler from subtracting the mean from the data, which is the default behavior. Here is the relevant evidence from the scikit-learn documentation: [6b968eaff7a08cc385a0cc51]",
+  "citations": [
+    "6b968eaff7a08cc385a0cc51"
+  ],
+  "question": "How can I disable centering in StandardScaler?",
+  "corpus": "day6",
+  "config": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "method": "bm25",
+    "top_k": 6,
+    "context_budget_tokens": 3000,
+    "max_searches": 2,
+    "controller": "schema-constrained local tool decisions"
+  },
+  "events": [
+    {
+      "event": "controller",
+      "decision": {
+        "action": "search",
+        "query": "How to disable centering in StandardScaler in scikit-learn",
+        "answer": "",
+        "citations": []
+      }
+    },
+    {
+      "event": "search",
+      "tool": "search",
+      "query": "How to disable centering in StandardScaler in scikit-learn",
+      "method": "bm25",
+      "filters": {},
+      "results": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 22.808095405991196,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 13.776244346730286,
+          "rank": 2
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 13.751067789773412,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 12.600598082167192,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 12.420494566226882,
+          "rank": 5
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 12.173938773919181,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 22.808095405991196,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 13.776244346730286,
+          "rank": 2
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 13.751067789773412,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 12.600598082167192,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 12.420494566226882,
+          "rank": 5
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 12.173938773919181,
+          "rank": 6
+        }
+      ],
+      "seconds": 0.11135619999913615
+    },
+    {
+      "event": "controller",
+      "decision": {
+        "action": "search",
+        "query": "How to disable centering in StandardScaler in scikit-learn",
+        "answer": "",
+        "citations": [
+          "S1",
+          "S2"
+        ]
+      }
+    },
+    {
+      "event": "search",
+      "tool": "search",
+      "query": "How to disable centering in StandardScaler in scikit-learn",
+      "method": "bm25",
+      "filters": {},
+      "results": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 22.808095405991196,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 13.776244346730286,
+          "rank": 2
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 13.751067789773412,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 12.600598082167192,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 12.420494566226882,
+          "rank": 5
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 12.173938773919181,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 22.808095405991196,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 13.776244346730286,
+          "rank": 2
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 13.751067789773412,
+          "rank": 3
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 12.600598082167192,
+          "rank": 4
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 12.420494566226882,
+          "rank": 5
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 12.173938773919181,
+          "rank": 6
+        }
+      ],
+      "seconds": 0.00403329999971902
+    },
+    {
+      "event": "controller",
+      "decision": {
+        "action": "answer",
+        "query": "",
+        "answer": "To disable centering in StandardScaler, you can pass the parameter `with_mean=False` to the constructor. This will prevent the scaler from subtracting the mean from the data, which is the default behavior. Here is the relevant evidence from the scikit-learn documentation: [S1]",
+        "citations": [
+          "S1"
+        ]
+      }
+    }
+  ],
+  "context": [
+    {
+      "id": "6b968eaff7a08cc385a0cc51",
+      "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 144,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 35
+      },
+      "score": 22.808095405991196,
+      "rank": 1
+    },
+    {
+      "id": "14ce9eb9004fa7a41a3c4cb0",
+      "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 3547,
+        "start": 2774,
+        "topic": "preprocessing",
+        "anchor": "scaling-sparse-data",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 166
+      },
+      "score": 13.776244346730286,
+      "rank": 2
+    },
+    {
+      "id": "5d5f352d6d93ec4a2a198685",
+      "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 1865,
+        "start": 672,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 235
+      },
+      "score": 13.751067789773412,
+      "rank": 3
+    },
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 12.600598082167192,
+      "rank": 4
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 12.420494566226882,
+      "rank": 5
+    },
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 12.173938773919181,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 178,
+      "output_tokens": 40,
+      "total_duration_ns": 812494000
+    },
+    {
+      "input_tokens": 1448,
+      "output_tokens": 47,
+      "total_duration_ns": 1198005300
+    },
+    {
+      "input_tokens": 1463,
+      "output_tokens": 82,
+      "total_duration_ns": 1742281700
+    }
+  ],
+  "seconds": 3.9790744000019913,
+  "api_cost_usd": 0,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_student_source_check"
+}

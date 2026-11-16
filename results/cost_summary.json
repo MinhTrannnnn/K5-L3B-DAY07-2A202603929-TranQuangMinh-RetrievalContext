@@ -1,0 +1,25 @@
+{
+  "models": {
+    "gpt-5.4-mini-2026-03-17": {
+      "calls": 1299,
+      "input_tokens": 9432743,
+      "cached_input_tokens": 2119168,
+      "output_tokens": 454322,
+      "estimated_usd": 7.6885678500000125
+    },
+    "text-embedding-3-large": {
+      "calls": 179,
+      "input_tokens": 318422,
+      "cached_input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_usd": 0.04139486000000001
+    }
+  },
+  "estimated_total_usd": 7.729962710000012,
+  "price_checked_date": "2026-11-16",
+  "sources": [
+    "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+    "https://developers.openai.com/api/docs/models/text-embedding-3-large"
+  ],
+  "note": "Estimate from logged successful responses, excluding unlogged failures, local CPU and network."
+}

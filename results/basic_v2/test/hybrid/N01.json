@@ -1,0 +1,592 @@
+{
+  "status": "answered",
+  "answer": "Use `interaction_only=True` in `PolynomialFeatures`; that setting produces only feature interaction terms [9190a13f1ec617d2b610dc48].",
+  "citations": [
+    "9190a13f1ec617d2b610dc48"
+  ],
+  "question": "Which PolynomialFeatures setting produces only feature interaction terms?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "PolynomialFeatures only feature interaction terms interaction_only setting documentation",
+      "results": [
+        {
+          "id": "bc02fdbf40e90e664804a6f3",
+          "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3049,
+            "start": 2281,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 285
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "9190a13f1ec617d2b610dc48",
+          "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3536,
+            "start": 3051,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 243
+          },
+          "score": 0.0315136476426799,
+          "rank": 2
+        },
+        {
+          "id": "543298bc065d101c5b322173",
+          "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 1770,
+            "start": 232,
+            "topic": "preprocessing",
+            "anchor": "spline-transformer",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 344
+          },
+          "score": 0.03149801587301587,
+          "rank": 3
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 0.030117753623188408,
+          "rank": 4
+        },
+        {
+          "id": "f05104732351a50d0af55efa",
+          "text": "8.1.3.1. Usage\n\nA FeatureUnion is built using a list of (key, value) pairs, where the key is the name you want to give to a given transformation (an arbitrary string; it only serves as an identifier) and value is an estimator object:\n\n>>> from sklearn.pipeline import FeatureUnion\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.decomposition import KernelPCA\n>>> estimators = [('linear_pca', PCA()), ('kernel_pca', KernelPCA())]\n>>> combined = FeatureUnion(estimators)\n>>> combined\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', KernelPCA())])\n\nLike pipelines, feature unions have a shorthand constructor called make_union that does not require explicit naming of the components.\n\nLike Pipeline , individual steps may be replaced using set_params , and ignored by setting to 'drop' :\n\n>>> combined.set_params(kernel_pca='drop')\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', 'drop')])\n\nExamples\n\nConcatenating multiple feature extraction methods",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3264,
+            "start": 2201,
+            "topic": "preprocessing",
+            "anchor": "id1",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.3. FeatureUnion: composite feature spaces > 8.1.3.1. Usage",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 310
+          },
+          "score": 0.02946912242686891,
+          "rank": 5
+        },
+        {
+          "id": "eee88287ca321291c0212217",
+          "text": ">>> enc = preprocessing.OneHotEncoder(min_frequency=6, sparse_output=False).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[0., 0., 1.],\n       [1., 0., 0.],\n       [0., 1., 0.],\n       [0., 0., 1.]])\n\nBy setting handle_unknown to 'infrequent_if_exist' , unknown categories will be considered infrequent:\n\n>>> enc = preprocessing.OneHotEncoder(\n...    handle_unknown='infrequent_if_exist', sparse_output=False, min_frequency=6)\n>>> enc = enc.fit(X)\n>>> enc.transform(np.array([['dragon']]))\narray([[0., 0., 1.]])\n\nOneHotEncoder.get_feature_names_out uses ‘infrequent’ as the infrequent feature name:\n\n>>> enc.get_feature_names_out()\narray(['x0_cat', 'x0_rabbit', 'x0_infrequent_sklearn'], dtype=object)",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:009",
+          "metadata": {
+            "end": 811,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "infrequent-categories",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33122,
+            "unit_start": 29596,
+            "token_count": 357
+          },
+          "score": 0.02786377708978328,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "bc02fdbf40e90e664804a6f3",
+          "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3049,
+            "start": 2281,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 285
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "9190a13f1ec617d2b610dc48",
+          "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:012",
+          "metadata": {
+            "end": 3536,
+            "start": 3051,
+            "topic": "preprocessing",
+            "anchor": "polynomial-features",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 43679,
+            "unit_start": 40143,
+            "token_count": 243
+          },
+          "score": 0.0315136476426799,
+          "rank": 2
+        },
+        {
+          "id": "543298bc065d101c5b322173",
+          "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:013",
+          "metadata": {
+            "end": 1770,
+            "start": 232,
+            "topic": "preprocessing",
+            "anchor": "spline-transformer",
+            "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 47848,
+            "unit_start": 43681,
+            "token_count": 344
+          },
+          "score": 0.03149801587301587,
+          "rank": 3
+        },
+        {
+          "id": "75c34c1f9dacc20523109b41",
+          "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:003",
+          "metadata": {
+            "end": 1786,
+            "start": 839,
+            "topic": "preprocessing",
+            "anchor": "keeping-the-number-of-features-constant",
+            "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11852,
+            "unit_start": 8181,
+            "token_count": 282
+          },
+          "score": 0.030117753623188408,
+          "rank": 4
+        },
+        {
+          "id": "f05104732351a50d0af55efa",
+          "text": "8.1.3.1. Usage\n\nA FeatureUnion is built using a list of (key, value) pairs, where the key is the name you want to give to a given transformation (an arbitrary string; it only serves as an identifier) and value is an estimator object:\n\n>>> from sklearn.pipeline import FeatureUnion\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.decomposition import KernelPCA\n>>> estimators = [('linear_pca', PCA()), ('kernel_pca', KernelPCA())]\n>>> combined = FeatureUnion(estimators)\n>>> combined\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', KernelPCA())])\n\nLike pipelines, feature unions have a shorthand constructor called make_union that does not require explicit naming of the components.\n\nLike Pipeline , individual steps may be replaced using set_params , and ignored by setting to 'drop' :\n\n>>> combined.set_params(kernel_pca='drop')\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', 'drop')])\n\nExamples\n\nConcatenating multiple feature extraction methods",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:004",
+          "metadata": {
+            "end": 3264,
+            "start": 2201,
+            "topic": "preprocessing",
+            "anchor": "id1",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.3. FeatureUnion: composite feature spaces > 8.1.3.1. Usage",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14307,
+            "unit_start": 10611,
+            "token_count": 310
+          },
+          "score": 0.02946912242686891,
+          "rank": 5
+        },
+        {
+          "id": "eee88287ca321291c0212217",
+          "text": ">>> enc = preprocessing.OneHotEncoder(min_frequency=6, sparse_output=False).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[0., 0., 1.],\n       [1., 0., 0.],\n       [0., 1., 0.],\n       [0., 0., 1.]])\n\nBy setting handle_unknown to 'infrequent_if_exist' , unknown categories will be considered infrequent:\n\n>>> enc = preprocessing.OneHotEncoder(\n...    handle_unknown='infrequent_if_exist', sparse_output=False, min_frequency=6)\n>>> enc = enc.fit(X)\n>>> enc.transform(np.array([['dragon']]))\narray([[0., 0., 1.]])\n\nOneHotEncoder.get_feature_names_out uses ‘infrequent’ as the infrequent feature name:\n\n>>> enc.get_feature_names_out()\narray(['x0_cat', 'x0_rabbit', 'x0_infrequent_sklearn'], dtype=object)",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:009",
+          "metadata": {
+            "end": 811,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "infrequent-categories",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 33122,
+            "unit_start": 29596,
+            "token_count": 357
+          },
+          "score": 0.02786377708978328,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.19483439999748953
+    }
+  ],
+  "context": [
+    {
+      "id": "bc02fdbf40e90e664804a6f3",
+      "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3049,
+        "start": 2281,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 285
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "9190a13f1ec617d2b610dc48",
+      "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3536,
+        "start": 3051,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 243
+      },
+      "score": 0.0315136476426799,
+      "rank": 2
+    },
+    {
+      "id": "543298bc065d101c5b322173",
+      "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:013",
+      "metadata": {
+        "end": 1770,
+        "start": 232,
+        "topic": "preprocessing",
+        "anchor": "spline-transformer",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 47848,
+        "unit_start": 43681,
+        "token_count": 344
+      },
+      "score": 0.03149801587301587,
+      "rank": 3
+    },
+    {
+      "id": "75c34c1f9dacc20523109b41",
+      "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:003",
+      "metadata": {
+        "end": 1786,
+        "start": 839,
+        "topic": "preprocessing",
+        "anchor": "keeping-the-number-of-features-constant",
+        "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11852,
+        "unit_start": 8181,
+        "token_count": 282
+      },
+      "score": 0.030117753623188408,
+      "rank": 4
+    },
+    {
+      "id": "f05104732351a50d0af55efa",
+      "text": "8.1.3.1. Usage\n\nA FeatureUnion is built using a list of (key, value) pairs, where the key is the name you want to give to a given transformation (an arbitrary string; it only serves as an identifier) and value is an estimator object:\n\n>>> from sklearn.pipeline import FeatureUnion\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.decomposition import KernelPCA\n>>> estimators = [('linear_pca', PCA()), ('kernel_pca', KernelPCA())]\n>>> combined = FeatureUnion(estimators)\n>>> combined\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', KernelPCA())])\n\nLike pipelines, feature unions have a shorthand constructor called make_union that does not require explicit naming of the components.\n\nLike Pipeline , individual steps may be replaced using set_params , and ignored by setting to 'drop' :\n\n>>> combined.set_params(kernel_pca='drop')\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', 'drop')])\n\nExamples\n\nConcatenating multiple feature extraction methods",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 3264,
+        "start": 2201,
+        "topic": "preprocessing",
+        "anchor": "id1",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.3. FeatureUnion: composite feature spaces > 8.1.3.1. Usage",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 310
+      },
+      "score": 0.02946912242686891,
+      "rank": 5
+    },
+    {
+      "id": "eee88287ca321291c0212217",
+      "text": ">>> enc = preprocessing.OneHotEncoder(min_frequency=6, sparse_output=False).fit(X)\n>>> enc.infrequent_categories_\n[array(['dog', 'snake'], dtype=object)]\n>>> enc.transform(np.array([['dog'], ['cat'], ['rabbit'], ['snake']]))\narray([[0., 0., 1.],\n       [1., 0., 0.],\n       [0., 1., 0.],\n       [0., 0., 1.]])\n\nBy setting handle_unknown to 'infrequent_if_exist' , unknown categories will be considered infrequent:\n\n>>> enc = preprocessing.OneHotEncoder(\n...    handle_unknown='infrequent_if_exist', sparse_output=False, min_frequency=6)\n>>> enc = enc.fit(X)\n>>> enc.transform(np.array([['dragon']]))\narray([[0., 0., 1.]])\n\nOneHotEncoder.get_feature_names_out uses ‘infrequent’ as the infrequent feature name:\n\n>>> enc.get_feature_names_out()\narray(['x0_cat', 'x0_rabbit', 'x0_infrequent_sklearn'], dtype=object)",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:009",
+      "metadata": {
+        "end": 811,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "infrequent-categories",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.1. Infrequent categories",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 33122,
+        "unit_start": 29596,
+        "token_count": 357
+      },
+      "score": 0.02786377708978328,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:18.688111+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 503,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 50,
+        "output_tokens_details": {
+          "reasoning_tokens": 22
+        },
+        "total_tokens": 553
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:21.441158+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3330,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 108,
+        "output_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "total_tokens": 3438
+      }
+    }
+  ],
+  "seconds": 4.808559299999615,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N01",
+  "initial_ranking": [
+    {
+      "id": "bc02fdbf40e90e664804a6f3",
+      "text": "8.3.7.1. Polynomial features\n\nA simple and common method to use is polynomial features, which can get features’ high-order and interaction terms. It is implemented in PolynomialFeatures :\n\n>>> import numpy as np\n>>> from sklearn.preprocessing import PolynomialFeatures\n>>> X = np.arange(6).reshape(3, 2)\n>>> X\narray([[0, 1],\n       [2, 3],\n       [4, 5]])\n>>> poly = PolynomialFeatures(2)\n>>> poly.fit_transform(X)\narray([[ 1.,  0.,  1.,  0.,  0.,  1.],\n       [ 1.,  2.,  3.,  4.,  6.,  9.],\n       [ 1.,  4.,  5., 16., 20., 25.]])\n\nThe features of X have been transformed from \\((X_1, X_2)\\) to \\((1, X_1, X_2, X_1^2, X_1X_2, X_2^2)\\) .\n\nIn some cases, only interaction terms among features are required, and it can be gotten with the setting interaction_only=True :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3049,
+        "start": 2281,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 285
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "543298bc065d101c5b322173",
+      "text": "8.3.7.2. Spline transformer\n\nAnother way to add nonlinear terms instead of pure polynomials of features is to generate spline basis functions for each feature with the SplineTransformer . Splines are piecewise polynomials, parametrized by their polynomial degree and the positions of the knots. The SplineTransformer implements a B-spline basis, cf. the references below.\n\nNote\n\nThe SplineTransformer treats each feature separately, i.e. it won’t give you interaction terms.\n\nSome of the advantages of splines over polynomials are:\n\nB-splines are very flexible and robust if you keep a fixed low degree, usually 3, and parsimoniously adapt the number of knots. Polynomials would need a higher degree, which leads to the next point.\n\nB-splines do not have oscillatory behaviour at the boundaries as have polynomials (the higher the degree, the worse). This is known as Runge’s phenomenon .\n\nB-splines provide good options for extrapolation beyond the boundaries, i.e. beyond the range of fitted values. Have a look at the option extrapolation .\n\nB-splines generate a feature matrix with a banded structure. For a single feature, every row contains only degree + 1 non-zero elements, which occur consecutively and are even positive. This results in a matrix with good numerical properties, e.g. a low condition number, in sharp contrast to a matrix of polynomials, which goes under the name Vandermonde matrix . A low condition number is important for stable algorithms of linear models.\n\nThe following code snippet shows splines in action:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:013",
+      "metadata": {
+        "end": 1770,
+        "start": 232,
+        "topic": "preprocessing",
+        "anchor": "spline-transformer",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.2. Spline transformer",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 47848,
+        "unit_start": 43681,
+        "token_count": 344
+      },
+      "score": 0.031754032258064516,
+      "rank": 2
+    },
+    {
+      "id": "9190a13f1ec617d2b610dc48",
+      "text": ">>> X = np.arange(9).reshape(3, 3)\n>>> X\narray([[0, 1, 2],\n       [3, 4, 5],\n       [6, 7, 8]])\n>>> poly = PolynomialFeatures(degree=3, interaction_only=True)\n>>> poly.fit_transform(X)\narray([[  1.,   0.,   1.,   2.,   0.,   0.,   2.,   0.],\n       [  1.,   3.,   4.,   5.,  12.,  15.,  20.,  60.],\n       [  1.,   6.,   7.,   8.,  42.,  48.,  56., 336.]])\n\nThe features of X have been transformed from \\((X_1, X_2, X_3)\\) to \\((1, X_1, X_2, X_3, X_1X_2, X_1X_3, X_2X_3, X_1X_2X_3)\\) .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:012",
+      "metadata": {
+        "end": 3536,
+        "start": 3051,
+        "topic": "preprocessing",
+        "anchor": "polynomial-features",
+        "heading": "8.3. Preprocessing data > 8.3.7. Generating polynomial features > 8.3.7.1. Polynomial features",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 43679,
+        "unit_start": 40143,
+        "token_count": 243
+      },
+      "score": 0.030090497737556562,
+      "rank": 3
+    },
+    {
+      "id": "f05104732351a50d0af55efa",
+      "text": "8.1.3.1. Usage\n\nA FeatureUnion is built using a list of (key, value) pairs, where the key is the name you want to give to a given transformation (an arbitrary string; it only serves as an identifier) and value is an estimator object:\n\n>>> from sklearn.pipeline import FeatureUnion\n>>> from sklearn.decomposition import PCA\n>>> from sklearn.decomposition import KernelPCA\n>>> estimators = [('linear_pca', PCA()), ('kernel_pca', KernelPCA())]\n>>> combined = FeatureUnion(estimators)\n>>> combined\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', KernelPCA())])\n\nLike pipelines, feature unions have a shorthand constructor called make_union that does not require explicit naming of the components.\n\nLike Pipeline , individual steps may be replaced using set_params , and ignored by setting to 'drop' :\n\n>>> combined.set_params(kernel_pca='drop')\nFeatureUnion(transformer_list=[('linear_pca', PCA()),\n                               ('kernel_pca', 'drop')])\n\nExamples\n\nConcatenating multiple feature extraction methods",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 3264,
+        "start": 2201,
+        "topic": "preprocessing",
+        "anchor": "id1",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.3. FeatureUnion: composite feature spaces > 8.1.3.1. Usage",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 310
+      },
+      "score": 0.029857397504456328,
+      "rank": 4
+    },
+    {
+      "id": "75c34c1f9dacc20523109b41",
+      "text": "8.4.5. Keeping the number of features constant\n\nBy default, the scikit-learn imputers will drop fully empty features, i.e. columns containing only missing values. For instance:\n\n>>> imputer = SimpleImputer()\n>>> X = np.array([[np.nan, 1], [np.nan, 2], [np.nan, 3]])\n>>> imputer.fit_transform(X)\narray([[1.],\n       [2.],\n       [3.]])\n\nThe first feature in X containing only np.nan was dropped after the imputation. While this feature will not help in predictive setting, dropping the columns will change the shape of X which could be problematic when using imputers in a more complex machine-learning pipeline. The parameter keep_empty_features offers the option to keep the empty features by imputing with a constant value. In most of the cases, this constant value is zero:\n\n>>> imputer.set_params(keep_empty_features=True)\nSimpleImputer(keep_empty_features=True)\n>>> imputer.fit_transform(X)\narray([[0., 1.],\n       [0., 2.],\n       [0., 3.]])",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:003",
+      "metadata": {
+        "end": 1786,
+        "start": 839,
+        "topic": "preprocessing",
+        "anchor": "keeping-the-number-of-features-constant",
+        "heading": "8.4. Imputation of missing values > 8.4.5. Keeping the number of features constant",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11852,
+        "unit_start": 8181,
+        "token_count": 282
+      },
+      "score": 0.029709507042253523,
+      "rank": 5
+    },
+    {
+      "id": "fdf7a685d62e7fc8bd51e8f3",
+      "text": "8.1.3. FeatureUnion: composite feature spaces\n\nFeatureUnion combines several transformer objects into a new transformer that combines their output. A FeatureUnion takes a list of transformer objects. During fitting, each of these is fit to the data independently. The transformers are applied in parallel, and the feature matrices they output are concatenated side-by-side into a larger matrix.\n\nWhen you want to apply different transformations to each field of the data, see the related class ColumnTransformer (see user guide ).\n\nFeatureUnion serves the same purposes as Pipeline - convenience and joint parameter estimation and validation.\n\nFeatureUnion and Pipeline can be combined to create complex models.\n\n(A FeatureUnion has no way of checking whether two transformers might produce identical features. It only produces a union when the feature sets are disjoint, and making sure they are is the caller’s responsibility.)",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:004",
+      "metadata": {
+        "end": 2199,
+        "start": 1270,
+        "topic": "preprocessing",
+        "anchor": "featureunion-composite-feature-spaces",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.3. FeatureUnion: composite feature spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14307,
+        "unit_start": 10611,
+        "token_count": 189
+      },
+      "score": 0.029571646010002173,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

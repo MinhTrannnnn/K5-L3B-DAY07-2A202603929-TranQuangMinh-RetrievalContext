@@ -1,0 +1,2048 @@
+{
+  "status": "abstain",
+  "answer": "I can’t determine the password from the available evidence; none of the retrieved documents states it.",
+  "citations": [],
+  "question": "What password does the World Bank require to access the confidential underlying firm-level data?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "World Bank require password access confidential underlying firm-level data password confidential underlying firm-level data World Bank",
+      "results": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.218080746828697,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 21.6786071792369,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.959180488550196,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.679478106246513,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.039552940992444,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p190-text-000",
+          "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "190",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 190,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.881302216786334,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.218080746828697,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 21.6786071792369,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.959180488550196,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.679478106246513,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.039552940992444,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p190-text-000",
+          "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "190",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 190,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.881302216786334,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.007426000000123167
+    },
+    {
+      "event": "search",
+      "query": "\"confidential underlying firm-level data\" World Bank password",
+      "results": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.109040373414349,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.839303589618448,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 9.979590244275098,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.839739053123257,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.019776470496224,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p190-text-000",
+          "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "190",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 190,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 7.940651108393168,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.109040373414349,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.839303589618448,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 9.979590244275098,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.839739053123257,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.019776470496224,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p190-text-000",
+          "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "190",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 190,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 7.940651108393168,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.007106299999577459
+    },
+    {
+      "event": "search",
+      "query": "password confidential firm-level data World Bank underlying data access password",
+      "results": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.86792236451962,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.630586518779449,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 12.15624245564821,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p136-text-002",
+          "text": " all businesses or firms within a specific\nskilled practitioners, more data, and more care.      geographic area or industry. Many countries now\n  New questions  to answer. Moving beyond    grant experts access to their census of firms for\nfirm employment size, diagnostics will need    research purposes. Unlike a sample survey, which\nto examine the following questions: Do firms    gathers data from a subset of the population,\n\n104   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "136",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 136,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.762225692339287,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.337394089646208,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p265-text-001",
+          "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "265",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 265,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.220491337544743,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.86792236451962,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.630586518779449,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 12.15624245564821,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p136-text-002",
+          "text": " all businesses or firms within a specific\nskilled practitioners, more data, and more care.      geographic area or industry. Many countries now\n  New questions  to answer. Moving beyond    grant experts access to their census of firms for\nfirm employment size, diagnostics will need    research purposes. Unlike a sample survey, which\nto examine the following questions: Do firms    gathers data from a subset of the population,\n\n104   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "136",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 136,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.762225692339287,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.337394089646208,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p265-text-001",
+          "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "265",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 265,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.220491337544743,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.00664150000011432
+    },
+    {
+      "event": "search",
+      "query": "site:worldbank confidential firm-level data password underlying data World Bank enterprise survey password",
+      "results": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.300845069112217,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.558917914619542,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.524931348717974,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p265-text-001",
+          "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "265",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 265,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.981398419372749,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.912152791263521,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.244323038455029,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.300845069112217,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.558917914619542,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.524931348717974,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p265-text-001",
+          "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "265",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 265,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.981398419372749,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.912152791263521,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.244323038455029,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.0064917000017885584
+    },
+    {
+      "event": "search",
+      "query": "\"underlying firm-level data\" password confidential World Bank",
+      "results": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.109040373414349,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.839303589618448,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 9.979590244275098,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.839739053123257,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.019776470496224,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p190-text-000",
+          "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "190",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 190,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 7.940651108393168,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 11.109040373414349,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 10.839303589618448,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 9.979590244275098,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p198-text-001",
+          "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "198",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 198,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.839739053123257,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 8.019776470496224,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p190-text-000",
+          "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "190",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 190,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 7.940651108393168,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.005527999997866573
+    },
+    {
+      "event": "search",
+      "query": "password World Bank enterprise survey confidential data firm-level data access",
+      "results": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.30084506911222,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.558917914619542,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.524931348717974,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p136-text-002",
+          "text": " all businesses or firms within a specific\nskilled practitioners, more data, and more care.      geographic area or industry. Many countries now\n  New questions  to answer. Moving beyond    grant experts access to their census of firms for\nfirm employment size, diagnostics will need    research purposes. Unlike a sample survey, which\nto examine the following questions: Do firms    gathers data from a subset of the population,\n\n104   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "136",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 136,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.807228012636543,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.912152791263523,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p265-text-001",
+          "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "265",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 265,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.451535983437125,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p137-text-000",
+          "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "137",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 137,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 19.30084506911222,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p170-text-001",
+          "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "170",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 170,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.558917914619542,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p145-text-001",
+          "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.524931348717974,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p136-text-002",
+          "text": " all businesses or firms within a specific\nskilled practitioners, more data, and more care.      geographic area or industry. Many countries now\n  New questions  to answer. Moving beyond    grant experts access to their census of firms for\nfirm employment size, diagnostics will need    research purposes. Unlike a sample survey, which\nto examine the following questions: Do firms    gathers data from a subset of the population,\n\n104   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "136",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 136,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.807228012636543,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p145-text-000",
+          "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "145",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 145,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.912152791263523,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p265-text-001",
+          "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "265",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 265,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.451535983437125,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.004629499999282416
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p137-text-000",
+      "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "137",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 137,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.30084506911222,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p170-text-001",
+      "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "170",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 170,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.558917914619542,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p145-text-001",
+      "text": "  Source: WDR 2024 team based on data from the Firm-level Adoption of Technology (FAT) survey.\n  Note: The figure shows coefficients from regressing a technology adoption index (extensive index, 1–5)\n  on the independent variables shown in the figure, controlling for fixed effects by country, sector, and\n  firm size (small/medium/large). The figure covers the following middle-income countries: Bangladesh,\n   Brazil, Cambodia, Georgia, Ghana, India, Kenya, Senegal, and Viet Nam. BA = bachelor’s degree.\n\na. The World Bank–administered FAT survey provides firm-level data on the adoption of more than 300\ntechnologies across approximately 50 business functions. These include general business functions\nthat are common to all firms and sectors, such as business administration, operations planning, sales,\nand quality control. They also include sector-specific business functions that vary across sectors. For\nfood processing, for example, functions include input testing; mixing, blending, and cooking; antibacterial\nprocedures; packaging; and storage. For further information, see Cirera, Comin, and Cruz (2022).\n\n                                                               Preservation   | 113\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "145",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 145,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.524931348717974,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p198-text-001",
+      "text": "Source: WDR 2024 team based on data from PMR Database (OECD-WBG Product Market Regulation Database) (dashboard),\nData Catalogue, World Bank, Washington, DC, https://prosperitydata360.worldbank.org/en/dataset/OECDWBG+PMR;\nPMR Indicators (Indicators of Product Market Regulation) (dashboard), Organisation for Economic Co-operation and\nDevelopment,   Paris,  https://www.oecd.org/en/topics/sub-issues/product-market-regulation.html#:~:text=The%20PMR​\n%20economy%2Dwide%20indicators,existing%20regulations%2C%20and%20foreign%20trade.\nNote: The economywide Product Market Regulation (PMR) indicators measure the regulatory barriers to firm entry and\ncompetition in a broad range of cross-sector policy areas, as well as in specific services and network sectors. The sector\nPMR indicators measure the regulatory barriers to firm entry and competition at the level of individual sectors, with a focus\non network industries, professional services, and retail distribution. The PMR indicators range from 0 to 6. A lower value\nindicates that a regulatory regime is friendlier to competition. The figure includes data for 38 high-income countries and\n22 middle-income countries.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "198",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 198,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 8.839739053123257,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p145-text-000",
+      "text": "Box 5.1 Firms with better-educated managers adopt more technology\n\nIf technology is available, why don’t more firms adopt it? Data from the World Bank’s\nFirm-level Adoption of Technology (FAT) survey of 12,000 firms in 11 developing coun­\ntries reveal that the average firm has adopted an intermediate level of technology, scoring\n2.4 on the technology adoption index out of a possible 5.a The education level of managers\nis an important factor in the adoption of technology because better-educated managers\nare more likely to adopt technology (figure B5.1.1). A manager’s education is particularly\nimportant to the adoption of advanced technologies such as enterprise resource planning\nfor business administration, software-based statistical control or automated systems for\nquality control, and robots or additive manufacturing for advanced manufacturing.\n  The process may also work two ways: firms that adopt more technology hire more\neducated managers. But a considerable share of firms (more than 30 percent in Georgia,\nGhana, India, Kenya, and Senegal) view the lack of capabilities—including managers’ and\nworkers’ skills—as an important barrier to technology adoption, suggesting that having\nbetter-educated managers may be a prerequisite for greater technology adoption.\n\n  Figure B5.1.1 Better-educated managers are more likely to adopt\n  technology in middle-income countries\n\n                               0.5\n                   of\n\n                               0.4\n\n                               0.3                                                                                                          coefficient adoption\n\n                               0.2\n                                                                                                            technology 0.1                                                                                                Regression\n\n                           0\n                              Top manager   Top manager\n                                       with BA+     studied abroad\n\n                                   General business function\n                                       Sector-specific business function\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "145",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 145,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 14.912152791263523,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p190-text-000",
+      "text": "Raimi, Daniel. 2021. “Mapping County-Level Exposure and      Talevi, Marta, Subhrendu K. Pattanayak, Ipsita Das, Jessica\n    Vulnerability to the US Energy Transition.” RFF Working          J. Lewis, and Ashok K. Singha. 2022. “Speaking from\n   Paper 21-36 (December), Resources for the Future,        Experience: Preferences for Cooking with Biogas in\n   Washington, DC.                                             Rural India.” Energy Economics 107 (March): 105796.\nRichter, Philipp M., and Alexander Schiersch. 2017. “CO2   UNEP (United Nations Environment Programme). 2009.\n   Emission Intensity and Exporting: Evidence from Firm-       “The  Global  Financial  Crisis  and  Its  Impact  on\n    Level Data.” European Economic Review 98 (September):       Renewable Energy Finance.” Division of Technology,\n   373–91.                                                          Industry, and Economics, UNEP, Nairobi, Kenya.\nRosenow, Samuel, and Penny Mealy. 2024. “Turning Risks     Volz,  Ulrich, Emanuele  Campiglio,  Etienne  Espagne,\n    into Reward:  Diversifying the Global Value Chains        Jean-François Mercure, William Oman, Hector Pollitt,\n    of Decarbonization  Technologies.”  Policy Research       Gregor Semieniuk, and Romain Svartzman. 2021.\n   Working Paper 10696, World Bank, Washington, DC.           “Transboundary  Climate-Related  Risks:  Analysing\nSaussay,  Aurélien, Misato  Sato, Francesco Vona, and        the Impacts  of a Decarbon",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "190",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 190,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 7.940651108393168,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p136-text-002",
+      "text": " all businesses or firms within a specific\nskilled practitioners, more data, and more care.      geographic area or industry. Many countries now\n  New questions  to answer. Moving beyond    grant experts access to their census of firms for\nfirm employment size, diagnostics will need    research purposes. Unlike a sample survey, which\nto examine the following questions: Do firms    gathers data from a subset of the population,\n\n104   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "136",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 136,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 16.807228012636543,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p265-text-001",
+      "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "265",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 265,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 13.451535983437125,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:35:40.078421+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 71,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 580
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:42.217373+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3358,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 55,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 3413
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:44.980247+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6191,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 52,
+        "output_tokens_details": {
+          "reasoning_tokens": 23
+        },
+        "total_tokens": 6243
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:47.918181+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8761,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3200,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 95,
+        "output_tokens_details": {
+          "reasoning_tokens": 61
+        },
+        "total_tokens": 8856
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:51.669009+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 11640,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 8576,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 82,
+        "output_tokens_details": {
+          "reasoning_tokens": 53
+        },
+        "total_tokens": 11722
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:53.919132+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 14500,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 11520,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 52,
+        "output_tokens_details": {
+          "reasoning_tokens": 23
+        },
+        "total_tokens": 14552
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:57.801784+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 16979,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 310,
+        "output_tokens_details": {
+          "reasoning_tokens": 190
+        },
+        "total_tokens": 17289
+      }
+    }
+  ],
+  "seconds": 20.28966709999804,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D18",
+  "initial_ranking": [
+    {
+      "id": "wdr-p070-text-000",
+      "text": "Box 1.1 Misunderstanding through misclassification (continued)\n\n        annually in US dollars based on a three-year average exchange rate and were expanded to\n        four categories:\n\n          •  Low-income. The low-income threshold was officially set in 1988, still based on the\n            value of the IDA’s “civil works preference” and updated for inflation.d\n          •  Lower-middle-income. The lower-middle-income threshold is based on the oper­\n             ational guidelines cutoff for determining access to 17-year repayment terms for\n            loans through the World Bank Group’s International Bank for Reconstruction and\n          Development (IBRD), although these terms are no longer available. It appears to\n           have first been introduced in the 1983 edition of the World Development Report.e\n          •  Upper-middle-income. The upper-middle-income threshold  is the range between\n            lower-​middle-income and high-income.\n          •  High-income. The high-income threshold does not relate to a cutoff derived from\n            the operational guidelines, but was set at GNI per capita of US$6,000 in 1987 prices\n              in a paper presented to the World Bank’s Board of Executive Directors in January\n            1989, which also reconfirmed the low- and lower-­middle-income threshold levels.f\n          The US$6,000 level has been updated over time for what is called “international infla­\n               tion,” defined as the average inflation rates of Japan, the United Kingdom, the United\n             States, and the euro area. The choice of the high-income threshold was made to\n            address anomalies in the classification of high-income and industrialized economies\n           used in the World Bank’s World Development Indicators prior to that point.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "70",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 70,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.154976432229628,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p137-text-000",
+      "text": "a census aims to encompass every entity within    security, and flexibility in managing their finan­\nthe defined scope. Typically, census of firms data     cial processes. As a result, platform data can pro­\ninclude details such as the number of firms, their    vide information, even on the smallest businesses,\nsize,  location, ownership  structure,  industry,    almost in real time, even when government statis­\nnumber of employees, revenue, and other perti­     tics are unavailable.\nnent information. This data collection method       Several additional “good-to-have” data sources\nprovides a detailed, accurate representation of    are available for conducting in-depth firm-level\nthe entire population of firms, enabling a com­    investigations, including Orbis Europe,32 Orbis\nprehensive analysis of many measures of business   M&A,33 PitchBook,34 and PATSTAT.35 These data\ndynamism.                                            sets offer valuable insights into firm performance\n  The World Bank’s Enterprise Surveys are    at the micro level.\nthe go-to resource for cross-country analysis       Greater  analytical  expertise. As the  sources\nof firm-level information about the business   and volume of data soar, avoiding misdirection\nenvironment. More recently, the surveys have   and framing the appropriate questions become\nbeen expanded to include the informal sector.    challenging. A  starting  point  is  to  carefully\nThe World Bank also conducts the Firm-level    investigate whether promising new firms can\nAdoption of Technology (FAT) survey, collect­    easily enter the economy or they face obstacles,\ning information on the adoption of general    be  it from direct means such as licensing or\nbusiness functions and sector-specific technol­    indirectly from a significant presence of SOEs.\nogies in 11 developing economies. Some com­    Furthermore,",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "137",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 137,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.707567210598516,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p144-text-002",
+      "text": "    a level of social mobility that is not dependent\nfunctions, thereby raising not only the produc-   on their parents’ social status.7 By contrast, in\ntivity of their firm but also contributing to cre-    ­middle-income countries on average, intergener-\nation and economic progress for the economy as    ational persistence is much higher (40 percent).\na whole (box 5.1).                                         Specifically, the share of individuals whose social\n                                           and economic status is the same as that of the\nImproving social mobility is a priority                                                  previous generation is more than twice as large\nfor middle-income countries                                                    as in Finland. Closing even a fraction of this gap\nHow do societies select who has access to educa-   means a great boost to acquisition and allocation\ntion, employment, and finance? What prevents    of talent and to growth.\n\n112   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "144",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 144,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.68233328106713,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p170-text-001",
+      "text": "           Detailed microdata on the adoption of these granular technologies across a wide range\n        of countries, regions, industries, and firms are not yet readily available. In the absence of\n        such data, this chapter relies on a growing literature that takes advantage of real-time\n        data sources and uses text analysis to infer the spread of new technologies through their\n         footprint in the demand for new technology-related tasks or skills in online job post­\n          ings.a Where possible, the chapter also complements these measures with country-level\n       measures of specific technologies and data on energy intensity and carbon intensity at\n        the country and industry levels. Finally, it also incorporates recent granular firm-level data\n       on green technology adoption from the World Bank’s Firm-level Adoption of Technology\n        (FAT) survey.b\n\n           a. See, for example, Acemoglu et al. (2022); Goldfarb, Taska, and Teodoridis (2023).\n           b. Cirera, Comin, and Cruz (2022).\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "170",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 170,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.16686927053911,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p143-text-001",
+      "text": " to increase its share sub­\n   comers to a city or country are welcome.     stantially. In general, as middle-income countries\n  The status quo is preserved by keeping    grow—particularly as they approach high-income\n   “others” out.                                  status and must innovate rather than simply adopt\n• How does gender inequality hold back the    technologies—they require increasingly sophisti­\n   potential of women? In many middle-­    cated talent. Such transformations in the economy\n  income  countries,  patriarchal gender   make the development and efficient allocation of\n  norms hold back women from taking    talent particularly important for ­middle-income\n   advantage of attractive opportunities in    countries and place social mobility and equitable\n   the labor market and for entrepreneur­    access to opportunities at the forefront of policies to\n   ship. Discrimination, sexism, and misog­    promote growth and social welfare.\n   yny occur in all walks of life, including\n   the businesses women own, the jobs                                         Skilled workers are key to economic,   they get and the pay they receive; how\n                                          structural, and technological  much their families spend on educating\n                                    transformation  them and for how long; and their abil­\n   ity to operate bank accounts. Unequal    Firms grow as skilled workers, such as manag­\n   social norms and beliefs and the institu­    ers and professionals, become more abundant.\n   tions that reinforce men’s status advan­    In lower-income countries with gross domestic\n   tage and access to more resources and    product (GDP) per capita under US$3,000, most\n  power hold back nearly half a country’s    workers are unskilled and employed in small\n   people, curtailing an economy’s growth.    firms with fewer than 10 employees",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "143",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 143,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.973902805502615,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p265-text-001",
+      "text": "       0                                           users to adopt energy-conserving technologies.Carbon perCO2 0.5                                            of the supply and to incentivize energy-intensive\n      1980 1986 1992 1998 2004 2010 2016 2022   What can these countries do to reduce energy\n                                                      intensity and accelerate energy efficiency?\n                   China     Europe       India\n                    United States          World\n                            How middle-income countries can\nSource:     WDR 2024               team                         analysis                            based on                                        adapting from\nand updating              Pindyck                         (2021).                            Carbon                                     emissions                                                 data   reduce energy intensity\nare from Energy Institute (2023). GDP data are from WDI                                                 In 2022, middle-income countries were expe­(World Development  Indicators) (Data  Catalog), World\nBank, Washington, DC, https://datacatalog.worldbank.org​    riencing  energy  intensity  (energy consump­\n/­search/dataset/0037712.                              tion per unit of GDP) 2.5 times higher than\nNote: Carbon emissions, the product of energy intensity and    that in high-­income countries. The first set of\nenergy efficiency, are measured in million metric tons of                                                     insights on middle-income countries’ adoptioncarbon dioxide (CO2) emissions per billion 2015 US dollars\nof GDP. GDP = gross domestic product.                    of energy-saving technologies is now available\n                                             through the World Bank’s Firm-level Adoption\n                                                     of Technology (FAT) survey of seven countries—\neconomic growth is the key driver of emissions    Bangladesh, Brazil, Cambodia, Chile, Ethiopia,\nin middle-income countries, and those emis­    Georgia, and India.\nsions more than outweigh the reductions in      Adoption of energy-saving technologies var­\nemissions from lowering energy",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "265",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 265,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.760661872837698,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264"
+}

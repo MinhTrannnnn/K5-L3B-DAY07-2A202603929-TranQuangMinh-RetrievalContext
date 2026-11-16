@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source cross_validation:007 explicitly says GroupKFold “ensures that the same group is not represented in both testing and training sets” and gives the different-subject example, so the answer is correct and fully supported.",
+  "query_id": "q10",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "dad4e9f24ee2b8a924986fbf10639b414069b0e949334642c349cac9a27d1bf9",
+  "alternative_cited_pages": [
+    "cross_validation:007"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

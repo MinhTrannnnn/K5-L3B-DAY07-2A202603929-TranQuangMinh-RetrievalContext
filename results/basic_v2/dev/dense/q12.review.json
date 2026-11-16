@@ -1,0 +1,25 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Supported by grid_search:001 and grid_search:002. The answer correctly states that GridSearchCV exhaustively evaluates all parameter combinations from param_grid, while RandomizedSearchCV samples a specified number of candidates from distributions/discrete choices using n_iter rather than testing every combination.",
+  "query_id": "q12",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "479540565c4dded8dd1f6b2b31b19dd4a1cdb45241359400d6209a952aa29bbb",
+  "alternative_cited_pages": [
+    "grid_search:001",
+    "grid_search:002"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

@@ -1,0 +1,991 @@
+{
+  "status": "answered",
+  "answer": "Map 6.3 shows low-carbon technology jobs concentrated in China’s east and southeast coastal manufacturing hubs—especially cities such as Guangzhou, Beijing, Shanghai, Suzhou, and Shenzhen—while fossil-fuel jobs are concentrated farther inland, especially around Shanxi and other north-central coal-mining areas. [wdr-p186-diagram-00-000] [wdr-p186-text-000]",
+  "citations": [
+    "wdr-p186-diagram-00-000",
+    "wdr-p186-text-000"
+  ],
+  "question": "Inspect Map 6.3. Where in China are low-carbon technology jobs concentrated compared with fossil-fuel jobs?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "\"Map 6.3\" low-carbon technology jobs fossil-fuel jobs China",
+      "results": [
+        {
+          "id": "wdr-p186-diagram-00-000",
+          "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\dc69d858e364\\page-186.png",
+            "label": "Map 6.3",
+            "pdf_page": 186,
+            "visual_id": "wdr-p186-diagram-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+              "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 34.473025976107145,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p186-text-000",
+          "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 186,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 38.32801442016251,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p173-text-001",
+          "text": "   Innovation is also driving the creation of start-    near petroleum fields. The trade in fossil fuels has\nups and capital flows (figure 6.3, panels b and c).   been a driving component of global trade and geo­\nIn 2021, about 1,500 new clean energy start-ups     politics for decades, with fuel exports accounting\nwere listed on Crunchbase, drawing on IEA data    for 11.7 percent of total merchandise exports\ncovering 40 countries, and about one-fourth of the    globally in 2019. However, this picture is start­\nstart-ups were in middle-income countries.20 Of    ing to change—and more rapidly than had been\nthese, more than half were in China and one-third    imagined as the following shifts occur:\nin India, although growth has been most rapid in\nIndia, with a tripling of start-up creation over the         •   Shifts between countries and between regions\nlast decade. Globally, total clean energy financing           within  countries. Low-carbon  technolo­\npassed US$1 trillion for the first time in 2022.21               gies and fossil fuels tend to be produced\n  These shifts are triggering a reallocation of           in  different  countries, and low-carbon\neconomic  activity  across  countries,  regions,           technologies favor countries where manu­\nindustries, occupations, and firms. Just as fossil           facturing capabilities are already in place.\nfuels have shaped the geopolitical map over the         Even within some countries, a spatial real­\nlast two centuries, the clean energy transforma­           location of production and jobs is under\ntion will alter the economic geography of manu­           way. In China, for example, although fossil\nfacturing and global trade and the landscape of            fuel jobs have",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 24.709279377859687,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p015-text-000",
+          "text": "Maps\n\n141   6.1     In 2022, one-third of online    154  6.3    Low-carbon technology jobs\n              job postings related to                         in China are growing in\n             low-carbon technologies                    manufacturing hubs on the\n            were in middle-income                       southeast coast, whereas\n              countries                                            fossil fuel jobs are close to\n150  6.2    Limited or outdated                           coal mines\n                electricity transmission\n            networks serve as barriers to\n             the entry of renewable\n             sources\n\nTables\n\n4    O.1  World Bank country           49    S.1   Suggested indicators\n              classifications and selected                    provide a clear picture of the\n             global indicators, 2022                       underlying structure of an\n7    O.2  To achieve high-income                   economy\n              status, countries will need to    54    2.1   Middle-income countries will\n             recalibrate their mix of                     need to engineer two\n            investment, infusion, and                      successive transitions to\n            innovation                                  develop economic structures\n27   O.3  The 3i strategy: What                         that can sustain high-income\n            countries should do at                          status\n             different stages of             103  4.1   Examples of possible effects of\n           development                             market power on development\n31    P1.1  World Bank country                       outcomes\n              classifications and selected\n             global indicators, 2022\n\n                                                                 Contents   |  xiii\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "15",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 15,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.527502197459384,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p013-text-001",
+          "text": "6.3    Low-carbon innovation is      168   7.7    A state presence has\n              driving the emergence of                    important effects on firm\n          new spatial clusters, start-                       entry, market\n              ups, and financing                            concentration, and\n145   6.4    The rate of adoption of clean                    preferential treatment\n             energy technologies is         169   7.8    State-owned enterprises\n            growing more rapidly in                    dominate coal power\n            middle-income countries                      generation, while the private\n            than in high-income                           sector leads in modern\n              countries, but the level of                    renewable energy\n             adoption is lower            169   7.9     In low- and middle-income\n147   6.5    Clean energy technology                       countries, state-owned\n              value chains are still                           enterprises are the largest\n            dominated by high-income                     investors in fossil fuel energy\n              countries and China                          generation\n148  6.6    Costa Rica and China are      173   7.10    Foreign technology licensing\n             the global front-runners in                          is limited among middle-\n              jobs related to low-carbon                  income country firms\n             technologies                178   B7.4.1  Some countries are strongly\n153   6.7    Most of the countries                         positioned to benefit from\n              currently “locked in” to                     knowledge spillovers from\n              declining brown industries                      their diaspora\n              are middle-income countries\n\n                                                                  Contents   |  xi\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "13",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 13,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 21.503104253557662,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p178-text-001",
+          "text": " in a country that imports\n   Patenting for low-­carbon technologies is also     fossil fuel, fossil fuel revenues are highly con­\nhighly concentrated in just a handful of coun­    centrated. In 18 countries, fuel exports account\ntries, with China in the lead, according to data    for more than 50 percent of total merchandise\nfrom the International Renewable Energy Agency    exports; seven countries generate 90 percent or\n(IRENA). Over the last two decades, China has   more of their export earnings from fossil fuel\nfiled the largest number of such patents, fol­    exports.36 Fossil fuel resources are more concen­\nlowed by the United States, Japan, Korea, and    trated than renewable resources.37 Within coun­\nGermany. Such patenting has been very limited in     tries, the losses to fossil fuel companies are also\nother ­middle-income countries, with the second-­   highly concentrated. Studies have shown that the\nhighest middle-income country, Brazil, filing only    concentrated nature of the losses from the low-­\n2 percent as many patents as China over the last    carbon transition, compared with the distrib­\n20 years.                                        uted nature of the gains, makes the clean energy\n  Costa Rica and China are global front-­runners    transition particularly prone to obstructionism\nin terms of job creation related to low-carbon    by entrenched interests.38 Moreover, the incen­\ntechnologies. In 2022, Costa Rica accounted     tives for lobbying are asymmetric. Incumbents,\nfor about 8 percent of all online job postings    as a tightly defined group of actors, have a greater\nrelated to low-carbon technologies and China    incentive to mobilize, and they face lower coor­\nfor 5 ­percent—just below the global maximum",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "178",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 178,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.324464302500154,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p171-text-002",
+          "text": " have\nIn  light of policy changes, the International    been highest in the United States, Europe, and\nEnergy Agency  (IEA)  revised  its  forecast  for   China (figure 6.3, panel a). The new spatial clus­\nrenewable capacity additions for 2023 and 2024,    ters emerging in terms of low-carbon technology\nraising  it by 38 percent from its expectations    jobs are Catalonia and Madrid in Spain, home\nbefore the war, in December 2021. Countries    to major solar industries; Guangzhou, Beijing,\nmore dependent on imports of natural gas before    Shanghai, Suzhou, and Shenzhen in China, home\nthe war were more exposed to the price shock and    to China’s largest EV and clean energy manu­\nincreased hiring for jobs related to low-carbon    facturing hubs; Rhône-Alpes and Île-de-France\ntechnologies.13                                        (the Paris region), home to France’s largest clean\n  The  global  energy  crisis  also  spurred  a    energy clusters; and California, the clean energy\nreshaping of the climate policy landscape in 2022    pioneer in the United States.19\n\n                                                                Destruction    | 139\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "171",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 171,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.28864645521515,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p173-text-002",
+          "text": " been highly concentrated\ninternational trade policy. Access to fossil fuels           in the inland provinces highly reliant on\nhas fundamentally shaped the world’s economic           coal mining, low-carbon technology jobs\ngeography for nearly a century, with heavy indus­           are growing in the manufacturing hubs\ntry close to coal beds and petrochemical plants         on the  east  coast.22  Spatial  disparities\n\n                                                                Destruction    | 141\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.443312084603484,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p171-text-001",
+          "text": "and Walsh  (2023); FRED:  Software  (Federal  Reserve   32 percent to 43 percent. China has also pushed\nEconomic Data: Software) (database), Federal Reserve     its scale-up of renewables and is now on track to\nBank of  St. Louis,  St. Louis,  https://fred.stlouisfed​.org​\n/tags/series?t=software;  IRENA   (2023);   Prices  and   meet its 2030 renewable energy generation target\nOutput for Information and Communication Technologies     five years ahead of time, by 2025.17\n(dashboard), Bureau of Economic Analysis, Suitland, MD,      This acceleration of the clean energy transition\nhttps://www.bea.gov/prices-and-output-information-and​\n                                                                   is driving the emergence of new spatial clusters-communication-technologies; Solar (photovoltaic) panel\nprices (grapher), Our World in Data, Global Change Data   and jobs (map 6.1). Evidence extending the work\nLab and Oxford Martin Program on Global Development,    of Bastos et al. (2023) to analyze 1 billion online\nUniversity of Oxford, Oxford, UK, https://ourworldindata​\n                                                    job postings across 86 countries over the last.org/grapher/solar-pv-prices.\nNote: The figure compares the price of investment for the    decade reveals that in 2022 alone 3.3 million new\nthree sectors with the fastest declines according to data from    job openings were related to low-carbon technol­\nthe Bureau of Economic Analysis with that for onshore wind    ogies—just under 2 percent of jobs posted online\nand solar photovoltaics, with 1985 normalized to 1.\n                                                    in 2022.18 In absolute terms, new openings",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "171",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 171,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.13283243933924,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p182-text-000",
+          "text": "on technology adoption or social change are not    at certain times of the day or in certain seasons.\ncast in stone, but they change in response to deci­   Such intermittency poses challenges for their inte­\nsions made by peers. The result is inertia in adop­    gration into power systems, particularly before\ntion initially and then rapid adoption later once     electricity storage is fully developed. Integration\na critical mass of peers adopts the technology.    also requires new approaches to demand-side\nSimilarly, the production of low-carbon technol­   management. The scale-up of the electrification\nogies is subject to external economies of scale,    of transport and buildings, which will increase\nwhich lead to lower production and operating    the demand for electricity, also depends on the\ncosts for all companies in the industry. These, in     reliability of the power system. Scale-up requires\nturn, can increase profitability and competitive­    accurate forecasting and forward planning. All\nness. However, these cost reductions do not occur    these aspects of the energy transition create bar­\nuntil a sufficient number of industry players or     riers and necessitate strong systemwide coordina­\nscale is reached—meaning costs are higher for    tion and institutional capacity.\nfirst movers.                                      Legacy transmission networks built to serve\n                                                      large  fossil  fuel  plants, along with outdated\n                                                      regulations,  also  create  barriers  to  entry  in\nLegacy transmission networks built                                                 ­middle-income countries. Typically, legacy net­\nto serve large fossil fuel plants slow                                            works have been designed for traditional energy\ndiffusion of low-carbon energy                                                  sources for which generation can be located close\nBecause of the market structure of electricity gen­    to the source of demand (map 6.2). However, the\neration and transmission, the deployment of clean   ",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "182",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 182,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.925320772322564,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p186-diagram-00-000",
+          "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\dc69d858e364\\page-186.png",
+            "label": "Map 6.3",
+            "pdf_page": 186,
+            "visual_id": "wdr-p186-diagram-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+              "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 34.473025976107145,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p186-text-000",
+          "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "186",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 186,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 38.32801442016251,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p173-text-001",
+          "text": "   Innovation is also driving the creation of start-    near petroleum fields. The trade in fossil fuels has\nups and capital flows (figure 6.3, panels b and c).   been a driving component of global trade and geo­\nIn 2021, about 1,500 new clean energy start-ups     politics for decades, with fuel exports accounting\nwere listed on Crunchbase, drawing on IEA data    for 11.7 percent of total merchandise exports\ncovering 40 countries, and about one-fourth of the    globally in 2019. However, this picture is start­\nstart-ups were in middle-income countries.20 Of    ing to change—and more rapidly than had been\nthese, more than half were in China and one-third    imagined as the following shifts occur:\nin India, although growth has been most rapid in\nIndia, with a tripling of start-up creation over the         •   Shifts between countries and between regions\nlast decade. Globally, total clean energy financing           within  countries. Low-carbon  technolo­\npassed US$1 trillion for the first time in 2022.21               gies and fossil fuels tend to be produced\n  These shifts are triggering a reallocation of           in  different  countries, and low-carbon\neconomic  activity  across  countries,  regions,           technologies favor countries where manu­\nindustries, occupations, and firms. Just as fossil           facturing capabilities are already in place.\nfuels have shaped the geopolitical map over the         Even within some countries, a spatial real­\nlast two centuries, the clean energy transforma­           location of production and jobs is under\ntion will alter the economic geography of manu­           way. In China, for example, although fossil\nfacturing and global trade and the landscape of            fuel jobs have",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 24.709279377859687,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p015-text-000",
+          "text": "Maps\n\n141   6.1     In 2022, one-third of online    154  6.3    Low-carbon technology jobs\n              job postings related to                         in China are growing in\n             low-carbon technologies                    manufacturing hubs on the\n            were in middle-income                       southeast coast, whereas\n              countries                                            fossil fuel jobs are close to\n150  6.2    Limited or outdated                           coal mines\n                electricity transmission\n            networks serve as barriers to\n             the entry of renewable\n             sources\n\nTables\n\n4    O.1  World Bank country           49    S.1   Suggested indicators\n              classifications and selected                    provide a clear picture of the\n             global indicators, 2022                       underlying structure of an\n7    O.2  To achieve high-income                   economy\n              status, countries will need to    54    2.1   Middle-income countries will\n             recalibrate their mix of                     need to engineer two\n            investment, infusion, and                      successive transitions to\n            innovation                                  develop economic structures\n27   O.3  The 3i strategy: What                         that can sustain high-income\n            countries should do at                          status\n             different stages of             103  4.1   Examples of possible effects of\n           development                             market power on development\n31    P1.1  World Bank country                       outcomes\n              classifications and selected\n             global indicators, 2022\n\n                                                                 Contents   |  xiii\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "15",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 15,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.527502197459384,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p013-text-001",
+          "text": "6.3    Low-carbon innovation is      168   7.7    A state presence has\n              driving the emergence of                    important effects on firm\n          new spatial clusters, start-                       entry, market\n              ups, and financing                            concentration, and\n145   6.4    The rate of adoption of clean                    preferential treatment\n             energy technologies is         169   7.8    State-owned enterprises\n            growing more rapidly in                    dominate coal power\n            middle-income countries                      generation, while the private\n            than in high-income                           sector leads in modern\n              countries, but the level of                    renewable energy\n             adoption is lower            169   7.9     In low- and middle-income\n147   6.5    Clean energy technology                       countries, state-owned\n              value chains are still                           enterprises are the largest\n            dominated by high-income                     investors in fossil fuel energy\n              countries and China                          generation\n148  6.6    Costa Rica and China are      173   7.10    Foreign technology licensing\n             the global front-runners in                          is limited among middle-\n              jobs related to low-carbon                  income country firms\n             technologies                178   B7.4.1  Some countries are strongly\n153   6.7    Most of the countries                         positioned to benefit from\n              currently “locked in” to                     knowledge spillovers from\n              declining brown industries                      their diaspora\n              are middle-income countries\n\n                                                                  Contents   |  xi\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "13",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 13,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 21.503104253557662,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p178-text-001",
+          "text": " in a country that imports\n   Patenting for low-­carbon technologies is also     fossil fuel, fossil fuel revenues are highly con­\nhighly concentrated in just a handful of coun­    centrated. In 18 countries, fuel exports account\ntries, with China in the lead, according to data    for more than 50 percent of total merchandise\nfrom the International Renewable Energy Agency    exports; seven countries generate 90 percent or\n(IRENA). Over the last two decades, China has   more of their export earnings from fossil fuel\nfiled the largest number of such patents, fol­    exports.36 Fossil fuel resources are more concen­\nlowed by the United States, Japan, Korea, and    trated than renewable resources.37 Within coun­\nGermany. Such patenting has been very limited in     tries, the losses to fossil fuel companies are also\nother ­middle-income countries, with the second-­   highly concentrated. Studies have shown that the\nhighest middle-income country, Brazil, filing only    concentrated nature of the losses from the low-­\n2 percent as many patents as China over the last    carbon transition, compared with the distrib­\n20 years.                                        uted nature of the gains, makes the clean energy\n  Costa Rica and China are global front-­runners    transition particularly prone to obstructionism\nin terms of job creation related to low-carbon    by entrenched interests.38 Moreover, the incen­\ntechnologies. In 2022, Costa Rica accounted     tives for lobbying are asymmetric. Incumbents,\nfor about 8 percent of all online job postings    as a tightly defined group of actors, have a greater\nrelated to low-carbon technologies and China    incentive to mobilize, and they face lower coor­\nfor 5 ­percent—just below the global maximum",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "178",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 178,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.324464302500154,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p171-text-002",
+          "text": " have\nIn  light of policy changes, the International    been highest in the United States, Europe, and\nEnergy Agency  (IEA)  revised  its  forecast  for   China (figure 6.3, panel a). The new spatial clus­\nrenewable capacity additions for 2023 and 2024,    ters emerging in terms of low-carbon technology\nraising  it by 38 percent from its expectations    jobs are Catalonia and Madrid in Spain, home\nbefore the war, in December 2021. Countries    to major solar industries; Guangzhou, Beijing,\nmore dependent on imports of natural gas before    Shanghai, Suzhou, and Shenzhen in China, home\nthe war were more exposed to the price shock and    to China’s largest EV and clean energy manu­\nincreased hiring for jobs related to low-carbon    facturing hubs; Rhône-Alpes and Île-de-France\ntechnologies.13                                        (the Paris region), home to France’s largest clean\n  The  global  energy  crisis  also  spurred  a    energy clusters; and California, the clean energy\nreshaping of the climate policy landscape in 2022    pioneer in the United States.19\n\n                                                                Destruction    | 139\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "171",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 171,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.28864645521515,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p173-text-002",
+          "text": " been highly concentrated\ninternational trade policy. Access to fossil fuels           in the inland provinces highly reliant on\nhas fundamentally shaped the world’s economic           coal mining, low-carbon technology jobs\ngeography for nearly a century, with heavy indus­           are growing in the manufacturing hubs\ntry close to coal beds and petrochemical plants         on the  east  coast.22  Spatial  disparities\n\n                                                                Destruction    | 141\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "173",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 173,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.443312084603484,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p171-text-001",
+          "text": "and Walsh  (2023); FRED:  Software  (Federal  Reserve   32 percent to 43 percent. China has also pushed\nEconomic Data: Software) (database), Federal Reserve     its scale-up of renewables and is now on track to\nBank of  St. Louis,  St. Louis,  https://fred.stlouisfed​.org​\n/tags/series?t=software;  IRENA   (2023);   Prices  and   meet its 2030 renewable energy generation target\nOutput for Information and Communication Technologies     five years ahead of time, by 2025.17\n(dashboard), Bureau of Economic Analysis, Suitland, MD,      This acceleration of the clean energy transition\nhttps://www.bea.gov/prices-and-output-information-and​\n                                                                   is driving the emergence of new spatial clusters-communication-technologies; Solar (photovoltaic) panel\nprices (grapher), Our World in Data, Global Change Data   and jobs (map 6.1). Evidence extending the work\nLab and Oxford Martin Program on Global Development,    of Bastos et al. (2023) to analyze 1 billion online\nUniversity of Oxford, Oxford, UK, https://ourworldindata​\n                                                    job postings across 86 countries over the last.org/grapher/solar-pv-prices.\nNote: The figure compares the price of investment for the    decade reveals that in 2022 alone 3.3 million new\nthree sectors with the fastest declines according to data from    job openings were related to low-carbon technol­\nthe Bureau of Economic Analysis with that for onshore wind    ogies—just under 2 percent of jobs posted online\nand solar photovoltaics, with 1985 normalized to 1.\n                                                    in 2022.18 In absolute terms, new openings",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "171",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 171,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 16.13283243933924,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p182-text-000",
+          "text": "on technology adoption or social change are not    at certain times of the day or in certain seasons.\ncast in stone, but they change in response to deci­   Such intermittency poses challenges for their inte­\nsions made by peers. The result is inertia in adop­    gration into power systems, particularly before\ntion initially and then rapid adoption later once     electricity storage is fully developed. Integration\na critical mass of peers adopts the technology.    also requires new approaches to demand-side\nSimilarly, the production of low-carbon technol­   management. The scale-up of the electrification\nogies is subject to external economies of scale,    of transport and buildings, which will increase\nwhich lead to lower production and operating    the demand for electricity, also depends on the\ncosts for all companies in the industry. These, in     reliability of the power system. Scale-up requires\nturn, can increase profitability and competitive­    accurate forecasting and forward planning. All\nness. However, these cost reductions do not occur    these aspects of the energy transition create bar­\nuntil a sufficient number of industry players or     riers and necessitate strong systemwide coordina­\nscale is reached—meaning costs are higher for    tion and institutional capacity.\nfirst movers.                                      Legacy transmission networks built to serve\n                                                      large  fossil  fuel  plants, along with outdated\n                                                      regulations,  also  create  barriers  to  entry  in\nLegacy transmission networks built                                                 ­middle-income countries. Typically, legacy net­\nto serve large fossil fuel plants slow                                            works have been designed for traditional energy\ndiffusion of low-carbon energy                                                  sources for which generation can be located close\nBecause of the market structure of electricity gen­    to the source of demand (map 6.2). However, the\neration and transmission, the deployment of clean   ",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "182",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 182,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.925320772322564,
+          "rank": 10
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.013531099997635465
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by the evidence: Map 6.3 and the accompanying text show low-carbon technology jobs concentrated in east/southeast coastal manufacturing hubs (including Guangzhou, Beijing, Shanghai, Suzhou, and Shenzhen), while fossil-fuel jobs are concentrated inland, especially around Shanxi and northern China near coal mines."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p186-diagram-00-000",
+      "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\dc69d858e364\\page-186.png",
+        "label": "Map 6.3",
+        "pdf_page": 186,
+        "visual_id": "wdr-p186-diagram-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+          "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 34.473025976107145,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p186-text-000",
+      "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 186,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 38.32801442016251,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p173-text-001",
+      "text": "   Innovation is also driving the creation of start-    near petroleum fields. The trade in fossil fuels has\nups and capital flows (figure 6.3, panels b and c).   been a driving component of global trade and geo­\nIn 2021, about 1,500 new clean energy start-ups     politics for decades, with fuel exports accounting\nwere listed on Crunchbase, drawing on IEA data    for 11.7 percent of total merchandise exports\ncovering 40 countries, and about one-fourth of the    globally in 2019. However, this picture is start­\nstart-ups were in middle-income countries.20 Of    ing to change—and more rapidly than had been\nthese, more than half were in China and one-third    imagined as the following shifts occur:\nin India, although growth has been most rapid in\nIndia, with a tripling of start-up creation over the         •   Shifts between countries and between regions\nlast decade. Globally, total clean energy financing           within  countries. Low-carbon  technolo­\npassed US$1 trillion for the first time in 2022.21               gies and fossil fuels tend to be produced\n  These shifts are triggering a reallocation of           in  different  countries, and low-carbon\neconomic  activity  across  countries,  regions,           technologies favor countries where manu­\nindustries, occupations, and firms. Just as fossil           facturing capabilities are already in place.\nfuels have shaped the geopolitical map over the         Even within some countries, a spatial real­\nlast two centuries, the clean energy transforma­           location of production and jobs is under\ntion will alter the economic geography of manu­           way. In China, for example, although fossil\nfacturing and global trade and the landscape of            fuel jobs have",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 24.709279377859687,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p015-text-000",
+      "text": "Maps\n\n141   6.1     In 2022, one-third of online    154  6.3    Low-carbon technology jobs\n              job postings related to                         in China are growing in\n             low-carbon technologies                    manufacturing hubs on the\n            were in middle-income                       southeast coast, whereas\n              countries                                            fossil fuel jobs are close to\n150  6.2    Limited or outdated                           coal mines\n                electricity transmission\n            networks serve as barriers to\n             the entry of renewable\n             sources\n\nTables\n\n4    O.1  World Bank country           49    S.1   Suggested indicators\n              classifications and selected                    provide a clear picture of the\n             global indicators, 2022                       underlying structure of an\n7    O.2  To achieve high-income                   economy\n              status, countries will need to    54    2.1   Middle-income countries will\n             recalibrate their mix of                     need to engineer two\n            investment, infusion, and                      successive transitions to\n            innovation                                  develop economic structures\n27   O.3  The 3i strategy: What                         that can sustain high-income\n            countries should do at                          status\n             different stages of             103  4.1   Examples of possible effects of\n           development                             market power on development\n31    P1.1  World Bank country                       outcomes\n              classifications and selected\n             global indicators, 2022\n\n                                                                 Contents   |  xiii\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "15",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 15,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 22.527502197459384,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p013-text-001",
+      "text": "6.3    Low-carbon innovation is      168   7.7    A state presence has\n              driving the emergence of                    important effects on firm\n          new spatial clusters, start-                       entry, market\n              ups, and financing                            concentration, and\n145   6.4    The rate of adoption of clean                    preferential treatment\n             energy technologies is         169   7.8    State-owned enterprises\n            growing more rapidly in                    dominate coal power\n            middle-income countries                      generation, while the private\n            than in high-income                           sector leads in modern\n              countries, but the level of                    renewable energy\n             adoption is lower            169   7.9     In low- and middle-income\n147   6.5    Clean energy technology                       countries, state-owned\n              value chains are still                           enterprises are the largest\n            dominated by high-income                     investors in fossil fuel energy\n              countries and China                          generation\n148  6.6    Costa Rica and China are      173   7.10    Foreign technology licensing\n             the global front-runners in                          is limited among middle-\n              jobs related to low-carbon                  income country firms\n             technologies                178   B7.4.1  Some countries are strongly\n153   6.7    Most of the countries                         positioned to benefit from\n              currently “locked in” to                     knowledge spillovers from\n              declining brown industries                      their diaspora\n              are middle-income countries\n\n                                                                  Contents   |  xi\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "13",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 13,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 21.503104253557662,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p178-text-001",
+      "text": " in a country that imports\n   Patenting for low-­carbon technologies is also     fossil fuel, fossil fuel revenues are highly con­\nhighly concentrated in just a handful of coun­    centrated. In 18 countries, fuel exports account\ntries, with China in the lead, according to data    for more than 50 percent of total merchandise\nfrom the International Renewable Energy Agency    exports; seven countries generate 90 percent or\n(IRENA). Over the last two decades, China has   more of their export earnings from fossil fuel\nfiled the largest number of such patents, fol­    exports.36 Fossil fuel resources are more concen­\nlowed by the United States, Japan, Korea, and    trated than renewable resources.37 Within coun­\nGermany. Such patenting has been very limited in     tries, the losses to fossil fuel companies are also\nother ­middle-income countries, with the second-­   highly concentrated. Studies have shown that the\nhighest middle-income country, Brazil, filing only    concentrated nature of the losses from the low-­\n2 percent as many patents as China over the last    carbon transition, compared with the distrib­\n20 years.                                        uted nature of the gains, makes the clean energy\n  Costa Rica and China are global front-­runners    transition particularly prone to obstructionism\nin terms of job creation related to low-carbon    by entrenched interests.38 Moreover, the incen­\ntechnologies. In 2022, Costa Rica accounted     tives for lobbying are asymmetric. Incumbents,\nfor about 8 percent of all online job postings    as a tightly defined group of actors, have a greater\nrelated to low-carbon technologies and China    incentive to mobilize, and they face lower coor­\nfor 5 ­percent—just below the global maximum",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "178",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 178,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.324464302500154,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p171-text-002",
+      "text": " have\nIn  light of policy changes, the International    been highest in the United States, Europe, and\nEnergy Agency  (IEA)  revised  its  forecast  for   China (figure 6.3, panel a). The new spatial clus­\nrenewable capacity additions for 2023 and 2024,    ters emerging in terms of low-carbon technology\nraising  it by 38 percent from its expectations    jobs are Catalonia and Madrid in Spain, home\nbefore the war, in December 2021. Countries    to major solar industries; Guangzhou, Beijing,\nmore dependent on imports of natural gas before    Shanghai, Suzhou, and Shenzhen in China, home\nthe war were more exposed to the price shock and    to China’s largest EV and clean energy manu­\nincreased hiring for jobs related to low-carbon    facturing hubs; Rhône-Alpes and Île-de-France\ntechnologies.13                                        (the Paris region), home to France’s largest clean\n  The  global  energy  crisis  also  spurred  a    energy clusters; and California, the clean energy\nreshaping of the climate policy landscape in 2022    pioneer in the United States.19\n\n                                                                Destruction    | 139\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "171",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 171,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.28864645521515,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p173-text-002",
+      "text": " been highly concentrated\ninternational trade policy. Access to fossil fuels           in the inland provinces highly reliant on\nhas fundamentally shaped the world’s economic           coal mining, low-carbon technology jobs\ngeography for nearly a century, with heavy indus­           are growing in the manufacturing hubs\ntry close to coal beds and petrochemical plants         on the  east  coast.22  Spatial  disparities\n\n                                                                Destruction    | 141\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 16.443312084603484,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p171-text-001",
+      "text": "and Walsh  (2023); FRED:  Software  (Federal  Reserve   32 percent to 43 percent. China has also pushed\nEconomic Data: Software) (database), Federal Reserve     its scale-up of renewables and is now on track to\nBank of  St. Louis,  St. Louis,  https://fred.stlouisfed​.org​\n/tags/series?t=software;  IRENA   (2023);   Prices  and   meet its 2030 renewable energy generation target\nOutput for Information and Communication Technologies     five years ahead of time, by 2025.17\n(dashboard), Bureau of Economic Analysis, Suitland, MD,      This acceleration of the clean energy transition\nhttps://www.bea.gov/prices-and-output-information-and​\n                                                                   is driving the emergence of new spatial clusters-communication-technologies; Solar (photovoltaic) panel\nprices (grapher), Our World in Data, Global Change Data   and jobs (map 6.1). Evidence extending the work\nLab and Oxford Martin Program on Global Development,    of Bastos et al. (2023) to analyze 1 billion online\nUniversity of Oxford, Oxford, UK, https://ourworldindata​\n                                                    job postings across 86 countries over the last.org/grapher/solar-pv-prices.\nNote: The figure compares the price of investment for the    decade reveals that in 2022 alone 3.3 million new\nthree sectors with the fastest declines according to data from    job openings were related to low-carbon technol­\nthe Bureau of Economic Analysis with that for onshore wind    ogies—just under 2 percent of jobs posted online\nand solar photovoltaics, with 1985 normalized to 1.\n                                                    in 2022.18 In absolute terms, new openings",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "171",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 171,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 16.13283243933924,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p182-text-000",
+      "text": "on technology adoption or social change are not    at certain times of the day or in certain seasons.\ncast in stone, but they change in response to deci­   Such intermittency poses challenges for their inte­\nsions made by peers. The result is inertia in adop­    gration into power systems, particularly before\ntion initially and then rapid adoption later once     electricity storage is fully developed. Integration\na critical mass of peers adopts the technology.    also requires new approaches to demand-side\nSimilarly, the production of low-carbon technol­   management. The scale-up of the electrification\nogies is subject to external economies of scale,    of transport and buildings, which will increase\nwhich lead to lower production and operating    the demand for electricity, also depends on the\ncosts for all companies in the industry. These, in     reliability of the power system. Scale-up requires\nturn, can increase profitability and competitive­    accurate forecasting and forward planning. All\nness. However, these cost reductions do not occur    these aspects of the energy transition create bar­\nuntil a sufficient number of industry players or     riers and necessitate strong systemwide coordina­\nscale is reached—meaning costs are higher for    tion and institutional capacity.\nfirst movers.                                      Legacy transmission networks built to serve\n                                                      large  fossil  fuel  plants, along with outdated\n                                                      regulations,  also  create  barriers  to  entry  in\nLegacy transmission networks built                                                 ­middle-income countries. Typically, legacy net­\nto serve large fossil fuel plants slow                                            works have been designed for traditional energy\ndiffusion of low-carbon energy                                                  sources for which generation can be located close\nBecause of the market structure of electricity gen­    to the source of demand (map 6.2). However, the\neration and transmission, the deployment of clean   ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "182",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 182,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.925320772322564,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:44:10.787916+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 83,
+        "output_tokens_details": {
+          "reasoning_tokens": 49
+        },
+        "total_tokens": 599
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:16.072046+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5642,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 444,
+        "output_tokens_details": {
+          "reasoning_tokens": 321
+        },
+        "total_tokens": 6086
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:33.361800+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5339,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 1194,
+        "output_tokens_details": {
+          "reasoning_tokens": 1111
+        },
+        "total_tokens": 6533
+      }
+    }
+  ],
+  "seconds": 24.56743759999881,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D05",
+  "initial_ranking": [
+    {
+      "id": "wdr-p186-diagram-00-000",
+      "text": "Map 6.3\nMap 6.3. Title: \"Low-carbon technology jobs in China are growing in manufacturing hubs on the southeast coast, whereas fossil fuel jobs are close to coal mines\". Two side-by-side choropleth maps of China with province-level shading and red callout circles/boxes.\n\nPanel a: \"Share of online job postings related to low-carbon technologies, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of online job postings related to low-carbon technologies (%)\" ranging from 0 to 7.90. The map labels neighboring regions/countries including RUSSIAN FEDERATION, MONGOLIA, DEM. PEOPLE'S REP. OF KOREA, REP. OF KOREA, MYANMAR, VIET NAM, LAO P.D.R., THAILAND, PHILIPPINES, and East China Sea. BEIJING is marked with a star. Red annotations highlight concentrations: a large red oval around the east coast/manufacturing belt with a red label pointing to it reading \"East coast cities around Fujian, Guangdong, Beijing, and Shanghai\"; two smaller red circles in the west/central area with a red label reading \"Certain smaller cities including Huidong and Ganziz\" (last word appears partly unclear in the page image). The panel emphasizes darker blue concentrations along the southeast/east coast and a few scattered inland hotspots.\n\nPanel b: \"Share of fossil fuel jobs, 2019\". A choropleth map of China shaded from very light blue to dark blue, with a legend below labeled \"Share of fossil fuel jobs (%)\" ranging from 0 to 3.75. The same regional labels appear, including BEIJING marked with a star and East China Sea on the right. A large red oval highlights north-central China, with a red label \"Shanxi province\" pointing into the oval; a smaller red circle highlights the southwest with a red label \"Western Guizhou\". Darker blue concentrations are centered around Shanxi/north-central China and a smaller cluster in the southwest.\n\nSource note beneath the figure: \"Source: Park et al. 2023.\" Note: \"In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of Statistics of China, Beijing, https://www.stats.gov.cn/english/.\" Figure credit on the map reads \"IBRD 47928 | MARCH 2024\".\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\dc69d858e364\\page-186.png",
+        "label": "Map 6.3",
+        "pdf_page": 186,
+        "visual_id": "wdr-p186-diagram-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "The small red label in panel a appears to end with \"Ganziz\" or a similar place name; the final letters are difficult to read from the page image.",
+          "The map is reproduced at reduced size, so some province names and boundaries are visible only partially or not legibly; only clearly readable labels are transcribed."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 37.17261757535635,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p186-text-000",
+      "text": "vehicle manufacturing. Park et al. (2023) explore    of high-carbon jobs.59 Using microdata represent-\nfossil fuel jobs in China and how their economic    ing more than 130 million online work profiles,\ngeography compares with that of low-carbon    Curtis, O’Kane, and Park (2023) explore transitions\ntechnology jobs. In China, fossil fuel jobs are   away from carbon-intensive production technol-\nconcentrated around Shanxi and in the north     ogies. They find that in 2021 only 0.7 percent of\nof China, whereas low-carbon technology jobs    workers who transitioned out of a carbon-­intensive\nare concentrated in the cities on the east coast    job found work in a green job. Conversely, the vast\nand particularly in the south, demonstrating the    majority of workers obtaining green jobs do not\nchallenge for workers to transition (map 6.3).      come from carbon-intensive industries, but from\n   Recent research on job transitions has demon-    a wide range of other industries and occupations\nstrated the challenge of transitioning workers out    (such as sales manager, software developer, and\n\nMap 6.3 Low-carbon technology jobs in China are growing in manufacturing hubs on the\nsoutheast coast, whereas fossil fuel jobs are close to coal mines\n\nSource: Park et al. 2023.\nNote: In panel b, the share of fossil fuel jobs in 2019 is based on data from China Statistical Database, National Bureau of\nStatistics of China, Beijing, https://www.stats.gov.cn/english/.\n\n154   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "186",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 186,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 46.159069705094474,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p173-text-001",
+      "text": "   Innovation is also driving the creation of start-    near petroleum fields. The trade in fossil fuels has\nups and capital flows (figure 6.3, panels b and c).   been a driving component of global trade and geo­\nIn 2021, about 1,500 new clean energy start-ups     politics for decades, with fuel exports accounting\nwere listed on Crunchbase, drawing on IEA data    for 11.7 percent of total merchandise exports\ncovering 40 countries, and about one-fourth of the    globally in 2019. However, this picture is start­\nstart-ups were in middle-income countries.20 Of    ing to change—and more rapidly than had been\nthese, more than half were in China and one-third    imagined as the following shifts occur:\nin India, although growth has been most rapid in\nIndia, with a tripling of start-up creation over the         •   Shifts between countries and between regions\nlast decade. Globally, total clean energy financing           within  countries. Low-carbon  technolo­\npassed US$1 trillion for the first time in 2022.21               gies and fossil fuels tend to be produced\n  These shifts are triggering a reallocation of           in  different  countries, and low-carbon\neconomic  activity  across  countries,  regions,           technologies favor countries where manu­\nindustries, occupations, and firms. Just as fossil           facturing capabilities are already in place.\nfuels have shaped the geopolitical map over the         Even within some countries, a spatial real­\nlast two centuries, the clean energy transforma­           location of production and jobs is under\ntion will alter the economic geography of manu­           way. In China, for example, although fossil\nfacturing and global trade and the landscape of            fuel jobs have",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 29.925431580645476,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p178-text-001",
+      "text": " in a country that imports\n   Patenting for low-­carbon technologies is also     fossil fuel, fossil fuel revenues are highly con­\nhighly concentrated in just a handful of coun­    centrated. In 18 countries, fuel exports account\ntries, with China in the lead, according to data    for more than 50 percent of total merchandise\nfrom the International Renewable Energy Agency    exports; seven countries generate 90 percent or\n(IRENA). Over the last two decades, China has   more of their export earnings from fossil fuel\nfiled the largest number of such patents, fol­    exports.36 Fossil fuel resources are more concen­\nlowed by the United States, Japan, Korea, and    trated than renewable resources.37 Within coun­\nGermany. Such patenting has been very limited in     tries, the losses to fossil fuel companies are also\nother ­middle-income countries, with the second-­   highly concentrated. Studies have shown that the\nhighest middle-income country, Brazil, filing only    concentrated nature of the losses from the low-­\n2 percent as many patents as China over the last    carbon transition, compared with the distrib­\n20 years.                                        uted nature of the gains, makes the clean energy\n  Costa Rica and China are global front-­runners    transition particularly prone to obstructionism\nin terms of job creation related to low-carbon    by entrenched interests.38 Moreover, the incen­\ntechnologies. In 2022, Costa Rica accounted     tives for lobbying are asymmetric. Incumbents,\nfor about 8 percent of all online job postings    as a tightly defined group of actors, have a greater\nrelated to low-carbon technologies and China    incentive to mobilize, and they face lower coor­\nfor 5 ­percent—just below the global maximum",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "178",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 178,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 28.720162064582777,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p015-text-000",
+      "text": "Maps\n\n141   6.1     In 2022, one-third of online    154  6.3    Low-carbon technology jobs\n              job postings related to                         in China are growing in\n             low-carbon technologies                    manufacturing hubs on the\n            were in middle-income                       southeast coast, whereas\n              countries                                            fossil fuel jobs are close to\n150  6.2    Limited or outdated                           coal mines\n                electricity transmission\n            networks serve as barriers to\n             the entry of renewable\n             sources\n\nTables\n\n4    O.1  World Bank country           49    S.1   Suggested indicators\n              classifications and selected                    provide a clear picture of the\n             global indicators, 2022                       underlying structure of an\n7    O.2  To achieve high-income                   economy\n              status, countries will need to    54    2.1   Middle-income countries will\n             recalibrate their mix of                     need to engineer two\n            investment, infusion, and                      successive transitions to\n            innovation                                  develop economic structures\n27   O.3  The 3i strategy: What                         that can sustain high-income\n            countries should do at                          status\n             different stages of             103  4.1   Examples of possible effects of\n           development                             market power on development\n31    P1.1  World Bank country                       outcomes\n              classifications and selected\n             global indicators, 2022\n\n                                                                 Contents   |  xiii\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "15",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 15,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.036448143386128,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p173-text-002",
+      "text": " been highly concentrated\ninternational trade policy. Access to fossil fuels           in the inland provinces highly reliant on\nhas fundamentally shaped the world’s economic           coal mining, low-carbon technology jobs\ngeography for nearly a century, with heavy indus­           are growing in the manufacturing hubs\ntry close to coal beds and petrochemical plants         on the  east  coast.22  Spatial  disparities\n\n                                                                Destruction    | 141\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "173",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 173,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 24.431649453988072,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p013-text-001",
+      "text": "6.3    Low-carbon innovation is      168   7.7    A state presence has\n              driving the emergence of                    important effects on firm\n          new spatial clusters, start-                       entry, market\n              ups, and financing                            concentration, and\n145   6.4    The rate of adoption of clean                    preferential treatment\n             energy technologies is         169   7.8    State-owned enterprises\n            growing more rapidly in                    dominate coal power\n            middle-income countries                      generation, while the private\n            than in high-income                           sector leads in modern\n              countries, but the level of                    renewable energy\n             adoption is lower            169   7.9     In low- and middle-income\n147   6.5    Clean energy technology                       countries, state-owned\n              value chains are still                           enterprises are the largest\n            dominated by high-income                     investors in fossil fuel energy\n              countries and China                          generation\n148  6.6    Costa Rica and China are      173   7.10    Foreign technology licensing\n             the global front-runners in                          is limited among middle-\n              jobs related to low-carbon                  income country firms\n             technologies                178   B7.4.1  Some countries are strongly\n153   6.7    Most of the countries                         positioned to benefit from\n              currently “locked in” to                     knowledge spillovers from\n              declining brown industries                      their diaspora\n              are middle-income countries\n\n                                                                  Contents   |  xi\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "13",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 13,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 24.33113962361612,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p175-text-002",
+      "text": "       driving a reallocation of economic activity         •   Shifts between firms. Low-carbon technolo­\n       across  industries  from  extractives  to            gies are more likely to be adopted by new\n      manufacturing and ancillary services. Jobs            entrants, exporters, private firms, and firms\n       are most likely to be in the manufacturing,           that use research and development (R&D)\n       construction, and sales industries, but low-         more intensively.26 Low-carbon technology\n      carbon technology jobs are growing rapidly           job postings are also highly concentrated\n       in the high-skilled white-collar industries           in multinational firms and their supply\n       able to develop, modify, adapt, apply, and            chains.27 By contrast, high-­carbon jobs are\n      maintain new technologies.                     more likely to be in older firms and state-\n     •   Shifts between occupations. The manufac­        owned enterprises.\n       ture of low-carbon technologies  is more\n        skill-intensive than that for the high-­carbon     The energy transition is also shaping a new\n        alternatives,24 resulting in a reallocation of    global trade and industrial policy landscape, which\n      economic  activity  between  occupations     is disrupting the last three decades of trade policy\n      and skill types. Jobs are also more likely    coordination. After decades of such coordination,\n       to be filled by younger, college-educated   which yielded significant growth dividends, the\n       white-collar workers, whereas high-carbon    world’s major economies now have divergent cli­\n       jobs are more likely to be occupied by older   mate and trade policy approaches. The IRA in the\n        blue-collar workers.25                      United States, the Net-Zero Industry Act in the\n\n                                                                Destruction    | 143\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "175",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 175,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 21.155755105450886,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p171-text-002",
+      "text": " have\nIn  light of policy changes, the International    been highest in the United States, Europe, and\nEnergy Agency  (IEA)  revised  its  forecast  for   China (figure 6.3, panel a). The new spatial clus­\nrenewable capacity additions for 2023 and 2024,    ters emerging in terms of low-carbon technology\nraising  it by 38 percent from its expectations    jobs are Catalonia and Madrid in Spain, home\nbefore the war, in December 2021. Countries    to major solar industries; Guangzhou, Beijing,\nmore dependent on imports of natural gas before    Shanghai, Suzhou, and Shenzhen in China, home\nthe war were more exposed to the price shock and    to China’s largest EV and clean energy manu­\nincreased hiring for jobs related to low-carbon    facturing hubs; Rhône-Alpes and Île-de-France\ntechnologies.13                                        (the Paris region), home to France’s largest clean\n  The  global  energy  crisis  also  spurred  a    energy clusters; and California, the clean energy\nreshaping of the climate policy landscape in 2022    pioneer in the United States.19\n\n                                                                Destruction    | 139\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "171",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 171,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.229969998377143,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p178-text-000",
+      "text": "Production of low-carbon technologies is          China. Only Bangalore and São Paolo were the\n­concentrated in a few middle-income countries    other ­middle-income country cities in the top 30.\nSubstantial  manufacturing  or  innovation  in   These sectors and jobs are clustered both within\nlow-carbon energy technologies is occurring in   and across countries. For middle-income coun­\nonly a handful of middle-income countries with     tries to successfully seize the opportunities of the\ncompetitive manufacturing sectors. In terms of    green economy, the right policy mix, financing,\nproduction, only one middle-income ­country—    regulatory environment, and infrastructure need\nChina—is competitive in all three key low-carbon    to be in place.\ntechnologies in terms of breadth (across the full\nvalue chain from raw materials, processed materi­   Incumbent state-owned enterprises,\nals, subcomponents, to the end product of the sup­   legacy policies, and path\nply chain) and depth (a high average market share)   dependence—all block creative\n(figure  6.5). By  contrast, other ­middle-income                                         destructioncountries have either depth or breadth and typi­\ncally only in one product. For example, countries   Incumbents in high-carbon industries erect\nwith well-established manufacturing sectors such    barriers to entry of low-carbon technologies\nas India and Türkiye show a high breadth of export   The low-carbon transition will create winners\ncompetitiveness in the production of wind tur­   and losers—and the losses are more concentrated\nbines. Middle-income countries with large min­    than the gains, resulting in a political economy\neral deposits (such as Brazil and Russia) have high    prone to inertia. Although 80 percent of the\ndepth in the export of critical minerals for EVs.       global population lives",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "178",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 178,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.008557420629018,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

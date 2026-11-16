@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "The report says India aims to become a developed economy by **2047**.[wdr-p034-text-002]",
+  "citations": [
+    "wdr-p034-text-002"
+  ],
+  "question": "What year does the report give for India’s ambition to become a developed economy?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "India ambition become a developed economy year report developed economy ambition India report 2047",
+      "results": [
+        {
+          "id": "wdr-p067-text-002",
+          "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.969438948819995,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p034-text-001",
+          "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.35446106247128,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.769914650551726,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.608853280798133,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p034-text-002",
+          "text": " a result, they suffer    by 2047, the centennial of independence. If it is\nmore than the others the consequences of policies    Viet Nam, your Socio-Economic Development\npredicated on superficial measures of economic effi-    Strategy 2021–2030 outlines a strategy for sus-\nciency, making them especially prone to premature    tained GDP per  capita growth  of 7 percent\nslowdowns  in development. This pathology was    through this decade, with a transition to high-­\nnicknamed the “middle-income trap” by World Bank   income status by 2045. And if it is South Africa,\neconomists, and strategies to avoid it are the subject    your 2030 National Development Plan sets a goal\nof this Report.                                        of raising the income per capita from US$2,800 in\n\n2   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.737128579436519,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p217-text-001",
+          "text": " Evidence\nCoe, David T., and Elhanan Helpman. 1995. “International       from a School-Based Experiment in India.” American\n   R&D Spillovers.” European Economic Review 39  (5):       Economic Review 112 (3): 899–927.\n   859–87.                                            Diamond, Peter, and Emmanuel Saez. 2011. “The Case\nCoe,  David  T.,  Elhanan  Helpman, and  Alexander W.         for a Progressive Tax: From Basic Research to Policy\n    Hoffmaister.  1997.  “North-South R&D  Spillovers.”       Recommendations.” Journal of Economic Perspectives\n   Economic Journal 107 (440): 134–49.                     25 (4): 165–90.\nCommission on Growth and Development. 2008. The Growth      Dixit,  Siddharth, and  Indermit  S.  Gill. 2024.  “AI,  the\n    Report: Strategies for Sustained Growth and Inclusive      New Wingman of Development.” Background paper\n   Development. Washington, DC: World Bank. https://         ­prepared for World Development Report 2024, World\n   openknowledge.worldbank.org/handle/10986/6507.          Bank, Washington, DC.\nCunningham, Colleen, Florian Ederer, and Song Ma. 2021.     Eaton, Jonathan, and Samuel Kortum. 2001. “Technology,\n    “Killer  Acquisitions.”  Journal  of  Political Economy         Trade, and Growth: A Unified Framework.” European\n   129 (3): 649–702.                                      Economic Review 45 (4–6): 742–55.\nCusolito, Ana Paula,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "217",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 217,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.456050589034945,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p067-text-002",
+          "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.969438948819995,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p034-text-001",
+          "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 25.35446106247128,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.769914650551726,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 17.608853280798133,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p034-text-002",
+          "text": " a result, they suffer    by 2047, the centennial of independence. If it is\nmore than the others the consequences of policies    Viet Nam, your Socio-Economic Development\npredicated on superficial measures of economic effi-    Strategy 2021–2030 outlines a strategy for sus-\nciency, making them especially prone to premature    tained GDP per  capita growth  of 7 percent\nslowdowns  in development. This pathology was    through this decade, with a transition to high-­\nnicknamed the “middle-income trap” by World Bank   income status by 2045. And if it is South Africa,\neconomists, and strategies to avoid it are the subject    your 2030 National Development Plan sets a goal\nof this Report.                                        of raising the income per capita from US$2,800 in\n\n2   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.737128579436519,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p217-text-001",
+          "text": " Evidence\nCoe, David T., and Elhanan Helpman. 1995. “International       from a School-Based Experiment in India.” American\n   R&D Spillovers.” European Economic Review 39  (5):       Economic Review 112 (3): 899–927.\n   859–87.                                            Diamond, Peter, and Emmanuel Saez. 2011. “The Case\nCoe,  David  T.,  Elhanan  Helpman, and  Alexander W.         for a Progressive Tax: From Basic Research to Policy\n    Hoffmaister.  1997.  “North-South R&D  Spillovers.”       Recommendations.” Journal of Economic Perspectives\n   Economic Journal 107 (440): 134–49.                     25 (4): 165–90.\nCommission on Growth and Development. 2008. The Growth      Dixit,  Siddharth, and  Indermit  S.  Gill. 2024.  “AI,  the\n    Report: Strategies for Sustained Growth and Inclusive      New Wingman of Development.” Background paper\n   Development. Washington, DC: World Bank. https://         ­prepared for World Development Report 2024, World\n   openknowledge.worldbank.org/handle/10986/6507.          Bank, Washington, DC.\nCunningham, Colleen, Florian Ederer, and Song Ma. 2021.     Eaton, Jonathan, and Samuel Kortum. 2001. “Technology,\n    “Killer  Acquisitions.”  Journal  of  Political Economy         Trade, and Growth: A Unified Framework.” European\n   129 (3): 649–702.                                      Economic Review 45 (4–6): 742–55.\nCusolito, Ana Paula,",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "217",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 217,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 13.456050589034945,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.008822200001304736
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p067-text-002",
+      "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.969438948819995,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p034-text-001",
+      "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.35446106247128,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.769914650551726,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 17.608853280798133,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p034-text-002",
+      "text": " a result, they suffer    by 2047, the centennial of independence. If it is\nmore than the others the consequences of policies    Viet Nam, your Socio-Economic Development\npredicated on superficial measures of economic effi-    Strategy 2021–2030 outlines a strategy for sus-\nciency, making them especially prone to premature    tained GDP per  capita growth  of 7 percent\nslowdowns  in development. This pathology was    through this decade, with a transition to high-­\nnicknamed the “middle-income trap” by World Bank   income status by 2045. And if it is South Africa,\neconomists, and strategies to avoid it are the subject    your 2030 National Development Plan sets a goal\nof this Report.                                        of raising the income per capita from US$2,800 in\n\n2   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 13.737128579436519,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p217-text-001",
+      "text": " Evidence\nCoe, David T., and Elhanan Helpman. 1995. “International       from a School-Based Experiment in India.” American\n   R&D Spillovers.” European Economic Review 39  (5):       Economic Review 112 (3): 899–927.\n   859–87.                                            Diamond, Peter, and Emmanuel Saez. 2011. “The Case\nCoe,  David  T.,  Elhanan  Helpman, and  Alexander W.         for a Progressive Tax: From Basic Research to Policy\n    Hoffmaister.  1997.  “North-South R&D  Spillovers.”       Recommendations.” Journal of Economic Perspectives\n   Economic Journal 107 (440): 134–49.                     25 (4): 165–90.\nCommission on Growth and Development. 2008. The Growth      Dixit,  Siddharth, and  Indermit  S.  Gill. 2024.  “AI,  the\n    Report: Strategies for Sustained Growth and Inclusive      New Wingman of Development.” Background paper\n   Development. Washington, DC: World Bank. https://         ­prepared for World Development Report 2024, World\n   openknowledge.worldbank.org/handle/10986/6507.          Bank, Washington, DC.\nCunningham, Colleen, Florian Ederer, and Song Ma. 2021.     Eaton, Jonathan, and Samuel Kortum. 2001. “Technology,\n    “Killer  Acquisitions.”  Journal  of  Political Economy         Trade, and Growth: A Unified Framework.” European\n   129 (3): 649–702.                                      Economic Review 45 (4–6): 742–55.\nCusolito, Ana Paula,",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "217",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 217,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 13.456050589034945,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:35:24.403668+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 90,
+        "output_tokens_details": {
+          "reasoning_tokens": 56
+        },
+        "total_tokens": 599
+      }
+    },
+    {
+      "at": "2026-11-16T15:35:27.281619+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3243,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 142,
+        "output_tokens_details": {
+          "reasoning_tokens": 87
+        },
+        "total_tokens": 3385
+      }
+    }
+  ],
+  "seconds": 5.561157000000094,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D11",
+  "initial_ranking": [
+    {
+      "id": "wdr-p034-text-001",
+      "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.720463477564735,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p070-text-000",
+      "text": "Box 1.1 Misunderstanding through misclassification (continued)\n\n        annually in US dollars based on a three-year average exchange rate and were expanded to\n        four categories:\n\n          •  Low-income. The low-income threshold was officially set in 1988, still based on the\n            value of the IDA’s “civil works preference” and updated for inflation.d\n          •  Lower-middle-income. The lower-middle-income threshold is based on the oper­\n             ational guidelines cutoff for determining access to 17-year repayment terms for\n            loans through the World Bank Group’s International Bank for Reconstruction and\n          Development (IBRD), although these terms are no longer available. It appears to\n           have first been introduced in the 1983 edition of the World Development Report.e\n          •  Upper-middle-income. The upper-middle-income threshold  is the range between\n            lower-​middle-income and high-income.\n          •  High-income. The high-income threshold does not relate to a cutoff derived from\n            the operational guidelines, but was set at GNI per capita of US$6,000 in 1987 prices\n              in a paper presented to the World Bank’s Board of Executive Directors in January\n            1989, which also reconfirmed the low- and lower-­middle-income threshold levels.f\n          The US$6,000 level has been updated over time for what is called “international infla­\n               tion,” defined as the average inflation rates of Japan, the United Kingdom, the United\n             States, and the euro area. The choice of the high-income threshold was made to\n            address anomalies in the classification of high-income and industrialized economies\n           used in the World Bank’s World Development Indicators prior to that point.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "70",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 70,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.925217631471533,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p254-text-000",
+      "text": "investment,  infusion, and  innovation toward    to retrofit green.4 But there is a challenge—despite\nreducing greenhouse  gas  emissions,  bringing    the falling cost of green infrastructure and poten­\nthem to net zero.1 In support of climate action,     tial for high economic returns in middle-income\nmore than 140 countries have set a net zero tar­    countries, capital does not flow from high-income\nget, covering about 88 percent of global emis­    to low- and middle-income countries to under­\nsions.2 This chapter explores what  it will take    take these infrastructure investments.\nfor ­middle-income countries to capitalize on the        Finally, where  capital costs are high, low-­\nclimate crisis to overcome structural stasis and    carbon energy may be unaffordable. Moreover,\nadvance decarbonization both locally and globally.    the intermittency of variable renewables and\n  Low-carbon sources of energy such as wind    high storage costs pose risks to energy security if\nand solar are technologically sophisticated and    not managed well. Middle-income countries will\nbenefit from increasing returns to scale in pro­   need flexibility in choosing emissions-reducing\nduction and deployment. Thus middle-income     strategies.\ncountries have an opportunity to infuse global\ntechnologies domestically and become producers   Globalizing decarbonization\nof green intermediates for global markets, thereby\n                                   Upgrade and compete through globalreducing the cost of decarbonization worldwide.\n                                      low-carbon value chainsTo accelerate diffusion of such technologies, these\ncountries will need to improve their investment    Izmir, Türkiye, a vibrant city of nearly 4.5 million\nclimate so that contestable markets give domestic    people on the Aegean Sea, has been historically\nincumbents the incentive to upgrade. Alongside   ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "254",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 254,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.402801558095973,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.687759529093867,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.666667615205526,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p233-text-001",
+      "text": " downturns sometimes\nto comply with size-dependent tax policies,    create a much-needed opportunity for older, less\nin 140 countries employment growth would    productive firms to make way for newer, more\ndrop  by 25  percent.  Conversely, removing    productive ones. A key Schumpeterian insight is\nsize-­dependent taxation would lead to TFP    that the creation of new industries does not go\ngains of about ­1 ­percent, on average, and up to    forward without sweeping away past realities.64\n2.3 ­percent for more distorted economies.59 For\nexample, in Mexico eliminating distortions cre­\n                                     Modernizing organizational models toated  by  size-dependent  ­taxation   ­policies\n                               manage firmsfavoring small firms could boost output by\n9 ­percent.60 In Chile, China, and India, reduc­   As barriers to growth are removed and resources\ntions in distortions helped these ­economies    are better allocated toward firms that add value,\nclose  the gap between  actual and  poten­    firms will need to make some strategic decisions.\ntial productivity by 10  percent. Figure  8.4   Firm owners aspiring to expand must delegate\n­illustrates the value  of the actual  level  of    managerial tasks to  professionals. Delegation\nmanufacturing TFP in each country relative    necessitates strong legal institutions to estab­\nto the potential level  if resources were allo­     lish and enforce contracts between owners and\ncated efficiently—that is, if the economy was    managers. These contracts should give managers\non the production ­possibilities frontier. More    incentives to work hard and should hold them\nimportant, reforms of size-­dependent policies    accountable for any wrongdoing. Such arrange­\nincrease the return to",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "233",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 233,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.43146198724079,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "3b27d9bce1127293cd4e70b25404f4227f7056b5716a54ce5a83e96a755ed264",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

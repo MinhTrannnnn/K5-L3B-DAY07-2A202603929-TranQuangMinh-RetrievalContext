@@ -1,0 +1,591 @@
+{
+  "status": "answered",
+  "answer": "A parameter of an estimator nested inside a `Pipeline` is addressed with the `<estimator>__<parameter>` syntax, using a double underscore between the step name and the parameter name [83647dcfb485202e8c6810bf].",
+  "citations": [
+    "83647dcfb485202e8c6810bf"
+  ],
+  "question": "What syntax addresses a parameter belonging to an estimator nested inside a Pipeline?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "Pipeline parameter syntax estimator nested inside a Pipeline parameter names double underscore nested estimator parameter address parameter belonging to an estimator nested inside a Pipeline",
+      "results": [
+        {
+          "id": "83647dcfb485202e8c6810bf",
+          "text": "8.1.1.1.4. Access to nested parameters\n\nIt is common to adjust the parameters of an estimator within a pipeline. This parameter is therefore nested because it belongs to a particular sub-step. Parameters of the estimators in the pipeline are accessible using the <estimator>__<parameter> syntax:\n\n>>> pipe = Pipeline(steps=[(\"reduce_dim\", PCA()), (\"clf\", SVC())])\n>>> pipe.set_params(clf__C=10)\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC(C=10))])\n\nThis is particularly important for doing grid searches:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> param_grid = dict(reduce_dim__n_components=[2, 5, 10],\n...                   clf__C=[0.1, 10, 100])\n>>> grid_search = GridSearchCV(pipe, param_grid=param_grid)\n\nIndividual steps may also be replaced as parameters, and non-final steps may be ignored by setting them to 'passthrough' :",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:002",
+          "metadata": {
+            "end": 2206,
+            "start": 1353,
+            "topic": "preprocessing",
+            "anchor": "access-to-nested-parameters",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.4. Access to nested parameters",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7038,
+            "unit_start": 3505,
+            "token_count": 286
+          },
+          "score": 54.64978075835527,
+          "rank": 1
+        },
+        {
+          "id": "2d89a75730fa16ca4b419f3f",
+          "text": "Here, <estimator> is the parameter name of the nested estimator, in this case estimator . If the meta-estimator is constructed as a collection of estimators as in pipeline.Pipeline , then <estimator> refers to the name of the estimator, see Access to nested parameters . In practice, there can be several levels of nesting:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.feature_selection import SelectKBest\n>>> pipe = Pipeline([\n...    ('select', SelectKBest()),\n...    ('model', calibrated_forest)])\n>>> param_grid = {\n...    'select__k': [1, 2],\n...    'model__estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(pipe, param_grid, cv=5).fit(X, y)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 3790,
+            "start": 3117,
+            "topic": "model_selection",
+            "anchor": "composite-estimators-and-parameter-spaces",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 230
+          },
+          "score": 53.41669203716798,
+          "rank": 2
+        },
+        {
+          "id": "4c76c354f5cfb1c32c85d324",
+          "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 3115,
+            "start": 2157,
+            "topic": "model_selection",
+            "anchor": "composite-estimators-and-parameter-spaces",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 332
+          },
+          "score": 46.48344300893084,
+          "rank": 3
+        },
+        {
+          "id": "76e0a214442f1912164e9f60",
+          "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3241,
+            "start": 1887,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 348
+          },
+          "score": 36.58702951654455,
+          "rank": 4
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 31.15433775770844,
+          "rank": 5
+        },
+        {
+          "id": "b6c510f27e39e41411d68f99",
+          "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 3146,
+            "start": 2373,
+            "topic": "preprocessing",
+            "anchor": "build-a-pipeline",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 262
+          },
+          "score": 30.907292072937864,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "83647dcfb485202e8c6810bf",
+          "text": "8.1.1.1.4. Access to nested parameters\n\nIt is common to adjust the parameters of an estimator within a pipeline. This parameter is therefore nested because it belongs to a particular sub-step. Parameters of the estimators in the pipeline are accessible using the <estimator>__<parameter> syntax:\n\n>>> pipe = Pipeline(steps=[(\"reduce_dim\", PCA()), (\"clf\", SVC())])\n>>> pipe.set_params(clf__C=10)\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC(C=10))])\n\nThis is particularly important for doing grid searches:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> param_grid = dict(reduce_dim__n_components=[2, 5, 10],\n...                   clf__C=[0.1, 10, 100])\n>>> grid_search = GridSearchCV(pipe, param_grid=param_grid)\n\nIndividual steps may also be replaced as parameters, and non-final steps may be ignored by setting them to 'passthrough' :",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:002",
+          "metadata": {
+            "end": 2206,
+            "start": 1353,
+            "topic": "preprocessing",
+            "anchor": "access-to-nested-parameters",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.4. Access to nested parameters",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7038,
+            "unit_start": 3505,
+            "token_count": 286
+          },
+          "score": 54.64978075835527,
+          "rank": 1
+        },
+        {
+          "id": "2d89a75730fa16ca4b419f3f",
+          "text": "Here, <estimator> is the parameter name of the nested estimator, in this case estimator . If the meta-estimator is constructed as a collection of estimators as in pipeline.Pipeline , then <estimator> refers to the name of the estimator, see Access to nested parameters . In practice, there can be several levels of nesting:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.feature_selection import SelectKBest\n>>> pipe = Pipeline([\n...    ('select', SelectKBest()),\n...    ('model', calibrated_forest)])\n>>> param_grid = {\n...    'select__k': [1, 2],\n...    'model__estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(pipe, param_grid, cv=5).fit(X, y)",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 3790,
+            "start": 3117,
+            "topic": "model_selection",
+            "anchor": "composite-estimators-and-parameter-spaces",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 230
+          },
+          "score": 53.41669203716798,
+          "rank": 2
+        },
+        {
+          "id": "4c76c354f5cfb1c32c85d324",
+          "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:007",
+          "metadata": {
+            "end": 3115,
+            "start": 2157,
+            "topic": "model_selection",
+            "anchor": "composite-estimators-and-parameter-spaces",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25615,
+            "unit_start": 21825,
+            "token_count": 332
+          },
+          "score": 46.48344300893084,
+          "rank": 3
+        },
+        {
+          "id": "76e0a214442f1912164e9f60",
+          "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3241,
+            "start": 1887,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 348
+          },
+          "score": 36.58702951654455,
+          "rank": 4
+        },
+        {
+          "id": "1317a3570638f4816af20d9b",
+          "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 1507,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 317
+          },
+          "score": 31.15433775770844,
+          "rank": 5
+        },
+        {
+          "id": "b6c510f27e39e41411d68f99",
+          "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:001",
+          "metadata": {
+            "end": 3146,
+            "start": 2373,
+            "topic": "preprocessing",
+            "anchor": "build-a-pipeline",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3503,
+            "unit_start": 0,
+            "token_count": 262
+          },
+          "score": 30.907292072937864,
+          "rank": 6
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.011555899996892549
+    }
+  ],
+  "context": [
+    {
+      "id": "83647dcfb485202e8c6810bf",
+      "text": "8.1.1.1.4. Access to nested parameters\n\nIt is common to adjust the parameters of an estimator within a pipeline. This parameter is therefore nested because it belongs to a particular sub-step. Parameters of the estimators in the pipeline are accessible using the <estimator>__<parameter> syntax:\n\n>>> pipe = Pipeline(steps=[(\"reduce_dim\", PCA()), (\"clf\", SVC())])\n>>> pipe.set_params(clf__C=10)\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC(C=10))])\n\nThis is particularly important for doing grid searches:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> param_grid = dict(reduce_dim__n_components=[2, 5, 10],\n...                   clf__C=[0.1, 10, 100])\n>>> grid_search = GridSearchCV(pipe, param_grid=param_grid)\n\nIndividual steps may also be replaced as parameters, and non-final steps may be ignored by setting them to 'passthrough' :",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:002",
+      "metadata": {
+        "end": 2206,
+        "start": 1353,
+        "topic": "preprocessing",
+        "anchor": "access-to-nested-parameters",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.4. Access to nested parameters",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7038,
+        "unit_start": 3505,
+        "token_count": 286
+      },
+      "score": 54.64978075835527,
+      "rank": 1
+    },
+    {
+      "id": "2d89a75730fa16ca4b419f3f",
+      "text": "Here, <estimator> is the parameter name of the nested estimator, in this case estimator . If the meta-estimator is constructed as a collection of estimators as in pipeline.Pipeline , then <estimator> refers to the name of the estimator, see Access to nested parameters . In practice, there can be several levels of nesting:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.feature_selection import SelectKBest\n>>> pipe = Pipeline([\n...    ('select', SelectKBest()),\n...    ('model', calibrated_forest)])\n>>> param_grid = {\n...    'select__k': [1, 2],\n...    'model__estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(pipe, param_grid, cv=5).fit(X, y)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 3790,
+        "start": 3117,
+        "topic": "model_selection",
+        "anchor": "composite-estimators-and-parameter-spaces",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 230
+      },
+      "score": 53.41669203716798,
+      "rank": 2
+    },
+    {
+      "id": "4c76c354f5cfb1c32c85d324",
+      "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 3115,
+        "start": 2157,
+        "topic": "model_selection",
+        "anchor": "composite-estimators-and-parameter-spaces",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 332
+      },
+      "score": 46.48344300893084,
+      "rank": 3
+    },
+    {
+      "id": "76e0a214442f1912164e9f60",
+      "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 3241,
+        "start": 1887,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 348
+      },
+      "score": 36.58702951654455,
+      "rank": 4
+    },
+    {
+      "id": "1317a3570638f4816af20d9b",
+      "text": "3.2. Tuning the hyper-parameters of an estimator\n\nHyper-parameters are parameters that are not directly learnt within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes. Typical examples include C , kernel and gamma for Support Vector Classifier, alpha for Lasso, etc.\n\nIt is possible and recommended to search the hyper-parameter space for the best cross validation score.\n\nAny parameter provided when constructing an estimator may be optimized in this manner. Specifically, to find the names and current values for all parameters for a given estimator, use:\n\nestimator.get_params()\n\nA search consists of:\n\nan estimator (regressor or classifier such as sklearn.svm.SVC() );\n\na parameter space;\n\na method for searching or sampling candidates;\n\na cross-validation scheme; and\n\na score function .\n\nTwo generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.\n\nAfter describing these tools we detail best practices applicable to these approaches. Some models allow for specialized, efficient parameter search strategies, outlined in Alternatives to brute force parameter search .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 1507,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "tuning-the-hyper-parameters-of-an-estimator",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 317
+      },
+      "score": 31.15433775770844,
+      "rank": 5
+    },
+    {
+      "id": "b6c510f27e39e41411d68f99",
+      "text": "8.1.1.1.1. Build a pipeline\n\nThe Pipeline is built using a list of (key, value) pairs, where the key is a string containing the name you want to give this step and value is an estimator object:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.svm import SVC\n>>> from sklearn.decomposition import PCA\n>>> estimators = [('reduce_dim', PCA()), ('clf', SVC())]\n>>> pipe = Pipeline(estimators)\n>>> pipe\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC())])\n\nThe utility function make_pipeline is a shorthand for constructing pipelines; it takes a variable number of estimators and returns a pipeline, filling in the names automatically:\n\n>>> from sklearn.pipeline import make_pipeline\n>>> make_pipeline(PCA(), SVC())\nPipeline(steps=[('pca', PCA()), ('svc', SVC())])",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 3146,
+        "start": 2373,
+        "topic": "preprocessing",
+        "anchor": "build-a-pipeline",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.1. Build a pipeline",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 262
+      },
+      "score": 30.907292072937864,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:39:43.255685+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 507,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 76,
+        "output_tokens_details": {
+          "reasoning_tokens": 33
+        },
+        "total_tokens": 583
+      }
+    },
+    {
+      "at": "2026-11-16T15:39:46.650838+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3279,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 174,
+        "output_tokens_details": {
+          "reasoning_tokens": 87
+        },
+        "total_tokens": 3453
+      }
+    }
+  ],
+  "seconds": 5.964925899999798,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q08",
+  "initial_ranking": [
+    {
+      "id": "83647dcfb485202e8c6810bf",
+      "text": "8.1.1.1.4. Access to nested parameters\n\nIt is common to adjust the parameters of an estimator within a pipeline. This parameter is therefore nested because it belongs to a particular sub-step. Parameters of the estimators in the pipeline are accessible using the <estimator>__<parameter> syntax:\n\n>>> pipe = Pipeline(steps=[(\"reduce_dim\", PCA()), (\"clf\", SVC())])\n>>> pipe.set_params(clf__C=10)\nPipeline(steps=[('reduce_dim', PCA()), ('clf', SVC(C=10))])\n\nThis is particularly important for doing grid searches:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> param_grid = dict(reduce_dim__n_components=[2, 5, 10],\n...                   clf__C=[0.1, 10, 100])\n>>> grid_search = GridSearchCV(pipe, param_grid=param_grid)\n\nIndividual steps may also be replaced as parameters, and non-final steps may be ignored by setting them to 'passthrough' :",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:002",
+      "metadata": {
+        "end": 2206,
+        "start": 1353,
+        "topic": "preprocessing",
+        "anchor": "access-to-nested-parameters",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators > 8.1.1.1. Usage > 8.1.1.1.4. Access to nested parameters",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7038,
+        "unit_start": 3505,
+        "token_count": 286
+      },
+      "score": 24.97231877221887,
+      "rank": 1
+    },
+    {
+      "id": "2d89a75730fa16ca4b419f3f",
+      "text": "Here, <estimator> is the parameter name of the nested estimator, in this case estimator . If the meta-estimator is constructed as a collection of estimators as in pipeline.Pipeline , then <estimator> refers to the name of the estimator, see Access to nested parameters . In practice, there can be several levels of nesting:\n\n>>> from sklearn.pipeline import Pipeline\n>>> from sklearn.feature_selection import SelectKBest\n>>> pipe = Pipeline([\n...    ('select', SelectKBest()),\n...    ('model', calibrated_forest)])\n>>> param_grid = {\n...    'select__k': [1, 2],\n...    'model__estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(pipe, param_grid, cv=5).fit(X, y)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 3790,
+        "start": 3117,
+        "topic": "model_selection",
+        "anchor": "composite-estimators-and-parameter-spaces",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 230
+      },
+      "score": 20.315674399024047,
+      "rank": 2
+    },
+    {
+      "id": "4c76c354f5cfb1c32c85d324",
+      "text": "3.2.4.3. Composite estimators and parameter spaces\n\nGridSearchCV and RandomizedSearchCV allow searching over parameters of composite or nested estimators such as Pipeline , ColumnTransformer , VotingClassifier or CalibratedClassifierCV using a dedicated <estimator>__<parameter> syntax:\n\n>>> from sklearn.model_selection import GridSearchCV\n>>> from sklearn.calibration import CalibratedClassifierCV\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.datasets import make_moons\n>>> X, y = make_moons()\n>>> calibrated_forest = CalibratedClassifierCV(\n...    estimator=RandomForestClassifier(n_estimators=10))\n>>> param_grid = {\n...    'estimator__max_depth': [2, 4, 6, 8]}\n>>> search = GridSearchCV(calibrated_forest, param_grid, cv=5)\n>>> search.fit(X, y)\nGridSearchCV(cv=5,\n             estimator=CalibratedClassifierCV(estimator=RandomForestClassifier(n_estimators=10)),\n             param_grid={'estimator__max_depth': [2, 4, 6, 8]})",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:007",
+      "metadata": {
+        "end": 3115,
+        "start": 2157,
+        "topic": "model_selection",
+        "anchor": "composite-estimators-and-parameter-spaces",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.4. Tips for parameter search > 3.2.4.3. Composite estimators and parameter spaces",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25615,
+        "unit_start": 21825,
+        "token_count": 332
+      },
+      "score": 20.142733027253758,
+      "rank": 3
+    },
+    {
+      "id": "76e0a214442f1912164e9f60",
+      "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 3241,
+        "start": 1887,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 348
+      },
+      "score": 15.28528069552058,
+      "rank": 4
+    },
+    {
+      "id": "823ae3f366e1300530806607",
+      "text": "3.4.3. The scoring parameter: defining model evaluation rules\n\nModel selection and evaluation tools that internally use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) take a scoring parameter that controls what metric they apply to the estimators evaluated.\n\nThey can be specified in several ways:\n\nNone : the estimator’s default evaluation criterion (i.e., the metric used in the estimator’s score method) is used.\n\nString name : common metrics can be passed via a string name.\n\nCallable : more complex metrics can be passed via a custom metric callable (e.g., function).\n\nSome tools do also accept multiple metric evaluation. See Using multiple metric evaluation for details.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:003",
+      "metadata": {
+        "end": 760,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "the-scoring-parameter-defining-model-evaluation-rules",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10912,
+        "unit_start": 7345,
+        "token_count": 172
+      },
+      "score": 14.389556246149757,
+      "rank": 5
+    },
+    {
+      "id": "5d431cfaf9e1f351f2882a02",
+      "text": "8.1.1. Pipeline: chaining estimators\n\nPipeline can be used to chain multiple estimators into one. This is useful as there is often a fixed sequence of steps in processing the data, for example feature selection, normalization and classification. Pipeline serves multiple purposes here:\n\nYou only have to call fit and predict once on your data to fit a whole sequence of estimators.\n\nYou can grid search over parameters of all estimators in the pipeline at once.\n\nPipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.\n\nAll estimators in a pipeline, except the last one, must be transformers (i.e. must have a transform method). The last estimator may be any type (transformer, classifier, etc.).\n\nNote\n\nCalling fit on the pipeline is the same as calling fit on each estimator in turn, transform the input and pass it on to the next step. The pipeline has all the methods that the last estimator in the pipeline has, i.e. if the last estimator is a classifier, the Pipeline can be used as a classifier. If the last estimator is a transformer, again, so is the pipeline.",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:001",
+      "metadata": {
+        "end": 2355,
+        "start": 1153,
+        "topic": "preprocessing",
+        "anchor": "pipeline-chaining-estimators",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.1. Pipeline: chaining estimators",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3503,
+        "unit_start": 0,
+        "token_count": 273
+      },
+      "score": 14.262413417840374,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

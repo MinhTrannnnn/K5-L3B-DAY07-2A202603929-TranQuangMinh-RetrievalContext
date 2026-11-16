@@ -1,0 +1,558 @@
+{
+  "status": "answered",
+  "answer": "Trong Figure 1, Cloud Carrier nằm ở dải ngang phía dưới cùng của sơ đồ, bên dưới các vai trò khác, và là thành phần kéo dài theo chiều ngang toàn bộ đáy hình [nist-p023-diagram-00-000]. Nó đóng vai trò trung gian cung cấp kết nối và vận chuyển dịch vụ cloud giữa Cloud Providers và Cloud Consumers [nist-p023-diagram-00-000][nist-p023-text-000].",
+  "citations": [
+    "nist-p023-diagram-00-000",
+    "nist-p023-text-000"
+  ],
+  "question": "Mở Figure 1 và cho biết Cloud Carrier nằm ở đâu, kết nối những bên nào?",
+  "corpus": "nist",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "Figure 1 Cloud Carrier where connects which parties NIST cloud carrier Figure 1",
+      "results": [
+        {
+          "id": "nist-p024-diagram-00-000",
+          "text": "Figure 2 – Interactions between the Actors in Cloud Computing\nDiagram showing four rounded-rectangle actors inside a large pale-green background area labeled diagonally on the right as 'Cloud Carrier'. Actors are arranged as: 'Cloud Consumer' at upper left (blue box), 'Cloud Auditor' at upper right (lavender box), 'Cloud Broker' at lower left (light gray/blue box), and 'Cloud Provider' at lower right (light gray box). Colored communication paths connect the actors: a blue horizontal path connects Cloud Consumer to Cloud Auditor across the top; a blue diagonal path connects Cloud Consumer to Cloud Provider; a gray vertical path connects Cloud Consumer to Cloud Broker; a gray horizontal path connects Cloud Broker to Cloud Provider; a purple diagonal path connects Cloud Broker to Cloud Auditor; and a purple vertical path connects Cloud Auditor to Cloud Provider. A legend below the diagram explains the line colors: blue = 'The communication path between a cloud provider and a cloud consumer'; purple = 'The communication paths for a cloud auditor to collect auditing information'; gray = 'The communication paths for a cloud broker to provide service to a cloud consumer'. The figure caption below repeats 'Figure 2 – Interactions between the Actors in Cloud Computing'.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "24",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-024.png",
+            "label": "Figure 2 – Interactions between the Actors in Cloud Computing",
+            "pdf_page": 24,
+            "visual_id": "nist-p024-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "13",
+            "uncertainties": [
+              "No arrowheads are visible on the connection lines, so directionality is not explicitly shown in the figure itself.",
+              "The slanted 'Cloud Carrier' text appears to label the surrounding background region rather than a separate node."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "nist-p023-text-000",
+          "text": "offerings (Software, Platform or Infrastructure) allowed for by the cloud provider, there will be a\nshift in the level of responsibilities for some aspects of the scope of control, security and\nconfiguration. The Cloud Broker acts as the intermediary between consumer and provider and will\nhelp consumers through the complexity of cloud service offerings and may also create value-added\ncloud services. The Cloud Auditor provides a valuable inherent function for the government by\nconducting the independent performance and security monitoring of cloud services. The Cloud\nCarrier is the organization which has the responsibility of transferring the data, somewhat akin to\nthe power distributor for the electric grid.\n\nFigure 1 – Cloud Actors briefly lists the five major actors defined in the NIST cloud computing\nreference architecture.\n\n                                Figure 1 – Cloud Actors\n\n                                       12\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "23",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 23,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "12"
+          },
+          "score": 0.03225806451612903,
+          "rank": 2
+        },
+        {
+          "id": "nist-p023-diagram-00-000",
+          "text": "Figure 1 – Cloud Actors\nA conceptual diagram showing five cloud-computing actors arranged as labeled rounded rectangles over a blue cloud-shaped background. No arrows or connector lines are visible; the relationships are conveyed by the actor descriptions and spatial arrangement. The actors and their visible text are:\n\n1) Cloud Consumer (upper left): \"Person, or organization that maintains a business relationship with, and uses service from Cloud Providers\".\n2) Cloud Provider (center): \"Person, organization or entity responsible for making a service available to Cloud Consumers\".\n3) Cloud Broker (upper right): \"An entity that manages the use, performance and delivery of cloud services, and negotiates relationships between Cloud Providers and Cloud Consumers\".\n4) Cloud Auditor (lower left): \"A party that can conduct independent assessment of cloud services, information system operations, performance and security of the cloud implementation\".\n5) Cloud Carrier (bottom, spanning width): \"The intermediary that provides connectivity and transport of cloud services from Cloud Providers to Cloud Consumers\".\n\nVisual layout: Cloud Consumer and Cloud Auditor are stacked on the left; Cloud Provider is centered and tallest; Cloud Broker is on the right; Cloud Carrier is a long horizontal box beneath the three upper boxes. The background includes overlapping blue cloud shapes behind the boxes.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "23",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-023.png",
+            "label": "Figure 1 – Cloud Actors",
+            "pdf_page": 23,
+            "visual_id": "nist-p023-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "12",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03125763125763126,
+          "rank": 3
+        },
+        {
+          "id": "nist-p035-text-000",
+          "text": "Arbitrage: Service arbitrage is similar to service aggregation except that the services being\n           combined/consolidated  are not  fixed. Service  arbitrage means a Broker has  the\n              flexibility to choose services from multiple service Providers.\n\nA Cloud Broker may provide:\n\n    1.   Business and relationship support services (business intermediation), and\n\n    2.   Technical support service (aggregation, arbitrage, and technical intermediation), with a\n        key focus on handling interoperability issues among multiple Providers.\n\n4.6   CLOUD CARRIER\n\nA cloud carrier acts as an intermediary that provides connectivity and transport of cloud services\nbetween cloud consumers and cloud providers. Cloud carriers provide access to consumers through\nnetwork, telecommunication, and other access devices. For example, cloud consumers can obtain\ncloud services through network access devices, such as computers, laptops, mobile phones, mobile\nInternet devices (MIDs), etc. The distribution of cloud services is normally provided by network\nand telecommunication carriers or a transport agent, where a transport agent refers to a business\norganization that provides physical transport of storage media such as high-capacity hard drives.\nNote that a cloud provider will set up service level agreements (SLAs)20 with a cloud carrier to\nprovide services consistent with the level of SLAs offered to cloud consumers, and may require the\ncloud carrier to provide dedicated and encrypted connections between cloud consumers and cloud\nproviders.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "24"
+          },
+          "score": 0.030798389007344232,
+          "rank": 4
+        },
+        {
+          "id": "nist-p062-diagram-00-000",
+          "text": "Figure 12\nThe Combined Conceptual Reference Diagram for cloud computing. A large blue rounded rectangle encloses several role areas. On the left is a vertical block labeled Cloud Consumer at top and Cloud Auditor below; within Cloud Auditor are three stacked boxes: Security Audit, Privacy Impact Audit, and Performance Audit. In the center is Cloud Provider, containing two main sections: Cloud Orchestration and Cloud Service Management. Under Cloud Orchestration is a Service Layer with three overlapping service boxes labeled SaaS, PaaS, and IaaS, above a Resource Abstraction and Control Layer, and below that a Physical Resource Layer containing Hardware and Facility. In the Cloud Service Management section are three stacked boxes labeled Business Support, Provisioning/Configuration, and Portability/Interoperability. On the right is Cloud Broker with three stacked boxes: Service Intermediation, Service Aggregation, and Service Arbitrage. Along the bottom spanning the diagram is Cloud Carrier, with a caption beneath inside the frame reading Cross Cutting Concerns: Security, Privacy, etc. The figure is a conceptual block diagram showing relationships among roles and service layers rather than a plot; no arrows are visible.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "62",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-062.png",
+            "label": "Figure 12",
+            "pdf_page": 62,
+            "visual_id": "nist-p062-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "51",
+            "uncertainties": [
+              "The exact internal nesting/overlap of the SaaS, PaaS, and IaaS boxes is approximated from the visual layout.",
+              "No explicit arrows or connector lines are visible in the figure; relationships are inferred from grouping and placement."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.030303030303030304,
+          "rank": 5
+        },
+        {
+          "id": "nist-p022-text-001",
+          "text": "The Overview of the Reference Architecture describes five major actors with their roles and\nresponsibilities using  the newly developing Cloud Computing Taxonomy. The NIST cloud\ncomputing reference architecture defines five major actors: cloud consumer, cloud provider, cloud\nauditor, cloud broker, and cloud carrier (See Figure 1: Cloud Actors). These core individuals have\nkey roles in the realm of cloud computing. Each actor is an entity (a person or an organization) that\nparticipates in a transaction or process and/or performs tasks in cloud computing. For example, a\nCloud Consumer is an individual or organization that acquires and uses cloud products and services.\nThe purveyor of products and services is the Cloud Provider. Because of the possible service\n\n13 NIST Special Publication 500-292, NIST Cloud Computing Reference Architecture, September 2011\n\n                                         11\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "22",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 22,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "11"
+          },
+          "score": 0.030117753623188408,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p024-diagram-00-000",
+          "text": "Figure 2 – Interactions between the Actors in Cloud Computing\nDiagram showing four rounded-rectangle actors inside a large pale-green background area labeled diagonally on the right as 'Cloud Carrier'. Actors are arranged as: 'Cloud Consumer' at upper left (blue box), 'Cloud Auditor' at upper right (lavender box), 'Cloud Broker' at lower left (light gray/blue box), and 'Cloud Provider' at lower right (light gray box). Colored communication paths connect the actors: a blue horizontal path connects Cloud Consumer to Cloud Auditor across the top; a blue diagonal path connects Cloud Consumer to Cloud Provider; a gray vertical path connects Cloud Consumer to Cloud Broker; a gray horizontal path connects Cloud Broker to Cloud Provider; a purple diagonal path connects Cloud Broker to Cloud Auditor; and a purple vertical path connects Cloud Auditor to Cloud Provider. A legend below the diagram explains the line colors: blue = 'The communication path between a cloud provider and a cloud consumer'; purple = 'The communication paths for a cloud auditor to collect auditing information'; gray = 'The communication paths for a cloud broker to provide service to a cloud consumer'. The figure caption below repeats 'Figure 2 – Interactions between the Actors in Cloud Computing'.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "24",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-024.png",
+            "label": "Figure 2 – Interactions between the Actors in Cloud Computing",
+            "pdf_page": 24,
+            "visual_id": "nist-p024-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "13",
+            "uncertainties": [
+              "No arrowheads are visible on the connection lines, so directionality is not explicitly shown in the figure itself.",
+              "The slanted 'Cloud Carrier' text appears to label the surrounding background region rather than a separate node."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "nist-p023-text-000",
+          "text": "offerings (Software, Platform or Infrastructure) allowed for by the cloud provider, there will be a\nshift in the level of responsibilities for some aspects of the scope of control, security and\nconfiguration. The Cloud Broker acts as the intermediary between consumer and provider and will\nhelp consumers through the complexity of cloud service offerings and may also create value-added\ncloud services. The Cloud Auditor provides a valuable inherent function for the government by\nconducting the independent performance and security monitoring of cloud services. The Cloud\nCarrier is the organization which has the responsibility of transferring the data, somewhat akin to\nthe power distributor for the electric grid.\n\nFigure 1 – Cloud Actors briefly lists the five major actors defined in the NIST cloud computing\nreference architecture.\n\n                                Figure 1 – Cloud Actors\n\n                                       12\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "23",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 23,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "12"
+          },
+          "score": 0.03225806451612903,
+          "rank": 2
+        },
+        {
+          "id": "nist-p023-diagram-00-000",
+          "text": "Figure 1 – Cloud Actors\nA conceptual diagram showing five cloud-computing actors arranged as labeled rounded rectangles over a blue cloud-shaped background. No arrows or connector lines are visible; the relationships are conveyed by the actor descriptions and spatial arrangement. The actors and their visible text are:\n\n1) Cloud Consumer (upper left): \"Person, or organization that maintains a business relationship with, and uses service from Cloud Providers\".\n2) Cloud Provider (center): \"Person, organization or entity responsible for making a service available to Cloud Consumers\".\n3) Cloud Broker (upper right): \"An entity that manages the use, performance and delivery of cloud services, and negotiates relationships between Cloud Providers and Cloud Consumers\".\n4) Cloud Auditor (lower left): \"A party that can conduct independent assessment of cloud services, information system operations, performance and security of the cloud implementation\".\n5) Cloud Carrier (bottom, spanning width): \"The intermediary that provides connectivity and transport of cloud services from Cloud Providers to Cloud Consumers\".\n\nVisual layout: Cloud Consumer and Cloud Auditor are stacked on the left; Cloud Provider is centered and tallest; Cloud Broker is on the right; Cloud Carrier is a long horizontal box beneath the three upper boxes. The background includes overlapping blue cloud shapes behind the boxes.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "23",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-023.png",
+            "label": "Figure 1 – Cloud Actors",
+            "pdf_page": 23,
+            "visual_id": "nist-p023-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "12",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.03125763125763126,
+          "rank": 3
+        },
+        {
+          "id": "nist-p035-text-000",
+          "text": "Arbitrage: Service arbitrage is similar to service aggregation except that the services being\n           combined/consolidated  are not  fixed. Service  arbitrage means a Broker has  the\n              flexibility to choose services from multiple service Providers.\n\nA Cloud Broker may provide:\n\n    1.   Business and relationship support services (business intermediation), and\n\n    2.   Technical support service (aggregation, arbitrage, and technical intermediation), with a\n        key focus on handling interoperability issues among multiple Providers.\n\n4.6   CLOUD CARRIER\n\nA cloud carrier acts as an intermediary that provides connectivity and transport of cloud services\nbetween cloud consumers and cloud providers. Cloud carriers provide access to consumers through\nnetwork, telecommunication, and other access devices. For example, cloud consumers can obtain\ncloud services through network access devices, such as computers, laptops, mobile phones, mobile\nInternet devices (MIDs), etc. The distribution of cloud services is normally provided by network\nand telecommunication carriers or a transport agent, where a transport agent refers to a business\norganization that provides physical transport of storage media such as high-capacity hard drives.\nNote that a cloud provider will set up service level agreements (SLAs)20 with a cloud carrier to\nprovide services consistent with the level of SLAs offered to cloud consumers, and may require the\ncloud carrier to provide dedicated and encrypted connections between cloud consumers and cloud\nproviders.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "35",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 35,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "24"
+          },
+          "score": 0.030798389007344232,
+          "rank": 4
+        },
+        {
+          "id": "nist-p062-diagram-00-000",
+          "text": "Figure 12\nThe Combined Conceptual Reference Diagram for cloud computing. A large blue rounded rectangle encloses several role areas. On the left is a vertical block labeled Cloud Consumer at top and Cloud Auditor below; within Cloud Auditor are three stacked boxes: Security Audit, Privacy Impact Audit, and Performance Audit. In the center is Cloud Provider, containing two main sections: Cloud Orchestration and Cloud Service Management. Under Cloud Orchestration is a Service Layer with three overlapping service boxes labeled SaaS, PaaS, and IaaS, above a Resource Abstraction and Control Layer, and below that a Physical Resource Layer containing Hardware and Facility. In the Cloud Service Management section are three stacked boxes labeled Business Support, Provisioning/Configuration, and Portability/Interoperability. On the right is Cloud Broker with three stacked boxes: Service Intermediation, Service Aggregation, and Service Arbitrage. Along the bottom spanning the diagram is Cloud Carrier, with a caption beneath inside the frame reading Cross Cutting Concerns: Security, Privacy, etc. The figure is a conceptual block diagram showing relationships among roles and service layers rather than a plot; no arrows are visible.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "62",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-062.png",
+            "label": "Figure 12",
+            "pdf_page": 62,
+            "visual_id": "nist-p062-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "51",
+            "uncertainties": [
+              "The exact internal nesting/overlap of the SaaS, PaaS, and IaaS boxes is approximated from the visual layout.",
+              "No explicit arrows or connector lines are visible in the figure; relationships are inferred from grouping and placement."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.030303030303030304,
+          "rank": 5
+        },
+        {
+          "id": "nist-p022-text-001",
+          "text": "The Overview of the Reference Architecture describes five major actors with their roles and\nresponsibilities using  the newly developing Cloud Computing Taxonomy. The NIST cloud\ncomputing reference architecture defines five major actors: cloud consumer, cloud provider, cloud\nauditor, cloud broker, and cloud carrier (See Figure 1: Cloud Actors). These core individuals have\nkey roles in the realm of cloud computing. Each actor is an entity (a person or an organization) that\nparticipates in a transaction or process and/or performs tasks in cloud computing. For example, a\nCloud Consumer is an individual or organization that acquires and uses cloud products and services.\nThe purveyor of products and services is the Cloud Provider. Because of the possible service\n\n13 NIST Special Publication 500-292, NIST Cloud Computing Reference Architecture, September 2011\n\n                                         11\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "22",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 22,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "11"
+          },
+          "score": 0.030117753623188408,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.4025643000022683
+    },
+    {
+      "event": "inspect_visual",
+      "evidence_id": "nist-p023-diagram-00-000",
+      "pdf_page": 23,
+      "image": "data\\processed\\agent_pages\\page-023.png",
+      "seconds": 0.08335360000273795
+    }
+  ],
+  "context": [
+    {
+      "id": "nist-p024-diagram-00-000",
+      "text": "Figure 2 – Interactions between the Actors in Cloud Computing\nDiagram showing four rounded-rectangle actors inside a large pale-green background area labeled diagonally on the right as 'Cloud Carrier'. Actors are arranged as: 'Cloud Consumer' at upper left (blue box), 'Cloud Auditor' at upper right (lavender box), 'Cloud Broker' at lower left (light gray/blue box), and 'Cloud Provider' at lower right (light gray box). Colored communication paths connect the actors: a blue horizontal path connects Cloud Consumer to Cloud Auditor across the top; a blue diagonal path connects Cloud Consumer to Cloud Provider; a gray vertical path connects Cloud Consumer to Cloud Broker; a gray horizontal path connects Cloud Broker to Cloud Provider; a purple diagonal path connects Cloud Broker to Cloud Auditor; and a purple vertical path connects Cloud Auditor to Cloud Provider. A legend below the diagram explains the line colors: blue = 'The communication path between a cloud provider and a cloud consumer'; purple = 'The communication paths for a cloud auditor to collect auditing information'; gray = 'The communication paths for a cloud broker to provide service to a cloud consumer'. The figure caption below repeats 'Figure 2 – Interactions between the Actors in Cloud Computing'.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "24",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\810c2b69a87e\\page-024.png",
+        "label": "Figure 2 – Interactions between the Actors in Cloud Computing",
+        "pdf_page": 24,
+        "visual_id": "nist-p024-diagram-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "13",
+        "uncertainties": [
+          "No arrowheads are visible on the connection lines, so directionality is not explicitly shown in the figure itself.",
+          "The slanted 'Cloud Carrier' text appears to label the surrounding background region rather than a separate node."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "nist-p023-text-000",
+      "text": "offerings (Software, Platform or Infrastructure) allowed for by the cloud provider, there will be a\nshift in the level of responsibilities for some aspects of the scope of control, security and\nconfiguration. The Cloud Broker acts as the intermediary between consumer and provider and will\nhelp consumers through the complexity of cloud service offerings and may also create value-added\ncloud services. The Cloud Auditor provides a valuable inherent function for the government by\nconducting the independent performance and security monitoring of cloud services. The Cloud\nCarrier is the organization which has the responsibility of transferring the data, somewhat akin to\nthe power distributor for the electric grid.\n\nFigure 1 – Cloud Actors briefly lists the five major actors defined in the NIST cloud computing\nreference architecture.\n\n                                Figure 1 – Cloud Actors\n\n                                       12\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "23",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 23,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "12"
+      },
+      "score": 0.03225806451612903,
+      "rank": 2
+    },
+    {
+      "id": "nist-p023-diagram-00-000",
+      "text": "Figure 1 – Cloud Actors\nA conceptual diagram showing five cloud-computing actors arranged as labeled rounded rectangles over a blue cloud-shaped background. No arrows or connector lines are visible; the relationships are conveyed by the actor descriptions and spatial arrangement. The actors and their visible text are:\n\n1) Cloud Consumer (upper left): \"Person, or organization that maintains a business relationship with, and uses service from Cloud Providers\".\n2) Cloud Provider (center): \"Person, organization or entity responsible for making a service available to Cloud Consumers\".\n3) Cloud Broker (upper right): \"An entity that manages the use, performance and delivery of cloud services, and negotiates relationships between Cloud Providers and Cloud Consumers\".\n4) Cloud Auditor (lower left): \"A party that can conduct independent assessment of cloud services, information system operations, performance and security of the cloud implementation\".\n5) Cloud Carrier (bottom, spanning width): \"The intermediary that provides connectivity and transport of cloud services from Cloud Providers to Cloud Consumers\".\n\nVisual layout: Cloud Consumer and Cloud Auditor are stacked on the left; Cloud Provider is centered and tallest; Cloud Broker is on the right; Cloud Carrier is a long horizontal box beneath the three upper boxes. The background includes overlapping blue cloud shapes behind the boxes.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "23",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\810c2b69a87e\\page-023.png",
+        "label": "Figure 1 – Cloud Actors",
+        "pdf_page": 23,
+        "visual_id": "nist-p023-diagram-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "12",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.03125763125763126,
+      "rank": 3
+    },
+    {
+      "id": "nist-p035-text-000",
+      "text": "Arbitrage: Service arbitrage is similar to service aggregation except that the services being\n           combined/consolidated  are not  fixed. Service  arbitrage means a Broker has  the\n              flexibility to choose services from multiple service Providers.\n\nA Cloud Broker may provide:\n\n    1.   Business and relationship support services (business intermediation), and\n\n    2.   Technical support service (aggregation, arbitrage, and technical intermediation), with a\n        key focus on handling interoperability issues among multiple Providers.\n\n4.6   CLOUD CARRIER\n\nA cloud carrier acts as an intermediary that provides connectivity and transport of cloud services\nbetween cloud consumers and cloud providers. Cloud carriers provide access to consumers through\nnetwork, telecommunication, and other access devices. For example, cloud consumers can obtain\ncloud services through network access devices, such as computers, laptops, mobile phones, mobile\nInternet devices (MIDs), etc. The distribution of cloud services is normally provided by network\nand telecommunication carriers or a transport agent, where a transport agent refers to a business\norganization that provides physical transport of storage media such as high-capacity hard drives.\nNote that a cloud provider will set up service level agreements (SLAs)20 with a cloud carrier to\nprovide services consistent with the level of SLAs offered to cloud consumers, and may require the\ncloud carrier to provide dedicated and encrypted connections between cloud consumers and cloud\nproviders.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "35",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 35,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "24"
+      },
+      "score": 0.030798389007344232,
+      "rank": 4
+    },
+    {
+      "id": "nist-p062-diagram-00-000",
+      "text": "Figure 12\nThe Combined Conceptual Reference Diagram for cloud computing. A large blue rounded rectangle encloses several role areas. On the left is a vertical block labeled Cloud Consumer at top and Cloud Auditor below; within Cloud Auditor are three stacked boxes: Security Audit, Privacy Impact Audit, and Performance Audit. In the center is Cloud Provider, containing two main sections: Cloud Orchestration and Cloud Service Management. Under Cloud Orchestration is a Service Layer with three overlapping service boxes labeled SaaS, PaaS, and IaaS, above a Resource Abstraction and Control Layer, and below that a Physical Resource Layer containing Hardware and Facility. In the Cloud Service Management section are three stacked boxes labeled Business Support, Provisioning/Configuration, and Portability/Interoperability. On the right is Cloud Broker with three stacked boxes: Service Intermediation, Service Aggregation, and Service Arbitrage. Along the bottom spanning the diagram is Cloud Carrier, with a caption beneath inside the frame reading Cross Cutting Concerns: Security, Privacy, etc. The figure is a conceptual block diagram showing relationships among roles and service layers rather than a plot; no arrows are visible.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "62",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\810c2b69a87e\\page-062.png",
+        "label": "Figure 12",
+        "pdf_page": 62,
+        "visual_id": "nist-p062-diagram-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "51",
+        "uncertainties": [
+          "The exact internal nesting/overlap of the SaaS, PaaS, and IaaS boxes is approximated from the visual layout.",
+          "No explicit arrows or connector lines are visible in the figure; relationships are inferred from grouping and placement."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.030303030303030304,
+      "rank": 5
+    },
+    {
+      "id": "nist-p022-text-001",
+      "text": "The Overview of the Reference Architecture describes five major actors with their roles and\nresponsibilities using  the newly developing Cloud Computing Taxonomy. The NIST cloud\ncomputing reference architecture defines five major actors: cloud consumer, cloud provider, cloud\nauditor, cloud broker, and cloud carrier (See Figure 1: Cloud Actors). These core individuals have\nkey roles in the realm of cloud computing. Each actor is an entity (a person or an organization) that\nparticipates in a transaction or process and/or performs tasks in cloud computing. For example, a\nCloud Consumer is an individual or organization that acquires and uses cloud products and services.\nThe purveyor of products and services is the Cloud Provider. Because of the possible service\n\n13 NIST Special Publication 500-292, NIST Cloud Computing Reference Architecture, September 2011\n\n                                         11\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "22",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 22,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "11"
+      },
+      "score": 0.030117753623188408,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T14:58:22.532126+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 415,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 43
+        },
+        "total_tokens": 492
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:25.533993+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3194,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 114,
+        "output_tokens_details": {
+          "reasoning_tokens": 84
+        },
+        "total_tokens": 3308
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:30.682241+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5594,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 439,
+        "output_tokens_details": {
+          "reasoning_tokens": 310
+        },
+        "total_tokens": 6033
+      }
+    }
+  ],
+  "seconds": 10.854165599997941,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review"
+}

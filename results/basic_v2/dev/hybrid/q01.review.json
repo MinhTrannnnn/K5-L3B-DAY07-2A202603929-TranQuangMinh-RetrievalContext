@@ -1,0 +1,24 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "preprocessing:002 explicitly says centering can be disabled by passing with_mean=False to StandardScaler, and the same page notes sparse inputs require with_mean=False. The answer’s core instruction is correct.",
+  "query_id": "q01",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "802cb252cc2ecd3ed303b43820dff7727d75839f51f4fbe48bfa25eedb86a481",
+  "alternative_cited_pages": [
+    "preprocessing:002"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

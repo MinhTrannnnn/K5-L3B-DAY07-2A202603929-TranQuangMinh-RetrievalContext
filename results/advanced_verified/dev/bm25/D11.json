@@ -1,0 +1,981 @@
+{
+  "status": "answered",
+  "answer": "The report says India aims to become a developed economy by 2047 [wdr-p067-text-002].",
+  "citations": [
+    "wdr-p067-text-002"
+  ],
+  "question": "What year does the report give for India’s ambition to become a developed economy?",
+  "corpus": "wdr",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "bm25",
+    "top_k": 10,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": true,
+    "context_budget_tokens_per_tool": 10000,
+    "max_rounds": 8,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "India ambition to become a developed economy year report developed economy ambition India report",
+      "results": [
+        {
+          "id": "wdr-p034-text-001",
+          "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 28.216661906589216,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p067-text-002",
+          "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.199144425945775,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.6215506830833,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.168515304605716,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p058-text-001",
+          "text": " in middle-income    economic growth  in Korea to the making  of a\n       countries  is twice that in high-income     “miracle.” 54 Given the changes in the global economy\n       countries, averaging 3.8 percent in high-     since the time that Korea was a middle-income\n      income  countries,  but  7.2  percent  in    economy, it would be fair to conclude that it would\n      upper-middle-income countries and more    be a miracle  if today’s middle-income economies\n      than 8.5 percent in lower-middle-income   manage to do in 50 years what Korea did in just 25.\n       countries   (figure   O.13).52   Addressing      It might even be miraculous  if they replicated the\n       technology  risk, development  risk, and    impressive achievements of other successful countries\n       pricing risk can help incentivize investors—    such as Chile and Poland. But that is exactly what\n         utilities, banks, or other institutions—to    governments in Bangladesh, Brazil, China, India,\n       invest  in  low-carbon  energy.  Derisking    Indonesia, Mexico, Morocco, South Africa, Türkiye,\n       requires a whole-of-economy approach. It   and Viet Nam, among others, hope to accomplish.\n      depends on licensing, policy stability, and      To do this, these countries will have to become\n        social  acceptance, along with reducing    more disciplined. They will have to time the shift\n       technical, market, and regulatory risks.53    from simpler investment-led growth strategies  (1i)\n       Derisking  will make renewable energy    that worked well in the early stages of development\n       projects less expensive, as well as reduce    to  augmenting  investment  accelerations  with\n       the public finance",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "58",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 58,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.949556182207903,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p125-text-000",
+          "text": "Box 4.1 Vibrant corporate R&D, connected places, mobile people, and\n­successful markets for patents: How the United States nurtured an\n­innovation ecosystem\n\nThe US economy has fostered innovation for centuries, inspiring numerous inventors to\ngenerate brilliant ideas that have, subsequently, been harnessed by businesses to create\nconsumer products or production technologies that have had a widespread impact. Four\ndimensions have been important:\n • Who “creates” has shifted from small, independent inventors to corporate research and\n    development (R&D) and innovation. Over the last 150 years, there has been a remark­\n    able transition from the realm of “garage inventors” to the corporate R&D facilities\n    of modern corporations (figure B4.1.1). The transition has coincided with the growing\n    sophistication of the US economy.\n •  Connected places are more inventive. Connectivity enhances the market size for inno­\n    vation and the flow of knowledge. Inventive activity in the early nineteenth century\n    accelerated in US locations that were near navigable waterways and had developed\n     railroads.a\n •  The migration of people is critical to innovation. Technology sectors in the United\n    States with a higher concentration of immigrant inventors between 1880 and 1940\n    experienced accelerated growth from 1940 to 2000.b Furthermore, immigrant inven­\n    tors exhibited greater productivity throughout their careers than their native-born\n    counterparts. Unfortunately, despite their heightened productivity, immigrant inno­\n    vators found that their earnings were much lower.\n\n  Figure B4.1.1 The number of patents filed by corporations with the\n  US Patent and Trademark Office has skyrocketed since 1880\n\n                       80\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "125",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 125,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.760516359796432,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p234-chart-00-000",
+          "text": "Figure 8.4\nLine chart titled: \"Improvements in allocative efficiency in Chile, China, and India have been driven by reducing productivity-dependent distortions.\" X-axis: \"Number of years since first year of growth acceleration\" from 0 to 20, with plotted data shown roughly from year 1 to year 17. Y-axis: \"Relative to first year of growth acceleration\" from 0.9 to 1.3. Legend shows three series: Chile (orange), China (dark blue), India (teal). All series start at about 1.0 in year 1. Chile rises gradually to about 1.05 by year 3, about 1.09 by year 4, peaks around 1.14–1.15 near year 6, then fluctuates around 1.09–1.14 through year 17, ending near 1.14. China dips slightly below 1.0 around years 2–4 (lowest near 0.97), then climbs steadily to about 1.08 by years 6–8, around 1.10 near year 9, and ends around 1.08 by year 10. India drops to about 0.93 near year 2, rebounds sharply to about 1.09 near year 3, peaks around 1.21 near year 5, then oscillates mostly between about 1.05 and 1.18, with another local high around 1.18 near year 7 and values near 1.10–1.12 in the later years, ending around 1.10 by year 16. Source note: WDR 2024 team based on Hsieh and Klenow (2009). Note: first year in each country's growth acceleration covered by the firm-level data is 1980 in Chile, 1998 in China, and 2000 in India. Each line illustrates the evolution of the gap between observed total factor productivity (TFP) in a country relative to the potential TFP if resources had been allocated efficiently across firms, normalized by the gap observed at the beginning of the sample in 1998.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "234",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-234.png",
+            "label": "Figure 8.4",
+            "pdf_page": 234,
+            "visual_id": "wdr-p234-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact year-by-year plotted values are not fully legible from the image and are described approximately.",
+              "The title and note text are transcribed from the visible figure and may differ in minor punctuation from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.513619543118487,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p098-text-001",
+          "text": "And they should not bet the farm—or even a        human  capital,  limited venture  capital,\nfield—on leapfrogging. Infusion is imperative. A            ­regulatory  ­barriers and incomplete rule\nreview of the literature on middle-income traps           of  law  present  significant  barriers  to\nhighlights that countries often try to make pre­         becoming an innovation-driven economy.\nmature leaps from investment to innovation.          Middle-income   countries   that   invest\nAccording to Gill and Kharas (2015, 28–29),                  heavily  and  prematurely  in  trying  to\n                                                become “knowledge economies” can find\n      [Some   countries   tried]   to   leapfrog          low  returns  to such  investments. The\n       prematurely into “knowledge economies,”          combination  of wasted  fiscal spending\n      with   none    of    the    institutional         and a faulty growth diagnostic can lead\n       infrastructure in place to accomplish this.           to   substandard  performance—another\n      Poor  quality  universities, low  levels  of          example of the middle-income trap.\n\n66   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "98",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 98,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.34547527403022,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p156-text-002",
+          "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.125675104518649,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p234-text-001",
+          "text": "firms,  driving up  market  compensation  for   good employees, setting production targets,\nmanagers within those expanding firms. The    deciding on product varieties, and monitoring\nopportunity to earn more, in turn, encourages    performance. The impacts of better manage­\ncapable young individuals to invest in accumulat­   ment are critical not only to individual firms\ning human capital to ensure a brighter future and    but  also to  countries.66 Managerial  quality\nenhances opportunities for everyone.               accounts, on average, for about one-third of the\n  Capable professional managers can make   gap in TFP between the country at the lead of\nsound decisions in their daily operations, think    the technology frontier, the United States, and\nstrategically, and manage human resources    other countries.67 In fact, Spain’s rapid growth\nefficiently.65 In small firms, good management   from an economic backwater in Europe to a\npractices include keeping separate household    developed nation was backed by technology\nand business accounts and monitoring inven­    adoption and improving managerial capabili­\ntories. In larger firms, they include rewarding     ties (box 8.4).\n\n202   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "234",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 234,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.983769803663368,
+          "rank": 10
+        }
+      ],
+      "context": [
+        {
+          "id": "wdr-p034-text-001",
+          "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "34",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 34,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 28.216661906589216,
+          "rank": 1
+        },
+        {
+          "id": "wdr-p067-text-002",
+          "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "67",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 67,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 22.199144425945775,
+          "rank": 2
+        },
+        {
+          "id": "wdr-p276-text-000",
+          "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "276",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 276,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.6215506830833,
+          "rank": 3
+        },
+        {
+          "id": "wdr-p066-text-001",
+          "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "66",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 66,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 20.168515304605716,
+          "rank": 4
+        },
+        {
+          "id": "wdr-p058-text-001",
+          "text": " in middle-income    economic growth  in Korea to the making  of a\n       countries  is twice that in high-income     “miracle.” 54 Given the changes in the global economy\n       countries, averaging 3.8 percent in high-     since the time that Korea was a middle-income\n      income  countries,  but  7.2  percent  in    economy, it would be fair to conclude that it would\n      upper-middle-income countries and more    be a miracle  if today’s middle-income economies\n      than 8.5 percent in lower-middle-income   manage to do in 50 years what Korea did in just 25.\n       countries   (figure   O.13).52   Addressing      It might even be miraculous  if they replicated the\n       technology  risk, development  risk, and    impressive achievements of other successful countries\n       pricing risk can help incentivize investors—    such as Chile and Poland. But that is exactly what\n         utilities, banks, or other institutions—to    governments in Bangladesh, Brazil, China, India,\n       invest  in  low-carbon  energy.  Derisking    Indonesia, Mexico, Morocco, South Africa, Türkiye,\n       requires a whole-of-economy approach. It   and Viet Nam, among others, hope to accomplish.\n      depends on licensing, policy stability, and      To do this, these countries will have to become\n        social  acceptance, along with reducing    more disciplined. They will have to time the shift\n       technical, market, and regulatory risks.53    from simpler investment-led growth strategies  (1i)\n       Derisking  will make renewable energy    that worked well in the early stages of development\n       projects less expensive, as well as reduce    to  augmenting  investment  accelerations  with\n       the public finance",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "58",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 58,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.949556182207903,
+          "rank": 5
+        },
+        {
+          "id": "wdr-p125-text-000",
+          "text": "Box 4.1 Vibrant corporate R&D, connected places, mobile people, and\n­successful markets for patents: How the United States nurtured an\n­innovation ecosystem\n\nThe US economy has fostered innovation for centuries, inspiring numerous inventors to\ngenerate brilliant ideas that have, subsequently, been harnessed by businesses to create\nconsumer products or production technologies that have had a widespread impact. Four\ndimensions have been important:\n • Who “creates” has shifted from small, independent inventors to corporate research and\n    development (R&D) and innovation. Over the last 150 years, there has been a remark­\n    able transition from the realm of “garage inventors” to the corporate R&D facilities\n    of modern corporations (figure B4.1.1). The transition has coincided with the growing\n    sophistication of the US economy.\n •  Connected places are more inventive. Connectivity enhances the market size for inno­\n    vation and the flow of knowledge. Inventive activity in the early nineteenth century\n    accelerated in US locations that were near navigable waterways and had developed\n     railroads.a\n •  The migration of people is critical to innovation. Technology sectors in the United\n    States with a higher concentration of immigrant inventors between 1880 and 1940\n    experienced accelerated growth from 1940 to 2000.b Furthermore, immigrant inven­\n    tors exhibited greater productivity throughout their careers than their native-born\n    counterparts. Unfortunately, despite their heightened productivity, immigrant inno­\n    vators found that their earnings were much lower.\n\n  Figure B4.1.1 The number of patents filed by corporations with the\n  US Patent and Trademark Office has skyrocketed since 1880\n\n                       80\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "125",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 125,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.760516359796432,
+          "rank": 6
+        },
+        {
+          "id": "wdr-p234-chart-00-000",
+          "text": "Figure 8.4\nLine chart titled: \"Improvements in allocative efficiency in Chile, China, and India have been driven by reducing productivity-dependent distortions.\" X-axis: \"Number of years since first year of growth acceleration\" from 0 to 20, with plotted data shown roughly from year 1 to year 17. Y-axis: \"Relative to first year of growth acceleration\" from 0.9 to 1.3. Legend shows three series: Chile (orange), China (dark blue), India (teal). All series start at about 1.0 in year 1. Chile rises gradually to about 1.05 by year 3, about 1.09 by year 4, peaks around 1.14–1.15 near year 6, then fluctuates around 1.09–1.14 through year 17, ending near 1.14. China dips slightly below 1.0 around years 2–4 (lowest near 0.97), then climbs steadily to about 1.08 by years 6–8, around 1.10 near year 9, and ends around 1.08 by year 10. India drops to about 0.93 near year 2, rebounds sharply to about 1.09 near year 3, peaks around 1.21 near year 5, then oscillates mostly between about 1.05 and 1.18, with another local high around 1.18 near year 7 and values near 1.10–1.12 in the later years, ending around 1.10 by year 16. Source note: WDR 2024 team based on Hsieh and Klenow (2009). Note: first year in each country's growth acceleration covered by the firm-level data is 1980 in Chile, 1998 in China, and 2000 in India. Each line illustrates the evolution of the gap between observed total factor productivity (TFP) in a country relative to the potential TFP if resources had been allocated efficiently across firms, normalized by the gap observed at the beginning of the sample in 1998.\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "234",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "chart",
+            "image": "data\\processed\\dc69d858e364\\page-234.png",
+            "label": "Figure 8.4",
+            "pdf_page": 234,
+            "visual_id": "wdr-p234-chart-00",
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null,
+            "uncertainties": [
+              "Exact year-by-year plotted values are not fully legible from the image and are described approximately.",
+              "The title and note text are transcribed from the visible figure and may differ in minor punctuation from the original PDF."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 15.513619543118487,
+          "rank": 7
+        },
+        {
+          "id": "wdr-p098-text-001",
+          "text": "And they should not bet the farm—or even a        human  capital,  limited venture  capital,\nfield—on leapfrogging. Infusion is imperative. A            ­regulatory  ­barriers and incomplete rule\nreview of the literature on middle-income traps           of  law  present  significant  barriers  to\nhighlights that countries often try to make pre­         becoming an innovation-driven economy.\nmature leaps from investment to innovation.          Middle-income   countries   that   invest\nAccording to Gill and Kharas (2015, 28–29),                  heavily  and  prematurely  in  trying  to\n                                                become “knowledge economies” can find\n      [Some   countries   tried]   to   leapfrog          low  returns  to such  investments. The\n       prematurely into “knowledge economies,”          combination  of wasted  fiscal spending\n      with   none    of    the    institutional         and a faulty growth diagnostic can lead\n       infrastructure in place to accomplish this.           to   substandard  performance—another\n      Poor  quality  universities, low  levels  of          example of the middle-income trap.\n\n66   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "98",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 98,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.34547527403022,
+          "rank": 8
+        },
+        {
+          "id": "wdr-p156-text-002",
+          "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "156",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 156,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 15.125675104518649,
+          "rank": 9
+        },
+        {
+          "id": "wdr-p234-text-001",
+          "text": "firms,  driving up  market  compensation  for   good employees, setting production targets,\nmanagers within those expanding firms. The    deciding on product varieties, and monitoring\nopportunity to earn more, in turn, encourages    performance. The impacts of better manage­\ncapable young individuals to invest in accumulat­   ment are critical not only to individual firms\ning human capital to ensure a brighter future and    but  also to  countries.66 Managerial  quality\nenhances opportunities for everyone.               accounts, on average, for about one-third of the\n  Capable professional managers can make   gap in TFP between the country at the lead of\nsound decisions in their daily operations, think    the technology frontier, the United States, and\nstrategically, and manage human resources    other countries.67 In fact, Spain’s rapid growth\nefficiently.65 In small firms, good management   from an economic backwater in Europe to a\npractices include keeping separate household    developed nation was backed by technology\nand business accounts and monitoring inven­    adoption and improving managerial capabili­\ntories. In larger firms, they include rewarding     ties (box 8.4).\n\n202   | WORLD DEVELOPMENT REPORT 2024\n\n",
+          "source_id": "wdr",
+          "source": "WDR2024.pdf",
+          "page": "234",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              576.0,
+              756.0
+            ],
+            "kind": "text",
+            "pdf_page": 234,
+            "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+            "printed_page": null
+          },
+          "score": 14.983769803663368,
+          "rank": 10
+        }
+      ],
+      "method": "bm25",
+      "filters": {},
+      "seconds": 0.012596100001246668
+    },
+    {
+      "event": "answer_validation",
+      "accept": true,
+      "feedback": "The answer is supported by the evidence. The cited passage states that India aims to become a developed economy by 2047."
+    }
+  ],
+  "context": [
+    {
+      "id": "wdr-p034-text-001",
+      "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 28.216661906589216,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p067-text-002",
+      "text": "the nation into a developed economy by 2047—   Other middle-income countries have similar\nthe hundredth year of independence. In Viet    aspirations.\nNam, its Socio-Economic Development Strategy      But the growth prospects of middle-income\n2021–2030 outlines a plan to sustain GDP per    countries are not improving. Over the last decade,\ncapita growth of 7 percent through this decade,    the global economy has gone from healthy to\nwith a transition to high-income status by 2045.    ­hobbling and from largely integrated to increas­\nIn South Africa, the 2030 National Development    ingly fragmented.7 Foreign trade and investment\nPlan has prioritized raising its income per cap­    channels are also becoming more constricted—or\nita from US$2,800 in 2010 to US$7,000 by 2030.    at  least encumbered—by  geopolitical  tensions.\n\n                                                             Slowing Growth   | 35\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "67",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 67,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 22.199144425945775,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.6215506830833,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.168515304605716,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p058-text-001",
+      "text": " in middle-income    economic growth  in Korea to the making  of a\n       countries  is twice that in high-income     “miracle.” 54 Given the changes in the global economy\n       countries, averaging 3.8 percent in high-     since the time that Korea was a middle-income\n      income  countries,  but  7.2  percent  in    economy, it would be fair to conclude that it would\n      upper-middle-income countries and more    be a miracle  if today’s middle-income economies\n      than 8.5 percent in lower-middle-income   manage to do in 50 years what Korea did in just 25.\n       countries   (figure   O.13).52   Addressing      It might even be miraculous  if they replicated the\n       technology  risk, development  risk, and    impressive achievements of other successful countries\n       pricing risk can help incentivize investors—    such as Chile and Poland. But that is exactly what\n         utilities, banks, or other institutions—to    governments in Bangladesh, Brazil, China, India,\n       invest  in  low-carbon  energy.  Derisking    Indonesia, Mexico, Morocco, South Africa, Türkiye,\n       requires a whole-of-economy approach. It   and Viet Nam, among others, hope to accomplish.\n      depends on licensing, policy stability, and      To do this, these countries will have to become\n        social  acceptance, along with reducing    more disciplined. They will have to time the shift\n       technical, market, and regulatory risks.53    from simpler investment-led growth strategies  (1i)\n       Derisking  will make renewable energy    that worked well in the early stages of development\n       projects less expensive, as well as reduce    to  augmenting  investment  accelerations  with\n       the public finance",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "58",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 58,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.949556182207903,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p125-text-000",
+      "text": "Box 4.1 Vibrant corporate R&D, connected places, mobile people, and\n­successful markets for patents: How the United States nurtured an\n­innovation ecosystem\n\nThe US economy has fostered innovation for centuries, inspiring numerous inventors to\ngenerate brilliant ideas that have, subsequently, been harnessed by businesses to create\nconsumer products or production technologies that have had a widespread impact. Four\ndimensions have been important:\n • Who “creates” has shifted from small, independent inventors to corporate research and\n    development (R&D) and innovation. Over the last 150 years, there has been a remark­\n    able transition from the realm of “garage inventors” to the corporate R&D facilities\n    of modern corporations (figure B4.1.1). The transition has coincided with the growing\n    sophistication of the US economy.\n •  Connected places are more inventive. Connectivity enhances the market size for inno­\n    vation and the flow of knowledge. Inventive activity in the early nineteenth century\n    accelerated in US locations that were near navigable waterways and had developed\n     railroads.a\n •  The migration of people is critical to innovation. Technology sectors in the United\n    States with a higher concentration of immigrant inventors between 1880 and 1940\n    experienced accelerated growth from 1940 to 2000.b Furthermore, immigrant inven­\n    tors exhibited greater productivity throughout their careers than their native-born\n    counterparts. Unfortunately, despite their heightened productivity, immigrant inno­\n    vators found that their earnings were much lower.\n\n  Figure B4.1.1 The number of patents filed by corporations with the\n  US Patent and Trademark Office has skyrocketed since 1880\n\n                       80\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "125",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 125,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.760516359796432,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p234-chart-00-000",
+      "text": "Figure 8.4\nLine chart titled: \"Improvements in allocative efficiency in Chile, China, and India have been driven by reducing productivity-dependent distortions.\" X-axis: \"Number of years since first year of growth acceleration\" from 0 to 20, with plotted data shown roughly from year 1 to year 17. Y-axis: \"Relative to first year of growth acceleration\" from 0.9 to 1.3. Legend shows three series: Chile (orange), China (dark blue), India (teal). All series start at about 1.0 in year 1. Chile rises gradually to about 1.05 by year 3, about 1.09 by year 4, peaks around 1.14–1.15 near year 6, then fluctuates around 1.09–1.14 through year 17, ending near 1.14. China dips slightly below 1.0 around years 2–4 (lowest near 0.97), then climbs steadily to about 1.08 by years 6–8, around 1.10 near year 9, and ends around 1.08 by year 10. India drops to about 0.93 near year 2, rebounds sharply to about 1.09 near year 3, peaks around 1.21 near year 5, then oscillates mostly between about 1.05 and 1.18, with another local high around 1.18 near year 7 and values near 1.10–1.12 in the later years, ending around 1.10 by year 16. Source note: WDR 2024 team based on Hsieh and Klenow (2009). Note: first year in each country's growth acceleration covered by the firm-level data is 1980 in Chile, 1998 in China, and 2000 in India. Each line illustrates the evolution of the gap between observed total factor productivity (TFP) in a country relative to the potential TFP if resources had been allocated efficiently across firms, normalized by the gap observed at the beginning of the sample in 1998.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "234",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "chart",
+        "image": "data\\processed\\dc69d858e364\\page-234.png",
+        "label": "Figure 8.4",
+        "pdf_page": 234,
+        "visual_id": "wdr-p234-chart-00",
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null,
+        "uncertainties": [
+          "Exact year-by-year plotted values are not fully legible from the image and are described approximately.",
+          "The title and note text are transcribed from the visible figure and may differ in minor punctuation from the original PDF."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 15.513619543118487,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p098-text-001",
+      "text": "And they should not bet the farm—or even a        human  capital,  limited venture  capital,\nfield—on leapfrogging. Infusion is imperative. A            ­regulatory  ­barriers and incomplete rule\nreview of the literature on middle-income traps           of  law  present  significant  barriers  to\nhighlights that countries often try to make pre­         becoming an innovation-driven economy.\nmature leaps from investment to innovation.          Middle-income   countries   that   invest\nAccording to Gill and Kharas (2015, 28–29),                  heavily  and  prematurely  in  trying  to\n                                                become “knowledge economies” can find\n      [Some   countries   tried]   to   leapfrog          low  returns  to such  investments. The\n       prematurely into “knowledge economies,”          combination  of wasted  fiscal spending\n      with   none    of    the    institutional         and a faulty growth diagnostic can lead\n       infrastructure in place to accomplish this.           to   substandard  performance—another\n      Poor  quality  universities, low  levels  of          example of the middle-income trap.\n\n66   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "98",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 98,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.34547527403022,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p156-text-002",
+      "text": "icipation has increased in many countries over    jobs are available in middle-income countries—\nthe last decades (figure 5.9). In 1990, the Republic    for men and for women—than in high-income\nof Korea had the same level of GDP per capita (in    countries, and women in middle-income coun-\nterms of purchasing power parity, PPP) as India     tries have relatively  less access to them than\nin 2020. However, the female labor force par-   women in high-income countries. However, in\nticipation rate in Korea was about 51 percent in   some middle-income countries such as Indonesia,\n1990, while India’s was 30 percent in 2020 but has    the share of women in professional occupations\nimproved in recent years.65 In the Arab Republic of    has grown rapidly in recent decades (figure 5.10).\nEgypt, India, and Türkiye, female labor force par-    In some lower-­middle-income countries, such as\nticipation is well below what would be expected    Egypt, the share has grown as well but remains\ngiven their levels of income per capita, whereas the    low, indicating a large talent misallocation.\nrates are much higher in Indonesia and Malaysia.       In high-income countries and middle-income\n  Even  when women  are  employed,  they    countries alike, women are less likely than men\nare more likely to work in lower-paid jobs or    to enroll in science, technology, engineering, and\nbe  self-employed  (and  thus  have  unpredict-    mathematics (STEM) fields.66 The share of women\nable incomes) than men in these types of jobs.   among STEM graduates is on average higher in\nThey are much less likely than men to work in    India compared with even developed countries,\n­higher-paid jobs",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "156",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 156,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 15.125675104518649,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p234-text-001",
+      "text": "firms,  driving up  market  compensation  for   good employees, setting production targets,\nmanagers within those expanding firms. The    deciding on product varieties, and monitoring\nopportunity to earn more, in turn, encourages    performance. The impacts of better manage­\ncapable young individuals to invest in accumulat­   ment are critical not only to individual firms\ning human capital to ensure a brighter future and    but  also to  countries.66 Managerial  quality\nenhances opportunities for everyone.               accounts, on average, for about one-third of the\n  Capable professional managers can make   gap in TFP between the country at the lead of\nsound decisions in their daily operations, think    the technology frontier, the United States, and\nstrategically, and manage human resources    other countries.67 In fact, Spain’s rapid growth\nefficiently.65 In small firms, good management   from an economic backwater in Europe to a\npractices include keeping separate household    developed nation was backed by technology\nand business accounts and monitoring inven­    adoption and improving managerial capabili­\ntories. In larger firms, they include rewarding     ties (box 8.4).\n\n202   | WORLD DEVELOPMENT REPORT 2024\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "234",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 234,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 14.983769803663368,
+      "rank": 10
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:44:43.021085+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 509,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 69,
+        "output_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "total_tokens": 578
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:47.281673+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5482,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 148,
+        "output_tokens_details": {
+          "reasoning_tokens": 94
+        },
+        "total_tokens": 5630
+      }
+    },
+    {
+      "at": "2026-11-16T15:44:50.539347+00:00",
+      "operation": "answer_validation",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5124,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 159,
+        "output_tokens_details": {
+          "reasoning_tokens": 116
+        },
+        "total_tokens": 5283
+      }
+    }
+  ],
+  "seconds": 10.070086899999296,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "D11",
+  "initial_ranking": [
+    {
+      "id": "wdr-p034-text-001",
+      "text": " growth harder in the years ahead. To become\n   Readers might immediately recognize the prob-    advanced economies despite these headwinds, middle-​\nlem with equating a country’s development with its    income countries will have to make miracles.\nincome per capita. In fact, development practitioners\nhave been using a raft of similarly superficial indica-\n                                ‘To get rich is glorious’tors to assess the structural strength of an economy\nand its disaggregates such as industry, society, and   You are a policy maker in one of the world’s 108\necology. We have become accustomed to using the    middle-income countries. You have learned the\nsize distribution of firms in an industry to measure    importance of creating a credible, solid macro-\nits productive efficiency, household income distribu-   economic  foundation  for  private  investment,\ntions to assess social durability, and the distribution    domestic and foreign, supported by strong insti-\nof energy sources to approximate ecological sustain-    tutions and clean governance. And, like Deng\nability. But as economic structures become more    Xiaoping nearly 50 years ago, quoted here, you\ncomplex, these measures have become increasingly    have big plans.\ninaccurate and progressively poorer guides for mak-         If your country is China, your 14th Five-Year\ning policy.                                       Plan envisions reaching the median gross domes-\n  WDR 2024 is premised on the conjecture that,     tic product (GDP) per capita of developed nations\nrelative to the complexity of their economic struc-    by 2035, thereby greatly expanding your middle\ntures, middle-income countries have more serious     class. If it is India, your prime minister’s vision\ninformation deficits than either low-income coun-     is to turn the nation into a developed economy\ntries or advanced economies. As",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "34",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 34,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 25.720463477564735,
+      "rank": 1
+    },
+    {
+      "id": "wdr-p070-text-000",
+      "text": "Box 1.1 Misunderstanding through misclassification (continued)\n\n        annually in US dollars based on a three-year average exchange rate and were expanded to\n        four categories:\n\n          •  Low-income. The low-income threshold was officially set in 1988, still based on the\n            value of the IDA’s “civil works preference” and updated for inflation.d\n          •  Lower-middle-income. The lower-middle-income threshold is based on the oper­\n             ational guidelines cutoff for determining access to 17-year repayment terms for\n            loans through the World Bank Group’s International Bank for Reconstruction and\n          Development (IBRD), although these terms are no longer available. It appears to\n           have first been introduced in the 1983 edition of the World Development Report.e\n          •  Upper-middle-income. The upper-middle-income threshold  is the range between\n            lower-​middle-income and high-income.\n          •  High-income. The high-income threshold does not relate to a cutoff derived from\n            the operational guidelines, but was set at GNI per capita of US$6,000 in 1987 prices\n              in a paper presented to the World Bank’s Board of Executive Directors in January\n            1989, which also reconfirmed the low- and lower-­middle-income threshold levels.f\n          The US$6,000 level has been updated over time for what is called “international infla­\n               tion,” defined as the average inflation rates of Japan, the United Kingdom, the United\n             States, and the euro area. The choice of the high-income threshold was made to\n            address anomalies in the classification of high-income and industrialized economies\n           used in the World Bank’s World Development Indicators prior to that point.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "70",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 70,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.925217631471533,
+      "rank": 2
+    },
+    {
+      "id": "wdr-p254-text-000",
+      "text": "investment,  infusion, and  innovation toward    to retrofit green.4 But there is a challenge—despite\nreducing greenhouse  gas  emissions,  bringing    the falling cost of green infrastructure and poten­\nthem to net zero.1 In support of climate action,     tial for high economic returns in middle-income\nmore than 140 countries have set a net zero tar­    countries, capital does not flow from high-income\nget, covering about 88 percent of global emis­    to low- and middle-income countries to under­\nsions.2 This chapter explores what  it will take    take these infrastructure investments.\nfor ­middle-income countries to capitalize on the        Finally, where  capital costs are high, low-­\nclimate crisis to overcome structural stasis and    carbon energy may be unaffordable. Moreover,\nadvance decarbonization both locally and globally.    the intermittency of variable renewables and\n  Low-carbon sources of energy such as wind    high storage costs pose risks to energy security if\nand solar are technologically sophisticated and    not managed well. Middle-income countries will\nbenefit from increasing returns to scale in pro­   need flexibility in choosing emissions-reducing\nduction and deployment. Thus middle-income     strategies.\ncountries have an opportunity to infuse global\ntechnologies domestically and become producers   Globalizing decarbonization\nof green intermediates for global markets, thereby\n                                   Upgrade and compete through globalreducing the cost of decarbonization worldwide.\n                                      low-carbon value chainsTo accelerate diffusion of such technologies, these\ncountries will need to improve their investment    Izmir, Türkiye, a vibrant city of nearly 4.5 million\nclimate so that contestable markets give domestic    people on the Aegean Sea, has been historically\nincumbents the incentive to upgrade. Alongside   ",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "254",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 254,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 20.402801558095973,
+      "rank": 3
+    },
+    {
+      "id": "wdr-p276-text-000",
+      "text": "The Middle-Income Trap\n\nMiddle-income countries are in a race against time. Many of them have done well\nsince the 1990s to escape low-income levels and eradicate extreme poverty,\nleading to the perception that the last three decades have been great for\ndevelopment. But the ambition of the more than 100 economies with incomes\nper capita between US$1,100 and US$14,000 is to reach high-income status\nwithin the next generation. When assessed against this goal, their record\nis discouraging. Since the 1970s, income per capita in the median middle-\nincome country has stagnated at less than a tenth of the US level. With aging\npopulations, growing protectionism, and escalating pressures to speed up the\nenergy transition, today’s middle-income economies face ever more daunting\nodds. To become advanced economies despite the growing headwinds, they will\nhave to make miracles.\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "276",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 276,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.687759529093867,
+      "rank": 4
+    },
+    {
+      "id": "wdr-p066-text-001",
+      "text": " to enter the\n                                                   to local innovation well after closing the gaps­middle-income stage than to exit  it. According\n                                              with the global technology frontier.to the World Bank’s 2023 income classifications,\nthe 108 current middle-income countries are      For countries that are not fortunate enough\nsplit evenly between lower- and upper-middle-­   to be in the European Union, are not endowed\nincome countries. Representing about 40 percent    with ­abundant  resources, or are not  fiercely\nof the global economy, middle-income countries    focused, progress through the ­middle-income\nare home to about 75 percent of the world’s pop­    stage has been  slower. The average  middle-​\nulation and more than 60 percent of the world’s   income economy still has an income per capita\npoor. In other words, more than 400 million of     less than one-tenth that of the United States\nthe extreme poor globally live in middle-income    (figure 1.2).\ncountries, a statistic that should concern wealth­         It  is  understandable why  middle-income\nier countries. They also contribute nearly two-    countries are not satisfied with the status quo\nthirds of global carbon dioxide (CO2) emissions   and why most have plans for faster growth in\n(see table P1.1), a statistic that is of global concern.    living standards. China’s 14th Five-Year Plan\n  Over the last three decades, the world’s two    outlines a vision of achieving the median GDP\nmost populous countries, China and India, joined    per capita of developed nations by 2035, with\nthe club of middle-income countries, in 1997 and    a large increase in the middle class. The vision\n2007, respectively. It is not surprising, then, that   document",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "66",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 66,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.666667615205526,
+      "rank": 5
+    },
+    {
+      "id": "wdr-p233-text-001",
+      "text": " downturns sometimes\nto comply with size-dependent tax policies,    create a much-needed opportunity for older, less\nin 140 countries employment growth would    productive firms to make way for newer, more\ndrop  by 25  percent.  Conversely, removing    productive ones. A key Schumpeterian insight is\nsize-­dependent taxation would lead to TFP    that the creation of new industries does not go\ngains of about ­1 ­percent, on average, and up to    forward without sweeping away past realities.64\n2.3 ­percent for more distorted economies.59 For\nexample, in Mexico eliminating distortions cre­\n                                     Modernizing organizational models toated  by  size-dependent  ­taxation   ­policies\n                               manage firmsfavoring small firms could boost output by\n9 ­percent.60 In Chile, China, and India, reduc­   As barriers to growth are removed and resources\ntions in distortions helped these ­economies    are better allocated toward firms that add value,\nclose  the gap between  actual and  poten­    firms will need to make some strategic decisions.\ntial productivity by 10  percent. Figure  8.4   Firm owners aspiring to expand must delegate\n­illustrates the value  of the actual  level  of    managerial tasks to  professionals. Delegation\nmanufacturing TFP in each country relative    necessitates strong legal institutions to estab­\nto the potential level  if resources were allo­     lish and enforce contracts between owners and\ncated efficiently—that is, if the economy was    managers. These contracts should give managers\non the production ­possibilities frontier. More    incentives to work hard and should hold them\nimportant, reforms of size-­dependent policies    accountable for any wrongdoing. Such arrange­\nincrease the return to",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "233",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 233,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.43146198724079,
+      "rank": 6
+    },
+    {
+      "id": "wdr-p072-text-000",
+      "text": "the ­countries vary ­significantly in their levels of     short-lived, even in countries that historically have\ntechnical sophistication; in 2021, Denmark was    enjoyed high growth rates (figure 1.3).\nranked twenty-fourth in the Economic Complexity     The standout economy—the growth superstar\nIndex and Qatar eighty-second.13                  even—is the Republic of Korea, and this Report\n                                               prominently  features  its  experiences. What\nGrowth in middle-income         was behind its success? As subsequent chapters\n                                                     explain, Korea’s remarkable transformation fromcountries is slower                                                 a postconflict country in the 1950s to an economy\nEconomic growth is not a smooth process, and the­   powered by the infusion of ideas from abroad to\nory does not stipulate that it should be smooth.14   one that is transitioning to innovation at the\nInstead, economic growth tends to be highly vol­    global frontiers of technology makes  its eco­\natile, and long-run growth averages tend to mask   nomic history required reading for policy makers\nperiods of success, struggle, and failure.15 Growth in    in any middle-income country hoping to achieve\nlow- and middle-income countries is an “episodic”    high-income levels of living within their lifetimes\nphenomenon, with countries experiencing distinct    (box 1.2; see chapter 2 for more information).\npatterns of economic growth.16 In fact, a key char­     Growth slowdowns occur more frequently in\nacteristic of economic growth in middle-income    middle-income countries than in low- or high-­\ncountries is its lack of persistence. The volatility   income countries (box 1.3). Research conducted\nof growth rates is even higher in those countries,    for this Report uses a measure, proximity to the\nwith sustained growth ­periods",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "72",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 72,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 19.045290010166756,
+      "rank": 7
+    },
+    {
+      "id": "wdr-p264-text-000",
+      "text": "Decoupling economic growth    Figure 9.9 Today’s upper-middle-income\nand emissions                          countries are more energy efficient than\n                                           upper-middle-income countries in the past\nMiddle-income countries aspire to grow their\neconomies and achieve living standards closer to        1.2\nthose of high-income countries. But economic\nexpansion in middle-income countries could lead        1.0\nto a significant surge in the demand for energy ifefficiency is not improved.37 A country does not,                intensity 0.8\nhowever, need to grow at the expense of steps\nto reduce emissions  if  it can reduce both the                                                           0.6                                                                                                                                      energy\namount of energy required to fuel its economy\n                                             of\nand the carbon emissions per unit of energy used\n                                                           0.4\nby the economy. Growth has become less energy-\nintensive (figure 9.9). Most notably, the amount                                                                                                                                                                                                                               Elasticity 0.2of energy needed to fuel the economy (per unit\nof GDP) is much lower for today’s upper-middle-\nincome countries than for upper-middle-income        0\ncountries in the past. In other words, there is\nevidence that leapfrogging is advancing over timeas middle-income countries move closer to the         Low-income                                                                                                 (1960–2016)technology frontier.  Economic growth  is  also accompanied by               Lower-middle-incomeUpper-middle-incomeUpper-middle-income\nstructural and spatial transformations that help\nreduce the carbon emissions of an economy. The     Source: WDR 2024 team calculations based on data from\n                                                                Fetter (2022).carbon emissions of the global economy—a com­\n                                                            Note: Elasticity of energy intensity refers to the energy\nbination of energy intensity (energy consumed    used per unit of gross domestic product (GDP",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "264",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 264,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.92658511112994,
+      "rank": 8
+    },
+    {
+      "id": "wdr-p058-text-001",
+      "text": " in middle-income    economic growth  in Korea to the making  of a\n       countries  is twice that in high-income     “miracle.” 54 Given the changes in the global economy\n       countries, averaging 3.8 percent in high-     since the time that Korea was a middle-income\n      income  countries,  but  7.2  percent  in    economy, it would be fair to conclude that it would\n      upper-middle-income countries and more    be a miracle  if today’s middle-income economies\n      than 8.5 percent in lower-middle-income   manage to do in 50 years what Korea did in just 25.\n       countries   (figure   O.13).52   Addressing      It might even be miraculous  if they replicated the\n       technology  risk, development  risk, and    impressive achievements of other successful countries\n       pricing risk can help incentivize investors—    such as Chile and Poland. But that is exactly what\n         utilities, banks, or other institutions—to    governments in Bangladesh, Brazil, China, India,\n       invest  in  low-carbon  energy.  Derisking    Indonesia, Mexico, Morocco, South Africa, Türkiye,\n       requires a whole-of-economy approach. It   and Viet Nam, among others, hope to accomplish.\n      depends on licensing, policy stability, and      To do this, these countries will have to become\n        social  acceptance, along with reducing    more disciplined. They will have to time the shift\n       technical, market, and regulatory risks.53    from simpler investment-led growth strategies  (1i)\n       Derisking  will make renewable energy    that worked well in the early stages of development\n       projects less expensive, as well as reduce    to  augmenting  investment  accelerations  with\n       the public finance",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "58",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 58,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.508214047187685,
+      "rank": 9
+    },
+    {
+      "id": "wdr-p071-text-002",
+      "text": "high-income country. Yet when adjusted for    countries in the production of tradable as well as\npurchasing power, Türkiye’s GDP per capita    nontradable goods and services, including infra­\nis higher than Chile’s. The country for which    structure, health care, and education.\nboth measures are defined as identical is the      However, recent assessments of PPPs appear\nUnited States because purchasing power in any    to be highly correlated with economic activity.\ncountry is measured relative to what a dollar   A ­comparison  of  countries using PPP  adjust­\ncan buy in the United States. Türkiye’s GDP   ments could produce a better understanding of\nper capita relative to that of the United States    the distance to the technology frontier than gross\nis nearly 50 percent when adjusted for PPP but    national income. However, income or GDP per\nless than 15 percent using market exchange    capita does not reflect the wide array of growth\nrates. For Chile, the numbers are, respectively,     ­challenges that countries face. Two high-income\n40 percent and 20 percent.                         countries provide an example. In 2022, Qatar’s\n  PPP adjustments have been criticized for their   GDP per capita was US$88,046, driven mostly by\ninability to reflect the complexity and diversity    exports of hydrocarbons from its abundant reserves\nof economic production and capabilities in indi­    of oil and natural gas. The same year, Denmark’s\nvidual economies.12 The adjustments do not con­   GDP per capita was US$66,983, and its services sec­\nsider quality or productivity differences among    tor employs about 80 percent of labor. Meanwhile,\n\n                                                             Slowing Growth   | 39\n\n",
+      "source_id": "wdr",
+      "source": "WDR2024.pdf",
+      "page": "71",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          576.0,
+          756.0
+        ],
+        "kind": "text",
+        "pdf_page": 71,
+        "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+        "printed_page": null
+      },
+      "score": 18.315204684779385,
+      "rank": 10
+    }
+  ],
+  "pipeline_hash": "246a6d7080530db6e8f81e23217532982dc6f275c84acb0ff638563edb2a9570",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

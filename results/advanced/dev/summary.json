@@ -1,0 +1,143 @@
+[
+  {
+    "passed": 16,
+    "total": 18,
+    "rate": 0.8888888888888888,
+    "groups": {
+      "table": {
+        "passed": 3,
+        "total": 3
+      },
+      "image": {
+        "passed": 2,
+        "total": 2
+      },
+      "chart": {
+        "passed": 3,
+        "total": 4
+      },
+      "text": {
+        "passed": 5,
+        "total": 6
+      },
+      "missing": {
+        "passed": 3,
+        "total": 3
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "dense",
+    "split": "dev",
+    "hit1": {
+      "n": 7,
+      "N": 15
+    },
+    "hit3": {
+      "n": 11,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 12,
+      "N": 15
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 230.4296516999966
+  },
+  {
+    "passed": 16,
+    "total": 18,
+    "rate": 0.8888888888888888,
+    "groups": {
+      "table": {
+        "passed": 3,
+        "total": 3
+      },
+      "image": {
+        "passed": 2,
+        "total": 2
+      },
+      "chart": {
+        "passed": 4,
+        "total": 4
+      },
+      "text": {
+        "passed": 4,
+        "total": 6
+      },
+      "missing": {
+        "passed": 3,
+        "total": 3
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "bm25",
+    "split": "dev",
+    "hit1": {
+      "n": 11,
+      "N": 15
+    },
+    "hit3": {
+      "n": 12,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 12,
+      "N": 15
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 196.57336099999156
+  },
+  {
+    "passed": 15,
+    "total": 18,
+    "rate": 0.8333333333333334,
+    "groups": {
+      "table": {
+        "passed": 3,
+        "total": 3
+      },
+      "image": {
+        "passed": 2,
+        "total": 2
+      },
+      "chart": {
+        "passed": 4,
+        "total": 4
+      },
+      "text": {
+        "passed": 3,
+        "total": 6
+      },
+      "missing": {
+        "passed": 3,
+        "total": 3
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "hybrid",
+    "split": "dev",
+    "hit1": {
+      "n": 10,
+      "N": 15
+    },
+    "hit3": {
+      "n": 12,
+      "N": 15
+    },
+    "context_evidence": {
+      "n": 13,
+      "N": 15
+    },
+    "agent_errors": 0,
+    "total_agent_seconds": 219.58454440000787
+  }
+]

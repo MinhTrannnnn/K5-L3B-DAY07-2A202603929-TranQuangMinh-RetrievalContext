@@ -1,0 +1,24 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true,
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source page cross_validation:003 explicitly states that `return_train_score` defaults to `False` to save computation time and that training scores are obtained by setting it to `True`. The answer matches this and the cited example shows `return_train_score=True` producing `train_*` scores.",
+  "query_id": "N04",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "e01261c0029b822f44a3a927a7f5e954cf13ed33efb244d26ee9ad18ca1bbbf5",
+  "alternative_cited_pages": [
+    "cross_validation:003"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

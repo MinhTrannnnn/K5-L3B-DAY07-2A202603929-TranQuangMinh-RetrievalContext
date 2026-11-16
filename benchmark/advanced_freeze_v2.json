@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-11-16T15:48:34.787195+00:00",
+  "cases_sha256": "96f52fb5d180d034a30202353b572b353c1662db9b768ad4364c39b18f73ffa2",
+  "pdf_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+  "split_counts": {
+    "dev": 18,
+    "test": 30
+  },
+  "test_groups": {
+    "table": 6,
+    "image": 5,
+    "chart": 5,
+    "multi_hop": 4,
+    "text": 4,
+    "missing": 6
+  },
+  "policy": "Questions frozen before retrieval experiments. Do not tune on test. Gold only used in evaluation.",
+  "human_confirmation": "pending",
+  "change": "D06 dev corrected median to aggregate/average after original-source inspection. Test questions unchanged and not yet executed.",
+  "test_cases_unchanged": true,
+  "previous_cases_sha256": "22d95fae6198de7351625a7feb8208bd6d9b065cd1e85c059aefb2efd7b9ba2c"
+}

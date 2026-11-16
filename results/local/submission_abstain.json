@@ -1,0 +1,445 @@
+{
+  "status": "answered",
+  "answer": "The provided information does not specify the exact accuracy a model will achieve on a private dataset. It discusses methods for evaluating model performance using cross-validation and scoring parameters, but does not provide a specific accuracy figure for a given dataset. [b64e29c059aa390e1c6d9300]",
+  "citations": [
+    "b64e29c059aa390e1c6d9300"
+  ],
+  "question": "What exact accuracy will this model achieve on my private dataset, which is not supplied?",
+  "corpus": "day6",
+  "config": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "method": "bm25",
+    "top_k": 6,
+    "context_budget_tokens": 3000,
+    "max_searches": 1,
+    "controller": "schema-constrained local tool decisions"
+  },
+  "events": [
+    {
+      "event": "controller",
+      "decision": {
+        "action": "search",
+        "query": "Exact accuracy of a model on a private dataset"
+      }
+    },
+    {
+      "event": "search",
+      "tool": "search",
+      "query": "Exact accuracy of a model on a private dataset",
+      "method": "bm25",
+      "filters": {},
+      "results": [
+        {
+          "id": "b64e29c059aa390e1c6d9300",
+          "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 1335,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "computing-cross-validated-metrics",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 384
+          },
+          "score": 15.146192899566334,
+          "rank": 1
+        },
+        {
+          "id": "cf7c5f227595652242c3d357",
+          "text": "See Test with permutations the significance of a classification score for an example of accuracy score usage using permutations of the dataset.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:007",
+          "metadata": {
+            "end": 2360,
+            "start": 2217,
+            "topic": "model_selection",
+            "anchor": "accuracy-score",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.2. Accuracy score",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25903,
+            "unit_start": 22203,
+            "token_count": 28
+          },
+          "score": 13.305792762072102,
+          "rank": 2
+        },
+        {
+          "id": "451ca9773a0ffa6f79c8ae1f",
+          "text": "See Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example of GridSearchCV being used to evaluate multiple metrics simultaneously.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3625,
+            "start": 3243,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 81
+          },
+          "score": 12.610917698255827,
+          "rank": 3
+        },
+        {
+          "id": "fde2cf17248129167b8a81a6",
+          "text": "A solution to this problem is a procedure called cross-validation (CV for short). A test set should still be held out for final evaluation, but the validation set is no longer needed when doing CV. In the basic approach, called k -fold CV, the training set is split into k smaller sets (other approaches are described below, but generally follow the same principles). The following procedure is followed for each of the k “folds”:\n\nA model is trained using \\(k-1\\) of the folds as training data;\n\nthe resulting model is validated on the remaining part of the data (i.e., it is used as a test set to compute a performance measure such as accuracy).\n\nThe performance measure reported by k -fold cross-validation is then the average of the values computed in the loop. This approach can be computationally expensive, but does not waste too much data (as is the case when fixing an arbitrary validation set), which is a major advantage in problems such as inverse inference where the number of samples is very small.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:001",
+          "metadata": {
+            "end": 3643,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "cross-validation-evaluating-estimator-performance",
+            "heading": "3.1. Cross-validation: evaluating estimator performance",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3643,
+            "unit_start": 0,
+            "token_count": 217
+          },
+          "score": 11.293999679915652,
+          "rank": 4
+        },
+        {
+          "id": "903596c8038c330ef8626a41",
+          "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 3546,
+            "start": 2244,
+            "topic": "model_selection",
+            "anchor": "scoring-api-overview",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 275
+          },
+          "score": 11.207077317148867,
+          "rank": 5
+        },
+        {
+          "id": "76e0a214442f1912164e9f60",
+          "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3241,
+            "start": 1887,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 348
+          },
+          "score": 11.145261075388486,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "b64e29c059aa390e1c6d9300",
+          "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:002",
+          "metadata": {
+            "end": 1335,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "computing-cross-validated-metrics",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7292,
+            "unit_start": 3645,
+            "token_count": 384
+          },
+          "score": 15.146192899566334,
+          "rank": 1
+        },
+        {
+          "id": "cf7c5f227595652242c3d357",
+          "text": "See Test with permutations the significance of a classification score for an example of accuracy score usage using permutations of the dataset.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:007",
+          "metadata": {
+            "end": 2360,
+            "start": 2217,
+            "topic": "model_selection",
+            "anchor": "accuracy-score",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.2. Accuracy score",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25903,
+            "unit_start": 22203,
+            "token_count": 28
+          },
+          "score": 13.305792762072102,
+          "rank": 2
+        },
+        {
+          "id": "451ca9773a0ffa6f79c8ae1f",
+          "text": "See Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example of GridSearchCV being used to evaluate multiple metrics simultaneously.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3625,
+            "start": 3243,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 81
+          },
+          "score": 12.610917698255827,
+          "rank": 3
+        },
+        {
+          "id": "fde2cf17248129167b8a81a6",
+          "text": "A solution to this problem is a procedure called cross-validation (CV for short). A test set should still be held out for final evaluation, but the validation set is no longer needed when doing CV. In the basic approach, called k -fold CV, the training set is split into k smaller sets (other approaches are described below, but generally follow the same principles). The following procedure is followed for each of the k “folds”:\n\nA model is trained using \\(k-1\\) of the folds as training data;\n\nthe resulting model is validated on the remaining part of the data (i.e., it is used as a test set to compute a performance measure such as accuracy).\n\nThe performance measure reported by k -fold cross-validation is then the average of the values computed in the loop. This approach can be computationally expensive, but does not waste too much data (as is the case when fixing an arbitrary validation set), which is a major advantage in problems such as inverse inference where the number of samples is very small.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:001",
+          "metadata": {
+            "end": 3643,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "cross-validation-evaluating-estimator-performance",
+            "heading": "3.1. Cross-validation: evaluating estimator performance",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3643,
+            "unit_start": 0,
+            "token_count": 217
+          },
+          "score": 11.293999679915652,
+          "rank": 4
+        },
+        {
+          "id": "903596c8038c330ef8626a41",
+          "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 3546,
+            "start": 2244,
+            "topic": "model_selection",
+            "anchor": "scoring-api-overview",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 275
+          },
+          "score": 11.207077317148867,
+          "rank": 5
+        },
+        {
+          "id": "76e0a214442f1912164e9f60",
+          "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3241,
+            "start": 1887,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 348
+          },
+          "score": 11.145261075388486,
+          "rank": 6
+        }
+      ],
+      "seconds": 0.12610899999708636
+    },
+    {
+      "event": "controller",
+      "decision": {
+        "action": "answer",
+        "answer": "The provided information does not specify the exact accuracy a model will achieve on a private dataset. It discusses methods for evaluating model performance using cross-validation and scoring parameters, but does not provide a specific accuracy figure for a given dataset.",
+        "citations": [
+          "S1"
+        ]
+      }
+    }
+  ],
+  "context": [
+    {
+      "id": "b64e29c059aa390e1c6d9300",
+      "text": "3.1.1. Computing cross-validated metrics\n\nThe simplest way to use cross-validation is to call the cross_val_score helper function on the estimator and the dataset.\n\nThe following example demonstrates how to estimate the accuracy of a linear kernel support vector machine on the iris dataset by splitting the data, fitting a model and computing the score 5 consecutive times (with different splits each time):\n\n>>> from sklearn.model_selection import cross_val_score\n>>> clf = svm.SVC(kernel='linear', C=1, random_state=42)\n>>> scores = cross_val_score(clf, X, y, cv=5)\n>>> scores\narray([0.96, 1. , 0.96, 0.96, 1. ])\n\nThe mean score and the standard deviation are hence given by:\n\n>>> print(\"%0.2f accuracy with a standard deviation of %0.2f\" % (scores.mean(), scores.std()))\n0.98 accuracy with a standard deviation of 0.02\n\nBy default, the score computed at each CV iteration is the score method of the estimator. It is possible to change this by using the scoring parameter:\n\n>>> from sklearn import metrics\n>>> scores = cross_val_score(\n...     clf, X, y, cv=5, scoring='f1_macro')\n>>> scores\narray([0.96, 1., 0.96, 0.96, 1.])\n\nSee The scoring parameter: defining model evaluation rules for details. In the case of the Iris dataset, the samples are balanced across target classes hence the accuracy and the F1-score are almost equal.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:002",
+      "metadata": {
+        "end": 1335,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "computing-cross-validated-metrics",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.1. Computing cross-validated metrics",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7292,
+        "unit_start": 3645,
+        "token_count": 384
+      },
+      "score": 15.146192899566334,
+      "rank": 1
+    },
+    {
+      "id": "cf7c5f227595652242c3d357",
+      "text": "See Test with permutations the significance of a classification score for an example of accuracy score usage using permutations of the dataset.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:007",
+      "metadata": {
+        "end": 2360,
+        "start": 2217,
+        "topic": "model_selection",
+        "anchor": "accuracy-score",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.4. Classification metrics > 3.4.4.2. Accuracy score",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25903,
+        "unit_start": 22203,
+        "token_count": 28
+      },
+      "score": 13.305792762072102,
+      "rank": 2
+    },
+    {
+      "id": "451ca9773a0ffa6f79c8ae1f",
+      "text": "See Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV for an example of GridSearchCV being used to evaluate multiple metrics simultaneously.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 3625,
+        "start": 3243,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 81
+      },
+      "score": 12.610917698255827,
+      "rank": 3
+    },
+    {
+      "id": "fde2cf17248129167b8a81a6",
+      "text": "A solution to this problem is a procedure called cross-validation (CV for short). A test set should still be held out for final evaluation, but the validation set is no longer needed when doing CV. In the basic approach, called k -fold CV, the training set is split into k smaller sets (other approaches are described below, but generally follow the same principles). The following procedure is followed for each of the k “folds”:\n\nA model is trained using \\(k-1\\) of the folds as training data;\n\nthe resulting model is validated on the remaining part of the data (i.e., it is used as a test set to compute a performance measure such as accuracy).\n\nThe performance measure reported by k -fold cross-validation is then the average of the values computed in the loop. This approach can be computationally expensive, but does not waste too much data (as is the case when fixing an arbitrary validation set), which is a major advantage in problems such as inverse inference where the number of samples is very small.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:001",
+      "metadata": {
+        "end": 3643,
+        "start": 2631,
+        "topic": "model_selection",
+        "anchor": "cross-validation-evaluating-estimator-performance",
+        "heading": "3.1. Cross-validation: evaluating estimator performance",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3643,
+        "unit_start": 0,
+        "token_count": 217
+      },
+      "score": 11.293999679915652,
+      "rank": 4
+    },
+    {
+      "id": "903596c8038c330ef8626a41",
+      "text": "3.4.2. Scoring API overview\n\nThere are 3 different APIs for evaluating the quality of a model’s predictions:\n\nEstimator score method : Estimators have a score method providing a default evaluation criterion for the problem they are designed to solve. Most commonly this is accuracy for classifiers and the coefficient of determination ( \\(R^2\\) ) for regressors. Details for each estimator can be found in its documentation.\n\nScoring parameter : Model-evaluation tools that use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) rely on an internal scoring strategy. This can be specified using the scoring parameter of that tool and is discussed in the section The scoring parameter: defining model evaluation rules .\n\nMetric functions : The sklearn.metrics module implements functions assessing prediction error for specific purposes. These metrics are detailed in sections on Classification metrics , Multilabel ranking metrics , Regression metrics and Clustering metrics .\n\nFinally, Dummy estimators are useful to get a baseline value of those metrics for random predictions.\n\nSee also\n\nFor “pairwise” metrics, between samples and not estimators or predictions, see the Pairwise metrics, Affinities and Kernels section.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:002",
+      "metadata": {
+        "end": 3546,
+        "start": 2244,
+        "topic": "model_selection",
+        "anchor": "scoring-api-overview",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.2. Scoring API overview",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7343,
+        "unit_start": 3797,
+        "token_count": 275
+      },
+      "score": 11.207077317148867,
+      "rank": 5
+    },
+    {
+      "id": "76e0a214442f1912164e9f60",
+      "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 3241,
+        "start": 1887,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 348
+      },
+      "score": 11.145261075388486,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 74,
+      "output_tokens": 21,
+      "total_duration_ns": 574430400
+    },
+    {
+      "input_tokens": 1675,
+      "output_tokens": 69,
+      "total_duration_ns": 1820054000
+    }
+  ],
+  "seconds": 2.5906230000000505,
+  "api_cost_usd": 0,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_student_source_check"
+}

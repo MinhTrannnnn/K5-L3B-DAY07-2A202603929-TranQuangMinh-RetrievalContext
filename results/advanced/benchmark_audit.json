@@ -1,0 +1,599 @@
+{
+  "status": "structural_checks_passed",
+  "pdf_pages": 276,
+  "indexed_chunks": 910,
+  "test_groups": {
+    "table": 6,
+    "image": 5,
+    "chart": 5,
+    "multi_hop": 4,
+    "text": 4,
+    "missing": 6
+  },
+  "dev_cases": 18,
+  "test_cases": 30,
+  "cases_sha256": "22d95fae6198de7351625a7feb8208bd6d9b065cd1e85c059aefb2efd7b9ba2c",
+  "visual_counts": {
+    "image": 5,
+    "chart": 101,
+    "table": 8,
+    "diagram": 9
+  },
+  "audits": [
+    {
+      "id": "D01",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "39",
+          "label": "Table O.2"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D02",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "59",
+          "label": "Table O.3"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D03",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "81",
+          "label": "Table S.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D04",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "173",
+          "label": "Map 6.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D05",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "186",
+          "label": "Map 6.3"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D06",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "35",
+          "label": "Figure O.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D07",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "37",
+          "label": "Figure O.2"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D08",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "40",
+          "label": "Figure O.5"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D09",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "156",
+          "label": "Figure 5.8"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D10",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "33",
+          "label": "In brief"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D11",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "34",
+          "label": "To get rich is glorious"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D12",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "34",
+          "label": "To get rich is glorious"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D13",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "33",
+          "label": "In brief"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D14",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "33",
+          "label": "In brief"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D15",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "34",
+          "label": "Overview continuation"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "D16",
+      "absence_search_counts": {
+        "2099": 0,
+        "1 January 2099": 0
+      },
+      "reason": "No dated point forecast for India on that exact day.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "D17",
+      "absence_search_counts": {
+        "universal interest rate": 0,
+        "guarantees innovation": 0
+      },
+      "reason": "No universal guaranteed interest rate is prescribed.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "D18",
+      "absence_search_counts": {
+        "password": 0,
+        "confidential": 0
+      },
+      "reason": "The public report contains no data-access password.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "T01",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "36",
+          "label": "Table O.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T02",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "36",
+          "label": "Table O.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T03",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "36",
+          "label": "Table O.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T04",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "36",
+          "label": "Table O.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T05",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "135",
+          "label": "Table 4.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T06",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "135",
+          "label": "Table 4.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T07",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "44",
+          "label": "Figure O.8"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T08",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "49",
+          "label": "Figure O.10"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T09",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "120",
+          "label": "Figure 4.3"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T10",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "195",
+          "label": "Figure 7.2"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T11",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "182",
+          "label": "Map 6.2"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T12",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "104",
+          "label": "Figure 3.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T13",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "105",
+          "label": "Figure 3.2"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T14",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "171",
+          "label": "Figure 6.1"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T15",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "201",
+          "label": "Figure 7.8"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T16",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "267",
+          "label": "Figure 9.12"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T17",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "36",
+          "label": "Table O.1"
+        },
+        {
+          "page": "39",
+          "label": "Figure O.4"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T18",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "39",
+          "label": "Table O.2"
+        },
+        {
+          "page": "59",
+          "label": "Table O.3"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T19",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "201",
+          "label": "Figure 7.8"
+        },
+        {
+          "page": "59",
+          "label": "Table O.3"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T20",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "135",
+          "label": "Table 4.1"
+        },
+        {
+          "page": "222",
+          "label": "Foundational skills"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T21",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "87",
+          "label": "Economic development = structural change"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T22",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "34",
+          "label": "To get rich is glorious"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T23",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "171",
+          "label": "Low-carbon jobs paragraph"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T24",
+      "source_pages_valid": true,
+      "source_pages_indexed": true,
+      "evidence_regions": [
+        {
+          "page": "267",
+          "label": "Figure 9.12 note"
+        }
+      ],
+      "human_confirmation": false
+    },
+    {
+      "id": "T25",
+      "absence_search_counts": {
+        "2037": 0,
+        "Table O.1": 2
+      },
+      "reason": "Table O.1 describes 2022 income groups and has no 2037 Viet Nam forecast.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "T26",
+      "absence_search_counts": {
+        "2099": 0,
+        "upper-middle-income": 48
+      },
+      "reason": "The requested 2099 point estimate is not supplied.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "T27",
+      "absence_search_counts": {
+        "household tariff": 0,
+        "Map 6.2": 2
+      },
+      "reason": "The map depicts transmission networks and supplies no household tariff.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "T28",
+      "absence_search_counts": {
+        "guaranteed stock": 0,
+        "stock-market return": 0
+      },
+      "reason": "No guaranteed stock return is provided for the companies mentioned.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "T29",
+      "absence_search_counts": {
+        "phone numbers": 0,
+        "applicant": 2
+      },
+      "reason": "The map is aggregate geographic job-posting data, not individual applicants or phone numbers.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    },
+    {
+      "id": "T30",
+      "absence_search_counts": {
+        "2049": 0,
+        "fusion reactor": 0
+      },
+      "reason": "The report does not give this exact product price and launch-date prediction.",
+      "note": "Term counts support the audit; they do not alone prove absence of semantically equivalent facts.",
+      "human_confirmation": false
+    }
+  ],
+  "human_original_source_confirmation": "pending"
+}

@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source cross_validation:003 states that only cross-validation strategies that assign all elements to a test set exactly once can be used with cross_val_predict, otherwise an exception is raised. The answer matches this restriction.",
+  "query_id": "q11",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "c7855aa273e734337cd681e76bfbdc130670119b9a8e549aeaffd46fc079f6c8",
+  "alternative_cited_pages": [
+    "cross_validation:003"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

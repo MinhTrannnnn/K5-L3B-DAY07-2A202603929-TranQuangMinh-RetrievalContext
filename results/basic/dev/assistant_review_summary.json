@@ -1,0 +1,107 @@
+[
+  {
+    "passed": 16,
+    "total": 17,
+    "rate": 0.9411764705882353,
+    "groups": {
+      "basic": {
+        "passed": 16,
+        "total": 17
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "bm25",
+    "context_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 15
+    },
+    "answer_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 15
+    },
+    "grounded_answer_mean": 2.0,
+    "citation_support": {
+      "n": 20,
+      "N": 23
+    },
+    "abstention": {
+      "n": 1,
+      "N": 2
+    }
+  },
+  {
+    "passed": 16,
+    "total": 17,
+    "rate": 0.9411764705882353,
+    "groups": {
+      "basic": {
+        "passed": 16,
+        "total": 17
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "dense",
+    "context_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 15
+    },
+    "answer_grades": {
+      "0": 0,
+      "1": 1,
+      "2": 14
+    },
+    "grounded_answer_mean": 1.9333333333333333,
+    "citation_support": {
+      "n": 23,
+      "N": 23
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    }
+  },
+  {
+    "passed": 16,
+    "total": 17,
+    "rate": 0.9411764705882353,
+    "groups": {
+      "basic": {
+        "passed": 16,
+        "total": 17
+      }
+    },
+    "review_type": "assistant_review_requires_human_confirmation",
+    "human_confirmed": false,
+    "errors": 0,
+    "gold_issues": 0,
+    "method": "hybrid",
+    "context_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 15
+    },
+    "answer_grades": {
+      "0": 0,
+      "1": 0,
+      "2": 15
+    },
+    "grounded_answer_mean": 2.0,
+    "citation_support": {
+      "n": 21,
+      "N": 24
+    },
+    "abstention": {
+      "n": 1,
+      "N": 2
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "context_grade": 1,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": true,
+  "citation_support": [],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "The response correctly abstains: the provided scikit-learn preprocessing pages only say sparse inputs are accepted and recommend CSR/CSC to avoid unnecessary memory copies, while warning that centering sparse data can allocate excessive memory (preprocessing:002-003). They do not give any universal minimum RAM in GB for all datasets.",
+  "query_id": "q21",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "e20574b74280cf9d5e4dd7b3a995d3df5215085a6952850d691bcc04dadfdde2"
+}

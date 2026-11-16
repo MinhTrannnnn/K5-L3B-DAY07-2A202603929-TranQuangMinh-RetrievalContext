@@ -1,0 +1,2089 @@
+{
+  "status": "abstain",
+  "answer": "Tôi không tìm thấy trong tài liệu đã truy xuất thông tin về gói AWS EC2 năm 2030, nên không thể xác định chính xác mức giá từ nguồn này.",
+  "citations": [],
+  "question": "Theo tài liệu này, giá gói AWS EC2 cho năm 2030 chính xác là bao nhiêu?",
+  "corpus": "nist",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "AWS EC2 2030 price 2030 gói AWS EC2 năm 2030",
+      "results": [
+        {
+          "id": "nist-p090-text-000",
+          "text": "Technical Requirements for Supporting the Intercloud Networking\nPublished on April 2012\nhttp://www.gictf.jp/doc/GICTF_NWSWG-WhitePaper_e_20120420.pdf\nBased on the preceding Inter-Cloud use cases and functional requirements, this white paper\ndescribes technical requirements for each use case such as assured service level, disaster recovery,\nservice continuity, and federated service provisions.\n\nIt also shows expected technical evolutions in a next few years.\n\nTM Forum\nCloud Monetization Differentiating Cloud Services\nReleased: January 2012\nhttps://www.tmforum.org/WhitePapers/CloudMonetization/47730/article.html\n\nThis whitepaper explores the various cloud bill requirements and complexities for the different\ncloud business models.  It will also explore the expectations from customers of cloud services, with\nrespect to billing for cloud services, highlighting gaps and potential risks to service provider\nsuccess, as well as recommend areas for further action.\n\n                                       79\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "90",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 90,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "79"
+          },
+          "score": 0.01639344262295082,
+          "rank": 1
+        },
+        {
+          "id": "nist-p007-text-002",
+          "text": "......49\n7  CLOUD COMPUTING STANDARDS MAPPING ............................................................................................51\n   7.1  SECURITY STANDARDS MAPPING .............................................................................................................52\n   7.2  INTEROPERABILITY STANDARDS MAPPING ...........................................................................................58\n   7.3  PORTABILITY STANDARDS MAPPING .......................................................................................................59\n\n                                                       vii\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "7",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 7,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "vii"
+          },
+          "score": 0.016129032258064516,
+          "rank": 2
+        },
+        {
+          "id": "nist-p042-text-000",
+          "text": "To summarize the detailed technical use cases for this analysis, the following areas of technical\nrequirements are common across all scenarios:\n\n  Scenarios   Technical Requirements\n\n       1.       Creating, accessing, updating, deleting data objects in cloud systems;\n\n       2.     Moving VMs and virtual appliances between cloud systems;\n\n       3.       Selecting the best IaaS vendor for private externally hosted cloud system;\n\n       4.      Tools for monitoring and managing multiple cloud systems;\n\n       5.       Migrating data between cloud systems;\n\n       6.       Single sign-on access to multiple cloud systems;\n\n       7.       Orchestrated processes across cloud systems;\n\n       8.       Discovering cloud resources;\n\n       9.       Evaluating SLAs and penalties; and\n\n     10.      Auditing cloud systems.\n\n                    Table 3 – Scenarios and Technical Requirements\n\n                                       31\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "42",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 42,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "31"
+          },
+          "score": 0.015873015873015872,
+          "rank": 3
+        },
+        {
+          "id": "nist-p026-diagram-00-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-026.png",
+            "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+            "pdf_page": 26,
+            "visual_id": "nist-p026-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015625,
+          "rank": 4
+        },
+        {
+          "id": "nist-p097-text-000",
+          "text": "14   APPENDIX C – ACRONYMS\n     ANSDIT  American National Standard Dictionary of Information Technology\n         API  Application Programming Interface\n      BOD  Business Object Document\n      CCESC  Cloud Computing Executive Steering Committee\n      CDMI  Cloud Data Management Interface\n      CDN  Content Delivery Network\n        CIMI  Cloud Infrastructure Management Interface\n         CIO  Chief Information Officer\n    CMWG  Cloud Management Working Group\n      COTS  Commercial off-the-shelf\n       CPU  Central Processing Unit\n      CRM  Customer Relationship Management\n      CRUD  Create-Read-Update-Delete\n       CSA  Cloud Security Alliance\n       CSIRT  Computer Security Incident Response Teams\n      CSW  Catalog Service for the Web\n      DCIFed  DCI Federation Working Group\n        DISR  Defense IT Standards Registry\n      DMTF  Distributed Management Task Force\n       DoD  Department of Defense (USA)\n       ebRIM  Electronic business Registry Information Model\n      ebXML  Electronic Business using eXtensible Markup Language\n        ERP  Enterprise Resource Planning\n      EULA  End User License Agreement\n        FCCI  Federal Cloud Computing Initiative\n        FEA  Federal Enterprise Architecture\n         FIPS  Federal Information Processing Standards\n       GEIA  Government Electronics & Information Technology Association\n       GICTF  Global Inter-Cloud Technology Forum\n      GLUE  Grid Laboratory Uniform Environment\n      GOTS  Government off-the-shelf\n     HTML  HyperText Markup Language\n       HTTP  Hypertext Transfer Protocol\n      ID-WSF  IDentity Web Service Framework\n            I/O  Input/Output\n           IaaS  Infrastructure as a Service\n\n                                       86\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "97",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 97,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "86"
+          },
+          "score": 0.015384615384615385,
+          "rank": 5
+        },
+        {
+          "id": "nist-p042-table-00-000",
+          "text": "Table 3\nTable caption: \"Table 3 – Scenarios and Technical Requirements\". Two-column table with header row: \"Scenarios\" and \"Technical Requirements\". Row 1: \"1.\" — \"Creating, accessing, updating, deleting data objects in cloud systems;\" Row 2: \"2.\" — \"Moving VMs and virtual appliances between cloud systems;\" Row 3: \"3.\" — \"Selecting the best IaaS vendor for private externally hosted cloud system;\" Row 4: \"4.\" — \"Tools for monitoring and managing multiple cloud systems;\" Row 5: \"5.\" — \"Migrating data between cloud systems;\" Row 6: \"6.\" — \"Single sign-on access to multiple cloud systems;\" Row 7: \"7.\" — \"Orchestrated processes across cloud systems;\" Row 8: \"8.\" — \"Discovering cloud resources;\" Row 9: \"9.\" — \"Evaluating SLAs and penalties; and\" Row 10: \"10.\" — \"Auditing cloud systems.\"\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "42",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-042.png",
+            "label": "Table 3",
+            "pdf_page": 42,
+            "visual_id": "nist-p042-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "31",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015151515151515152,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p090-text-000",
+          "text": "Technical Requirements for Supporting the Intercloud Networking\nPublished on April 2012\nhttp://www.gictf.jp/doc/GICTF_NWSWG-WhitePaper_e_20120420.pdf\nBased on the preceding Inter-Cloud use cases and functional requirements, this white paper\ndescribes technical requirements for each use case such as assured service level, disaster recovery,\nservice continuity, and federated service provisions.\n\nIt also shows expected technical evolutions in a next few years.\n\nTM Forum\nCloud Monetization Differentiating Cloud Services\nReleased: January 2012\nhttps://www.tmforum.org/WhitePapers/CloudMonetization/47730/article.html\n\nThis whitepaper explores the various cloud bill requirements and complexities for the different\ncloud business models.  It will also explore the expectations from customers of cloud services, with\nrespect to billing for cloud services, highlighting gaps and potential risks to service provider\nsuccess, as well as recommend areas for further action.\n\n                                       79\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "90",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 90,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "79"
+          },
+          "score": 0.01639344262295082,
+          "rank": 1
+        },
+        {
+          "id": "nist-p007-text-002",
+          "text": "......49\n7  CLOUD COMPUTING STANDARDS MAPPING ............................................................................................51\n   7.1  SECURITY STANDARDS MAPPING .............................................................................................................52\n   7.2  INTEROPERABILITY STANDARDS MAPPING ...........................................................................................58\n   7.3  PORTABILITY STANDARDS MAPPING .......................................................................................................59\n\n                                                       vii\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "7",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 7,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "vii"
+          },
+          "score": 0.016129032258064516,
+          "rank": 2
+        },
+        {
+          "id": "nist-p042-text-000",
+          "text": "To summarize the detailed technical use cases for this analysis, the following areas of technical\nrequirements are common across all scenarios:\n\n  Scenarios   Technical Requirements\n\n       1.       Creating, accessing, updating, deleting data objects in cloud systems;\n\n       2.     Moving VMs and virtual appliances between cloud systems;\n\n       3.       Selecting the best IaaS vendor for private externally hosted cloud system;\n\n       4.      Tools for monitoring and managing multiple cloud systems;\n\n       5.       Migrating data between cloud systems;\n\n       6.       Single sign-on access to multiple cloud systems;\n\n       7.       Orchestrated processes across cloud systems;\n\n       8.       Discovering cloud resources;\n\n       9.       Evaluating SLAs and penalties; and\n\n     10.      Auditing cloud systems.\n\n                    Table 3 – Scenarios and Technical Requirements\n\n                                       31\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "42",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 42,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "31"
+          },
+          "score": 0.015873015873015872,
+          "rank": 3
+        },
+        {
+          "id": "nist-p026-diagram-00-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-026.png",
+            "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+            "pdf_page": 26,
+            "visual_id": "nist-p026-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015625,
+          "rank": 4
+        },
+        {
+          "id": "nist-p097-text-000",
+          "text": "14   APPENDIX C – ACRONYMS\n     ANSDIT  American National Standard Dictionary of Information Technology\n         API  Application Programming Interface\n      BOD  Business Object Document\n      CCESC  Cloud Computing Executive Steering Committee\n      CDMI  Cloud Data Management Interface\n      CDN  Content Delivery Network\n        CIMI  Cloud Infrastructure Management Interface\n         CIO  Chief Information Officer\n    CMWG  Cloud Management Working Group\n      COTS  Commercial off-the-shelf\n       CPU  Central Processing Unit\n      CRM  Customer Relationship Management\n      CRUD  Create-Read-Update-Delete\n       CSA  Cloud Security Alliance\n       CSIRT  Computer Security Incident Response Teams\n      CSW  Catalog Service for the Web\n      DCIFed  DCI Federation Working Group\n        DISR  Defense IT Standards Registry\n      DMTF  Distributed Management Task Force\n       DoD  Department of Defense (USA)\n       ebRIM  Electronic business Registry Information Model\n      ebXML  Electronic Business using eXtensible Markup Language\n        ERP  Enterprise Resource Planning\n      EULA  End User License Agreement\n        FCCI  Federal Cloud Computing Initiative\n        FEA  Federal Enterprise Architecture\n         FIPS  Federal Information Processing Standards\n       GEIA  Government Electronics & Information Technology Association\n       GICTF  Global Inter-Cloud Technology Forum\n      GLUE  Grid Laboratory Uniform Environment\n      GOTS  Government off-the-shelf\n     HTML  HyperText Markup Language\n       HTTP  Hypertext Transfer Protocol\n      ID-WSF  IDentity Web Service Framework\n            I/O  Input/Output\n           IaaS  Infrastructure as a Service\n\n                                       86\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "97",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 97,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "86"
+          },
+          "score": 0.015384615384615385,
+          "rank": 5
+        },
+        {
+          "id": "nist-p042-table-00-000",
+          "text": "Table 3\nTable caption: \"Table 3 – Scenarios and Technical Requirements\". Two-column table with header row: \"Scenarios\" and \"Technical Requirements\". Row 1: \"1.\" — \"Creating, accessing, updating, deleting data objects in cloud systems;\" Row 2: \"2.\" — \"Moving VMs and virtual appliances between cloud systems;\" Row 3: \"3.\" — \"Selecting the best IaaS vendor for private externally hosted cloud system;\" Row 4: \"4.\" — \"Tools for monitoring and managing multiple cloud systems;\" Row 5: \"5.\" — \"Migrating data between cloud systems;\" Row 6: \"6.\" — \"Single sign-on access to multiple cloud systems;\" Row 7: \"7.\" — \"Orchestrated processes across cloud systems;\" Row 8: \"8.\" — \"Discovering cloud resources;\" Row 9: \"9.\" — \"Evaluating SLAs and penalties; and\" Row 10: \"10.\" — \"Auditing cloud systems.\"\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "42",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-042.png",
+            "label": "Table 3",
+            "pdf_page": 42,
+            "visual_id": "nist-p042-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "31",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015151515151515152,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.35746459999791114
+    },
+    {
+      "event": "search",
+      "query": "\"AWS EC2\" OR EC2 2030 price pricing",
+      "results": [
+        {
+          "id": "nist-p031-text-000",
+          "text": "Cloud Service                                   Portability /\n              Management                                                                   Interoperability\n\n                Business           Provisioning /                                                                 Data Portability\n                 Support           Configuration\n                                                                                                  Copy Date To-From\n                   Customer Mgmt\n                                           Rapid Provisioning\n                                                                                                       Bulk Data\n                     Contract Mgmt                                           Resource Change                                                                              Service\n                                                                              Interoperability\n                     Inventory Mgmt\n                                            Monitoring &\n                                                                                                     Unified Management\n  Cloud                                      Reporting                               Interface        Cloud                      Accounting\nConsumers        & Billing                                                      Brokers\n                                           Metering                  System\n                                                                                    Portability                     Reporting &\n                        Auditing             SLA Management\n                                                               VM Images\n                                                                                                      Migration\n                          Pricing &\n                         Rating\n                                                                                                           Application /\n                                                                                     SVC Migration\n\n                  Figure 6 – Cloud Provider: Cloud Service Management\n\n4.3.4   SECURITY\n\n“As the Federal Government moves to the cloud, it must be vigilant to ensure the security and\nproper management of government information to protect the privacy of citizens and national\nsecurity” (by Vivek Kundra, Federal Cloud Computing Strategy, February 2011.) In July 2012, the\nU.S. Department of Defense released a Cloud Computing Strategy, which stated “the Department\nhas specific cloud computing challenges that require careful adoption considerations, especially in\nareas of cybersecurity, continuity of operations, information assurance (IA), and resilience.” Also,\nin November 2012, NIST published a White Paper – Challenging Security Requirements for U.S.\nGovernment Cloud Computing Adoption. This document provides an overview of the high-priority\nsecurity challenges perceived by federal agencies as impediments  to the adoption of cloud\ncomputing.\n\n                                       20\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "31",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 31,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "20"
+          },
+          "score": 0.0304147465437788,
+          "rank": 1
+        },
+        {
+          "id": "nist-p059-text-000",
+          "text": "The topic of performance includes considerations related to monitoring, reporting, measuring,\nscaling, and right-sizing cloud resources to meet the expected or experienced demand. This area\ndeserves careful consideration, as  it relates directly to the factors that control the potential cost\nsavings to the government from the use of cloud computing.\n\nPerformance can potentially be scaled to meet conditions of anticipated or real-world demand,\nwithin the parameters of a cloud service agreement. It is therefore crucial that such agreements\ncontain all necessary parameters that relate to the conditions for delivery of the associated cloud\nservice or product. Only by careful measurement and by proper anticipation of peak workload\nconditions, backed by appropriate service remedies, credits, or penalties and appropriate fallback\narrangements, can true cost savings be realized with proper delivery of services.\n\nAgencies using cloud services should be careful to include suitable performance, monitoring, and\nemergency metrics and conditions into the cloud service master agreement and associated SLA.\nThese elements, reflecting the agencies given mission and goals, will help to ensure that each\nagency will pay only for needed services.\n\nCloud services are particularly well suited to deployment of automated terms and conditions for the\ndelivery of these services. While the basic parameters, legal, and cost controls for cloud services\nrequire agency approval and human-mediated review, automated tools should be deployed where\nappropriate to ensure conditions such as failover in the event of cloud service component failure or\ncompromise, and scaling to meet emergent needs or to grow or shrink service delivery according to\ncost and/or demand, and other relevant features.\n\nWherever possible, standards-based methods for monitoring, measuring, and scaling delivery of the\nresources to meet agency missions should be pursued.\n\n6.6.1  CLOUD STANDARDS FOR SERVICE AGREEMENTS\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "59",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 59,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "48"
+          },
+          "score": 0.03036576949620428,
+          "rank": 2
+        },
+        {
+          "id": "nist-p021-text-000",
+          "text": "Community cloud. The cloud infrastructure  is provisioned for exclusive use by a specific\n      community of consumers from organizations that have shared concerns (e.g., mission,\n        security requirements,  policy, and compliance  considerations).  It may be owned,\n      managed, and operated by one or more of the organizations in the community, a third\n        party, or some combination of them, and it may exist on or off premises.\n\nPublic cloud. The cloud infrastructure is provisioned for open use by the general public. It may\n      be owned, managed, and operated by a business, academic, or government organization,\n       or some combination of them. It exists on the premises of the cloud provider.\n\nHybrid cloud. The cloud  infrastructure  is a composition of two or more  distinct cloud\n        infrastructures (private, community, or public) that remain unique entities, but are bound\n       together by standardized or proprietary technology that enables data and application\n        portability (e.g., cloud bursting for load balancing between clouds).\n\n                                    10\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "21",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 21,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "10"
+          },
+          "score": 0.029709507042253523,
+          "rank": 3
+        },
+        {
+          "id": "nist-p029-text-000",
+          "text": "be implemented at the organization’s premise (i.e., on-site private clouds) or outsourced to a hosting\ncompany (i.e., outsourced private clouds).\n\nSimilar to private clouds, a community cloud may be managed by the organizations or by a third\nparty, and may be implemented at the customer’s location  (i.e., on-site community cloud) or\noutsourced to a hosting company (i.e., outsourced community cloud). However, a community cloud\nserves a set of organizations that have common security, privacy, and compliance considerations,\nrather than serving a single organization as does a private cloud.\n\nA hybrid cloud is a composition of two or more cloud deployment models (private, community, or\npublic) that remain unique entities but are bound together by standardized or proprietary technology\nthat enables data and application portability. As discussed in this section, both private clouds and\ncommunity clouds can be either implemented on-site or outsourced to a third party. Therefore, each\nconstituent cloud of a hybrid cloud can be one of the five variants.\n\n4.3.2   SERVICE ORCHESTRATION\n\nService  orchestration  refers  to  the  arrangement,  coordination,  and management  of  cloud\ninfrastructure to provide the optimizing capabilities of cloud services, as a cost-effective way of\nmanaging IT resources, as dictated by strategic business requirements. Figure 5 shows the general\nrequirements and processes for cloud providers to build each of the three service models.\n\n                    Figure 5 – Cloud Provider: Service Orchestration\n\n                                       18\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "29",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 29,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "18"
+          },
+          "score": 0.027526395173453996,
+          "rank": 4
+        },
+        {
+          "id": "nist-p019-text-001",
+          "text": "   Measured service. Cloud systems automatically control and optimize resource use by leveraging\n          a metering capability10 at some level of abstraction appropriate to the type of service\n             (e.g., storage, processing, bandwidth, active user accounts). Resource usage can be\n          monitored,  controlled,  audited, and  reported, providing transparency  for both  the\n           provider and consumer of the utilized service.\n\n9 NIST Special Publication 800-145, NIST Definition of Cloud Computing, September 2011\n\n10 Typically this is done on a pay-per-use or charge-per-use basis.\n\n                                        8\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.01639344262295082,
+          "rank": 5
+        },
+        {
+          "id": "nist-p031-diagram-00-000",
+          "text": "Figure 6 – Cloud Provider: Cloud Service Management\nArchitecture-style diagram showing cloud service management relationships. Left side: a group icon labeled \"Cloud Consumers\" with a right-pointing arrow toward the center. Center-left large rounded container labeled \"Cloud Service Management\" contains a blue sub-area labeled \"Business Support\" with stacked gray boxes: \"Customer Mgmt\", \"Contract Mgmt\", \"Inventory Mgmt\", \"Accounting & Billing\", \"Reporting & Auditing\", and \"Pricing & Rating\". Center column labeled \"Provisioning / Configuration\" contains stacked boxes: \"Rapid Provisioning\", \"Resource Change\", \"Monitoring & Reporting\", \"Metering\", and \"SLA Management\". Right side is headed \"Portability / Interoperability\" and includes three white boxes: \"Data Portability\", \"Service Interoperability\", and \"System Portability\". Associated orange pill-shaped items on the right read \"Copy Date To-From\" (OCR may reflect a typo for Data), \"Bulk Data\", \"Unified Management Interface\", \"VM Images Migration\", and \"Application / SVC Migration\". Far right: a group icon labeled \"Cloud Brokers\" with a left-pointing arrow toward the center. The diagram visually connects cloud consumers to cloud service management and cloud brokers to portability/interoperability capabilities.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "31",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-031.png",
+            "label": "Figure 6 – Cloud Provider: Cloud Service Management",
+            "pdf_page": 31,
+            "visual_id": "nist-p031-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "20",
+            "uncertainties": [
+              "The orange label is rendered as \"Copy Date To-From\" in the provided page/OCR; it may be intended as \"Copy Data To-From\"."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.01639344262295082,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p031-text-000",
+          "text": "Cloud Service                                   Portability /\n              Management                                                                   Interoperability\n\n                Business           Provisioning /                                                                 Data Portability\n                 Support           Configuration\n                                                                                                  Copy Date To-From\n                   Customer Mgmt\n                                           Rapid Provisioning\n                                                                                                       Bulk Data\n                     Contract Mgmt                                           Resource Change                                                                              Service\n                                                                              Interoperability\n                     Inventory Mgmt\n                                            Monitoring &\n                                                                                                     Unified Management\n  Cloud                                      Reporting                               Interface        Cloud                      Accounting\nConsumers        & Billing                                                      Brokers\n                                           Metering                  System\n                                                                                    Portability                     Reporting &\n                        Auditing             SLA Management\n                                                               VM Images\n                                                                                                      Migration\n                          Pricing &\n                         Rating\n                                                                                                           Application /\n                                                                                     SVC Migration\n\n                  Figure 6 – Cloud Provider: Cloud Service Management\n\n4.3.4   SECURITY\n\n“As the Federal Government moves to the cloud, it must be vigilant to ensure the security and\nproper management of government information to protect the privacy of citizens and national\nsecurity” (by Vivek Kundra, Federal Cloud Computing Strategy, February 2011.) In July 2012, the\nU.S. Department of Defense released a Cloud Computing Strategy, which stated “the Department\nhas specific cloud computing challenges that require careful adoption considerations, especially in\nareas of cybersecurity, continuity of operations, information assurance (IA), and resilience.” Also,\nin November 2012, NIST published a White Paper – Challenging Security Requirements for U.S.\nGovernment Cloud Computing Adoption. This document provides an overview of the high-priority\nsecurity challenges perceived by federal agencies as impediments  to the adoption of cloud\ncomputing.\n\n                                       20\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "31",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 31,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "20"
+          },
+          "score": 0.0304147465437788,
+          "rank": 1
+        },
+        {
+          "id": "nist-p059-text-000",
+          "text": "The topic of performance includes considerations related to monitoring, reporting, measuring,\nscaling, and right-sizing cloud resources to meet the expected or experienced demand. This area\ndeserves careful consideration, as  it relates directly to the factors that control the potential cost\nsavings to the government from the use of cloud computing.\n\nPerformance can potentially be scaled to meet conditions of anticipated or real-world demand,\nwithin the parameters of a cloud service agreement. It is therefore crucial that such agreements\ncontain all necessary parameters that relate to the conditions for delivery of the associated cloud\nservice or product. Only by careful measurement and by proper anticipation of peak workload\nconditions, backed by appropriate service remedies, credits, or penalties and appropriate fallback\narrangements, can true cost savings be realized with proper delivery of services.\n\nAgencies using cloud services should be careful to include suitable performance, monitoring, and\nemergency metrics and conditions into the cloud service master agreement and associated SLA.\nThese elements, reflecting the agencies given mission and goals, will help to ensure that each\nagency will pay only for needed services.\n\nCloud services are particularly well suited to deployment of automated terms and conditions for the\ndelivery of these services. While the basic parameters, legal, and cost controls for cloud services\nrequire agency approval and human-mediated review, automated tools should be deployed where\nappropriate to ensure conditions such as failover in the event of cloud service component failure or\ncompromise, and scaling to meet emergent needs or to grow or shrink service delivery according to\ncost and/or demand, and other relevant features.\n\nWherever possible, standards-based methods for monitoring, measuring, and scaling delivery of the\nresources to meet agency missions should be pursued.\n\n6.6.1  CLOUD STANDARDS FOR SERVICE AGREEMENTS\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "59",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 59,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "48"
+          },
+          "score": 0.03036576949620428,
+          "rank": 2
+        },
+        {
+          "id": "nist-p021-text-000",
+          "text": "Community cloud. The cloud infrastructure  is provisioned for exclusive use by a specific\n      community of consumers from organizations that have shared concerns (e.g., mission,\n        security requirements,  policy, and compliance  considerations).  It may be owned,\n      managed, and operated by one or more of the organizations in the community, a third\n        party, or some combination of them, and it may exist on or off premises.\n\nPublic cloud. The cloud infrastructure is provisioned for open use by the general public. It may\n      be owned, managed, and operated by a business, academic, or government organization,\n       or some combination of them. It exists on the premises of the cloud provider.\n\nHybrid cloud. The cloud  infrastructure  is a composition of two or more  distinct cloud\n        infrastructures (private, community, or public) that remain unique entities, but are bound\n       together by standardized or proprietary technology that enables data and application\n        portability (e.g., cloud bursting for load balancing between clouds).\n\n                                    10\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "21",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 21,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "10"
+          },
+          "score": 0.029709507042253523,
+          "rank": 3
+        },
+        {
+          "id": "nist-p029-text-000",
+          "text": "be implemented at the organization’s premise (i.e., on-site private clouds) or outsourced to a hosting\ncompany (i.e., outsourced private clouds).\n\nSimilar to private clouds, a community cloud may be managed by the organizations or by a third\nparty, and may be implemented at the customer’s location  (i.e., on-site community cloud) or\noutsourced to a hosting company (i.e., outsourced community cloud). However, a community cloud\nserves a set of organizations that have common security, privacy, and compliance considerations,\nrather than serving a single organization as does a private cloud.\n\nA hybrid cloud is a composition of two or more cloud deployment models (private, community, or\npublic) that remain unique entities but are bound together by standardized or proprietary technology\nthat enables data and application portability. As discussed in this section, both private clouds and\ncommunity clouds can be either implemented on-site or outsourced to a third party. Therefore, each\nconstituent cloud of a hybrid cloud can be one of the five variants.\n\n4.3.2   SERVICE ORCHESTRATION\n\nService  orchestration  refers  to  the  arrangement,  coordination,  and management  of  cloud\ninfrastructure to provide the optimizing capabilities of cloud services, as a cost-effective way of\nmanaging IT resources, as dictated by strategic business requirements. Figure 5 shows the general\nrequirements and processes for cloud providers to build each of the three service models.\n\n                    Figure 5 – Cloud Provider: Service Orchestration\n\n                                       18\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "29",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 29,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "18"
+          },
+          "score": 0.027526395173453996,
+          "rank": 4
+        },
+        {
+          "id": "nist-p019-text-001",
+          "text": "   Measured service. Cloud systems automatically control and optimize resource use by leveraging\n          a metering capability10 at some level of abstraction appropriate to the type of service\n             (e.g., storage, processing, bandwidth, active user accounts). Resource usage can be\n          monitored,  controlled,  audited, and  reported, providing transparency  for both  the\n           provider and consumer of the utilized service.\n\n9 NIST Special Publication 800-145, NIST Definition of Cloud Computing, September 2011\n\n10 Typically this is done on a pay-per-use or charge-per-use basis.\n\n                                        8\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.01639344262295082,
+          "rank": 5
+        },
+        {
+          "id": "nist-p031-diagram-00-000",
+          "text": "Figure 6 – Cloud Provider: Cloud Service Management\nArchitecture-style diagram showing cloud service management relationships. Left side: a group icon labeled \"Cloud Consumers\" with a right-pointing arrow toward the center. Center-left large rounded container labeled \"Cloud Service Management\" contains a blue sub-area labeled \"Business Support\" with stacked gray boxes: \"Customer Mgmt\", \"Contract Mgmt\", \"Inventory Mgmt\", \"Accounting & Billing\", \"Reporting & Auditing\", and \"Pricing & Rating\". Center column labeled \"Provisioning / Configuration\" contains stacked boxes: \"Rapid Provisioning\", \"Resource Change\", \"Monitoring & Reporting\", \"Metering\", and \"SLA Management\". Right side is headed \"Portability / Interoperability\" and includes three white boxes: \"Data Portability\", \"Service Interoperability\", and \"System Portability\". Associated orange pill-shaped items on the right read \"Copy Date To-From\" (OCR may reflect a typo for Data), \"Bulk Data\", \"Unified Management Interface\", \"VM Images Migration\", and \"Application / SVC Migration\". Far right: a group icon labeled \"Cloud Brokers\" with a left-pointing arrow toward the center. The diagram visually connects cloud consumers to cloud service management and cloud brokers to portability/interoperability capabilities.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "31",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-031.png",
+            "label": "Figure 6 – Cloud Provider: Cloud Service Management",
+            "pdf_page": 31,
+            "visual_id": "nist-p031-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "20",
+            "uncertainties": [
+              "The orange label is rendered as \"Copy Date To-From\" in the provided page/OCR; it may be intended as \"Copy Data To-From\"."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.01639344262295082,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.37040690000139875
+    },
+    {
+      "event": "search",
+      "query": "2030 AWS price EC2 \"$\" 2030 \"AWS\"",
+      "results": [
+        {
+          "id": "nist-p019-text-001",
+          "text": "   Measured service. Cloud systems automatically control and optimize resource use by leveraging\n          a metering capability10 at some level of abstraction appropriate to the type of service\n             (e.g., storage, processing, bandwidth, active user accounts). Resource usage can be\n          monitored,  controlled,  audited, and  reported, providing transparency  for both  the\n           provider and consumer of the utilized service.\n\n9 NIST Special Publication 800-145, NIST Definition of Cloud Computing, September 2011\n\n10 Typically this is done on a pay-per-use or charge-per-use basis.\n\n                                        8\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.01639344262295082,
+          "rank": 1
+        },
+        {
+          "id": "nist-p026-diagram-00-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-026.png",
+            "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+            "pdf_page": 26,
+            "visual_id": "nist-p026-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.016129032258064516,
+          "rank": 2
+        },
+        {
+          "id": "nist-p043-text-001",
+          "text": "Cloud computing development has been characterized by its emergence during a period in which\nextremely interconnected and fast-moving product cycles have led to an explosion of innovation\nthat strains the conventional SDO-based standards development process. While this is a rapidly\nchanging area, cloud computing is not unique in this respect, and several other examples exist in\nhistory of similar periods of rapid change followed by standardization. In the long run, the processes\nthat drive IT standards development are likely to follow historical precedent as over-arching\nrequirements begin to become clear, and as standards emerge from such processes to  fill these\nrequirements. We therefore expect conformance testing, conformity assessment, and other processes\nrelated to the maturity and adoption of standards to emerge. Some evidence of this maturity is\nalready starting to become manifest in the cloud standards landscape.\n\n                                       32\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 43,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "32"
+          },
+          "score": 0.015873015873015872,
+          "rank": 3
+        },
+        {
+          "id": "nist-p019-text-000",
+          "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.015625,
+          "rank": 4
+        },
+        {
+          "id": "nist-p090-text-000",
+          "text": "Technical Requirements for Supporting the Intercloud Networking\nPublished on April 2012\nhttp://www.gictf.jp/doc/GICTF_NWSWG-WhitePaper_e_20120420.pdf\nBased on the preceding Inter-Cloud use cases and functional requirements, this white paper\ndescribes technical requirements for each use case such as assured service level, disaster recovery,\nservice continuity, and federated service provisions.\n\nIt also shows expected technical evolutions in a next few years.\n\nTM Forum\nCloud Monetization Differentiating Cloud Services\nReleased: January 2012\nhttps://www.tmforum.org/WhitePapers/CloudMonetization/47730/article.html\n\nThis whitepaper explores the various cloud bill requirements and complexities for the different\ncloud business models.  It will also explore the expectations from customers of cloud services, with\nrespect to billing for cloud services, highlighting gaps and potential risks to service provider\nsuccess, as well as recommend areas for further action.\n\n                                       79\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "90",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 90,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "79"
+          },
+          "score": 0.015384615384615385,
+          "rank": 5
+        },
+        {
+          "id": "nist-p031-text-000",
+          "text": "Cloud Service                                   Portability /\n              Management                                                                   Interoperability\n\n                Business           Provisioning /                                                                 Data Portability\n                 Support           Configuration\n                                                                                                  Copy Date To-From\n                   Customer Mgmt\n                                           Rapid Provisioning\n                                                                                                       Bulk Data\n                     Contract Mgmt                                           Resource Change                                                                              Service\n                                                                              Interoperability\n                     Inventory Mgmt\n                                            Monitoring &\n                                                                                                     Unified Management\n  Cloud                                      Reporting                               Interface        Cloud                      Accounting\nConsumers        & Billing                                                      Brokers\n                                           Metering                  System\n                                                                                    Portability                     Reporting &\n                        Auditing             SLA Management\n                                                               VM Images\n                                                                                                      Migration\n                          Pricing &\n                         Rating\n                                                                                                           Application /\n                                                                                     SVC Migration\n\n                  Figure 6 – Cloud Provider: Cloud Service Management\n\n4.3.4   SECURITY\n\n“As the Federal Government moves to the cloud, it must be vigilant to ensure the security and\nproper management of government information to protect the privacy of citizens and national\nsecurity” (by Vivek Kundra, Federal Cloud Computing Strategy, February 2011.) In July 2012, the\nU.S. Department of Defense released a Cloud Computing Strategy, which stated “the Department\nhas specific cloud computing challenges that require careful adoption considerations, especially in\nareas of cybersecurity, continuity of operations, information assurance (IA), and resilience.” Also,\nin November 2012, NIST published a White Paper – Challenging Security Requirements for U.S.\nGovernment Cloud Computing Adoption. This document provides an overview of the high-priority\nsecurity challenges perceived by federal agencies as impediments  to the adoption of cloud\ncomputing.\n\n                                       20\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "31",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 31,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "20"
+          },
+          "score": 0.015151515151515152,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p019-text-001",
+          "text": "   Measured service. Cloud systems automatically control and optimize resource use by leveraging\n          a metering capability10 at some level of abstraction appropriate to the type of service\n             (e.g., storage, processing, bandwidth, active user accounts). Resource usage can be\n          monitored,  controlled,  audited, and  reported, providing transparency  for both  the\n           provider and consumer of the utilized service.\n\n9 NIST Special Publication 800-145, NIST Definition of Cloud Computing, September 2011\n\n10 Typically this is done on a pay-per-use or charge-per-use basis.\n\n                                        8\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.01639344262295082,
+          "rank": 1
+        },
+        {
+          "id": "nist-p026-diagram-00-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "diagram",
+            "image": "data\\processed\\810c2b69a87e\\page-026.png",
+            "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+            "pdf_page": 26,
+            "visual_id": "nist-p026-diagram-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15",
+            "uncertainties": [],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.016129032258064516,
+          "rank": 2
+        },
+        {
+          "id": "nist-p043-text-001",
+          "text": "Cloud computing development has been characterized by its emergence during a period in which\nextremely interconnected and fast-moving product cycles have led to an explosion of innovation\nthat strains the conventional SDO-based standards development process. While this is a rapidly\nchanging area, cloud computing is not unique in this respect, and several other examples exist in\nhistory of similar periods of rapid change followed by standardization. In the long run, the processes\nthat drive IT standards development are likely to follow historical precedent as over-arching\nrequirements begin to become clear, and as standards emerge from such processes to  fill these\nrequirements. We therefore expect conformance testing, conformity assessment, and other processes\nrelated to the maturity and adoption of standards to emerge. Some evidence of this maturity is\nalready starting to become manifest in the cloud standards landscape.\n\n                                       32\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "43",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 43,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "32"
+          },
+          "score": 0.015873015873015872,
+          "rank": 3
+        },
+        {
+          "id": "nist-p019-text-000",
+          "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.015625,
+          "rank": 4
+        },
+        {
+          "id": "nist-p090-text-000",
+          "text": "Technical Requirements for Supporting the Intercloud Networking\nPublished on April 2012\nhttp://www.gictf.jp/doc/GICTF_NWSWG-WhitePaper_e_20120420.pdf\nBased on the preceding Inter-Cloud use cases and functional requirements, this white paper\ndescribes technical requirements for each use case such as assured service level, disaster recovery,\nservice continuity, and federated service provisions.\n\nIt also shows expected technical evolutions in a next few years.\n\nTM Forum\nCloud Monetization Differentiating Cloud Services\nReleased: January 2012\nhttps://www.tmforum.org/WhitePapers/CloudMonetization/47730/article.html\n\nThis whitepaper explores the various cloud bill requirements and complexities for the different\ncloud business models.  It will also explore the expectations from customers of cloud services, with\nrespect to billing for cloud services, highlighting gaps and potential risks to service provider\nsuccess, as well as recommend areas for further action.\n\n                                       79\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "90",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 90,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "79"
+          },
+          "score": 0.015384615384615385,
+          "rank": 5
+        },
+        {
+          "id": "nist-p031-text-000",
+          "text": "Cloud Service                                   Portability /\n              Management                                                                   Interoperability\n\n                Business           Provisioning /                                                                 Data Portability\n                 Support           Configuration\n                                                                                                  Copy Date To-From\n                   Customer Mgmt\n                                           Rapid Provisioning\n                                                                                                       Bulk Data\n                     Contract Mgmt                                           Resource Change                                                                              Service\n                                                                              Interoperability\n                     Inventory Mgmt\n                                            Monitoring &\n                                                                                                     Unified Management\n  Cloud                                      Reporting                               Interface        Cloud                      Accounting\nConsumers        & Billing                                                      Brokers\n                                           Metering                  System\n                                                                                    Portability                     Reporting &\n                        Auditing             SLA Management\n                                                               VM Images\n                                                                                                      Migration\n                          Pricing &\n                         Rating\n                                                                                                           Application /\n                                                                                     SVC Migration\n\n                  Figure 6 – Cloud Provider: Cloud Service Management\n\n4.3.4   SECURITY\n\n“As the Federal Government moves to the cloud, it must be vigilant to ensure the security and\nproper management of government information to protect the privacy of citizens and national\nsecurity” (by Vivek Kundra, Federal Cloud Computing Strategy, February 2011.) In July 2012, the\nU.S. Department of Defense released a Cloud Computing Strategy, which stated “the Department\nhas specific cloud computing challenges that require careful adoption considerations, especially in\nareas of cybersecurity, continuity of operations, information assurance (IA), and resilience.” Also,\nin November 2012, NIST published a White Paper – Challenging Security Requirements for U.S.\nGovernment Cloud Computing Adoption. This document provides an overview of the high-priority\nsecurity challenges perceived by federal agencies as impediments  to the adoption of cloud\ncomputing.\n\n                                       20\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "31",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 31,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "20"
+          },
+          "score": 0.015151515151515152,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.372800000001007
+    },
+    {
+      "event": "search",
+      "query": "EC2 AWS amazon web services",
+      "results": [
+        {
+          "id": "nist-p057-text-000",
+          "text": "Some of the main security objectives for a cloud computing implementer should include:\n\n       •   Protect  consumers’  data  from  unauthorized  access,  disclosure,  modification  or\n           monitoring. This includes supporting identity management and access control policies\n            for authorized users accessing cloud services. This includes the ability of a customer to\n        make access to its data selectively available to other users.\n\n       •  Prevent unauthorized access to cloud computing infrastructure resources. This includes\n          implementing  security domains  that  have  logical  separation  between  computing\n           resources (e.g. logical separation of customer workloads running on the same physical\n           server by VM monitors [hypervisors] in a multi-tenant environment) and using secure-\n           by-default configurations.\n\n       •  Deploy in the cloud web applications designed and implemented for an Internet threat\n          model.\n\n       •  Challenges to prevent Internet browsers using cloud computing from attacks to mitigate\n          end-user security vulnerabilities. This includes taking measures to protect internet-\n          connected personal computing devices by applying security software, personal firewalls,\n         and patch maintenance.\n\n       •  Include access  control and  intrusion  detection and prevention  solutions  in cloud\n         computing implementations and conduct an independent assessment to verify that the\n           solutions  are  installed and  functional. This includes  traditional perimeter  security\n          measures in combination with the domain security model. Traditional perimeter security\n           includes  restricting physical access  to network and  devices;  protecting  individual\n         components from exploitation through security patch deployment; setting as default\n         most secure configurations; disabling all unused ports and services; using role-based\n           access control; monitoring audit trails; minimizing privileges to minimum necessary;\n          using antivirus software; and encrypting communications.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "57",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 57,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "46"
+          },
+          "score": 0.026856524873828405,
+          "rank": 1
+        },
+        {
+          "id": "nist-p019-text-000",
+          "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.01639344262295082,
+          "rank": 2
+        },
+        {
+          "id": "nist-p052-text-000",
+          "text": "features and other internal features, and has an extensible, self-describing feature set. CIMI, more\nrecently developed and published in late 2012, has a tightly described calling sequence and also\nprovides features that conform to DMTF’s Common Information Model (CIM). Each of these\nstandard sets has seen significant uptake, and several available cloud system products either already\nimplement or plan to implement at least one of them. While these IaaS standard sets are so far\nseparate, OGF and DMTF have stated that they have a work register in place and that they continue\nto discuss the possibility of merging these efforts in the future.\n\nIn  PaaS  applications,  an  extensive  ecosystem  of  vendor-specific  products  that  are  not\ninterchangeable has emerged. A recent effort to produce a PaaS-specific standard22 has been started\nby the OASIS Cloud Application Management Protocol (CAMP) technical committee, with support\nfrom several industry participants, and is making rapid progress towards producing a workable\nspecification.\n\nIn the case where a SaaS application is consumed through a web browser, there may be many\nstandards that are used to achieve interoperability between what is essentially a web server and the\nuser’s browser, such as IP (v4, v6), TCP, HTTP, SSL/TLS, HTML, XML, REST, Atom,\nAtomPub, RSS, and JavaScript/JSON. None of these web standards are cloud-specific, and these\nsame standards are being used in many web browser-based management interfaces.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "52",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 52,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "41"
+          },
+          "score": 0.01639344262295082,
+          "rank": 3
+        },
+        {
+          "id": "nist-p081-text-000",
+          "text": "9.1.1   SAAS FUNCTIONAL INTERFACES\n\nThe varieties of the SaaS applications determine what can be consumed by the SaaS consumer.\nThere are varying degrees of functional standardization. SaaS applications are mainly available by\nusing a web browser, and some are consumed as a web service using other application clients, such\nas standalone desktop applications and mobile applications. Even as most SaaS applications are\nusing web and web service standards to deliver these application capabilities, application-specific\ndata and metadata standards remain standardization gaps in portability and interoperability. For\nexample, email and office productivity application data format standards and interfaces are required\nto achieve interoperability and portability for migrating from existing systems to cloud systems.\n\nAnother important area for standardization is the metadata format and interfaces, in particular, to\nsupport compliance needs. For example, standard metadata format and APIs to describe and\ngenerate e-discovery metadata  for emails, document management systems,  financial account\nsystems, etc.,  will help government consumers to leverage commercial off-the-shelf (COTS) and\ngovernment off-the-shelf (GOTS) software products to meet e-discovery requirements. This is\nespecially important when email messaging systems, content management systems, or Enterprise\nResource Planning (ERP) financial systems migrate to a SaaS model.\n\n9.1.2   SAAS SELF-SERVICE MANAGEMENT INTERFACES\n\nDue to the diverse domain and functional differences among SaaS offerings, the management\ninterfaces used for the consumers to administer and customize the application functionalities are\nalso very diverse. However, certain management functionalities are common, such as those related\nto user account and credential management. These common management functionalities represent\ncandidates for interoperability standardization.\n\n9.1.3   PAAS FUNCTIONAL INTERFACES\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 81,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "70"
+          },
+          "score": 0.016129032258064516,
+          "rank": 4
+        },
+        {
+          "id": "nist-p100-text-001",
+          "text": "The ATIS Cloud Services Forum (CSF) facilitates the adoption and advancement of cloud services\nfrom a network and IT perspective. Drawing upon business use cases that leverage cloud services’\npotential, the Forum addresses industry priorities and develops implementable solutions for this\nevolving marketplace. CSF is working to ensure that cloud services – as offered by service\nproviders – are quickly operationalized to facilitate the delivery of interoperable, secure, and\nmanaged services. Current priorities include inter-carrier telepresence, content distribution network\ninterconnection, cloud services framework, virtual desktop, virtual private network, and\ndevelopment of a cloud services checklist for onboarding.\n\nCloudAudit\n\nCloudAudit (A6), a working group under the auspices of the CSA (Cloud Security Alliance).\nFounded in January 2010, CloudAudit aims to enable cloud service providers to offer their clients\nsome degree of transparency in an automated, programmatic manner. The group addresses the\nchallenges of lack of transparency and audit requirements in a cloud-based system. The official\nobjective of this working group is to develop a common interface for the automation of the Audit,\nAssertion, Assessment and Assurance of IaaS (infrastructure as a service), PaaS (platform as a\nservice) and SaaS (software as a service) environments. As of October 2010, CloudAudit is\nofficially under the auspices of the Cloud Security Alliance.\n\n                                       89\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "100",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 100,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "89"
+          },
+          "score": 0.016129032258064516,
+          "rank": 5
+        },
+        {
+          "id": "nist-p026-text-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\n\nSaaS  applications are usually deployed as hosted services and  are accessed via a network\nconnecting SaaS consumers and providers. The SaaS consumers can be organizations that provide\ntheir members  with  access  to  software  applications, end  users who  directly use  software\napplications, or software application administrators who configure applications for end users. SaaS\nconsumers access and use applications on demand, and can be billed on the number of consumers or\nthe amount of consumed services. The latter can be measured in terms of the time in use, the\nnetwork bandwidth consumed, or the amount/duration of data stored.\n\n                                       15\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 26,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15"
+          },
+          "score": 0.015873015873015872,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p057-text-000",
+          "text": "Some of the main security objectives for a cloud computing implementer should include:\n\n       •   Protect  consumers’  data  from  unauthorized  access,  disclosure,  modification  or\n           monitoring. This includes supporting identity management and access control policies\n            for authorized users accessing cloud services. This includes the ability of a customer to\n        make access to its data selectively available to other users.\n\n       •  Prevent unauthorized access to cloud computing infrastructure resources. This includes\n          implementing  security domains  that  have  logical  separation  between  computing\n           resources (e.g. logical separation of customer workloads running on the same physical\n           server by VM monitors [hypervisors] in a multi-tenant environment) and using secure-\n           by-default configurations.\n\n       •  Deploy in the cloud web applications designed and implemented for an Internet threat\n          model.\n\n       •  Challenges to prevent Internet browsers using cloud computing from attacks to mitigate\n          end-user security vulnerabilities. This includes taking measures to protect internet-\n          connected personal computing devices by applying security software, personal firewalls,\n         and patch maintenance.\n\n       •  Include access  control and  intrusion  detection and prevention  solutions  in cloud\n         computing implementations and conduct an independent assessment to verify that the\n           solutions  are  installed and  functional. This includes  traditional perimeter  security\n          measures in combination with the domain security model. Traditional perimeter security\n           includes  restricting physical access  to network and  devices;  protecting  individual\n         components from exploitation through security patch deployment; setting as default\n         most secure configurations; disabling all unused ports and services; using role-based\n           access control; monitoring audit trails; minimizing privileges to minimum necessary;\n          using antivirus software; and encrypting communications.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "57",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 57,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "46"
+          },
+          "score": 0.026856524873828405,
+          "rank": 1
+        },
+        {
+          "id": "nist-p019-text-000",
+          "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "19",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 19,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "8"
+          },
+          "score": 0.01639344262295082,
+          "rank": 2
+        },
+        {
+          "id": "nist-p052-text-000",
+          "text": "features and other internal features, and has an extensible, self-describing feature set. CIMI, more\nrecently developed and published in late 2012, has a tightly described calling sequence and also\nprovides features that conform to DMTF’s Common Information Model (CIM). Each of these\nstandard sets has seen significant uptake, and several available cloud system products either already\nimplement or plan to implement at least one of them. While these IaaS standard sets are so far\nseparate, OGF and DMTF have stated that they have a work register in place and that they continue\nto discuss the possibility of merging these efforts in the future.\n\nIn  PaaS  applications,  an  extensive  ecosystem  of  vendor-specific  products  that  are  not\ninterchangeable has emerged. A recent effort to produce a PaaS-specific standard22 has been started\nby the OASIS Cloud Application Management Protocol (CAMP) technical committee, with support\nfrom several industry participants, and is making rapid progress towards producing a workable\nspecification.\n\nIn the case where a SaaS application is consumed through a web browser, there may be many\nstandards that are used to achieve interoperability between what is essentially a web server and the\nuser’s browser, such as IP (v4, v6), TCP, HTTP, SSL/TLS, HTML, XML, REST, Atom,\nAtomPub, RSS, and JavaScript/JSON. None of these web standards are cloud-specific, and these\nsame standards are being used in many web browser-based management interfaces.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "52",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 52,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "41"
+          },
+          "score": 0.01639344262295082,
+          "rank": 3
+        },
+        {
+          "id": "nist-p081-text-000",
+          "text": "9.1.1   SAAS FUNCTIONAL INTERFACES\n\nThe varieties of the SaaS applications determine what can be consumed by the SaaS consumer.\nThere are varying degrees of functional standardization. SaaS applications are mainly available by\nusing a web browser, and some are consumed as a web service using other application clients, such\nas standalone desktop applications and mobile applications. Even as most SaaS applications are\nusing web and web service standards to deliver these application capabilities, application-specific\ndata and metadata standards remain standardization gaps in portability and interoperability. For\nexample, email and office productivity application data format standards and interfaces are required\nto achieve interoperability and portability for migrating from existing systems to cloud systems.\n\nAnother important area for standardization is the metadata format and interfaces, in particular, to\nsupport compliance needs. For example, standard metadata format and APIs to describe and\ngenerate e-discovery metadata  for emails, document management systems,  financial account\nsystems, etc.,  will help government consumers to leverage commercial off-the-shelf (COTS) and\ngovernment off-the-shelf (GOTS) software products to meet e-discovery requirements. This is\nespecially important when email messaging systems, content management systems, or Enterprise\nResource Planning (ERP) financial systems migrate to a SaaS model.\n\n9.1.2   SAAS SELF-SERVICE MANAGEMENT INTERFACES\n\nDue to the diverse domain and functional differences among SaaS offerings, the management\ninterfaces used for the consumers to administer and customize the application functionalities are\nalso very diverse. However, certain management functionalities are common, such as those related\nto user account and credential management. These common management functionalities represent\ncandidates for interoperability standardization.\n\n9.1.3   PAAS FUNCTIONAL INTERFACES\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "81",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 81,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "70"
+          },
+          "score": 0.016129032258064516,
+          "rank": 4
+        },
+        {
+          "id": "nist-p100-text-001",
+          "text": "The ATIS Cloud Services Forum (CSF) facilitates the adoption and advancement of cloud services\nfrom a network and IT perspective. Drawing upon business use cases that leverage cloud services’\npotential, the Forum addresses industry priorities and develops implementable solutions for this\nevolving marketplace. CSF is working to ensure that cloud services – as offered by service\nproviders – are quickly operationalized to facilitate the delivery of interoperable, secure, and\nmanaged services. Current priorities include inter-carrier telepresence, content distribution network\ninterconnection, cloud services framework, virtual desktop, virtual private network, and\ndevelopment of a cloud services checklist for onboarding.\n\nCloudAudit\n\nCloudAudit (A6), a working group under the auspices of the CSA (Cloud Security Alliance).\nFounded in January 2010, CloudAudit aims to enable cloud service providers to offer their clients\nsome degree of transparency in an automated, programmatic manner. The group addresses the\nchallenges of lack of transparency and audit requirements in a cloud-based system. The official\nobjective of this working group is to develop a common interface for the automation of the Audit,\nAssertion, Assessment and Assurance of IaaS (infrastructure as a service), PaaS (platform as a\nservice) and SaaS (software as a service) environments. As of October 2010, CloudAudit is\nofficially under the auspices of the Cloud Security Alliance.\n\n                                       89\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "100",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 100,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "89"
+          },
+          "score": 0.016129032258064516,
+          "rank": 5
+        },
+        {
+          "id": "nist-p026-text-000",
+          "text": "Figure 3 – Example of Services Available to a Cloud Consumer\n\nSaaS  applications are usually deployed as hosted services and  are accessed via a network\nconnecting SaaS consumers and providers. The SaaS consumers can be organizations that provide\ntheir members  with  access  to  software  applications, end  users who  directly use  software\napplications, or software application administrators who configure applications for end users. SaaS\nconsumers access and use applications on demand, and can be billed on the number of consumers or\nthe amount of consumed services. The latter can be measured in terms of the time in use, the\nnetwork bandwidth consumed, or the amount/duration of data stored.\n\n                                       15\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "26",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 26,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "15"
+          },
+          "score": 0.015873015873015872,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.3013123999990057
+    },
+    {
+      "event": "search",
+      "query": "2030",
+      "results": [
+        {
+          "id": "nist-p075-text-001",
+          "text": "Possible Standards: AS4, OAGIS, NoSQL, GridFTP, DFDL, CDMI\n\n                                       64\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "75",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 75,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "64"
+          },
+          "score": 0.01639344262295082,
+          "rank": 1
+        },
+        {
+          "id": "nist-p102-text-002",
+          "text": "JTC 1 SC 27 (IT Security Techniques) is the one JTC 1 SC that is completely focused on cyber\nsecurity standardization. There are currently three cloud security standards projects in SC27.\n\n                                       91\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 102,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "91"
+          },
+          "score": 0.016129032258064516,
+          "rank": 2
+        },
+        {
+          "id": "nist-p069-text-001",
+          "text": "                        Table 13 – Interoperability Standards\n\n                                       58\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "69",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 69,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "58"
+          },
+          "score": 0.015873015873015872,
+          "rank": 3
+        },
+        {
+          "id": "nist-p036-text-001",
+          "text": "The “Cloud First”21 directive provided by the Federal CIO is a more general expansion of this\nanalysis to multiple interacting current systems and cloud implementations. This expansion is\nintended to support evolving business processes as further cloud deployments are implemented.\n\n21 25 Point Implementation Plan to Reform Federal Information Technology Management\n    http://www.dhs.gov/sites/default/files/publications/digital-strategy/25-point-implementation-plan-to-reform-federal-\n    it.pdf\n\n                                       25\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "25"
+          },
+          "score": 0.015625,
+          "rank": 4
+        },
+        {
+          "id": "nist-p113-text-000",
+          "text": "The Standards Selection Criteria also provides guidance for moving through the standards life cycle\nthat changes the category of a standard from “emerging” to “mandated” to “inactive/retired.”\n\n                   Figure 13 – DoD DISR Standards Selection Process\n\n                                       102\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "113",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 113,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "102"
+          },
+          "score": 0.015384615384615385,
+          "rank": 5
+        },
+        {
+          "id": "nist-p050-table-00-000",
+          "text": "Table 4 – Standards Maturity Model\nColumns: Maturity Level | Definition\n\nNo Standard | SDOs have not initiated any standard development projects.\nUnder Development | SDOs have initiated standard development projects. Open source projects have been initiated.\nApproved Standard | SDO-approved standard is available to public. Some SDOs require multiple implementations before final designation as a “standard.”\nTechnically Stable | The standard is stable and its technical content is mature. No major revisions or amendments are in progress that will affect backward compatibility with the original standard.\nReference Implementation | Reference implementation is available.\nTesting | Test tools are available. Testing and test reports are available.\nCommercial Availability | Several products/services from different vendors exist on the market to implement this standard.\nMarket Acceptance | Widespread use by many groups. De facto or de jure market acceptance of standards-based products/services.\nSunset | Newer standards (revisions or replacements) are under development.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "50",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-050.png",
+            "label": "Table 4 – Standards Maturity Model",
+            "pdf_page": 50,
+            "visual_id": "nist-p050-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "39",
+            "uncertainties": [
+              "The table formatting suggests some multi-line row labels, but the visible content is transcribed as plain text.",
+              "No figure is visible on this page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015151515151515152,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "nist-p075-text-001",
+          "text": "Possible Standards: AS4, OAGIS, NoSQL, GridFTP, DFDL, CDMI\n\n                                       64\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "75",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 75,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "64"
+          },
+          "score": 0.01639344262295082,
+          "rank": 1
+        },
+        {
+          "id": "nist-p102-text-002",
+          "text": "JTC 1 SC 27 (IT Security Techniques) is the one JTC 1 SC that is completely focused on cyber\nsecurity standardization. There are currently three cloud security standards projects in SC27.\n\n                                       91\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "102",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 102,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "91"
+          },
+          "score": 0.016129032258064516,
+          "rank": 2
+        },
+        {
+          "id": "nist-p069-text-001",
+          "text": "                        Table 13 – Interoperability Standards\n\n                                       58\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "69",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 69,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "58"
+          },
+          "score": 0.015873015873015872,
+          "rank": 3
+        },
+        {
+          "id": "nist-p036-text-001",
+          "text": "The “Cloud First”21 directive provided by the Federal CIO is a more general expansion of this\nanalysis to multiple interacting current systems and cloud implementations. This expansion is\nintended to support evolving business processes as further cloud deployments are implemented.\n\n21 25 Point Implementation Plan to Reform Federal Information Technology Management\n    http://www.dhs.gov/sites/default/files/publications/digital-strategy/25-point-implementation-plan-to-reform-federal-\n    it.pdf\n\n                                       25\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "36",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 36,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "25"
+          },
+          "score": 0.015625,
+          "rank": 4
+        },
+        {
+          "id": "nist-p113-text-000",
+          "text": "The Standards Selection Criteria also provides guidance for moving through the standards life cycle\nthat changes the category of a standard from “emerging” to “mandated” to “inactive/retired.”\n\n                   Figure 13 – DoD DISR Standards Selection Process\n\n                                       102\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "113",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "text",
+            "pdf_page": 113,
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "102"
+          },
+          "score": 0.015384615384615385,
+          "rank": 5
+        },
+        {
+          "id": "nist-p050-table-00-000",
+          "text": "Table 4 – Standards Maturity Model\nColumns: Maturity Level | Definition\n\nNo Standard | SDOs have not initiated any standard development projects.\nUnder Development | SDOs have initiated standard development projects. Open source projects have been initiated.\nApproved Standard | SDO-approved standard is available to public. Some SDOs require multiple implementations before final designation as a “standard.”\nTechnically Stable | The standard is stable and its technical content is mature. No major revisions or amendments are in progress that will affect backward compatibility with the original standard.\nReference Implementation | Reference implementation is available.\nTesting | Test tools are available. Testing and test reports are available.\nCommercial Availability | Several products/services from different vendors exist on the market to implement this standard.\nMarket Acceptance | Widespread use by many groups. De facto or de jure market acceptance of standards-based products/services.\nSunset | Newer standards (revisions or replacements) are under development.\n\n",
+          "source_id": "nist",
+          "source": "NIST.SP.500-291r2.pdf",
+          "page": "50",
+          "metadata": {
+            "bbox": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "kind": "table",
+            "image": "data\\processed\\810c2b69a87e\\page-050.png",
+            "label": "Table 4 – Standards Maturity Model",
+            "pdf_page": 50,
+            "visual_id": "nist-p050-table-00",
+            "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+            "printed_page": "39",
+            "uncertainties": [
+              "The table formatting suggests some multi-line row labels, but the visible content is transcribed as plain text.",
+              "No figure is visible on this page."
+            ],
+            "human_verified": false,
+            "extraction_model": "gpt-5.4-mini"
+          },
+          "score": 0.015151515151515152,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.2916894999980286
+    }
+  ],
+  "context": [
+    {
+      "id": "nist-p090-text-000",
+      "text": "Technical Requirements for Supporting the Intercloud Networking\nPublished on April 2012\nhttp://www.gictf.jp/doc/GICTF_NWSWG-WhitePaper_e_20120420.pdf\nBased on the preceding Inter-Cloud use cases and functional requirements, this white paper\ndescribes technical requirements for each use case such as assured service level, disaster recovery,\nservice continuity, and federated service provisions.\n\nIt also shows expected technical evolutions in a next few years.\n\nTM Forum\nCloud Monetization Differentiating Cloud Services\nReleased: January 2012\nhttps://www.tmforum.org/WhitePapers/CloudMonetization/47730/article.html\n\nThis whitepaper explores the various cloud bill requirements and complexities for the different\ncloud business models.  It will also explore the expectations from customers of cloud services, with\nrespect to billing for cloud services, highlighting gaps and potential risks to service provider\nsuccess, as well as recommend areas for further action.\n\n                                       79\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "90",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 90,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "79"
+      },
+      "score": 0.015384615384615385,
+      "rank": 5
+    },
+    {
+      "id": "nist-p007-text-002",
+      "text": "......49\n7  CLOUD COMPUTING STANDARDS MAPPING ............................................................................................51\n   7.1  SECURITY STANDARDS MAPPING .............................................................................................................52\n   7.2  INTEROPERABILITY STANDARDS MAPPING ...........................................................................................58\n   7.3  PORTABILITY STANDARDS MAPPING .......................................................................................................59\n\n                                                       vii\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "7",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 7,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "vii"
+      },
+      "score": 0.016129032258064516,
+      "rank": 2
+    },
+    {
+      "id": "nist-p042-text-000",
+      "text": "To summarize the detailed technical use cases for this analysis, the following areas of technical\nrequirements are common across all scenarios:\n\n  Scenarios   Technical Requirements\n\n       1.       Creating, accessing, updating, deleting data objects in cloud systems;\n\n       2.     Moving VMs and virtual appliances between cloud systems;\n\n       3.       Selecting the best IaaS vendor for private externally hosted cloud system;\n\n       4.      Tools for monitoring and managing multiple cloud systems;\n\n       5.       Migrating data between cloud systems;\n\n       6.       Single sign-on access to multiple cloud systems;\n\n       7.       Orchestrated processes across cloud systems;\n\n       8.       Discovering cloud resources;\n\n       9.       Evaluating SLAs and penalties; and\n\n     10.      Auditing cloud systems.\n\n                    Table 3 – Scenarios and Technical Requirements\n\n                                       31\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "42",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 42,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "31"
+      },
+      "score": 0.015873015873015872,
+      "rank": 3
+    },
+    {
+      "id": "nist-p026-diagram-00-000",
+      "text": "Figure 3 – Example of Services Available to a Cloud Consumer\nConceptual cloud-computing diagram showing a black box at left labeled \"Cloud Consumer\" connected by blue line/arrows to three service-model clouds: a blue \"SaaS Consumer\" cloud at the top, a green \"PaaS Consumer\" cloud at lower left, and an orange \"IaaS Consumer\" cloud at lower right. The three service-model clouds overlap within a larger faint gray cloud outline, suggesting the cloud consumer can use all three service types. Each service-model cloud contains a central user/device icon with connector lines to example service categories.\n\nSaaS Consumer (blue, top): example application/service labels around the cloud are ERP, Billing, Sales, CRM, Collaboration, Human Resources, Content Management, Email & Office Productivity, Social Networks, Financials, and Document Management. The central icon shows a group of people with a computer/phone and an envelope, with lines radiating from the center to the listed application categories.\n\nPaaS Consumer (green, lower left): example labels are Business Intelligence, Database, Application Deployment, Development & Testing, and Integration. A central developer/user icon is shown with lines to the listed platform services.\n\nIaaS Consumer (orange, lower right): example labels are Storage, CDN, Backup & Recovery, Compute, Services Management, and Platform Hosting. A central infrastructure/user icon is shown with lines to the listed infrastructure services.\n\nThe page header reads \"NIST CLOUD COMPUTING STANDARDS ROADMAP\" and the figure caption repeats the title. The visible page text below the figure explains that SaaS applications are hosted services accessed via a network, that SaaS consumers can be organizations, end users, or administrators, and that usage may be billed by number of consumers or amount of consumed services measured by time in use, network bandwidth, or amount/duration of data stored.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "26",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\810c2b69a87e\\page-026.png",
+        "label": "Figure 3 – Example of Services Available to a Cloud Consumer",
+        "pdf_page": 26,
+        "visual_id": "nist-p026-diagram-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "15",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.016129032258064516,
+      "rank": 2
+    },
+    {
+      "id": "nist-p097-text-000",
+      "text": "14   APPENDIX C – ACRONYMS\n     ANSDIT  American National Standard Dictionary of Information Technology\n         API  Application Programming Interface\n      BOD  Business Object Document\n      CCESC  Cloud Computing Executive Steering Committee\n      CDMI  Cloud Data Management Interface\n      CDN  Content Delivery Network\n        CIMI  Cloud Infrastructure Management Interface\n         CIO  Chief Information Officer\n    CMWG  Cloud Management Working Group\n      COTS  Commercial off-the-shelf\n       CPU  Central Processing Unit\n      CRM  Customer Relationship Management\n      CRUD  Create-Read-Update-Delete\n       CSA  Cloud Security Alliance\n       CSIRT  Computer Security Incident Response Teams\n      CSW  Catalog Service for the Web\n      DCIFed  DCI Federation Working Group\n        DISR  Defense IT Standards Registry\n      DMTF  Distributed Management Task Force\n       DoD  Department of Defense (USA)\n       ebRIM  Electronic business Registry Information Model\n      ebXML  Electronic Business using eXtensible Markup Language\n        ERP  Enterprise Resource Planning\n      EULA  End User License Agreement\n        FCCI  Federal Cloud Computing Initiative\n        FEA  Federal Enterprise Architecture\n         FIPS  Federal Information Processing Standards\n       GEIA  Government Electronics & Information Technology Association\n       GICTF  Global Inter-Cloud Technology Forum\n      GLUE  Grid Laboratory Uniform Environment\n      GOTS  Government off-the-shelf\n     HTML  HyperText Markup Language\n       HTTP  Hypertext Transfer Protocol\n      ID-WSF  IDentity Web Service Framework\n            I/O  Input/Output\n           IaaS  Infrastructure as a Service\n\n                                       86\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "97",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 97,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "86"
+      },
+      "score": 0.015384615384615385,
+      "rank": 5
+    },
+    {
+      "id": "nist-p042-table-00-000",
+      "text": "Table 3\nTable caption: \"Table 3 – Scenarios and Technical Requirements\". Two-column table with header row: \"Scenarios\" and \"Technical Requirements\". Row 1: \"1.\" — \"Creating, accessing, updating, deleting data objects in cloud systems;\" Row 2: \"2.\" — \"Moving VMs and virtual appliances between cloud systems;\" Row 3: \"3.\" — \"Selecting the best IaaS vendor for private externally hosted cloud system;\" Row 4: \"4.\" — \"Tools for monitoring and managing multiple cloud systems;\" Row 5: \"5.\" — \"Migrating data between cloud systems;\" Row 6: \"6.\" — \"Single sign-on access to multiple cloud systems;\" Row 7: \"7.\" — \"Orchestrated processes across cloud systems;\" Row 8: \"8.\" — \"Discovering cloud resources;\" Row 9: \"9.\" — \"Evaluating SLAs and penalties; and\" Row 10: \"10.\" — \"Auditing cloud systems.\"\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "42",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-042.png",
+        "label": "Table 3",
+        "pdf_page": 42,
+        "visual_id": "nist-p042-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "31",
+        "uncertainties": [],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.015151515151515152,
+      "rank": 6
+    },
+    {
+      "id": "nist-p031-text-000",
+      "text": "Cloud Service                                   Portability /\n              Management                                                                   Interoperability\n\n                Business           Provisioning /                                                                 Data Portability\n                 Support           Configuration\n                                                                                                  Copy Date To-From\n                   Customer Mgmt\n                                           Rapid Provisioning\n                                                                                                       Bulk Data\n                     Contract Mgmt                                           Resource Change                                                                              Service\n                                                                              Interoperability\n                     Inventory Mgmt\n                                            Monitoring &\n                                                                                                     Unified Management\n  Cloud                                      Reporting                               Interface        Cloud                      Accounting\nConsumers        & Billing                                                      Brokers\n                                           Metering                  System\n                                                                                    Portability                     Reporting &\n                        Auditing             SLA Management\n                                                               VM Images\n                                                                                                      Migration\n                          Pricing &\n                         Rating\n                                                                                                           Application /\n                                                                                     SVC Migration\n\n                  Figure 6 – Cloud Provider: Cloud Service Management\n\n4.3.4   SECURITY\n\n“As the Federal Government moves to the cloud, it must be vigilant to ensure the security and\nproper management of government information to protect the privacy of citizens and national\nsecurity” (by Vivek Kundra, Federal Cloud Computing Strategy, February 2011.) In July 2012, the\nU.S. Department of Defense released a Cloud Computing Strategy, which stated “the Department\nhas specific cloud computing challenges that require careful adoption considerations, especially in\nareas of cybersecurity, continuity of operations, information assurance (IA), and resilience.” Also,\nin November 2012, NIST published a White Paper – Challenging Security Requirements for U.S.\nGovernment Cloud Computing Adoption. This document provides an overview of the high-priority\nsecurity challenges perceived by federal agencies as impediments  to the adoption of cloud\ncomputing.\n\n                                       20\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "31",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 31,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "20"
+      },
+      "score": 0.015151515151515152,
+      "rank": 6
+    },
+    {
+      "id": "nist-p059-text-000",
+      "text": "The topic of performance includes considerations related to monitoring, reporting, measuring,\nscaling, and right-sizing cloud resources to meet the expected or experienced demand. This area\ndeserves careful consideration, as  it relates directly to the factors that control the potential cost\nsavings to the government from the use of cloud computing.\n\nPerformance can potentially be scaled to meet conditions of anticipated or real-world demand,\nwithin the parameters of a cloud service agreement. It is therefore crucial that such agreements\ncontain all necessary parameters that relate to the conditions for delivery of the associated cloud\nservice or product. Only by careful measurement and by proper anticipation of peak workload\nconditions, backed by appropriate service remedies, credits, or penalties and appropriate fallback\narrangements, can true cost savings be realized with proper delivery of services.\n\nAgencies using cloud services should be careful to include suitable performance, monitoring, and\nemergency metrics and conditions into the cloud service master agreement and associated SLA.\nThese elements, reflecting the agencies given mission and goals, will help to ensure that each\nagency will pay only for needed services.\n\nCloud services are particularly well suited to deployment of automated terms and conditions for the\ndelivery of these services. While the basic parameters, legal, and cost controls for cloud services\nrequire agency approval and human-mediated review, automated tools should be deployed where\nappropriate to ensure conditions such as failover in the event of cloud service component failure or\ncompromise, and scaling to meet emergent needs or to grow or shrink service delivery according to\ncost and/or demand, and other relevant features.\n\nWherever possible, standards-based methods for monitoring, measuring, and scaling delivery of the\nresources to meet agency missions should be pursued.\n\n6.6.1  CLOUD STANDARDS FOR SERVICE AGREEMENTS\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "59",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 59,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "48"
+      },
+      "score": 0.03036576949620428,
+      "rank": 2
+    },
+    {
+      "id": "nist-p021-text-000",
+      "text": "Community cloud. The cloud infrastructure  is provisioned for exclusive use by a specific\n      community of consumers from organizations that have shared concerns (e.g., mission,\n        security requirements,  policy, and compliance  considerations).  It may be owned,\n      managed, and operated by one or more of the organizations in the community, a third\n        party, or some combination of them, and it may exist on or off premises.\n\nPublic cloud. The cloud infrastructure is provisioned for open use by the general public. It may\n      be owned, managed, and operated by a business, academic, or government organization,\n       or some combination of them. It exists on the premises of the cloud provider.\n\nHybrid cloud. The cloud  infrastructure  is a composition of two or more  distinct cloud\n        infrastructures (private, community, or public) that remain unique entities, but are bound\n       together by standardized or proprietary technology that enables data and application\n        portability (e.g., cloud bursting for load balancing between clouds).\n\n                                    10\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "21",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 21,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "10"
+      },
+      "score": 0.029709507042253523,
+      "rank": 3
+    },
+    {
+      "id": "nist-p029-text-000",
+      "text": "be implemented at the organization’s premise (i.e., on-site private clouds) or outsourced to a hosting\ncompany (i.e., outsourced private clouds).\n\nSimilar to private clouds, a community cloud may be managed by the organizations or by a third\nparty, and may be implemented at the customer’s location  (i.e., on-site community cloud) or\noutsourced to a hosting company (i.e., outsourced community cloud). However, a community cloud\nserves a set of organizations that have common security, privacy, and compliance considerations,\nrather than serving a single organization as does a private cloud.\n\nA hybrid cloud is a composition of two or more cloud deployment models (private, community, or\npublic) that remain unique entities but are bound together by standardized or proprietary technology\nthat enables data and application portability. As discussed in this section, both private clouds and\ncommunity clouds can be either implemented on-site or outsourced to a third party. Therefore, each\nconstituent cloud of a hybrid cloud can be one of the five variants.\n\n4.3.2   SERVICE ORCHESTRATION\n\nService  orchestration  refers  to  the  arrangement,  coordination,  and management  of  cloud\ninfrastructure to provide the optimizing capabilities of cloud services, as a cost-effective way of\nmanaging IT resources, as dictated by strategic business requirements. Figure 5 shows the general\nrequirements and processes for cloud providers to build each of the three service models.\n\n                    Figure 5 – Cloud Provider: Service Orchestration\n\n                                       18\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "29",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 29,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "18"
+      },
+      "score": 0.027526395173453996,
+      "rank": 4
+    },
+    {
+      "id": "nist-p019-text-001",
+      "text": "   Measured service. Cloud systems automatically control and optimize resource use by leveraging\n          a metering capability10 at some level of abstraction appropriate to the type of service\n             (e.g., storage, processing, bandwidth, active user accounts). Resource usage can be\n          monitored,  controlled,  audited, and  reported, providing transparency  for both  the\n           provider and consumer of the utilized service.\n\n9 NIST Special Publication 800-145, NIST Definition of Cloud Computing, September 2011\n\n10 Typically this is done on a pay-per-use or charge-per-use basis.\n\n                                        8\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "19",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 19,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "8"
+      },
+      "score": 0.01639344262295082,
+      "rank": 1
+    },
+    {
+      "id": "nist-p031-diagram-00-000",
+      "text": "Figure 6 – Cloud Provider: Cloud Service Management\nArchitecture-style diagram showing cloud service management relationships. Left side: a group icon labeled \"Cloud Consumers\" with a right-pointing arrow toward the center. Center-left large rounded container labeled \"Cloud Service Management\" contains a blue sub-area labeled \"Business Support\" with stacked gray boxes: \"Customer Mgmt\", \"Contract Mgmt\", \"Inventory Mgmt\", \"Accounting & Billing\", \"Reporting & Auditing\", and \"Pricing & Rating\". Center column labeled \"Provisioning / Configuration\" contains stacked boxes: \"Rapid Provisioning\", \"Resource Change\", \"Monitoring & Reporting\", \"Metering\", and \"SLA Management\". Right side is headed \"Portability / Interoperability\" and includes three white boxes: \"Data Portability\", \"Service Interoperability\", and \"System Portability\". Associated orange pill-shaped items on the right read \"Copy Date To-From\" (OCR may reflect a typo for Data), \"Bulk Data\", \"Unified Management Interface\", \"VM Images Migration\", and \"Application / SVC Migration\". Far right: a group icon labeled \"Cloud Brokers\" with a left-pointing arrow toward the center. The diagram visually connects cloud consumers to cloud service management and cloud brokers to portability/interoperability capabilities.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "31",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "diagram",
+        "image": "data\\processed\\810c2b69a87e\\page-031.png",
+        "label": "Figure 6 – Cloud Provider: Cloud Service Management",
+        "pdf_page": 31,
+        "visual_id": "nist-p031-diagram-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "20",
+        "uncertainties": [
+          "The orange label is rendered as \"Copy Date To-From\" in the provided page/OCR; it may be intended as \"Copy Data To-From\"."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.01639344262295082,
+      "rank": 6
+    },
+    {
+      "id": "nist-p043-text-001",
+      "text": "Cloud computing development has been characterized by its emergence during a period in which\nextremely interconnected and fast-moving product cycles have led to an explosion of innovation\nthat strains the conventional SDO-based standards development process. While this is a rapidly\nchanging area, cloud computing is not unique in this respect, and several other examples exist in\nhistory of similar periods of rapid change followed by standardization. In the long run, the processes\nthat drive IT standards development are likely to follow historical precedent as over-arching\nrequirements begin to become clear, and as standards emerge from such processes to  fill these\nrequirements. We therefore expect conformance testing, conformity assessment, and other processes\nrelated to the maturity and adoption of standards to emerge. Some evidence of this maturity is\nalready starting to become manifest in the cloud standards landscape.\n\n                                       32\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "43",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 43,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "32"
+      },
+      "score": 0.015873015873015872,
+      "rank": 3
+    },
+    {
+      "id": "nist-p019-text-000",
+      "text": "3    THE NIST DEFINITION OF CLOUD COMPUTING 9\n\nCloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a\nshared pool of configurable computing resources (e.g., networks, servers, storage, applications, and\nservices) that can be rapidly provisioned and released with minimal management effort or service\nprovider interaction. This cloud model is composed of five essential characteristics, three service\nmodels, and four deployment models.\n\nEssential Characteristics:\n\n   On-demand self-service. A consumer can unilaterally provision computing capabilities, such as\n           server time and network storage, as needed automatically without requiring human\n            interaction with each service provider.\n\n   Broad network access. Capabilities are available over the network and accessed through\n           standard mechanisms that promote use by heterogeneous thin or thick client platforms\n             (e.g., mobile phones, tablets, laptops, and workstations).\n\n   Resource pooling. The provider’s computing resources are pooled to serve multiple consumers\n          using a multi-tenant model, with different physical and virtual resources dynamically\n          assigned and reassigned according to consumer demand. There is a sense of location\n          independence in that the customer generally has no control or knowledge over the exact\n           location of the provided resources but may be able to specify location at a higher level of\n           abstraction (e.g., country, state, or datacenter). Examples of resources include storage,\n           processing, memory, and network bandwidth.\n\n   Rapid  elasticity.  Capabilities can be  elastically provisioned and  released,  in some cases\n           automatically, to scale rapidly outward and inward commensurate with demand. To the\n          consumer, the capabilities available for provisioning often appear to be unlimited and\n          can be appropriated in any quantity at any time.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "19",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 19,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "8"
+      },
+      "score": 0.01639344262295082,
+      "rank": 2
+    },
+    {
+      "id": "nist-p057-text-000",
+      "text": "Some of the main security objectives for a cloud computing implementer should include:\n\n       •   Protect  consumers’  data  from  unauthorized  access,  disclosure,  modification  or\n           monitoring. This includes supporting identity management and access control policies\n            for authorized users accessing cloud services. This includes the ability of a customer to\n        make access to its data selectively available to other users.\n\n       •  Prevent unauthorized access to cloud computing infrastructure resources. This includes\n          implementing  security domains  that  have  logical  separation  between  computing\n           resources (e.g. logical separation of customer workloads running on the same physical\n           server by VM monitors [hypervisors] in a multi-tenant environment) and using secure-\n           by-default configurations.\n\n       •  Deploy in the cloud web applications designed and implemented for an Internet threat\n          model.\n\n       •  Challenges to prevent Internet browsers using cloud computing from attacks to mitigate\n          end-user security vulnerabilities. This includes taking measures to protect internet-\n          connected personal computing devices by applying security software, personal firewalls,\n         and patch maintenance.\n\n       •  Include access  control and  intrusion  detection and prevention  solutions  in cloud\n         computing implementations and conduct an independent assessment to verify that the\n           solutions  are  installed and  functional. This includes  traditional perimeter  security\n          measures in combination with the domain security model. Traditional perimeter security\n           includes  restricting physical access  to network and  devices;  protecting  individual\n         components from exploitation through security patch deployment; setting as default\n         most secure configurations; disabling all unused ports and services; using role-based\n           access control; monitoring audit trails; minimizing privileges to minimum necessary;\n          using antivirus software; and encrypting communications.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "57",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 57,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "46"
+      },
+      "score": 0.026856524873828405,
+      "rank": 1
+    },
+    {
+      "id": "nist-p052-text-000",
+      "text": "features and other internal features, and has an extensible, self-describing feature set. CIMI, more\nrecently developed and published in late 2012, has a tightly described calling sequence and also\nprovides features that conform to DMTF’s Common Information Model (CIM). Each of these\nstandard sets has seen significant uptake, and several available cloud system products either already\nimplement or plan to implement at least one of them. While these IaaS standard sets are so far\nseparate, OGF and DMTF have stated that they have a work register in place and that they continue\nto discuss the possibility of merging these efforts in the future.\n\nIn  PaaS  applications,  an  extensive  ecosystem  of  vendor-specific  products  that  are  not\ninterchangeable has emerged. A recent effort to produce a PaaS-specific standard22 has been started\nby the OASIS Cloud Application Management Protocol (CAMP) technical committee, with support\nfrom several industry participants, and is making rapid progress towards producing a workable\nspecification.\n\nIn the case where a SaaS application is consumed through a web browser, there may be many\nstandards that are used to achieve interoperability between what is essentially a web server and the\nuser’s browser, such as IP (v4, v6), TCP, HTTP, SSL/TLS, HTML, XML, REST, Atom,\nAtomPub, RSS, and JavaScript/JSON. None of these web standards are cloud-specific, and these\nsame standards are being used in many web browser-based management interfaces.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "52",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 52,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "41"
+      },
+      "score": 0.01639344262295082,
+      "rank": 3
+    },
+    {
+      "id": "nist-p081-text-000",
+      "text": "9.1.1   SAAS FUNCTIONAL INTERFACES\n\nThe varieties of the SaaS applications determine what can be consumed by the SaaS consumer.\nThere are varying degrees of functional standardization. SaaS applications are mainly available by\nusing a web browser, and some are consumed as a web service using other application clients, such\nas standalone desktop applications and mobile applications. Even as most SaaS applications are\nusing web and web service standards to deliver these application capabilities, application-specific\ndata and metadata standards remain standardization gaps in portability and interoperability. For\nexample, email and office productivity application data format standards and interfaces are required\nto achieve interoperability and portability for migrating from existing systems to cloud systems.\n\nAnother important area for standardization is the metadata format and interfaces, in particular, to\nsupport compliance needs. For example, standard metadata format and APIs to describe and\ngenerate e-discovery metadata  for emails, document management systems,  financial account\nsystems, etc.,  will help government consumers to leverage commercial off-the-shelf (COTS) and\ngovernment off-the-shelf (GOTS) software products to meet e-discovery requirements. This is\nespecially important when email messaging systems, content management systems, or Enterprise\nResource Planning (ERP) financial systems migrate to a SaaS model.\n\n9.1.2   SAAS SELF-SERVICE MANAGEMENT INTERFACES\n\nDue to the diverse domain and functional differences among SaaS offerings, the management\ninterfaces used for the consumers to administer and customize the application functionalities are\nalso very diverse. However, certain management functionalities are common, such as those related\nto user account and credential management. These common management functionalities represent\ncandidates for interoperability standardization.\n\n9.1.3   PAAS FUNCTIONAL INTERFACES\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "81",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 81,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "70"
+      },
+      "score": 0.016129032258064516,
+      "rank": 4
+    },
+    {
+      "id": "nist-p100-text-001",
+      "text": "The ATIS Cloud Services Forum (CSF) facilitates the adoption and advancement of cloud services\nfrom a network and IT perspective. Drawing upon business use cases that leverage cloud services’\npotential, the Forum addresses industry priorities and develops implementable solutions for this\nevolving marketplace. CSF is working to ensure that cloud services – as offered by service\nproviders – are quickly operationalized to facilitate the delivery of interoperable, secure, and\nmanaged services. Current priorities include inter-carrier telepresence, content distribution network\ninterconnection, cloud services framework, virtual desktop, virtual private network, and\ndevelopment of a cloud services checklist for onboarding.\n\nCloudAudit\n\nCloudAudit (A6), a working group under the auspices of the CSA (Cloud Security Alliance).\nFounded in January 2010, CloudAudit aims to enable cloud service providers to offer their clients\nsome degree of transparency in an automated, programmatic manner. The group addresses the\nchallenges of lack of transparency and audit requirements in a cloud-based system. The official\nobjective of this working group is to develop a common interface for the automation of the Audit,\nAssertion, Assessment and Assurance of IaaS (infrastructure as a service), PaaS (platform as a\nservice) and SaaS (software as a service) environments. As of October 2010, CloudAudit is\nofficially under the auspices of the Cloud Security Alliance.\n\n                                       89\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "100",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 100,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "89"
+      },
+      "score": 0.016129032258064516,
+      "rank": 5
+    },
+    {
+      "id": "nist-p026-text-000",
+      "text": "Figure 3 – Example of Services Available to a Cloud Consumer\n\nSaaS  applications are usually deployed as hosted services and  are accessed via a network\nconnecting SaaS consumers and providers. The SaaS consumers can be organizations that provide\ntheir members  with  access  to  software  applications, end  users who  directly use  software\napplications, or software application administrators who configure applications for end users. SaaS\nconsumers access and use applications on demand, and can be billed on the number of consumers or\nthe amount of consumed services. The latter can be measured in terms of the time in use, the\nnetwork bandwidth consumed, or the amount/duration of data stored.\n\n                                       15\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "26",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 26,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "15"
+      },
+      "score": 0.015873015873015872,
+      "rank": 6
+    },
+    {
+      "id": "nist-p075-text-001",
+      "text": "Possible Standards: AS4, OAGIS, NoSQL, GridFTP, DFDL, CDMI\n\n                                       64\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "75",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 75,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "64"
+      },
+      "score": 0.01639344262295082,
+      "rank": 1
+    },
+    {
+      "id": "nist-p102-text-002",
+      "text": "JTC 1 SC 27 (IT Security Techniques) is the one JTC 1 SC that is completely focused on cyber\nsecurity standardization. There are currently three cloud security standards projects in SC27.\n\n                                       91\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "102",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 102,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "91"
+      },
+      "score": 0.016129032258064516,
+      "rank": 2
+    },
+    {
+      "id": "nist-p069-text-001",
+      "text": "                        Table 13 – Interoperability Standards\n\n                                       58\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "69",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 69,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "58"
+      },
+      "score": 0.015873015873015872,
+      "rank": 3
+    },
+    {
+      "id": "nist-p036-text-001",
+      "text": "The “Cloud First”21 directive provided by the Federal CIO is a more general expansion of this\nanalysis to multiple interacting current systems and cloud implementations. This expansion is\nintended to support evolving business processes as further cloud deployments are implemented.\n\n21 25 Point Implementation Plan to Reform Federal Information Technology Management\n    http://www.dhs.gov/sites/default/files/publications/digital-strategy/25-point-implementation-plan-to-reform-federal-\n    it.pdf\n\n                                       25\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "36",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 36,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "25"
+      },
+      "score": 0.015625,
+      "rank": 4
+    },
+    {
+      "id": "nist-p113-text-000",
+      "text": "The Standards Selection Criteria also provides guidance for moving through the standards life cycle\nthat changes the category of a standard from “emerging” to “mandated” to “inactive/retired.”\n\n                   Figure 13 – DoD DISR Standards Selection Process\n\n                                       102\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "113",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "text",
+        "pdf_page": 113,
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "102"
+      },
+      "score": 0.015384615384615385,
+      "rank": 5
+    },
+    {
+      "id": "nist-p050-table-00-000",
+      "text": "Table 4 – Standards Maturity Model\nColumns: Maturity Level | Definition\n\nNo Standard | SDOs have not initiated any standard development projects.\nUnder Development | SDOs have initiated standard development projects. Open source projects have been initiated.\nApproved Standard | SDO-approved standard is available to public. Some SDOs require multiple implementations before final designation as a “standard.”\nTechnically Stable | The standard is stable and its technical content is mature. No major revisions or amendments are in progress that will affect backward compatibility with the original standard.\nReference Implementation | Reference implementation is available.\nTesting | Test tools are available. Testing and test reports are available.\nCommercial Availability | Several products/services from different vendors exist on the market to implement this standard.\nMarket Acceptance | Widespread use by many groups. De facto or de jure market acceptance of standards-based products/services.\nSunset | Newer standards (revisions or replacements) are under development.\n\n",
+      "source_id": "nist",
+      "source": "NIST.SP.500-291r2.pdf",
+      "page": "50",
+      "metadata": {
+        "bbox": [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ],
+        "kind": "table",
+        "image": "data\\processed\\810c2b69a87e\\page-050.png",
+        "label": "Table 4 – Standards Maturity Model",
+        "pdf_page": 50,
+        "visual_id": "nist-p050-table-00",
+        "pdf_sha256": "810c2b69a87e0f0a1b68bb464b90408aa1fec7faacd61d6d8c2a65ec144b2b2a",
+        "printed_page": "39",
+        "uncertainties": [
+          "The table formatting suggests some multi-line row labels, but the visible content is transcribed as plain text.",
+          "No figure is visible on this page."
+        ],
+        "human_verified": false,
+        "extraction_model": "gpt-5.4-mini"
+      },
+      "score": 0.015151515151515152,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T14:58:33.016301+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 418,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 97,
+        "output_tokens_details": {
+          "reasoning_tokens": 60
+        },
+        "total_tokens": 515
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:35.610680+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3106,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 72,
+        "output_tokens_details": {
+          "reasoning_tokens": 41
+        },
+        "total_tokens": 3178
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:38.123542+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 5928,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2944,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 90,
+        "output_tokens_details": {
+          "reasoning_tokens": 58
+        },
+        "total_tokens": 6018
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:40.808248+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 8698,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 5760,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 53
+        },
+        "total_tokens": 8775
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:43.088427+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 11672,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 8576,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 39,
+        "output_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "total_tokens": 11711
+      }
+    },
+    {
+      "at": "2026-11-16T14:58:47.318583+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 13244,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 11520,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 308,
+        "output_tokens_details": {
+          "reasoning_tokens": 249
+        },
+        "total_tokens": 13552
+      }
+    }
+  ],
+  "seconds": 16.632751400000416,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review"
+}

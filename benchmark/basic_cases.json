@@ -1,0 +1,486 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "How can centering be disabled while retaining the option to scale features with StandardScaler?",
+    "expected_answer": "Set with_mean=False.",
+    "gold_source_id": "preprocessing",
+    "gold_page": "preprocessing:002",
+    "evidence_quote": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+    "gold_evidence": [
+      {
+        "source_id": "preprocessing",
+        "page": "preprocessing:002",
+        "quote": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+        "start": 0,
+        "end": 144
+      }
+    ],
+    "filter": {
+      "topic": "preprocessing"
+    },
+    "context": "User-supplied search scope: topic=preprocessing",
+    "filter_origin": "Assumed user input supplied before retrieval; never inferred from gold.",
+    "answerable": true
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Which QuantileTransformer setting maps values to a normal rather than uniform distribution?",
+    "expected_answer": "output_distribution='normal'.",
+    "gold_source_id": "preprocessing",
+    "gold_page": "preprocessing:005",
+    "evidence_quote": "It is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+    "gold_evidence": [
+      {
+        "source_id": "preprocessing",
+        "page": "preprocessing:005",
+        "quote": "It is also possible to map data to a normal distribution using QuantileTransformer by setting output_distribution='normal' . Using the earlier example with the iris dataset:",
+        "start": 879,
+        "end": 1052
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "What encoding is used for an unknown category when OneHotEncoder ignores unknown values and drop is not None?",
+    "expected_answer": "All zeros.",
+    "gold_source_id": "preprocessing",
+    "gold_page": "preprocessing:007",
+    "evidence_quote": "When handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+    "gold_evidence": [
+      {
+        "source_id": "preprocessing",
+        "page": "preprocessing:007",
+        "quote": "When handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros:",
+        "start": 2635,
+        "end": 2734
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "How do univariate and multivariate imputation differ in the features used to estimate missing values?",
+    "expected_answer": "Univariate uses the same feature only; multivariate uses all available feature dimensions.",
+    "gold_source_id": "impute",
+    "gold_page": "impute:001",
+    "evidence_quote": "One type of imputation algorithm is univariate, which imputes values in the i-th feature dimension using only non-missing values in that feature dimension (e.g. SimpleImputer ). By contrast, multivariate imputation algorithms use the entire set of available feature dimensions to estimate the missing values (e.g. IterativeImputer ).",
+    "gold_evidence": [
+      {
+        "source_id": "impute",
+        "page": "impute:001",
+        "quote": "One type of imputation algorithm is univariate, which imputes values in the i-th feature dimension using only non-missing values in that feature dimension (e.g. SimpleImputer ). By contrast, multivariate imputation algorithms use the entire set of available feature dimensions to estimate the missing values (e.g. IterativeImputer ).",
+        "start": 717,
+        "end": 1050
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Which basic replacement strategies does SimpleImputer provide for missing values?",
+    "expected_answer": "A constant, or per-column mean, median, or most frequent value.",
+    "gold_source_id": "impute",
+    "gold_page": "impute:001",
+    "evidence_quote": "The SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.",
+    "gold_evidence": [
+      {
+        "source_id": "impute",
+        "page": "impute:001",
+        "quote": "The SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.",
+        "start": 1090,
+        "end": 1405
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "How can an imputer preserve information about which entries were originally missing?",
+    "expected_answer": "Use MissingIndicator, or add_indicator=True on SimpleImputer or IterativeImputer.",
+    "gold_source_id": "impute",
+    "gold_page": "impute:003",
+    "evidence_quote": "The MissingIndicator transformer is useful to transform a dataset into corresponding binary matrix indicating the presence of missing values in the dataset. This transformation is useful in conjunction with imputation. When using imputation, preserving the information about which values had been missing can be informative. Note that both the SimpleImputer and IterativeImputer have the boolean parameter add_indicator ( False by default) which when set to True provides a convenient way of stacking the output of the MissingIndicator transformer with the output of the imputer.",
+    "gold_evidence": [
+      {
+        "source_id": "impute",
+        "page": "impute:003",
+        "quote": "The MissingIndicator transformer is useful to transform a dataset into corresponding binary matrix indicating the presence of missing values in the dataset. This transformation is useful in conjunction with imputation. When using imputation, preserving the information about which values had been missing can be informative. Note that both the SimpleImputer and IterativeImputer have the boolean parameter add_indicator ( False by default) which when set to True provides a convenient way of stacking the output of the MissingIndicator transformer with the output of the imputer.",
+        "start": 1819,
+        "end": 2398
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Which steps of a scikit-learn Pipeline are required to be transformers, and what can the final step be?",
+    "expected_answer": "All steps except the last must be transformers; the last can be a transformer, predictor, or clustering estimator.",
+    "gold_source_id": "compose",
+    "gold_page": "compose:001",
+    "evidence_quote": "To build a composite estimator, transformers are usually combined with other transformers or with predictors (such as classifiers or regressors). The most common tool used for composing estimators is a Pipeline . Pipelines require all steps except the last to be a transformer .",
+    "gold_evidence": [
+      {
+        "source_id": "compose",
+        "page": "compose:001",
+        "quote": "To build a composite estimator, transformers are usually combined with other transformers or with predictors (such as classifiers or regressors). The most common tool used for composing estimators is a Pipeline . Pipelines require all steps except the last to be a transformer .",
+        "start": 41,
+        "end": 319
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "What syntax addresses a parameter belonging to an estimator nested inside a Pipeline?",
+    "expected_answer": "<estimator>__<parameter>.",
+    "gold_source_id": "compose",
+    "gold_page": "compose:002",
+    "evidence_quote": "It is common to adjust the parameters of an estimator within a pipeline. This parameter is therefore nested because it belongs to a particular sub-step. Parameters of the estimators in the pipeline are accessible using the <estimator>__<parameter> syntax:",
+    "gold_evidence": [
+      {
+        "source_id": "compose",
+        "page": "compose:002",
+        "quote": "It is common to adjust the parameters of an estimator within a pipeline. This parameter is therefore nested because it belongs to a particular sub-step. Parameters of the estimators in the pipeline are accessible using the <estimator>__<parameter> syntax:",
+        "start": 1393,
+        "end": 1648
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "When Pipeline caching is enabled, which step is never cached, even if it is a transformer?",
+    "expected_answer": "The last step is never cached.",
+    "gold_source_id": "compose",
+    "gold_page": "compose:002",
+    "evidence_quote": "Fitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.",
+    "gold_evidence": [
+      {
+        "source_id": "compose",
+        "page": "compose:002",
+        "quote": "Fitting transformers may be computationally expensive. With its memory parameter set, Pipeline will cache each transformer after calling fit . This feature is used to avoid computing the fit transformers within a pipeline if the parameters and input data are identical. A typical example is the case of a grid search in which the transformers can be fitted only once and reused for each configuration. The last step will never be cached, even if it is a transformer.",
+        "start": 2885,
+        "end": 3351
+      }
+    ],
+    "filter": {
+      "topic": "preprocessing"
+    },
+    "context": "User-supplied search scope: topic=preprocessing",
+    "filter_origin": "Assumed user input supplied before retrieval; never inferred from gold.",
+    "answerable": true
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Which cross-validation splitter prevents samples belonging to the same subject or group from appearing in both training and testing?",
+    "expected_answer": "GroupKFold.",
+    "gold_source_id": "cross_validation",
+    "gold_page": "cross_validation:007",
+    "evidence_quote": "GroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.",
+    "gold_evidence": [
+      {
+        "source_id": "cross_validation",
+        "page": "cross_validation:007",
+        "quote": "GroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets. For example if the data is obtained from different subjects with several samples per-subject and if the model is flexible enough to learn from highly person specific features it could fail to generalize to new subjects. GroupKFold makes it possible to detect this kind of overfitting situations.",
+        "start": 170,
+        "end": 589
+      }
+    ],
+    "filter": {
+      "topic": "model_selection"
+    },
+    "context": "User-supplied search scope: topic=model_selection",
+    "filter_origin": "Assumed user input supplied before retrieval; never inferred from gold.",
+    "answerable": true
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "What restriction must a cross-validation strategy satisfy to be used with cross_val_predict?",
+    "expected_answer": "Every input element must be assigned to a test set exactly once.",
+    "gold_source_id": "cross_validation",
+    "gold_page": "cross_validation:003",
+    "evidence_quote": "The function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).",
+    "gold_evidence": [
+      {
+        "source_id": "cross_validation",
+        "page": "cross_validation:003",
+        "quote": "The function cross_val_predict has a similar interface to cross_val_score , but returns, for each element in the input, the prediction that was obtained for that element when it was in the test set. Only cross-validation strategies that assign all elements to a test set exactly once can be used (otherwise, an exception is raised).",
+        "start": 2165,
+        "end": 2497
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "How does GridSearchCV explore a parameter space differently from RandomizedSearchCV?",
+    "expected_answer": "GridSearchCV exhaustively tries combinations; RandomizedSearchCV samples a specified number of candidates.",
+    "gold_source_id": "grid_search",
+    "gold_page": "grid_search:001",
+    "evidence_quote": "Two generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.",
+    "gold_evidence": [
+      {
+        "source_id": "grid_search",
+        "page": "grid_search:001",
+        "quote": "Two generic approaches to parameter search are provided in scikit-learn: for given values, GridSearchCV exhaustively considers all parameter combinations, while RandomizedSearchCV can sample a given number of candidates from a parameter space with a specified distribution. Both these tools have successive halving counterparts HalvingGridSearchCV and HalvingRandomSearchCV , which can be much faster at finding a good parameter combination.",
+        "start": 846,
+        "end": 1287
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "When evaluating several metrics during parameter search, how is the metric used to choose and refit the best estimator specified?",
+    "expected_answer": "Set refit to the chosen metric name; use refit=False to avoid refitting.",
+    "gold_source_id": "grid_search",
+    "gold_page": "grid_search:007",
+    "evidence_quote": "When specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.",
+    "gold_evidence": [
+      {
+        "source_id": "grid_search",
+        "page": "grid_search:007",
+        "quote": "When specifying multiple metrics, the refit parameter must be set to the metric (string) for which the best_params_ will be found and used to build the best_estimator_ on the whole dataset. If the search should not be refit, set refit=False . Leaving refit to the default value None will result in an error when using multiple metrics.",
+        "start": 1633,
+        "end": 1968
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Why do scoring names for losses such as mean squared error have a neg_ prefix?",
+    "expected_answer": "Scorers use higher-is-better, so loss metrics are negated.",
+    "gold_source_id": "model_evaluation",
+    "gold_page": "model_evaluation:003",
+    "evidence_quote": "For the most common use cases, you can designate a scorer object with the scoring parameter via a string name; the table below shows all possible values. All scorer objects follow the convention that higher return values are better than lower return values . Thus metrics which measure the distance between the model and the data, like metrics.mean_squared_error , are available as ‘neg_mean_squared_error’ which return the negated value of the metric.",
+    "gold_evidence": [
+      {
+        "source_id": "model_evaluation",
+        "page": "model_evaluation:003",
+        "quote": "For the most common use cases, you can designate a scorer object with the scoring parameter via a string name; the table below shows all possible values. All scorer objects follow the convention that higher return values are better than lower return values . Thus metrics which measure the distance between the model and the data, like metrics.mean_squared_error , are available as ‘neg_mean_squared_error’ which return the negated value of the metric.",
+        "start": 792,
+        "end": 1244
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "How do precision and recall differ in terms of avoiding false positives and finding positive samples?",
+    "expected_answer": "Precision avoids labeling negatives as positive; recall finds all positive samples.",
+    "gold_source_id": "model_evaluation",
+    "gold_page": "model_evaluation:010",
+    "evidence_quote": "Intuitively, precision is the ability of the classifier not to label as positive a sample that is negative, and recall is the ability of the classifier to find all the positive samples.",
+    "gold_evidence": [
+      {
+        "source_id": "model_evaluation",
+        "page": "model_evaluation:010",
+        "quote": "Intuitively, precision is the ability of the classifier not to label as positive a sample that is negative, and recall is the ability of the classifier to find all the positive samples.",
+        "start": 1865,
+        "end": 2050
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "question": "Which scaler is suggested when outliers make mean and variance based scaling unsuitable, and why?",
+    "expected_answer": "RobustScaler uses robust estimates of center and range.",
+    "gold_source_id": "preprocessing",
+    "gold_page": "preprocessing:003",
+    "evidence_quote": "If your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.",
+    "gold_evidence": [
+      {
+        "source_id": "preprocessing",
+        "page": "preprocessing:003",
+        "quote": "If your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.",
+        "start": 554,
+        "end": 815
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "Which distance is used by default for nearest-neighbor imputation, and how are neighbor values combined?",
+    "expected_answer": "nan_euclidean_distances; uniform or distance-weighted averaging.",
+    "gold_source_id": "impute",
+    "gold_page": "impute:002",
+    "evidence_quote": "The KNNImputer class provides imputation for filling in missing values using the k-Nearest Neighbors approach. By default, a euclidean distance metric that supports missing values, nan_euclidean_distances , is used to find the nearest neighbors. Each missing feature is imputed using values from n_neighbors nearest neighbors that have a value for the feature. The feature of the neighbors are averaged uniformly or weighted by distance to each neighbor.",
+    "gold_evidence": [
+      {
+        "source_id": "impute",
+        "page": "impute:002",
+        "quote": "The KNNImputer class provides imputation for filling in missing values using the k-Nearest Neighbors approach. By default, a euclidean distance metric that supports missing values, nan_euclidean_distances , is used to find the nearest neighbors. Each missing feature is imputed using values from n_neighbors nearest neighbors that have a value for the feature. The feature of the neighbors are averaged uniformly or weighted by distance to each neighbor.",
+        "start": 3382,
+        "end": 3836
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "How does FeatureUnion fit its transformers and combine their outputs?",
+    "expected_answer": "Fits each independently, applies them in parallel, concatenates feature matrices side-by-side.",
+    "gold_source_id": "compose",
+    "gold_page": "compose:004",
+    "evidence_quote": "FeatureUnion combines several transformer objects into a new transformer that combines their output. A FeatureUnion takes a list of transformer objects. During fitting, each of these is fit to the data independently. The transformers are applied in parallel, and the feature matrices they output are concatenated side-by-side into a larger matrix.",
+    "gold_evidence": [
+      {
+        "source_id": "compose",
+        "page": "compose:004",
+        "quote": "FeatureUnion combines several transformer objects into a new transformer that combines their output. A FeatureUnion takes a list of transformer objects. During fitting, each of these is fit to the data independently. The transformers are applied in parallel, and the feature matrices they output are concatenated side-by-side into a larger matrix.",
+        "start": 1317,
+        "end": 1664
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "Why can ordinary KFold or ShuffleSplit misestimate performance on time series, and which splitter is suggested?",
+    "expected_answer": "Nearby observations are correlated, violating the iid assumption; use TimeSeriesSplit to evaluate future observations.",
+    "gold_source_id": "cross_validation",
+    "gold_page": "cross_validation:009",
+    "evidence_quote": "Time series data is characterized by the correlation between observations that are near in time ( autocorrelation ). However, classical cross-validation techniques such as KFold and ShuffleSplit assume the samples are independent and identically distributed, and would result in unreasonable correlation between training and testing instances (yielding poor estimates of generalization error) on time series data. Therefore, it is very important to evaluate our model for time series data on the “future” observations least like those that are used to train the model. To achieve this, one solution is provided by TimeSeriesSplit .",
+    "gold_evidence": [
+      {
+        "source_id": "cross_validation",
+        "page": "cross_validation:009",
+        "quote": "Time series data is characterized by the correlation between observations that are near in time ( autocorrelation ). However, classical cross-validation techniques such as KFold and ShuffleSplit assume the samples are independent and identically distributed, and would result in unreasonable correlation between training and testing instances (yielding poor estimates of generalization error) on time series data. Therefore, it is very important to evaluate our model for time series data on the “future” observations least like those that are used to train the model. To achieve this, one solution is provided by TimeSeriesSplit .",
+        "start": 833,
+        "end": 1464
+      }
+    ],
+    "filter": {
+      "topic": "model_selection"
+    },
+    "context": "User-supplied search scope: topic=model_selection",
+    "filter_origin": "Assumed user input supplied before retrieval; never inferred from gold.",
+    "answerable": true
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "What score is assigned by default when fitting a parameter setting fails, and how can an exception be requested instead?",
+    "expected_answer": "np.nan by default; set error_score=\"raise\".",
+    "gold_source_id": "grid_search",
+    "gold_page": "grid_search:008",
+    "evidence_quote": "Some parameter settings may result in a failure to fit one or more folds of the data. By default, the score for those settings will be np.nan . This can be controlled by setting error_score=\"raise\" to raise an exception if one fit fails, or for example error_score=0 to set another value for the score of failing parameter combinations.",
+    "gold_evidence": [
+      {
+        "source_id": "grid_search",
+        "page": "grid_search:008",
+        "quote": "Some parameter settings may result in a failure to fit one or more folds of the data. By default, the score for those settings will be np.nan . This can be controlled by setting error_score=\"raise\" to raise an exception if one fit fails, or for example error_score=0 to set another value for the score of failing parameter combinations.",
+        "start": 948,
+        "end": 1284
+      }
+    ],
+    "filter": {},
+    "context": "",
+    "filter_origin": null,
+    "answerable": true
+  },
+  {
+    "id": "q21",
+    "split": "dev",
+    "question": "What is the minimum RAM in GB required by scikit-learn for every possible dataset?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus does not specify a universal RAM minimum across all datasets.",
+    "absence_review": "pending_human_confirmation"
+  },
+  {
+    "id": "q22",
+    "split": "dev",
+    "question": "What is the exact future release date of scikit-learn version 10?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus snapshot does not document a release date for version 10.",
+    "absence_review": "pending_human_confirmation"
+  },
+  {
+    "id": "q23",
+    "split": "test",
+    "question": "What is the official dollar price of a paid scikit-learn GridSearchCV subscription?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus does not describe a paid GridSearchCV subscription or price.",
+    "absence_review": "pending_human_confirmation"
+  },
+  {
+    "id": "q24",
+    "split": "test",
+    "question": "What is the universally guaranteed classification accuracy for every dataset when using StandardScaler?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus does not guarantee classification accuracy for every dataset.",
+    "absence_review": "pending_human_confirmation"
+  }
+]

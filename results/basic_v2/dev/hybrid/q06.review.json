@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source impute:003, section 8.4.6 “Marking imputed values,” explicitly says MissingIndicator can preserve which values were missing, and that SimpleImputer and IterativeImputer have add_indicator=False by default, which when set to True stacks MissingIndicator output with the imputer output. The answer matches this exactly.",
+  "query_id": "q06",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "3fae941f89f2f5fe954b48207a08733c5d69c3cda236fce5847be82ae723e58e",
+  "alternative_cited_pages": [
+    "impute:003"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

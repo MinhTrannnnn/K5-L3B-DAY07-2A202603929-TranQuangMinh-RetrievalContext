@@ -1,0 +1,23 @@
+{
+  "context_grade": 2,
+  "answer_grade": 2,
+  "answer_correct": true,
+  "abstention_correct": null,
+  "citation_support": [
+    true
+  ],
+  "passed": true,
+  "gold_issue": false,
+  "reason": "Source preprocessing:012 states that only interaction terms are obtained with `interaction_only=True`, and the example output shows no squared terms. The answer matches this setting and is fully supported.",
+  "query_id": "N01",
+  "group": "basic",
+  "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+  "review_model": "gpt-5.4-mini-2026-03-17",
+  "human_confirmed": false,
+  "source_verification": "original_source_units",
+  "trace_sha256": "a245132d9f4e651d7114a670e4adddc2134cc916657f494a237239c3d2bd4a40",
+  "alternative_cited_pages": [
+    "preprocessing:012"
+  ],
+  "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending."
+}

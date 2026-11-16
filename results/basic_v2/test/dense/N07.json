@@ -1,0 +1,1523 @@
+{
+  "status": "abstain",
+  "answer": "The retrieved documents do not state any cloud-computing per-hour price for RepeatedKFold. They describe RepeatedKFold only as a cross-validation splitter that repeats KFold and provide an example of its splits, so no exact hourly charge can be extracted from these documents.",
+  "citations": [],
+  "question": "What exact per-hour cloud-computing price does RepeatedKFold charge according to these documents?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "dense",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "RepeatedKFold cloud-computing price per-hour",
+      "results": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.5629789493692557,
+          "rank": 1
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.515071480567964,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5066997702896741,
+          "rank": 3
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.49665418287192775,
+          "rank": 4
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.4926964636264133,
+          "rank": 5
+        },
+        {
+          "id": "aeadbea5653e4e3ce9084d85",
+          "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 3505,
+            "start": 1863,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 354
+          },
+          "score": 0.4889601469039917,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.5629789493692557,
+          "rank": 1
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.515071480567964,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5066997702896741,
+          "rank": 3
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.49665418287192775,
+          "rank": 4
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.4926964636264133,
+          "rank": 5
+        },
+        {
+          "id": "aeadbea5653e4e3ce9084d85",
+          "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 3505,
+            "start": 1863,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 354
+          },
+          "score": 0.4889601469039917,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.14662669999961508
+    },
+    {
+      "event": "search",
+      "query": "\"RepeatedKFold\" price cloud computing per hour",
+      "results": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.583457315954131,
+          "rank": 1
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.5317725818292758,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5187389541423953,
+          "rank": 3
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.5083276922507478,
+          "rank": 4
+        },
+        {
+          "id": "ee86083574a4571af54dd178",
+          "text": "3.1.2.2.1. Stratified K-fold\n\nStratifiedKFold is a variation of K-fold which returns stratified folds: each set contains approximately the same percentage of samples of each target class as the complete set.\n\nHere is an example of stratified 3-fold cross-validation on a dataset with 50 samples from two unbalanced classes. We show the number of samples in each class and compare with KFold .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 1175,
+            "start": 783,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 96
+          },
+          "score": 0.5028740760238116,
+          "rank": 5
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.49885314696151983,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.583457315954131,
+          "rank": 1
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.5317725818292758,
+          "rank": 2
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5187389541423953,
+          "rank": 3
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.5083276922507478,
+          "rank": 4
+        },
+        {
+          "id": "ee86083574a4571af54dd178",
+          "text": "3.1.2.2.1. Stratified K-fold\n\nStratifiedKFold is a variation of K-fold which returns stratified folds: each set contains approximately the same percentage of samples of each target class as the complete set.\n\nHere is an example of stratified 3-fold cross-validation on a dataset with 50 samples from two unbalanced classes. We show the number of samples in each class and compare with KFold .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 1175,
+            "start": 783,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 96
+          },
+          "score": 0.5028740760238116,
+          "rank": 5
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.49885314696151983,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.10927519999677315
+    },
+    {
+      "event": "search",
+      "query": "RepeatedKFold cloud computing hourly price",
+      "results": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.5704854386755572,
+          "rank": 1
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.5207756447329742,
+          "rank": 2
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.5083476002009162,
+          "rank": 3
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5056854185053465,
+          "rank": 4
+        },
+        {
+          "id": "aeadbea5653e4e3ce9084d85",
+          "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 3505,
+            "start": 1863,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 354
+          },
+          "score": 0.48755955696105957,
+          "rank": 5
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.4871888451092756,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.5704854386755572,
+          "rank": 1
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.5207756447329742,
+          "rank": 2
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.5083476002009162,
+          "rank": 3
+        },
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.5056854185053465,
+          "rank": 4
+        },
+        {
+          "id": "aeadbea5653e4e3ce9084d85",
+          "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 3505,
+            "start": 1863,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 354
+          },
+          "score": 0.48755955696105957,
+          "rank": 5
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.4871888451092756,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.14375610000206507
+    },
+    {
+      "event": "search",
+      "query": "\"cloud-computing\" price per hour RepeatedKFold",
+      "results": [
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.4844574648788613,
+          "rank": 1
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.4789594436932274,
+          "rank": 2
+        },
+        {
+          "id": "76e0a214442f1912164e9f60",
+          "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3241,
+            "start": 1887,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 348
+          },
+          "score": 0.45424619589768755,
+          "rank": 3
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.45141860842705095,
+          "rank": 4
+        },
+        {
+          "id": "564f73a418e205c6e9cad22d",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                            factor=2,\n...                            max_resources=40,\n...                            aggressive_elimination=True,\n...                            ).fit(X, y)\n>>> sh.n_resources_\n[20, 20, 40]\n>>> sh.n_candidates_\n[6, 3, 2]\n\nNotice that we end with 2 candidates at the last iteration since we have eliminated enough candidates during the first iterations, using n_resources = min_resources = 20 .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:006",
+          "metadata": {
+            "end": 1888,
+            "start": 1396,
+            "topic": "model_selection",
+            "anchor": "aggressive-elimination-of-candidates",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.1. Aggressive elimination of candidates",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21823,
+            "unit_start": 18303,
+            "token_count": 131
+          },
+          "score": 0.44910002058148346,
+          "rank": 5
+        },
+        {
+          "id": "027a8f1d804f4bba0be3bd4b",
+          "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 1631,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "which-scoring-function-should-i-use",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 360
+          },
+          "score": 0.44762462689729854,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "ab2621291f798dbea23b764e",
+          "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 2629,
+            "start": 1319,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 382
+          },
+          "score": 0.4844574648788613,
+          "rank": 1
+        },
+        {
+          "id": "4edc19802bb125636088e274",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:005",
+          "metadata": {
+            "end": 3533,
+            "start": 2631,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18301,
+            "unit_start": 14768,
+            "token_count": 226
+          },
+          "score": 0.4789594436932274,
+          "rank": 2
+        },
+        {
+          "id": "76e0a214442f1912164e9f60",
+          "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:001",
+          "metadata": {
+            "end": 3241,
+            "start": 1887,
+            "topic": "model_selection",
+            "anchor": "exhaustive-grid-search",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3625,
+            "unit_start": 0,
+            "token_count": 348
+          },
+          "score": 0.45424619589768755,
+          "rank": 3
+        },
+        {
+          "id": "b00d737a27368c64074d6f05",
+          "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 1861,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 376
+          },
+          "score": 0.45141860842705095,
+          "rank": 4
+        },
+        {
+          "id": "564f73a418e205c6e9cad22d",
+          "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                            factor=2,\n...                            max_resources=40,\n...                            aggressive_elimination=True,\n...                            ).fit(X, y)\n>>> sh.n_resources_\n[20, 20, 40]\n>>> sh.n_candidates_\n[6, 3, 2]\n\nNotice that we end with 2 candidates at the last iteration since we have eliminated enough candidates during the first iterations, using n_resources = min_resources = 20 .",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:006",
+          "metadata": {
+            "end": 1888,
+            "start": 1396,
+            "topic": "model_selection",
+            "anchor": "aggressive-elimination-of-candidates",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.1. Aggressive elimination of candidates",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21823,
+            "unit_start": 18303,
+            "token_count": 131
+          },
+          "score": 0.44910002058148346,
+          "rank": 5
+        },
+        {
+          "id": "027a8f1d804f4bba0be3bd4b",
+          "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:002",
+          "metadata": {
+            "end": 1631,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "which-scoring-function-should-i-use",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7343,
+            "unit_start": 3797,
+            "token_count": 360
+          },
+          "score": 0.44762462689729854,
+          "rank": 6
+        }
+      ],
+      "method": "dense",
+      "filters": {},
+      "seconds": 0.17106429999694228
+    }
+  ],
+  "context": [
+    {
+      "id": "6e5607a24622af6e4ce1101e",
+      "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2735,
+        "start": 2094,
+        "topic": "model_selection",
+        "anchor": "repeated-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 245
+      },
+      "score": 0.5704854386755572,
+      "rank": 1
+    },
+    {
+      "id": "6c9cb2d2ebc2cdf137005b53",
+      "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2210,
+        "start": 1177,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 372
+      },
+      "score": 0.5207756447329742,
+      "rank": 2
+    },
+    {
+      "id": "ab2621291f798dbea23b764e",
+      "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 2629,
+        "start": 1319,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 382
+      },
+      "score": 0.4844574648788613,
+      "rank": 1
+    },
+    {
+      "id": "4edc19802bb125636088e274",
+      "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 3533,
+        "start": 2631,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 226
+      },
+      "score": 0.4789594436932274,
+      "rank": 2
+    },
+    {
+      "id": "b00d737a27368c64074d6f05",
+      "text": "Note\n\nThe resource increase chosen should be large enough so that a large improvement in scores is obtained when taking into account statistical significance.\n\nAs illustrated in the figure below, only a subset of candidates ‘survive’ until the last iteration. These are the candidates that have consistently ranked among the top-scoring candidates across all iterations. Each iteration is allocated an increasing amount of resources per candidate, here the number of samples.\n\nWe here briefly describe the main parameters, but each parameter and their interactions are described more in detail in the dropdown section below. The factor (> 1) parameter controls the rate at which the resources grow, and the rate at which the number of candidates decreases. In each iteration, the number of resources per candidate is multiplied by factor and the number of candidates is divided by the same factor. Along with resource and min_resources , factor is the most important parameter to control the search in our implementation, though a value of 3 usually works well. factor effectively controls the number of iterations in HalvingGridSearchCV and the number of candidates (by default) and iterations in HalvingRandomSearchCV . aggressive_elimination=True can also be used if the number of available resources is small. More control is available through tuning the min_resources parameter.\n\nThese estimators are still experimental : their predictions and their API might change without any deprecation cycle. To use them, you need to explicitly import enable_halving_search_cv :\n\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> from sklearn.model_selection import HalvingRandomSearchCV\n\nExamples\n\nComparison between grid search and successive halving\n\nSuccessive Halving Iterations",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:003",
+      "metadata": {
+        "end": 1861,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11260,
+        "unit_start": 7755,
+        "token_count": 376
+      },
+      "score": 0.45141860842705095,
+      "rank": 4
+    },
+    {
+      "id": "aeadbea5653e4e3ce9084d85",
+      "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:003",
+      "metadata": {
+        "end": 3505,
+        "start": 1863,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11260,
+        "unit_start": 7755,
+        "token_count": 354
+      },
+      "score": 0.48755955696105957,
+      "rank": 5
+    },
+    {
+      "id": "ee86083574a4571af54dd178",
+      "text": "3.1.2.2.1. Stratified K-fold\n\nStratifiedKFold is a variation of K-fold which returns stratified folds: each set contains approximately the same percentage of samples of each target class as the complete set.\n\nHere is an example of stratified 3-fold cross-validation on a dataset with 50 samples from two unbalanced classes. We show the number of samples in each class and compare with KFold .",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 1175,
+        "start": 783,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 96
+      },
+      "score": 0.5028740760238116,
+      "rank": 5
+    },
+    {
+      "id": "76e0a214442f1912164e9f60",
+      "text": "3.2.1. Exhaustive Grid Search\n\nThe grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter. For instance, the following param_grid :\n\nparam_grid = [\n  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},\n  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},\n ]\n\nspecifies that two grids should be explored: one with a linear kernel and C values in [1, 10, 100, 1000], and the second one with an RBF kernel, and the cross-product of C values ranging in [1, 10, 100, 1000] and gamma values in [0.001, 0.0001].\n\nThe GridSearchCV instance implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.\n\nExamples\n\nSee Nested versus non-nested cross-validation for an example of Grid Search within a cross validation loop on the iris dataset. This is the best practice for evaluating the performance of a model with grid search.\n\nSee Sample pipeline for text feature extraction and evaluation for an example of Grid Search coupling parameters from a text documents feature extractor (n-gram count vectorizer and TF-IDF transformer) with a classifier (here a linear SVM trained with SGD with either elastic net or L2 penalty) using a Pipeline instance.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:001",
+      "metadata": {
+        "end": 3241,
+        "start": 1887,
+        "topic": "model_selection",
+        "anchor": "exhaustive-grid-search",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.1. Exhaustive Grid Search",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3625,
+        "unit_start": 0,
+        "token_count": 348
+      },
+      "score": 0.45424619589768755,
+      "rank": 3
+    },
+    {
+      "id": "564f73a418e205c6e9cad22d",
+      "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                            factor=2,\n...                            max_resources=40,\n...                            aggressive_elimination=True,\n...                            ).fit(X, y)\n>>> sh.n_resources_\n[20, 20, 40]\n>>> sh.n_candidates_\n[6, 3, 2]\n\nNotice that we end with 2 candidates at the last iteration since we have eliminated enough candidates during the first iterations, using n_resources = min_resources = 20 .",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:006",
+      "metadata": {
+        "end": 1888,
+        "start": 1396,
+        "topic": "model_selection",
+        "anchor": "aggressive-elimination-of-candidates",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving > 3.2.3.1. Aggressive elimination of candidates",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21823,
+        "unit_start": 18303,
+        "token_count": 131
+      },
+      "score": 0.44910002058148346,
+      "rank": 5
+    },
+    {
+      "id": "027a8f1d804f4bba0be3bd4b",
+      "text": "1 The Brier score is just a different name for the squared error in case of classification with one-hot encoded targets.\n\n2 The zero-one loss is only consistent but not strictly consistent for the mode. The zero-one loss is equivalent to one minus the accuracy score, meaning it gives different score values but the same ranking.\n\n3 R² gives the same ranking as squared error.\n\nFictitious Example: Let’s make the above arguments more tangible. Consider a setting in network reliability engineering, such as maintaining stable internet or Wi-Fi connections. As provider of the network, you have access to the dataset of log entries of network connections containing network load over time and many interesting features. Your goal is to improve the reliability of the connections. In fact, you promise your customers that on at least 99% of all days there are no connection discontinuities larger than 1 minute. Therefore, you are interested in a prediction of the 99% quantile (of longest connection interruption duration per day) in order to know in advance when to add more bandwidth and thereby satisfy your customers. So the target functional is the 99% quantile. From the table above, you choose the pinball loss as scoring function (fair enough, not much choice given), for model training (e.g. HistGradientBoostingRegressor(loss=\"quantile\", quantile=0.99) ) as well as model evaluation ( mean_pinball_loss(..., alpha=0.99) - we apologize for the different argument names, quantile and alpha ) be it in grid search for finding hyperparameters or in comparing to other models like QuantileRegressor(quantile=0.99) .\n\nReferences",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:002",
+      "metadata": {
+        "end": 1631,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "which-scoring-function-should-i-use",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.1. Which scoring function should I use?",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7343,
+        "unit_start": 3797,
+        "token_count": 360
+      },
+      "score": 0.44762462689729854,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:17.389053+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 513,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 63,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 576
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:20.111137+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3671,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 86,
+        "output_tokens_details": {
+          "reasoning_tokens": 58
+        },
+        "total_tokens": 3757
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:22.521947+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6601,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3456,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 107,
+        "output_tokens_details": {
+          "reasoning_tokens": 82
+        },
+        "total_tokens": 6708
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:26.384369+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 9804,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 6400,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 121,
+        "output_tokens_details": {
+          "reasoning_tokens": 90
+        },
+        "total_tokens": 9925
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:30.729900+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 12806,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 9600,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 362,
+        "output_tokens_details": {
+          "reasoning_tokens": 282
+        },
+        "total_tokens": 13168
+      }
+    }
+  ],
+  "seconds": 15.99668759999986,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N07",
+  "initial_ranking": [
+    {
+      "id": "6e5607a24622af6e4ce1101e",
+      "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2735,
+        "start": 2094,
+        "topic": "model_selection",
+        "anchor": "repeated-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 245
+      },
+      "score": 0.5393336850603339,
+      "rank": 1
+    },
+    {
+      "id": "6c9cb2d2ebc2cdf137005b53",
+      "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2210,
+        "start": 1177,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 372
+      },
+      "score": 0.4880220446580059,
+      "rank": 2
+    },
+    {
+      "id": "4edc19802bb125636088e274",
+      "text": ">>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources='exhaust').fit(X, y)\n>>> sh.n_resources_\n[250, 500, 1000]\n\nmin_resources was here automatically set to 250, which results in the last iteration using all the resources. The exact value that is used depends on the number of candidate parameters, on max_resources and on factor .\n\nFor HalvingRandomSearchCV , exhausting the resources can be done in 2 ways:\n\nby setting min_resources='exhaust' , just like for HalvingGridSearchCV ;\n\nby setting n_candidates='exhaust' .\n\nBoth options are mutually exclusive: using min_resources='exhaust' requires knowing the number of candidates, and symmetrically n_candidates='exhaust' requires knowing min_resources .\n\nIn general, exhausting the total number of resources leads to a better final candidate parameter, and is slightly more time-intensive.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 3533,
+        "start": 2631,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 226
+      },
+      "score": 0.47541041745512624,
+      "rank": 3
+    },
+    {
+      "id": "aeadbea5653e4e3ce9084d85",
+      "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:003",
+      "metadata": {
+        "end": 3505,
+        "start": 1863,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11260,
+        "unit_start": 7755,
+        "token_count": 354
+      },
+      "score": 0.4747249625541261,
+      "rank": 4
+    },
+    {
+      "id": "ab2621291f798dbea23b764e",
+      "text": "Note that it is not possible to budget on a parameter that is part of the parameter grid.\n\nAs mentioned above, the number of resources that is used at each iteration depends on the min_resources parameter. If you have a lot of resources available but start with a low number of resources, some of them might be wasted (i.e. not used):\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.svm import SVC\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid= {'kernel': ('linear', 'rbf'),\n...              'C': [1, 10, 100]}\n>>> base_estimator = SVC(gamma='scale')\n>>> X, y = make_classification(n_samples=1000)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, min_resources=20).fit(X, y)\n>>> sh.n_resources_\n[20, 40, 80]\n\nThe search process will only use 80 resources at most, while our maximum amount of available resources is n_samples=1000 . Here, we have min_resources = r_0 = 20 .\n\nFor HalvingGridSearchCV , by default, the min_resources parameter is set to ‘exhaust’. This means that min_resources is automatically set such that the last iteration can use as many resources as possible, within the max_resources limit:",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 2629,
+        "start": 1319,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 382
+      },
+      "score": 0.4745261229715926,
+      "rank": 5
+    },
+    {
+      "id": "699fd113760f0ca2d1496e44",
+      "text": "each n_resources_i is a multiple of both factor and min_resources (which is confirmed by its definition above).\n\nThe amount of resources that is used at each iteration can be found in the n_resources_ attribute.\n\nBy default, the resource is defined in terms of number of samples. That is, each iteration will use an increasing amount of samples to train on. You can however manually specify a parameter to use as the resource with the resource parameter. Here is an example where the resource is defined in terms of the number of estimators of a random forest:\n\n>>> from sklearn.datasets import make_classification\n>>> from sklearn.ensemble import RandomForestClassifier\n>>> from sklearn.experimental import enable_halving_search_cv  # noqa\n>>> from sklearn.model_selection import HalvingGridSearchCV\n>>> import pandas as pd\n>>> param_grid = {'max_depth': [3, 5, 10],\n...               'min_samples_split': [2, 5, 10]}\n>>> base_estimator = RandomForestClassifier(random_state=0)\n>>> X, y = make_classification(n_samples=1000, random_state=0)\n>>> sh = HalvingGridSearchCV(base_estimator, param_grid, cv=5,\n...                          factor=2, resource='n_estimators',\n...                          max_resources=30).fit(X, y)\n>>> sh.best_estimator_\nRandomForestClassifier(max_depth=5, n_estimators=24, random_state=0)",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:005",
+      "metadata": {
+        "end": 1317,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18301,
+        "unit_start": 14768,
+        "token_count": 381
+      },
+      "score": 0.47280582623516476,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942"
+}

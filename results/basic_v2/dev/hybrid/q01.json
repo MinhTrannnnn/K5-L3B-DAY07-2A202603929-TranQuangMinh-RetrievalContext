@@ -1,0 +1,592 @@
+{
+  "status": "answered",
+  "answer": "Set `with_mean=False` when constructing `StandardScaler`. That disables centering while still allowing feature scaling; scaling can remain enabled with the default `with_std=True` (or set it explicitly). For sparse inputs, `with_mean=False` is required. [6b968eaff7a08cc385a0cc51] [14ce9eb9004fa7a41a3c4cb0]",
+  "citations": [
+    "6b968eaff7a08cc385a0cc51",
+    "14ce9eb9004fa7a41a3c4cb0"
+  ],
+  "question": "How can centering be disabled while retaining the option to scale features with StandardScaler?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "StandardScaler disable centering retain option to scale features with StandardScaler with_mean=False with_std=True",
+      "results": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 0.03225806451612903,
+          "rank": 2
+        },
+        {
+          "id": "2ee39388dfd8d445dc41e88a",
+          "text": ">>> from sklearn.preprocessing import StandardScaler\n>>> from sklearn.compose import make_column_selector\n>>> ct = ColumnTransformer([\n...       ('scale', StandardScaler(),\n...       make_column_selector(dtype_include=np.number)),\n...       ('onehot',\n...       OneHotEncoder(),\n...       make_column_selector(pattern='city', dtype_include=[object, \"string\"]))])\n>>> ct.fit_transform(X)\narray([[ 0.904,  0.      ,  1. ,  0. ,  0. ],\n       [-1.507,  1.414,  1. ,  0. ,  0. ],\n       [-0.301,  0.      ,  0. ,  1. ,  0. ],\n       [ 0.904, -1.414,  0. ,  0. ,  1. ]])",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 3626,
+            "start": 3061,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 225
+          },
+          "score": 0.03057889822595705,
+          "rank": 3
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.03057889822595705,
+          "rank": 4
+        },
+        {
+          "id": "89fed75e8872f870f13aeb69",
+          "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:003",
+          "metadata": {
+            "end": 1250,
+            "start": 517,
+            "topic": "preprocessing",
+            "anchor": "scaling-data-with-outliers",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10705,
+            "unit_start": 7059,
+            "token_count": 157
+          },
+          "score": 0.03055037313432836,
+          "rank": 5
+        },
+        {
+          "id": "5a82e239a3d581954a8ff182",
+          "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 2764,
+            "start": 1867,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 337
+          },
+          "score": 0.02946912242686891,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6b968eaff7a08cc385a0cc51",
+          "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 144,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 35
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "14ce9eb9004fa7a41a3c4cb0",
+          "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:002",
+          "metadata": {
+            "end": 3547,
+            "start": 2774,
+            "topic": "preprocessing",
+            "anchor": "scaling-sparse-data",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 7057,
+            "unit_start": 3510,
+            "token_count": 166
+          },
+          "score": 0.03225806451612903,
+          "rank": 2
+        },
+        {
+          "id": "2ee39388dfd8d445dc41e88a",
+          "text": ">>> from sklearn.preprocessing import StandardScaler\n>>> from sklearn.compose import make_column_selector\n>>> ct = ColumnTransformer([\n...       ('scale', StandardScaler(),\n...       make_column_selector(dtype_include=np.number)),\n...       ('onehot',\n...       OneHotEncoder(),\n...       make_column_selector(pattern='city', dtype_include=[object, \"string\"]))])\n>>> ct.fit_transform(X)\narray([[ 0.904,  0.      ,  1. ,  0. ,  0. ],\n       [-1.507,  1.414,  1. ,  0. ,  0. ],\n       [-0.301,  0.      ,  0. ,  1. ,  0. ],\n       [ 0.904, -1.414,  0. ,  0. ,  1. ]])",
+          "source_id": "compose",
+          "source": "https://scikit-learn.org/1.9/modules/compose.html",
+          "page": "compose:005",
+          "metadata": {
+            "end": 3626,
+            "start": 3061,
+            "topic": "preprocessing",
+            "anchor": "columntransformer-for-heterogeneous-data",
+            "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 17935,
+            "unit_start": 14309,
+            "token_count": 225
+          },
+          "score": 0.03057889822595705,
+          "rank": 3
+        },
+        {
+          "id": "5d5f352d6d93ec4a2a198685",
+          "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 1865,
+            "start": 672,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 235
+          },
+          "score": 0.03057889822595705,
+          "rank": 4
+        },
+        {
+          "id": "89fed75e8872f870f13aeb69",
+          "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:003",
+          "metadata": {
+            "end": 1250,
+            "start": 517,
+            "topic": "preprocessing",
+            "anchor": "scaling-data-with-outliers",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 10705,
+            "unit_start": 7059,
+            "token_count": 157
+          },
+          "score": 0.03055037313432836,
+          "rank": 5
+        },
+        {
+          "id": "5a82e239a3d581954a8ff182",
+          "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:001",
+          "metadata": {
+            "end": 2764,
+            "start": 1867,
+            "topic": "preprocessing",
+            "anchor": "standardization-or-mean-removal-and-variance-scaling",
+            "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3508,
+            "unit_start": 0,
+            "token_count": 337
+          },
+          "score": 0.02946912242686891,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.07660319999922649
+    }
+  ],
+  "context": [
+    {
+      "id": "6b968eaff7a08cc385a0cc51",
+      "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 144,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 35
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "14ce9eb9004fa7a41a3c4cb0",
+      "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 3547,
+        "start": 2774,
+        "topic": "preprocessing",
+        "anchor": "scaling-sparse-data",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 166
+      },
+      "score": 0.03225806451612903,
+      "rank": 2
+    },
+    {
+      "id": "2ee39388dfd8d445dc41e88a",
+      "text": ">>> from sklearn.preprocessing import StandardScaler\n>>> from sklearn.compose import make_column_selector\n>>> ct = ColumnTransformer([\n...       ('scale', StandardScaler(),\n...       make_column_selector(dtype_include=np.number)),\n...       ('onehot',\n...       OneHotEncoder(),\n...       make_column_selector(pattern='city', dtype_include=[object, \"string\"]))])\n>>> ct.fit_transform(X)\narray([[ 0.904,  0.      ,  1. ,  0. ,  0. ],\n       [-1.507,  1.414,  1. ,  0. ,  0. ],\n       [-0.301,  0.      ,  0. ,  1. ,  0. ],\n       [ 0.904, -1.414,  0. ,  0. ,  1. ]])",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 3626,
+        "start": 3061,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 225
+      },
+      "score": 0.03057889822595705,
+      "rank": 3
+    },
+    {
+      "id": "5d5f352d6d93ec4a2a198685",
+      "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 1865,
+        "start": 672,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 235
+      },
+      "score": 0.03057889822595705,
+      "rank": 4
+    },
+    {
+      "id": "89fed75e8872f870f13aeb69",
+      "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:003",
+      "metadata": {
+        "end": 1250,
+        "start": 517,
+        "topic": "preprocessing",
+        "anchor": "scaling-data-with-outliers",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10705,
+        "unit_start": 7059,
+        "token_count": 157
+      },
+      "score": 0.03055037313432836,
+      "rank": 5
+    },
+    {
+      "id": "5a82e239a3d581954a8ff182",
+      "text": ">>> from sklearn import preprocessing\n>>> import numpy as np\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n>>> scaler = preprocessing.StandardScaler().fit(X_train)\n>>> scaler\nStandardScaler()\n\n>>> scaler.mean_\narray([1., 0., 0.33])\n\n>>> scaler.scale_\narray([0.81, 0.81, 1.24])\n\n>>> X_scaled = scaler.transform(X_train)\n>>> X_scaled\narray([[ 0.  , -1.22,  1.33 ],\n       [ 1.22,  0.  , -0.267],\n       [-1.22,  1.22, -1.06 ]])\n\nScaled data has zero mean and unit variance:\n\n>>> X_scaled.mean(axis=0)\narray([0., 0., 0.])\n\n>>> X_scaled.std(axis=0)\narray([1., 1., 1.])\n\nThis class implements the Transformer API to compute the mean and standard deviation on a training set so as to be able to later re-apply the same transformation on the testing set. This class is hence suitable for use in the early steps of a Pipeline :",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 2764,
+        "start": 1867,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 337
+      },
+      "score": 0.02946912242686891,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:40:01.949733+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 510,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 59,
+        "output_tokens_details": {
+          "reasoning_tokens": 22
+        },
+        "total_tokens": 569
+      }
+    },
+    {
+      "at": "2026-11-16T15:40:05.989340+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2801,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 275,
+        "output_tokens_details": {
+          "reasoning_tokens": 134
+        },
+        "total_tokens": 3076
+      }
+    }
+  ],
+  "seconds": 6.60286079999787,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "q01",
+  "initial_ranking": [
+    {
+      "id": "14ce9eb9004fa7a41a3c4cb0",
+      "text": "8.3.1.2. Scaling sparse data\n\nCentering sparse data would destroy the sparseness structure in the data, and thus rarely is a sensible thing to do. However, it can make sense to scale sparse inputs, especially if features are on different scales.\n\nMaxAbsScaler was specifically designed for scaling sparse data, and is the recommended way to go about this. However, StandardScaler can accept scipy.sparse matrices as input, as long as with_mean=False is explicitly passed to the constructor. Otherwise a ValueError will be raised as silently centering would break the sparsity and would often crash the execution by allocating excessive amounts of memory unintentionally. RobustScaler cannot be fitted to sparse inputs, but you can use the transform method on sparse inputs.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 3547,
+        "start": 2774,
+        "topic": "preprocessing",
+        "anchor": "scaling-sparse-data",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.2. Scaling sparse data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 166
+      },
+      "score": 0.03252247488101534,
+      "rank": 1
+    },
+    {
+      "id": "6b968eaff7a08cc385a0cc51",
+      "text": "It is possible to disable either centering or scaling by either passing with_mean=False or with_std=False to the constructor of StandardScaler .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 144,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 35
+      },
+      "score": 0.03252247488101534,
+      "rank": 2
+    },
+    {
+      "id": "89fed75e8872f870f13aeb69",
+      "text": "8.3.1.3. Scaling data with outliers\n\nIf your data contains many outliers, scaling using the mean and variance of the data is likely to not work very well. In these cases, you can use RobustScaler as a drop-in replacement instead. It uses more robust estimates for the center and range of your data.\n\nFurther discussion on the importance of centering and scaling data is available on this FAQ: Should I normalize/standardize/rescale the data?\n\nIt is sometimes not enough to center and scale the features independently, since a downstream model can further make some assumption on the linear independence of the features.\n\nTo address this issue you can use PCA with whiten=True to further remove the linear correlation across features.",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:003",
+      "metadata": {
+        "end": 1250,
+        "start": 517,
+        "topic": "preprocessing",
+        "anchor": "scaling-data-with-outliers",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.3. Scaling data with outliers",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10705,
+        "unit_start": 7059,
+        "token_count": 157
+      },
+      "score": 0.031746031746031744,
+      "rank": 3
+    },
+    {
+      "id": "5d5f352d6d93ec4a2a198685",
+      "text": "8.3.1. Standardization, or mean removal and variance scaling\n\nStandardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data: Gaussian with zero mean and unit variance .\n\nIn practice we often ignore the shape of the distribution and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.\n\nFor instance, many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the l1 and l2 regularizers of linear models) may assume that all features are centered around zero or have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.\n\nThe preprocessing module provides the StandardScaler utility class, which is a quick and easy way to perform the following operation on an array-like dataset:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:001",
+      "metadata": {
+        "end": 1865,
+        "start": 672,
+        "topic": "preprocessing",
+        "anchor": "standardization-or-mean-removal-and-variance-scaling",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3508,
+        "unit_start": 0,
+        "token_count": 235
+      },
+      "score": 0.03076923076923077,
+      "rank": 4
+    },
+    {
+      "id": "1695ca8e101d86ceaf2ad1d7",
+      "text": "8.3.1.1. Scaling features to a range\n\nAn alternative standardization is scaling features to lie between a given minimum and maximum value, often between zero and one, or so that the maximum absolute value of each feature is scaled to unit size. This can be achieved using MinMaxScaler or MaxAbsScaler , respectively.\n\nThe motivation to use this scaling includes robustness to very small standard deviations of features and preserving zero entries in sparse data.\n\nHere is an example to scale a toy data matrix to the [0, 1] range:\n\n>>> X_train = np.array([[ 1., -1.,  2.],\n...                     [ 2.,  0.,  0.],\n...                     [ 0.,  1., -1.]])\n...\n>>> min_max_scaler = preprocessing.MinMaxScaler()\n>>> X_train_minmax = min_max_scaler.fit_transform(X_train)\n>>> X_train_minmax\narray([[0.5       , 0.        , 1.        ],\n       [1.        , 0.5       , 0.33333333],\n       [0.        , 1.        , 0.        ]])\n\nThe same instance of the transformer can then be applied to some new test data unseen during the fit call: the same scaling and shifting operations will be applied to be consistent with the transformation performed on the train data:",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:002",
+      "metadata": {
+        "end": 1304,
+        "start": 146,
+        "topic": "preprocessing",
+        "anchor": "scaling-features-to-a-range",
+        "heading": "8.3. Preprocessing data > 8.3.1. Standardization, or mean removal and variance scaling > 8.3.1.1. Scaling features to a range",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 7057,
+        "unit_start": 3510,
+        "token_count": 311
+      },
+      "score": 0.030330882352941176,
+      "rank": 5
+    },
+    {
+      "id": "2ee39388dfd8d445dc41e88a",
+      "text": ">>> from sklearn.preprocessing import StandardScaler\n>>> from sklearn.compose import make_column_selector\n>>> ct = ColumnTransformer([\n...       ('scale', StandardScaler(),\n...       make_column_selector(dtype_include=np.number)),\n...       ('onehot',\n...       OneHotEncoder(),\n...       make_column_selector(pattern='city', dtype_include=[object, \"string\"]))])\n>>> ct.fit_transform(X)\narray([[ 0.904,  0.      ,  1. ,  0. ,  0. ],\n       [-1.507,  1.414,  1. ,  0. ,  0. ],\n       [-0.301,  0.      ,  0. ,  1. ,  0. ],\n       [ 0.904, -1.414,  0. ,  0. ,  1. ]])",
+      "source_id": "compose",
+      "source": "https://scikit-learn.org/1.9/modules/compose.html",
+      "page": "compose:005",
+      "metadata": {
+        "end": 3626,
+        "start": 3061,
+        "topic": "preprocessing",
+        "anchor": "columntransformer-for-heterogeneous-data",
+        "heading": "8.1. Pipelines and composite estimators > 8.1.4. ColumnTransformer for heterogeneous data",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 17935,
+        "unit_start": 14309,
+        "token_count": 225
+      },
+      "score": 0.02900988017658188,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": false,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

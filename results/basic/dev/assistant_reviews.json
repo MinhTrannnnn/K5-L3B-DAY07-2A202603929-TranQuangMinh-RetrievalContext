@@ -1,0 +1,1225 @@
+[
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "The source on preprocessing:002 explicitly says centering can be disabled by passing `with_mean=False` to `StandardScaler`; the sparse-data section also says `StandardScaler` accepts sparse input only when `with_mean=False` is passed because centering would destroy sparsity. The answer matches the expected answer, and its extra note about keeping `with_std=True` is not contradicted by the source.",
+    "query_id": "q01",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "259ba27ea696a55d5aa24877326fb7eddc88d6a9e206b8fe9768e1bce4638504",
+    "alternative_cited_pages": [
+      "preprocessing:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source preprocessing:005 states that QuantileTransformer can map data to a normal distribution by setting output_distribution='normal'; preprocessing:004 describes the default uniform mapping. The answer matches the source exactly.",
+    "query_id": "q02",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "82272d0a4f26a7dabc7dc6ad24cd7362833fbabc3dfe91476335adf50b2ba539",
+    "alternative_cited_pages": [
+      "preprocessing:005"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page preprocessing:007 explicitly states: “When handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros,” and follows with the note that they have the same mapping as the dropped category. The answer matches this exactly.",
+    "query_id": "q03",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "9c1349122c79ce4f6d802cd4fbd9f916c54abdcba0807396551fd35b95812d1b",
+    "alternative_cited_pages": [
+      "preprocessing:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page impute:001 explicitly says univariate imputes using only non-missing values in that feature dimension, while multivariate uses the entire set of available feature dimensions / other feature columns as inputs to predict missing values. The answer matches this distinction.",
+    "query_id": "q04",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "3213e1e28edd98e8c1d6c3455940b00cf1a7833b660f863bae13f73ccb54afae",
+    "alternative_cited_pages": [
+      "impute:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "impute:001 states SimpleImputer imputes missing values with a provided constant value or the per-column statistics mean, median, or most frequent. The answer matches this exactly.",
+    "query_id": "q05",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "4d262a0620c266c779b716539bc4c5e221589d23029475f169d1f0acb7a154d0",
+    "alternative_cited_pages": [
+      "impute:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source impute:003 (8.4.6 Marking imputed values) explicitly says MissingIndicator can be used to preserve missingness info, and that both SimpleImputer and IterativeImputer have add_indicator (default False) which, when True, stacks the indicator with the imputed output. The answer matches this.",
+    "query_id": "q06",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "dd4d6f3043b807cb92e4aeb0c41345e44379ba2c6e7d2a70ac3a15e35c97bc3f",
+    "alternative_cited_pages": [
+      "impute:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "compose:001 explicitly says pipelines require all steps except the last to be transformers, and that the last step can be anything: a transformer, predictor, or clustering estimator. The answer matches this exactly and its citations point to the supporting source page.",
+    "query_id": "q07",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "9aac2d5500d81eae1ec56ac17b6e6f2b69b78f78ec29c36fdef6e47ee3eb0bd0",
+    "alternative_cited_pages": [
+      "compose:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "compose:002 (8.1.1.1.4 Access to nested parameters) explicitly says pipeline parameters are accessible using the `<estimator>__<parameter>` syntax, so the answer matches the source.",
+    "query_id": "q08",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "79f552d01c8e2f3efc286ac7162e008b8f41520c602a5152d4d6d34c734c05ba",
+    "alternative_cited_pages": [
+      "compose:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source compose:002 / compose:003, section 8.1.1.2 states: \"The last step will never be cached, even if it is a transformer.\" The answer matches exactly.",
+    "query_id": "q09",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "2aab93d5e02786904db97554c80ad6becc4ab588e0e7d6aafac2b52a9e5a15a8",
+    "alternative_cited_pages": [
+      "compose:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source cross_validation:007 states that \"GroupKFold is a variation of K-fold which ensures that the same group is not represented in both testing and training sets\" and that the same subject is never in both testing and training. The answer matches this.",
+    "query_id": "q10",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "054059e91ef56ada7ebbc4edcf39b322c93cc6ea4eb76c60f3aa26818c8c5ac2",
+    "alternative_cited_pages": [
+      "cross_validation:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page cross_validation:003 states that only cross-validation strategies that assign all elements to a test set exactly once can be used with cross_val_predict; the answer restates this accurately.",
+    "query_id": "q11",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "1181eafd1d8379d241a70174c9b59ccdc00aa7be429748dd20f6ccb03b986d29",
+    "alternative_cited_pages": [
+      "cross_validation:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by grid_search:001 and grid_search:002: GridSearchCV “exhaustively generates candidates” and evaluates “all possible combinations,” while RandomizedSearchCV samples settings from a distribution and uses n_iter as the number of sampled candidates/iterations.",
+    "query_id": "q12",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "9f69ce2beb05cc75d3d5046805851ec0a2b0545b9cb7361bc4b309b9b7e3f78f",
+    "alternative_cited_pages": [
+      "grid_search:001",
+      "grid_search:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by grid_search:007, section 3.2.4.2: with multiple metrics, `refit` must be set to the metric string used to choose `best_params_`/`best_estimator_`, and `refit=False` if you do not want refitting.",
+    "query_id": "q13",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "6d65c071a42a817b0f111497e9ff5702834f3f680b599dfcd67a73e5022bddb3",
+    "alternative_cited_pages": [
+      "grid_search:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "model_evaluation:003 explicitly says scorers follow higher-is-better and that metrics like mean_squared_error are exposed as neg_mean_squared_error with the negated value. model_evaluation:004 also says losses are negated when greater_is_better=False to match the scorer convention. The answer matches this.",
+    "query_id": "q14",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "0367e277013ad01b6c30fd62c958bf3d819cd7ccae42f384a67d8e475bd62fd0",
+    "alternative_cited_pages": [
+      "model_evaluation:003",
+      "model_evaluation:004"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by model_evaluation:010/011. The source says precision is “the ability of the classifier not to label as positive a sample that is negative,” and recall is “the ability of the classifier to find all the positive samples,” which matches the answer.",
+    "query_id": "q15",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "9c2b1dd0ec08065003cb244da526f8c4e921202a665d3cd9bb2debc7e6c0b11e",
+    "alternative_cited_pages": [
+      "model_evaluation:010"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 1,
+    "answer_grade": 0,
+    "answer_correct": false,
+    "abstention_correct": false,
+    "citation_support": [
+      false,
+      false,
+      false
+    ],
+    "passed": false,
+    "gold_issue": false,
+    "reason": "The sources discuss preprocessing on array-like/heterogeneous datasets and Pipeline memory caching (preprocessing:001; compose:004; compose:002), but none state any minimum RAM requirement for scikit-learn. The answer’s “no single minimum RAM value” is an unsupported inference rather than a clear abstention.",
+    "query_id": "q21",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "5acdc268c88690c063a1bd42dd1487f7dc75d768994eedccb361430d11fe7c84",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 1,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": true,
+    "citation_support": [],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "The retrieved source pages are all scikit-learn 1.9 docs (e.g., grid_search:001, compose:004, cross_validation:007) and none mention any planned or exact release date for a future version 10. The response appropriately abstains rather than inventing a date.",
+    "query_id": "q22",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "3135bf35ce8cfd81ec96917b8cd0374ee6066e270205d878694ded98ec95a7d1",
+    "method": "bm25"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "preprocessing:002 states that centering can be disabled by passing with_mean=False to StandardScaler, and that scaling is separately controlled with with_std=False. The answer’s main instruction matches this source and is supported by the cited page.",
+    "query_id": "q01",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "1c71b915dc6bafb9ad0ad09546fd1d11c2d616512fc8405450372e04be9f8c91",
+    "alternative_cited_pages": [
+      "preprocessing:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by preprocessing:005, which explicitly says QuantileTransformer can map to a normal distribution by setting output_distribution='normal'. The cited snippets both contain that exact statement; preprocessing:004 also contrasts this with the uniform default.",
+    "query_id": "q02",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "dcd98961f7b2acc500d98a4cfac568a53b23ab831dcc88308034e03540dcfab5",
+    "alternative_cited_pages": [
+      "preprocessing:005"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source preprocessing:007 states: “When handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros,” and the following paragraph says they share the same mapping as the dropped category. The answer matches this exactly.",
+    "query_id": "q03",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "3957d46107a0dd530abd551a2ee57369cf35adb89221f3ac1496cd5611f44209",
+    "alternative_cited_pages": [
+      "preprocessing:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "The cited source on impute:001 (section 8.4.1, around 717–1050) states that univariate imputation uses only non-missing values in the same feature dimension, while multivariate imputation uses the entire set of available feature dimensions. The answer matches this exactly.",
+    "query_id": "q04",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "5e0c5906e8643e17fb2aa62fbb518dd19cf81d63fea47df78c9aa4e94c93cacc",
+    "alternative_cited_pages": [
+      "impute:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page impute:001 states SimpleImputer can impute with a provided constant value or with the per-column statistics mean, median, or most frequent. The answer matches this exactly and is fully supported.",
+    "query_id": "q05",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "e167448d7a856002b3cebdd747b87605c5b7384218a1cb5c1d7af1e65f28a7a6",
+    "alternative_cited_pages": [
+      "impute:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source impute:003 under “8.4.6. Marking imputed values” explicitly says MissingIndicator can preserve which values were missing, and that SimpleImputer/IterativeImputer support add_indicator=True. impute:004 shows MissingIndicator combined with SimpleImputer via FeatureUnion/ColumnTransformer. The answer matches the source.",
+    "query_id": "q06",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "f7b4b55009453487ec995ccde974ee98b6c41479dab90aea7beee6c1d48a1546",
+    "alternative_cited_pages": [
+      "impute:003",
+      "impute:004"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source compose:001 explicitly says pipelines require all steps except the last to be transformers, and the last step can be anything, including a transformer, predictor/classifier, or clustering estimator (text around start 1806 and 41). The answer matches this exactly.",
+    "query_id": "q07",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "aec98dc9d595eb1be648899956e16a6b244c5da4ce13bc0c02fb4eeb1cbe3645",
+    "alternative_cited_pages": [
+      "compose:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "compose:002 explicitly says parameters in a pipeline are accessible using the <estimator>__<parameter> syntax and shows examples like clf__C and reduce_dim__n_components.",
+    "query_id": "q08",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "49737189c074496f755e4d8b84a0d1d2ad228d1b68b6b78e10d7809fd4613be4",
+    "alternative_cited_pages": [
+      "compose:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by compose:002, section “8.1.1.2. Caching transformers: avoid repeated computation,” which states: “The last step will never be cached, even if it is a transformer.” The answer matches this exactly.",
+    "query_id": "q09",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "52c52883c6f88f4d6a037f818b9c7afc231aa8a3565fd49f932bb0f38341828c",
+    "alternative_cited_pages": [
+      "compose:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Page cross_validation:007 states that GroupKFold “ensures that the same group is not represented in both testing and training sets,” including the subject/group example. The answer matches this exactly.",
+    "query_id": "q10",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "1ec82f86268e9060e8caa9934e82bf88510b2694da1f97dd0665d8d1839c4fc6",
+    "alternative_cited_pages": [
+      "cross_validation:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "cross_validation:003 states that cross_val_predict can use only strategies that \"assign all elements to a test set exactly once\"; the answer matches this restriction.",
+    "query_id": "q11",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "45048278954471ed20cd413c54cde26d28b226f3bad2dcd7f503a4d15c99fbf5",
+    "alternative_cited_pages": [
+      "cross_validation:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page grid_search:001 says GridSearchCV ‘exhaustively considers all parameter combinations’ and evaluates all possible combinations, while grid_search:002 says RandomizedSearchCV ‘implements a randomized search’ where each setting is sampled from a distribution and the budget is the number of sampled candidates / n_iter. The answer matches both sources.",
+    "query_id": "q12",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "8de6f1a19a68fd4206e9c5d65befd11ff90d5eab947a7e65ae0b3d2f5401810e",
+    "alternative_cited_pages": [
+      "grid_search:001",
+      "grid_search:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 1,
+    "answer_correct": false,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": false,
+    "gold_issue": false,
+    "reason": "grid_search:007, section 3.2.4.2, supports that with multiple metrics `refit` should be set to the chosen metric string to select `best_params_` and build `best_estimator_`. The answer covers that, but omits the source’s additional instruction that `refit=False` should be used if you do not want refitting.",
+    "query_id": "q13",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "50bb15cf9bdfcee332b2da830ef2851229b67ec12b45b3ce406082789f5ec17f",
+    "alternative_cited_pages": [
+      "grid_search:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "model_evaluation:003 states that all scorer objects use the convention that higher return values are better, and that metrics like mean_squared_error are exposed as `neg_mean_squared_error` because they return the negated metric value. The answer matches this rationale.",
+    "query_id": "q14",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "d4e52be01101cb2c510668ba5cfb288aa864f467a4d587b11ea53bbc225207a8",
+    "alternative_cited_pages": [
+      "model_evaluation:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page model_evaluation:010 states precision is the ability not to label a negative sample as positive, and recall is the ability to find all positive samples. Page 011 also gives precision=tp/(tp+fp) and recall=tp/(tp+fn), supporting the paraphrase about avoiding false positives and finding positives.",
+    "query_id": "q15",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "33cefcb4a116007a77d86030b391a057451bd60173854917cb787f451bd9c374",
+    "alternative_cited_pages": [
+      "model_evaluation:010",
+      "model_evaluation:011"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": true,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "The sources do not provide any universal RAM minimum for all datasets. grid_search:005 says resource use is measured per iteration and, by default, in number of samples, so it varies by setup; preprocessing:002 warns that centering sparse data can trigger excessive memory allocation. The answer appropriately abstains from giving a GB figure and only explains that no single minimum is specified.",
+    "query_id": "q21",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "a869564764e4935e63a3036de61ef881da173ff42104df8ad630ae27f6932a5e",
+    "method": "dense"
+  },
+  {
+    "context_grade": 1,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": true,
+    "citation_support": [],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "The retrieved source pages are scikit-learn 1.9 docs (e.g. compose:004 metadata shows version 1.9) and none provide any release date for version 10. The response correctly abstains instead of inventing a date; its note that the found docs are 1.9 is supported.",
+    "query_id": "q22",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "029d8be568f4acf93f519d0e6e3a90b8711df4d6086545fb40b9239281602b91",
+    "method": "dense"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "preprocessing:002 explicitly says centering can be disabled by passing with_mean=False to StandardScaler, and the same page’s sparse-data section says with_mean=False is required for sparse input.",
+    "query_id": "q01",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "69f322eb05ef67f2481ff7876a210d297431eac12ea5ae75dd3ff3911aba36be",
+    "alternative_cited_pages": [
+      "preprocessing:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "preprocessing:005 explicitly says QuantileTransformer maps data to a normal distribution by setting output_distribution='normal' (region 879-1052), so the answer matches the source.",
+    "query_id": "q02",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "6b6238e069ab11959b231b78710c5ce91977688ad2cc6855a71fac7806a7ee20",
+    "alternative_cited_pages": [
+      "preprocessing:005"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "preprocessing:007 explicitly states: “When handle_unknown='ignore' and drop is not None, unknown categories will be encoded as all zeros,” and the cited page region also shows the corresponding all-zero transform output.",
+    "query_id": "q03",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "81cf7cc31ed79e1a7d128fd115a29522a940bfbe2d91f2931997746bd2989b86",
+    "alternative_cited_pages": [
+      "preprocessing:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page impute:001 explicitly says univariate imputes using only non-missing values in the same feature dimension, while multivariate imputes using the entire set of available feature dimensions. The answer matches this distinction.",
+    "query_id": "q04",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "345927f18d5a8e18381b8af096551f564edd2f03e5177b6ae8c4d36f4dc936c7",
+    "alternative_cited_pages": [
+      "impute:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by impute:001, section 8.4.2: SimpleImputer uses a provided constant value or per-column mean, median, or most frequent statistics.",
+    "query_id": "q05",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "309cd6f05aa85702ef805c2ff45965e8a3aa06df7506b3e6e9489525a1193fa1",
+    "alternative_cited_pages": [
+      "impute:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source impute:003 §8.4.6 states that `MissingIndicator` creates a binary matrix of missing values and that `SimpleImputer` and `IterativeImputer` have `add_indicator=True` to stack these indicator columns with the imputed output. The answer matches this exactly.",
+    "query_id": "q06",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "5524ab662d83a058c1a7afd34c85a86fa6ee0647368406558aa0751286162529",
+    "alternative_cited_pages": [
+      "impute:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "compose:001 states that all Pipeline steps except the last must be transformers, and that the last step can be anything, including a transformer, predictor, or clustering estimator. The answer matches this exactly.",
+    "query_id": "q07",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "714d12cf5901a5ed3a39ba6b2bf702895d5e2ef084ce0ab65c4073ff9c17ff5e",
+    "alternative_cited_pages": [
+      "compose:001"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "compose:002 (8.1.1.1.4 Access to nested parameters) explicitly says pipeline estimator parameters use the <estimator>__<parameter> syntax, with examples clf__C and reduce_dim__n_components. The answer matches this exactly.",
+    "query_id": "q08",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "3bb0c588f815d01a0618b47482fa08acf741c1b09f9430a534962d542c5b156d",
+    "alternative_cited_pages": [
+      "compose:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source compose:002 explicitly states, “The last step will never be cached, even if it is a transformer.” The answer matches this exactly.",
+    "query_id": "q09",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "6bc84f14b8364c742dccb764f827fd47bf884fd3b840948e760551a265f90738",
+    "alternative_cited_pages": [
+      "compose:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page cross_validation:007 states that GroupKFold ensures the same group is not represented in both testing and training sets, matching the answer.",
+    "query_id": "q10",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "c3395c6055c32645c6963a3c2a65b0b9773bddfe2c3e4a182a2865b9e76191d7",
+    "alternative_cited_pages": [
+      "cross_validation:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page cross_validation:003, section 3.1.1.2 states that only cross-validation strategies that assign all elements to a test set exactly once can be used with cross_val_predict; the answer matches this restriction and the exception note.",
+    "query_id": "q11",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "89165ee4d0cd6c64f54c66869e79eeed25abce4802b433de5e6f5a5baeb28d38",
+    "alternative_cited_pages": [
+      "cross_validation:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source page grid_search:001 states GridSearchCV \"exhaustively considers all parameter combinations\" and retains the best combination, while RandomizedSearchCV can \"sample a given number of candidates\" from a parameter space with a specified distribution. Page grid_search:002 further says the sampled settings come from distributions or uniformly from discrete choices. The answer matches this exactly.",
+    "query_id": "q12",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "260a4ab6841db0d2e3618435a39fc955284d7663661ac87c3c8ecbd7a553686e",
+    "alternative_cited_pages": [
+      "grid_search:001",
+      "grid_search:002"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Source grid_search:007 (3.2.4.2) states that with multiple metrics, `refit` must be set to the metric name (string) used to choose `best_params_`/`best_estimator_`, and `refit=False` disables refitting; `None` errors. The answer matches this exactly.",
+    "query_id": "q13",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "0aaa146725df464053a99a17a92cc47cd2a98f45079287c44f381f36e634410f",
+    "alternative_cited_pages": [
+      "grid_search:007"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Model_evaluation:003 explicitly says all scorer objects follow the higher-is-better convention, so distance/loss metrics like mean_squared_error are exposed as 'neg_mean_squared_error' to return the negated value. The answer matches this.",
+    "query_id": "q14",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "77142f8e9594255bca791169f7fcd6f6123c08975a2851f17a476152d9e9c42b",
+    "alternative_cited_pages": [
+      "model_evaluation:003"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 2,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": null,
+    "citation_support": [
+      true,
+      true
+    ],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Supported by model_evaluation:010, which states precision is not labeling a negative as positive and recall is finding all positive samples, and by model_evaluation:011, which gives precision = tp/(tp+fp) and recall = tp/(tp+fn).",
+    "query_id": "q15",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "7ef326f1b48cb0e2508cd4906a2af419e5770efbd3f393d53efe86566570969a",
+    "alternative_cited_pages": [
+      "model_evaluation:010",
+      "model_evaluation:011"
+    ],
+    "alternative_policy": "Equivalent original evidence accepted only when assistant source review supports every claim; human confirmation pending.",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 1,
+    "answer_grade": 1,
+    "answer_correct": false,
+    "abstention_correct": false,
+    "citation_support": [
+      false,
+      false,
+      false
+    ],
+    "passed": false,
+    "gold_issue": false,
+    "reason": "The cited pages only show that scikit-learn operates on array-like datasets and that preprocessing/model-selection behavior depends on the dataset and estimator (preprocessing:001; compose:004; grid_search:001). They do not state any RAM minimum, so the answer’s claim that there is no single universal minimum RAM is an unsupported inference rather than a clean source-backed abstention.",
+    "query_id": "q21",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "b06755a9207d5b28d952e8d911eac9398271921718ac57d33ea30a09b208acd1",
+    "method": "hybrid"
+  },
+  {
+    "context_grade": 1,
+    "answer_grade": 2,
+    "answer_correct": true,
+    "abstention_correct": true,
+    "citation_support": [],
+    "passed": true,
+    "gold_issue": false,
+    "reason": "Retrieved pages are generic scikit-learn docs (e.g. compose:004/005, preprocessing:001/006, grid_search:001/002) and do not state any release schedule or exact date for version 10/1.0, so the answer correctly abstains.",
+    "query_id": "q22",
+    "group": "basic",
+    "reviewer": "GPT-5.4 mini assistant, original sources supplied",
+    "review_model": "gpt-5.4-mini-2026-03-17",
+    "human_confirmed": false,
+    "source_verification": "original_source_units",
+    "trace_sha256": "f58633b0f6465c9be47c0ca4f3c26f91da5b15e825c06e4de776227a4af968b3",
+    "method": "hybrid"
+  }
+]

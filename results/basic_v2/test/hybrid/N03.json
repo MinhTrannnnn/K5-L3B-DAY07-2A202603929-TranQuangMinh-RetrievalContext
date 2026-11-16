@@ -1,0 +1,981 @@
+{
+  "status": "answered",
+  "answer": "RepeatedKFold repeats KFold n times and produces different train/test splits in each repetition, i.e. each repetition uses a different randomization of the folds [6e5607a24622af6e4ce1101e].",
+  "citations": [
+    "6e5607a24622af6e4ce1101e"
+  ],
+  "question": "What does RepeatedKFold do across repetitions?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "RepeatedKFold across repetitions documentation repeats KFold different randomization splits repeated k-fold cross-validation",
+      "results": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "42e1c2b6eb6564955c21824b",
+          "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2092,
+            "start": 1044,
+            "topic": "model_selection",
+            "anchor": "k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 381
+          },
+          "score": 0.03200204813108039,
+          "rank": 2
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.031754032258064516,
+          "rank": 3
+        },
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 0.03149801587301587,
+          "rank": 4
+        },
+        {
+          "id": "ee86083574a4571af54dd178",
+          "text": "3.1.2.2.1. Stratified K-fold\n\nStratifiedKFold is a variation of K-fold which returns stratified folds: each set contains approximately the same percentage of samples of each target class as the complete set.\n\nHere is an example of stratified 3-fold cross-validation on a dataset with 50 samples from two unbalanced classes. We show the number of samples in each class and compare with KFold .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 1175,
+            "start": 783,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 96
+          },
+          "score": 0.03076923076923077,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 0.028991596638655463,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "42e1c2b6eb6564955c21824b",
+          "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2092,
+            "start": 1044,
+            "topic": "model_selection",
+            "anchor": "k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 381
+          },
+          "score": 0.03200204813108039,
+          "rank": 2
+        },
+        {
+          "id": "6c9cb2d2ebc2cdf137005b53",
+          "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2210,
+            "start": 1177,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 372
+          },
+          "score": 0.031754032258064516,
+          "rank": 3
+        },
+        {
+          "id": "93751016083e27352ffd359b",
+          "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 1750,
+            "start": 1082,
+            "topic": "model_selection",
+            "anchor": "group-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 142
+          },
+          "score": 0.03149801587301587,
+          "rank": 4
+        },
+        {
+          "id": "ee86083574a4571af54dd178",
+          "text": "3.1.2.2.1. Stratified K-fold\n\nStratifiedKFold is a variation of K-fold which returns stratified folds: each set contains approximately the same percentage of samples of each target class as the complete set.\n\nHere is an example of stratified 3-fold cross-validation on a dataset with 50 samples from two unbalanced classes. We show the number of samples in each class and compare with KFold .",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 1175,
+            "start": 783,
+            "topic": "model_selection",
+            "anchor": "stratified-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 96
+          },
+          "score": 0.03076923076923077,
+          "rank": 5
+        },
+        {
+          "id": "b7022f827cdbef2fe1e61eef",
+          "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 781,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 146
+          },
+          "score": 0.028991596638655463,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.19370970000090892
+    },
+    {
+      "event": "search",
+      "query": "RepeatedKFold n_repeats total number of splits documentation",
+      "results": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "35d78149c4b224e8acdd5641",
+          "text": "3.1.2.1.5. Random permutations cross-validation a.k.a. Shuffle & Split\n\nThe ShuffleSplit iterator will generate a user defined number of independent train / test dataset splits. Samples are first shuffled and then split into a pair of train and test sets.\n\nIt is possible to control the randomness for reproducibility of the results by explicitly seeding the random_state pseudo random number generator.\n\nHere is a usage example:\n\n>>> from sklearn.model_selection import ShuffleSplit\n>>> X = np.arange(10)\n>>> ss = ShuffleSplit(n_splits=5, test_size=0.25, random_state=0)\n>>> for train_index, test_index in ss.split(X):\n...     print(\"%s %s\" % (train_index, test_index))\n[9 1 6 7 3 0 5] [2 8 4]\n[2 9 8 0 6 7 4] [3 5 1]\n[4 5 1 0 6 9 7] [2 3 8]\n[2 7 5 8 0 3 4] [6 1 9]\n[4 1 0 6 8 9 3] [5 2 7]\n\nHere is a visualization of the cross-validation behavior. Note that ShuffleSplit is not affected by classes or groups.\n\nShuffleSplit is thus a good alternative to KFold cross validation that allows a finer control on the number of iterations and the proportion of samples on each side of the train / test split.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:005",
+          "metadata": {
+            "end": 2922,
+            "start": 1819,
+            "topic": "model_selection",
+            "anchor": "random-permutations-cross-validation-a-k-a-shuffle-split",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.5. Random permutations cross-validation a.k.a. Shuffle & Split",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18198,
+            "unit_start": 14602,
+            "token_count": 330
+          },
+          "score": 0.03057889822595705,
+          "rank": 2
+        },
+        {
+          "id": "001cedffd3f8104a70cedde9",
+          "text": "3.1.2.3. Predefined fold-splits / Validation-sets\n\nFor some datasets, a pre-defined split of the data into training- and validation fold or into several cross-validation folds already exists. Using PredefinedSplit it is possible to use these folds e.g. when searching for hyperparameters.\n\nFor example, when using a validation set, set the test_fold to 0 for all samples that are part of the validation set, and to -1 for all other samples.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2944,
+            "start": 2504,
+            "topic": "model_selection",
+            "anchor": "predefined-fold-splits-validation-sets",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.3. Predefined fold-splits / Validation-sets",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 111
+          },
+          "score": 0.02758751902587519,
+          "rank": 3
+        },
+        {
+          "id": "9d4efc36e7690da44a60568c",
+          "text": "\\[S_{ij} = \\lambda_i\\frac{n_{iY_j}}{n_i} + (1 - \\lambda_i)\\frac{n_{Y_j}}{n}\\]\n\nwhere \\(S_{ij}\\) is the encoding for category \\(i\\) and class \\(j\\) , \\(n_{iY_j}\\) is the number of observations with \\(Y=j\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_{Y_j}\\) is the number of observations with \\(Y=j\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) .\n\nFor continuous targets, the formulation is similar to binary classification:\n\n\\[S_i = \\lambda_i\\frac{\\sum_{k\\in L_i}Y_k}{n_i} + (1 - \\lambda_i)\\frac{\\sum_{k=1}^{n}Y_k}{n}\\]\n\nwhere \\(L_i\\) is the set of observations with category \\(i\\) and \\(n_i\\) is the number of observations with category \\(i\\) .\n\nNote\n\nIn TargetEncoder , fit(X, y).transform(X) does not equal fit_transform(X, y) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:010",
+          "metadata": {
+            "end": 1855,
+            "start": 1029,
+            "topic": "preprocessing",
+            "anchor": "target-encoder",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 36624,
+            "unit_start": 33124,
+            "token_count": 348
+          },
+          "score": 0.02649122807017544,
+          "rank": 4
+        },
+        {
+          "id": "aeadbea5653e4e3ce9084d85",
+          "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 3505,
+            "start": 1863,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 354
+          },
+          "score": 0.025645240835114255,
+          "rank": 5
+        },
+        {
+          "id": "7264d38c5f3cc123f905ac1f",
+          "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 3601,
+            "start": 2629,
+            "topic": "model_selection",
+            "anchor": "stratifiedgroupkfold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 189
+          },
+          "score": 0.02548701298701299,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "6e5607a24622af6e4ce1101e",
+          "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:004",
+          "metadata": {
+            "end": 2735,
+            "start": 2094,
+            "topic": "model_selection",
+            "anchor": "repeated-k-fold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 14600,
+            "unit_start": 10822,
+            "token_count": 245
+          },
+          "score": 0.03278688524590164,
+          "rank": 1
+        },
+        {
+          "id": "35d78149c4b224e8acdd5641",
+          "text": "3.1.2.1.5. Random permutations cross-validation a.k.a. Shuffle & Split\n\nThe ShuffleSplit iterator will generate a user defined number of independent train / test dataset splits. Samples are first shuffled and then split into a pair of train and test sets.\n\nIt is possible to control the randomness for reproducibility of the results by explicitly seeding the random_state pseudo random number generator.\n\nHere is a usage example:\n\n>>> from sklearn.model_selection import ShuffleSplit\n>>> X = np.arange(10)\n>>> ss = ShuffleSplit(n_splits=5, test_size=0.25, random_state=0)\n>>> for train_index, test_index in ss.split(X):\n...     print(\"%s %s\" % (train_index, test_index))\n[9 1 6 7 3 0 5] [2 8 4]\n[2 9 8 0 6 7 4] [3 5 1]\n[4 5 1 0 6 9 7] [2 3 8]\n[2 7 5 8 0 3 4] [6 1 9]\n[4 1 0 6 8 9 3] [5 2 7]\n\nHere is a visualization of the cross-validation behavior. Note that ShuffleSplit is not affected by classes or groups.\n\nShuffleSplit is thus a good alternative to KFold cross validation that allows a finer control on the number of iterations and the proportion of samples on each side of the train / test split.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:005",
+          "metadata": {
+            "end": 2922,
+            "start": 1819,
+            "topic": "model_selection",
+            "anchor": "random-permutations-cross-validation-a-k-a-shuffle-split",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.5. Random permutations cross-validation a.k.a. Shuffle & Split",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 18198,
+            "unit_start": 14602,
+            "token_count": 330
+          },
+          "score": 0.03057889822595705,
+          "rank": 2
+        },
+        {
+          "id": "001cedffd3f8104a70cedde9",
+          "text": "3.1.2.3. Predefined fold-splits / Validation-sets\n\nFor some datasets, a pre-defined split of the data into training- and validation fold or into several cross-validation folds already exists. Using PredefinedSplit it is possible to use these folds e.g. when searching for hyperparameters.\n\nFor example, when using a validation set, set the test_fold to 0 for all samples that are part of the validation set, and to -1 for all other samples.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:006",
+          "metadata": {
+            "end": 2944,
+            "start": 2504,
+            "topic": "model_selection",
+            "anchor": "predefined-fold-splits-validation-sets",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.3. Predefined fold-splits / Validation-sets",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 21900,
+            "unit_start": 18200,
+            "token_count": 111
+          },
+          "score": 0.02758751902587519,
+          "rank": 3
+        },
+        {
+          "id": "9d4efc36e7690da44a60568c",
+          "text": "\\[S_{ij} = \\lambda_i\\frac{n_{iY_j}}{n_i} + (1 - \\lambda_i)\\frac{n_{Y_j}}{n}\\]\n\nwhere \\(S_{ij}\\) is the encoding for category \\(i\\) and class \\(j\\) , \\(n_{iY_j}\\) is the number of observations with \\(Y=j\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_{Y_j}\\) is the number of observations with \\(Y=j\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) .\n\nFor continuous targets, the formulation is similar to binary classification:\n\n\\[S_i = \\lambda_i\\frac{\\sum_{k\\in L_i}Y_k}{n_i} + (1 - \\lambda_i)\\frac{\\sum_{k=1}^{n}Y_k}{n}\\]\n\nwhere \\(L_i\\) is the set of observations with category \\(i\\) and \\(n_i\\) is the number of observations with category \\(i\\) .\n\nNote\n\nIn TargetEncoder , fit(X, y).transform(X) does not equal fit_transform(X, y) .",
+          "source_id": "preprocessing",
+          "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+          "page": "preprocessing:010",
+          "metadata": {
+            "end": 1855,
+            "start": 1029,
+            "topic": "preprocessing",
+            "anchor": "target-encoder",
+            "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 36624,
+            "unit_start": 33124,
+            "token_count": 348
+          },
+          "score": 0.02649122807017544,
+          "rank": 4
+        },
+        {
+          "id": "aeadbea5653e4e3ce9084d85",
+          "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+          "source_id": "grid_search",
+          "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+          "page": "grid_search:003",
+          "metadata": {
+            "end": 3505,
+            "start": 1863,
+            "topic": "model_selection",
+            "anchor": "searching-for-optimal-parameters-with-successive-halving",
+            "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 11260,
+            "unit_start": 7755,
+            "token_count": 354
+          },
+          "score": 0.025645240835114255,
+          "rank": 5
+        },
+        {
+          "id": "7264d38c5f3cc123f905ac1f",
+          "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+          "source_id": "cross_validation",
+          "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+          "page": "cross_validation:007",
+          "metadata": {
+            "end": 3601,
+            "start": 2629,
+            "topic": "model_selection",
+            "anchor": "stratifiedgroupkfold",
+            "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 25503,
+            "unit_start": 21902,
+            "token_count": 189
+          },
+          "score": 0.02548701298701299,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.16110960000150953
+    }
+  ],
+  "context": [
+    {
+      "id": "6e5607a24622af6e4ce1101e",
+      "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2735,
+        "start": 2094,
+        "topic": "model_selection",
+        "anchor": "repeated-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 245
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "42e1c2b6eb6564955c21824b",
+      "text": "3.1.2.1.1. K-fold\n\nKFold divides all the samples in \\(k\\) groups of samples, called folds (if \\(k = n\\) , this is equivalent to the Leave One Out strategy), of equal sizes (if possible). The prediction function is learned using \\(k - 1\\) folds, and the fold left out is used for test.\n\nExample of 2-fold cross-validation on a dataset with 4 samples:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import KFold\n\n>>> X = [\"a\", \"b\", \"c\", \"d\"]\n>>> kf = KFold(n_splits=2)\n>>> for train, test in kf.split(X):\n...     print(\"%s %s\" % (train, test))\n[2 3] [0 1]\n[0 1] [2 3]\n\nHere is a visualization of the cross-validation behavior. Note that KFold is not affected by classes or groups.\n\nEach fold is constituted by two arrays: the first one is related to the training set , and the second one to the test set . Thus, one can create the training/test sets using numpy indexing:\n\n>>> X = np.array([[0., 0.], [1., 1.], [-1., -1.], [2., 2.]])\n>>> y = np.array([0, 1, 0, 1])\n>>> X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2092,
+        "start": 1044,
+        "topic": "model_selection",
+        "anchor": "k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.1. K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 381
+      },
+      "score": 0.03200204813108039,
+      "rank": 2
+    },
+    {
+      "id": "6c9cb2d2ebc2cdf137005b53",
+      "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2210,
+        "start": 1177,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 372
+      },
+      "score": 0.031754032258064516,
+      "rank": 3
+    },
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 0.03149801587301587,
+      "rank": 4
+    },
+    {
+      "id": "ee86083574a4571af54dd178",
+      "text": "3.1.2.2.1. Stratified K-fold\n\nStratifiedKFold is a variation of K-fold which returns stratified folds: each set contains approximately the same percentage of samples of each target class as the complete set.\n\nHere is an example of stratified 3-fold cross-validation on a dataset with 50 samples from two unbalanced classes. We show the number of samples in each class and compare with KFold .",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 1175,
+        "start": 783,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 96
+      },
+      "score": 0.03076923076923077,
+      "rank": 5
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 0.028991596638655463,
+      "rank": 6
+    },
+    {
+      "id": "35d78149c4b224e8acdd5641",
+      "text": "3.1.2.1.5. Random permutations cross-validation a.k.a. Shuffle & Split\n\nThe ShuffleSplit iterator will generate a user defined number of independent train / test dataset splits. Samples are first shuffled and then split into a pair of train and test sets.\n\nIt is possible to control the randomness for reproducibility of the results by explicitly seeding the random_state pseudo random number generator.\n\nHere is a usage example:\n\n>>> from sklearn.model_selection import ShuffleSplit\n>>> X = np.arange(10)\n>>> ss = ShuffleSplit(n_splits=5, test_size=0.25, random_state=0)\n>>> for train_index, test_index in ss.split(X):\n...     print(\"%s %s\" % (train_index, test_index))\n[9 1 6 7 3 0 5] [2 8 4]\n[2 9 8 0 6 7 4] [3 5 1]\n[4 5 1 0 6 9 7] [2 3 8]\n[2 7 5 8 0 3 4] [6 1 9]\n[4 1 0 6 8 9 3] [5 2 7]\n\nHere is a visualization of the cross-validation behavior. Note that ShuffleSplit is not affected by classes or groups.\n\nShuffleSplit is thus a good alternative to KFold cross validation that allows a finer control on the number of iterations and the proportion of samples on each side of the train / test split.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:005",
+      "metadata": {
+        "end": 2922,
+        "start": 1819,
+        "topic": "model_selection",
+        "anchor": "random-permutations-cross-validation-a-k-a-shuffle-split",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.5. Random permutations cross-validation a.k.a. Shuffle & Split",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 18198,
+        "unit_start": 14602,
+        "token_count": 330
+      },
+      "score": 0.03057889822595705,
+      "rank": 2
+    },
+    {
+      "id": "001cedffd3f8104a70cedde9",
+      "text": "3.1.2.3. Predefined fold-splits / Validation-sets\n\nFor some datasets, a pre-defined split of the data into training- and validation fold or into several cross-validation folds already exists. Using PredefinedSplit it is possible to use these folds e.g. when searching for hyperparameters.\n\nFor example, when using a validation set, set the test_fold to 0 for all samples that are part of the validation set, and to -1 for all other samples.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2944,
+        "start": 2504,
+        "topic": "model_selection",
+        "anchor": "predefined-fold-splits-validation-sets",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.3. Predefined fold-splits / Validation-sets",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 111
+      },
+      "score": 0.02758751902587519,
+      "rank": 3
+    },
+    {
+      "id": "9d4efc36e7690da44a60568c",
+      "text": "\\[S_{ij} = \\lambda_i\\frac{n_{iY_j}}{n_i} + (1 - \\lambda_i)\\frac{n_{Y_j}}{n}\\]\n\nwhere \\(S_{ij}\\) is the encoding for category \\(i\\) and class \\(j\\) , \\(n_{iY_j}\\) is the number of observations with \\(Y=j\\) and category \\(i\\) , \\(n_i\\) is the number of observations with category \\(i\\) , \\(n_{Y_j}\\) is the number of observations with \\(Y=j\\) , \\(n\\) is the number of observations, and \\(\\lambda_i\\) is a shrinkage factor for category \\(i\\) .\n\nFor continuous targets, the formulation is similar to binary classification:\n\n\\[S_i = \\lambda_i\\frac{\\sum_{k\\in L_i}Y_k}{n_i} + (1 - \\lambda_i)\\frac{\\sum_{k=1}^{n}Y_k}{n}\\]\n\nwhere \\(L_i\\) is the set of observations with category \\(i\\) and \\(n_i\\) is the number of observations with category \\(i\\) .\n\nNote\n\nIn TargetEncoder , fit(X, y).transform(X) does not equal fit_transform(X, y) .",
+      "source_id": "preprocessing",
+      "source": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "page": "preprocessing:010",
+      "metadata": {
+        "end": 1855,
+        "start": 1029,
+        "topic": "preprocessing",
+        "anchor": "target-encoder",
+        "heading": "8.3. Preprocessing data > 8.3.4. Encoding categorical features > 8.3.4.2. Target Encoder",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 36624,
+        "unit_start": 33124,
+        "token_count": 348
+      },
+      "score": 0.02649122807017544,
+      "rank": 4
+    },
+    {
+      "id": "aeadbea5653e4e3ce9084d85",
+      "text": "The sections below dive into technical aspects of successive halving.\n\nBeside factor , the two main parameters that influence the behaviour of a successive halving search are the min_resources parameter, and the number of candidates (or parameter combinations) that are evaluated. min_resources is the amount of resources allocated at the first iteration for each candidate. The number of candidates is specified directly in HalvingRandomSearchCV , and is determined from the param_grid parameter of HalvingGridSearchCV .\n\nConsider a case where the resource is the number of samples, and where we have 1000 samples. In theory, with min_resources=10 and factor=2 , we are able to run at most 7 iterations with the following number of samples: [10, 20, 40, 80, 160, 320, 640] .\n\nBut depending on the number of candidates, we might run less than 7 iterations: if we start with a small number of candidates, the last iteration might use less than 640 samples, which means not using all the available resources (samples). For example if we start with 5 candidates, we only need 2 iterations: 5 candidates for the first iteration, then 5 // 2 = 2 candidates at the second iteration, after which we know which candidate performs the best (so we don’t need a third one). We would only be using at most 20 samples which is a waste since we have 1000 samples at our disposal. On the other hand, if we start with a high number of candidates, we might end up with a lot of candidates at the last iteration, which may not always be ideal: it means that many candidates will run with the full resources, basically reducing the procedure to standard search.",
+      "source_id": "grid_search",
+      "source": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "page": "grid_search:003",
+      "metadata": {
+        "end": 3505,
+        "start": 1863,
+        "topic": "model_selection",
+        "anchor": "searching-for-optimal-parameters-with-successive-halving",
+        "heading": "3.2. Tuning the hyper-parameters of an estimator > 3.2.3. Searching for optimal parameters with successive halving",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 11260,
+        "unit_start": 7755,
+        "token_count": 354
+      },
+      "score": 0.025645240835114255,
+      "rank": 5
+    },
+    {
+      "id": "7264d38c5f3cc123f905ac1f",
+      "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 3601,
+        "start": 2629,
+        "topic": "model_selection",
+        "anchor": "stratifiedgroupkfold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 189
+      },
+      "score": 0.02548701298701299,
+      "rank": 6
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:21.319656+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 503,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 65,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 568
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:24.001046+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 3197,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 125,
+        "output_tokens_details": {
+          "reasoning_tokens": 95
+        },
+        "total_tokens": 3322
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:27.309517+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 6128,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 3072,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 207,
+        "output_tokens_details": {
+          "reasoning_tokens": 120
+        },
+        "total_tokens": 6335
+      }
+    }
+  ],
+  "seconds": 8.18028079999931,
+  "citation_ids_valid": true,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N03",
+  "initial_ranking": [
+    {
+      "id": "6e5607a24622af6e4ce1101e",
+      "text": "3.1.2.1.2. Repeated K-Fold\n\nRepeatedKFold repeats KFold \\(n\\) times, producing different splits in each repetition.\n\nExample of 2-fold K-Fold repeated 2 times:\n\n>>> import numpy as np\n>>> from sklearn.model_selection import RepeatedKFold\n>>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])\n>>> random_state = 12883823\n>>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)\n>>> for train, test in rkf.split(X):\n...     print(\"%s %s\" % (train, test))\n...\n[2 3] [0 1]\n[0 1] [2 3]\n[0 2] [1 3]\n[1 3] [0 2]\n\nSimilarly, RepeatedStratifiedKFold repeats StratifiedKFold \\(n\\) times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:004",
+      "metadata": {
+        "end": 2735,
+        "start": 2094,
+        "topic": "model_selection",
+        "anchor": "repeated-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.1. Cross-validation iterators for i.i.d. data > 3.1.2.1.2. Repeated K-Fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 14600,
+        "unit_start": 10822,
+        "token_count": 245
+      },
+      "score": 0.03278688524590164,
+      "rank": 1
+    },
+    {
+      "id": "93751016083e27352ffd359b",
+      "text": "Each subject is in a different testing fold, and the same subject is never in both testing and training. Notice that the folds do not have exactly the same size due to the imbalance in the data. If class proportions must be balanced across folds, StratifiedGroupKFold is a better option.\n\nHere is a visualization of the cross-validation behavior.\n\nSimilar to KFold , the test sets from GroupKFold will form a complete partition of all the data.\n\nWhile GroupKFold attempts to place the same number of samples in each fold when shuffle=False , when shuffle=True it attempts to place an equal number of distinct groups in each fold (but does not account for group sizes).",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 1750,
+        "start": 1082,
+        "topic": "model_selection",
+        "anchor": "group-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.1. Group K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 142
+      },
+      "score": 0.03200204813108039,
+      "rank": 2
+    },
+    {
+      "id": "b7022f827cdbef2fe1e61eef",
+      "text": "To mitigate such problems, splitters such as StratifiedKFold and StratifiedShuffleSplit implement stratified sampling to ensure that relative class frequencies are approximately preserved in each fold.\n\nNote\n\nStratified sampling was introduced in scikit-learn to workaround the aforementioned engineering problems rather than solve a statistical one.\n\nStratification makes cross-validation folds more homogeneous, and as a result hides some of the variability inherent to fitting models with a limited number of observations.\n\nAs a result, stratification can artificially shrink the spread of the metric measured across cross-validation iterations: the inter-fold variability does no longer reflect the uncertainty in the performance of classifiers in the presence of rare classes.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 781,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "cross-validation-iterators-with-stratification-based-on-class-labels",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 146
+      },
+      "score": 0.02967032967032967,
+      "rank": 3
+    },
+    {
+      "id": "7264d38c5f3cc123f905ac1f",
+      "text": "With the current implementation full shuffle is not possible in most scenarios. When shuffle=True, the following happens: All groups are shuffled. Groups are sorted by standard deviation of classes using stable sort. Sorted groups are iterated over and assigned to folds. That means that only groups with the same standard deviation of class distribution will be shuffled, which might be useful when each group has only a single class.\n\nThe algorithm greedily assigns each group to one of n_splits test sets, choosing the test set that minimises the variance in class distribution across test sets. Group assignment proceeds from groups with highest to lowest variance in class frequency, i.e. large groups peaked on one or few classes are assigned first.\n\nThis split is suboptimal in a sense that it might produce imbalanced splits even if perfect stratification is possible. If you have relatively close distribution of classes in each group, using GroupKFold is better.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:007",
+      "metadata": {
+        "end": 3601,
+        "start": 2629,
+        "topic": "model_selection",
+        "anchor": "stratifiedgroupkfold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.4. Cross-validation iterators for grouped data > 3.1.2.4.2. StratifiedGroupKFold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 25503,
+        "unit_start": 21902,
+        "token_count": 189
+      },
+      "score": 0.026500526500526502,
+      "rank": 4
+    },
+    {
+      "id": "6c9cb2d2ebc2cdf137005b53",
+      "text": ">>> from sklearn.model_selection import StratifiedKFold, KFold\n>>> import numpy as np\n>>> X, y = np.ones((50, 1)), np.hstack(([0] * 45, [1] * 5))\n>>> skf = StratifiedKFold(n_splits=3)\n>>> for train, test in skf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  3]   |   test -  [15  2]\ntrain -  [30  4]   |   test -  [15  1]\n>>> kf = KFold(n_splits=3)\n>>> for train, test in kf.split(X, y):\n...     print('train -  {}   |   test -  {}'.format(\n...         np.bincount(y[train]), np.bincount(y[test])))\ntrain -  [28  5]   |   test -  [17]\ntrain -  [28  5]   |   test -  [17]\ntrain -  [34]   |   test -  [11  5]\n\nWe can see that StratifiedKFold preserves the class ratios (approximately 1 / 10) in both train and test datasets.\n\nHere is a visualization of the cross-validation behavior.\n\nRepeatedStratifiedKFold can be used to repeat Stratified K-Fold n times with different randomization in each repetition.",
+      "source_id": "cross_validation",
+      "source": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "page": "cross_validation:006",
+      "metadata": {
+        "end": 2210,
+        "start": 1177,
+        "topic": "model_selection",
+        "anchor": "stratified-k-fold",
+        "heading": "3.1. Cross-validation: evaluating estimator performance > 3.1.2. Cross validation iterators > 3.1.2.2. Cross-validation iterators with stratification based on class labels > 3.1.2.2.1. Stratified K-fold",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 21900,
+        "unit_start": 18200,
+        "token_count": 372
+      },
+      "score": 0.016129032258064516,
+      "rank": 5
+    },
+    {
+      "id": "823ae3f366e1300530806607",
+      "text": "3.4.3. The scoring parameter: defining model evaluation rules\n\nModel selection and evaluation tools that internally use cross-validation (such as model_selection.GridSearchCV , model_selection.validation_curve and linear_model.LogisticRegressionCV ) take a scoring parameter that controls what metric they apply to the estimators evaluated.\n\nThey can be specified in several ways:\n\nNone : the estimator’s default evaluation criterion (i.e., the metric used in the estimator’s score method) is used.\n\nString name : common metrics can be passed via a string name.\n\nCallable : more complex metrics can be passed via a custom metric callable (e.g., function).\n\nSome tools do also accept multiple metric evaluation. See Using multiple metric evaluation for details.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:003",
+      "metadata": {
+        "end": 760,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "the-scoring-parameter-defining-model-evaluation-rules",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.3. The scoring parameter: defining model evaluation rules",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 10912,
+        "unit_start": 7345,
+        "token_count": 172
+      },
+      "score": 0.015873015873015872,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942",
+  "retrieval_hit1": true,
+  "retrieval_hit3": true,
+  "context_evidence": true
+}

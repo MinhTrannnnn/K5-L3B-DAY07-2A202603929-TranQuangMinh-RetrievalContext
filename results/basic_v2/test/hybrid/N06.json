@@ -1,0 +1,1074 @@
+{
+  "status": "abstain",
+  "answer": "I can’t determine the exact mean absolute error for your private dataset because that dataset is not included here, and MAE is defined from the true values and predicted values on a specific sample set [284c911c4d879a63905fc0a0]. The retrieved documents only describe SimpleImputer as a method that imputes missing values using per-column statistics such as mean, median, or most frequent, so they do not contain enough information to compute your dataset’s exact MAE [7ec13427a119dad976f5383c].",
+  "citations": [],
+  "question": "What exact mean absolute error will SimpleImputer achieve on my private dataset, which is not included in these documents?",
+  "corpus": "day6",
+  "config": {
+    "model": "gpt-5.4-mini",
+    "method": "hybrid",
+    "top_k": 6,
+    "instruction_sha256": "3f67f1ba6c2b2700ae3ccd1f2f8fd62d86156bc3aade4646c9c0b23d4d19ac8b",
+    "answer_verification": false,
+    "context_budget_tokens_per_tool": 6500,
+    "max_rounds": 6,
+    "vision": true
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "SimpleImputer mean absolute error private dataset",
+      "results": [
+        {
+          "id": "7ec13427a119dad976f5383c",
+          "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 1963,
+            "start": 1052,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 264
+          },
+          "score": 0.031544957774465976,
+          "rank": 1
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 0.0315136476426799,
+          "rank": 2
+        },
+        {
+          "id": "7b046a934c99b94acceb5080",
+          "text": "3.4.6.5. Mean absolute percentage error\n\nThe mean_absolute_percentage_error (MAPE), also known as mean absolute percentage deviation (MAPD), is an evaluation metric for regression problems. The idea of this metric is to be sensitive to relative errors. It is for example not changed by a global scaling of the target variable.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 3697,
+            "start": 3371,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 73
+          },
+          "score": 0.03149801587301587,
+          "rank": 3
+        },
+        {
+          "id": "53c76ec7d42c7b1081f2208e",
+          "text": "3.4.6.2. Mean absolute error\n\nThe mean_absolute_error function computes mean absolute error , a risk metric corresponding to the expected value of the absolute error loss or \\(l1\\) -norm loss.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:025",
+          "metadata": {
+            "end": 3602,
+            "start": 3410,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 91803,
+            "unit_start": 88201,
+            "token_count": 48
+          },
+          "score": 0.031099324975891997,
+          "rank": 4
+        },
+        {
+          "id": "284c911c4d879a63905fc0a0",
+          "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean absolute error (MAE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\left| y_i - \\hat{y}_i \\right|.\\]\n\nHere is a small example of usage of the mean_absolute_error function:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 392,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 159
+          },
+          "score": 0.030798389007344232,
+          "rank": 5
+        },
+        {
+          "id": "de8b140f12b8d01fef75c1ba",
+          "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample and \\(y_i\\) is the corresponding true value, then the mean absolute percentage error (MAPE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAPE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\frac{{}\\left| y_i - \\hat{y}_i \\right|}{\\max(\\epsilon, \\left| y_i \\right|)}\\]\n\nwhere \\(\\epsilon\\) is an arbitrary small yet strictly positive number to avoid undefined results when y is zero.\n\nThe mean_absolute_percentage_error function supports multioutput.\n\nHere is a small example of usage of the mean_absolute_percentage_error function:\n\n>>> from sklearn.metrics import mean_absolute_percentage_error\n>>> y_true = [1, 10, 1e6]\n>>> y_pred = [0.9, 15, 1.2e6]\n>>> mean_absolute_percentage_error(y_true, y_pred)\n0.2666\n\nIn above example, if we had used mean_absolute_error , it would have ignored the small magnitude values and only reflected the error in prediction of highest magnitude value. But that problem is resolved in case of MAPE because it calculates relative percentage error with respect to actual output.\n\nNote",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1124,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 363
+          },
+          "score": 0.030017921146953404,
+          "rank": 6
+        }
+      ],
+      "context": [
+        {
+          "id": "7ec13427a119dad976f5383c",
+          "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 1963,
+            "start": 1052,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 264
+          },
+          "score": 0.031544957774465976,
+          "rank": 1
+        },
+        {
+          "id": "abd3a5a15f6034720fabafce",
+          "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1707,
+            "start": 1126,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 125
+          },
+          "score": 0.0315136476426799,
+          "rank": 2
+        },
+        {
+          "id": "7b046a934c99b94acceb5080",
+          "text": "3.4.6.5. Mean absolute percentage error\n\nThe mean_absolute_percentage_error (MAPE), also known as mean absolute percentage deviation (MAPD), is an evaluation metric for regression problems. The idea of this metric is to be sensitive to relative errors. It is for example not changed by a global scaling of the target variable.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 3697,
+            "start": 3371,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 73
+          },
+          "score": 0.03149801587301587,
+          "rank": 3
+        },
+        {
+          "id": "53c76ec7d42c7b1081f2208e",
+          "text": "3.4.6.2. Mean absolute error\n\nThe mean_absolute_error function computes mean absolute error , a risk metric corresponding to the expected value of the absolute error loss or \\(l1\\) -norm loss.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:025",
+          "metadata": {
+            "end": 3602,
+            "start": 3410,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 91803,
+            "unit_start": 88201,
+            "token_count": 48
+          },
+          "score": 0.031099324975891997,
+          "rank": 4
+        },
+        {
+          "id": "284c911c4d879a63905fc0a0",
+          "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean absolute error (MAE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\left| y_i - \\hat{y}_i \\right|.\\]\n\nHere is a small example of usage of the mean_absolute_error function:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 392,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 159
+          },
+          "score": 0.030798389007344232,
+          "rank": 5
+        },
+        {
+          "id": "de8b140f12b8d01fef75c1ba",
+          "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample and \\(y_i\\) is the corresponding true value, then the mean absolute percentage error (MAPE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAPE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\frac{{}\\left| y_i - \\hat{y}_i \\right|}{\\max(\\epsilon, \\left| y_i \\right|)}\\]\n\nwhere \\(\\epsilon\\) is an arbitrary small yet strictly positive number to avoid undefined results when y is zero.\n\nThe mean_absolute_percentage_error function supports multioutput.\n\nHere is a small example of usage of the mean_absolute_percentage_error function:\n\n>>> from sklearn.metrics import mean_absolute_percentage_error\n>>> y_true = [1, 10, 1e6]\n>>> y_pred = [0.9, 15, 1.2e6]\n>>> mean_absolute_percentage_error(y_true, y_pred)\n0.2666\n\nIn above example, if we had used mean_absolute_error , it would have ignored the small magnitude values and only reflected the error in prediction of highest magnitude value. But that problem is resolved in case of MAPE because it calculates relative percentage error with respect to actual output.\n\nNote",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:027",
+          "metadata": {
+            "end": 1124,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 99006,
+            "unit_start": 95504,
+            "token_count": 363
+          },
+          "score": 0.030017921146953404,
+          "rank": 6
+        }
+      ],
+      "method": "hybrid",
+      "filters": {},
+      "seconds": 0.10659939999823109
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "7ec13427a119dad976f5383c",
+      "context": [
+        {
+          "id": "42a6c1bb8187479049c2c85f",
+          "text": "8.4.3. Multivariate feature imputation\n\nA more sophisticated approach is to use the IterativeImputer class, which models each feature with missing values as a function of other features, and uses that estimate for imputation. It does so in an iterated round-robin fashion: at each step, a feature column is designated as output y and the other feature columns are treated as inputs X . A regressor is fit on (X, y) for known y . Then, the regressor is used to predict the missing values of y . This is done for each feature in an iterative fashion, and then is repeated for max_iter imputation rounds. The results of the final imputation round are returned.",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 3711,
+            "start": 3054,
+            "topic": "preprocessing",
+            "anchor": "multivariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.3. Multivariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 152
+          }
+        },
+        {
+          "id": "5591bb33bc5cc0d6e234b031",
+          "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 668,
+            "start": 0,
+            "topic": "preprocessing",
+            "anchor": "imputation-of-missing-values",
+            "heading": "8.4. Imputation of missing values",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 150
+          }
+        },
+        {
+          "id": "5db67e2400256ec645b36f0d",
+          "text": ">>> import pandas as pd\n>>> df = pd.DataFrame([[\"a\", \"x\"],\n...                    [np.nan, \"y\"],\n...                    [\"a\", np.nan],\n...                    [\"b\", \"y\"]], dtype=\"category\")\n...\n>>> imp = SimpleImputer(strategy=\"most_frequent\")\n>>> print(imp.fit_transform(df))\n[['a' 'x']\n ['a' 'y']\n ['a' 'y']\n ['b' 'y']]\n\nFor another example on usage, see Imputing missing values before building an estimator .",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 3052,
+            "start": 2642,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 165
+          }
+        },
+        {
+          "id": "7ec13427a119dad976f5383c",
+          "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 1963,
+            "start": 1052,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 264
+          }
+        },
+        {
+          "id": "bc1b30cb9239fd4dce3db979",
+          "text": "8.4.1. Univariate vs. Multivariate Imputation\n\nOne type of imputation algorithm is univariate, which imputes values in the i-th feature dimension using only non-missing values in that feature dimension (e.g. SimpleImputer ). By contrast, multivariate imputation algorithms use the entire set of available feature dimensions to estimate the missing values (e.g. IterativeImputer ).",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 1050,
+            "start": 670,
+            "topic": "preprocessing",
+            "anchor": "univariate-vs-multivariate-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.1. Univariate vs. Multivariate Imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 94
+          }
+        },
+        {
+          "id": "be3b1da9c776f955f57b418f",
+          "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+          "source_id": "impute",
+          "source": "https://scikit-learn.org/1.9/modules/impute.html",
+          "page": "impute:001",
+          "metadata": {
+            "end": 2640,
+            "start": 1965,
+            "topic": "preprocessing",
+            "anchor": "univariate-feature-imputation",
+            "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 3711,
+            "unit_start": 0,
+            "token_count": 240
+          }
+        }
+      ],
+      "seconds": 0.001821199999540113
+    },
+    {
+      "event": "read_evidence",
+      "evidence_id": "284c911c4d879a63905fc0a0",
+      "context": [
+        {
+          "id": "284c911c4d879a63905fc0a0",
+          "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean absolute error (MAE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\left| y_i - \\hat{y}_i \\right|.\\]\n\nHere is a small example of usage of the mean_absolute_error function:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 392,
+            "start": 0,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 159
+          }
+        },
+        {
+          "id": "6229bbe54d7ce6cc49a662e1",
+          "text": "3.4.6.3. Mean squared error\n\nThe mean_squared_error function computes mean squared error , a risk metric corresponding to the expected value of the squared (quadratic) error or loss.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean squared error (MSE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MSE}(y, \\hat{y}) = \\frac{1}{n_\\text{samples}} \\sum_{i=0}^{n_\\text{samples} - 1} (y_i - \\hat{y}_i)^2.\\]\n\nHere is a small example of usage of the mean_squared_error function:\n\n>>> from sklearn.metrics import mean_squared_error\n>>> y_true = [3, -0.5, 2, 7]\n>>> y_pred = [2.5, 0.0, 2, 8]\n>>> mean_squared_error(y_true, y_pred)\n0.375\n>>> y_true = [[0.5, 1], [-1, 1], [7, -6]]\n>>> y_pred = [[0, 2], [-1, 2], [8, -5]]\n>>> mean_squared_error(y_true, y_pred)\n0.7083\n\nExamples\n\nSee Gradient Boosting regression for an example of mean squared error usage to evaluate gradient boosting regression.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 1804,
+            "start": 830,
+            "topic": "model_selection",
+            "anchor": "mean-squared-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.3. Mean squared error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 378
+          }
+        },
+        {
+          "id": "72cce0e69ac40990f36597d4",
+          "text": "3.4.6.4. Mean squared logarithmic error\n\nThe mean_squared_log_error function computes a risk metric corresponding to the expected value of the squared logarithmic (quadratic) error or loss.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean squared logarithmic error (MSLE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MSLE}(y, \\hat{y}) = \\frac{1}{n_\\text{samples}} \\sum_{i=0}^{n_\\text{samples} - 1} (\\log_e (1 + y_i) - \\log_e (1 + \\hat{y}_i) )^2.\\]\n\nWhere \\(\\log_e (x)\\) means the natural logarithm of \\(x\\) . This metric is best to use when targets having exponential growth, such as population counts, average sales of a commodity over a span of years etc. Note that this metric penalizes an under-predicted estimate greater than an over-predicted estimate.\n\nHere is a small example of usage of the mean_squared_log_error function:",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 2964,
+            "start": 2040,
+            "topic": "model_selection",
+            "anchor": "mean-squared-logarithmic-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.4. Mean squared logarithmic error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 300
+          }
+        },
+        {
+          "id": "7b046a934c99b94acceb5080",
+          "text": "3.4.6.5. Mean absolute percentage error\n\nThe mean_absolute_percentage_error (MAPE), also known as mean absolute percentage deviation (MAPD), is an evaluation metric for regression problems. The idea of this metric is to be sensitive to relative errors. It is for example not changed by a global scaling of the target variable.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 3697,
+            "start": 3371,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-percentage-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 73
+          }
+        },
+        {
+          "id": "969eb90a82452175f757ff76",
+          "text": ">>> from sklearn.metrics import mean_squared_log_error\n>>> y_true = [3, 5, 2.5, 7]\n>>> y_pred = [2.5, 5, 4, 8]\n>>> mean_squared_log_error(y_true, y_pred)\n0.0397\n>>> y_true = [[0.5, 1], [1, 2], [7, 6]]\n>>> y_pred = [[0.5, 2], [1, 2.5], [8, 8]]\n>>> mean_squared_log_error(y_true, y_pred)\n0.044\n\nThe root mean squared logarithmic error (RMSLE) is available through the root_mean_squared_log_error function.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 3369,
+            "start": 2966,
+            "topic": "model_selection",
+            "anchor": "mean-squared-logarithmic-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.4. Mean squared logarithmic error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 191
+          }
+        },
+        {
+          "id": "b71e8fd7d491ec6d48c36b0e",
+          "text": "Taking the square root of the MSE, called the root mean squared error (RMSE), is another common metric that provides a measure in the same units as the target variable. RMSE is available through the root_mean_squared_error function.",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 2038,
+            "start": 1806,
+            "topic": "model_selection",
+            "anchor": "mean-squared-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.3. Mean squared error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 52
+          }
+        },
+        {
+          "id": "f42d229ff30d503efc251eb4",
+          "text": ">>> from sklearn.metrics import mean_absolute_error\n>>> y_true = [3, -0.5, 2, 7]\n>>> y_pred = [2.5, 0.0, 2, 8]\n>>> mean_absolute_error(y_true, y_pred)\n0.5\n>>> y_true = [[0.5, 1], [-1, 1], [7, -6]]\n>>> y_pred = [[0, 2], [-1, 2], [8, -5]]\n>>> mean_absolute_error(y_true, y_pred)\n0.75\n>>> mean_absolute_error(y_true, y_pred, multioutput='raw_values')\narray([0.5, 1. ])\n>>> mean_absolute_error(y_true, y_pred, multioutput=[0.3, 0.7])\n0.85",
+          "source_id": "model_evaluation",
+          "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+          "page": "model_evaluation:026",
+          "metadata": {
+            "end": 828,
+            "start": 394,
+            "topic": "model_selection",
+            "anchor": "mean-absolute-error",
+            "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+            "version": "1.9",
+            "language": "en",
+            "unit_end": 95502,
+            "unit_start": 91805,
+            "token_count": 231
+          }
+        }
+      ],
+      "seconds": 0.0021225999989837874
+    }
+  ],
+  "context": [
+    {
+      "id": "7ec13427a119dad976f5383c",
+      "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 1963,
+        "start": 1052,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 264
+      }
+    },
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 0.0315136476426799,
+      "rank": 2
+    },
+    {
+      "id": "7b046a934c99b94acceb5080",
+      "text": "3.4.6.5. Mean absolute percentage error\n\nThe mean_absolute_percentage_error (MAPE), also known as mean absolute percentage deviation (MAPD), is an evaluation metric for regression problems. The idea of this metric is to be sensitive to relative errors. It is for example not changed by a global scaling of the target variable.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 3697,
+        "start": 3371,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 73
+      }
+    },
+    {
+      "id": "53c76ec7d42c7b1081f2208e",
+      "text": "3.4.6.2. Mean absolute error\n\nThe mean_absolute_error function computes mean absolute error , a risk metric corresponding to the expected value of the absolute error loss or \\(l1\\) -norm loss.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:025",
+      "metadata": {
+        "end": 3602,
+        "start": 3410,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 91803,
+        "unit_start": 88201,
+        "token_count": 48
+      },
+      "score": 0.031099324975891997,
+      "rank": 4
+    },
+    {
+      "id": "284c911c4d879a63905fc0a0",
+      "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean absolute error (MAE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\left| y_i - \\hat{y}_i \\right|.\\]\n\nHere is a small example of usage of the mean_absolute_error function:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 392,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 159
+      }
+    },
+    {
+      "id": "de8b140f12b8d01fef75c1ba",
+      "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample and \\(y_i\\) is the corresponding true value, then the mean absolute percentage error (MAPE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAPE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\frac{{}\\left| y_i - \\hat{y}_i \\right|}{\\max(\\epsilon, \\left| y_i \\right|)}\\]\n\nwhere \\(\\epsilon\\) is an arbitrary small yet strictly positive number to avoid undefined results when y is zero.\n\nThe mean_absolute_percentage_error function supports multioutput.\n\nHere is a small example of usage of the mean_absolute_percentage_error function:\n\n>>> from sklearn.metrics import mean_absolute_percentage_error\n>>> y_true = [1, 10, 1e6]\n>>> y_pred = [0.9, 15, 1.2e6]\n>>> mean_absolute_percentage_error(y_true, y_pred)\n0.2666\n\nIn above example, if we had used mean_absolute_error , it would have ignored the small magnitude values and only reflected the error in prediction of highest magnitude value. But that problem is resolved in case of MAPE because it calculates relative percentage error with respect to actual output.\n\nNote",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1124,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 363
+      },
+      "score": 0.030017921146953404,
+      "rank": 6
+    },
+    {
+      "id": "42a6c1bb8187479049c2c85f",
+      "text": "8.4.3. Multivariate feature imputation\n\nA more sophisticated approach is to use the IterativeImputer class, which models each feature with missing values as a function of other features, and uses that estimate for imputation. It does so in an iterated round-robin fashion: at each step, a feature column is designated as output y and the other feature columns are treated as inputs X . A regressor is fit on (X, y) for known y . Then, the regressor is used to predict the missing values of y . This is done for each feature in an iterative fashion, and then is repeated for max_iter imputation rounds. The results of the final imputation round are returned.",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 3711,
+        "start": 3054,
+        "topic": "preprocessing",
+        "anchor": "multivariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.3. Multivariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 152
+      }
+    },
+    {
+      "id": "5591bb33bc5cc0d6e234b031",
+      "text": "8.4. Imputation of missing values\n\nFor various reasons, many real world datasets contain missing values, often encoded as blanks, NaNs or other placeholders. Such datasets however are incompatible with scikit-learn estimators which assume that all values in an array are numerical, and that all have and hold meaning. A basic strategy to use incomplete datasets is to discard entire rows and/or columns containing missing values. However, this comes at the price of losing data which may be valuable (even though incomplete). A better strategy is to impute the missing values, i.e., to infer them from the known part of the data. See the glossary entry on imputation .",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 668,
+        "start": 0,
+        "topic": "preprocessing",
+        "anchor": "imputation-of-missing-values",
+        "heading": "8.4. Imputation of missing values",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 150
+      }
+    },
+    {
+      "id": "5db67e2400256ec645b36f0d",
+      "text": ">>> import pandas as pd\n>>> df = pd.DataFrame([[\"a\", \"x\"],\n...                    [np.nan, \"y\"],\n...                    [\"a\", np.nan],\n...                    [\"b\", \"y\"]], dtype=\"category\")\n...\n>>> imp = SimpleImputer(strategy=\"most_frequent\")\n>>> print(imp.fit_transform(df))\n[['a' 'x']\n ['a' 'y']\n ['a' 'y']\n ['b' 'y']]\n\nFor another example on usage, see Imputing missing values before building an estimator .",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 3052,
+        "start": 2642,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 165
+      }
+    },
+    {
+      "id": "bc1b30cb9239fd4dce3db979",
+      "text": "8.4.1. Univariate vs. Multivariate Imputation\n\nOne type of imputation algorithm is univariate, which imputes values in the i-th feature dimension using only non-missing values in that feature dimension (e.g. SimpleImputer ). By contrast, multivariate imputation algorithms use the entire set of available feature dimensions to estimate the missing values (e.g. IterativeImputer ).",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 1050,
+        "start": 670,
+        "topic": "preprocessing",
+        "anchor": "univariate-vs-multivariate-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.1. Univariate vs. Multivariate Imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 94
+      }
+    },
+    {
+      "id": "be3b1da9c776f955f57b418f",
+      "text": ">>> import scipy.sparse as sp\n>>> X = sp.csc_array([[1, 2], [0, -1], [8, 4]])\n>>> imp = SimpleImputer(missing_values=-1, strategy='mean')\n>>> imp.fit(X)\nSimpleImputer(missing_values=-1)\n>>> X_test = sp.csc_array([[-1, 2], [6, -1], [7, 6]])\n>>> print(imp.transform(X_test).toarray())\n[[3. 2.]\n [6. 3.]\n [7. 6.]]\n\nNote that this format is not meant to be used to implicitly store missing values in the matrix because it would densify it at transform time. Missing values encoded by 0 must be used with dense input.\n\nThe SimpleImputer class also supports categorical data represented as string values or pandas categoricals when using the 'most_frequent' or 'constant' strategy:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 2640,
+        "start": 1965,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 240
+      }
+    },
+    {
+      "id": "6229bbe54d7ce6cc49a662e1",
+      "text": "3.4.6.3. Mean squared error\n\nThe mean_squared_error function computes mean squared error , a risk metric corresponding to the expected value of the squared (quadratic) error or loss.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean squared error (MSE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MSE}(y, \\hat{y}) = \\frac{1}{n_\\text{samples}} \\sum_{i=0}^{n_\\text{samples} - 1} (y_i - \\hat{y}_i)^2.\\]\n\nHere is a small example of usage of the mean_squared_error function:\n\n>>> from sklearn.metrics import mean_squared_error\n>>> y_true = [3, -0.5, 2, 7]\n>>> y_pred = [2.5, 0.0, 2, 8]\n>>> mean_squared_error(y_true, y_pred)\n0.375\n>>> y_true = [[0.5, 1], [-1, 1], [7, -6]]\n>>> y_pred = [[0, 2], [-1, 2], [8, -5]]\n>>> mean_squared_error(y_true, y_pred)\n0.7083\n\nExamples\n\nSee Gradient Boosting regression for an example of mean squared error usage to evaluate gradient boosting regression.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 1804,
+        "start": 830,
+        "topic": "model_selection",
+        "anchor": "mean-squared-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.3. Mean squared error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 378
+      }
+    },
+    {
+      "id": "72cce0e69ac40990f36597d4",
+      "text": "3.4.6.4. Mean squared logarithmic error\n\nThe mean_squared_log_error function computes a risk metric corresponding to the expected value of the squared logarithmic (quadratic) error or loss.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample, and \\(y_i\\) is the corresponding true value, then the mean squared logarithmic error (MSLE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MSLE}(y, \\hat{y}) = \\frac{1}{n_\\text{samples}} \\sum_{i=0}^{n_\\text{samples} - 1} (\\log_e (1 + y_i) - \\log_e (1 + \\hat{y}_i) )^2.\\]\n\nWhere \\(\\log_e (x)\\) means the natural logarithm of \\(x\\) . This metric is best to use when targets having exponential growth, such as population counts, average sales of a commodity over a span of years etc. Note that this metric penalizes an under-predicted estimate greater than an over-predicted estimate.\n\nHere is a small example of usage of the mean_squared_log_error function:",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 2964,
+        "start": 2040,
+        "topic": "model_selection",
+        "anchor": "mean-squared-logarithmic-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.4. Mean squared logarithmic error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 300
+      }
+    },
+    {
+      "id": "969eb90a82452175f757ff76",
+      "text": ">>> from sklearn.metrics import mean_squared_log_error\n>>> y_true = [3, 5, 2.5, 7]\n>>> y_pred = [2.5, 5, 4, 8]\n>>> mean_squared_log_error(y_true, y_pred)\n0.0397\n>>> y_true = [[0.5, 1], [1, 2], [7, 6]]\n>>> y_pred = [[0.5, 2], [1, 2.5], [8, 8]]\n>>> mean_squared_log_error(y_true, y_pred)\n0.044\n\nThe root mean squared logarithmic error (RMSLE) is available through the root_mean_squared_log_error function.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 3369,
+        "start": 2966,
+        "topic": "model_selection",
+        "anchor": "mean-squared-logarithmic-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.4. Mean squared logarithmic error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 191
+      }
+    },
+    {
+      "id": "b71e8fd7d491ec6d48c36b0e",
+      "text": "Taking the square root of the MSE, called the root mean squared error (RMSE), is another common metric that provides a measure in the same units as the target variable. RMSE is available through the root_mean_squared_error function.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 2038,
+        "start": 1806,
+        "topic": "model_selection",
+        "anchor": "mean-squared-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.3. Mean squared error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 52
+      }
+    },
+    {
+      "id": "f42d229ff30d503efc251eb4",
+      "text": ">>> from sklearn.metrics import mean_absolute_error\n>>> y_true = [3, -0.5, 2, 7]\n>>> y_pred = [2.5, 0.0, 2, 8]\n>>> mean_absolute_error(y_true, y_pred)\n0.5\n>>> y_true = [[0.5, 1], [-1, 1], [7, -6]]\n>>> y_pred = [[0, 2], [-1, 2], [8, -5]]\n>>> mean_absolute_error(y_true, y_pred)\n0.75\n>>> mean_absolute_error(y_true, y_pred, multioutput='raw_values')\narray([0.5, 1. ])\n>>> mean_absolute_error(y_true, y_pred, multioutput=[0.3, 0.7])\n0.85",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 828,
+        "start": 394,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 231
+      }
+    }
+  ],
+  "usage": [
+    {
+      "at": "2026-11-16T15:47:30.193126+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 516,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 113,
+        "output_tokens_details": {
+          "reasoning_tokens": 87
+        },
+        "total_tokens": 629
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:33.544523+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 2773,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 244,
+        "output_tokens_details": {
+          "reasoning_tokens": 210
+        },
+        "total_tokens": 3017
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:35.483682+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 4934,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 11
+        },
+        "total_tokens": 4981
+      }
+    },
+    {
+      "at": "2026-11-16T15:47:43.141912+00:00",
+      "operation": "agent",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "usage": {
+        "input_tokens": 7461,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 4736,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 654,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 8115
+      }
+    }
+  ],
+  "seconds": 15.694930499998009,
+  "citation_ids_valid": null,
+  "semantic_citation_review": "pending_human_review",
+  "query_id": "N06",
+  "initial_ranking": [
+    {
+      "id": "abd3a5a15f6034720fabafce",
+      "text": "The MAPE formula here does not represent the common “percentage” definition: the percentage in the range [0, 100] is converted to a relative value in the range [0, 1] by dividing by 100. Thus, an error of 200% corresponds to a relative error of 2. The motivation here is to have a range of values that is more consistent with other error metrics in scikit-learn, such as accuracy_score .\n\nTo obtain the mean absolute percentage error as per the Wikipedia formula, multiply the mean_absolute_percentage_error computed here by 100.\n\nWikipedia entry for Mean Absolute Percentage Error",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1707,
+        "start": 1126,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 125
+      },
+      "score": 0.032266458495966696,
+      "rank": 1
+    },
+    {
+      "id": "7b046a934c99b94acceb5080",
+      "text": "3.4.6.5. Mean absolute percentage error\n\nThe mean_absolute_percentage_error (MAPE), also known as mean absolute percentage deviation (MAPD), is an evaluation metric for regression problems. The idea of this metric is to be sensitive to relative errors. It is for example not changed by a global scaling of the target variable.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:026",
+      "metadata": {
+        "end": 3697,
+        "start": 3371,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 95502,
+        "unit_start": 91805,
+        "token_count": 73
+      },
+      "score": 0.030834914611005692,
+      "rank": 2
+    },
+    {
+      "id": "7ec13427a119dad976f5383c",
+      "text": "8.4.2. Univariate feature imputation\n\nThe SimpleImputer class provides basic strategies for imputing missing values. Missing values can be imputed with a provided constant value, or using the statistics (mean, median or most frequent) of each column in which the missing values are located. This class also allows for different missing values encodings.\n\nThe following snippet demonstrates how to replace missing values, encoded as np.nan , using the mean value of the columns (axis 0) that contain the missing values:\n\n>>> import numpy as np\n>>> from sklearn.impute import SimpleImputer\n>>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')\n>>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])\nSimpleImputer()\n>>> X = [[np.nan, 2], [6, np.nan], [7, 6]]\n>>> print(imp.transform(X))\n[[4.          2.        ]\n [6.          3.666]\n [7.          6.        ]]\n\nThe SimpleImputer class also supports sparse matrices:",
+      "source_id": "impute",
+      "source": "https://scikit-learn.org/1.9/modules/impute.html",
+      "page": "impute:001",
+      "metadata": {
+        "end": 1963,
+        "start": 1052,
+        "topic": "preprocessing",
+        "anchor": "univariate-feature-imputation",
+        "heading": "8.4. Imputation of missing values > 8.4.2. Univariate feature imputation",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 3711,
+        "unit_start": 0,
+        "token_count": 264
+      },
+      "score": 0.03028233151183971,
+      "rank": 3
+    },
+    {
+      "id": "53c76ec7d42c7b1081f2208e",
+      "text": "3.4.6.2. Mean absolute error\n\nThe mean_absolute_error function computes mean absolute error , a risk metric corresponding to the expected value of the absolute error loss or \\(l1\\) -norm loss.",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:025",
+      "metadata": {
+        "end": 3602,
+        "start": 3410,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.2. Mean absolute error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 91803,
+        "unit_start": 88201,
+        "token_count": 48
+      },
+      "score": 0.030158730158730156,
+      "rank": 4
+    },
+    {
+      "id": "351b8c641969a23878c2c355",
+      "text": "3.4.6.6. Median absolute error\n\nThe median_absolute_error is particularly interesting because it is robust to outliers. The loss is calculated by taking the median of all absolute differences between the target and the prediction.\n\nIf \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample and \\(y_i\\) is the corresponding true value, then the median absolute error (MedAE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MedAE}(y, \\hat{y}) = \\text{median}(\\mid y_1 - \\hat{y}_1 \\mid, \\ldots, \\mid y_n - \\hat{y}_n \\mid).\\]\n\nThe median_absolute_error does not support multioutput.\n\nHere is a small example of usage of the median_absolute_error function:\n\n>>> from sklearn.metrics import median_absolute_error\n>>> y_true = [3, -0.5, 2, 7]\n>>> y_pred = [2.5, 0.0, 2, 8]\n>>> median_absolute_error(y_true, y_pred)\n0.5",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 2539,
+        "start": 1709,
+        "topic": "model_selection",
+        "anchor": "median-absolute-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.6. Median absolute error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 284
+      },
+      "score": 0.029138513513513514,
+      "rank": 5
+    },
+    {
+      "id": "de8b140f12b8d01fef75c1ba",
+      "text": "If \\(\\hat{y}_i\\) is the predicted value of the \\(i\\) -th sample and \\(y_i\\) is the corresponding true value, then the mean absolute percentage error (MAPE) estimated over \\(n_{\\text{samples}}\\) is defined as\n\n\\[\\text{MAPE}(y, \\hat{y}) = \\frac{1}{n_{\\text{samples}}} \\sum_{i=0}^{n_{\\text{samples}}-1} \\frac{{}\\left| y_i - \\hat{y}_i \\right|}{\\max(\\epsilon, \\left| y_i \\right|)}\\]\n\nwhere \\(\\epsilon\\) is an arbitrary small yet strictly positive number to avoid undefined results when y is zero.\n\nThe mean_absolute_percentage_error function supports multioutput.\n\nHere is a small example of usage of the mean_absolute_percentage_error function:\n\n>>> from sklearn.metrics import mean_absolute_percentage_error\n>>> y_true = [1, 10, 1e6]\n>>> y_pred = [0.9, 15, 1.2e6]\n>>> mean_absolute_percentage_error(y_true, y_pred)\n0.2666\n\nIn above example, if we had used mean_absolute_error , it would have ignored the small magnitude values and only reflected the error in prediction of highest magnitude value. But that problem is resolved in case of MAPE because it calculates relative percentage error with respect to actual output.\n\nNote",
+      "source_id": "model_evaluation",
+      "source": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "page": "model_evaluation:027",
+      "metadata": {
+        "end": 1124,
+        "start": 0,
+        "topic": "model_selection",
+        "anchor": "mean-absolute-percentage-error",
+        "heading": "3.4. Metrics and scoring: quantifying the quality of predictions > 3.4.6. Regression metrics > 3.4.6.5. Mean absolute percentage error",
+        "version": "1.9",
+        "language": "en",
+        "unit_end": 99006,
+        "unit_start": 95504,
+        "token_count": 363
+      },
+      "score": 0.029116045245077504,
+      "rank": 6
+    }
+  ],
+  "pipeline_hash": "cffdb3f4a6a78b96a82c34b0e4fbad7e26c1be38b6a6df36fe5540b6c0a48942"
+}
