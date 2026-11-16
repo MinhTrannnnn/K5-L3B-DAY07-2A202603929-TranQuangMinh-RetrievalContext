@@ -15,8 +15,11 @@ Mỗi query lưu answer, citation và trace trong `results/local/queries/`.
 Nếu Ollama đã chạy ở system tray, tiếp tục các lệnh dưới.
 
 ```powershell
+py -3.13 -m venv .venv313
+./.venv313/Scripts/python.exe -m pip install -r requirements.txt
 ollama pull qwen2.5:3b
-docker compose -f ../../Day6/K5-L3B-DAY06-TranQuangMinh-2A202603929-DataIngestion/starter/docker-compose.yml -p day6_student_starter up -d --wait
+./.venv313/Scripts/python.exe scripts/prepare_basic_local.py
+docker compose -f data/day6/starter/docker-compose.yml -p day6_student_starter up -d --wait
 ./.venv313/Scripts/python.exe -m src ingest --corpus day6
 ./.venv313/Scripts/python.exe -m src doctor
 ```
@@ -26,7 +29,9 @@ Code giới hạn endpoint ở loopback. Chi phí API local được ghi là 0 U
 CPU/GPU và điện năng chưa được quy đổi thành tiền.
 
 Ingest dùng lại chunk B và cache vector thật của Day 6 để nạp database.
-BGE chạy offline từ cache model đã tải. Repo Day 6 nằm cạnh Day 7 theo cấu trúc workspace.
+BGE chạy offline từ cache model đã tải. Nếu không có repo Day 6 bên cạnh,
+code dùng snapshot `data/day6/` kèm units, chunks, cấu hình, store gốc và giấy phép.
+Lần đầu chạy script prepare để tải BGE miễn phí; không cần cache riêng của người nộp.
 
 ## Retrieval và benchmark
 
@@ -47,8 +52,9 @@ Cần đối chiếu nguồn để xác nhận citation hỗ trợ mọi khẳng
 Dev chạy ba phương pháp. Chọn theo Evidence Hit@3, rồi Hit@1, rồi thời gian agent.
 Test chạy dense baseline và cấu hình chọn trên cùng tập. Fingerprint khóa model và controller.
 
-Kết quả local ở `results/local/final/`. `reviews_pending.json` là mẫu chấm context,
-answer, citation và abstention sau khi đối chiếu nguồn.
+Kết quả chính thức ở `results/local/final/`. Nhãn đối chiếu nguồn cho cả 14 lượt test
+ở `test/reviews.json`, tổng hợp ở `test/review_summary.json`. Nhãn do Codex hỗ trợ,
+chưa có xác nhận thủ công của sinh viên. `reviews_pending.json` chỉ là mẫu trống runner tạo.
 
 ```powershell
 $env:PYTHONUTF8 = '1'

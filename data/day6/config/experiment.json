@@ -1,0 +1,27 @@
+{
+  "model": "BAAI/bge-base-en-v1.5",
+  "model_revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+  "dimensions": 768,
+  "query_instruction": "Represent this sentence for searching relevant passages: ",
+  "chunk_tokens": 384,
+  "fixed_overlap": 64,
+  "structure_overlap": 0,
+  "batch_size": 16,
+  "device": "cpu",
+  "metric": "cosine",
+  "search": "exact",
+  "top_k": 3,
+  "seed": 42,
+  "source_unit_target_characters": 3500,
+  "source_unit_min_characters": 1500,
+  "selection_rule": "Choose on dev by Evidence Hit@3, then Hit@1, then fewer stored chunks; never tune on test.",
+  "sources": [
+    {"id": "preprocessing", "path": "modules/preprocessing.html", "topic": "preprocessing"},
+    {"id": "impute", "path": "modules/impute.html", "topic": "preprocessing"},
+    {"id": "compose", "path": "modules/compose.html", "topic": "preprocessing"},
+    {"id": "cross_validation", "path": "modules/cross_validation.html", "topic": "model_selection"},
+    {"id": "grid_search", "path": "modules/grid_search.html", "topic": "model_selection"},
+    {"id": "model_evaluation", "path": "modules/model_evaluation.html", "topic": "model_selection"}
+  ],
+  "documentation_base": "https://scikit-learn.org/1.9/"
+}

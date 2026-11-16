@@ -1,0 +1,279 @@
+[
+  {
+    "query_id": "L01",
+    "method": "dense",
+    "context_grade": 2,
+    "answer_grade": 1,
+    "citation_support": [
+      {
+        "id": "e6fb3578aa5c1c9533dbd101",
+        "supported": false
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Core answer is correct: fit does nothing because samples are independent. The extra assertion that fit initializes the object is not stated in the source and is unnecessary.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L02",
+    "method": "dense",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "dbdf16d62c9f2de124eb5dcc",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "The cited code sets return_estimator=True and returns an estimator key. Naming the return_estimator option answers the question. This is an alternative valid evidence passage despite failing the exact gold-quote metric.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L03",
+    "method": "dense",
+    "context_grade": 1,
+    "answer_grade": 0,
+    "citation_support": [
+      {
+        "id": "c52755d2534f317e1a60224c",
+        "supported": false
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Context says train-test indices can optionally be returned, but does not supply return_indices=True. Answer names the function instead of the requested option; citation does not support that answer.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L04",
+    "method": "dense",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "1695ca8e101d86ceaf2ad1d7",
+        "supported": true
+      },
+      {
+        "id": "c9d0ebafe06c9ec7a0d6dca1",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "The first cited passage directly maps MinMaxScaler and MaxAbsScaler to the respective scaling operations; the second describes their formulas and MaxAbsScaler scaling.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L05",
+    "method": "dense",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "e6fb3578aa5c1c9533dbd101",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Compare the first row of the source input [1,-1,2] with output [1,0,1]: -1 maps to 0.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L06",
+    "method": "dense",
+    "context_grade": null,
+    "answer_grade": null,
+    "citation_support": [
+      {
+        "id": "50def7c3a28d5880d642e644",
+        "supported": false
+      },
+      {
+        "id": "e53ca849a0e02cb268c56b26",
+        "supported": false
+      }
+    ],
+    "abstention_correct": false,
+    "reason": "No exact seconds are invented, and prose admits the time cannot be determined. However action remains answered and includes unsupported assumptions about the private estimators. Conservatively fails the required abstention behavior; citations discuss caching, not this private runtime.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L07",
+    "method": "dense",
+    "context_grade": null,
+    "answer_grade": null,
+    "citation_support": [
+      {
+        "id": "e6fb3578aa5c1c9533dbd101",
+        "supported": false
+      }
+    ],
+    "abstention_correct": false,
+    "reason": "Does not provide or explicitly refuse the requested exact accuracy. It substitutes a generic description of Binarizer. The citation supports binarization but not the requested private accuracy.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L01",
+    "method": "bm25",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "e6fb3578aa5c1c9533dbd101",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Source explicitly states fit does nothing because samples are treated independently and mentions use early in Pipeline.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L02",
+    "method": "bm25",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "93d99a35c53a9e83680d15f9",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Exact source sentence: retain the estimator fitted on each training set by setting return_estimator=True.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L03",
+    "method": "bm25",
+    "context_grade": 2,
+    "answer_grade": 0,
+    "citation_support": [
+      {
+        "id": "c52755d2534f317e1a60224c",
+        "supported": false
+      },
+      {
+        "id": "93d99a35c53a9e83680d15f9",
+        "supported": false
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Context contains the correct return_indices=True option. Answer incorrectly chooses return_train_score, which returns training scores. Neither citation supports the claimed option for retaining indices.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L04",
+    "method": "bm25",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "1695ca8e101d86ceaf2ad1d7",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "Source explicitly names MinMaxScaler then MaxAbsScaler for the two operations in the same order.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L05",
+    "method": "bm25",
+    "context_grade": 2,
+    "answer_grade": 2,
+    "citation_support": [
+      {
+        "id": "e6fb3578aa5c1c9533dbd101",
+        "supported": true
+      }
+    ],
+    "abstention_correct": null,
+    "reason": "The original Binarizer example maps each displayed -1 to 0.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L06",
+    "method": "bm25",
+    "context_grade": null,
+    "answer_grade": null,
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Explicit abstain action and clear statement that private fit time is absent. No fabricated estimate or citation.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  },
+  {
+    "query_id": "L07",
+    "method": "bm25",
+    "context_grade": null,
+    "answer_grade": null,
+    "citation_support": [
+      {
+        "id": "cf7c5f227595652242c3d357",
+        "supported": false
+      },
+      {
+        "id": "93d99a35c53a9e83680d15f9",
+        "supported": false
+      }
+    ],
+    "abstention_correct": false,
+    "reason": "The response makes an unsupported claim about fitting/evaluation of Binarizer rather than clearly refusing the unknowable accuracy. Cited passages discuss permutation scoring and cross_validate, not Binarizer accuracy. Fails strict abstention.",
+    "reviewer": "Codex assistant: comparison with original Day 6 source units",
+    "human_confirmed": false,
+    "review_status": "assistant_source_review_complete",
+    "trace": "test/traces.json",
+    "source_evidence": "test/review_sources.json"
+  }
+]

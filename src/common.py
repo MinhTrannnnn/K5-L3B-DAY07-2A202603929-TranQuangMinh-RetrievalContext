@@ -12,6 +12,8 @@ from openai import DefaultHttpxClient, OpenAI
 
 ROOT = Path(__file__).resolve().parents[1]
 DAY6 = ROOT.parents[1] / 'Day6' / 'K5-L3B-DAY06-TranQuangMinh-2A202603929-DataIngestion'
+if not (DAY6 / 'config/experiment.json').exists():
+    DAY6 = ROOT / 'data/day6'
 load_dotenv(ROOT / '.env')
 os.environ.setdefault('HF_HUB_OFFLINE', '1')
 os.environ.setdefault('TRANSFORMERS_OFFLINE', '1')

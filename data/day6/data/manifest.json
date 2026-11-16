@@ -1,0 +1,530 @@
+{
+  "created_at": "2026-11-14T04:01:30.270814+00:00",
+  "version": "1.9",
+  "rule": "Disjoint sequential blocks; target 3500 normalized characters, >=1500 per unit; short tail merged. IDs are source locations, not PDF pages. No duplication.",
+  "unit_count": 72,
+  "sources": [
+    {
+      "id": "preprocessing",
+      "path": "modules/preprocessing.html",
+      "topic": "preprocessing",
+      "url": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "source_id": "preprocessing",
+      "title": "8.3. Preprocessing data",
+      "source_path_or_url": "https://scikit-learn.org/1.9/modules/preprocessing.html",
+      "local_path": "data/raw/preprocessing.html",
+      "license_or_permission": "BSD-3-Clause; see data/LICENSE-scikit-learn.txt",
+      "accessed_at": "2026-11-14T04:01:27.604897+00:00",
+      "html_sha256": "efe09a2fc1ff719716078e77cebc0620abe3a1d899f51ee0c90eb60660915c89",
+      "units": [
+        {
+          "page": "preprocessing:001",
+          "characters": 3508,
+          "start": 0,
+          "end": 3508
+        },
+        {
+          "page": "preprocessing:002",
+          "characters": 3547,
+          "start": 3510,
+          "end": 7057
+        },
+        {
+          "page": "preprocessing:003",
+          "characters": 3646,
+          "start": 7059,
+          "end": 10705
+        },
+        {
+          "page": "preprocessing:004",
+          "characters": 3774,
+          "start": 10707,
+          "end": 14481
+        },
+        {
+          "page": "preprocessing:005",
+          "characters": 3632,
+          "start": 14483,
+          "end": 18115
+        },
+        {
+          "page": "preprocessing:006",
+          "characters": 4287,
+          "start": 18117,
+          "end": 22404
+        },
+        {
+          "page": "preprocessing:007",
+          "characters": 3679,
+          "start": 22406,
+          "end": 26085
+        },
+        {
+          "page": "preprocessing:008",
+          "characters": 3507,
+          "start": 26087,
+          "end": 29594
+        },
+        {
+          "page": "preprocessing:009",
+          "characters": 3526,
+          "start": 29596,
+          "end": 33122
+        },
+        {
+          "page": "preprocessing:010",
+          "characters": 3500,
+          "start": 33124,
+          "end": 36624
+        },
+        {
+          "page": "preprocessing:011",
+          "characters": 3515,
+          "start": 36626,
+          "end": 40141
+        },
+        {
+          "page": "preprocessing:012",
+          "characters": 3536,
+          "start": 40143,
+          "end": 43679
+        },
+        {
+          "page": "preprocessing:013",
+          "characters": 4167,
+          "start": 43681,
+          "end": 47848
+        }
+      ]
+    },
+    {
+      "id": "impute",
+      "path": "modules/impute.html",
+      "topic": "preprocessing",
+      "url": "https://scikit-learn.org/1.9/modules/impute.html",
+      "source_id": "impute",
+      "title": "8.4. Imputation of missing values",
+      "source_path_or_url": "https://scikit-learn.org/1.9/modules/impute.html",
+      "local_path": "data/raw/impute.html",
+      "license_or_permission": "BSD-3-Clause; see data/LICENSE-scikit-learn.txt",
+      "accessed_at": "2026-11-14T04:01:28.013175+00:00",
+      "html_sha256": "3594b679cb922fea8e048773766b24d76aa27bd55b90360c2817a3ebd22f94c5",
+      "units": [
+        {
+          "page": "impute:001",
+          "characters": 3711,
+          "start": 0,
+          "end": 3711
+        },
+        {
+          "page": "impute:002",
+          "characters": 4466,
+          "start": 3713,
+          "end": 8179
+        },
+        {
+          "page": "impute:003",
+          "characters": 3671,
+          "start": 8181,
+          "end": 11852
+        },
+        {
+          "page": "impute:004",
+          "characters": 2707,
+          "start": 11854,
+          "end": 14561
+        }
+      ]
+    },
+    {
+      "id": "compose",
+      "path": "modules/compose.html",
+      "topic": "preprocessing",
+      "url": "https://scikit-learn.org/1.9/modules/compose.html",
+      "source_id": "compose",
+      "title": "8.1. Pipelines and composite estimators",
+      "source_path_or_url": "https://scikit-learn.org/1.9/modules/compose.html",
+      "local_path": "data/raw/compose.html",
+      "license_or_permission": "BSD-3-Clause; see data/LICENSE-scikit-learn.txt",
+      "accessed_at": "2026-11-14T04:01:28.462087+00:00",
+      "html_sha256": "39446c9d43e7c9539b5fba7cdd0e4b4ef21d149b8a612723a930048f45889107",
+      "units": [
+        {
+          "page": "compose:001",
+          "characters": 3503,
+          "start": 0,
+          "end": 3503
+        },
+        {
+          "page": "compose:002",
+          "characters": 3533,
+          "start": 3505,
+          "end": 7038
+        },
+        {
+          "page": "compose:003",
+          "characters": 3569,
+          "start": 7040,
+          "end": 10609
+        },
+        {
+          "page": "compose:004",
+          "characters": 3696,
+          "start": 10611,
+          "end": 14307
+        },
+        {
+          "page": "compose:005",
+          "characters": 3626,
+          "start": 14309,
+          "end": 17935
+        },
+        {
+          "page": "compose:006",
+          "characters": 3312,
+          "start": 17937,
+          "end": 21249
+        }
+      ]
+    },
+    {
+      "id": "cross_validation",
+      "path": "modules/cross_validation.html",
+      "topic": "model_selection",
+      "url": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "source_id": "cross_validation",
+      "title": "3.1. Cross-validation: evaluating estimator performance",
+      "source_path_or_url": "https://scikit-learn.org/1.9/modules/cross_validation.html",
+      "local_path": "data/raw/cross_validation.html",
+      "license_or_permission": "BSD-3-Clause; see data/LICENSE-scikit-learn.txt",
+      "accessed_at": "2026-11-14T04:01:28.919913+00:00",
+      "html_sha256": "78d7587fa92ba3b3e480c9d841b50fedc14ac29d571ccb319d4068235154f0e2",
+      "units": [
+        {
+          "page": "cross_validation:001",
+          "characters": 3643,
+          "start": 0,
+          "end": 3643
+        },
+        {
+          "page": "cross_validation:002",
+          "characters": 3647,
+          "start": 3645,
+          "end": 7292
+        },
+        {
+          "page": "cross_validation:003",
+          "characters": 3526,
+          "start": 7294,
+          "end": 10820
+        },
+        {
+          "page": "cross_validation:004",
+          "characters": 3778,
+          "start": 10822,
+          "end": 14600
+        },
+        {
+          "page": "cross_validation:005",
+          "characters": 3596,
+          "start": 14602,
+          "end": 18198
+        },
+        {
+          "page": "cross_validation:006",
+          "characters": 3700,
+          "start": 18200,
+          "end": 21900
+        },
+        {
+          "page": "cross_validation:007",
+          "characters": 3601,
+          "start": 21902,
+          "end": 25503
+        },
+        {
+          "page": "cross_validation:008",
+          "characters": 3541,
+          "start": 25505,
+          "end": 29046
+        },
+        {
+          "page": "cross_validation:009",
+          "characters": 3635,
+          "start": 29048,
+          "end": 32683
+        },
+        {
+          "page": "cross_validation:010",
+          "characters": 3666,
+          "start": 32685,
+          "end": 36351
+        }
+      ]
+    },
+    {
+      "id": "grid_search",
+      "path": "modules/grid_search.html",
+      "topic": "model_selection",
+      "url": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "source_id": "grid_search",
+      "title": "3.2. Tuning the hyper-parameters of an estimator",
+      "source_path_or_url": "https://scikit-learn.org/1.9/modules/grid_search.html",
+      "local_path": "data/raw/grid_search.html",
+      "license_or_permission": "BSD-3-Clause; see data/LICENSE-scikit-learn.txt",
+      "accessed_at": "2026-11-14T04:01:29.392047+00:00",
+      "html_sha256": "eef80a6e882246526b64e889148df33a762008953683036bfc29a7e333861aa7",
+      "units": [
+        {
+          "page": "grid_search:001",
+          "characters": 3625,
+          "start": 0,
+          "end": 3625
+        },
+        {
+          "page": "grid_search:002",
+          "characters": 4126,
+          "start": 3627,
+          "end": 7753
+        },
+        {
+          "page": "grid_search:003",
+          "characters": 3505,
+          "start": 7755,
+          "end": 11260
+        },
+        {
+          "page": "grid_search:004",
+          "characters": 3504,
+          "start": 11262,
+          "end": 14766
+        },
+        {
+          "page": "grid_search:005",
+          "characters": 3533,
+          "start": 14768,
+          "end": 18301
+        },
+        {
+          "page": "grid_search:006",
+          "characters": 3520,
+          "start": 18303,
+          "end": 21823
+        },
+        {
+          "page": "grid_search:007",
+          "characters": 3790,
+          "start": 21825,
+          "end": 25615
+        },
+        {
+          "page": "grid_search:008",
+          "characters": 4421,
+          "start": 25617,
+          "end": 30038
+        }
+      ]
+    },
+    {
+      "id": "model_evaluation",
+      "path": "modules/model_evaluation.html",
+      "topic": "model_selection",
+      "url": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "source_id": "model_evaluation",
+      "title": "3.4. Metrics and scoring: quantifying the quality of predictions",
+      "source_path_or_url": "https://scikit-learn.org/1.9/modules/model_evaluation.html",
+      "local_path": "data/raw/model_evaluation.html",
+      "license_or_permission": "BSD-3-Clause; see data/LICENSE-scikit-learn.txt",
+      "accessed_at": "2026-11-14T04:01:30.263737+00:00",
+      "html_sha256": "7e740e140ba75771bb1c7de132babfd958c277b5529d187e7ba744e69729120c",
+      "units": [
+        {
+          "page": "model_evaluation:001",
+          "characters": 3795,
+          "start": 0,
+          "end": 3795
+        },
+        {
+          "page": "model_evaluation:002",
+          "characters": 3546,
+          "start": 3797,
+          "end": 7343
+        },
+        {
+          "page": "model_evaluation:003",
+          "characters": 3567,
+          "start": 7345,
+          "end": 10912
+        },
+        {
+          "page": "model_evaluation:004",
+          "characters": 3700,
+          "start": 10914,
+          "end": 14614
+        },
+        {
+          "page": "model_evaluation:005",
+          "characters": 4035,
+          "start": 14616,
+          "end": 18651
+        },
+        {
+          "page": "model_evaluation:006",
+          "characters": 3548,
+          "start": 18653,
+          "end": 22201
+        },
+        {
+          "page": "model_evaluation:007",
+          "characters": 3700,
+          "start": 22203,
+          "end": 25903
+        },
+        {
+          "page": "model_evaluation:008",
+          "characters": 3546,
+          "start": 25905,
+          "end": 29451
+        },
+        {
+          "page": "model_evaluation:009",
+          "characters": 3943,
+          "start": 29453,
+          "end": 33396
+        },
+        {
+          "page": "model_evaluation:010",
+          "characters": 3547,
+          "start": 33398,
+          "end": 36945
+        },
+        {
+          "page": "model_evaluation:011",
+          "characters": 3663,
+          "start": 36947,
+          "end": 40610
+        },
+        {
+          "page": "model_evaluation:012",
+          "characters": 3858,
+          "start": 40612,
+          "end": 44470
+        },
+        {
+          "page": "model_evaluation:013",
+          "characters": 3743,
+          "start": 44472,
+          "end": 48215
+        },
+        {
+          "page": "model_evaluation:014",
+          "characters": 3702,
+          "start": 48217,
+          "end": 51919
+        },
+        {
+          "page": "model_evaluation:015",
+          "characters": 3525,
+          "start": 51921,
+          "end": 55446
+        },
+        {
+          "page": "model_evaluation:016",
+          "characters": 3704,
+          "start": 55448,
+          "end": 59152
+        },
+        {
+          "page": "model_evaluation:017",
+          "characters": 3616,
+          "start": 59154,
+          "end": 62770
+        },
+        {
+          "page": "model_evaluation:018",
+          "characters": 3570,
+          "start": 62772,
+          "end": 66342
+        },
+        {
+          "page": "model_evaluation:019",
+          "characters": 3606,
+          "start": 66344,
+          "end": 69950
+        },
+        {
+          "page": "model_evaluation:020",
+          "characters": 3531,
+          "start": 69952,
+          "end": 73483
+        },
+        {
+          "page": "model_evaluation:021",
+          "characters": 3764,
+          "start": 73485,
+          "end": 77249
+        },
+        {
+          "page": "model_evaluation:022",
+          "characters": 3602,
+          "start": 77251,
+          "end": 80853
+        },
+        {
+          "page": "model_evaluation:023",
+          "characters": 3741,
+          "start": 80855,
+          "end": 84596
+        },
+        {
+          "page": "model_evaluation:024",
+          "characters": 3601,
+          "start": 84598,
+          "end": 88199
+        },
+        {
+          "page": "model_evaluation:025",
+          "characters": 3602,
+          "start": 88201,
+          "end": 91803
+        },
+        {
+          "page": "model_evaluation:026",
+          "characters": 3697,
+          "start": 91805,
+          "end": 95502
+        },
+        {
+          "page": "model_evaluation:027",
+          "characters": 3502,
+          "start": 95504,
+          "end": 99006
+        },
+        {
+          "page": "model_evaluation:028",
+          "characters": 3702,
+          "start": 99008,
+          "end": 102710
+        },
+        {
+          "page": "model_evaluation:029",
+          "characters": 3505,
+          "start": 102712,
+          "end": 106217
+        },
+        {
+          "page": "model_evaluation:030",
+          "characters": 3558,
+          "start": 106219,
+          "end": 109777
+        },
+        {
+          "page": "model_evaluation:031",
+          "characters": 4564,
+          "start": 109779,
+          "end": 114343
+        }
+      ]
+    }
+  ]
+}

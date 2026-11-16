@@ -1,0 +1,9 @@
+{
+  "fingerprint": "7d69c1587464153fdd280b6d35c04d2a7951cf50f3bca7b1e486c65fc010eb9c",
+  "method": "bm25",
+  "provider": "ollama",
+  "model": "qwen2.5:3b",
+  "status": "configuration_frozen_before_test",
+  "note": "Method explicitly chosen by CLI. Human analysis must justify selection.",
+  "rule": "Dev Evidence Hit@3, then Hit@1, then lower agent time."
+}

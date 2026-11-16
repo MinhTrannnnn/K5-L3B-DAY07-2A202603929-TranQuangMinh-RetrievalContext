@@ -1,0 +1,72 @@
+[
+  {
+    "method": "dense",
+    "reviewer": "Codex assistant; not human-confirmed",
+    "answer_counts": {
+      "0": 1,
+      "1": 1,
+      "2": 3
+    },
+    "answer_mean": 1.4,
+    "context_counts": {
+      "0": 0,
+      "1": 1,
+      "2": 4
+    },
+    "citation_support": {
+      "n": 4,
+      "N": 9
+    },
+    "responses_with_citation": {
+      "n": 7,
+      "N": 7
+    },
+    "correct_abstention": {
+      "n": 0,
+      "N": 2
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 5
+    },
+    "tool_use": {
+      "n": 7,
+      "N": 7
+    }
+  },
+  {
+    "method": "bm25",
+    "reviewer": "Codex assistant; not human-confirmed",
+    "answer_counts": {
+      "0": 1,
+      "1": 0,
+      "2": 4
+    },
+    "answer_mean": 1.6,
+    "context_counts": {
+      "0": 0,
+      "1": 0,
+      "2": 5
+    },
+    "citation_support": {
+      "n": 4,
+      "N": 8
+    },
+    "responses_with_citation": {
+      "n": 6,
+      "N": 7
+    },
+    "correct_abstention": {
+      "n": 1,
+      "N": 2
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 5
+    },
+    "tool_use": {
+      "n": 7,
+      "N": 7
+    }
+  }
+]

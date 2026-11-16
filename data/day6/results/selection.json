@@ -1,0 +1,17 @@
+{
+  "selected_at": "2026-11-14T04:23:53.740740+00:00",
+  "experiment": "9b408e4e3b1de0b1",
+  "strategy": "B",
+  "rule": "Choose on dev by Evidence Hit@3, then Hit@1, then fewer stored chunks; never tune on test.",
+  "metrics": {
+    "strategy": "B",
+    "split": "dev",
+    "n": 15,
+    "hit1_n": 8,
+    "hit3_n": 13,
+    "hit1": 0.5333333333333333,
+    "hit3": 0.8666666666666667
+  },
+  "tie_break": "When all stated criteria tie, prefer B, then C, then A.",
+  "test_seen": false
+}

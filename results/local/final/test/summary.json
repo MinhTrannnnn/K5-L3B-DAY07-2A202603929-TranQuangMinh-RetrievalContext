@@ -1,0 +1,71 @@
+[
+  {
+    "method": "dense",
+    "split": "test",
+    "answerable_retrieval_successes": 5,
+    "hit1": {
+      "n": 3,
+      "N": 5
+    },
+    "hit3": {
+      "n": 3,
+      "N": 5
+    },
+    "context_evidence": {
+      "n": 3,
+      "N": 5
+    },
+    "agent_runs": 7,
+    "total_agent_seconds": 28.38981970000532,
+    "tool_use": 7,
+    "answer_quality_review": "pending_human_review",
+    "seconds_this_invocation": 44.563199399999576,
+    "errors": 0
+  },
+  {
+    "method": "bm25",
+    "split": "test",
+    "answerable_retrieval_successes": 5,
+    "hit1": {
+      "n": 2,
+      "N": 5
+    },
+    "hit3": {
+      "n": 5,
+      "N": 5
+    },
+    "context_evidence": {
+      "n": 5,
+      "N": 5
+    },
+    "agent_runs": 7,
+    "total_agent_seconds": 21.776185899994744,
+    "tool_use": 7,
+    "answer_quality_review": "pending_human_review",
+    "seconds_this_invocation": 21.91828589999932,
+    "errors": 0
+  },
+  {
+    "method": "hybrid",
+    "split": "test",
+    "answerable_retrieval_successes": 5,
+    "hit1": {
+      "n": 2,
+      "N": 5
+    },
+    "hit3": {
+      "n": 3,
+      "N": 5
+    },
+    "context_evidence": {
+      "n": 0,
+      "N": 0
+    },
+    "agent_runs": 0,
+    "total_agent_seconds": 0,
+    "tool_use": 0,
+    "answer_quality_review": "pending_human_review",
+    "seconds_this_invocation": 1.451038700000936,
+    "errors": 0
+  }
+]

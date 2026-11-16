@@ -1,13 +1,13 @@
-# Bản nộp cơ bản local
+# Bản nộp Day 7 cơ bản — local
 
-- Agent Qwen2.5 3B chạy Ollama tại localhost.
-- BGE local 768 chiều và 332 chunk B của Day 6, PostgreSQL/pgvector.
-- Dense, BM25 và hybrid RRF đã triển khai và có kết quả so sánh.
-- Kết quả lần chạy local đã hoàn tất ở `results/local/basic/`.
-- Demo lệnh query sau bản sửa controller ở `results/local/submission_demo.json`.
-- Code mới cần đối chiếu nhãn nội dung/citation thủ công. Bộ benchmark đầy đủ chưa chạy lại sau hotfix cuối.
-- Báo cáo hiện tại là `report/individual/2A202603929_TranQuangMinh.md`.
-
-```powershell
-./.venv313/Scripts/python.exe -m src query "How can I disable centering in StandardScaler?"
-```
+- Một báo cáo cá nhân: `report/individual/2A202603929_TranQuangMinh.md`.
+- 332 chunk B, BGE 768 chiều, PostgreSQL/pgvector; snapshot kèm nguồn và license.
+- Qwen2.5 3B/Ollama local, không dùng API key trả phí.
+- Dense/BM25/hybrid; 51 agent dev + 14 agent test, không có lỗi thực thi.
+- Benchmark 24 câu: 17 dev, 7 test; chốt BM25 trên dev trước test.
+- BM25 test Evidence Hit@3 5/5, dense 3/5. Không đồng nghĩa answer đúng 100%.
+- Có nhãn và lý do cho toàn bộ 14 lượt test, đối chiếu source units gốc.
+- Nhãn do Codex hỗ trợ, chưa được sinh viên xác nhận thủ công; ghi trung thực lỗi model.
+- 25 unit tests đã qua; đã kiểm tra restore bằng snapshot độc lập.
+- Tái lập: `docs/README.md`. Kết quả chính thức: `results/local/final/`.
+- Không yêu cầu chấm bonus nâng cao trong bản này.
